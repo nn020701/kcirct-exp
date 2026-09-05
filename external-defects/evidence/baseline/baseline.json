@@ -1,0 +1,102 @@
+{
+  "kind": "从正式成功批次版本记录提取的可移植摘要；不改写原始记录",
+  "service_head": "d6bde7971eb3d07035d6f43c3c9a3153c6744288",
+  "requires_worktree_patch": true,
+  "patch": "evidence/baseline/service.patch",
+  "patch_sha256": "54a7053789eebda3e68c824b4f3c8515f5f517602ca09de19a69458bccbb57a9",
+  "changes": [
+    "seq.to_clock 单比特语义",
+    "同宽二态 ceq/cne 比较",
+    "一个信号对应多个命名端口时的读取别名支持"
+  ],
+  "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "pyk": "7.1.323",
+  "tools": {
+    "kompile": {
+      "version": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026\n"
+    },
+    "krun": {
+      "version": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026\n"
+    },
+    "kast": {
+      "version": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026\n"
+    },
+    "circt-verilog": {
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\nslang version 10.0.0+0\n"
+    },
+    "circt-opt": {
+      "version": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\n"
+    }
+  },
+  "verilator": "Verilator 5.048 2026-04-26 rev vUNKNOWN-built20260426",
+  "semantics_hashes": {
+    "src/kcirct/kdist/circt_semantics/circt/backup/bits.k": "e06a9d4b30c3696c58759a3f1511ce71b31330a47fe56238118d24ffca6f0a99",
+    "src/kcirct/kdist/circt_semantics/circt/backup/circt.k": "f53f2b689d14316eadb147c68535616f920e98d3cf399e57b4f78f995b157d07",
+    "src/kcirct/kdist/circt_semantics/circt/backup/common.k": "f113f974a0942f961a346e5551d415b7d2dd1c89d0fc302d17f6abad08aa40ca",
+    "src/kcirct/kdist/circt_semantics/circt/backup/conf.k": "7d1f8a281d84d45194f8c3e1e81c88744b7897ee0cc6606c58c21c178557972d",
+    "src/kcirct/kdist/circt_semantics/circt/backup/stdvalue.k": "689a8002e79000f226186d9607c8ad1a59de958755a50fdfcb549dae39a82b60",
+    "src/kcirct/kdist/circt_semantics/circt/circt-config.md": "cefa31dd07769605d8cf38e5648a20d85ad3c42475573f16a4cce80d3fa4adc9",
+    "src/kcirct/kdist/circt_semantics/circt/circt.md": "aa7a5df99d2e1b9cef50004f35cbbc942f97e0ebfe3979e82c6b2abb0f7ae9d6",
+    "src/kcirct/kdist/circt_semantics/circt-core.k": "bde73f7b57ed13f67c33c3c375a1509cd489bc929234dda6e9f47461c392cb2b",
+    "src/kcirct/kdist/circt_semantics/dialects/comb/backup/comb.k": "a1543d59341932c8bcdc6cb6aa6b5beddf99656dfca2f38a05a1d7510e24eed6",
+    "src/kcirct/kdist/circt_semantics/dialects/comb/comb-syntax.md": "9c60319d4a38dc97435bf16cfd91f3f0d3343eacf05c79a669df0beb8e333e67",
+    "src/kcirct/kdist/circt_semantics/dialects/comb/comb.md": "a4f2817e39cb0aa044b8cadd6b8141c4c3c062101a014ecceb0aaef8d70f9783",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/backup/hw-array.k": "54f436ffd87a7239198b2b19eb8a3074f1e566ad50a928f82920b3b99ce258fe",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/backup/hw-enum.k": "1bc61ac4ece558e31340c0aa914be0c1557de75d810e8fc4ed4fca10114ee869",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/backup/hw-modty.k": "c84a7b8c6d353e5d8be21614e71dff5596d71fc686d027f47a4c8f26804f4473",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/backup/hw-struct.k": "055e0eb3e51ad8f926881558489742abb60efe11a0d25d46b8a19c01dfb756da",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/backup/hw-union.k": "cb188f818068ad41873c4c26beac9bb3d89fdfc06cbf75b257b04c55bc9a6b5d",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/backup/hw.k": "5f2aee84c9576d6735170df93e424b53629940c89141dfd9fa385f04d85d31aa",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/hw-config.md": "4e83f1553bb6648820d50e72fa5c75fc2047a44bd5d1e71687020f5eb92c53b2",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/hw-helper.md": "418ee75bae58de717ea7e0e010cc8feb94ef17cbcaab20a0bb557e5fdbda833a",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/hw-syntax.md": "89dedabdc41a55da9632dc3d189c37dfa6495aa86f14cf57bce435e17d7ee78d",
+    "src/kcirct/kdist/circt_semantics/dialects/hw/hw.md": "d2aed7a7114e44f9fa7e92e20c67ebc8d5d6022b7b6e406cc50148146f5e660d",
+    "src/kcirct/kdist/circt_semantics/dialects/seq/backup/seq-firmem.k": "85b0cbcf88303365792abcb59ad4eb5d7ddb78f5234f00fd2c030b54597c5617",
+    "src/kcirct/kdist/circt_semantics/dialects/seq/backup/seq-firreg.k": "7dd29063194377e3a3b7c428fbffe07f0d804090d6cf885e90c6a095e505c794",
+    "src/kcirct/kdist/circt_semantics/dialects/seq/backup/seq.k": "eb93af941caf0dc88ea841e45083b215557c447ec2a85a039c87564fbd96a36f",
+    "src/kcirct/kdist/circt_semantics/dialects/seq/seq-helper.md": "7a359fbed27c0de9b8345c8bc2f8482d077a61e21592f9c6e157526331810819",
+    "src/kcirct/kdist/circt_semantics/dialects/seq/seq-syntax.md": "1027f36ac9e8067000c11f3f41379a9ab8712047a3cca9091d9f00fefacf4f00",
+    "src/kcirct/kdist/circt_semantics/dialects/seq/seq.md": "d05fd0a13c40f75f05d8db6a61dec293079bc1d30944d37c0e29450be7d5e468",
+    "src/kcirct/kdist/circt_semantics/dialects/sv/backup/sv-always.k": "d7426ee16d3f62e64e169d7b984176c27e31217bf690f10d4b1469300ca042be",
+    "src/kcirct/kdist/circt_semantics/dialects/sv/backup/sv-for.k": "c3b16e3310913d00ebfdfb6d9dff747223f995823acac7646266e8afb45a4e2b",
+    "src/kcirct/kdist/circt_semantics/dialects/sv/backup/sv-macro.k": "00e1475f372e1af33fc2a70cff8c0c2a9e582c09b8d471d35e1775b6cbb897a0",
+    "src/kcirct/kdist/circt_semantics/dialects/sv/backup/sv-reg.k": "79ad3d9fee2ea512dfd2f048fac0e44635ccd5d71c39f5524b1eaa6900565f20",
+    "src/kcirct/kdist/circt_semantics/dialects/sv/backup/sv.k": "1d685e0c9f876bae3309e4f3de6f9def168895fe284d072dc13d859a3be45dac",
+    "src/kcirct/kdist/circt_semantics/dialects/sv/sv-syntax.md": "7257413165c62ad2b52f51c105c79fbe2a4ef8b8c232381359b990e7a1c52ac5",
+    "src/kcirct/kdist/circt_semantics/dialects/sv/sv.md": "65b2e5260fa95f4f011a1eabe8f2c0599ac3139e8c992bb0caaf57eaccb834b7",
+    "src/kcirct/kdist/circt_semantics/hardware/bits.md": "3bca04fef1f7fdc506c6ad44766cbdd811c85f80356b42543746d600870ba919",
+    "src/kcirct/kdist/circt_semantics/hardware/hardware-config.md": "0fe9ee3284e007296fa5a34ad81e65a723f68d5cdbf028c782f8764bd3d76590",
+    "src/kcirct/kdist/circt_semantics/hardware/hardware.md": "343a8bd20575d51a81a40d8278816bbc2c87ca356cb85e79e8e4f55a9c671ff5",
+    "src/kcirct/kdist/circt_semantics/hardware/int-normalization.md": "76ac3f9f37735fd6bada4ec2787516c87b6d7b21dba301b7509d0ec83d1f6d39",
+    "src/kcirct/kdist/circt_semantics/hardware/verification.md": "218cf57610f3000fe559f44d975e860aa3bcfe269c866ed0d5604cde5a2c5206",
+    "src/kcirct/kdist/circt_semantics/main.k": "2144d33aa721c00288cf4075804ec9b6fe27965f3cbc87c775525c34190b1bf0",
+    "src/kcirct/kdist/circt_semantics/mlir/backup/builtin.k": "f2bb1ddfbc98042b3a162bfd4c9e8ab1032eb5ba83ee673f70148293f86a94a7",
+    "src/kcirct/kdist/circt_semantics/mlir/backup/mlir-helper.k": "ecbc33eb57944765d3ae9fde76aa3ada05df9ac223d006521e236ad511bb0d50",
+    "src/kcirct/kdist/circt_semantics/mlir/backup/mlir-syntax.k": "4b924bfb9fb7bf7006a72e0b488a817dc08262d28f2b571951408628ea40ab05",
+    "src/kcirct/kdist/circt_semantics/mlir/backup/mlir.k": "a3b66af3fe31667994daa9453b71dbc508dc9adb366b3404d4ae41abac8aa7ea",
+    "src/kcirct/kdist/circt_semantics/mlir/builtin.md": "e21067f6425e7c6ab8ccf9959008e643a6fa115d781a91b2a1760a51dbf85ba7",
+    "src/kcirct/kdist/circt_semantics/mlir/mlir-config.md": "04559707cd46d3506d319ff3da0b5f7665c691bf1adda6fa1f3a659f0957ba48",
+    "src/kcirct/kdist/circt_semantics/mlir/mlir-helper.md": "212b0abde9481ab0cb3b96c2e579b3af969c01a8e97b802649b114bb5a727618",
+    "src/kcirct/kdist/circt_semantics/mlir/mlir-syntax.md": "d68ab8f1a0a0f1604b8d22a37c815cc030768d4b1b6c60911d02355f81a0cc25",
+    "src/kcirct/kdist/circt_semantics/mlir/mlir.md": "658593b37790d9bf86a7234f45a002ccbac4964ec4f1d31a3b62d5bf59f03781",
+    "src/kcirct/kdist/circt_semantics/test-preprocess.k": "d87b208dfade6fc26c0da04e2e75aecbf703a6066ed438625917a833521565ba",
+    "src/kcirct/kdist/circt_semantics/test-syntax.k": "f90a9609029418de9fb5d78fc5de3592ef26f40d65c4c125afda8dcce2915e07"
+  },
+  "api_sha256": "40e6b398d06f6dff1ecdba85819330b54006a0d46aedaa0474613ac451a211cd",
+  "definition_sha256": "fab4ec103c98757240ecbfae3f7d245a2b1aed7265a86ebc1af7cf3e562c4d01",
+  "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+  "raw_sources": [
+    {
+      "path": ".runs/batch-final-01/versions.json",
+      "sha256": "e7a3b31a78be2d70880ad01347a22ade77153e1842cb647afeeef962ea2452b7"
+    },
+    {
+      "path": ".runs/batch-final-01/prepared.json",
+      "sha256": "3210befe51bb9da76352d5690de784e5f57ac5529b547549f3530603ffb82c1b"
+    },
+    {
+      "path": ".runs/batch-final-01/service.patch",
+      "sha256": "54a7053789eebda3e68c824b4f3c8515f5f517602ca09de19a69458bccbb57a9"
+    }
+  ]
+}

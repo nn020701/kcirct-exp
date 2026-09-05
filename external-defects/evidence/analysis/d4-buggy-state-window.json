@@ -1,0 +1,4373 @@
+{
+  "case": "d4",
+  "variant": "buggy",
+  "method": "使用现有 KCIRCT.read_signals 离线读取已保存 Kore；全部事件校验未压缩 SHA256；不是自动因果追踪。",
+  "executable_sha256": "83e0094cac64b901cabdc4df0b9ea9ceceeb2da025f152167e155e4af4118aef",
+  "debug_sha256": "ee6594745fefc7c1b92c2289f997219e3332ead5868a60d4ab005b1b3031a601",
+  "window": [
+    {
+      "event": {
+        "event_index": 34,
+        "sample_index": 17,
+        "clock": 0,
+        "observed": true,
+        "phase": "low_before_posedge_pre_NBA",
+        "inputs": {
+          "clk": 0,
+          "rst": 0,
+          "s_axis_tdata": 2,
+          "s_axis_tvalid": 1,
+          "s_axis_tlast": 0,
+          "s_axis_tuser": 0,
+          "m_axis_tready": 0
+        },
+        "outputs": {
+          "s_axis_tready": 1,
+          "m_axis_tdata": 0,
+          "m_axis_tvalid": 0,
+          "m_axis_tlast": 0,
+          "m_axis_tuser": 0,
+          "status_overflow": 0,
+          "status_bad_frame": 0,
+          "status_good_frame": 0
+        },
+        "execution_s": 0.16655987500053016,
+        "read_s": 0.0011577499972190708,
+        "state": "event-0034.kore.gz",
+        "sha256_uncompressed": "8a96de585d824138bc0ba468647b92834b7b794db70c5be6f5996ab705e80f5f",
+        "quiescent": {
+          "prog": true,
+          "setup": true,
+          "cmd": true,
+          "currents_empty": true
+        }
+      },
+      "source": "results/batch-memory-01/d4/buggy/kimulator/event-0034.kore.gz",
+      "verified_sha256_uncompressed": "8a96de585d824138bc0ba468647b92834b7b794db70c5be6f5996ab705e80f5f",
+      "signals": {
+        "axis_fifo_wrapper/axis_fifo_inst/%7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%65": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%43": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%36": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg2": [
+          2,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%68": [
+          0,
+          5
+        ],
+        "axis_fifo_wrapper/%2#1": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%77": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%11": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg5": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#6": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%49": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%70": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg9": [
+          2,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%26": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%80": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%57": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%59": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%28": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%63": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%45": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%30": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%66": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%40": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%79": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%35": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%4": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/%2#4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%72": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%14": [
+          0,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%82": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%24": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%55": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%23": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%52": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg12": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%61": [
+          1,
+          6
+        ],
+        "axis_fifo_wrapper/%2#8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%47": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%32": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%18": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%3": [
+          1,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%42": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%37": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%6": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%64": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%74": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%38": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%12": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%9": [
+          2,
+          10
+        ],
+        "axis_fifo_wrapper/%arg1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#2": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%17": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%48": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%71": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%21": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%50": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%31": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%62": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%44": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%69": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%76": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%15": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg6": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#5": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%73": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%27": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%81": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%56": {
+          "memory_cells": [
+            {
+              "address": 0,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 1,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            }
+          ]
+        },
+        "axis_fifo_wrapper/axis_fifo_inst/%arg16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%22": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%0": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%53": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg13": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%29": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%58": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%19": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%60": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#9": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%46": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%33": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%5": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%67": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%41": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%78": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%34": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg0": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#3": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%75": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%39": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%13": [
+          0,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%25": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%54": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg14": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%20": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%51": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg11": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "event": {
+        "event_index": 35,
+        "sample_index": 17,
+        "clock": 1,
+        "observed": false,
+        "phase": "posedge_update",
+        "inputs": {
+          "clk": 1,
+          "rst": 0,
+          "s_axis_tdata": 2,
+          "s_axis_tvalid": 1,
+          "s_axis_tlast": 0,
+          "s_axis_tuser": 0,
+          "m_axis_tready": 0
+        },
+        "outputs": {
+          "s_axis_tready": 1,
+          "m_axis_tdata": 0,
+          "m_axis_tvalid": 0,
+          "m_axis_tlast": 0,
+          "m_axis_tuser": 0,
+          "status_overflow": 0,
+          "status_bad_frame": 0,
+          "status_good_frame": 0
+        },
+        "execution_s": 0.16833833300188417,
+        "read_s": 0.0012255830006324686,
+        "state": "event-0035.kore.gz",
+        "sha256_uncompressed": "68021a2655fb3de500bbd444ca56b4da6ede2e20a29f6995580cf66c27d75779",
+        "quiescent": {
+          "prog": true,
+          "setup": true,
+          "cmd": true,
+          "currents_empty": true
+        }
+      },
+      "source": "results/batch-memory-01/d4/buggy/kimulator/event-0035.kore.gz",
+      "verified_sha256_uncompressed": "68021a2655fb3de500bbd444ca56b4da6ede2e20a29f6995580cf66c27d75779",
+      "signals": {
+        "axis_fifo_wrapper/axis_fifo_inst/%7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%65": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%43": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%36": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg2": [
+          2,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%68": [
+          0,
+          5
+        ],
+        "axis_fifo_wrapper/%2#1": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%77": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%11": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg5": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#6": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%49": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%70": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg9": [
+          2,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%26": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%80": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%57": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%59": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%28": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%63": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%45": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%30": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%66": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%40": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%79": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%35": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%4": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/%2#4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%72": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%14": [
+          0,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%82": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%24": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%55": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%23": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%52": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg12": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%61": [
+          1,
+          6
+        ],
+        "axis_fifo_wrapper/%2#8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%47": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%32": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%18": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%3": [
+          1,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%42": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%37": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%6": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%64": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%74": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%38": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%12": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%9": [
+          2,
+          10
+        ],
+        "axis_fifo_wrapper/%arg1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#2": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%17": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%48": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%71": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%21": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%50": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%31": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%62": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%44": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%69": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%76": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%15": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg6": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#5": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%73": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%27": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%81": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%56": {
+          "memory_cells": [
+            {
+              "address": 0,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 1,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 2,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            }
+          ]
+        },
+        "axis_fifo_wrapper/axis_fifo_inst/%arg16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%22": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%0": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%53": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg13": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%29": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%58": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%19": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%60": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#9": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%46": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%33": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%5": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%67": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%41": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%78": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%34": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#3": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%75": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%39": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%13": [
+          0,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%25": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%54": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg14": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%20": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%51": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg11": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "event": {
+        "event_index": 132,
+        "sample_index": 66,
+        "clock": 0,
+        "observed": true,
+        "phase": "low_before_posedge_pre_NBA",
+        "inputs": {
+          "clk": 0,
+          "rst": 0,
+          "s_axis_tdata": 0,
+          "s_axis_tvalid": 1,
+          "s_axis_tlast": 0,
+          "s_axis_tuser": 0,
+          "m_axis_tready": 0
+        },
+        "outputs": {
+          "s_axis_tready": 1,
+          "m_axis_tdata": 0,
+          "m_axis_tvalid": 1,
+          "m_axis_tlast": 0,
+          "m_axis_tuser": 0,
+          "status_overflow": 0,
+          "status_bad_frame": 0,
+          "status_good_frame": 0
+        },
+        "execution_s": 0.16892229199947906,
+        "read_s": 0.001273458001378458,
+        "state": "event-0132.kore.gz",
+        "sha256_uncompressed": "4b055d1a96b51d845386b37c45fcfa0f7ead9cb39d54726ad6b2fdddefd3fa1d",
+        "quiescent": {
+          "prog": true,
+          "setup": true,
+          "cmd": true,
+          "currents_empty": true
+        }
+      },
+      "source": "results/batch-memory-01/d4/buggy/kimulator/event-0132.kore.gz",
+      "verified_sha256_uncompressed": "4b055d1a96b51d845386b37c45fcfa0f7ead9cb39d54726ad6b2fdddefd3fa1d",
+      "signals": {
+        "axis_fifo_wrapper/axis_fifo_inst/%7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%65": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%43": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%36": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg2": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%68": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/%2#1": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%77": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%11": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg5": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#6": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%49": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%70": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg9": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%26": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%80": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%57": [
+          2,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%59": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%28": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%63": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%45": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%30": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%66": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%40": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%79": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%35": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%4": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/%2#4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%72": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%14": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%82": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%24": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%55": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%23": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%52": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg12": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%61": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/%2#8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%47": [
+          1,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%32": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%18": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%3": [
+          1,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%42": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%37": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%6": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%64": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%74": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%38": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%12": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%9": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/%arg1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#2": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%17": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%48": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%71": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%21": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%50": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%31": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%62": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%44": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%10": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%69": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%76": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg6": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#5": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%73": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%27": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%81": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%56": {
+          "memory_cells": [
+            {
+              "address": 0,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 1,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 2,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 3,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 4,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 5,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 6,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 7,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 8,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 9,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 10,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 11,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 12,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 13,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 14,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 15,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 16,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 17,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 18,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 19,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 20,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 21,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 22,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 23,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 24,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 25,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 26,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 27,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 28,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 29,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 30,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 31,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            }
+          ]
+        },
+        "axis_fifo_wrapper/axis_fifo_inst/%arg16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%22": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%0": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%53": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg13": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%29": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%58": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%19": [
+          1,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%60": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#9": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%46": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%33": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%5": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%67": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%41": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%78": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%34": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg0": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%75": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%39": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%13": [
+          1,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%25": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%54": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg14": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%20": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%51": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg11": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "event": {
+        "event_index": 133,
+        "sample_index": 66,
+        "clock": 1,
+        "observed": false,
+        "phase": "posedge_update",
+        "inputs": {
+          "clk": 1,
+          "rst": 0,
+          "s_axis_tdata": 0,
+          "s_axis_tvalid": 1,
+          "s_axis_tlast": 0,
+          "s_axis_tuser": 0,
+          "m_axis_tready": 0
+        },
+        "outputs": {
+          "s_axis_tready": 1,
+          "m_axis_tdata": 0,
+          "m_axis_tvalid": 1,
+          "m_axis_tlast": 0,
+          "m_axis_tuser": 0,
+          "status_overflow": 0,
+          "status_bad_frame": 0,
+          "status_good_frame": 0
+        },
+        "execution_s": 0.1587575419980567,
+        "read_s": 0.0012735840027744416,
+        "state": "event-0133.kore.gz",
+        "sha256_uncompressed": "268c68c2fbb5559ac91b8effa131b5eeb06ca0283b563774331486bacc2de493",
+        "quiescent": {
+          "prog": true,
+          "setup": true,
+          "cmd": true,
+          "currents_empty": true
+        }
+      },
+      "source": "results/batch-memory-01/d4/buggy/kimulator/event-0133.kore.gz",
+      "verified_sha256_uncompressed": "268c68c2fbb5559ac91b8effa131b5eeb06ca0283b563774331486bacc2de493",
+      "signals": {
+        "axis_fifo_wrapper/axis_fifo_inst/%7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%65": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%43": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%36": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg2": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%68": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/%2#1": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%77": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%11": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg5": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#6": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%49": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%70": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg9": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%26": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%80": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%57": [
+          2,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%59": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%28": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%63": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%45": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%30": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%66": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%40": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%79": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%35": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%4": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/%2#4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%72": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%14": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%82": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%24": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%55": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%23": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%52": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg12": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%61": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/%2#8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%47": [
+          1,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%32": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%18": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%3": [
+          1,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%42": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%37": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%6": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%64": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%74": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%38": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%12": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%9": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/%arg1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#2": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%17": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%48": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%71": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%21": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%50": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%31": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%62": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%44": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%10": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%69": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%76": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg6": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#5": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%73": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%27": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%81": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%56": {
+          "memory_cells": [
+            {
+              "address": 0,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 1,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 2,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 3,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 4,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 5,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 6,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 7,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 8,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 9,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 10,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 11,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 12,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 13,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 14,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 15,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 16,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 17,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 18,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 19,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 20,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 21,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 22,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 23,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 24,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 25,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 26,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 27,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 28,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 29,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 30,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 31,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            }
+          ]
+        },
+        "axis_fifo_wrapper/axis_fifo_inst/%arg16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%22": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%0": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%53": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg13": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%29": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%58": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%19": [
+          1,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%60": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#9": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%46": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%33": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%5": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%67": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%41": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%78": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%34": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%75": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%39": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%13": [
+          1,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%25": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%54": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg14": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%20": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%51": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg11": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "event": {
+        "event_index": 134,
+        "sample_index": 67,
+        "clock": 0,
+        "observed": true,
+        "phase": "low_before_posedge_pre_NBA",
+        "inputs": {
+          "clk": 0,
+          "rst": 0,
+          "s_axis_tdata": 1,
+          "s_axis_tvalid": 1,
+          "s_axis_tlast": 0,
+          "s_axis_tuser": 0,
+          "m_axis_tready": 0
+        },
+        "outputs": {
+          "s_axis_tready": 1,
+          "m_axis_tdata": 0,
+          "m_axis_tvalid": 1,
+          "m_axis_tlast": 0,
+          "m_axis_tuser": 0,
+          "status_overflow": 0,
+          "status_bad_frame": 0,
+          "status_good_frame": 0
+        },
+        "execution_s": 0.15964008399896557,
+        "read_s": 0.001300915999308927,
+        "state": "event-0134.kore.gz",
+        "sha256_uncompressed": "6e0b34bc33e7faf14ebce8cf449457783b232143cb138de1f7f65a0c62caf287",
+        "quiescent": {
+          "prog": true,
+          "setup": true,
+          "cmd": true,
+          "currents_empty": true
+        }
+      },
+      "source": "results/batch-memory-01/d4/buggy/kimulator/event-0134.kore.gz",
+      "verified_sha256_uncompressed": "6e0b34bc33e7faf14ebce8cf449457783b232143cb138de1f7f65a0c62caf287",
+      "signals": {
+        "axis_fifo_wrapper/axis_fifo_inst/%7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%65": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%43": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%36": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg2": [
+          1,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%68": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/%2#1": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%77": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%11": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg5": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#6": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%49": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%70": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg9": [
+          1,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%26": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%80": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%57": [
+          2,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%59": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%28": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%63": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%45": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%30": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%66": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%40": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%79": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%35": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%4": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/%2#4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%72": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%14": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%82": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%24": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%55": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%23": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%52": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg12": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%61": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/%2#8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%47": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%32": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%18": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%3": [
+          1,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%42": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%37": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%6": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%64": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%74": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%38": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%12": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%9": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/%arg1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#2": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%17": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%48": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%71": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%21": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%50": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%31": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%62": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%44": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%10": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%69": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%76": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg6": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#5": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%73": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%27": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%81": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%56": {
+          "memory_cells": [
+            {
+              "address": 0,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 1,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 2,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 3,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 4,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 5,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 6,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 7,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 8,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 9,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 10,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 11,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 12,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 13,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 14,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 15,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 16,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 17,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 18,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 19,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 20,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 21,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 22,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 23,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 24,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 25,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 26,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 27,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 28,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 29,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 30,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 31,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            }
+          ]
+        },
+        "axis_fifo_wrapper/axis_fifo_inst/%arg16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%22": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%0": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%53": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg13": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%29": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%58": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%19": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%60": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#9": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%46": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%33": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%5": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%67": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%41": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%78": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%34": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg0": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%75": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%39": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%13": [
+          1,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%25": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%54": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg14": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%20": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%51": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg11": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "event": {
+        "event_index": 135,
+        "sample_index": 67,
+        "clock": 1,
+        "observed": false,
+        "phase": "posedge_update",
+        "inputs": {
+          "clk": 1,
+          "rst": 0,
+          "s_axis_tdata": 1,
+          "s_axis_tvalid": 1,
+          "s_axis_tlast": 0,
+          "s_axis_tuser": 0,
+          "m_axis_tready": 0
+        },
+        "outputs": {
+          "s_axis_tready": 1,
+          "m_axis_tdata": 0,
+          "m_axis_tvalid": 1,
+          "m_axis_tlast": 0,
+          "m_axis_tuser": 0,
+          "status_overflow": 0,
+          "status_bad_frame": 0,
+          "status_good_frame": 0
+        },
+        "execution_s": 0.1613192499971774,
+        "read_s": 0.001299957999435719,
+        "state": "event-0135.kore.gz",
+        "sha256_uncompressed": "45dc5a392e6e31f40ae8c821f2ba8a8e96f1c17d1401c2d94af8802dbbecf0c9",
+        "quiescent": {
+          "prog": true,
+          "setup": true,
+          "cmd": true,
+          "currents_empty": true
+        }
+      },
+      "source": "results/batch-memory-01/d4/buggy/kimulator/event-0135.kore.gz",
+      "verified_sha256_uncompressed": "45dc5a392e6e31f40ae8c821f2ba8a8e96f1c17d1401c2d94af8802dbbecf0c9",
+      "signals": {
+        "axis_fifo_wrapper/axis_fifo_inst/%7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%65": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%43": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%36": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg2": [
+          1,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%68": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/%2#1": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%77": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%11": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg5": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#6": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%49": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%70": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg9": [
+          1,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%26": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%80": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%57": [
+          2,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%59": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%28": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%63": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%45": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%30": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%66": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%40": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%79": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%35": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%4": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/%2#4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%72": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%14": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%82": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%24": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%55": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%23": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%52": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg12": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%61": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/%2#8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%47": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%32": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%18": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%3": [
+          1,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%42": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%37": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%6": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%64": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%74": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%38": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%12": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%9": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/%arg1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#2": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%17": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%48": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%71": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%21": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%50": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%31": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%62": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%44": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%10": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%69": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%76": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg6": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#5": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%73": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%27": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%81": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%56": {
+          "memory_cells": [
+            {
+              "address": 0,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 1,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 2,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 3,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 4,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 5,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 6,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 7,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 8,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 9,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 10,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 11,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 12,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 13,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 14,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 15,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 16,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 17,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 18,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 19,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 20,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 21,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 22,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 23,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 24,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 25,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 26,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 27,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 28,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 29,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 30,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 31,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            }
+          ]
+        },
+        "axis_fifo_wrapper/axis_fifo_inst/%arg16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%22": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%0": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%53": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg13": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%29": [
+          34,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%58": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%19": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%60": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#9": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%46": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%33": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%5": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%67": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%41": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%78": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%34": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%75": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%39": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%13": [
+          1,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%25": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%54": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg14": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%20": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%51": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg11": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "event": {
+        "event_index": 136,
+        "sample_index": 68,
+        "clock": 0,
+        "observed": true,
+        "phase": "low_before_posedge_pre_NBA",
+        "inputs": {
+          "clk": 0,
+          "rst": 0,
+          "s_axis_tdata": 2,
+          "s_axis_tvalid": 1,
+          "s_axis_tlast": 0,
+          "s_axis_tuser": 0,
+          "m_axis_tready": 0
+        },
+        "outputs": {
+          "s_axis_tready": 1,
+          "m_axis_tdata": 0,
+          "m_axis_tvalid": 1,
+          "m_axis_tlast": 0,
+          "m_axis_tuser": 0,
+          "status_overflow": 0,
+          "status_bad_frame": 0,
+          "status_good_frame": 0
+        },
+        "execution_s": 0.16148112500013667,
+        "read_s": 0.0013953330017102417,
+        "state": "event-0136.kore.gz",
+        "sha256_uncompressed": "0faa94e20003e57e7177b5d56c3c6786a2f38aacd0e91df8ee51d725849584a4",
+        "quiescent": {
+          "prog": true,
+          "setup": true,
+          "cmd": true,
+          "currents_empty": true
+        }
+      },
+      "source": "results/batch-memory-01/d4/buggy/kimulator/event-0136.kore.gz",
+      "verified_sha256_uncompressed": "0faa94e20003e57e7177b5d56c3c6786a2f38aacd0e91df8ee51d725849584a4",
+      "signals": {
+        "axis_fifo_wrapper/axis_fifo_inst/%7": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%65": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%43": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%36": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg2": [
+          2,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%68": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/%2#1": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%77": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%11": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg5": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#6": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%49": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%70": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg9": [
+          2,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%26": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%80": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%57": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%59": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%28": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%63": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%45": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%30": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%66": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%40": [
+          36,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%79": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%35": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%4": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/%2#4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%72": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%14": [
+          2,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%82": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%24": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%55": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%23": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%52": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg12": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%61": [
+          3,
+          6
+        ],
+        "axis_fifo_wrapper/%2#8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%47": [
+          3,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%32": [
+          36,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%18": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%3": [
+          1,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%42": [
+          36,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%37": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%6": [
+          0,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%64": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%74": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%38": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%12": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%9": [
+          2,
+          10
+        ],
+        "axis_fifo_wrapper/%arg1": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#2": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%17": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg4": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#7": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%48": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%71": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%21": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%50": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%31": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%62": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%44": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%10": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%arg3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%69": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#0": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%76": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%15": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#10": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg6": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#5": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%73": [
+          2,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%27": [
+          36,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%81": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%56": {
+          "memory_cells": [
+            {
+              "address": 0,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 1,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 2,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 3,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 4,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 5,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 6,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 7,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 8,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 9,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 10,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 11,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 12,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 13,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 14,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 15,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 16,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 17,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 18,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 19,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 20,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            },
+            {
+              "address": 21,
+              "address_width": 5,
+              "value": 489,
+              "width": 10
+            },
+            {
+              "address": 22,
+              "address_width": 5,
+              "value": 0,
+              "width": 10
+            },
+            {
+              "address": 23,
+              "address_width": 5,
+              "value": 1,
+              "width": 10
+            },
+            {
+              "address": 24,
+              "address_width": 5,
+              "value": 2,
+              "width": 10
+            },
+            {
+              "address": 25,
+              "address_width": 5,
+              "value": 3,
+              "width": 10
+            },
+            {
+              "address": 26,
+              "address_width": 5,
+              "value": 4,
+              "width": 10
+            },
+            {
+              "address": 27,
+              "address_width": 5,
+              "value": 5,
+              "width": 10
+            },
+            {
+              "address": 28,
+              "address_width": 5,
+              "value": 6,
+              "width": 10
+            },
+            {
+              "address": 29,
+              "address_width": 5,
+              "value": 7,
+              "width": 10
+            },
+            {
+              "address": 30,
+              "address_width": 5,
+              "value": 8,
+              "width": 10
+            },
+            {
+              "address": 31,
+              "address_width": 5,
+              "value": 9,
+              "width": 10
+            }
+          ]
+        },
+        "axis_fifo_wrapper/axis_fifo_inst/%arg16": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%22": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%0": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%53": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg13": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%29": [
+          35,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%58": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%19": [
+          3,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%60": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/%2#9": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%46": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%33": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%5": [
+          0,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%67": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%41": [
+          33,
+          6
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%78": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%34": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%8": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%arg0": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/%2#3": [
+          1,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%75": [
+          1,
+          10
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%39": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%13": [
+          1,
+          5
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%25": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%54": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg14": [
+          0,
+          8
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%20": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%51": [
+          0,
+          1
+        ],
+        "axis_fifo_wrapper/axis_fifo_inst/%arg11": [
+          1,
+          1
+        ]
+      }
+    }
+  ]
+}

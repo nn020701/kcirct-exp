@@ -1,0 +1,13 @@
+# 本机环境与构建缓存
+.venv/
+.build/
+.env
+.env.local
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# 完整运行记录和临时探针；正式摘要、设计输入与精选证据单独维护
+**/.runs/
+**/.work/

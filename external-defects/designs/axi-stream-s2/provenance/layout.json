@@ -1,0 +1,10 @@
+{
+  "files": {
+    "origin/README.md": "designs/axi-stream-s2/provenance/origin/README.md",
+    "project.toml": "designs/axi-stream-s2/provenance/project.toml",
+    "tb.csv": "designs/axi-stream-s2/testbench/tb.csv",
+    "to_btor2.ys": "designs/axi-stream-s2/provenance/to_btor2.ys",
+    "xlnxstream_2018_3.v": "designs/axi-stream-s2/original/xlnxstream_2018_3.v",
+    "xlnxstream_2018_3_bug_s2.v": "designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "files": {
+    "axis_fifo.v": "designs/axis-fifo-d12/original/axis_fifo.v",
+    "axis_fifo_bug_d12.v": "designs/axis-fifo-d12/variants/d12/axis_fifo_bug_d12.v",
+    "origin/README.md": "designs/axis-fifo-d12/provenance/origin/README.md",
+    "project.toml": "designs/axis-fifo-d12/provenance/project.toml",
+    "tb.csv": "designs/axis-fifo-d12/testbench/tb.csv",
+    "tb.v": "designs/axis-fifo-d12/testbench/tb.v",
+    "to_btor2.ys": "designs/axis-fifo-d12/provenance/to_btor2.ys"
+  }
+}

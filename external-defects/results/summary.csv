@@ -1,0 +1,11 @@
+source_case_id,variant_id,samples,status,golden_native_oracle,golden_k_oracle,buggy_k_native,simulator_agrees_with_native,bug_detected_by_oracle,first_bug_difference,run_id
+D13,d13,6,pass,True,True,True,True,True,"{""sample_index"": 5, ""signal"": ""frame_len"", ""expected"": 1, ""actual"": 3}",batch-final-01
+S3,s3,13,pass,True,True,True,True,True,"{""sample_index"": 8, ""signal"": ""input_axis_tready"", ""expected"": 1, ""actual"": 0}",batch-final-01
+S1,s1b,10,pass,True,True,True,True,True,"{""sample_index"": 5, ""signal"": ""S_AXI_AWREADY"", ""expected"": 0, ""actual"": 1}",batch-final-01
+S1,s1r,10,pass,True,True,True,True,True,"{""sample_index"": 5, ""signal"": ""S_AXI_ARREADY"", ""expected"": 0, ""actual"": 1}",batch-final-01
+D8,d8,14,pass,True,True,True,True,True,"{""sample_index"": 4, ""signal"": ""m_axis_tvalid"", ""expected"": 1, ""actual"": 0}",batch-final-01
+D12,d12,16,pass,True,True,True,True,True,"{""sample_index"": 13, ""signal"": ""m_axis_tdata"", ""expected"": 3, ""actual"": 4}",batch-final-01
+D11,d11,17,timeout,True,,,False,False,"{""sample_index"": 13, ""signal"": ""drop_frame"", ""expected"": 0, ""actual"": 1}",batch-memory-01
+D4,d4,185,pass,True,True,True,True,True,"{""sample_index"": 67, ""signal"": ""s_axis_tready"", ""expected"": 0, ""actual"": 1}",batch-final-01
+S2,s2,45,execution_error,True,,,False,False,"{""sample_index"": 42, ""signal"": ""M_AXIS_TLAST"", ""expected"": 0, ""actual"": 1}",batch-memory-01
+C4,c4,10,timeout,True,,,False,False,"{""sample_index"": 4, ""signal"": ""input_axis_tready"", ""expected"": 0, ""actual"": 1}",batch-memory-01

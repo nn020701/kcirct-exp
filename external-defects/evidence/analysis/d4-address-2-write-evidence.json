@@ -1,0 +1,319 @@
+{
+  "case": "D4",
+  "variant": "buggy",
+  "memory_ssa": "axis_fifo_wrapper/axis_fifo_inst/%56",
+  "scope": "逐一检查 event 0..134 的全部低相位写口地址/使能；实际提交由相邻奇数事件存储状态核对。",
+  "checked_events": [
+    {
+      "event": 0,
+      "sha256_uncompressed": "10ab65e3d4e3a04dcb3e84a9a9fc77e9b285ebdda339753263c63bef8a7e6ec5"
+    },
+    {
+      "event": 2,
+      "sha256_uncompressed": "8b10de225a6242b3e92276f3b84a6b50b4301e11e29ecf95febc212b3f038558"
+    },
+    {
+      "event": 4,
+      "sha256_uncompressed": "b667aebda133172002e55e72d9f443e1ae4e676ff36b7f57ca3f6f21164684bb"
+    },
+    {
+      "event": 6,
+      "sha256_uncompressed": "f80a8963413bbf5f2f4a0e9d32eef978b6f579f34415b7229c1372260be81f4f"
+    },
+    {
+      "event": 8,
+      "sha256_uncompressed": "5e2d3a0fa69e506950237247e86933124cfe53193cc5e30875ddc0df05aa3e97"
+    },
+    {
+      "event": 10,
+      "sha256_uncompressed": "882771dc0ff21bb5ccc226182ab47da2567debf45ac24fbcfab9979945926d11"
+    },
+    {
+      "event": 12,
+      "sha256_uncompressed": "f6f30fa347a1587e7510ace013a1061aff82e9562bb879f7c4136dbdbed6b7dd"
+    },
+    {
+      "event": 14,
+      "sha256_uncompressed": "07ee5c60a39c2bd8d8fbd2a59e760c8ff2ceebc9080c6ab1eb2a07aca17b8681"
+    },
+    {
+      "event": 16,
+      "sha256_uncompressed": "d86967dd4315668368063a39a4196777236d31a001f5f0716d365cec04629af2"
+    },
+    {
+      "event": 18,
+      "sha256_uncompressed": "d9b7da73edd73d59df088708b7e648cc51fc2a651e8d963d07402afc80db641a"
+    },
+    {
+      "event": 20,
+      "sha256_uncompressed": "b1c291a1d76604cfb360bde0acf510bce15090fb2d4ec1462e541ae965c7a250"
+    },
+    {
+      "event": 22,
+      "sha256_uncompressed": "e1d5a0a8a1cee88cbf49335a4da821f9bdecc6bd7f1606cff1dd2fb6fd0cedca"
+    },
+    {
+      "event": 24,
+      "sha256_uncompressed": "6004dcbcbe9b70bd2186774d34ed4bc33712472b9cfe4dff136874d5c962b2bb"
+    },
+    {
+      "event": 26,
+      "sha256_uncompressed": "fdaa0423694054dac7e9e3247cff238038a12eff0765006848b0ee6b805d8277"
+    },
+    {
+      "event": 28,
+      "sha256_uncompressed": "24f355db6745d81efd56c74e01fb1595e5db70986eb53a1c97cb9677f775cb65"
+    },
+    {
+      "event": 30,
+      "sha256_uncompressed": "462c35ee175323b5c231938375b831a9db1d114b11fcc5b59b8d00beb81c5ff6"
+    },
+    {
+      "event": 32,
+      "sha256_uncompressed": "f04976316117fe82f9bb9d6f9259815a096ee404b24b354720ae1b0ab2915739"
+    },
+    {
+      "event": 34,
+      "sha256_uncompressed": "8a96de585d824138bc0ba468647b92834b7b794db70c5be6f5996ab705e80f5f"
+    },
+    {
+      "event": 36,
+      "sha256_uncompressed": "3b55ee314843d25bcfd6f9215669da3b7a0d914397d9beac424e10fdc0c3cb70"
+    },
+    {
+      "event": 38,
+      "sha256_uncompressed": "25ff0cc90b93380adfe4d0a1b066f0fecec75dc43048c334c5c4a292810bca60"
+    },
+    {
+      "event": 40,
+      "sha256_uncompressed": "fc032fc2fe5534593b222fba0148c8c5929e1c091aff46b7ff4b64e61ddd30fd"
+    },
+    {
+      "event": 42,
+      "sha256_uncompressed": "3b2f572cb229999a202586b83c9ee9ae0aa9743fdfb5987bf0526fe351e6fba7"
+    },
+    {
+      "event": 44,
+      "sha256_uncompressed": "ea30f0980c0e5194ec72e497fd40a3926f99ef9bdead5006c1a3a88d909dc3be"
+    },
+    {
+      "event": 46,
+      "sha256_uncompressed": "d287d7c75932349a74018d0648bee82c17c3d66786287f7810695c4ce4beaf57"
+    },
+    {
+      "event": 48,
+      "sha256_uncompressed": "97f951e934045551e5cf90bc12f424db595fd27a2aae7ae2b102492713eef917"
+    },
+    {
+      "event": 50,
+      "sha256_uncompressed": "426d5c3c5a6f660dc80716d42ebf57d5752a2fa0370a6ecb5559168891eee5a3"
+    },
+    {
+      "event": 52,
+      "sha256_uncompressed": "5ebdb1f4939e9801d679871f75270697b7aac40f366372a41be847706928aecf"
+    },
+    {
+      "event": 54,
+      "sha256_uncompressed": "113f79397870b0dd750be98d283bdfb1efecf30e87516fc182a0f1fc8bd0f5d2"
+    },
+    {
+      "event": 56,
+      "sha256_uncompressed": "296dbc4168268c93af63b704d522382c2553c026f2893c60084b251f551e98f6"
+    },
+    {
+      "event": 58,
+      "sha256_uncompressed": "88ccc2cd5dfb229c3481f3b709b2a19c7896c2559d86e4134b741d22ef22ce9c"
+    },
+    {
+      "event": 60,
+      "sha256_uncompressed": "45fc4c6e2b92161ccc9aa6ce791fe7ac1af176b7775c33f43cf7017590c244bd"
+    },
+    {
+      "event": 62,
+      "sha256_uncompressed": "1c56c84af3489436065e7cecff9e415340f345db8b1fd496fa09056dfc968c13"
+    },
+    {
+      "event": 64,
+      "sha256_uncompressed": "eed879ed4c6b5ef52216dd0603f539d0f146fe43a8f31161d690b43e9961ccb1"
+    },
+    {
+      "event": 66,
+      "sha256_uncompressed": "44455e3fc5388747338695188afc7db0717ca71f30fce3f989636d5ba614a797"
+    },
+    {
+      "event": 68,
+      "sha256_uncompressed": "807bc3b8bc6a4cf12ca1c0ee71f873771c09a8276513159fec665ee1c1e95511"
+    },
+    {
+      "event": 70,
+      "sha256_uncompressed": "ce62b010e5d188f6067b24975fc1c8a42cff6995afe4a876ae537685a29de4e6"
+    },
+    {
+      "event": 72,
+      "sha256_uncompressed": "8813961e90542d8676ad5feee1b5e80a96fafc7056170bd130c3a2a334518130"
+    },
+    {
+      "event": 74,
+      "sha256_uncompressed": "79c87286c36b1214bae9d4655f75f4ac65df5aad0812a6c1a35621d96a3bae46"
+    },
+    {
+      "event": 76,
+      "sha256_uncompressed": "a8ac16779842a04a30131790a29035787f2a47e0d3165eeee8b60b4f99db63a4"
+    },
+    {
+      "event": 78,
+      "sha256_uncompressed": "c68aad88f7f4efd8e91ca3a88d3f314f78009570c9a6786e2bb2b198607c5615"
+    },
+    {
+      "event": 80,
+      "sha256_uncompressed": "fa284a240b167e197510bbb308d9e825f7ed02831af98e2aa620e6ebd33b396b"
+    },
+    {
+      "event": 82,
+      "sha256_uncompressed": "dc943cc45661ec30331c64d40052147b89cd91bdbbfb89eec4e0bb31f9b1840a"
+    },
+    {
+      "event": 84,
+      "sha256_uncompressed": "779c3e15b46239800d9e0d6743258a91f694c3e4789211fdbea95bcb6e109f90"
+    },
+    {
+      "event": 86,
+      "sha256_uncompressed": "118d3472d70139bd15ecb8101bc7635d3244a9722fadc7a4bd384a4e68eeee61"
+    },
+    {
+      "event": 88,
+      "sha256_uncompressed": "7d97e0cfee60b1a6f59354e411b8d16b65e40aa923ff707f499afaee5dedf193"
+    },
+    {
+      "event": 90,
+      "sha256_uncompressed": "4f056c02e5bf80a8947ab77240dea6bff3b5b3d8622368b4282a1167be83065e"
+    },
+    {
+      "event": 92,
+      "sha256_uncompressed": "140be4ab40256096e90c38f3c2e6a0a78835a037b3f2b4b95f86b35ac4d919fa"
+    },
+    {
+      "event": 94,
+      "sha256_uncompressed": "ee42ef8c4f5e0d1031a2560f5b6813019af20ecc64872de77a3bef68256a87ac"
+    },
+    {
+      "event": 96,
+      "sha256_uncompressed": "996bf005c574ce193b8c6848b1098fb86976df5cd878f6f23a722ef17cd3b2be"
+    },
+    {
+      "event": 98,
+      "sha256_uncompressed": "ec01779c2c009d851205d7c2b73bea0cb995043300e920759bf05ef053f70171"
+    },
+    {
+      "event": 100,
+      "sha256_uncompressed": "255183b2df11446d0b07f905239c95762585c2f1761c77d060812e6d68ad5632"
+    },
+    {
+      "event": 102,
+      "sha256_uncompressed": "e06007f06b6cbc8b093d930f6974cb696e09a40e7e7d8a63c5a9cbfe0ffdc0bc"
+    },
+    {
+      "event": 104,
+      "sha256_uncompressed": "aab2487cb46ef6bac1c972a727f801be1c5391bacf276ac8ac60302edb2a0b6d"
+    },
+    {
+      "event": 106,
+      "sha256_uncompressed": "f0f44e8f327e77494187698f47e5f3dfbec94c20f7aac9b776e23333e4b15439"
+    },
+    {
+      "event": 108,
+      "sha256_uncompressed": "15d127cbcbe531085f6dbd048e3c678e92bff0d9b58aae3ec06547227b6bac7d"
+    },
+    {
+      "event": 110,
+      "sha256_uncompressed": "e49a7b5a05cfee5ec1ca2f67813dfac02db0f13ae0f9f38ec865ab5968052f5c"
+    },
+    {
+      "event": 112,
+      "sha256_uncompressed": "27c2a30bd0e159d3fd1e464533bbcaf28b6680ed1496f8e024e14051406ef5ed"
+    },
+    {
+      "event": 114,
+      "sha256_uncompressed": "ea4d8f6f684f8ace4c4895c2b1bbd3809ce219a310d1735ce72d22bd79a57be7"
+    },
+    {
+      "event": 116,
+      "sha256_uncompressed": "07e115af110d929a0c5e4b52f6ff32094eb0c8d07055b5ea7ce5100e8039a37b"
+    },
+    {
+      "event": 118,
+      "sha256_uncompressed": "f6eff19d675ac1b291b4f6333abbdb330efb469ec70aca4e7a091c7c214ae7d2"
+    },
+    {
+      "event": 120,
+      "sha256_uncompressed": "c88c1b8f03db6e086a5f7b988794621ab0e334090e0946f66b9e8e89cf0aa7f7"
+    },
+    {
+      "event": 122,
+      "sha256_uncompressed": "aaaff5d11ae3382c2d10d8c2764d311ec355c8b21c005556b9a07e871930de95"
+    },
+    {
+      "event": 124,
+      "sha256_uncompressed": "5ce219d6d524ed8860930195cf61705e3f939497c31744e772edafcaea7968e2"
+    },
+    {
+      "event": 126,
+      "sha256_uncompressed": "9bb67c007564c6f0160f124e98579a4bbbfb3a33d5dc5c77eb8c6e61be302ffa"
+    },
+    {
+      "event": 128,
+      "sha256_uncompressed": "1ddd6fe9c15e3112e595825869166cd91e16f7fb21a6b47ba83c0e489bea349e"
+    },
+    {
+      "event": 130,
+      "sha256_uncompressed": "b73b659d6b9cb9e478b0107937cb138c880ea111fb88d3f52acc056a0a752874"
+    },
+    {
+      "event": 132,
+      "sha256_uncompressed": "4b055d1a96b51d845386b37c45fcfa0f7ead9cb39d54726ad6b2fdddefd3fa1d"
+    },
+    {
+      "event": 134,
+      "sha256_uncompressed": "6e0b34bc33e7faf14ebce8cf449457783b232143cb138de1f7f65a0c62caf287"
+    }
+  ],
+  "enabled_writes_to_address_2": [
+    {
+      "pre_edge_event": 34,
+      "commit_event": 35,
+      "address": [
+        2,
+        5
+      ],
+      "write_enable": [
+        1,
+        1
+      ],
+      "data": [
+        2,
+        10
+      ],
+      "previous_memory_value": null
+    },
+    {
+      "pre_edge_event": 134,
+      "commit_event": 135,
+      "address": [
+        2,
+        5
+      ],
+      "write_enable": [
+        1,
+        1
+      ],
+      "data": [
+        1,
+        10
+      ],
+      "previous_memory_value": [
+        2,
+        10
+      ]
+    }
+  ]
+}

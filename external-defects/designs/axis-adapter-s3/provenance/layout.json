@@ -1,0 +1,11 @@
+{
+  "files": {
+    "axis_adapter.v": "designs/axis-adapter-s3/original/axis_adapter.v",
+    "axis_adapter_bug_s3.v": "designs/axis-adapter-s3/variants/s3/axis_adapter_bug_s3.v",
+    "origin/README.md": "designs/axis-adapter-s3/provenance/origin/README.md",
+    "project.toml": "designs/axis-adapter-s3/provenance/project.toml",
+    "tb.csv": "designs/axis-adapter-s3/testbench/tb.csv",
+    "tb.v": "designs/axis-adapter-s3/testbench/tb.v",
+    "to_btor2.ys": "designs/axis-adapter-s3/provenance/to_btor2.ys"
+  }
+}

@@ -1,0 +1,1340 @@
+{
+  "schema_version": 1,
+  "formal_run_ids": [
+    "batch-first-01",
+    "batch-memory-01",
+    "batch-final-01"
+  ],
+  "source_runs": [
+    {
+      "run_id": "batch-first-01",
+      "path": ".runs/batch-first-01/results.json",
+      "sha256": "455fe2f346d0ddb6cae74c5dc9a570294dba85f3812b88eb1f579dd04a57b794",
+      "case_count": 5
+    },
+    {
+      "run_id": "batch-memory-01",
+      "path": ".runs/batch-memory-01/results.json",
+      "sha256": "2c9170139adf9791b2f879b67fba784b738acb5223081cf7cb61cab6ff814f5b",
+      "case_count": 5
+    },
+    {
+      "run_id": "batch-final-01",
+      "path": ".runs/batch-final-01/results.json",
+      "sha256": "5e11e8e2665942a033a025763240203c834cf96d2386fd7b110b78faf6a5a525",
+      "case_count": 7
+    }
+  ],
+  "counts": {
+    "case_attempts": 17,
+    "variants_attempted": 10,
+    "source_cases_attempted": 9,
+    "variants_passed": 7,
+    "source_cases_passed": 6,
+    "csv_samples_attempted": 326,
+    "csv_samples_passed": 254,
+    "unknown_sample_count": 0
+  },
+  "cases": [
+    {
+      "source_case_id": "D13",
+      "variant_id": "d13",
+      "samples": 6,
+      "status": "pass",
+      "golden_native_oracle": true,
+      "golden_k_oracle": true,
+      "buggy_k_native": true,
+      "simulator_agrees_with_native": true,
+      "bug_detected_by_oracle": true,
+      "first_bug_difference": {
+        "sample_index": 5,
+        "signal": "frame_len",
+        "expected": 1,
+        "actual": 3
+      },
+      "run_id": "batch-final-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.805236457999854,
+            "execution": 0.510683374999644,
+            "read_compare": 0.001133792000473477
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 12,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d13/golden_native/output.csv",
+          "output_sha256": "a6908d39fc0f605db5fa90510862f88497f1a8bd975b606e2fad83fd162c2aeb"
+        },
+        "golden_k": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.04538737499751733,
+            "debug.generic": 0.019322291998832952,
+            "generic": 0.009292250000726199,
+            "compile": 0.3775763330013433,
+            "preprocess": 0.6803400829994644,
+            "setup": 0.15528858299876447,
+            "state_export": 0.0458797990140738,
+            "execution": 1.6240346250051516,
+            "read_ports": 0.007215501005703118
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 12,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 12,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/d13/golden_k/output.csv",
+          "output_sha256": "32866c3aea219ddda27bc205954e7d417eea0331d02eb899aec9ac7b3db66e64"
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 2.5184672089999367,
+            "execution": 0.40387312500024564,
+            "read_compare": 0.0007001660014793742
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 12,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 5,
+              "signal": "frame_len",
+              "expected": 1,
+              "actual": 3
+            },
+            "mismatch_count": 1
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d13/buggy_native/output.csv",
+          "output_sha256": "59be32ec5f44cb72ce394d19d7b0aa0847cf2a76ea4d7a30569338c7a8d76e89"
+        },
+        "buggy_k": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.02343424999708077,
+            "debug.generic": 0.015490500001760665,
+            "generic": 0.013353124999412103,
+            "compile": 0.018972917001519818,
+            "preprocess": 0.16587812499710708,
+            "setup": 0.14352216699990095,
+            "state_export": 0.05119225400630967,
+            "execution": 1.6876889989980555,
+            "read_ports": 0.007994915995368501
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 12,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 5,
+              "signal": "frame_len",
+              "expected": 1,
+              "actual": 3
+            },
+            "mismatch_count": 1
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 12,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/d13/buggy_k/output.csv",
+          "output_sha256": "a8c9158562f0a82cfd15caa97fe76fb562c0eac777e761116e2490e043adbb31"
+        }
+      },
+      "blockers": [],
+      "raw_result": ".runs/batch-final-01/d13/result.json",
+      "evidence": [
+        "evidence/d13/buggy_k/output.csv",
+        "evidence/d13/buggy_native/output.csv",
+        "evidence/d13/golden_k/output.csv",
+        "evidence/d13/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "a2994b89066286084ea0e98280007a0584610c131bbf09f006f95848ede715c6"
+    },
+    {
+      "source_case_id": "S3",
+      "variant_id": "s3",
+      "samples": 13,
+      "status": "pass",
+      "golden_native_oracle": true,
+      "golden_k_oracle": true,
+      "buggy_k_native": true,
+      "simulator_agrees_with_native": true,
+      "bug_detected_by_oracle": true,
+      "first_bug_difference": {
+        "sample_index": 8,
+        "signal": "input_axis_tready",
+        "expected": 1,
+        "actual": 0
+      },
+      "run_id": "batch-final-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.7063890829995216,
+            "execution": 0.4545289170018805,
+            "read_compare": 0.0006691669987048954
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 78,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/s3/golden_native/output.csv",
+          "output_sha256": "f0f347e3c8362e7d140683bcc94a587f2052b452452726dadb0bf4058e3651ca"
+        },
+        "golden_k": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.03219366700068349,
+            "debug.generic": 0.0250539580010809,
+            "generic": 0.012125124998419778,
+            "compile": 0.01970074999917415,
+            "preprocess": 0.16577804099870264,
+            "setup": 0.16747254200163297,
+            "state_export": 0.281450540995138,
+            "execution": 4.376763914984622,
+            "read_ports": 0.0656292920029955
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 78,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 78,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/s3/golden_k/output.csv",
+          "output_sha256": "1a7606d8136f2c495c5a7a1c8bff52ea48ec2103a1051fdbd356c152218406c0"
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 2.563073000001168,
+            "execution": 0.39846749999924214,
+            "read_compare": 0.0007662499992875382
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 78,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 8,
+              "signal": "input_axis_tready",
+              "expected": 1,
+              "actual": 0
+            },
+            "mismatch_count": 5
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/s3/buggy_native/output.csv",
+          "output_sha256": "9718c76c73dc03fbe9acc40e4d253363d8fb76e640e4889a8aa51fbe8fccff19"
+        },
+        "buggy_k": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.021138000000064494,
+            "debug.generic": 0.01869799999985844,
+            "generic": 0.009087874997931067,
+            "compile": 0.01154616699932376,
+            "preprocess": 0.14989470799991977,
+            "setup": 0.15398545899734017,
+            "state_export": 0.2569129060175328,
+            "execution": 4.265151957002672,
+            "read_ports": 0.05658983801185968
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 78,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 8,
+              "signal": "input_axis_tready",
+              "expected": 1,
+              "actual": 0
+            },
+            "mismatch_count": 5
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 78,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/s3/buggy_k/output.csv",
+          "output_sha256": "2b189329044d906f03b1a6b015c065df99ed846a4f2a4c7d2e86d1bbcee84c1e"
+        }
+      },
+      "blockers": [],
+      "raw_result": ".runs/batch-final-01/s3/result.json",
+      "evidence": [
+        "evidence/s3/buggy_k/output.csv",
+        "evidence/s3/buggy_native/output.csv",
+        "evidence/s3/golden_k/output.csv",
+        "evidence/s3/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "dfd8a4f135a87d681d34fac91e2eae245c10e4649961e768f4cda713dc594709"
+    },
+    {
+      "source_case_id": "S1",
+      "variant_id": "s1b",
+      "samples": 10,
+      "status": "pass",
+      "golden_native_oracle": true,
+      "golden_k_oracle": true,
+      "buggy_k_native": true,
+      "simulator_agrees_with_native": true,
+      "bug_detected_by_oracle": true,
+      "first_bug_difference": {
+        "sample_index": 5,
+        "signal": "S_AXI_AWREADY",
+        "expected": 0,
+        "actual": 1
+      },
+      "run_id": "batch-final-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.553046416000143,
+            "execution": 0.4544390840019332,
+            "read_compare": 0.0007557079989055637
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/s1b/golden_native/output.csv",
+          "output_sha256": "b51feeb604da82b3385052d66f85b8e966b05a2368b067526825f4f5f29f78e0"
+        },
+        "golden_k": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.098321917001158,
+            "debug.generic": 0.018266125000081956,
+            "generic": 0.011542291998921428,
+            "compile": 0.03456208400166361,
+            "preprocess": 0.21269270799894002,
+            "setup": 0.24479620800047996,
+            "state_export": 1.18602646198633,
+            "execution": 6.382219750001241,
+            "read_ports": 0.6108044590000645
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/s1b/golden_k/output.csv",
+          "output_sha256": "7c8de45d411b565b7c52f4c2aeba2953fd68025e83290588c792c20d7ddab24b"
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 2.877751874999376,
+            "execution": 0.39734391599995433,
+            "read_compare": 0.0006359170001815073
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 5,
+              "signal": "S_AXI_AWREADY",
+              "expected": 0,
+              "actual": 1
+            },
+            "mismatch_count": 2
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/s1b/buggy_native/output.csv",
+          "output_sha256": "29c544358c961b0f2c8451a059013ec154491a7a5ecad00609e3045379f639cc"
+        },
+        "buggy_k": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.06825258399840095,
+            "debug.generic": 0.01112887500130455,
+            "generic": 0.010702833998948336,
+            "compile": 0.028529791998153087,
+            "preprocess": 0.2102546659989457,
+            "setup": 0.24932520799848135,
+            "state_export": 1.2786365400061186,
+            "execution": 6.680797377997806,
+            "read_ports": 0.6865453330065066
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 5,
+              "signal": "S_AXI_AWREADY",
+              "expected": 0,
+              "actual": 1
+            },
+            "mismatch_count": 2
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/s1b/buggy_k/output.csv",
+          "output_sha256": "4600edb42e3df81e270d8c70a9447d16aec96edf9eb35fbc31e2e2cf5644f00f"
+        }
+      },
+      "blockers": [],
+      "raw_result": ".runs/batch-final-01/s1b/result.json",
+      "evidence": [
+        "evidence/s1b/buggy_k/output.csv",
+        "evidence/s1b/buggy_native/output.csv",
+        "evidence/s1b/golden_k/output.csv",
+        "evidence/s1b/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "c349cd6ed337423570b2b8e73e46d56080b7fa16b07574cec894c7839c6429b5"
+    },
+    {
+      "source_case_id": "S1",
+      "variant_id": "s1r",
+      "samples": 10,
+      "status": "pass",
+      "golden_native_oracle": true,
+      "golden_k_oracle": true,
+      "buggy_k_native": true,
+      "simulator_agrees_with_native": true,
+      "bug_detected_by_oracle": true,
+      "first_bug_difference": {
+        "sample_index": 5,
+        "signal": "S_AXI_ARREADY",
+        "expected": 0,
+        "actual": 1
+      },
+      "run_id": "batch-final-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.9130914999987,
+            "execution": 0.1892149999985122,
+            "read_compare": 0.000630291997367749
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/s1r/golden_native/output.csv",
+          "output_sha256": "5d5d0936e65dc66e81b637a17080d24ff029d69338f6080d7e75a51ca557b58e"
+        },
+        "golden_k": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.08314537499973085,
+            "debug.generic": 0.021372499999415595,
+            "generic": 0.012748875000397675,
+            "compile": 0.034148916998674395,
+            "preprocess": 0.2345873330014001,
+            "setup": 0.2675515000009909,
+            "state_export": 1.2404715810007474,
+            "execution": 6.760513083998376,
+            "read_ports": 0.6290518320092815
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/s1r/golden_k/output.csv",
+          "output_sha256": "9dbd210cbce776ddcd206e791ece415e59867e2228b488bf9af1cdf94eb7be20"
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 2.828014124999754,
+            "execution": 0.3954706670010637,
+            "read_compare": 0.000759959002607502
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 5,
+              "signal": "S_AXI_ARREADY",
+              "expected": 0,
+              "actual": 1
+            },
+            "mismatch_count": 2
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/s1r/buggy_native/output.csv",
+          "output_sha256": "401b0de7f9c872a23db03824516b2d9702d8b0d9bb2e4b3ef3158b0d9eeefd4b"
+        },
+        "buggy_k": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.08864537499903236,
+            "debug.generic": 0.02230420799969579,
+            "generic": 0.011864250001963228,
+            "compile": 0.035070875001110835,
+            "preprocess": 0.2181122920010239,
+            "setup": 0.2502555419996497,
+            "state_export": 1.2398746680082695,
+            "execution": 6.771919375001744,
+            "read_ports": 0.6425318360015808
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 5,
+              "signal": "S_AXI_ARREADY",
+              "expected": 0,
+              "actual": 1
+            },
+            "mismatch_count": 2
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 80,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/s1r/buggy_k/output.csv",
+          "output_sha256": "76772506619a2bc8324b14e3a0da14c3738a5a676bf2f4d037c9295b8ff860e7"
+        }
+      },
+      "blockers": [],
+      "raw_result": ".runs/batch-final-01/s1r/result.json",
+      "evidence": [
+        "evidence/s1r/buggy_k/output.csv",
+        "evidence/s1r/buggy_native/output.csv",
+        "evidence/s1r/golden_k/output.csv",
+        "evidence/s1r/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "5458fd3a299e971049a605d47f781bf32f8307571bd90aa548913c4c811955c8"
+    },
+    {
+      "source_case_id": "D8",
+      "variant_id": "d8",
+      "samples": 14,
+      "status": "pass",
+      "golden_native_oracle": true,
+      "golden_k_oracle": true,
+      "buggy_k_native": true,
+      "simulator_agrees_with_native": true,
+      "bug_detected_by_oracle": true,
+      "first_bug_difference": {
+        "sample_index": 4,
+        "signal": "m_axis_tvalid",
+        "expected": 1,
+        "actual": 0
+      },
+      "run_id": "batch-final-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.714384582999628,
+            "execution": 0.44329450000077486,
+            "read_compare": 0.0007459580010618083
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 112,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d8/golden_native/output.csv",
+          "output_sha256": "783a54278713187691b50eaf4169dce08181a4ae80f72a26557668ebaf7b523c"
+        },
+        "golden_k": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.029690542000025744,
+            "debug.generic": 0.022590583001147024,
+            "generic": 0.012999708000279497,
+            "compile": 0.017639292000239948,
+            "preprocess": 0.1714326670007722,
+            "setup": 0.2087699999974575,
+            "state_export": 0.4876221690028615,
+            "execution": 5.548800420012412,
+            "read_ports": 0.1411455389970797
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 112,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 112,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/d8/golden_k/output.csv",
+          "output_sha256": "8f4916084e5cde21344924f0c5dc8202ee204a85be8eea6856fa4f82425dd906"
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 2.761969166000199,
+            "execution": 0.434538583001995,
+            "read_compare": 0.0011462910006230231
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 112,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 4,
+              "signal": "m_axis_tvalid",
+              "expected": 1,
+              "actual": 0
+            },
+            "mismatch_count": 2
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d8/buggy_native/output.csv",
+          "output_sha256": "624ebf9d8c547f5f8c0cc9d15d7781dd75b144dd45131355037f6863ac0744cc"
+        },
+        "buggy_k": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.04303045800043037,
+            "debug.generic": 0.022932542000489775,
+            "generic": 0.01282754199928604,
+            "compile": 0.01810754199686926,
+            "preprocess": 0.1856870829979016,
+            "setup": 0.18779354200160014,
+            "state_export": 0.4906459999947401,
+            "execution": 5.580111623992707,
+            "read_ports": 0.143053793002764
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 112,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 4,
+              "signal": "m_axis_tvalid",
+              "expected": 1,
+              "actual": 0
+            },
+            "mismatch_count": 2
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 112,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/d8/buggy_k/output.csv",
+          "output_sha256": "22e3238e866c07832d7083135167f728b3a41ad9c1ae5d1f9999d52a7e364472"
+        }
+      },
+      "blockers": [],
+      "raw_result": ".runs/batch-final-01/d8/result.json",
+      "evidence": [
+        "evidence/d8/buggy_k/output.csv",
+        "evidence/d8/buggy_native/output.csv",
+        "evidence/d8/golden_k/output.csv",
+        "evidence/d8/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "ee2d3403c10758c81178e4374efe80277806d3442aa0d605aa60b2cbe2ce1bf9"
+    },
+    {
+      "source_case_id": "D12",
+      "variant_id": "d12",
+      "samples": 16,
+      "status": "pass",
+      "golden_native_oracle": true,
+      "golden_k_oracle": true,
+      "buggy_k_native": true,
+      "simulator_agrees_with_native": true,
+      "bug_detected_by_oracle": true,
+      "first_bug_difference": {
+        "sample_index": 13,
+        "signal": "m_axis_tdata",
+        "expected": 3,
+        "actual": 4
+      },
+      "run_id": "batch-final-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.8609700839988363,
+            "execution": 0.4010854170010134,
+            "read_compare": 0.0008005829986359458
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 128,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d12/golden_native/output.csv",
+          "output_sha256": "fbe6df821c17d3f5a2dc5c7a3df876515be93074ae7e5bc8373c3455f49b4642"
+        },
+        "golden_k": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.031072957997821504,
+            "debug.generic": 0.024847124997904757,
+            "generic": 0.013714083001104882,
+            "compile": 0.014653624999482417,
+            "preprocess": 0.17722720799793024,
+            "setup": 0.1542013340003905,
+            "state_export": 0.18730308298836462,
+            "execution": 5.479484581996076,
+            "read_ports": 0.031720746992505156
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 128,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 176,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/d12/golden_k/output.csv",
+          "output_sha256": "fb9c8672861eda37eae20e3dbf297b9c74e0ec5aba60bf2f6bb753241fd6ea7c"
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 2.7638106670019624,
+            "execution": 0.4420157919994381,
+            "read_compare": 0.0008435839990852401
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 128,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 13,
+              "signal": "m_axis_tdata",
+              "expected": 3,
+              "actual": 4
+            },
+            "mismatch_count": 9
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d12/buggy_native/output.csv",
+          "output_sha256": "bc4d7b15fdb7a6178c65f44e54cd9bc032a94de860af6497c28133dbb3d97021"
+        },
+        "buggy_k": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.032469249999849126,
+            "debug.generic": 0.015334749998146435,
+            "generic": 0.012289624999539228,
+            "compile": 0.016015334000258008,
+            "preprocess": 0.16434074999779114,
+            "setup": 0.16184716699717683,
+            "state_export": 0.18846729299184517,
+            "execution": 5.437854623007297,
+            "read_ports": 0.03175291900333832
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 128,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 13,
+              "signal": "m_axis_tdata",
+              "expected": 3,
+              "actual": 4
+            },
+            "mismatch_count": 9
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 176,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/d12/buggy_k/output.csv",
+          "output_sha256": "97c0563062405eba13e29e924088fe719f9e2d17ffd9f505acc2092a247ddf86"
+        }
+      },
+      "blockers": [],
+      "raw_result": ".runs/batch-final-01/d12/result.json",
+      "evidence": [
+        "evidence/d12/buggy_k/output.csv",
+        "evidence/d12/buggy_native/output.csv",
+        "evidence/d12/golden_k/output.csv",
+        "evidence/d12/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "f0d54ffca6728beed1e6ab972467ac37b4253ddb50bd759a79b9fad6b070e829"
+    },
+    {
+      "source_case_id": "D11",
+      "variant_id": "d11",
+      "samples": 17,
+      "status": "timeout",
+      "golden_native_oracle": true,
+      "golden_k_oracle": null,
+      "buggy_k_native": null,
+      "simulator_agrees_with_native": false,
+      "bug_detected_by_oracle": false,
+      "first_bug_difference": {
+        "sample_index": 13,
+        "signal": "drop_frame",
+        "expected": 0,
+        "actual": 1
+      },
+      "run_id": "batch-memory-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.6454221660023904,
+            "execution": 0.4420839160011383,
+            "read_compare": 0.0023844999996072147
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 84,
+            "masked_cells": 1,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d11/golden_native/output.csv",
+          "output_sha256": "6229fa51d82fadb8307738eddb21465fc21a7889c2de6e5de6510e30cea23d71"
+        },
+        "golden_k": {
+          "status": "timeout",
+          "stage": "execution",
+          "timings_s": {
+            "frontend": 0.02265491700018174,
+            "debug.generic": 0.021887500002776505,
+            "generic": 0.01112374999866006,
+            "compile": 0.013288792000821559,
+            "preprocess": 0.17337787500218838,
+            "setup": 0.15157862499836483,
+            "final_state_export": 0.013083374997222563
+          },
+          "oracle": null,
+          "native_comparison": null
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 3.0112033749974216,
+            "execution": 0.5023829999990994,
+            "read_compare": 0.0005339579984138254
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 84,
+            "masked_cells": 1,
+            "first_mismatch": {
+              "sample_index": 13,
+              "signal": "drop_frame",
+              "expected": 0,
+              "actual": 1
+            },
+            "mismatch_count": 5
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d11/buggy_native/output.csv",
+          "output_sha256": "31b56c203d1b56f3bd432aa42ca10eb94efc9b4e6d30114e88a994cfc667c2b0"
+        },
+        "buggy_k": {
+          "status": "timeout",
+          "stage": "execution",
+          "timings_s": {
+            "frontend": 0.06136841699844808,
+            "debug.generic": 0.05387904099916341,
+            "generic": 0.00877829099772498,
+            "compile": 0.015070500001456821,
+            "preprocess": 0.16605450000133715,
+            "setup": 0.15569725000023027,
+            "final_state_export": 0.018354250001721084
+          },
+          "oracle": null,
+          "native_comparison": null
+        }
+      },
+      "blockers": [
+        {
+          "backend": "golden_k",
+          "status": "timeout",
+          "stage": "execution"
+        },
+        {
+          "backend": "buggy_k",
+          "status": "timeout",
+          "stage": "execution"
+        }
+      ],
+      "raw_result": ".runs/batch-memory-01/d11/result.json",
+      "evidence": [
+        "evidence/d11/buggy_native/output.csv",
+        "evidence/d11/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "54305128afa2c8373e2613c7d11af8dbf0a41710f370a2fe0d11fc5f65a7a911"
+    },
+    {
+      "source_case_id": "D4",
+      "variant_id": "d4",
+      "samples": 185,
+      "status": "pass",
+      "golden_native_oracle": true,
+      "golden_k_oracle": true,
+      "buggy_k_native": true,
+      "simulator_agrees_with_native": true,
+      "bug_detected_by_oracle": true,
+      "first_bug_difference": {
+        "sample_index": 67,
+        "signal": "s_axis_tready",
+        "expected": 0,
+        "actual": 1
+      },
+      "run_id": "batch-final-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.818022374998691,
+            "execution": 0.3985343750027823,
+            "read_compare": 0.0011229589981667232
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 1480,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d4/golden_native/output.csv",
+          "output_sha256": "a319fa375294fa62c78c41546350d09127e2b30b2e731e8719d830809ded4760"
+        },
+        "golden_k": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.021008417003031354,
+            "debug.generic": 0.01063100000101258,
+            "generic": 0.010181375000684056,
+            "compile": 0.011357874998793704,
+            "preprocess": 0.14338545799910207,
+            "setup": 0.14108962500176858,
+            "state_export": 2.5557747379352804,
+            "execution": 63.89073588201063,
+            "read_ports": 0.4784560469815915
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 1480,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 1480,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/d4/golden_k/output.csv",
+          "output_sha256": "0f3bf27051df90ea12c759c7a71d6a8478a97a107a25bf0f652c0718ce492915"
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 2.6224626670009457,
+            "execution": 0.4519853329984471,
+            "read_compare": 0.001121249999414431
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 1480,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 67,
+              "signal": "s_axis_tready",
+              "expected": 0,
+              "actual": 1
+            },
+            "mismatch_count": 125
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/d4/buggy_native/output.csv",
+          "output_sha256": "73ba17ff80785b485bfa8e194270881bf66e93753a70dfa3d4b1c35f0db52919"
+        },
+        "buggy_k": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "frontend": 0.02138708399797906,
+            "debug.generic": 0.012066667000908637,
+            "generic": 0.011924709000595612,
+            "compile": 0.01620316600019578,
+            "preprocess": 0.15812808299961034,
+            "setup": 0.1569244999991497,
+            "state_export": 2.558489279985224,
+            "execution": 61.67840722496112,
+            "read_ports": 0.5057313710058224
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 1480,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 67,
+              "signal": "s_axis_tready",
+              "expected": 0,
+              "actual": 1
+            },
+            "mismatch_count": 125
+          },
+          "native_comparison": {
+            "agrees": true,
+            "compared_cells": 1480,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "output_csv": "evidence/d4/buggy_k/output.csv",
+          "output_sha256": "f9399e07d7f363f123f08bf74b1b2af17fcd0f8834f32b29d976f6a813f02656"
+        }
+      },
+      "blockers": [],
+      "raw_result": ".runs/batch-final-01/d4/result.json",
+      "evidence": [
+        "evidence/d4/buggy_k/output.csv",
+        "evidence/d4/buggy_native/output.csv",
+        "evidence/d4/golden_k/output.csv",
+        "evidence/d4/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "b714284503258cb90e1d6b1faeeacaac68d74837cb93ef7c92f9ba08688b5bc3"
+    },
+    {
+      "source_case_id": "S2",
+      "variant_id": "s2",
+      "samples": 45,
+      "status": "execution_error",
+      "golden_native_oracle": true,
+      "golden_k_oracle": null,
+      "buggy_k_native": null,
+      "simulator_agrees_with_native": false,
+      "bug_detected_by_oracle": false,
+      "first_bug_difference": {
+        "sample_index": 42,
+        "signal": "M_AXIS_TLAST",
+        "expected": 0,
+        "actual": 1
+      },
+      "run_id": "batch-memory-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.822754666001856,
+            "execution": 0.45117575000040233,
+            "read_compare": 0.0009368749997520354
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 180,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/s2/golden_native/output.csv",
+          "output_sha256": "598453afb3a971da02637338c2745463847db97ec1ccf927a5d027e3b6474d0b"
+        },
+        "golden_k": {
+          "status": "execution_error",
+          "stage": "compile",
+          "timings_s": {
+            "frontend": 0.023000334000244038,
+            "debug.generic": 0.02189104200078873,
+            "generic": 0.013655916998686735,
+            "final_state_export": 0.0003681659982248675
+          },
+          "oracle": null,
+          "native_comparison": null
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 2.572671750000154,
+            "execution": 0.45086854200053494,
+            "read_compare": 0.0010460839985171333
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 180,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 42,
+              "signal": "M_AXIS_TLAST",
+              "expected": 0,
+              "actual": 1
+            },
+            "mismatch_count": 2
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/s2/buggy_native/output.csv",
+          "output_sha256": "cc178c4584ff3a59a41df3c997638e65a0432989107121fec757be3d5e9db0bd"
+        },
+        "buggy_k": {
+          "status": "execution_error",
+          "stage": "compile",
+          "timings_s": {
+            "frontend": 0.025663875003374415,
+            "debug.generic": 0.02397045899851946,
+            "generic": 0.01503095899897744,
+            "final_state_export": 0.0003238340032112319
+          },
+          "oracle": null,
+          "native_comparison": null
+        }
+      },
+      "blockers": [
+        {
+          "backend": "golden_k",
+          "status": "execution_error",
+          "stage": "compile"
+        },
+        {
+          "backend": "buggy_k",
+          "status": "execution_error",
+          "stage": "compile"
+        }
+      ],
+      "raw_result": ".runs/batch-memory-01/s2/result.json",
+      "evidence": [
+        "evidence/s2/buggy_native/output.csv",
+        "evidence/s2/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "b73faf782fbeb45586c0ffe0db714e4a472a55e0c6324ce72937d6e380b19cb9"
+    },
+    {
+      "source_case_id": "C4",
+      "variant_id": "c4",
+      "samples": 10,
+      "status": "timeout",
+      "golden_native_oracle": true,
+      "golden_k_oracle": null,
+      "buggy_k_native": null,
+      "simulator_agrees_with_native": false,
+      "bug_detected_by_oracle": false,
+      "first_bug_difference": {
+        "sample_index": 4,
+        "signal": "input_axis_tready",
+        "expected": 0,
+        "actual": 1
+      },
+      "run_id": "batch-memory-01",
+      "backends": {
+        "golden_native": {
+          "status": "pass",
+          "stage": null,
+          "timings_s": {
+            "build": 2.5248810419980146,
+            "execution": 0.45470545799980755,
+            "read_compare": 0.0007391250001091976
+          },
+          "oracle": {
+            "agrees": true,
+            "compared_cells": 50,
+            "masked_cells": 0,
+            "first_mismatch": null,
+            "mismatch_count": 0
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/c4/golden_native/output.csv",
+          "output_sha256": "eec186611c6c63eb7846a079866615f628aff65f6368df6752d00a0346e98db6"
+        },
+        "golden_k": {
+          "status": "timeout",
+          "stage": "execution",
+          "timings_s": {
+            "frontend": 0.029357749997870997,
+            "debug.generic": 0.022608874998695683,
+            "generic": 0.012852124997152714,
+            "compile": 0.01604070800021873,
+            "preprocess": 0.1638403750002908,
+            "setup": 0.16229437500078348,
+            "final_state_export": 0.025294166000094265
+          },
+          "oracle": null,
+          "native_comparison": null
+        },
+        "buggy_native": {
+          "status": "oracle_mismatch",
+          "stage": null,
+          "timings_s": {
+            "build": 3.1346165830000245,
+            "execution": 0.487671250000858,
+            "read_compare": 0.0009308340013376437
+          },
+          "oracle": {
+            "agrees": false,
+            "compared_cells": 50,
+            "masked_cells": 0,
+            "first_mismatch": {
+              "sample_index": 4,
+              "signal": "input_axis_tready",
+              "expected": 0,
+              "actual": 1
+            },
+            "mismatch_count": 3
+          },
+          "native_comparison": null,
+          "output_csv": "evidence/c4/buggy_native/output.csv",
+          "output_sha256": "8e2f1c772b739e248cc3799eae8417b012e275ccef315df8bbf5153523aaecb4"
+        },
+        "buggy_k": {
+          "status": "timeout",
+          "stage": "execution",
+          "timings_s": {
+            "frontend": 0.06269308300034027,
+            "debug.generic": 0.050932417001604335,
+            "generic": 0.0102500829998462,
+            "compile": 0.016705333000572864,
+            "preprocess": 0.16847854099978576,
+            "setup": 0.16801399999894784,
+            "final_state_export": 0.0225877090015274
+          },
+          "oracle": null,
+          "native_comparison": null
+        }
+      },
+      "blockers": [
+        {
+          "backend": "golden_k",
+          "status": "timeout",
+          "stage": "execution"
+        },
+        {
+          "backend": "buggy_k",
+          "status": "timeout",
+          "stage": "execution"
+        }
+      ],
+      "raw_result": ".runs/batch-memory-01/c4/result.json",
+      "evidence": [
+        "evidence/c4/buggy_native/output.csv",
+        "evidence/c4/golden_native/output.csv"
+      ],
+      "raw_result_sha256": "dc4fc002e96a240c5cd858994333b4caa4ad05f53e705471f42c45bb95994f59"
+    }
+  ]
+}

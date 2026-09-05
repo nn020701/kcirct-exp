@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "purpose": "来源与配置目录；执行结论以 results 中的实验汇总及证据为准。",
+  "configured_short_pool": [
+    {
+      "source_case_id": "D13",
+      "project_id": "axis-frame-len-d13",
+      "variant_id": "d13",
+      "manifest": "manifests/d13.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axis-frame-len-d13/README.md",
+      "layout_file": "designs/axis-frame-len-d13/provenance/layout.json",
+      "samples": 6
+    },
+    {
+      "source_case_id": "S2",
+      "project_id": "axi-stream-s2",
+      "variant_id": "s2",
+      "manifest": "manifests/s2.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axi-stream-s2/README.md",
+      "layout_file": "designs/axi-stream-s2/provenance/layout.json",
+      "samples": 45
+    },
+    {
+      "source_case_id": "D8",
+      "project_id": "axis-switch-d8",
+      "variant_id": "d8",
+      "manifest": "manifests/d8.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axis-switch-d8/README.md",
+      "layout_file": "designs/axis-switch-d8/provenance/layout.json",
+      "samples": 14
+    },
+    {
+      "source_case_id": "S1",
+      "project_id": "axi-lite-s1",
+      "variant_id": "s1b",
+      "manifest": "manifests/s1b.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axi-lite-s1/README.md",
+      "layout_file": "designs/axi-lite-s1/provenance/layout.json",
+      "samples": 10
+    },
+    {
+      "source_case_id": "S1",
+      "project_id": "axi-lite-s1",
+      "variant_id": "s1r",
+      "manifest": "manifests/s1r.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axi-lite-s1/README.md",
+      "layout_file": "designs/axi-lite-s1/provenance/layout.json",
+      "samples": 10
+    },
+    {
+      "source_case_id": "S3",
+      "project_id": "axis-adapter-s3",
+      "variant_id": "s3",
+      "manifest": "manifests/s3.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axis-adapter-s3/README.md",
+      "layout_file": "designs/axis-adapter-s3/provenance/layout.json",
+      "samples": 13
+    },
+    {
+      "source_case_id": "C4",
+      "project_id": "axis-async-fifo-c4",
+      "variant_id": "c4",
+      "manifest": "manifests/c4.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axis-async-fifo-c4/README.md",
+      "layout_file": "designs/axis-async-fifo-c4/provenance/layout.json",
+      "samples": 10
+    },
+    {
+      "source_case_id": "D11",
+      "project_id": "axis-frame-fifo-d11",
+      "variant_id": "d11",
+      "manifest": "manifests/d11.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axis-frame-fifo-d11/README.md",
+      "layout_file": "designs/axis-frame-fifo-d11/provenance/layout.json",
+      "samples": 17
+    },
+    {
+      "source_case_id": "D12",
+      "project_id": "axis-fifo-d12",
+      "variant_id": "d12",
+      "manifest": "manifests/d12.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axis-fifo-d12/README.md",
+      "layout_file": "designs/axis-fifo-d12/provenance/layout.json",
+      "samples": 16
+    },
+    {
+      "source_case_id": "D4",
+      "project_id": "axis-fifo-d4",
+      "variant_id": "d4",
+      "manifest": "manifests/d4.json",
+      "configuration_status": "configured",
+      "design_readme": "designs/axis-fifo-d4/README.md",
+      "layout_file": "designs/axis-fifo-d4/provenance/layout.json",
+      "samples": 185
+    }
+  ],
+  "deferred": [
+    {
+      "source_case_id": "C1",
+      "project_id": "zipcpu-spi-c1-c3-d9",
+      "variant_id": "c1",
+      "status": "not_run",
+      "samples": 522559,
+      "reason": "按交接置于长轨迹末批；本次未展开约 30 MiB 的共享 CSV；固定源归档已校验。"
+    },
+    {
+      "source_case_id": "C3",
+      "project_id": "zipcpu-spi-c1-c3-d9",
+      "variant_id": "c3",
+      "status": "not_run",
+      "samples": 522559,
+      "reason": "按交接置于长轨迹末批；本次未展开约 30 MiB 的共享 CSV；固定源归档已校验。"
+    },
+    {
+      "source_case_id": "D9",
+      "project_id": "zipcpu-spi-c1-c3-d9",
+      "variant_id": "d9",
+      "status": "not_run",
+      "samples": 522559,
+      "reason": "按交接置于长轨迹末批；本次未展开约 30 MiB 的共享 CSV；固定源归档已校验。"
+    }
+  ],
+  "additional_candidate": {
+    "source_case_id": "D7",
+    "project_id": "fadd-d7",
+    "status": "not_run",
+    "reason": "没有 project.toml，不纳入已配置短池。已有前端探针仍残留 LLHD/CF，原生采样与 oracle 尚未验证，许可和来源修复 commit 待核查。"
+  }
+}

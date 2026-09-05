@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "policy": "artifacts均从source逐字节复制并校验SHA256；原文件中的历史路径不修改。blockers.json为单独标明的派生摘要。",
+  "artifacts": [
+    {
+      "path": "evidence/d13/golden_native/output.csv",
+      "source": ".runs/batch-final-01/d13/golden/native/output.csv",
+      "sha256": "a6908d39fc0f605db5fa90510862f88497f1a8bd975b606e2fad83fd162c2aeb",
+      "bytes": 50,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/golden_k/output.csv",
+      "source": ".runs/batch-final-01/d13/golden/kimulator/output.csv",
+      "sha256": "32866c3aea219ddda27bc205954e7d417eea0331d02eb899aec9ac7b3db66e64",
+      "bytes": 57,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/buggy_native/output.csv",
+      "source": ".runs/batch-final-01/d13/buggy/native/output.csv",
+      "sha256": "59be32ec5f44cb72ce394d19d7b0aa0847cf2a76ea4d7a30569338c7a8d76e89",
+      "bytes": 50,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/buggy_k/output.csv",
+      "source": ".runs/batch-final-01/d13/buggy/kimulator/output.csv",
+      "sha256": "a8c9158562f0a82cfd15caa97fe76fb562c0eac777e761116e2490e043adbb31",
+      "bytes": 57,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s3/golden_native/output.csv",
+      "source": ".runs/batch-final-01/s3/golden/native/output.csv",
+      "sha256": "f0f347e3c8362e7d140683bcc94a587f2052b452452726dadb0bf4058e3651ca",
+      "bytes": 275,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s3/golden_k/output.csv",
+      "source": ".runs/batch-final-01/s3/golden/kimulator/output.csv",
+      "sha256": "1a7606d8136f2c495c5a7a1c8bff52ea48ec2103a1051fdbd356c152218406c0",
+      "bytes": 289,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s3/buggy_native/output.csv",
+      "source": ".runs/batch-final-01/s3/buggy/native/output.csv",
+      "sha256": "9718c76c73dc03fbe9acc40e4d253363d8fb76e640e4889a8aa51fbe8fccff19",
+      "bytes": 277,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s3/buggy_k/output.csv",
+      "source": ".runs/batch-final-01/s3/buggy/kimulator/output.csv",
+      "sha256": "2b189329044d906f03b1a6b015c065df99ed846a4f2a4c7d2e86d1bbcee84c1e",
+      "bytes": 291,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s1b/golden_native/output.csv",
+      "source": ".runs/batch-final-01/s1b/golden/native/output.csv",
+      "sha256": "b51feeb604da82b3385052d66f85b8e966b05a2368b067526825f4f5f29f78e0",
+      "bytes": 263,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s1b/golden_k/output.csv",
+      "source": ".runs/batch-final-01/s1b/golden/kimulator/output.csv",
+      "sha256": "7c8de45d411b565b7c52f4c2aeba2953fd68025e83290588c792c20d7ddab24b",
+      "bytes": 274,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s1b/buggy_native/output.csv",
+      "source": ".runs/batch-final-01/s1b/buggy/native/output.csv",
+      "sha256": "29c544358c961b0f2c8451a059013ec154491a7a5ecad00609e3045379f639cc",
+      "bytes": 263,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s1b/buggy_k/output.csv",
+      "source": ".runs/batch-final-01/s1b/buggy/kimulator/output.csv",
+      "sha256": "4600edb42e3df81e270d8c70a9447d16aec96edf9eb35fbc31e2e2cf5644f00f",
+      "bytes": 274,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s1r/golden_native/output.csv",
+      "source": ".runs/batch-final-01/s1r/golden/native/output.csv",
+      "sha256": "5d5d0936e65dc66e81b637a17080d24ff029d69338f6080d7e75a51ca557b58e",
+      "bytes": 263,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s1r/golden_k/output.csv",
+      "source": ".runs/batch-final-01/s1r/golden/kimulator/output.csv",
+      "sha256": "9dbd210cbce776ddcd206e791ece415e59867e2228b488bf9af1cdf94eb7be20",
+      "bytes": 274,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s1r/buggy_native/output.csv",
+      "source": ".runs/batch-final-01/s1r/buggy/native/output.csv",
+      "sha256": "401b0de7f9c872a23db03824516b2d9702d8b0d9bb2e4b3ef3158b0d9eeefd4b",
+      "bytes": 263,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s1r/buggy_k/output.csv",
+      "source": ".runs/batch-final-01/s1r/buggy/kimulator/output.csv",
+      "sha256": "76772506619a2bc8324b14e3a0da14c3738a5a676bf2f4d037c9295b8ff860e7",
+      "bytes": 274,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/golden_native/output.csv",
+      "source": ".runs/batch-final-01/d8/golden/native/output.csv",
+      "sha256": "783a54278713187691b50eaf4169dce08181a4ae80f72a26557668ebaf7b523c",
+      "bytes": 351,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/golden_k/output.csv",
+      "source": ".runs/batch-final-01/d8/golden/kimulator/output.csv",
+      "sha256": "8f4916084e5cde21344924f0c5dc8202ee204a85be8eea6856fa4f82425dd906",
+      "bytes": 366,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/buggy_native/output.csv",
+      "source": ".runs/batch-final-01/d8/buggy/native/output.csv",
+      "sha256": "624ebf9d8c547f5f8c0cc9d15d7781dd75b144dd45131355037f6863ac0744cc",
+      "bytes": 351,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/buggy_k/output.csv",
+      "source": ".runs/batch-final-01/d8/buggy/kimulator/output.csv",
+      "sha256": "22e3238e866c07832d7083135167f728b3a41ad9c1ae5d1f9999d52a7e364472",
+      "bytes": 366,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d12/golden_native/output.csv",
+      "source": ".runs/batch-final-01/d12/golden/native/output.csv",
+      "sha256": "fbe6df821c17d3f5a2dc5c7a3df876515be93074ae7e5bc8373c3455f49b4642",
+      "bytes": 507,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d12/golden_k/output.csv",
+      "source": ".runs/batch-final-01/d12/golden/kimulator/output.csv",
+      "sha256": "fb9c8672861eda37eae20e3dbf297b9c74e0ec5aba60bf2f6bb753241fd6ea7c",
+      "bytes": 524,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d12/buggy_native/output.csv",
+      "source": ".runs/batch-final-01/d12/buggy/native/output.csv",
+      "sha256": "bc4d7b15fdb7a6178c65f44e54cd9bc032a94de860af6497c28133dbb3d97021",
+      "bytes": 507,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d12/buggy_k/output.csv",
+      "source": ".runs/batch-final-01/d12/buggy/kimulator/output.csv",
+      "sha256": "97c0563062405eba13e29e924088fe719f9e2d17ffd9f505acc2092a247ddf86",
+      "bytes": 524,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d11/golden_native/output.csv",
+      "source": ".runs/batch-memory-01/d11/golden/native/output.csv",
+      "sha256": "6229fa51d82fadb8307738eddb21465fc21a7889c2de6e5de6510e30cea23d71",
+      "bytes": 254,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d11/buggy_native/output.csv",
+      "source": ".runs/batch-memory-01/d11/buggy/native/output.csv",
+      "sha256": "31b56c203d1b56f3bd432aa42ca10eb94efc9b4e6d30114e88a994cfc667c2b0",
+      "bytes": 254,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/golden_native/output.csv",
+      "source": ".runs/batch-final-01/d4/golden/native/output.csv",
+      "sha256": "a319fa375294fa62c78c41546350d09127e2b30b2e731e8719d830809ded4760",
+      "bytes": 3078,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/golden_k/output.csv",
+      "source": ".runs/batch-final-01/d4/golden/kimulator/output.csv",
+      "sha256": "0f3bf27051df90ea12c759c7a71d6a8478a97a107a25bf0f652c0718ce492915",
+      "bytes": 3264,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/buggy_native/output.csv",
+      "source": ".runs/batch-final-01/d4/buggy/native/output.csv",
+      "sha256": "73ba17ff80785b485bfa8e194270881bf66e93753a70dfa3d4b1c35f0db52919",
+      "bytes": 3078,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/buggy_k/output.csv",
+      "source": ".runs/batch-final-01/d4/buggy/kimulator/output.csv",
+      "sha256": "f9399e07d7f363f123f08bf74b1b2af17fcd0f8834f32b29d976f6a813f02656",
+      "bytes": 3264,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s2/golden_native/output.csv",
+      "source": ".runs/batch-memory-01/s2/golden/native/output.csv",
+      "sha256": "598453afb3a971da02637338c2745463847db97ec1ccf927a5d027e3b6474d0b",
+      "bytes": 458,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s2/buggy_native/output.csv",
+      "source": ".runs/batch-memory-01/s2/buggy/native/output.csv",
+      "sha256": "cc178c4584ff3a59a41df3c997638e65a0432989107121fec757be3d5e9db0bd",
+      "bytes": 458,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/c4/golden_native/output.csv",
+      "source": ".runs/batch-memory-01/c4/golden/native/output.csv",
+      "sha256": "eec186611c6c63eb7846a079866615f628aff65f6368df6752d00a0346e98db6",
+      "bytes": 191,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/c4/buggy_native/output.csv",
+      "source": ".runs/batch-memory-01/c4/buggy/native/output.csv",
+      "sha256": "8e2f1c772b739e248cc3799eae8417b012e275ccef315df8bbf5153523aaecb4",
+      "bytes": 191,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/native-independent/golden/output.csv",
+      "source": ".runs/d13/native-independent/run-20260905T110412.741945Z/golden/output.csv",
+      "sha256": "e52f4eda7ec5610584c31e78ffae6c7210597edcc768130df705bf05389c64fa",
+      "bytes": 222,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/native-independent/buggy/output.csv",
+      "source": ".runs/d13/native-independent/run-20260905T110412.741945Z/buggy/output.csv",
+      "sha256": "b3598921604815fafa69c42a138d73fecac723671a5af66b36ce62e0d273e543",
+      "bytes": 222,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/golden/design.generic.mlir",
+      "source": ".runs/batch-first-01/d13/golden/kimulator/design.generic.mlir",
+      "sha256": "19907773d62635512a29c5fb0bf8d908a20b4898c4ad63d31ddf9cb80360a0e1",
+      "bytes": 3853,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/golden/design.debug.generic.mlir",
+      "source": ".runs/batch-first-01/d13/golden/kimulator/design.debug.generic.mlir",
+      "sha256": "e138c66fe22dff032a569ca5de4e860ee5a4741973ffea88bf7b508a070194b7",
+      "bytes": 6932,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/golden/source-map.json",
+      "source": ".runs/batch-first-01/d13/golden/kimulator/source-map.json",
+      "sha256": "5fac7935f0950670d15dd899ada489e959708024454aff0bdc95d88b2de6bba6",
+      "bytes": 14917,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/golden/event-0008.kore.gz",
+      "source": ".runs/batch-first-01/d13/golden/kimulator/event-0008.kore.gz",
+      "sha256": "d27683560de7f8614143899c1b8eb80606377b97ee832f551de3c41336e7071d",
+      "bytes": 4462,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/golden/event-0009.kore.gz",
+      "source": ".runs/batch-first-01/d13/golden/kimulator/event-0009.kore.gz",
+      "sha256": "7902b268b575ceed2fd5872fff179f08a1995770e8d19683ae37f481ac2bac17",
+      "bytes": 4457,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/golden/event-0010.kore.gz",
+      "source": ".runs/batch-first-01/d13/golden/kimulator/event-0010.kore.gz",
+      "sha256": "b2ab05cc127fbeca2ee40f610656e30249f8a628fe0c77e9af275a7cb4618438",
+      "bytes": 4486,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/analysis/d13-golden-state-window.json",
+      "source": ".runs/validation/failure-analysis/d13-golden-state-window.json",
+      "sha256": "76854ad2c6c01adae878ce3bde41a661d79f765b157c9623729d14b9910e728e",
+      "bytes": 14864,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/buggy/design.generic.mlir",
+      "source": ".runs/batch-first-01/d13/buggy/kimulator/design.generic.mlir",
+      "sha256": "d9794cd57a3575e42aeca8931e5af2e063a13b461c9e630ffbf709056890f45f",
+      "bytes": 3900,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/buggy/design.debug.generic.mlir",
+      "source": ".runs/batch-first-01/d13/buggy/kimulator/design.debug.generic.mlir",
+      "sha256": "053c41644a5e45526e56cd16b5781d6eb2a5a6fe8f0aa712629d2eec451fd7cc",
+      "bytes": 7197,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/buggy/source-map.json",
+      "source": ".runs/batch-first-01/d13/buggy/kimulator/source-map.json",
+      "sha256": "16049fbd0336a4a0a298262d8a6d88ceb1320b3a0bca7f3f6a39b5624d99b1b8",
+      "bytes": 15288,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/buggy/event-0008.kore.gz",
+      "source": ".runs/batch-first-01/d13/buggy/kimulator/event-0008.kore.gz",
+      "sha256": "e532cf6cf12b8995be60899cc4dc731232a5f926e26545bea2e9245fee1d71c5",
+      "bytes": 4511,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/buggy/event-0009.kore.gz",
+      "source": ".runs/batch-first-01/d13/buggy/kimulator/event-0009.kore.gz",
+      "sha256": "3560d372fd57912dcbb136e6c553c48611cdc48592e94926e42ae0d770c74e97",
+      "bytes": 4502,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/analysis/buggy/event-0010.kore.gz",
+      "source": ".runs/batch-first-01/d13/buggy/kimulator/event-0010.kore.gz",
+      "sha256": "99b96c08b4b2c3dc9b7224b6ca8e6eca93ed24b03c62ba1bc71726e0ee6efe9d",
+      "bytes": 4530,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/analysis/d13-buggy-state-window.json",
+      "source": ".runs/validation/failure-analysis/d13-buggy-state-window.json",
+      "sha256": "8e638ca0a7dc8a3c65181b9ad9b801c1286c32be965369cdf631a98756f5e7cc",
+      "bytes": 15064,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/golden/design.generic.mlir",
+      "source": ".runs/batch-first-01/d8/golden/kimulator/design.generic.mlir",
+      "sha256": "6a9fce9e5b57a6aa4dc01b01af5a9e17710b0f8a62004ccd260782608d713056",
+      "bytes": 31871,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/golden/design.debug.generic.mlir",
+      "source": ".runs/batch-first-01/d8/golden/kimulator/design.debug.generic.mlir",
+      "sha256": "cde0464d1b06bb3f01f640845c8959644d11a840b0b7086497d1ff96c57b0c3c",
+      "bytes": 49837,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/golden/source-map.json",
+      "source": ".runs/batch-first-01/d8/golden/kimulator/source-map.json",
+      "sha256": "c2dbfe780e4822fe7f348b8d648b337d0ac495cc75066b15b98f1da826860be7",
+      "bytes": 96488,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/golden/event-0006.kore.gz",
+      "source": ".runs/batch-first-01/d8/golden/kimulator/event-0006.kore.gz",
+      "sha256": "df52ef13c734040f91281645d48221097e8fd91f73ea273705b205b1b085bb06",
+      "bytes": 29988,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/golden/event-0007.kore.gz",
+      "source": ".runs/batch-first-01/d8/golden/kimulator/event-0007.kore.gz",
+      "sha256": "1fe813e78f10cfd0aaf656904bf69a4894e95eae401d4bc71667dcae5ef894d1",
+      "bytes": 30016,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/golden/event-0008.kore.gz",
+      "source": ".runs/batch-first-01/d8/golden/kimulator/event-0008.kore.gz",
+      "sha256": "d1e3929114c3798d8cb55834e4553fcafba80b9df5d680a6a9afc9870e66b068",
+      "bytes": 30003,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/analysis/d8-golden-state-window.json",
+      "source": ".runs/validation/failure-analysis/d8-golden-state-window.json",
+      "sha256": "29c72b2bb05495d0e9f099c891b744583a11bcbc5edf043a54f2289b2f346492",
+      "bytes": 200753,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/buggy/design.generic.mlir",
+      "source": ".runs/batch-first-01/d8/buggy/kimulator/design.generic.mlir",
+      "sha256": "c1b6d9152d6ee88413abcf7e64c73f4fddaf29cb013e893bce2b3616b6ff41f9",
+      "bytes": 31893,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/buggy/design.debug.generic.mlir",
+      "source": ".runs/batch-first-01/d8/buggy/kimulator/design.debug.generic.mlir",
+      "sha256": "9db17cba80227cd74ce23356644956346703cd8c3b31f7176aec9a2205addc4d",
+      "bytes": 50355,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/buggy/source-map.json",
+      "source": ".runs/batch-first-01/d8/buggy/kimulator/source-map.json",
+      "sha256": "e02536682c26060764c73699d359bf880912263830a67570e7461c0874a3dbf1",
+      "bytes": 97098,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/buggy/event-0006.kore.gz",
+      "source": ".runs/batch-first-01/d8/buggy/kimulator/event-0006.kore.gz",
+      "sha256": "18302dc3e21d8387eb0fdb542773e97f88c6fe6ce437880b7a893f72c4f4e7b7",
+      "bytes": 29936,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/buggy/event-0007.kore.gz",
+      "source": ".runs/batch-first-01/d8/buggy/kimulator/event-0007.kore.gz",
+      "sha256": "d9605ce3e95842d38e362ca0965334485e76d9428fcaaad17fba31cf876416b5",
+      "bytes": 29942,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/analysis/buggy/event-0008.kore.gz",
+      "source": ".runs/batch-first-01/d8/buggy/kimulator/event-0008.kore.gz",
+      "sha256": "da03b51aa20f21dd6c817c1f0a717366d06988979f02f33d6262055104997d21",
+      "bytes": 29925,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/analysis/d8-buggy-state-window.json",
+      "source": ".runs/validation/failure-analysis/d8-buggy-state-window.json",
+      "sha256": "3b134e1dd13148716be91a802777231052dc041ba056eb76aaafe662f966ca5f",
+      "bytes": 201074,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/golden/design.generic.mlir",
+      "source": ".runs/batch-memory-01/d4/golden/kimulator/design.generic.mlir",
+      "sha256": "9c466ad838dca64c903df89090f1645c496961f1f7318ee37a4e44b82917d3bb",
+      "bytes": 11163,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/golden/design.debug.generic.mlir",
+      "source": ".runs/batch-memory-01/d4/golden/kimulator/design.debug.generic.mlir",
+      "sha256": "530402b126e2602bae96aa2349ca99c5117be2caf57d8054c87f346b77d23e2e",
+      "bytes": 20376,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/golden/source-map.json",
+      "source": ".runs/batch-memory-01/d4/golden/kimulator/source-map.json",
+      "sha256": "b823be6b2de4e6a8164743f2be927db6f6825b54eb1c197665b5c8a8b07f9ba7",
+      "bytes": 33779,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/golden/event-0034.kore.gz",
+      "source": ".runs/batch-memory-01/d4/golden/kimulator/event-0034.kore.gz",
+      "sha256": "998d6e27ccd6fce9f5acf0ef62b44431302fe135d1b6e9fd7089a40d0b202880",
+      "bytes": 9500,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/golden/event-0035.kore.gz",
+      "source": ".runs/batch-memory-01/d4/golden/kimulator/event-0035.kore.gz",
+      "sha256": "0cb9a909daa89259e04b997df3648c3376d46a5590ad0e3af6b0cd780bf0b27b",
+      "bytes": 9504,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/golden/event-0132.kore.gz",
+      "source": ".runs/batch-memory-01/d4/golden/kimulator/event-0132.kore.gz",
+      "sha256": "325977f8759b03c406a81e7144a82478456309750c7d9b72ee5eb94aab6a5968",
+      "bytes": 9938,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/golden/event-0133.kore.gz",
+      "source": ".runs/batch-memory-01/d4/golden/kimulator/event-0133.kore.gz",
+      "sha256": "bdb7964e53d64b094e1064266ed7627ab838cd25bc7bd4e9e0289e556065348d",
+      "bytes": 9940,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/golden/event-0134.kore.gz",
+      "source": ".runs/batch-memory-01/d4/golden/kimulator/event-0134.kore.gz",
+      "sha256": "ff142587f092d1d0926e9420479254768062b8ca2c00736f44e2ab3221e9b3f1",
+      "bytes": 9941,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/golden/event-0135.kore.gz",
+      "source": ".runs/batch-memory-01/d4/golden/kimulator/event-0135.kore.gz",
+      "sha256": "dc52761ee15e6bc591296267abd5e1b76e127d9c6d110229dda690b634e1fe5e",
+      "bytes": 9945,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/analysis/d4-golden-state-window.json",
+      "source": ".runs/validation/failure-analysis/d4-golden-state-window.json",
+      "sha256": "837e542db42ba925f4bc4967f917558e2953668532269c069e3f1c98c4e0898f",
+      "bytes": 96899,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/buggy/design.generic.mlir",
+      "source": ".runs/batch-memory-01/d4/buggy/kimulator/design.generic.mlir",
+      "sha256": "83e0094cac64b901cabdc4df0b9ea9ceceeb2da025f152167e155e4af4118aef",
+      "bytes": 11257,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/buggy/design.debug.generic.mlir",
+      "source": ".runs/batch-memory-01/d4/buggy/kimulator/design.debug.generic.mlir",
+      "sha256": "ee6594745fefc7c1b92c2289f997219e3332ead5868a60d4ab005b1b3031a601",
+      "bytes": 20870,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/buggy/source-map.json",
+      "source": ".runs/batch-memory-01/d4/buggy/kimulator/source-map.json",
+      "sha256": "6b222d5b7c6d715900af4276426c75420a2c4b19ffc09e861c29108bb4f81d3b",
+      "bytes": 34349,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/buggy/event-0034.kore.gz",
+      "source": ".runs/batch-memory-01/d4/buggy/kimulator/event-0034.kore.gz",
+      "sha256": "95fd2eb9c4a891d9e0c0d79a6209f00b44774fd2981ba67181973aa543dfbea3",
+      "bytes": 9606,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/buggy/event-0035.kore.gz",
+      "source": ".runs/batch-memory-01/d4/buggy/kimulator/event-0035.kore.gz",
+      "sha256": "fdb6960dd062c293bf773f15e661a053d2573288d09f1123113ea60abf5bb200",
+      "bytes": 9612,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/buggy/event-0132.kore.gz",
+      "source": ".runs/batch-memory-01/d4/buggy/kimulator/event-0132.kore.gz",
+      "sha256": "8c36393ae4a71a7966e5d5f52d95502360f49197a389c6ef7ae85b7bc5932c13",
+      "bytes": 10026,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/buggy/event-0133.kore.gz",
+      "source": ".runs/batch-memory-01/d4/buggy/kimulator/event-0133.kore.gz",
+      "sha256": "ffb70fa4314ece53c8f35d77b0eabdf0e3291608684162837775d7142cc542d7",
+      "bytes": 10024,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/buggy/event-0134.kore.gz",
+      "source": ".runs/batch-memory-01/d4/buggy/kimulator/event-0134.kore.gz",
+      "sha256": "6f1feb5eb639f351be7b6bfb2b21bd354a62dc82e04cf371d170609cb44f98e5",
+      "bytes": 10026,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d4/analysis/buggy/event-0135.kore.gz",
+      "source": ".runs/batch-memory-01/d4/buggy/kimulator/event-0135.kore.gz",
+      "sha256": "96d8526785f9f2669d2af879752650431a25cfd99fc20e904276fb48f19b4736",
+      "bytes": 10028,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/analysis/d4-buggy-state-window.json",
+      "source": ".runs/validation/failure-analysis/d4-buggy-state-window.json",
+      "sha256": "2c64eb16366d54a961aa114ab3f2119eea0e02ed93b695203ab48dee91e06bb8",
+      "bytes": 97497,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/analysis/d4-address-2-write-evidence.json",
+      "source": ".runs/validation/failure-analysis/d4-address-2-write-evidence.json",
+      "sha256": "a6e180b520665d6988459b7043816a62b1eeba686dea213f367c1809e9f818ee",
+      "bytes": 9549,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/native-independent/buggy/native-failure-window.json",
+      "source": ".runs/d13/native-independent/run-20260905T110412.741945Z/buggy/native-failure-window.json",
+      "sha256": "47b3333f5a884c9eb989a7a90caa538c0b78dcd0d05abc1083e65e7d08311f5d",
+      "bytes": 12990,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d13/native-independent/native-sampling-validation.json",
+      "source": ".runs/d13/native-independent/run-20260905T110412.741945Z/native-sampling-validation.json",
+      "sha256": "b10a11ca7c894ed1b462a5c485bf44300220f0ff0a4c6f7ee7245c40ad932595",
+      "bytes": 832,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/d8/original-tb-prefix.json",
+      "source": ".runs/validation/native-adapter/d8-original-prefix/summary.json",
+      "sha256": "b7b273c46a20e6273f9679970ad5d64efb49d8f70117d4123d8ba70beff4d177",
+      "bytes": 674,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s3/original-tb/golden/output.csv",
+      "source": ".runs/validation/native-adapter/s3-d8-native/s3/golden/original-tb/output.txt",
+      "sha256": "dfa54134e3c784597e6aa3160fe6034e67020e7050050b1f5b8df91f8d74c270",
+      "bytes": 867,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/s3/original-tb/buggy/output.csv",
+      "source": ".runs/validation/native-adapter/s3-d8-native/s3/buggy/original-tb/output.txt",
+      "sha256": "d1b9c307f6d78be9b180c67e6ced125cd2c40e9cbf2f0d3c03d55453ad84c9d5",
+      "bytes": 867,
+      "kind": "原始工件，字节保持不变"
+    },
+    {
+      "path": "evidence/baseline/service.patch",
+      "source": ".runs/batch-final-01/service.patch",
+      "sha256": "54a7053789eebda3e68c824b4f3c8515f5f517602ca09de19a69458bccbb57a9",
+      "bytes": 5833,
+      "kind": "原始工件，字节保持不变"
+    }
+  ]
+}

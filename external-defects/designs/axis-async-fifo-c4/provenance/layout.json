@@ -1,0 +1,13 @@
+{
+  "files": {
+    "axis_async_fifo.v": "designs/axis-async-fifo-c4/original/axis_async_fifo.v",
+    "axis_async_fifo_bug_c4.v": "designs/axis-async-fifo-c4/variants/c4/axis_async_fifo_bug_c4.v",
+    "axis_fifo_wrapper.v": "designs/axis-async-fifo-c4/original/axis_fifo_wrapper.v",
+    "axis_register.v": "designs/axis-async-fifo-c4/original/axis_register.v",
+    "origin/README.md": "designs/axis-async-fifo-c4/provenance/origin/README.md",
+    "project.toml": "designs/axis-async-fifo-c4/provenance/project.toml",
+    "tb.csv": "designs/axis-async-fifo-c4/testbench/tb.csv",
+    "tb.v": "designs/axis-async-fifo-c4/testbench/tb.v",
+    "to_btor2.ys": "designs/axis-async-fifo-c4/provenance/to_btor2.ys"
+  }
+}

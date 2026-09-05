@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "projects": [
+    {
+      "project_id": "axi-lite-s1",
+      "source_case_id": "S1",
+      "title": "AXI Lite 寄存器接口",
+      "readme": "designs/axi-lite-s1/README.md",
+      "top": "xlnxdemo",
+      "golden_sources": [
+        "designs/axi-lite-s1/original/xlnxdemo.v"
+      ],
+      "variants": [
+        {
+          "variant_id": "s1b",
+          "manifest": "manifests/s1b.json",
+          "bug_original": "designs/axi-lite-s1/original/xlnxdemo.v",
+          "bug_source": "designs/axi-lite-s1/variants/s1b/xlnxdemo_bug_s1b.v",
+          "csv": "designs/axi-lite-s1/testbench/tb0.csv",
+          "samples": 10
+        },
+        {
+          "variant_id": "s1r",
+          "manifest": "manifests/s1r.json",
+          "bug_original": "designs/axi-lite-s1/original/xlnxdemo.v",
+          "bug_source": "designs/axi-lite-s1/variants/s1r/xlnxdemo_bug_s1r.v",
+          "csv": "designs/axi-lite-s1/testbench/tb1.csv",
+          "samples": 10
+        }
+      ],
+      "layout_file": "designs/axi-lite-s1/provenance/layout.json",
+      "upstream_project_path": "benchmarks/fpga-debugging/axi-lite-s1"
+    },
+    {
+      "project_id": "axi-stream-s2",
+      "source_case_id": "S2",
+      "title": "AXI Stream 主接口",
+      "readme": "designs/axi-stream-s2/README.md",
+      "top": "xlnxstream_2018_3",
+      "golden_sources": [
+        "designs/axi-stream-s2/original/xlnxstream_2018_3.v"
+      ],
+      "variants": [
+        {
+          "variant_id": "s2",
+          "manifest": "manifests/s2.json",
+          "bug_original": "designs/axi-stream-s2/original/xlnxstream_2018_3.v",
+          "bug_source": "designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v",
+          "csv": "designs/axi-stream-s2/testbench/tb.csv",
+          "samples": 45
+        }
+      ],
+      "layout_file": "designs/axi-stream-s2/provenance/layout.json",
+      "upstream_project_path": "benchmarks/fpga-debugging/axi-stream-s2"
+    },
+    {
+      "project_id": "axis-adapter-s3",
+      "source_case_id": "S3",
+      "title": "AXI Stream 位宽适配器",
+      "readme": "designs/axis-adapter-s3/README.md",
+      "top": "axis_adapter",
+      "golden_sources": [
+        "designs/axis-adapter-s3/original/axis_adapter.v"
+      ],
+      "variants": [
+        {
+          "variant_id": "s3",
+          "manifest": "manifests/s3.json",
+          "bug_original": "designs/axis-adapter-s3/original/axis_adapter.v",
+          "bug_source": "designs/axis-adapter-s3/variants/s3/axis_adapter_bug_s3.v",
+          "csv": "designs/axis-adapter-s3/testbench/tb.csv",
+          "samples": 13
+        }
+      ],
+      "layout_file": "designs/axis-adapter-s3/provenance/layout.json",
+      "upstream_project_path": "benchmarks/fpga-debugging/axis-adapter-s3"
+    },
+    {
+      "project_id": "axis-async-fifo-c4",
+      "source_case_id": "C4",
+      "title": "带寄存器与 wrapper 的异步 FIFO",
+      "readme": "designs/axis-async-fifo-c4/README.md",
+      "top": "axis_fifo_wrapper",
+      "golden_sources": [
+        "designs/axis-async-fifo-c4/original/axis_async_fifo.v",
+        "designs/axis-async-fifo-c4/original/axis_fifo_wrapper.v",
+        "designs/axis-async-fifo-c4/original/axis_register.v"
+      ],
+      "variants": [
+        {
+          "variant_id": "c4",
+          "manifest": "manifests/c4.json",
+          "bug_original": "designs/axis-async-fifo-c4/original/axis_async_fifo.v",
+          "bug_source": "designs/axis-async-fifo-c4/variants/c4/axis_async_fifo_bug_c4.v",
+          "csv": "designs/axis-async-fifo-c4/testbench/tb.csv",
+          "samples": 10
+        }
+      ],
+      "layout_file": "designs/axis-async-fifo-c4/provenance/layout.json",
+      "upstream_project_path": "benchmarks/fpga-debugging/axis-async-fifo-c4"
+    },
+    {
+      "project_id": "axis-fifo-d12",
+      "source_case_id": "D12",
+      "title": "AXI Stream 帧 FIFO",
+      "readme": "designs/axis-fifo-d12/README.md",
+      "top": "axis_fifo",
+      "golden_sources": [
+        "designs/axis-fifo-d12/original/axis_fifo.v"
+      ],
+      "variants": [
+        {
+          "variant_id": "d12",
+          "manifest": "manifests/d12.json",
+          "bug_original": "designs/axis-fifo-d12/original/axis_fifo.v",
+          "bug_source": "designs/axis-fifo-d12/variants/d12/axis_fifo_bug_d12.v",
+          "csv": "designs/axis-fifo-d12/testbench/tb.csv",
+          "samples": 16
+        }
+      ],
+      "layout_file": "designs/axis-fifo-d12/provenance/layout.json",
+      "upstream_project_path": "benchmarks/fpga-debugging/axis-fifo-d12"
+    },
+    {
+      "project_id": "axis-fifo-d4",
+      "source_case_id": "D4",
+      "title": "带 wrapper 的 AXI Stream FIFO",
+      "readme": "designs/axis-fifo-d4/README.md",
+      "top": "axis_fifo_wrapper",
+      "golden_sources": [
+        "designs/axis-fifo-d4/original/axis_fifo.v",
+        "designs/axis-fifo-d4/original/axis_fifo_wrapper.v"
+      ],
+      "variants": [
+        {
+          "variant_id": "d4",
+          "manifest": "manifests/d4.json",
+          "bug_original": "designs/axis-fifo-d4/original/axis_fifo.v",
+          "bug_source": "designs/axis-fifo-d4/variants/d4/axis_fifo_bug_d4.v",
+          "csv": "designs/axis-fifo-d4/testbench/tb.csv",
+          "samples": 185
+        }
+      ],
+      "layout_file": "designs/axis-fifo-d4/provenance/layout.json",
+      "upstream_project_path": "benchmarks/fpga-debugging/axis-fifo-d4"
+    },
+    {
+      "project_id": "axis-frame-fifo-d11",
+      "source_case_id": "D11",
+      "title": "AXI Stream 帧 FIFO",
+      "readme": "designs/axis-frame-fifo-d11/README.md",
+      "top": "axis_frame_fifo",
+      "golden_sources": [
+        "designs/axis-frame-fifo-d11/original/axis_frame_fifo.v"
+      ],
+      "variants": [
+        {
+          "variant_id": "d11",
+          "manifest": "manifests/d11.json",
+          "bug_original": "designs/axis-frame-fifo-d11/original/axis_frame_fifo.v",
+          "bug_source": "designs/axis-frame-fifo-d11/variants/d11/axis_frame_fifo_bug_d11.v",
+          "csv": "designs/axis-frame-fifo-d11/testbench/tb.csv",
+          "samples": 17
+        }
+      ],
+      "layout_file": "designs/axis-frame-fifo-d11/provenance/layout.json",
+      "upstream_project_path": "benchmarks/fpga-debugging/axis-frame-fifo-d11"
+    },
+    {
+      "project_id": "axis-frame-len-d13",
+      "source_case_id": "D13",
+      "title": "帧长度计数器",
+      "readme": "designs/axis-frame-len-d13/README.md",
+      "top": "axis_frame_len",
+      "golden_sources": [
+        "designs/axis-frame-len-d13/original/axis_frame_len.v"
+      ],
+      "variants": [
+        {
+          "variant_id": "d13",
+          "manifest": "manifests/d13.json",
+          "bug_original": "designs/axis-frame-len-d13/original/axis_frame_len.v",
+          "bug_source": "designs/axis-frame-len-d13/variants/d13/axis_frame_len_bug_d13.v",
+          "csv": "designs/axis-frame-len-d13/testbench/tb.csv",
+          "samples": 6
+        }
+      ],
+      "layout_file": "designs/axis-frame-len-d13/provenance/layout.json",
+      "upstream_project_path": "benchmarks/fpga-debugging/axis-frame-len-d13"
+    },
+    {
+      "project_id": "axis-switch-d8",
+      "source_case_id": "D8",
+      "title": "AXI Stream 交换器",
+      "readme": "designs/axis-switch-d8/README.md",
+      "top": "axis_switch",
+      "golden_sources": [
+        "designs/axis-switch-d8/original/arbiter.v",
+        "designs/axis-switch-d8/original/axis_register.v",
+        "designs/axis-switch-d8/original/axis_switch.v",
+        "designs/axis-switch-d8/original/priority_encoder.v"
+      ],
+      "variants": [
+        {
+          "variant_id": "d8",
+          "manifest": "manifests/d8.json",
+          "bug_original": "designs/axis-switch-d8/original/axis_switch.v",
+          "bug_source": "designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v",
+          "csv": "designs/axis-switch-d8/testbench/tb.csv",
+          "samples": 14
+        }
+      ],
+      "layout_file": "designs/axis-switch-d8/provenance/layout.json",
+      "upstream_project_path": "benchmarks/fpga-debugging/axis-switch-d8"
+    }
+  ]
+}

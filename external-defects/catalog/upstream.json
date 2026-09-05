@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "purpose": "固定上游身份；压缩归档未复制到当前实验仓库。",
+  "archives": [
+    {
+      "archive": "rtl-repair-fpga-debugging-71e1afc.tar.gz",
+      "sha256": "3aebd94c34aaf9cced849541635ebc66145c7ba44fc1227f3f4e8623073ddc0a",
+      "repository": "https://github.com/ekiwi/rtl-repair",
+      "commit": "71e1afc0b9a2327d008b46acd415cf3f0343a938"
+    },
+    {
+      "archive": "hardware-bugbase-7702e47.tar.gz",
+      "sha256": "b5125ec4a3d93db138e5642285343d2d644e89a0b5bd156701b2c4f7bcb2ae5d",
+      "repository": "https://github.com/efeslab/hardware-bugbase",
+      "commit": "7702e478f4ffdca477273d5a395992ecf006d70f"
+    }
+  ],
+  "extraction": {
+    "adapted_project_prefix": "benchmarks/fpga-debugging",
+    "project_mapping": "catalog/design-index.json",
+    "layout_files": "designs/<project>/provenance/layout.json",
+    "upstream_bytes_preserved": true,
+    "license_policy": "保留每份上游文件原有许可头及 origin 来源说明；不把仓库许可推定为所有外部设计的统一许可。"
+  },
+  "selection_basis": {
+    "handoff_document_name": "K_CIRCT_TOP_REPO_HANDOFF.md",
+    "inventory_document_name": "case_inventory.json",
+    "note": "这两个名称记录原始选例依据；执行只依赖仓库内的 manifest、layout 及对应源文件。"
+  },
+  "historical_import_audit": {
+    "archive_file_counts": [
+      {
+        "archive": "rtl-repair-fpga-debugging-71e1afc.tar.gz",
+        "files_checked": 81,
+        "mismatches": []
+      },
+      {
+        "archive": "hardware-bugbase-7702e47.tar.gz",
+        "files_checked": 1478,
+        "mismatches": []
+      }
+    ],
+    "note": "导入时静态核查记录，不能代替本轮仿真结果。"
+  },
+  "migration_audit": ".work/migration/source-validation.json"
+}

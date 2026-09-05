@@ -1,0 +1,44 @@
+{
+  "golden": {
+    "all_six_low_phase_observations_match_original_tb": true,
+    "vcd_time_unit": "1ps",
+    "vcd_rising_edge_snapshots": "post-NBA stable snapshot, not CSV Active sample",
+    "low_phase_times_ps": [
+      0,
+      2000,
+      4000,
+      6000,
+      8000,
+      10000
+    ],
+    "tb_active_observation_times_ps": [
+      1000,
+      3000,
+      5000,
+      7000,
+      9000,
+      11000
+    ]
+  },
+  "buggy": {
+    "all_six_low_phase_observations_match_original_tb": true,
+    "vcd_time_unit": "1ps",
+    "vcd_rising_edge_snapshots": "post-NBA stable snapshot, not CSV Active sample",
+    "low_phase_times_ps": [
+      0,
+      2000,
+      4000,
+      6000,
+      8000,
+      10000
+    ],
+    "tb_active_observation_times_ps": [
+      1000,
+      3000,
+      5000,
+      7000,
+      9000,
+      11000
+    ]
+  }
+}

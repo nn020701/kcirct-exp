@@ -1,0 +1,139 @@
+{
+  "source_case_id": "D12",
+  "variant_id": "d12",
+  "samples": 16,
+  "status": "pass",
+  "golden_native_oracle": true,
+  "golden_k_oracle": true,
+  "buggy_k_native": true,
+  "simulator_agrees_with_native": true,
+  "bug_detected_by_oracle": true,
+  "first_bug_difference": {
+    "sample_index": 13,
+    "signal": "m_axis_tdata",
+    "expected": 3,
+    "actual": 4
+  },
+  "run_id": "batch-final-01",
+  "backends": {
+    "golden_native": {
+      "status": "pass",
+      "stage": null,
+      "timings_s": {
+        "build": 2.8609700839988363,
+        "execution": 0.4010854170010134,
+        "read_compare": 0.0008005829986359458
+      },
+      "oracle": {
+        "agrees": true,
+        "compared_cells": 128,
+        "masked_cells": 0,
+        "first_mismatch": null,
+        "mismatch_count": 0
+      },
+      "native_comparison": null,
+      "output_csv": "evidence/d12/golden_native/output.csv",
+      "output_sha256": "fbe6df821c17d3f5a2dc5c7a3df876515be93074ae7e5bc8373c3455f49b4642"
+    },
+    "golden_k": {
+      "status": "pass",
+      "stage": null,
+      "timings_s": {
+        "frontend": 0.031072957997821504,
+        "debug.generic": 0.024847124997904757,
+        "generic": 0.013714083001104882,
+        "compile": 0.014653624999482417,
+        "preprocess": 0.17722720799793024,
+        "setup": 0.1542013340003905,
+        "state_export": 0.18730308298836462,
+        "execution": 5.479484581996076,
+        "read_ports": 0.031720746992505156
+      },
+      "oracle": {
+        "agrees": true,
+        "compared_cells": 128,
+        "masked_cells": 0,
+        "first_mismatch": null,
+        "mismatch_count": 0
+      },
+      "native_comparison": {
+        "agrees": true,
+        "compared_cells": 176,
+        "masked_cells": 0,
+        "first_mismatch": null,
+        "mismatch_count": 0
+      },
+      "output_csv": "evidence/d12/golden_k/output.csv",
+      "output_sha256": "fb9c8672861eda37eae20e3dbf297b9c74e0ec5aba60bf2f6bb753241fd6ea7c"
+    },
+    "buggy_native": {
+      "status": "oracle_mismatch",
+      "stage": null,
+      "timings_s": {
+        "build": 2.7638106670019624,
+        "execution": 0.4420157919994381,
+        "read_compare": 0.0008435839990852401
+      },
+      "oracle": {
+        "agrees": false,
+        "compared_cells": 128,
+        "masked_cells": 0,
+        "first_mismatch": {
+          "sample_index": 13,
+          "signal": "m_axis_tdata",
+          "expected": 3,
+          "actual": 4
+        },
+        "mismatch_count": 9
+      },
+      "native_comparison": null,
+      "output_csv": "evidence/d12/buggy_native/output.csv",
+      "output_sha256": "bc4d7b15fdb7a6178c65f44e54cd9bc032a94de860af6497c28133dbb3d97021"
+    },
+    "buggy_k": {
+      "status": "oracle_mismatch",
+      "stage": null,
+      "timings_s": {
+        "frontend": 0.032469249999849126,
+        "debug.generic": 0.015334749998146435,
+        "generic": 0.012289624999539228,
+        "compile": 0.016015334000258008,
+        "preprocess": 0.16434074999779114,
+        "setup": 0.16184716699717683,
+        "state_export": 0.18846729299184517,
+        "execution": 5.437854623007297,
+        "read_ports": 0.03175291900333832
+      },
+      "oracle": {
+        "agrees": false,
+        "compared_cells": 128,
+        "masked_cells": 0,
+        "first_mismatch": {
+          "sample_index": 13,
+          "signal": "m_axis_tdata",
+          "expected": 3,
+          "actual": 4
+        },
+        "mismatch_count": 9
+      },
+      "native_comparison": {
+        "agrees": true,
+        "compared_cells": 176,
+        "masked_cells": 0,
+        "first_mismatch": null,
+        "mismatch_count": 0
+      },
+      "output_csv": "evidence/d12/buggy_k/output.csv",
+      "output_sha256": "97c0563062405eba13e29e924088fe719f9e2d17ffd9f505acc2092a247ddf86"
+    }
+  },
+  "blockers": [],
+  "raw_result": ".runs/batch-final-01/d12/result.json",
+  "evidence": [
+    "evidence/d12/buggy_k/output.csv",
+    "evidence/d12/buggy_native/output.csv",
+    "evidence/d12/golden_k/output.csv",
+    "evidence/d12/golden_native/output.csv"
+  ],
+  "raw_result_sha256": "f0d54ffca6728beed1e6ab972467ac37b4253ddb50bd759a79b9fad6b070e829"
+}

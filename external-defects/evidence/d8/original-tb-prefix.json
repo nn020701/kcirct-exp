@@ -1,0 +1,18 @@
+{
+  "golden": {
+    "prefix_samples": 13,
+    "full_csv_samples": 14,
+    "output_mismatches": [],
+    "input_mismatches": [],
+    "all_prefix_columns_equal": true,
+    "limitation": "原TB在cycle==12（第13个posedge）$finish；适配器这里只运行13条低相位观测、12个posedge，不声称验证第14条原TB观测。"
+  },
+  "buggy": {
+    "prefix_samples": 13,
+    "full_csv_samples": 14,
+    "output_mismatches": [],
+    "input_mismatches": [],
+    "all_prefix_columns_equal": true,
+    "limitation": "原TB在cycle==12（第13个posedge）$finish；适配器这里只运行13条低相位观测、12个posedge，不声称验证第14条原TB观测。"
+  }
+}

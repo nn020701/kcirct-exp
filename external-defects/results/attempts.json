@@ -1,0 +1,334 @@
+[
+  {
+    "run_id": "batch-first-01",
+    "source_case_id": "D13",
+    "variant_id": "d13",
+    "samples": 6,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 5,
+      "signal": "frame_len",
+      "expected": 1,
+      "actual": 3
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-first-01/d13/result.json"
+  },
+  {
+    "run_id": "batch-first-01",
+    "source_case_id": "S3",
+    "variant_id": "s3",
+    "samples": 13,
+    "status": "execution_error",
+    "first_bug_difference": {
+      "sample_index": 8,
+      "signal": "input_axis_tready",
+      "expected": 1,
+      "actual": 0
+    },
+    "blockers": [
+      {
+        "backend": "golden_k",
+        "status": "execution_error",
+        "stage": "execution"
+      },
+      {
+        "backend": "buggy_k",
+        "status": "execution_error",
+        "stage": "execution"
+      }
+    ],
+    "raw_result": ".runs/batch-first-01/s3/result.json"
+  },
+  {
+    "run_id": "batch-first-01",
+    "source_case_id": "S1",
+    "variant_id": "s1b",
+    "samples": 10,
+    "status": "execution_error",
+    "first_bug_difference": {
+      "sample_index": 5,
+      "signal": "S_AXI_AWREADY",
+      "expected": 0,
+      "actual": 1
+    },
+    "blockers": [
+      {
+        "backend": "golden_k",
+        "status": "execution_error",
+        "stage": "execution"
+      },
+      {
+        "backend": "buggy_k",
+        "status": "execution_error",
+        "stage": "execution"
+      }
+    ],
+    "raw_result": ".runs/batch-first-01/s1b/result.json"
+  },
+  {
+    "run_id": "batch-first-01",
+    "source_case_id": "S1",
+    "variant_id": "s1r",
+    "samples": 10,
+    "status": "execution_error",
+    "first_bug_difference": {
+      "sample_index": 5,
+      "signal": "S_AXI_ARREADY",
+      "expected": 0,
+      "actual": 1
+    },
+    "blockers": [
+      {
+        "backend": "golden_k",
+        "status": "execution_error",
+        "stage": "execution"
+      },
+      {
+        "backend": "buggy_k",
+        "status": "execution_error",
+        "stage": "execution"
+      }
+    ],
+    "raw_result": ".runs/batch-first-01/s1r/result.json"
+  },
+  {
+    "run_id": "batch-first-01",
+    "source_case_id": "D8",
+    "variant_id": "d8",
+    "samples": 14,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 4,
+      "signal": "m_axis_tvalid",
+      "expected": 1,
+      "actual": 0
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-first-01/d8/result.json"
+  },
+  {
+    "run_id": "batch-memory-01",
+    "source_case_id": "D12",
+    "variant_id": "d12",
+    "samples": 16,
+    "status": "execution_error",
+    "first_bug_difference": {
+      "sample_index": 13,
+      "signal": "m_axis_tdata",
+      "expected": 3,
+      "actual": 4
+    },
+    "blockers": [
+      {
+        "backend": "golden_k",
+        "status": "execution_error",
+        "stage": "execution"
+      },
+      {
+        "backend": "buggy_k",
+        "status": "execution_error",
+        "stage": "execution"
+      }
+    ],
+    "raw_result": ".runs/batch-memory-01/d12/result.json"
+  },
+  {
+    "run_id": "batch-memory-01",
+    "source_case_id": "D11",
+    "variant_id": "d11",
+    "samples": 17,
+    "status": "timeout",
+    "first_bug_difference": {
+      "sample_index": 13,
+      "signal": "drop_frame",
+      "expected": 0,
+      "actual": 1
+    },
+    "blockers": [
+      {
+        "backend": "golden_k",
+        "status": "timeout",
+        "stage": "execution"
+      },
+      {
+        "backend": "buggy_k",
+        "status": "timeout",
+        "stage": "execution"
+      }
+    ],
+    "raw_result": ".runs/batch-memory-01/d11/result.json"
+  },
+  {
+    "run_id": "batch-memory-01",
+    "source_case_id": "D4",
+    "variant_id": "d4",
+    "samples": 185,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 67,
+      "signal": "s_axis_tready",
+      "expected": 0,
+      "actual": 1
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-memory-01/d4/result.json"
+  },
+  {
+    "run_id": "batch-memory-01",
+    "source_case_id": "S2",
+    "variant_id": "s2",
+    "samples": 45,
+    "status": "execution_error",
+    "first_bug_difference": {
+      "sample_index": 42,
+      "signal": "M_AXIS_TLAST",
+      "expected": 0,
+      "actual": 1
+    },
+    "blockers": [
+      {
+        "backend": "golden_k",
+        "status": "execution_error",
+        "stage": "compile"
+      },
+      {
+        "backend": "buggy_k",
+        "status": "execution_error",
+        "stage": "compile"
+      }
+    ],
+    "raw_result": ".runs/batch-memory-01/s2/result.json"
+  },
+  {
+    "run_id": "batch-memory-01",
+    "source_case_id": "C4",
+    "variant_id": "c4",
+    "samples": 10,
+    "status": "timeout",
+    "first_bug_difference": {
+      "sample_index": 4,
+      "signal": "input_axis_tready",
+      "expected": 0,
+      "actual": 1
+    },
+    "blockers": [
+      {
+        "backend": "golden_k",
+        "status": "timeout",
+        "stage": "execution"
+      },
+      {
+        "backend": "buggy_k",
+        "status": "timeout",
+        "stage": "execution"
+      }
+    ],
+    "raw_result": ".runs/batch-memory-01/c4/result.json"
+  },
+  {
+    "run_id": "batch-final-01",
+    "source_case_id": "D13",
+    "variant_id": "d13",
+    "samples": 6,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 5,
+      "signal": "frame_len",
+      "expected": 1,
+      "actual": 3
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-final-01/d13/result.json"
+  },
+  {
+    "run_id": "batch-final-01",
+    "source_case_id": "S3",
+    "variant_id": "s3",
+    "samples": 13,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 8,
+      "signal": "input_axis_tready",
+      "expected": 1,
+      "actual": 0
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-final-01/s3/result.json"
+  },
+  {
+    "run_id": "batch-final-01",
+    "source_case_id": "S1",
+    "variant_id": "s1b",
+    "samples": 10,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 5,
+      "signal": "S_AXI_AWREADY",
+      "expected": 0,
+      "actual": 1
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-final-01/s1b/result.json"
+  },
+  {
+    "run_id": "batch-final-01",
+    "source_case_id": "S1",
+    "variant_id": "s1r",
+    "samples": 10,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 5,
+      "signal": "S_AXI_ARREADY",
+      "expected": 0,
+      "actual": 1
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-final-01/s1r/result.json"
+  },
+  {
+    "run_id": "batch-final-01",
+    "source_case_id": "D8",
+    "variant_id": "d8",
+    "samples": 14,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 4,
+      "signal": "m_axis_tvalid",
+      "expected": 1,
+      "actual": 0
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-final-01/d8/result.json"
+  },
+  {
+    "run_id": "batch-final-01",
+    "source_case_id": "D12",
+    "variant_id": "d12",
+    "samples": 16,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 13,
+      "signal": "m_axis_tdata",
+      "expected": 3,
+      "actual": 4
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-final-01/d12/result.json"
+  },
+  {
+    "run_id": "batch-final-01",
+    "source_case_id": "D4",
+    "variant_id": "d4",
+    "samples": 185,
+    "status": "pass",
+    "first_bug_difference": {
+      "sample_index": 67,
+      "signal": "s_axis_tready",
+      "expected": 0,
+      "actual": 1
+    },
+    "blockers": [],
+    "raw_result": ".runs/batch-final-01/d4/result.json"
+  }
+]

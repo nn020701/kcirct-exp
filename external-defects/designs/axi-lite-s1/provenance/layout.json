@@ -1,0 +1,16 @@
+{
+  "files": {
+    "origin/README.md": "designs/axi-lite-s1/provenance/origin/README.md",
+    "origin/rtl/bugfix.patch": "designs/axi-lite-s1/provenance/origin/rtl/bugfix.patch",
+    "origin/rtl/trace_tb0.v": "designs/axi-lite-s1/provenance/origin/rtl/trace_tb0.v",
+    "origin/rtl/trace_tb1.v": "designs/axi-lite-s1/provenance/origin/rtl/trace_tb1.v",
+    "origin/test/main.cpp": "designs/axi-lite-s1/provenance/origin/test/main.cpp",
+    "project.toml": "designs/axi-lite-s1/provenance/project.toml",
+    "tb0.csv": "designs/axi-lite-s1/testbench/tb0.csv",
+    "tb1.csv": "designs/axi-lite-s1/testbench/tb1.csv",
+    "to_btor2.ys": "designs/axi-lite-s1/provenance/to_btor2.ys",
+    "xlnxdemo.v": "designs/axi-lite-s1/original/xlnxdemo.v",
+    "xlnxdemo_bug_s1b.v": "designs/axi-lite-s1/variants/s1b/xlnxdemo_bug_s1b.v",
+    "xlnxdemo_bug_s1r.v": "designs/axi-lite-s1/variants/s1r/xlnxdemo_bug_s1r.v"
+  }
+}

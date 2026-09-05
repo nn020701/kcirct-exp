@@ -1,0 +1,151 @@
+{
+  "kind": "根据原始失败结果生成的结构化摘要，不是修改后的日志",
+  "blockers": [
+    {
+      "variant_id": "d11",
+      "design_variant": "golden",
+      "status": "timeout",
+      "stage": "execution",
+      "raw_log_sources": [
+        {
+          "path": ".runs/batch-memory-01/d11/golden/kimulator/error.txt",
+          "sha256": "972d3ae395ebb93db3b5e2feb03e7922791c8d33fe7896a7bce2a121b0e0bd78",
+          "bytes": 1468
+        },
+        {
+          "path": ".runs/batch-memory-01/d11/golden/kimulator/k-command-0000.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": ".runs/batch-memory-01/d11/golden/kimulator/k-command-0003.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "timeout_s": 120,
+      "event_index": 0,
+      "description": "首个K执行事件未在限定时间内完成"
+    },
+    {
+      "variant_id": "d11",
+      "design_variant": "buggy",
+      "status": "timeout",
+      "stage": "execution",
+      "raw_log_sources": [
+        {
+          "path": ".runs/batch-memory-01/d11/buggy/kimulator/error.txt",
+          "sha256": "68d6fca353edceff977557f47ce84631dde1f2e8a147477604699f8a936608ec",
+          "bytes": 1229
+        },
+        {
+          "path": ".runs/batch-memory-01/d11/buggy/kimulator/k-command-0000.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": ".runs/batch-memory-01/d11/buggy/kimulator/k-command-0003.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "timeout_s": 120,
+      "event_index": 0,
+      "description": "首个K执行事件未在限定时间内完成"
+    },
+    {
+      "variant_id": "s2",
+      "design_variant": "golden",
+      "status": "execution_error",
+      "stage": "compile",
+      "raw_log_sources": [
+        {
+          "path": ".runs/batch-memory-01/s2/golden/kimulator/error.txt",
+          "sha256": "c1f14f0ea05e80e2aa773d7a39b2b86128950ebf253e172c6a9cab1d48769479",
+          "bytes": 1301
+        },
+        {
+          "path": ".runs/batch-memory-01/s2/golden/kimulator/k-command-0000.stderr.txt",
+          "sha256": "6342b5ccf9e7339657dbf6a566b742167facd77a59ff36241f662dc3ccd1d692",
+          "bytes": 218
+        }
+      ],
+      "description": "generic IR残留LLHD类型，K parser在第15行拒绝语法",
+      "diagnostic_excerpt": "syntax error, unexpected <, expecting }",
+      "ir_line": 15
+    },
+    {
+      "variant_id": "s2",
+      "design_variant": "buggy",
+      "status": "execution_error",
+      "stage": "compile",
+      "raw_log_sources": [
+        {
+          "path": ".runs/batch-memory-01/s2/buggy/kimulator/error.txt",
+          "sha256": "23c9fc6ebb3ec671ba79969281cdd38e12c6f01296dd397e66c4d9341bd9f4b9",
+          "bytes": 1300
+        },
+        {
+          "path": ".runs/batch-memory-01/s2/buggy/kimulator/k-command-0000.stderr.txt",
+          "sha256": "308ec6f1f5c34e1e809e569d22fab2e562ea6f5f7c5659a3f5c76c559d438be9",
+          "bytes": 217
+        }
+      ],
+      "description": "generic IR残留LLHD类型，K parser在第15行拒绝语法",
+      "diagnostic_excerpt": "syntax error, unexpected <, expecting }",
+      "ir_line": 15
+    },
+    {
+      "variant_id": "c4",
+      "design_variant": "golden",
+      "status": "timeout",
+      "stage": "execution",
+      "raw_log_sources": [
+        {
+          "path": ".runs/batch-memory-01/c4/golden/kimulator/error.txt",
+          "sha256": "803fd7f5f4f69d48fc4449d8b66a8f0acc1b4b37b378a43974a0faae0bfaa07f",
+          "bytes": 1413
+        },
+        {
+          "path": ".runs/batch-memory-01/c4/golden/kimulator/k-command-0000.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": ".runs/batch-memory-01/c4/golden/kimulator/k-command-0003.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "timeout_s": 120,
+      "event_index": 0,
+      "description": "首个K执行事件未在限定时间内完成"
+    },
+    {
+      "variant_id": "c4",
+      "design_variant": "buggy",
+      "status": "timeout",
+      "stage": "execution",
+      "raw_log_sources": [
+        {
+          "path": ".runs/batch-memory-01/c4/buggy/kimulator/error.txt",
+          "sha256": "a3d9a6c299908bdccfdd093cad343f5c26b3cd70b40b30c17e985a1c6a83c02a",
+          "bytes": 1412
+        },
+        {
+          "path": ".runs/batch-memory-01/c4/buggy/kimulator/k-command-0000.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": ".runs/batch-memory-01/c4/buggy/kimulator/k-command-0003.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "timeout_s": 120,
+      "event_index": 0,
+      "description": "首个K执行事件未在限定时间内完成"
+    }
+  ]
+}

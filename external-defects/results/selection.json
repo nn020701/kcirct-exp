@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "formal_run_ids": [
+    "batch-first-01",
+    "batch-memory-01",
+    "batch-final-01"
+  ],
+  "policy": "显式选择正式批次；保留重跑前结果，迁移验证不自动计入"
+}

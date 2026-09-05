@@ -1,0 +1,111 @@
+{
+  "source_case_id": "D11",
+  "variant_id": "d11",
+  "samples": 17,
+  "status": "timeout",
+  "golden_native_oracle": true,
+  "golden_k_oracle": null,
+  "buggy_k_native": null,
+  "simulator_agrees_with_native": false,
+  "bug_detected_by_oracle": false,
+  "first_bug_difference": {
+    "sample_index": 13,
+    "signal": "drop_frame",
+    "expected": 0,
+    "actual": 1
+  },
+  "run_id": "batch-memory-01",
+  "backends": {
+    "golden_native": {
+      "status": "pass",
+      "stage": null,
+      "timings_s": {
+        "build": 2.6454221660023904,
+        "execution": 0.4420839160011383,
+        "read_compare": 0.0023844999996072147
+      },
+      "oracle": {
+        "agrees": true,
+        "compared_cells": 84,
+        "masked_cells": 1,
+        "first_mismatch": null,
+        "mismatch_count": 0
+      },
+      "native_comparison": null,
+      "output_csv": "evidence/d11/golden_native/output.csv",
+      "output_sha256": "6229fa51d82fadb8307738eddb21465fc21a7889c2de6e5de6510e30cea23d71"
+    },
+    "golden_k": {
+      "status": "timeout",
+      "stage": "execution",
+      "timings_s": {
+        "frontend": 0.02265491700018174,
+        "debug.generic": 0.021887500002776505,
+        "generic": 0.01112374999866006,
+        "compile": 0.013288792000821559,
+        "preprocess": 0.17337787500218838,
+        "setup": 0.15157862499836483,
+        "final_state_export": 0.013083374997222563
+      },
+      "oracle": null,
+      "native_comparison": null
+    },
+    "buggy_native": {
+      "status": "oracle_mismatch",
+      "stage": null,
+      "timings_s": {
+        "build": 3.0112033749974216,
+        "execution": 0.5023829999990994,
+        "read_compare": 0.0005339579984138254
+      },
+      "oracle": {
+        "agrees": false,
+        "compared_cells": 84,
+        "masked_cells": 1,
+        "first_mismatch": {
+          "sample_index": 13,
+          "signal": "drop_frame",
+          "expected": 0,
+          "actual": 1
+        },
+        "mismatch_count": 5
+      },
+      "native_comparison": null,
+      "output_csv": "evidence/d11/buggy_native/output.csv",
+      "output_sha256": "31b56c203d1b56f3bd432aa42ca10eb94efc9b4e6d30114e88a994cfc667c2b0"
+    },
+    "buggy_k": {
+      "status": "timeout",
+      "stage": "execution",
+      "timings_s": {
+        "frontend": 0.06136841699844808,
+        "debug.generic": 0.05387904099916341,
+        "generic": 0.00877829099772498,
+        "compile": 0.015070500001456821,
+        "preprocess": 0.16605450000133715,
+        "setup": 0.15569725000023027,
+        "final_state_export": 0.018354250001721084
+      },
+      "oracle": null,
+      "native_comparison": null
+    }
+  },
+  "blockers": [
+    {
+      "backend": "golden_k",
+      "status": "timeout",
+      "stage": "execution"
+    },
+    {
+      "backend": "buggy_k",
+      "status": "timeout",
+      "stage": "execution"
+    }
+  ],
+  "raw_result": ".runs/batch-memory-01/d11/result.json",
+  "evidence": [
+    "evidence/d11/buggy_native/output.csv",
+    "evidence/d11/golden_native/output.csv"
+  ],
+  "raw_result_sha256": "54305128afa2c8373e2613c7d11af8dbf0a41710f370a2fe0d11fc5f65a7a911"
+}

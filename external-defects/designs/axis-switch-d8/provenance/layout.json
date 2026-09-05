@@ -1,0 +1,14 @@
+{
+  "files": {
+    "arbiter.v": "designs/axis-switch-d8/original/arbiter.v",
+    "axis_register.v": "designs/axis-switch-d8/original/axis_register.v",
+    "axis_switch.v": "designs/axis-switch-d8/original/axis_switch.v",
+    "axis_switch_bug_d8.v": "designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v",
+    "origin/README.md": "designs/axis-switch-d8/provenance/origin/README.md",
+    "priority_encoder.v": "designs/axis-switch-d8/original/priority_encoder.v",
+    "project.toml": "designs/axis-switch-d8/provenance/project.toml",
+    "tb.csv": "designs/axis-switch-d8/testbench/tb.csv",
+    "tb.v": "designs/axis-switch-d8/testbench/tb.v",
+    "to_btor2.ys": "designs/axis-switch-d8/provenance/to_btor2.ys"
+  }
+}
