@@ -1,10 +1,10 @@
 # Error-trace 功能需求与优先级
 
-本文从 [failure-analysis.md](failure-analysis.md) 中 D13、D8、D4 的真实失败和已保存状态提炼后续功能需求。三例已完成正常/缺陷 × Verilator/Kimulator 的全轨迹验收；本轮交付的是普通仿真、外部 oracle 比较和可复核工件，没有开发或验收新的 Error-trace 查询能力。
+本文依据 D13/D8/D4 的真实设计错误、S3/D12 的执行停驻，以及 S2 的内部连接回归提炼后续功能需求。前三例的机制分析仍绑定 [failure-analysis.md](failure-analysis.md) 中历史 CSV 批次与保存状态；新增证据单独绑定当前外部 CLI 双执行批次。当前10个变体的VCD主协议全部通过，第五份 indexed read 语义补丁后全部20组、2568份逐次状态的完整连接审计也通过。历史AutoConnect修改引入的S2回归仍是真实诊断材料；不能只由VCD通过推定内部完整性，也不能据本轮规避宣称K/LLVM backend已修复。本轮没有开发或验收新的Error-trace查询能力。
 
 P0 表示后续最小可信诊断入口必须具备；P1 表示提高源码解释和复用效率；P2 表示在正确性通过后再优化。优先级不等于本轮实施授权，不构成冻结 spec、技术设计或实施计划。
 
-关键原字节工件的来源与 SHA256 见 [evidence/index.json](evidence/index.json)。完整 `.runs` 保留历史命令、事件序列和旧路径；当前共享文档链接指向精简结果和选定证据，旧 source location 通过原文件哈希及设计 layout 关联。
+关键原字节工件的来源与 SHA256 见 [evidence/index.json](evidence/index.json)。新增执行失败、元数据回归和前后版本审计分别索引于 [VCD 执行失败](evidence/vcd/execution-failures/vcd-complete-01/README.md)与[元数据证据](evidence/vcd/metadata-integrity/vcd-complete-02/README.md)。完整 `.runs` 保留历史命令、事件序列和旧路径；当前共享文档链接指向精简结果和选定证据，旧 source location 通过原文件哈希及设计 layout 关联。
 
 ## 1. 已有证据基础
 
@@ -15,6 +15,10 @@ P0 表示后续最小可信诊断入口必须具备；P1 表示提高源码解�
 | E3 | [D13](evidence/d13/analysis/)/[D8](evidence/d8/analysis/) 的执行/调试 IR 与源码映射；对应 [manifest](manifests/) | 执行/调试 IR 哈希、操作按序对应、location 别名、上游源文件哈希 | 所有 location 都精确指向产生错误的语句；跨版本 SSA 已稳定对齐 |
 | E4 | [离线状态窗口](evidence/analysis/)、[原生采样验证](evidence/README.md) | 对指定已存 K 状态校验 SHA256 并读取 SSA；D13/S3 原 TB 完整对照、D8 原 TB 13 条共有前缀 | 通用 SV 事件调度、四态等价或交互调试器已实现 |
 | E5 | [D4结果](results/cases/d4.json)、[缺陷状态窗口](evidence/analysis/d4-buggy-state-window.json)、[地址2写记录](evidence/analysis/d4-address-2-write-evidence.json) | 185行全部端口K/native一致；sample67 ready 0→1；K状态中event135地址2从2覆盖为1，先前写为event35 | 自动按地址追溯、原生/K全部内部内存逐事件比较或任意存储表示已支持 |
+| E6 | [S3/D12 执行失败与定位](evidence/vcd/execution-failures/vcd-complete-01/README.md) | 完整失败输入、逐次状态、三次字节相同的重放、只读参数首次变化及局部修复验证 | 只看退出码或空列表摘要即可判定执行完成；K/LLVM backend 的全部共享问题已经修复 |
+| E7 | [数组语义补丁](evidence/vcd/component/packed-array-semantics/README.md)、[D11](results/vcd/cases/d11.json)/[C4](results/vcd/cases/c4.json) | 历史超时后确认具体数组形状缺口，限定范围补语义并完成原输入VCD | 仅凭超时可以推定性能原因；任意聚合/非法索引/多时钟均已支持 |
+| E8 | [S2 初始化转换与独立对照](evidence/vcd/ir-normalization/README.md) | 保留旧LLHD输入，保存受限转换证明和原RTL/导出SV的VCD对照 | 通用LLHD或任意initial转换正确；转换成功足以证明K内部状态正确 |
+| E9 | [S2 元数据审计](evidence/vcd/metadata-integrity/vcd-complete-02/README.md)、[修改前后对照](evidence/vcd/metadata-integrity/vcd-complete-02/audit/s2-before-autoconnect-audit.json) | 主协议VCD通过，但改前178state连接不变、AutoConnect改后9state改变；普通READ_DIRECT处邻接状态；arc直接API调度与CLI全部178state相同 | 元数据回归与本轮修改无关；CLI循环或slot轮换造成该差异；已定位底层具体hook |
 
 ## 2. P0：先保证诊断结论可信
 
@@ -45,6 +49,20 @@ P0 表示后续最小可信诊断入口必须具备；P1 表示提高源码解�
 - **目前缺什么**：工件已齐，但尚无统一的诊断输入包校验和按事件恢复接口；只用文件名、SSA编号或最近的构建缓存会连接错误版本。
 - **预期查询结果**：校验源/IR/状态哈希、manifest 参数和初始化契约；以“IR版本 + 实例路径 + SSA + event”标识节点；直接加载既有 checkpoint，或从已校验 setup 加事件序列重放。
 - **验收**：对 E1/E2 的全部指定窗口校验成功并返回相同 SSA 值；修改任一被引用工件的哈希后明确拒绝该版本组合；两个案例、两版、重复查询之间不能共享上次查询的节点容器或污染结果。重放不得遗漏 reset 或擅自把未定义 CSV 输入变成0。
+
+### R10. 报告实际残留操作，并独立验证只读状态未被改变
+
+- **证据**：E6 中 `vcd-complete-01` 的 S3 golden 在 event 0 / evaluation 2 失败，D12 golden 在 event 9 / evaluation 1 失败；最后 `krun` 均返回 0，CLI 终态检查报 `未清空 []`，实际仍有 `current-info` 与 operation。两案三次重放均逐字节复现。E9 的前后版本对照确认本轮 AutoConnect 修改在 S2 引入元数据回归：complete-02 全部顶层 VCD 通过，但 S2 golden 从 event 84 / evaluation 2 起的 9 份状态仍改变只读 connection，说明无残留 current 也不能替代元数据完整性检查。S3 在前一 evaluation 的 depth 1956→1957 改变 `connection[%131]`，D12 在 event 8 / evaluation 2 的 depth 942→943 改变 `connection[%69]`。
+- **目前缺什么**：原始状态与工具退出码保住了失败事实，但错误摘要未给出残留的 current、READ 阶段、SSA 和实际参数；人工需要限定执行步数并比较相邻完整状态，才能发现列表早于最终失败已损坏。
+- **预期查询结果**：报告运行/定义身份、phase、event/evaluation、current-id、实例/SSA、原始 IR 参数、connection 参数与当前实际参数及位宽。独立于 VCD/终态通过，对声明为只读的 connection 提供首个变化的前后状态、规则位置、键和顺序差异；明确区分首次状态损坏、后续语义停驻与最终错误观测。
+- **验收**：S3 返回 `%131` 的 `[%124,%28,%112] → [%28,%112,%112]`；D12 返回 `%69` 的 `[%57,%65,%70] → [%65,%70,%70]`；S2 返回 `%53` 的 `[%51,%50,%54] → [%50,%54,%54]`，同时保留该批顶层 VCD 通过这一真实观测。不能把 `krun=0` 当作事件完成，不能把错误中的空列表解释为没有待执行操作，也不能把序列化单步重启未复现当作原连续执行不存在问题。规则和进程内共享结构已有证据，尚未单独定位的 LLVM runtime hook 必须保留不确定性。
+
+### R11. 语义覆盖与停驻原因应按操作形状区分
+
+- **证据**：E7 中 D11/C4 的历史首事件 120 秒超时，随后静态检查确认 `hw.array_inject` 无生效规则、数组 mux 与数组 firreg 注册/初始化形状未覆盖；补充一维整数数组语义后按原输入完成 VCD 对照。E8 中 S2 旧 IR 留有 LLHD，parser 在进入事件执行前失败；受限初值转换与 preset 支持具有单独来源证明。
+- **目前缺什么**：仅列 operation 名称或看到源文件中的规则不能证明具体类型、属性、范围已被当前定义覆盖；统一 timeout 也无法说明缺规则、类型不匹配还是执行成本。
+- **预期查询结果**：绑定当前编译定义，按完整 operation 名称、operand/result 类型、必要属性和运行值宽度给出已覆盖形状、明确不支持边界及停驻状态。将解析失败、未匹配语义、完整性检查失败与资源超时分别记录；证据不足时返回未知，不从超时推定性能原因。
+- **验收**：历史 D11/C4 指出正位宽一维数组的实际缺口及规则所在生效导入闭包，不能把 backup 文件算作支持；S2 区分原 LLHD 输入与 `constant-initial-register-v1` 已证明转换后的版本。不得把已验证的二态、有效索引、一维整数数组扩展成任意聚合、非法索引、四态、异步复位或通用 LLHD 支持。此项是后续诊断需求，不意味着本轮已实现自动覆盖分析。
 
 ## 3. P1：使解释能够回到可维护的源码区域
 
@@ -87,9 +105,9 @@ P0 表示后续最小可信诊断入口必须具备；P1 表示提高源码解�
 
 ## 5. 证据不足时暂不进入实现优先队列
 
-S3/S1 在 `batch-first-01` 的 K `execution_error` 是首次接入的历史失败。普通仿真前置问题修复后，[batch-final-01](RUNS.md) 中 S3、S1b、S1r 均已完成四种组合严格验收；D13、D8、D12 也已在新批次通过。旧失败与新成功同时保留。本文核心机制和需求仍绑定已详细读取内部状态的 D13/D8/D4 工件；S3/S1/D12 的成功可以作为后续补充验收材料，不需要删除旧错误记录或重写其历史状态。
+历史 S3/S1 的首次接入错误、D11/C4 的首事件120秒超时和S2的LLHD解析失败保持原记录。后续主协议已对全部10个配置完成VCD对照；历史超时最初只能表示原因未知，静态确认的数组语义形状缺口及实际补语义对照应与单纯性能猜测分开。
 
-[batch-memory-01](RUNS.md) 中 D11/C4 的正常与缺陷 K 执行均在首事件超过120秒，S2 则在残留LLHD类型的generic IR进入K parser时失败。这些是普通仿真前置执行/解析支持缺口，应先解决其可执行性与外部oracle一致性；它们不构成Error-trace功能已实现或已失败的证据，也不能当作DUT预期缺陷已在K端重现。
+S3/D12 的 complete-01 执行失败与 complete-02 主协议通过分别保存。第四份 AutoConnect 补丁解决已复现路径，同时在S2引入新的内部连接回归：改前相同输入/IR/API/CLI/parser/setup的178份状态不变，改后9份变化，源码差异仅circt.md。随后第五份 indexed read 补丁在语义层避开共享原参数列表的头尾切片；complete-03 的全部20组、2568份状态连接审计通过，旧异常在本轮给定轨迹中不再出现。新旧[完整审计](evidence/vcd/metadata-integrity/vcd-complete-03/README.md)分别保存；未修改K/LLVM backend。直接API/arc调度诊断与新CLI逐次状态相同，故本次证据不支持把回归归因于CLI包装；底层具体hook仍未定位。R10/R11提出的是未来诊断能力，不表示已有产品化查询入口。
 
 D4已经为R9的基础firmem同地址写入、使能和延迟提供实测材料。动态部分写掩码、多写口冲突、数组寄存器差异，以及异步时钟/复位追溯仍未由本文材料覆盖；这些范围不能凭静态op清单升格为已获证据支持的承诺，也不计为本轮实现贡献。
 

@@ -1,0 +1,145 @@
+{
+  "case": "d12",
+  "mode": "full",
+  "ordinary_depth_boundary": [
+    942,
+    943
+  ],
+  "trace": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/hint-depth-943/trace.hint",
+    "sha256": "4e7dfea755cdbf8abcbd52d2c9021d9a9991b43e6882535ba8b72b1f490ff9e7",
+    "bytes": 194023008
+  },
+  "definition": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition/definition.kore",
+    "sha256": "2e764798f82f315074b07b81e4bb922661556d785ca5a9ff8f7bb7f6951ed119",
+    "bytes": 2589497
+  },
+  "event_count": 7339,
+  "last_rule": {
+    "event_index": 7334,
+    "phase": "trace",
+    "kind": "LLVMRuleEvent",
+    "ordinal": 1304,
+    "rule": {
+      "ordinal": 1304,
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+      "location": [
+        136,
+        1,
+        140,
+        11
+      ],
+      "axiom": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1304.kore",
+        "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+        "bytes": 3140
+      }
+    }
+  },
+  "selected_substitution": {
+    "VarArg": {
+      "kore": "\\dv{SortString{}}(\"axis_fifo/%57\")"
+    },
+    "VarArgs": {
+      "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_fifo/%65\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_fifo/%70\"))))"
+    }
+  },
+  "last_events": [
+    {
+      "event_index": 7327,
+      "phase": "trace",
+      "kind": "configuration"
+    },
+    {
+      "event_index": 7328,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1312
+    },
+    {
+      "event_index": 7329,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 7330,
+      "phase": "trace",
+      "kind": "configuration"
+    },
+    {
+      "event_index": 7331,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1283
+    },
+    {
+      "event_index": 7332,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 7333,
+      "phase": "trace",
+      "kind": "configuration"
+    },
+    {
+      "event_index": 7334,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1304
+    },
+    {
+      "event_index": 7335,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "LIST.concat",
+      "relative_position": "0:1:8:0:0:1:1:0:1:0"
+    },
+    {
+      "event_index": 7336,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "LIST.concat",
+      "relative_position": "0:1:8:0:0:1:1:0:1:1:0:1"
+    },
+    {
+      "event_index": 7337,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 7338,
+      "phase": "trace",
+      "kind": "configuration"
+    }
+  ],
+  "ordinary_connection_operands": [
+    "axis_fifo/%65",
+    "axis_fifo/%70",
+    "axis_fifo/%70"
+  ],
+  "decoded_hint_connection_operands": [
+    "axis_fifo/%57",
+    "axis_fifo/%65",
+    "axis_fifo/%70"
+  ],
+  "hint_vs_before_changed_keys": [],
+  "hint_vs_ordinary_after_changed_keys": [
+    "axis_fifo/%69"
+  ],
+  "list_hook_counts": {
+    "LIST.concat": 725
+  },
+  "terminal_comparison": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/terminal-comparison.json",
+    "sha256": "40cc455c9d59ea794ea4382732ce5fcedaa5e3aff461283bf1840ab369b8c1cf",
+    "bytes": 57841
+  }
+}

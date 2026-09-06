@@ -1,0 +1,908 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "case": "s2",
+      "mode": "full",
+      "ordinary_depth_boundary": [
+        1023,
+        1024
+      ],
+      "trace": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/depth-1024.hint",
+        "sha256": "79e1bfef73ba3f27948eaa499eb091dc32a2d355b532664d750c3cb125396fd0",
+        "bytes": 184395855
+      },
+      "definition": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/definition/definition.kore",
+        "sha256": "579d22a9cec276a5f309c9ab75509bc3ee755aee439caa2fa84b4791f41d70df",
+        "bytes": 2576144
+      },
+      "event_count": 9388,
+      "last_rule": {
+        "event_index": 9384,
+        "phase": "trace",
+        "kind": "LLVMRuleEvent",
+        "ordinal": 1277,
+        "rule": {
+          "ordinal": 1277,
+          "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/source/hardware/hardware.md",
+          "location": [
+            56,
+            1,
+            63,
+            42
+          ],
+          "axiom": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2/axioms/1277.kore",
+            "sha256": "3eddd1870fd8bedf998803ccf2a647479bbf6168b755887549fb6e90fa81cd7e",
+            "bytes": 3329
+          }
+        }
+      },
+      "selected_substitution": {
+        "VarL": {
+          "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))"
+        },
+        "VarPort": {
+          "kore": "\\dv{SortString{}}(\"xlnxstream_2018_3/%51\")"
+        },
+        "VarSignal": {
+          "kore": "Lblbits'LParUndsCommUndsRParUnds'BITS-SYNTAX'Unds'Bits'Unds'BitsValue'Unds'Int{}(inj{SortInt{}, SortBitsValue{}}(\\dv{SortInt{}}(\"0\")),\\dv{SortInt{}}(\"1\"))"
+        }
+      },
+      "last_events": [
+        {
+          "event_index": 9376,
+          "phase": "trace",
+          "kind": "configuration"
+        },
+        {
+          "event_index": 9377,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1298
+        },
+        {
+          "event_index": 9378,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 9379,
+          "phase": "trace",
+          "kind": "configuration"
+        },
+        {
+          "event_index": 9380,
+          "phase": "trace",
+          "kind": "LLVMSideConditionEventEnter",
+          "ordinal": 1277
+        },
+        {
+          "event_index": 9381,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.in_keys",
+          "relative_position": "0"
+        },
+        {
+          "event_index": 9382,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "BOOL.not",
+          "relative_position": ""
+        },
+        {
+          "event_index": 9383,
+          "phase": "trace",
+          "kind": "LLVMSideConditionEventExit",
+          "ordinal": 1277,
+          "check_result": true
+        },
+        {
+          "event_index": 9384,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1277
+        },
+        {
+          "event_index": 9385,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:0"
+        },
+        {
+          "event_index": 9386,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 9387,
+          "phase": "trace",
+          "kind": "configuration"
+        }
+      ],
+      "ordinary_connection_operands": [
+        "xlnxstream_2018_3/%50",
+        "xlnxstream_2018_3/%54",
+        "xlnxstream_2018_3/%54"
+      ],
+      "decoded_hint_connection_operands": [
+        "xlnxstream_2018_3/%51",
+        "xlnxstream_2018_3/%50",
+        "xlnxstream_2018_3/%54"
+      ],
+      "hint_vs_before_changed_keys": [],
+      "hint_vs_ordinary_after_changed_keys": [
+        "xlnxstream_2018_3/%53"
+      ],
+      "list_hook_counts": {
+        "LIST.concat": 554,
+        "LIST.size": 151,
+        "LIST.get": 137
+      },
+      "terminal_comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2/terminal-comparison.json",
+        "sha256": "87079bb24f958a37190f62814d5efdaeb3fb153182f3ffe9f1784ac54703ec71",
+        "bytes": 32139
+      }
+    },
+    {
+      "case": "s2",
+      "mode": "lite",
+      "ordinary_depth_boundary": [
+        1023,
+        1024
+      ],
+      "trace": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/lite-depth-1024.hint",
+        "sha256": "3f39c7ef53b1c41dbf710d87019495db724b22b0d42a206f3f616555d8219265",
+        "bytes": 108055597
+      },
+      "definition": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/definition-lite/definition.kore",
+        "sha256": "663900948fb8c20be30580531b4184075f18afb3510158538a6639d9da17e10c",
+        "bytes": 2576148
+      },
+      "event_count": 8365,
+      "last_rule": {
+        "event_index": 8361,
+        "phase": "trace",
+        "kind": "LLVMRuleEvent",
+        "ordinal": 1277,
+        "rule": {
+          "ordinal": 1277,
+          "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/source/hardware/hardware.md",
+          "location": [
+            56,
+            1,
+            63,
+            42
+          ],
+          "axiom": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/axioms/1277.kore",
+            "sha256": "3eddd1870fd8bedf998803ccf2a647479bbf6168b755887549fb6e90fa81cd7e",
+            "bytes": 3329
+          }
+        }
+      },
+      "selected_substitution": {
+        "VarL": {
+          "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))"
+        },
+        "VarPort": {
+          "kore": "\\dv{SortString{}}(\"xlnxstream_2018_3/%51\")"
+        },
+        "VarSignal": {
+          "kore": "Lblbits'LParUndsCommUndsRParUnds'BITS-SYNTAX'Unds'Bits'Unds'BitsValue'Unds'Int{}(inj{SortInt{}, SortBitsValue{}}(\\dv{SortInt{}}(\"0\")),\\dv{SortInt{}}(\"1\"))"
+        }
+      },
+      "last_events": [
+        {
+          "event_index": 8353,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1299
+        },
+        {
+          "event_index": 8354,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 8355,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1298
+        },
+        {
+          "event_index": 8356,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 8357,
+          "phase": "trace",
+          "kind": "LLVMSideConditionEventEnter",
+          "ordinal": 1277
+        },
+        {
+          "event_index": 8358,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.in_keys",
+          "relative_position": "0"
+        },
+        {
+          "event_index": 8359,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "BOOL.not",
+          "relative_position": ""
+        },
+        {
+          "event_index": 8360,
+          "phase": "trace",
+          "kind": "LLVMSideConditionEventExit",
+          "ordinal": 1277,
+          "check_result": true
+        },
+        {
+          "event_index": 8361,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1277
+        },
+        {
+          "event_index": 8362,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:0"
+        },
+        {
+          "event_index": 8363,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 8364,
+          "phase": "trace",
+          "kind": "configuration"
+        }
+      ],
+      "ordinary_connection_operands": [
+        "xlnxstream_2018_3/%50",
+        "xlnxstream_2018_3/%54",
+        "xlnxstream_2018_3/%54"
+      ],
+      "decoded_hint_connection_operands": [
+        "xlnxstream_2018_3/%51",
+        "xlnxstream_2018_3/%50",
+        "xlnxstream_2018_3/%54"
+      ],
+      "hint_vs_before_changed_keys": [],
+      "hint_vs_ordinary_after_changed_keys": [
+        "xlnxstream_2018_3/%53"
+      ],
+      "list_hook_counts": {
+        "LIST.concat": 554,
+        "LIST.size": 151,
+        "LIST.get": 137
+      },
+      "terminal_comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terminal-comparison.json",
+        "sha256": "41832673f59381ce372897a8cecf7e220528166deeb06b78987ced27d0fbefcb",
+        "bytes": 32231
+      }
+    },
+    {
+      "case": "d12",
+      "mode": "full",
+      "ordinary_depth_boundary": [
+        942,
+        943
+      ],
+      "trace": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/hint-depth-943/trace.hint",
+        "sha256": "4e7dfea755cdbf8abcbd52d2c9021d9a9991b43e6882535ba8b72b1f490ff9e7",
+        "bytes": 194023008
+      },
+      "definition": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition/definition.kore",
+        "sha256": "2e764798f82f315074b07b81e4bb922661556d785ca5a9ff8f7bb7f6951ed119",
+        "bytes": 2589497
+      },
+      "event_count": 7339,
+      "last_rule": {
+        "event_index": 7334,
+        "phase": "trace",
+        "kind": "LLVMRuleEvent",
+        "ordinal": 1304,
+        "rule": {
+          "ordinal": 1304,
+          "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+          "location": [
+            136,
+            1,
+            140,
+            11
+          ],
+          "axiom": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1304.kore",
+            "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+            "bytes": 3140
+          }
+        }
+      },
+      "selected_substitution": {
+        "VarArg": {
+          "kore": "\\dv{SortString{}}(\"axis_fifo/%57\")"
+        },
+        "VarArgs": {
+          "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_fifo/%65\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_fifo/%70\"))))"
+        }
+      },
+      "last_events": [
+        {
+          "event_index": 7327,
+          "phase": "trace",
+          "kind": "configuration"
+        },
+        {
+          "event_index": 7328,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1312
+        },
+        {
+          "event_index": 7329,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 7330,
+          "phase": "trace",
+          "kind": "configuration"
+        },
+        {
+          "event_index": 7331,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1283
+        },
+        {
+          "event_index": 7332,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 7333,
+          "phase": "trace",
+          "kind": "configuration"
+        },
+        {
+          "event_index": 7334,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1304
+        },
+        {
+          "event_index": 7335,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:0"
+        },
+        {
+          "event_index": 7336,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:1:0:1"
+        },
+        {
+          "event_index": 7337,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 7338,
+          "phase": "trace",
+          "kind": "configuration"
+        }
+      ],
+      "ordinary_connection_operands": [
+        "axis_fifo/%65",
+        "axis_fifo/%70",
+        "axis_fifo/%70"
+      ],
+      "decoded_hint_connection_operands": [
+        "axis_fifo/%57",
+        "axis_fifo/%65",
+        "axis_fifo/%70"
+      ],
+      "hint_vs_before_changed_keys": [],
+      "hint_vs_ordinary_after_changed_keys": [
+        "axis_fifo/%69"
+      ],
+      "list_hook_counts": {
+        "LIST.concat": 725
+      },
+      "terminal_comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/terminal-comparison.json",
+        "sha256": "40cc455c9d59ea794ea4382732ce5fcedaa5e3aff461283bf1840ab369b8c1cf",
+        "bytes": 57841
+      }
+    },
+    {
+      "case": "d12",
+      "mode": "lite",
+      "ordinary_depth_boundary": [
+        942,
+        943
+      ],
+      "trace": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/lite-hint-depth-943/trace.hint",
+        "sha256": "2551b149b2facff9ab4ba99f2796d5a4c7d91be17c07794f2ed84a9ad9635b74",
+        "bytes": 115438427
+      },
+      "definition": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition-lite/definition.kore",
+        "sha256": "2e764798f82f315074b07b81e4bb922661556d785ca5a9ff8f7bb7f6951ed119",
+        "bytes": 2589497
+      },
+      "event_count": 6397,
+      "last_rule": {
+        "event_index": 6392,
+        "phase": "trace",
+        "kind": "LLVMRuleEvent",
+        "ordinal": 1304,
+        "rule": {
+          "ordinal": 1304,
+          "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+          "location": [
+            136,
+            1,
+            140,
+            11
+          ],
+          "axiom": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12-lite/axioms/1304.kore",
+            "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+            "bytes": 3140
+          }
+        }
+      },
+      "selected_substitution": {
+        "VarArg": {
+          "kore": "\\dv{SortString{}}(\"axis_fifo/%57\")"
+        },
+        "VarArgs": {
+          "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_fifo/%65\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_fifo/%70\"))))"
+        }
+      },
+      "last_events": [
+        {
+          "event_index": 6385,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:0"
+        },
+        {
+          "event_index": 6386,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:1:0:1"
+        },
+        {
+          "event_index": 6387,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 6388,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1312
+        },
+        {
+          "event_index": 6389,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 6390,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1283
+        },
+        {
+          "event_index": 6391,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 6392,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1304
+        },
+        {
+          "event_index": 6393,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:0"
+        },
+        {
+          "event_index": 6394,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:1:0:1"
+        },
+        {
+          "event_index": 6395,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 6396,
+          "phase": "trace",
+          "kind": "configuration"
+        }
+      ],
+      "ordinary_connection_operands": [
+        "axis_fifo/%65",
+        "axis_fifo/%70",
+        "axis_fifo/%70"
+      ],
+      "decoded_hint_connection_operands": [
+        "axis_fifo/%57",
+        "axis_fifo/%65",
+        "axis_fifo/%70"
+      ],
+      "hint_vs_before_changed_keys": [],
+      "hint_vs_ordinary_after_changed_keys": [
+        "axis_fifo/%69"
+      ],
+      "list_hook_counts": {
+        "LIST.concat": 725
+      },
+      "terminal_comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12-lite/terminal-comparison.json",
+        "sha256": "b8a551b01229d27e3be62deca41e4b19bdae4fa871a84c8bb6356471c57f3ffe",
+        "bytes": 57927
+      }
+    },
+    {
+      "case": "s3",
+      "mode": "full",
+      "ordinary_depth_boundary": [
+        1956,
+        1957
+      ],
+      "trace": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/hint-depth-1957/trace.hint",
+        "sha256": "3bb92fa108daf2dbc1af259e006cf850a4813b8c593034ed570a4ad656e95eb9",
+        "bytes": 879048015
+      },
+      "definition": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition/definition.kore",
+        "sha256": "2e764798f82f315074b07b81e4bb922661556d785ca5a9ff8f7bb7f6951ed119",
+        "bytes": 2589497
+      },
+      "event_count": 16414,
+      "last_rule": {
+        "event_index": 16409,
+        "phase": "trace",
+        "kind": "LLVMRuleEvent",
+        "ordinal": 1304,
+        "rule": {
+          "ordinal": 1304,
+          "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+          "location": [
+            136,
+            1,
+            140,
+            11
+          ],
+          "axiom": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/axioms/1304.kore",
+            "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+            "bytes": 3140
+          }
+        }
+      },
+      "selected_substitution": {
+        "VarArg": {
+          "kore": "\\dv{SortString{}}(\"axis_adapter/%124\")"
+        },
+        "VarArgs": {
+          "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_adapter/%28\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_adapter/%112\"))))"
+        }
+      },
+      "last_events": [
+        {
+          "event_index": 16402,
+          "phase": "trace",
+          "kind": "configuration"
+        },
+        {
+          "event_index": 16403,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1315
+        },
+        {
+          "event_index": 16404,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 16405,
+          "phase": "trace",
+          "kind": "configuration"
+        },
+        {
+          "event_index": 16406,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1283
+        },
+        {
+          "event_index": 16407,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 16408,
+          "phase": "trace",
+          "kind": "configuration"
+        },
+        {
+          "event_index": 16409,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1304
+        },
+        {
+          "event_index": 16410,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:0"
+        },
+        {
+          "event_index": 16411,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:1:0:1"
+        },
+        {
+          "event_index": 16412,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 16413,
+          "phase": "trace",
+          "kind": "configuration"
+        }
+      ],
+      "ordinary_connection_operands": [
+        "axis_adapter/%28",
+        "axis_adapter/%112",
+        "axis_adapter/%112"
+      ],
+      "decoded_hint_connection_operands": [
+        "axis_adapter/%124",
+        "axis_adapter/%28",
+        "axis_adapter/%112"
+      ],
+      "hint_vs_before_changed_keys": [],
+      "hint_vs_ordinary_after_changed_keys": [
+        "axis_adapter/%131"
+      ],
+      "list_hook_counts": {
+        "LIST.concat": 1803
+      },
+      "terminal_comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/terminal-comparison.json",
+        "sha256": "147fa14aebdf0710cd042e24507eaafa6ec4e4df60fdb51607584b32733fb39b",
+        "bytes": 102204
+      }
+    },
+    {
+      "case": "s3",
+      "mode": "lite",
+      "ordinary_depth_boundary": [
+        1956,
+        1957
+      ],
+      "trace": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/lite-hint-depth-1957/trace.hint",
+        "sha256": "b582ea65f9a2a537952808aa28f8f9da5feea4b7611c4fafe6c83b9ea58b74c3",
+        "bytes": 518026607
+      },
+      "definition": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition-lite/definition.kore",
+        "sha256": "2e764798f82f315074b07b81e4bb922661556d785ca5a9ff8f7bb7f6951ed119",
+        "bytes": 2589497
+      },
+      "event_count": 14458,
+      "last_rule": {
+        "event_index": 14453,
+        "phase": "trace",
+        "kind": "LLVMRuleEvent",
+        "ordinal": 1304,
+        "rule": {
+          "ordinal": 1304,
+          "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+          "location": [
+            136,
+            1,
+            140,
+            11
+          ],
+          "axiom": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3-lite/axioms/1304.kore",
+            "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+            "bytes": 3140
+          }
+        }
+      },
+      "selected_substitution": {
+        "VarArg": {
+          "kore": "\\dv{SortString{}}(\"axis_adapter/%124\")"
+        },
+        "VarArgs": {
+          "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_adapter/%28\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_adapter/%112\"))))"
+        }
+      },
+      "last_events": [
+        {
+          "event_index": 14446,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 14447,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1315
+        },
+        {
+          "event_index": 14448,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 14449,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1315
+        },
+        {
+          "event_index": 14450,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 14451,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1283
+        },
+        {
+          "event_index": 14452,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 14453,
+          "phase": "trace",
+          "kind": "LLVMRuleEvent",
+          "ordinal": 1304
+        },
+        {
+          "event_index": 14454,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:0"
+        },
+        {
+          "event_index": 14455,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "LIST.concat",
+          "relative_position": "0:1:8:0:0:1:1:0:1:1:0:1"
+        },
+        {
+          "event_index": 14456,
+          "phase": "trace",
+          "kind": "LLVMHookEvent",
+          "name": "MAP.concat",
+          "relative_position": "0:1:8:0"
+        },
+        {
+          "event_index": 14457,
+          "phase": "trace",
+          "kind": "configuration"
+        }
+      ],
+      "ordinary_connection_operands": [
+        "axis_adapter/%28",
+        "axis_adapter/%112",
+        "axis_adapter/%112"
+      ],
+      "decoded_hint_connection_operands": [
+        "axis_adapter/%124",
+        "axis_adapter/%28",
+        "axis_adapter/%112"
+      ],
+      "hint_vs_before_changed_keys": [],
+      "hint_vs_ordinary_after_changed_keys": [
+        "axis_adapter/%131"
+      ],
+      "list_hook_counts": {
+        "LIST.concat": 1803
+      },
+      "terminal_comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3-lite/terminal-comparison.json",
+        "sha256": "5dd7cecb737d8f8c2c2918824508353f1c31e34d167ff76fc5a0c8060f2ac5a0",
+        "bytes": 102281
+      }
+    }
+  ],
+  "full_lite_terminal_bytes_equal": {
+    "s2": true,
+    "d12": true,
+    "s3": true
+  }
+}

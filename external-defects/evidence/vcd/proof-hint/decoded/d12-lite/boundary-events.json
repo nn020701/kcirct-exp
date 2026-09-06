@@ -1,0 +1,151 @@
+{
+  "case": "d12",
+  "mode": "lite",
+  "ordinary_depth_boundary": [
+    942,
+    943
+  ],
+  "trace": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/lite-hint-depth-943/trace.hint",
+    "sha256": "2551b149b2facff9ab4ba99f2796d5a4c7d91be17c07794f2ed84a9ad9635b74",
+    "bytes": 115438427
+  },
+  "definition": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition-lite/definition.kore",
+    "sha256": "2e764798f82f315074b07b81e4bb922661556d785ca5a9ff8f7bb7f6951ed119",
+    "bytes": 2589497
+  },
+  "event_count": 6397,
+  "last_rule": {
+    "event_index": 6392,
+    "phase": "trace",
+    "kind": "LLVMRuleEvent",
+    "ordinal": 1304,
+    "rule": {
+      "ordinal": 1304,
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+      "location": [
+        136,
+        1,
+        140,
+        11
+      ],
+      "axiom": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12-lite/axioms/1304.kore",
+        "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+        "bytes": 3140
+      }
+    }
+  },
+  "selected_substitution": {
+    "VarArg": {
+      "kore": "\\dv{SortString{}}(\"axis_fifo/%57\")"
+    },
+    "VarArgs": {
+      "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_fifo/%65\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_fifo/%70\"))))"
+    }
+  },
+  "last_events": [
+    {
+      "event_index": 6385,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "LIST.concat",
+      "relative_position": "0:1:8:0:0:1:1:0:1:0"
+    },
+    {
+      "event_index": 6386,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "LIST.concat",
+      "relative_position": "0:1:8:0:0:1:1:0:1:1:0:1"
+    },
+    {
+      "event_index": 6387,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 6388,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1312
+    },
+    {
+      "event_index": 6389,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 6390,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1283
+    },
+    {
+      "event_index": 6391,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 6392,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1304
+    },
+    {
+      "event_index": 6393,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "LIST.concat",
+      "relative_position": "0:1:8:0:0:1:1:0:1:0"
+    },
+    {
+      "event_index": 6394,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "LIST.concat",
+      "relative_position": "0:1:8:0:0:1:1:0:1:1:0:1"
+    },
+    {
+      "event_index": 6395,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 6396,
+      "phase": "trace",
+      "kind": "configuration"
+    }
+  ],
+  "ordinary_connection_operands": [
+    "axis_fifo/%65",
+    "axis_fifo/%70",
+    "axis_fifo/%70"
+  ],
+  "decoded_hint_connection_operands": [
+    "axis_fifo/%57",
+    "axis_fifo/%65",
+    "axis_fifo/%70"
+  ],
+  "hint_vs_before_changed_keys": [],
+  "hint_vs_ordinary_after_changed_keys": [
+    "axis_fifo/%69"
+  ],
+  "list_hook_counts": {
+    "LIST.concat": 725
+  },
+  "terminal_comparison": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12-lite/terminal-comparison.json",
+    "sha256": "b8a551b01229d27e3be62deca41e4b19bdae4fa871a84c8bb6356471c57f3ffe",
+    "bytes": 57927
+  }
+}

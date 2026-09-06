@@ -1,0 +1,47 @@
+{
+  "argv": [
+    "/Users/bytedance/.nix-profile/bin/krun",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/original-prestate.kore",
+    "--definition",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition",
+    "--output",
+    "kore",
+    "--parser",
+    "cat",
+    "--term",
+    "--no-expand-macros",
+    "--depth",
+    "1956"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/normal-depth-1956",
+  "environment": {
+    "K_BIN": null,
+    "PATH": "/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/opt/homebrew/bin:/opt/puppetlabs/bin:/Users/bytedance/.codex/tmp/arg0/codex-arg0NHAs9D:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bytedance/.local/bin:/Users/bytedance/.cabal/bin:/Users/bytedance/.ghcup/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  },
+  "input_sha256": "a5388d3758a00d24192fa1c545de618d787327e8d1ddda90d46202f0eda89b2b",
+  "start_epoch": 1788685989.189727,
+  "returncode": 0,
+  "elapsed_s": 0.7665510177612305,
+  "stdout_sha256": "a0b4939e3071986493c4de580db13a825a0b0ba04d3d83f26ab0af35bb11b5e7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "connection_entry": [
+    "comb.mux",
+    "axis_adapter/%124",
+    "axis_adapter/%28",
+    "axis_adapter/%112"
+  ],
+  "connection_operands_unchanged": true,
+  "current_ids": [
+    [
+      "0"
+    ],
+    [
+      "3"
+    ]
+  ],
+  "connection_operands": [
+    "axis_adapter/%124",
+    "axis_adapter/%28",
+    "axis_adapter/%112"
+  ]
+}

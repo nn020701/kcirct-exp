@@ -1,0 +1,57 @@
+[
+  {
+    "stage": "version",
+    "argv": [
+      "/opt/homebrew/bin/verilator",
+      "--version"
+    ],
+    "command": "/opt/homebrew/bin/verilator --version",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/original",
+    "exit_code": 0,
+    "seconds": 0.07594691600024817
+  },
+  {
+    "stage": "build",
+    "argv": [
+      "/opt/homebrew/bin/verilator",
+      "--cc",
+      "--exe",
+      "--build",
+      "--timing",
+      "--trace",
+      "-Wno-fatal",
+      "--x-initial",
+      "0",
+      "--x-assign",
+      "0",
+      "--top-module",
+      "xlnxstream_2018_3",
+      "--prefix",
+      "Vcsvdut",
+      "--Mdir",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/original/obj",
+      "-o",
+      "sim",
+      "--timescale-override",
+      "1ns/1ns",
+      "-GC_M_AXIS_TDATA_WIDTH=32",
+      "-GC_M_START_COUNT=32",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/original/driver.cpp"
+    ],
+    "command": "/opt/homebrew/bin/verilator --cc --exe --build --timing --trace -Wno-fatal --x-initial 0 --x-assign 0 --top-module xlnxstream_2018_3 --prefix Vcsvdut --Mdir /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/original/obj -o sim --timescale-override 1ns/1ns -GC_M_AXIS_TDATA_WIDTH=32 -GC_M_START_COUNT=32 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/original/driver.cpp",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/original",
+    "exit_code": 0,
+    "seconds": 3.8303238749995216
+  },
+  {
+    "stage": "run",
+    "argv": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/original/obj/sim"
+    ],
+    "command": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/original/obj/sim",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/original",
+    "exit_code": 0,
+    "seconds": 0.2267139160012448
+  }
+]

@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "source_case_id": "D4",
+  "project_id": "axis-fifo-d4",
+  "variant_id": "d4",
+  "top": "axis_fifo_wrapper",
+  "golden_sources": [
+    "designs/axis-fifo-d4/original/axis_fifo.v",
+    "designs/axis-fifo-d4/original/axis_fifo_wrapper.v"
+  ],
+  "bug_original": "designs/axis-fifo-d4/original/axis_fifo.v",
+  "bug_source": "designs/axis-fifo-d4/variants/d4/axis_fifo_bug_d4.v",
+  "csv": "designs/axis-fifo-d4/testbench/tb.csv",
+  "inputs": [
+    {
+      "name": "clk",
+      "width": 1
+    },
+    {
+      "name": "rst",
+      "width": 1
+    },
+    {
+      "name": "s_axis_tdata",
+      "width": 8
+    },
+    {
+      "name": "s_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "s_axis_tlast",
+      "width": 1
+    },
+    {
+      "name": "s_axis_tuser",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tready",
+      "width": 1
+    }
+  ],
+  "outputs": [
+    {
+      "name": "s_axis_tready",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tdata",
+      "width": 8
+    },
+    {
+      "name": "m_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tlast",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tuser",
+      "width": 1
+    },
+    {
+      "name": "status_overflow",
+      "width": 1
+    },
+    {
+      "name": "status_bad_frame",
+      "width": 1
+    },
+    {
+      "name": "status_good_frame",
+      "width": 1
+    }
+  ],
+  "clock": "clk",
+  "reset": {
+    "signal": "rst",
+    "active": 1
+  },
+  "parameters": {
+    "DATA_WIDTH": 8,
+    "USER_WIDTH": 1
+  },
+  "effective_parameters": {
+    "DATA_WIDTH": 8,
+    "USER_WIDTH": 1
+  },
+  "initialization": {
+    "mode": "rtl_initial_plus_two_state_zero",
+    "uninitialized_register_value": 0,
+    "four_state_equivalence_claimed": false,
+    "evidence": [
+      "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。"
+    ]
+  },
+  "sample_phase": "low_before_posedge_pre_NBA",
+  "oracle_outputs": [
+    "s_axis_tready",
+    "m_axis_tdata",
+    "m_axis_tvalid",
+    "m_axis_tlast",
+    "m_axis_tuser",
+    "status_overflow",
+    "status_bad_frame",
+    "status_good_frame"
+  ],
+  "masks": [],
+  "csv_normalization": {
+    "strip_whitespace": true,
+    "allow_one_trailing_empty_field": false,
+    "reason": "仅去除单元格周围空白，保留并检查完整列集合。"
+  },
+  "samples": 185,
+  "timeout_s": 120,
+  "frontend_args": [
+    "--timescale=1ns/1ps"
+  ],
+  "source_hashes": {
+    "designs/axis-fifo-d4/original/axis_fifo.v": "8f148b6b29338b9b51814b50ecc230d5ede5d9eb66a7c088d71ec9581ac0311a",
+    "designs/axis-fifo-d4/variants/d4/axis_fifo_bug_d4.v": "7329ca288ace645b59d126260ad6f5abf6bf2d58b8a8bca8118aa044ff42d4aa",
+    "designs/axis-fifo-d4/original/axis_fifo_wrapper.v": "7f3a874faf3f4388bdda3b56dd20c4fa10dbade27f175e3bc6cdd117f016d979",
+    "designs/axis-fifo-d4/provenance/origin/README.md": "8c805957ca86330a8faf08a7bde9aff8858a01ca74ff64805e72036e938ca658",
+    "designs/axis-fifo-d4/provenance/project.toml": "92b7103636e0575b06386623328b05335c9d4470690a8e4ebe93fed2a5e0f363",
+    "designs/axis-fifo-d4/testbench/tb.csv": "f47a0275831abee9afcd915847c0aa90aba10aaaec71c4cc0b8d7f79507e1f02",
+    "designs/axis-fifo-d4/provenance/to_btor2.ys": "52d63aa32fcff9b16f6970fb7434546a823ce60886d14974a60ee642aafe5209",
+    "designs/axis-fifo-d4/provenance/layout.json": "eda684ce24c6423ab7c3b4e5b8ac8eeb2b8521912fa0cc55b9286bd827a86cd7"
+  },
+  "upstream": {
+    "repository": "https://github.com/ekiwi/rtl-repair",
+    "commit": "71e1afc0b9a2327d008b46acd415cf3f0343a938",
+    "project_path": "benchmarks/fpga-debugging/axis-fifo-d4",
+    "archive": "rtl-repair-fpga-debugging-71e1afc.tar.gz",
+    "archive_sha256": "3aebd94c34aaf9cced849541635ebc66145c7ba44fc1227f3f4e8623073ddc0a",
+    "origin_repository": "https://github.com/efeslab/hardware-bugbase",
+    "origin_commit": "7702e478f4ffdca477273d5a395992ecf006d70f",
+    "origin_readme": "designs/axis-fifo-d4/provenance/origin/README.md",
+    "origin_archive_sha256": "b5125ec4a3d93db138e5642285343d2d644e89a0b5bd156701b2c4f7bcb2ae5d"
+  },
+  "project_toml": "designs/axis-fifo-d4/provenance/project.toml",
+  "selected_testbench": {
+    "name": "csv",
+    "table": "tb.csv"
+  },
+  "native_testbench": {
+    "adapted_exists": false,
+    "path": null,
+    "sha256": null
+  },
+  "ports_without_oracle": [],
+  "unsupported_reasons": [],
+  "notes": [
+    "顶层 axis_fifo_wrapper 默认 DATA_WIDTH=8、USER_WIDTH=1，内部设置 ADDR_WIDTH=5、FRAME_FIFO=1、DROP_BAD_FRAME=0、DROP_WHEN_FULL=0。",
+    "适配目录无 tb.v，原生 CSV 回放需验证完整 oracle。",
+    "前端初次因 wrapper 缺 timescale 失败，CLI --timescale=1ns/1ps 可保持原源码成功导入。"
+  ],
+  "layout_file": "designs/axis-fifo-d4/provenance/layout.json"
+}

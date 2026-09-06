@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/runner.py", line 441, in run_k
+    "--timeout",
+  File "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/runner.py", line 71, in command
+    raise RuntimeError(f"{label} 退出码 {process.returncode}：{stderr[-2000:]}")
+RuntimeError: kimulator 退出码 1：

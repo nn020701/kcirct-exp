@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "run_id": "vcd-standard-02",
+  "exit_code": 1,
+  "observation": "宿主命令执行器在整个批次进程结束后返回的实际退出码",
+  "cases_argument": [
+    "s2",
+    "s3",
+    "d8",
+    "d12",
+    "d4"
+  ],
+  "cases_completed": 5,
+  "case_statuses": {
+    "s2": "execution_error",
+    "s3": "pass",
+    "d8": "pass",
+    "d12": "pass",
+    "d4": "pass"
+  },
+  "results_sha256": "265cda91c161b3a4bd05da0a145e951d04f234af1c1b62a6d9ab846fccad4f37",
+  "interpretation": "S2 解析失败后仍完成其余四例，批次最终返回非零退出码"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "description": "原有标准 operation 案例验证及完整 connection 不变性检查。原始大型 S3/D12 保存的输入与邻接状态才是区分本次修复的针对性反例；本记录不声称小型回归能单独复现旧问题。",
+  "artifacts": {
+    "evidence/vcd/component/auto-connect-list-preservation/operation-validation/validation.json": {
+      "path": "evidence/vcd/component/auto-connect-list-preservation/operation-validation/validation.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/validation.json",
+      "sha256": "09f2c3fe5c22fa05f4d09fe01c40ce8322bb34c1f09dddff8d4681e6890d4281",
+      "bytes": 6545
+    },
+    "evidence/vcd/component/auto-connect-list-preservation/operation-validation/operation.command.json": {
+      "path": "evidence/vcd/component/auto-connect-list-preservation/operation-validation/operation.command.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/operation.command.json",
+      "sha256": "87655268a5beedffd1f709c799ceb43a6e43a46754cbaf1c317d4379240ab950",
+      "bytes": 2380
+    },
+    "evidence/vcd/component/auto-connect-list-preservation/operation-validation/operation.stdout": {
+      "path": "evidence/vcd/component/auto-connect-list-preservation/operation-validation/operation.stdout",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/operation.stdout",
+      "sha256": "20564281fd653c33aad442fdf1ef011d5049b7fbf60e3e76dd99702870bf95ce",
+      "bytes": 1013
+    },
+    "evidence/vcd/component/auto-connect-list-preservation/operation-validation/operation.stderr": {
+      "path": "evidence/vcd/component/auto-connect-list-preservation/operation-validation/operation.stderr",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/operation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

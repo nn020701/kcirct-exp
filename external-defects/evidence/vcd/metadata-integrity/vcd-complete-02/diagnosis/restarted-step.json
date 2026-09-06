@@ -1,0 +1,65 @@
+[
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-read-diagnosis/depth-1023.kore",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros",
+      "--depth",
+      "1"
+    ],
+    "returncode": 0,
+    "output_sha256": "60e6670dee3b737b09ec76ea27c0bcb7991ed9a727f60dd253851f37e8a5cfb2",
+    "whole_connection_unchanged": true,
+    "whole_signals_unchanged": true,
+    "whole_history_unchanged": true
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-read-diagnosis/depth-1023.kore",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros",
+      "--depth",
+      "1"
+    ],
+    "returncode": 0,
+    "output_sha256": "60e6670dee3b737b09ec76ea27c0bcb7991ed9a727f60dd253851f37e8a5cfb2",
+    "whole_connection_unchanged": true,
+    "whole_signals_unchanged": true,
+    "whole_history_unchanged": true
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-read-diagnosis/depth-1023.kore",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros",
+      "--depth",
+      "1"
+    ],
+    "returncode": 0,
+    "output_sha256": "60e6670dee3b737b09ec76ea27c0bcb7991ed9a727f60dd253851f37e8a5cfb2",
+    "whole_connection_unchanged": true,
+    "whole_signals_unchanged": true,
+    "whole_history_unchanged": true
+  }
+]

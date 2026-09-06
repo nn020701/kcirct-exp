@@ -1,0 +1,58 @@
+[
+  {
+    "stage": "version",
+    "argv": [
+      "/opt/homebrew/bin/verilator",
+      "--version"
+    ],
+    "command": "/opt/homebrew/bin/verilator --version",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/golden/native",
+    "exit_code": 0,
+    "seconds": 0.07174133299849927
+  },
+  {
+    "stage": "build",
+    "argv": [
+      "/opt/homebrew/bin/verilator",
+      "--cc",
+      "--exe",
+      "--build",
+      "--timing",
+      "--trace",
+      "-Wno-fatal",
+      "--x-initial",
+      "0",
+      "--x-assign",
+      "0",
+      "--top-module",
+      "axis_switch",
+      "--prefix",
+      "Vcsvdut",
+      "--Mdir",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/golden/native/obj",
+      "-o",
+      "sim",
+      "--timescale-override",
+      "1ns/1ns",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/arbiter.v",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/axis_register.v",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/axis_switch.v",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/priority_encoder.v",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/golden/native/driver.cpp"
+    ],
+    "command": "/opt/homebrew/bin/verilator --cc --exe --build --timing --trace -Wno-fatal --x-initial 0 --x-assign 0 --top-module axis_switch --prefix Vcsvdut --Mdir /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/golden/native/obj -o sim --timescale-override 1ns/1ns /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/arbiter.v /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/axis_register.v /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/axis_switch.v /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/priority_encoder.v /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/golden/native/driver.cpp",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/golden/native",
+    "exit_code": 0,
+    "seconds": 4.616871250000258
+  },
+  {
+    "stage": "run",
+    "argv": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/golden/native/obj/sim"
+    ],
+    "command": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/golden/native/obj/sim",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/golden/native",
+    "exit_code": 0,
+    "seconds": 0.4441727089979395
+  }
+]

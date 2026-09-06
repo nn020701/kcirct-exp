@@ -1,0 +1,309 @@
+#include <cstdio>
+
+#include "runtime/header.h"
+
+#include "immer/flex_vector_transient.hpp"
+
+extern "C" {
+list hook_LIST_unit() {
+  return {};
+}
+
+list hook_LIST_element(SortKItem value) {
+  return list{value};
+}
+
+list hook_LIST_concat(SortList l1, SortList l2) {
+  if (l2->size() < 32) {
+    auto tmp = l1->transient();
+    for (auto iter = l2->begin(); iter != l2->end(); ++iter) {
+      tmp.push_back(*iter);
+    }
+    return tmp.persistent();
+  }
+  return (*l1) + (*l2);
+}
+
+list hook_LIST_push(SortKItem value, SortList l) {
+  return l->push_front(value);
+}
+
+bool hook_LIST_in(SortKItem value, SortList list) {
+  for (auto iter = list->begin(); iter != list->end(); ++iter) {
+    if (hook_KEQUAL_eq(*iter, value)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+bool hook_LIST_in_keys(SortInt index, SortList list) {
+  if (!mpz_fits_ulong_p(index)) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Index is too large for in_keys: {}", int_to_string(index));
+  }
+  size_t idx = mpz_get_ui(index);
+  return idx < list->size();
+}
+
+SortKItem hook_LIST_get_long(SortList list, ssize_t idx) {
+  size_t size = list->size();
+  size_t abs_idx = idx < 0 ? (long)size + idx : idx;
+  return list->at(abs_idx);
+}
+
+SortKItem hook_LIST_get_null(SortList list, SortInt index) {
+  if (!mpz_fits_slong_p(index)) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Index is too large for get: {}", int_to_string(index));
+  }
+  ssize_t idx = mpz_get_si(index);
+  size_t size = list->size();
+  size_t abs_idx = idx < 0 ? (long)size + idx : idx;
+  if (abs_idx >= size) {
+    return nullptr;
+  }
+  return list->at(abs_idx);
+}
+
+SortKItem hook_LIST_get64(SortList list, ssize_t index) {
+  if (index < INT64_MIN || index > INT64_MAX) {
+    KLLVM_HOOK_INVALID_ARGUMENT("Index is too large for get: {}", index);
+  }
+  size_t size = list->size();
+  size_t abs_index = index < 0 ? (long)size + index : index;
+  return list->at(abs_index);
+}
+
+SortKItem hook_LIST_get(SortList list, SortInt index) {
+  if (!mpz_fits_slong_p(index)) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Index is too large for get: {}", int_to_string(index));
+  }
+  ssize_t idx = mpz_get_si(index);
+  return hook_LIST_get_long(list, idx);
+}
+
+SortKItem hook_LIST_lookup(SortList list, SortInt index) {
+  return hook_LIST_get(list, index);
+}
+
+list hook_LIST_range_long(SortList list, size_t front, size_t back) {
+  size_t size = list->size();
+
+  if (size < front + back) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Index out of range range_long: size={}, front={}, back={}", size,
+        front, back);
+  }
+
+  auto tmp = list->transient();
+  tmp.drop(front);
+  tmp.take(size - back - front);
+  return tmp.persistent();
+}
+
+list hook_LIST_range(SortList list, SortInt from_front, SortInt from_back) {
+  if (!mpz_fits_ulong_p(from_front) || !mpz_fits_ulong_p(from_back)) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Range index too large for range: front={}, back={}",
+        int_to_string(from_front), int_to_string(from_back));
+  }
+
+  size_t front = mpz_get_ui(from_front);
+  size_t back = mpz_get_ui(from_back);
+
+  return hook_LIST_range_long(list, front, back);
+}
+
+size_t hook_LIST_size_long(SortList list) {
+  return list->size();
+}
+
+uint64_t hook_LIST_size64(SortList list) {
+  return static_cast<uint64_t>(list->size());
+}
+
+SortInt hook_LIST_size(SortList list) {
+  mpz_t size;
+  mpz_init_set_ui(size, list->size());
+  return move_int(size);
+}
+
+list hook_LIST_make(SortInt len, SortKItem value) {
+  if (!mpz_fits_ulong_p(len)) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Length is too large for make: {}", int_to_string(len));
+  }
+
+  size_t length = mpz_get_ui(len);
+  return {length, value};
+}
+
+list hook_LIST_updateMInt(SortList list, uint64_t idx, SortKItem value) {
+  if (idx >= list->size()) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Index out of range for update64: index={}, size={}", idx,
+        list->size());
+  }
+
+  return list->set(idx, value);
+}
+
+list hook_LIST_update_long(SortList list, size_t idx, SortKItem value) {
+  if (idx >= list->size()) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Index out of range for update: index={}, size={}", idx, list->size());
+  }
+
+  return list->set(idx, value);
+}
+
+list hook_LIST_update(SortList list, SortInt index, SortKItem value) {
+  if (!mpz_fits_ulong_p(index)) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Length is too large for update: {}", int_to_string(index));
+  }
+
+  size_t idx = mpz_get_ui(index);
+  return hook_LIST_update_long(list, idx, value);
+}
+
+list hook_LIST_updateAll(SortList l1, SortInt index, SortList l2) {
+  if (!mpz_fits_ulong_p(index)) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Length is too large for updateAll: {}", int_to_string(index));
+  }
+
+  size_t idx = mpz_get_ui(index);
+  size_t size = l1->size();
+  size_t size2 = l2->size();
+  if (idx != 0 && size2 != 0) {
+    if (idx + size2 - 1 >= size) {
+      KLLVM_HOOK_INVALID_ARGUMENT(
+          "Index out of range for updateAll: index={}, dest_size={}, "
+          "src_size={}",
+          idx, size, size2);
+    }
+  }
+
+  if (size2 < 32) {
+    auto tmp = l1->transient();
+
+    for (int i = idx, j = 0; j < size2; ++i, ++j) {
+      tmp.set(i, l2->at(j));
+    }
+
+    return tmp.persistent();
+  }
+  auto tmp = l1->transient();
+  tmp.take(idx);
+  tmp.append(l2->transient());
+  auto tmp2 = l1->transient();
+  tmp2.drop(idx + size2);
+  tmp.append(tmp2);
+  return tmp.persistent();
+}
+
+list hook_LIST_fill(SortList l, SortInt index, SortInt len, SortKItem val) {
+  if (!mpz_fits_ulong_p(index)) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Index is too large for fill: {}", int_to_string(index));
+  }
+
+  if (!mpz_fits_ulong_p(len)) {
+    KLLVM_HOOK_INVALID_ARGUMENT(
+        "Length is too large for fill: {}", int_to_string(len));
+  }
+
+  size_t idx = mpz_get_ui(index);
+  size_t length = mpz_get_ui(len);
+
+  if (idx != 0 && length != 0) {
+    if (idx + length - 1 >= l->size()) {
+      KLLVM_HOOK_INVALID_ARGUMENT(
+          "Index out of range for fill: index={}, length={}, size={}", idx,
+          length, l->size());
+    }
+  }
+
+  if (length < 32) {
+    auto tmp = l->transient();
+
+    for (auto i = idx; i < idx + length; ++i) {
+      tmp.set(i, val);
+    }
+
+    return tmp.persistent();
+  }
+  auto tmp = l->transient();
+  tmp.take(idx);
+  auto l2 = list{length, val}.transient();
+  tmp.append(l2);
+  auto tmp2 = l->transient();
+  tmp2.drop(idx + length);
+  tmp.append(tmp2);
+  return tmp.persistent();
+}
+
+bool hook_LIST_eq(SortList l1, SortList l2) {
+  return (*l1) == (*l2);
+}
+
+void list_hash(list *l, void *hasher) {
+  if (hash_enter()) {
+    for (auto iter = l->begin(); iter != l->end(); ++iter) {
+      k_hash(*iter, hasher);
+    }
+  }
+  hash_exit();
+}
+
+void list_foreach(list *list, void(process)(block **)) {
+  for (auto iter = list->begin(); iter != list->end(); ++iter) {
+    process((block **)&*iter);
+  }
+}
+
+list list_map(list *l, block *(process)(block *)) {
+  auto tmp = list().transient();
+
+  for (auto iter = l->begin(); iter != l->end(); ++iter) {
+    tmp.push_back(process(*iter));
+  }
+
+  return tmp.persistent();
+}
+
+list list_push_back(list *list, block *value) {
+  return list->push_back(value);
+}
+
+void print_list(
+    writer *file, list *list, char const *unit, char const *element,
+    char const *concat, void *state) {
+  size_t size = list->size();
+  if (size == 0) {
+    sfprintf(file, "%s()", unit);
+    return;
+  }
+
+  auto tag = get_tag_for_symbol_name(element);
+  auto *arg_sorts = get_argument_sorts_for_tag(tag);
+
+  sfprintf(file, "\\left-assoc{}(%s(", concat);
+
+  bool once = true;
+  for (auto iter = list->begin(); iter != list->end(); ++iter) {
+    if (once) {
+      once = false;
+    } else {
+      sfprintf(file, ",");
+    }
+    sfprintf(file, "%s(", element);
+    print_configuration_internal(file, *iter, arg_sorts[0], false, state);
+    sfprintf(file, ")");
+  }
+  sfprintf(file, "))");
+}
+}

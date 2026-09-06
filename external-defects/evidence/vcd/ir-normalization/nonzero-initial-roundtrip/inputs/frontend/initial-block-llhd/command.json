@@ -1,0 +1,26 @@
+{
+  "name": "initial-block-llhd",
+  "argv": [
+    "circt-verilog",
+    "--ir-llhd",
+    "--top",
+    "init_ff",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/alt-frontend/initial-block.sv",
+    "-o",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/alt-frontend/initial-block-llhd/design.mlir"
+  ],
+  "exit_code": 0,
+  "seconds": 0.00970195900000001,
+  "remaining": {
+    "llhd.sig": 3,
+    "llhd.drv": 4,
+    "llhd.prb": 5,
+    "llhd.process": 2,
+    "llhd.combinational": 0,
+    "seq.firreg": 0,
+    "preset": 0,
+    "moore.procedure": 0,
+    "moore.variable": 0
+  },
+  "sha256": "a78543e9af004ee08c53c9093b119819982f68aa754ce9c1d7130354375f7c13"
+}

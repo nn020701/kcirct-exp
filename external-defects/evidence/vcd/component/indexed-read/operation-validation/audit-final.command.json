@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/python",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit_final.py",
+    "--execution-complete"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo",
+  "returncode": 0,
+  "stdout": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-final.stdout",
+    "bytes": 78,
+    "sha256": "17433efaef04babeb5a0c5a9d92f620dea2328f31fbc955a3adae822bb6203f8"
+  },
+  "stderr": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-final.stderr",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "scope": "只读解析原有Kore和输入哈希，没有启动krun/Verilator。"
+}

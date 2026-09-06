@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.0",
+  "kframework_version": "7.1.323",
+  "api_sha256": "40e6b398d06f6dff1ecdba85819330b54006a0d46aedaa0474613ac451a211cd",
+  "simulator_sha256": "7ad752d4c2137fc6fdf113bbbc6b2d73841929fdd10fa7694ffe1d01434cecc3",
+  "status": "pass",
+  "stage": "complete",
+  "top_module": "axis_fifo_wrapper",
+  "input_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/mlir/d4/golden/design.generic.mlir",
+  "inputs_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d4/test_data.json",
+  "vcd_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d4/golden/kimulator/test.vcd",
+  "work_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d4/golden/kimulator/simulation",
+  "evaluations_per_input": 2,
+  "events_completed": 369,
+  "simulation_calls": 738,
+  "simulation_calls_attempted": 738,
+  "timings": {
+    "compile": 0.01347508300023037,
+    "preprocess": 0.18389283299984527,
+    "setup": 0.1821024579985533,
+    "execution": 179.12318484204297,
+    "read_ports": 0.5063825039978838,
+    "state_export": 3.2657826529466547,
+    "total": 183.6040787919992
+  },
+  "error": null,
+  "input_sha256": "c63dda73d107057c7ebae8b6f02b7acc04ebbd2f61a58fb7b2b707f88996b857",
+  "inputs_sha256": "415de092da83c7876bb148924033a8d8713e52d3ce433ede6fa5f332874c2884",
+  "ports": {
+    "inputs": [
+      {
+        "name": "clk",
+        "width": 1
+      },
+      {
+        "name": "rst",
+        "width": 1
+      },
+      {
+        "name": "s_axis_tdata",
+        "width": 8
+      },
+      {
+        "name": "s_axis_tvalid",
+        "width": 1
+      },
+      {
+        "name": "s_axis_tlast",
+        "width": 1
+      },
+      {
+        "name": "s_axis_tuser",
+        "width": 1
+      },
+      {
+        "name": "m_axis_tready",
+        "width": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "s_axis_tready",
+        "width": 1
+      },
+      {
+        "name": "m_axis_tdata",
+        "width": 8
+      },
+      {
+        "name": "m_axis_tvalid",
+        "width": 1
+      },
+      {
+        "name": "m_axis_tlast",
+        "width": 1
+      },
+      {
+        "name": "m_axis_tuser",
+        "width": 1
+      },
+      {
+        "name": "status_overflow",
+        "width": 1
+      },
+      {
+        "name": "status_bad_frame",
+        "width": 1
+      },
+      {
+        "name": "status_good_frame",
+        "width": 1
+      }
+    ]
+  },
+  "timescale": "1ns",
+  "events_total": 369,
+  "definition_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+  "definition_sha256": "08ac54e383967aa9aa7ba218cd0148e2b4d3f19dea67ddab33f120d661854e2b",
+  "parser": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/parser",
+  "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+  "event_index": 368,
+  "event_time": 368,
+  "evaluation": 2,
+  "vcd_sha256": "f977c3d24af07546344aa83def4bb2f3413f7385e973582cd69a14cce9b41c79",
+  "last_state": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d4/golden/kimulator/simulation/last-state.kore",
+  "last_state_sha256": "9844d4527729b8d62236b07dab8633e2d473e6416f679fcc5be0735d87faa559"
+}

@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "status": "trace_generation_complete",
+  "scope": "complete01旧语义；原始prestate连续执行，不重载边界单步",
+  "source_identity": "source-identity.json",
+  "source_count": 52,
+  "all_source_hashes_match_complete01": true,
+  "tools": "tools.json",
+  "build": {
+    "argv": [
+      "/Users/bytedance/.nix-profile/bin/kompile",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt-core.k",
+      "--backend",
+      "llvm",
+      "--main-module",
+      "CIRCT-CORE",
+      "--syntax-module",
+      "CIRCT-CORE-SYNTAX",
+      "--output-definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition",
+      "--llvm-proof-hint-instrumentation",
+      "--llvm-proof-hint-debugging"
+    ],
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old",
+    "environment": {
+      "K_BIN": null,
+      "PATH": "/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/opt/homebrew/bin:/opt/puppetlabs/bin:/Users/bytedance/.codex/tmp/arg0/codex-arg0NHAs9D:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bytedance/.local/bin:/Users/bytedance/.cabal/bin:/Users/bytedance/.ghcup/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+    },
+    "parser_note": "输入为已保存Kore，krun使用--parser cat --term；本次不生成MLIR/Bison parser。",
+    "start_epoch": 1788685863.8606231,
+    "returncode": 0,
+    "elapsed_s": 54.67688298225403
+  },
+  "definition_identity": {
+    "definition.kore": "2e764798f82f315074b07b81e4bb922661556d785ca5a9ff8f7bb7f6951ed119",
+    "compiled.bin": "845246bab8b859f1cfbdcad0d45a1b0ed7e821bf08926021614cb5930d7980a4",
+    "backend.txt": "ef5a927f5a4ae8bdfa7d187079fa7b2aabc8d72ce219c564f78c9498ff59d2f9",
+    "interpreter": "654087615389c2657c7339f81e322b9ae90d66357d9914d4f965ac7319bd4f21"
+  },
+  "normal_replays": [
+    {
+      "case": "s3",
+      "depth": 1956,
+      "argv": [
+        "/Users/bytedance/.nix-profile/bin/krun",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/original-prestate.kore",
+        "--definition",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition",
+        "--output",
+        "kore",
+        "--parser",
+        "cat",
+        "--term",
+        "--no-expand-macros",
+        "--depth",
+        "1956"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/normal-depth-1956",
+      "environment": {
+        "K_BIN": null,
+        "PATH": "/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/opt/homebrew/bin:/opt/puppetlabs/bin:/Users/bytedance/.codex/tmp/arg0/codex-arg0NHAs9D:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bytedance/.local/bin:/Users/bytedance/.cabal/bin:/Users/bytedance/.ghcup/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+      },
+      "input_sha256": "a5388d3758a00d24192fa1c545de618d787327e8d1ddda90d46202f0eda89b2b",
+      "start_epoch": 1788685989.189727,
+      "returncode": 0,
+      "elapsed_s": 0.7665510177612305,
+      "stdout_sha256": "a0b4939e3071986493c4de580db13a825a0b0ba04d3d83f26ab0af35bb11b5e7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "connection_entry": [
+        "comb.mux",
+        "axis_adapter/%124",
+        "axis_adapter/%28",
+        "axis_adapter/%112"
+      ],
+      "connection_operands_unchanged": true,
+      "current_ids": [
+        [
+          "0"
+        ],
+        [
+          "3"
+        ]
+      ],
+      "connection_operands": [
+        "axis_adapter/%124",
+        "axis_adapter/%28",
+        "axis_adapter/%112"
+      ],
+      "original_boundary": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1956.kore",
+      "original_boundary_sha256": "a0b4939e3071986493c4de580db13a825a0b0ba04d3d83f26ab0af35bb11b5e7",
+      "normal_output_matches_original_bytes": true
+    },
+    {
+      "case": "s3",
+      "depth": 1957,
+      "argv": [
+        "/Users/bytedance/.nix-profile/bin/krun",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/original-prestate.kore",
+        "--definition",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition",
+        "--output",
+        "kore",
+        "--parser",
+        "cat",
+        "--term",
+        "--no-expand-macros",
+        "--depth",
+        "1957"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/normal-depth-1957",
+      "environment": {
+        "K_BIN": null,
+        "PATH": "/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/opt/homebrew/bin:/opt/puppetlabs/bin:/Users/bytedance/.codex/tmp/arg0/codex-arg0NHAs9D:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bytedance/.local/bin:/Users/bytedance/.cabal/bin:/Users/bytedance/.ghcup/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+      },
+      "input_sha256": "a5388d3758a00d24192fa1c545de618d787327e8d1ddda90d46202f0eda89b2b",
+      "start_epoch": 1788685990.063191,
+      "returncode": 0,
+      "elapsed_s": 0.2246532440185547,
+      "stdout_sha256": "2b795340503a03a51512b15d08669a607082be4893347dd497a20b3e3ef0485c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "connection_entry": [
+        "comb.mux",
+        "axis_adapter/%28",
+        "axis_adapter/%112",
+        "axis_adapter/%112"
+      ],
+      "connection_operands_unchanged": false,
+      "current_ids": [
+        [
+          "0"
+        ],
+        [
+          "3"
+        ]
+      ],
+      "connection_operands": [
+        "axis_adapter/%28",
+        "axis_adapter/%112",
+        "axis_adapter/%112"
+      ],
+      "original_boundary": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1957.kore",
+      "original_boundary_sha256": "2b795340503a03a51512b15d08669a607082be4893347dd497a20b3e3ef0485c",
+      "normal_output_matches_original_bytes": true
+    },
+    {
+      "case": "d12",
+      "depth": 942,
+      "argv": [
+        "/Users/bytedance/.nix-profile/bin/krun",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/original-prestate.kore",
+        "--definition",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition",
+        "--output",
+        "kore",
+        "--parser",
+        "cat",
+        "--term",
+        "--no-expand-macros",
+        "--depth",
+        "942"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/normal-depth-942",
+      "environment": {
+        "K_BIN": null,
+        "PATH": "/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/opt/homebrew/bin:/opt/puppetlabs/bin:/Users/bytedance/.codex/tmp/arg0/codex-arg0NHAs9D:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bytedance/.local/bin:/Users/bytedance/.cabal/bin:/Users/bytedance/.ghcup/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+      },
+      "input_sha256": "a497e04d235733fd92536b6e7707de3438be6c436c30227e326b4cf116b7158c",
+      "start_epoch": 1788685990.427186,
+      "returncode": 0,
+      "elapsed_s": 0.23585820198059082,
+      "stdout_sha256": "819ffb680dbbf77b9d6f4834a9374c0d5a66574c2862a9fd97bf81c76b1613f6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "connection_entry": [
+        "comb.mux",
+        "axis_fifo/%57",
+        "axis_fifo/%65",
+        "axis_fifo/%70",
+        "twoState",
+        ""
+      ],
+      "connection_operands_unchanged": true,
+      "current_ids": [
+        [
+          "1379"
+        ],
+        [
+          "1360"
+        ]
+      ],
+      "connection_operands": [
+        "axis_fifo/%57",
+        "axis_fifo/%65",
+        "axis_fifo/%70"
+      ],
+      "original_boundary": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-depth-942.kore",
+      "original_boundary_sha256": "819ffb680dbbf77b9d6f4834a9374c0d5a66574c2862a9fd97bf81c76b1613f6",
+      "normal_output_matches_original_bytes": true
+    },
+    {
+      "case": "d12",
+      "depth": 943,
+      "argv": [
+        "/Users/bytedance/.nix-profile/bin/krun",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/original-prestate.kore",
+        "--definition",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition",
+        "--output",
+        "kore",
+        "--parser",
+        "cat",
+        "--term",
+        "--no-expand-macros",
+        "--depth",
+        "943"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/normal-depth-943",
+      "environment": {
+        "K_BIN": null,
+        "PATH": "/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/opt/homebrew/bin:/opt/puppetlabs/bin:/Users/bytedance/.codex/tmp/arg0/codex-arg0NHAs9D:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bytedance/.local/bin:/Users/bytedance/.cabal/bin:/Users/bytedance/.ghcup/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+      },
+      "input_sha256": "a497e04d235733fd92536b6e7707de3438be6c436c30227e326b4cf116b7158c",
+      "start_epoch": 1788685990.7171998,
+      "returncode": 0,
+      "elapsed_s": 0.16962504386901855,
+      "stdout_sha256": "153eda44b06528b1925acdabc73e35c049219305ce52d8c22543d3a80902305f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "connection_entry": [
+        "comb.mux",
+        "axis_fifo/%65",
+        "axis_fifo/%70",
+        "axis_fifo/%70",
+        "twoState",
+        ""
+      ],
+      "connection_operands_unchanged": false,
+      "current_ids": [
+        [
+          "1379"
+        ],
+        [
+          "1360"
+        ]
+      ],
+      "connection_operands": [
+        "axis_fifo/%65",
+        "axis_fifo/%70",
+        "axis_fifo/%70"
+      ],
+      "original_boundary": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-depth-943.kore",
+      "original_boundary_sha256": "153eda44b06528b1925acdabc73e35c049219305ce52d8c22543d3a80902305f",
+      "normal_output_matches_original_bytes": true
+    }
+  ],
+  "traces": [
+    {
+      "case": "s3",
+      "depth": 1957,
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/hint-depth-1957/trace.hint",
+      "argv": [
+        "/Users/bytedance/.nix-profile/bin/krun",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/original-prestate.kore",
+        "--definition",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition",
+        "--output",
+        "kore",
+        "--parser",
+        "cat",
+        "--term",
+        "--no-expand-macros",
+        "--depth",
+        "1957",
+        "--proof-hint"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/hint-depth-1957",
+      "environment": {
+        "K_BIN": null,
+        "PATH": "/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/opt/homebrew/bin:/opt/puppetlabs/bin:/Users/bytedance/.codex/tmp/arg0/codex-arg0NHAs9D:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bytedance/.local/bin:/Users/bytedance/.cabal/bin:/Users/bytedance/.ghcup/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+      },
+      "input_sha256": "a5388d3758a00d24192fa1c545de618d787327e8d1ddda90d46202f0eda89b2b",
+      "start_epoch": 1788686089.864212,
+      "status": "completed",
+      "returncode": 0,
+      "elapsed_s": 6.160884857177734,
+      "stdout_sha256": "3bb92fa108daf2dbc1af259e006cf850a4813b8c593034ed570a4ad656e95eb9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hint_bytes": 879048015,
+      "hint_header_hex": "48494e540d000000"
+    },
+    {
+      "case": "d12",
+      "depth": 943,
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/hint-depth-943/trace.hint",
+      "argv": [
+        "/Users/bytedance/.nix-profile/bin/krun",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/original-prestate.kore",
+        "--definition",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition",
+        "--output",
+        "kore",
+        "--parser",
+        "cat",
+        "--term",
+        "--no-expand-macros",
+        "--depth",
+        "943",
+        "--proof-hint"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/hint-depth-943",
+      "environment": {
+        "K_BIN": null,
+        "PATH": "/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/opt/homebrew/bin:/opt/puppetlabs/bin:/Users/bytedance/.codex/tmp/arg0/codex-arg0NHAs9D:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bytedance/.local/bin:/Users/bytedance/.cabal/bin:/Users/bytedance/.ghcup/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+      },
+      "input_sha256": "a497e04d235733fd92536b6e7707de3438be6c436c30227e326b4cf116b7158c",
+      "start_epoch": 1788686096.34978,
+      "status": "completed",
+      "returncode": 0,
+      "elapsed_s": 1.5710771083831787,
+      "stdout_sha256": "4e7dfea755cdbf8abcbd52d2c9021d9a9991b43e6882535ba8b72b1f490ff9e7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hint_bytes": 194023008,
+      "hint_header_hex": "48494e540d000000"
+    }
+  ],
+  "notes": [
+    "只写隔离old目录，没有修改服务源码或原始失败证据。",
+    "使用--output kore的普通执行先确认instrumentation构建仍复现原连接变化；随后额外带--proof-hint获取原始二进制追踪。",
+    "每个trace仅一份到变化后边界的连续执行，覆盖此前全部步骤。",
+    "未启用gen-glr-bison-parser；保存的Kore输入以--parser cat --term直接读取，实际4次正常执行和2次hint均成功。",
+    "本索引不将尚未解码的hint声明为具体规则命中的证明；解码由独立任务执行。"
+  ]
+}

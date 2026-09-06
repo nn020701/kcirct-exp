@@ -1,0 +1,11 @@
+7 signals in first file
+6 signals in second file
+7 signals under `TOP.` in first file
+6 signals under `TOP.` in second file
+6 common signals
+3 filtered and unignored signals
+Reading first file
+Reading second file
+Comparing clk
+Comparing d[3:0]
+Comparing q[3:0]

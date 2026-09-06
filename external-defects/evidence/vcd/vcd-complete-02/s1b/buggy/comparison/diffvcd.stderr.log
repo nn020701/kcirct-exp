@@ -1,0 +1,29 @@
+21 signals in first file
+92 signals in second file
+21 signals under `xlnxdemo.` in first file
+92 signals under `TOP.` in second file
+21 common signals
+21 filtered and unignored signals
+Reading first file
+Reading second file
+Comparing S_AXI_ACLK
+Comparing S_AXI_ARADDR[6:0]
+Comparing S_AXI_ARESETN
+Comparing S_AXI_ARPROT[2:0]
+Comparing S_AXI_ARREADY
+Comparing S_AXI_ARVALID
+Comparing S_AXI_AWADDR[6:0]
+Comparing S_AXI_AWPROT[2:0]
+Comparing S_AXI_AWREADY
+Comparing S_AXI_AWVALID
+Comparing S_AXI_BREADY
+Comparing S_AXI_BRESP[1:0]
+Comparing S_AXI_BVALID
+Comparing S_AXI_RDATA[31:0]
+Comparing S_AXI_RREADY
+Comparing S_AXI_RRESP[1:0]
+Comparing S_AXI_RVALID
+Comparing S_AXI_WDATA[31:0]
+Comparing S_AXI_WREADY
+Comparing S_AXI_WSTRB[3:0]
+Comparing S_AXI_WVALID

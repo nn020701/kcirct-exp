@@ -1,0 +1,379 @@
+{
+  "status": "oracle_mismatch",
+  "status_meaning": "原生构建和执行完成；尚未判定 oracle",
+  "samples": [
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 0,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 0,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 0,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 0,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 0,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 0,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    }
+  ],
+  "rows": [
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 0,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 0,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 0,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 0,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 0,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 0,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 1,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 1,
+      "drop_frame": 1
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    },
+    {
+      "input_axis_tready": 1,
+      "output_axis_tdata": 1,
+      "output_axis_tvalid": 0,
+      "output_axis_tlast": 1,
+      "drop_frame": 0
+    }
+  ],
+  "sample_count": 17,
+  "event_count": 33,
+  "vcd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/d11/buggy/native/trace.vcd",
+  "vcd_sha256": "c8b0fb6fe081eefdee62fce3eead649fe7a10e78a4b580e83c5d267cae0c2802",
+  "vcd_top": "TOP",
+  "stimulus_json": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/d11/buggy/native/stimulus.json",
+  "output_csv": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/d11/buggy/native/output.csv",
+  "timings": {
+    "build": 3.4169458329997724,
+    "execution": 0.4399737500007177,
+    "read_compare": 0.0013490830006048782
+  },
+  "versions": {
+    "verilator": "Verilator 5.048 2026-04-26 rev vUNKNOWN-built20260426",
+    "verilator_path": "/opt/homebrew/bin/verilator"
+  },
+  "sampling_contract": {
+    "sample_phase": "low_before_posedge_pre_NBA",
+    "vcd_sample_phase": "every_event_after_eval",
+    "clock": "clk",
+    "events": "每行 drive(clk=0, inputs) -> eval -> dump VCD 并读取 CSV；除最后一行外 drive(clk=1, 相同 inputs) -> eval -> dump VCD",
+    "event_count": 33,
+    "vcd_timescale": "1ns",
+    "vcd_top": "TOP",
+    "initialization": "Verilator 二态未初始化值为 0；保留 RTL 显式 initial/声明初始化，不额外插入 reset",
+    "unknown_values": "原生 --x-initial 0/--x-assign 0；CSV 输入禁止 None/X/Z；输出 mask 由独立 oracle 比较处理",
+    "time": "第 i 行 low 时间为 2*i ns，随后 high 为 (2*i+1) ns；最后一行只提交 low；无延迟 DUT 的精度统一为 1ns",
+    "limitation": "低电平先更新输入再观察；组合输出可能不同于原 TB 输入 NBA 更新前的观测，须逐例核对原生 oracle",
+    "inputs": [
+      {
+        "name": "clk",
+        "width": 1
+      },
+      {
+        "name": "rst",
+        "width": 1
+      },
+      {
+        "name": "input_axis_tdata",
+        "width": 8
+      },
+      {
+        "name": "input_axis_tvalid",
+        "width": 1
+      },
+      {
+        "name": "input_axis_tlast",
+        "width": 1
+      },
+      {
+        "name": "input_axis_tuser",
+        "width": 1
+      },
+      {
+        "name": "output_axis_tready",
+        "width": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "input_axis_tready",
+        "width": 1
+      },
+      {
+        "name": "output_axis_tdata",
+        "width": 8
+      },
+      {
+        "name": "output_axis_tvalid",
+        "width": 1
+      },
+      {
+        "name": "output_axis_tlast",
+        "width": 1
+      },
+      {
+        "name": "drop_frame",
+        "width": 1
+      }
+    ],
+    "manifest_initialization": {
+      "mode": "rtl_initial_plus_two_state_zero",
+      "uninitialized_register_value": 0,
+      "four_state_equivalence_claimed": false,
+      "evidence": [
+        "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。",
+        "drop_frame 无声明初值；上游 CSV 首样本为 x，仅该单元格从 oracle 数值比较排除。"
+      ]
+    }
+  },
+  "oracle": {
+    "agrees": false,
+    "compared_cells": 84,
+    "masked_cells": 1,
+    "first_mismatch": {
+      "sample_index": 13,
+      "signal": "drop_frame",
+      "expected": 0,
+      "actual": 1
+    },
+    "mismatches": [
+      {
+        "sample_index": 13,
+        "signal": "drop_frame",
+        "expected": 0,
+        "actual": 1
+      },
+      {
+        "sample_index": 14,
+        "signal": "drop_frame",
+        "expected": 0,
+        "actual": 1
+      },
+      {
+        "sample_index": 16,
+        "signal": "output_axis_tdata",
+        "expected": 6,
+        "actual": 1
+      },
+      {
+        "sample_index": 16,
+        "signal": "output_axis_tvalid",
+        "expected": 1,
+        "actual": 0
+      },
+      {
+        "sample_index": 16,
+        "signal": "output_axis_tlast",
+        "expected": 0,
+        "actual": 1
+      }
+    ]
+  }
+}

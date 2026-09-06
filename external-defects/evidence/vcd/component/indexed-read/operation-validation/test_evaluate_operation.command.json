@@ -1,0 +1,35 @@
+{
+  "argv": [
+    ".venv/bin/pytest",
+    "-v",
+    "--durations=15",
+    "-n",
+    "4",
+    "--dist=worksteal",
+    "src/tests/integration/test_operation.py",
+    "-k",
+    "(comb/mux/ or comb/mux_array/ or comb/icmp/ or comb/concat/ or hw/instance/ or hw/constant/ or hw/array_inject/ or seq/to_clock/ or seq/firreg2/ or seq/firreg_array/ or seq/firreg_preset/ or seq/firmem_rx/ or seq/firmem_mask/) and test_evaluate_operation"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics",
+  "KDIST_DIR": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/kdist",
+  "K_BIN": null,
+  "PATH_prefix": [
+    "/Users/bytedance/.nix-profile/bin",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin"
+  ],
+  "cases": [
+    "comb/mux",
+    "comb/mux_array",
+    "comb/icmp",
+    "comb/concat",
+    "hw/instance",
+    "hw/constant",
+    "hw/array_inject",
+    "seq/to_clock",
+    "seq/firreg2",
+    "seq/firreg_array",
+    "seq/firreg_preset",
+    "seq/firmem_rx",
+    "seq/firmem_mask"
+  ]
+}

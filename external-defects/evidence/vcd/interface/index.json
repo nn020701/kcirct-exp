@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "purpose": "独立接口与外部实验驱动环境的补充验证证据",
+  "formal_case_count_contribution": 0,
+  "created_at": "2026-09-06T05:29:13.908418+00:00",
+  "public_cli_validation": {
+    "case": "D13 golden",
+    "status": "pass",
+    "events": 11,
+    "simulation_calls": 22,
+    "evaluations_per_input": 2,
+    "default_parser_generated": true,
+    "vcd_signal_count": 8,
+    "comparison": "外部diffvcd对vcd-standard-01的D13 golden Verilator原始VCD",
+    "diffvcd_exit_code": 0,
+    "inputs": [
+      {
+        "path": "designs/axis-frame-len-d13/mlir/d13/golden/design.generic.mlir",
+        "sha256": "b969b26ac96b8511e35af2bb47369172130ebef9f6e873c92404a9689dcff031"
+      },
+      {
+        "path": "designs/axis-frame-len-d13/testbench/d13.events.json",
+        "sha256": "f2d7ab20089870a6903e6d3997dc293239806a306e470a09f2e89fb9b11e8d68"
+      }
+    ],
+    "reference_vcd": {
+      "source": ".runs/vcd-standard-01/d13/golden/native/trace.vcd",
+      "sha256": "81a3302fdc1113c0eb7c3ccc817aa0de0778454e3ae5436466b2093c61c1b5bd"
+    }
+  },
+  "isolated_runner_validation": {
+    "record": "isolated-runner/isolated-runner-env.json",
+    "test_summary": "81 passed in 13.54s",
+    "record_sha256": "914a5690c3d0c3554ac05101248113567d241b26298edf095dd8b723f7f977b7",
+    "kcirct_import_available": false,
+    "pyk_import_available": false
+  },
+  "files": [
+    {
+      "path": "public-cli-d13/validation.json",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/validation.json",
+      "sha256": "565d69af75dad64817a7be6fa680115f26a03b1646ad0ed478a28b62034683cf",
+      "bytes": 6351,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/cli.stdout.log",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/cli.stdout.log",
+      "sha256": "91e4e488b45fb506cde054f8c3c3f1454c6fdf168d21670cc95b133652514a73",
+      "bytes": 3100,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/cli.stderr.log",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/cli.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/test.vcd",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/test.vcd",
+      "sha256": "e626fa9d489bade54926ab6b9bd10fe4b7d1544bf2f7a7e1699b767370d175c8",
+      "bytes": 1066,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/diffvcd.stdout.log",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/diffvcd.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/diffvcd.stderr.log",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/diffvcd.stderr.log",
+      "sha256": "57e063e9f714d51530532b12c2cad71b765ba6365f7a26bac488142e396e3325",
+      "bytes": 429,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/result.json",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/result.json",
+      "sha256": "91e4e488b45fb506cde054f8c3c3f1454c6fdf168d21670cc95b133652514a73",
+      "bytes": 3100,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/commands.jsonl",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/commands.jsonl",
+      "sha256": "92b63384e5d1b2d5238152628d1c7c489ebe51db779b0ec1a11a2aa21f7d36e6",
+      "bytes": 30991,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0000.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0000.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0001.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0001.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0002.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0002.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0003.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0003.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0004.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0004.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0005.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0005.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0006.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0006.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0007.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0007.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0008.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0008.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0009.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0009.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0010.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0010.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0011.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0011.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0012.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0012.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0013.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0013.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0014.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0014.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0015.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0015.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0016.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0016.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0017.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0017.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0018.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0018.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0019.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0019.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0020.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0020.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0021.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0021.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0022.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0022.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0023.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0023.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0024.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0024.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/command-stderr/command-0025.stderr",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/simulation/command-0025.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "public-cli-d13/diffvcd.command.json",
+      "source": ".runs/validation/public-cli-d13-f68e9e54f5/validation.json",
+      "source_sha256": "565d69af75dad64817a7be6fa680115f26a03b1646ad0ed478a28b62034683cf",
+      "sha256": "63703ff7bfa31ed802a2b1caa3c9f3bec7685970761a859e5c0390a03a08f437",
+      "bytes": 937,
+      "mode": "extracted_command_record"
+    },
+    {
+      "path": "isolated-runner/isolated-runner-env.json",
+      "source": ".runs/validation/isolated-runner-env.json",
+      "sha256": "914a5690c3d0c3554ac05101248113567d241b26298edf095dd8b723f7f977b7",
+      "bytes": 8240,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "isolated-runner/isolated-runner-pytest.stdout.txt",
+      "source": ".runs/validation/isolated-runner-pytest.stdout.txt",
+      "sha256": "accd32344dd1b5d3be73f8a7871d7e1063ff991fec449ab8e757d7eed8b7d7b9",
+      "bytes": 180,
+      "mode": "original_bytes"
+    },
+    {
+      "path": "isolated-runner/isolated-runner-pytest.stderr.txt",
+      "source": ".runs/validation/isolated-runner-pytest.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "original_bytes"
+    }
+  ],
+  "retention_note": "原始JSON内的机器路径保留不改；通过本索引映射到持久化副本。未复制parser、Kore和临时虚拟环境。"
+}

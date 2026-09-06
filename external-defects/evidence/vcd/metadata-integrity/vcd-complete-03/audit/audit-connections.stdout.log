@@ -1,0 +1,21 @@
+d13/golden states 22 passed True
+d13/buggy states 22 passed True
+s1b/golden states 38 passed True
+s1b/buggy states 38 passed True
+s1r/golden states 38 passed True
+s1r/buggy states 38 passed True
+s2/golden states 178 passed True
+s2/buggy states 178 passed True
+s3/golden states 50 passed True
+s3/buggy states 50 passed True
+d8/golden states 54 passed True
+d8/buggy states 54 passed True
+d11/golden states 66 passed True
+d11/buggy states 66 passed True
+d12/golden states 62 passed True
+d12/buggy states 62 passed True
+d4/golden states 738 passed True
+d4/buggy states 738 passed True
+c4/golden states 38 passed True
+c4/buggy states 38 passed True
+{"complete": true, "passed": true, "summary": {"groups": 20, "expected_groups": 20, "states": 2568, "connection_changes": 0, "text_order_only_differences": 0, "unbound_states": 0}, "errors": [], "output": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/indexed-read/vcd-complete-03-connection-audit.json", "sha256": "978fc21912edd94b137faa3b120c01a6701c7d623170e4f54916c0d498230301"}

@@ -1,0 +1,3 @@
+RuntimeError: 命令执行失败（1）：/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/parser
+/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/buggy/kimulator/simulation/design.generic.mlir:15:53:15:53:syntax error, unexpected <, expecting }
+

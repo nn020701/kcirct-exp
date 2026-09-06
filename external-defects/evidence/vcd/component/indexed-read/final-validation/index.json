@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "scope": "root最终检查的原字节记录；发布时不改已验证文档、不重复测试。",
+  "artifacts": {
+    "evidence/vcd/component/indexed-read/final-validation/checks.json": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/checks.json",
+      "source": ".work/indexed-read/final-validation/checks.json",
+      "sha256": "ed0ecccdb6927224ef0833e3f2a499173656d9e4791021aa5a58017a19715b9f",
+      "bytes": 1875
+    },
+    "evidence/vcd/component/indexed-read/final-validation/tests.command.json": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/tests.command.json",
+      "source": ".work/indexed-read/final-validation/tests.command.json",
+      "sha256": "7cb500fb5143e36048cb044b1f6579295bc74791840f6246b640f14fce1722e0",
+      "bytes": 155
+    },
+    "evidence/vcd/component/indexed-read/final-validation/tests.result.json": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/tests.result.json",
+      "source": ".work/indexed-read/final-validation/tests.result.json",
+      "sha256": "e454416620fd6c6dc25e6c2de74cabe03fd87d9c36435d8066972635113c7390",
+      "bytes": 62
+    },
+    "evidence/vcd/component/indexed-read/final-validation/tests.stdout": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/tests.stdout",
+      "source": ".work/indexed-read/final-validation/tests.stdout",
+      "sha256": "5fbd74aff540518aa047a46d2c1c0ea3d46146ac8aa6971db3aa04319da78024",
+      "bytes": 314
+    },
+    "evidence/vcd/component/indexed-read/final-validation/tests.stderr": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/tests.stderr",
+      "source": ".work/indexed-read/final-validation/tests.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

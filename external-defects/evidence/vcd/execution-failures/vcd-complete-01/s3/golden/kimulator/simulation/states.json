@@ -1,0 +1,18 @@
+[
+  {
+    "event_index": 0,
+    "evaluation": 1,
+    "time": 0,
+    "path": "states/event-0000.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s3/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "99ef75e814e7c184729541cd4a33ff5c326b6e2e45143203bbb65e5248311c5a"
+  },
+  {
+    "event_index": 0,
+    "evaluation": 2,
+    "time": 0,
+    "path": "states/event-0000.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s3/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "eb776c980a69e90eac4f51d79cc6efc2f64c49326c6c1c29d6230bf51e052837"
+  }
+]

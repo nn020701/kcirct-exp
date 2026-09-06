@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "local_artifacts": [
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/coverage-review.md",
+      "bytes": 8254,
+      "sha256": "86eea961638a6d274cb50a8b17f2a279cab1e3fd588550ac41f9f356d24c4479"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-final.command.json",
+      "bytes": 947,
+      "sha256": "6c937b3a5284ab77ce31b578ef527cd8ee7edcf0d225ba963335f361064d3fa2"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-final.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-final.stdout",
+      "bytes": 78,
+      "sha256": "17433efaef04babeb5a0c5a9d92f620dea2328f31fbc955a3adae822bb6203f8"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-validation.json",
+      "bytes": 2213,
+      "sha256": "5fecb45c07f62544b67d6c6dc7b1772bd8b5c4e22d5d35bfb97dbddc5c0133e2"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit_final.py",
+      "bytes": 5973,
+      "sha256": "b10ee5793aeeb22ce5c2ad460536e6ea384fcaad93d7dc266909e057a087e221"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/final-state-audit.json",
+      "bytes": 23544,
+      "sha256": "f590a09ca14cc88e5607d9c8df9599b3372b59bc8ecc80942d9e3b99a54ddc2c"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/inputs-after.json",
+      "bytes": 11591,
+      "sha256": "00e89e45e2761354b5225bfaa3b319b211f95e77a52f07fc23365fa569c25928"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/inputs-before.json",
+      "bytes": 11591,
+      "sha256": "00e89e45e2761354b5225bfaa3b319b211f95e77a52f07fc23365fa569c25928"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_diffvcd_operatrion.command.json",
+      "bytes": 1098,
+      "sha256": "c008b6dd56eaaf2e4b7b3cbf9dda37e0715bd23f64027df59f2bc7fe228dfda0"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_diffvcd_operatrion.result.json",
+      "bytes": 62,
+      "sha256": "c1d82c4e5cad185478ff109f8b4a6f90e2237dbbf3c07820ab4e9661e7fe8df5"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_diffvcd_operatrion.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_diffvcd_operatrion.stdout",
+      "bytes": 9377,
+      "sha256": "f2e0088f35937ad9bc9a2f19a4c30405b9d517ba1a47a1076e0df0b81d3cedef"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_evaluate_operation.command.json",
+      "bytes": 1098,
+      "sha256": "01d65c394b52892a4069b079879070b1d23b80e31627f742b475cd51a6aeec44"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_evaluate_operation.result.json",
+      "bytes": 62,
+      "sha256": "e6bcbf7befd3c92a3bc825336c7cd552a52d92a5b2fc36382a142834f8df8cb7"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_evaluate_operation.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_evaluate_operation.stdout",
+      "bytes": 9397,
+      "sha256": "eaaefdd48b219e33200a972cd25a778ad413020e06d1f124fca8001716bbacf8"
+    }
+  ],
+  "observed_state_artifacts": [
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux/setup.kore",
+      "bytes": 11958,
+      "sha256": "fc31e1edd62c14db3209fc86d7ff3d4c36f17327c49910effa3bc354b60592e8"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux_array/setup.kore",
+      "bytes": 319275,
+      "sha256": "f7f860627d1f7542d9bf5d319a13cc06919b99f7c00b598ac571d4489da0d907"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/icmp/setup.kore",
+      "bytes": 37008,
+      "sha256": "864212aa6954d60e87f872ad45e86c2fd2b6f15d4b0c0f1a7e710b6ec78a45a9"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/concat/setup.kore",
+      "bytes": 10791,
+      "sha256": "1f49bcd4e72f01e0bb3e4b8ab838bf0eba9ab875cf25a069d11cd97085375e1f"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/instance/setup.kore",
+      "bytes": 47282,
+      "sha256": "8d08c3142df8ebdef837472826f0a0f4170d3402814c7a25d78ed640829d5e03"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/constant/setup.kore",
+      "bytes": 21117,
+      "sha256": "a1aeed829b5465dec8203a84edd257bcd33fec4422287d9af4c80a7e6c798171"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/array_inject/setup.kore",
+      "bytes": 521448,
+      "sha256": "f731e284797b8eb6cca4daa86b4d012e426bb44515699a0fc33a9d1df71055d9"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/to_clock/setup.kore",
+      "bytes": 8789,
+      "sha256": "5b447530412acc1ac6fc8c3a7661fb8d49328c272372b1f699a81c6d13a0537f"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg2/setup.kore",
+      "bytes": 31303,
+      "sha256": "6a5c83a57336cbd322c3ccbd02a9216d022026fd1aad5e5b6fe8f3e00bd7d517"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_array/setup.kore",
+      "bytes": 418151,
+      "sha256": "ad013951cfc1556603140f329c2a5f0731a140d337c5b087720c545fa6f68710"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_preset/setup.kore",
+      "bytes": 60402,
+      "sha256": "a4bede420ea4e13de90aeb92565d5dc160d98ed693630114ea2a92083fb6cd0f"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_rx/setup.kore",
+      "bytes": 89791,
+      "sha256": "56493bc28ffd446eb4908b3ede614f149a26b5b009867fb62ff33b43753e268c"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_mask/setup.kore",
+      "bytes": 35292,
+      "sha256": "3218eaba4818ac0203aa56ff4bc1662686a5845d8166e4e6f01d38351330caed"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux/simulated.0.kore",
+      "bytes": 14211,
+      "sha256": "2e0c050c28d4b7b3f017868c2c81d2337a40127a4400aceaa25919507a487435"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux/simulated.1.kore",
+      "bytes": 14212,
+      "sha256": "cc6bcf2fc80753f2e471304953af3cbbacc6f3816b202e70624a1a5cbae22fe5"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux_array/simulated.0.kore",
+      "bytes": 381406,
+      "sha256": "029038dcd39f4f2ee5e6d8dfd07395a1baa88de1ee174016c3bd55ec28f75e29"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux_array/simulated.1.kore",
+      "bytes": 381400,
+      "sha256": "f0de2bac056945e98cb19d7dd15278083503dbda4bad21b68a6361a5ce073eea"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/icmp/simulated.0.kore",
+      "bytes": 41989,
+      "sha256": "7e47f6702eea5868c4e8e886b46d23c67510e3251767d229356f08769f78611f"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/icmp/simulated.1.kore",
+      "bytes": 41989,
+      "sha256": "a546f099e1730aca64729ebcf6112c065caf1c10b42fb99b79d3f3a5df3b6ba4"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/concat/simulated.0.kore",
+      "bytes": 12501,
+      "sha256": "84b1ea38934544b62606764a111d58a8e0bf8094a790a068c5360d45f982b1c4"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/concat/simulated.1.kore",
+      "bytes": 12500,
+      "sha256": "47c24137059e1b017f09904051e3ab44fae8614a1f9eafdd3d051fdf54b82955"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/instance/simulated.0.kore",
+      "bytes": 55702,
+      "sha256": "6907799006c956bc6d54c7797879de74aaf5de40ec014213f65ee4f0b454e861"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/instance/simulated.1.kore",
+      "bytes": 55690,
+      "sha256": "15490580940114f27b3e6d12249bd65f9e5d6564cbc59f0a1bf0453fd25997fc"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/constant/simulated.0.kore",
+      "bytes": 25005,
+      "sha256": "67fbe4282e93ea951a3153debd734b801617fe88a6c2179b85f9ec851f280f8a"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/constant/simulated.1.kore",
+      "bytes": 25002,
+      "sha256": "8b77461137bd5031c0eccccf3b9d53e6a977afda77f39625484731eb2bb4b3db"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/array_inject/simulated.0.kore",
+      "bytes": 616064,
+      "sha256": "cbdff28e1bd0969b8aec0458a2a2ef2d52ccf874918fbf70caa02f0c31a6c30e"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/array_inject/simulated.1.kore",
+      "bytes": 616073,
+      "sha256": "4a60642174aaffea9f90b9339ff77cf85388ab1f32162067eb7397988aec9cdd"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/to_clock/simulated.0.kore",
+      "bytes": 9936,
+      "sha256": "4c4c8907f8bb21665e03738f81ed74f082b77898a55ca29aa71015c5d71a7547"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/to_clock/simulated.1.kore",
+      "bytes": 9936,
+      "sha256": "89c6afd34c228790e00f9f60457ad5b01c1c72fe589e05153aa8b0783c592f36"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg2/simulated.0.kore",
+      "bytes": 36296,
+      "sha256": "03847e75cd601b24075ecc888783711fe33c18bef7215b35beb252e0ad6855a7"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg2/simulated.1.kore",
+      "bytes": 36297,
+      "sha256": "e4e9a2d0526d1a147466da158585d7f3401d4103944eca4fd52da5120d0d08fb"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_array/simulated.0.kore",
+      "bytes": 502008,
+      "sha256": "2f17b3137a2967a50f4a9a7ce6085ce9b69fa55865f04081a9666c74f09620f7"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_array/simulated.1.kore",
+      "bytes": 502008,
+      "sha256": "a425fc5cf951967838d4aed0cfc358f3d9826d292de2bd36854cd66a59a7f8cf"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_preset/simulated.0.kore",
+      "bytes": 69777,
+      "sha256": "57a9bcafa8ec4ad07754c46e1e5382fa3968c0087ea1bda4f23f7ecda604a577"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_preset/simulated.1.kore",
+      "bytes": 69775,
+      "sha256": "5c0b6fd2b942714cfa8c3961d6ee79d4e5b5fc91aa3550a5684ffeaa7fac2693"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_rx/simulated.0.kore",
+      "bytes": 102493,
+      "sha256": "ea142339fc713750ff0e8e58f04ebd970fa012daec83c0473825ed5ae29b2a17"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_rx/simulated.1.kore",
+      "bytes": 102491,
+      "sha256": "dc61c7afd364e1ff3b3a352699be15efbe6024be70bd9b1f6f446d9319aefb73"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_mask/simulated.0.kore",
+      "bytes": 47470,
+      "sha256": "d39901fe7464a4fdbb3ff59b0d7da477913560b2e11c3ebad7f46fdedf7d6d07"
+    },
+    {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_mask/simulated.1.kore",
+      "bytes": 47476,
+      "sha256": "bcae6972a51ecbdc11386c173e722afabcbf0f6e2589671df6ff7fabd751f7c5"
+    }
+  ],
+  "state_copy_note": "这些状态位于operation测试资源目录，正式发布应按这里SHA复制；本审计没有改写原状态。"
+}

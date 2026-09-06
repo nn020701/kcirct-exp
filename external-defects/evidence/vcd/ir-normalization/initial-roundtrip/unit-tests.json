@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/tests/test_initial_lowering.py"
+  ],
+  "returncode": 0,
+  "source_sha256": "6328a3298c6f2475679dd0c713da8e3f296a59dcd5c88860cd5169988f7ee189",
+  "tests_sha256": "64fda155694564f8c1e7f6ec2d32c3071e6291fe321e1cbb9a306982912de598"
+}

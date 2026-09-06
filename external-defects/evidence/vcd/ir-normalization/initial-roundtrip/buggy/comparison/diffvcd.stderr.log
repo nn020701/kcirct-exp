@@ -1,0 +1,15 @@
+21 signals in first file
+32 signals in second file
+21 signals under `TOP.` in first file
+32 signals under `TOP.` in second file
+21 common signals
+7 filtered and unignored signals
+Reading first file
+Reading second file
+Comparing M_AXIS_ACLK
+Comparing M_AXIS_ARESETN
+Comparing M_AXIS_TDATA[31:0]
+Comparing M_AXIS_TLAST
+Comparing M_AXIS_TREADY
+Comparing M_AXIS_TSTRB[3:0]
+Comparing M_AXIS_TVALID

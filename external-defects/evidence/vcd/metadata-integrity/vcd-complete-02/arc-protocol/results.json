@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "method": "直接 KCIRCT 实例；compile/preprocess/setup 各一次；setup复制slot0；每输入两次run_simulate_fast、每次current_state ^= 1；两次之后dump",
+  "source_reference": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/integration/arc_test.py",
+    "sha256": "c98ec7e980a1b1e9ce0079ecc1c3509b31994fce3b7fd139d99c97942bc026ad",
+    "functions": [
+      "_prepare_pipeline",
+      "_run_event_case"
+    ]
+  },
+  "api_sha256": "40e6b398d06f6dff1ecdba85819330b54006a0d46aedaa0474613ac451a211cd",
+  "new_cli_wrapper_imported": false,
+  "counts": {
+    "compile": 1,
+    "preprocess": 1,
+    "setup": 1,
+    "simulate": 178
+  },
+  "events": 89,
+  "states": 178,
+  "all_state_bytes_equal_new_cli": true,
+  "first_connection_change": {
+    "event_index": 84,
+    "evaluation": 2,
+    "call": 170
+  },
+  "changed_states": 9,
+  "definition_sha256": "52a62a553fa6eda77309e207f62bac26f6d047222eb0eca06bb9db4f103a600f",
+  "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+  "design_sha256": "3c57ffec2e851b9bee594b6e0bcb683ef20bd20fbfedce1ccc0f5c98bb359485",
+  "comparisons": {
+    "cli": {
+      "agrees": true,
+      "exit_code": 0,
+      "compared_signals": 7,
+      "event_count": 89,
+      "first_mismatch": null,
+      "errors": [],
+      "artifacts": {
+        "kimulator_vcd": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/kcirct.vcd",
+          "sha256": "10d296ed237602e0c30732c89b7dc69cc699271c7947a482c3e9166c663656a1",
+          "bytes": 6124
+        },
+        "native_vcd": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/s2/golden/kimulator/test.vcd",
+          "sha256": "10d296ed237602e0c30732c89b7dc69cc699271c7947a482c3e9166c663656a1",
+          "bytes": 6124
+        },
+        "preflight": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/comparison-cli/preflight.json",
+          "sha256": "feb60e7a90607d20c271993eace85f04c7a96457b28773b29cbc9249e8ac9a6d",
+          "bytes": 1197
+        },
+        "diffvcd_script": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+          "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+          "bytes": 6040
+        },
+        "command": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/comparison-cli/diffvcd.command.json",
+          "sha256": "1dfa726c9cc54e687e878e44071e17a591093c7117fc543a3da86e4c2d11f908",
+          "bytes": 936
+        },
+        "stdout": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/comparison-cli/diffvcd.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/comparison-cli/diffvcd.stderr.log",
+          "sha256": "e90af06832db3db6171859e5ab274483116d388d4ba54a8f8b55ba370c0753e8",
+          "bytes": 416
+        }
+      },
+      "normalization": {
+        "policy": "scalar-equals-i1-zero-range-v1",
+        "applied": false,
+        "mappings": []
+      },
+      "command": [
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/python",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/kcirct.vcd",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/s2/golden/kimulator/test.vcd",
+        "--top1",
+        "xlnxstream_2018_3.",
+        "--top2",
+        "xlnxstream_2018_3.",
+        "--filter",
+        "^(?:M_AXIS_ACLK|M_AXIS_ARESETN|M_AXIS_TREADY|M_AXIS_TVALID|M_AXIS_TDATA\\[31:0\\]|M_AXIS_TSTRB\\[3:0\\]|M_AXIS_TLAST)$",
+        "--verbose"
+      ]
+    },
+    "native": {
+      "agrees": true,
+      "exit_code": 0,
+      "compared_signals": 7,
+      "event_count": 89,
+      "first_mismatch": null,
+      "errors": [],
+      "artifacts": {
+        "kimulator_vcd": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/kcirct.vcd",
+          "sha256": "10d296ed237602e0c30732c89b7dc69cc699271c7947a482c3e9166c663656a1",
+          "bytes": 6124
+        },
+        "native_vcd": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/s2/golden/native/trace.vcd",
+          "sha256": "ad2d9f0edefe2b38895c15845f8cd9f94b8fa9ce38745509444ff210deba53be",
+          "bytes": 3000
+        },
+        "preflight": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/comparison-native/preflight.json",
+          "sha256": "feb60e7a90607d20c271993eace85f04c7a96457b28773b29cbc9249e8ac9a6d",
+          "bytes": 1197
+        },
+        "diffvcd_script": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+          "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+          "bytes": 6040
+        },
+        "command": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/comparison-native/diffvcd.command.json",
+          "sha256": "eaaed0eeb63133c1abc9691cdfdcc56aa4dc164bf9aaf4dffe3268d91588d6c3",
+          "bytes": 923
+        },
+        "stdout": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/comparison-native/diffvcd.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/comparison-native/diffvcd.stderr.log",
+          "sha256": "374f74c07fa770c35477e92405dbe6f81778cae38b21dbe0de23cb41fcfc29dc",
+          "bytes": 404
+        }
+      },
+      "normalization": {
+        "policy": "scalar-equals-i1-zero-range-v1",
+        "applied": false,
+        "mappings": []
+      },
+      "command": [
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/python",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/kcirct.vcd",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/s2/golden/native/trace.vcd",
+        "--top1",
+        "xlnxstream_2018_3.",
+        "--top2",
+        "TOP.",
+        "--filter",
+        "^(?:M_AXIS_ACLK|M_AXIS_ARESETN|M_AXIS_TREADY|M_AXIS_TVALID|M_AXIS_TDATA\\[31:0\\]|M_AXIS_TSTRB\\[3:0\\]|M_AXIS_TLAST)$",
+        "--verbose"
+      ]
+    }
+  },
+  "differences_from_direct_arc_entry": [
+    "未直接调用 _run_event_case：其内部 _open_vcd 会调用 arcilator 生成 metadata，且函数不保留逐eval状态；为本审计逐行复用其调度并增加只读快照检查。",
+    "只在本诊断进程将 api.TOP_LEVEL_PARSER 配置为同一已准备 parser，并用现有 set_definition_dir 选择同一52a定义；没有替换API方法、子进程执行器或调用_simulate包装。",
+    "S2事件名值按公开输入端口顺序转换为原arc接受的(value,width)；metadata仅声明同样7个顶层端口，全部VCD值来自read_ports_fast。",
+    "保留每次评估快照并记录哈希，模拟完成后用外部diffvcd核对CLI和原生完整89事件。"
+  ]
+}

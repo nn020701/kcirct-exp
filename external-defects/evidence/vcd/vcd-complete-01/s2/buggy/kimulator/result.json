@@ -1,0 +1,438 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.0",
+  "kframework_version": "7.1.323",
+  "api_sha256": "40e6b398d06f6dff1ecdba85819330b54006a0d46aedaa0474613ac451a211cd",
+  "simulator_sha256": "7ad752d4c2137fc6fdf113bbbc6b2d73841929fdd10fa7694ffe1d01434cecc3",
+  "status": "oracle_mismatch",
+  "stage": "complete",
+  "top_module": "xlnxstream_2018_3",
+  "input_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.generic.mlir",
+  "inputs_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/test_data.json",
+  "vcd_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/kimulator/test.vcd",
+  "work_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/kimulator/simulation",
+  "evaluations_per_input": 2,
+  "events_completed": 89,
+  "simulation_calls": 178,
+  "simulation_calls_attempted": 178,
+  "timings": {
+    "compile": 0.016598707999946782,
+    "preprocess": 0.18912708300013037,
+    "setup": 0.18899600000077044,
+    "execution": 36.30603720000727,
+    "read_ports": 0.07960324799933005,
+    "state_export": 0.5509590440015018,
+    "total": 37.40510008400088
+  },
+  "error": null,
+  "input_sha256": "ca2e032153e52973d912f9c49d8e8f2db097c0e03cd46bbb31fecfe28c70f281",
+  "inputs_sha256": "8bab0c208d18b0feb0d899809369581de2b00e351290b8b80a4ab8ba18283ab8",
+  "ports": {
+    "inputs": [
+      {
+        "name": "M_AXIS_ACLK",
+        "width": 1
+      },
+      {
+        "name": "M_AXIS_ARESETN",
+        "width": 1
+      },
+      {
+        "name": "M_AXIS_TREADY",
+        "width": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "M_AXIS_TVALID",
+        "width": 1
+      },
+      {
+        "name": "M_AXIS_TDATA",
+        "width": 32
+      },
+      {
+        "name": "M_AXIS_TSTRB",
+        "width": 4
+      },
+      {
+        "name": "M_AXIS_TLAST",
+        "width": 1
+      }
+    ]
+  },
+  "timescale": "1ns",
+  "events_total": 89,
+  "definition_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+  "definition_sha256": "fbf9e1d4cfa401e0a691e9951222325a45a41620705a8198577a903d4ed4372c",
+  "parser": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/parser",
+  "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+  "event_index": 88,
+  "event_time": 88,
+  "evaluation": 2,
+  "vcd_sha256": "874815c6763b38d6da87b0d8b83ec47bb54285a2c8a913b33a85ebc43f3029f8",
+  "last_state": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/kimulator/simulation/last-state.kore",
+  "last_state_sha256": "b25785320f688bb0799657aa977d372cf3a91e9f1a193184623b93cecc90ad42",
+  "vcd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/kimulator/test.vcd",
+  "vcd_top": "xlnxstream_2018_3",
+  "native_comparison": {
+    "agrees": true,
+    "exit_code": 0,
+    "compared_signals": 7,
+    "event_count": 89,
+    "first_mismatch": null,
+    "errors": [],
+    "artifacts": {
+      "kimulator_vcd": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/kimulator/test.vcd",
+        "sha256": "874815c6763b38d6da87b0d8b83ec47bb54285a2c8a913b33a85ebc43f3029f8",
+        "bytes": 6124
+      },
+      "native_vcd": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/native/trace.vcd",
+        "sha256": "373f4a817a8484d0ec783e8fbb87695b2e980e507a559ab1827b539844ef41db",
+        "bytes": 3006
+      },
+      "preflight": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/comparison/preflight.json",
+        "sha256": "feb60e7a90607d20c271993eace85f04c7a96457b28773b29cbc9249e8ac9a6d",
+        "bytes": 1197
+      },
+      "diffvcd_script": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+        "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+        "bytes": 6040
+      },
+      "command": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/comparison/diffvcd.command.json",
+        "sha256": "1c002839232624400f36578e5b844196a323ee6674c1a0ca8d075c52ad70f022",
+        "bytes": 898
+      },
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/comparison/diffvcd.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/comparison/diffvcd.stderr.log",
+        "sha256": "374f74c07fa770c35477e92405dbe6f81778cae38b21dbe0de23cb41fcfc29dc",
+        "bytes": 404
+      }
+    },
+    "normalization": {
+      "policy": "scalar-equals-i1-zero-range-v1",
+      "applied": false,
+      "mappings": []
+    },
+    "command": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/kimulator/test.vcd",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s2/buggy/native/trace.vcd",
+      "--top1",
+      "xlnxstream_2018_3.",
+      "--top2",
+      "TOP.",
+      "--filter",
+      "^(?:M_AXIS_ACLK|M_AXIS_ARESETN|M_AXIS_TREADY|M_AXIS_TVALID|M_AXIS_TDATA\\[31:0\\]|M_AXIS_TSTRB\\[3:0\\]|M_AXIS_TLAST)$",
+      "--verbose"
+    ]
+  },
+  "samples": [
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 0,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 1,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 1,
+      "M_AXIS_TDATA": 2,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 1,
+      "M_AXIS_TDATA": 3,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 1,
+      "M_AXIS_TDATA": 4,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 1,
+      "M_AXIS_TDATA": 5,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 1,
+      "M_AXIS_TDATA": 6,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 1,
+      "M_AXIS_TDATA": 7,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    },
+    {
+      "M_AXIS_TVALID": 1,
+      "M_AXIS_TDATA": 7,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 1
+    },
+    {
+      "M_AXIS_TVALID": 1,
+      "M_AXIS_TDATA": 7,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 1
+    },
+    {
+      "M_AXIS_TVALID": 0,
+      "M_AXIS_TDATA": 1,
+      "M_AXIS_TSTRB": 15,
+      "M_AXIS_TLAST": 0
+    }
+  ],
+  "oracle": {
+    "agrees": false,
+    "compared_cells": 180,
+    "masked_cells": 0,
+    "first_mismatch": {
+      "sample_index": 42,
+      "signal": "M_AXIS_TLAST",
+      "expected": 0,
+      "actual": 1
+    },
+    "mismatches": [
+      {
+        "sample_index": 42,
+        "signal": "M_AXIS_TLAST",
+        "expected": 0,
+        "actual": 1
+      },
+      {
+        "sample_index": 43,
+        "signal": "M_AXIS_TLAST",
+        "expected": 0,
+        "actual": 1
+      }
+    ]
+  }
+}

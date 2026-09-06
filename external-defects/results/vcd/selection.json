@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "protocol": "external-cli-double-eval-vcd-v1",
+  "formal_run_ids": [
+    "vcd-standard-01",
+    "vcd-standard-02",
+    "vcd-array-bits-02",
+    "vcd-complete-01",
+    "vcd-complete-02",
+    "vcd-complete-03"
+  ],
+  "policy": "显式选择双执行 VCD 批次；历史 CSV 结果不得计入"
+}

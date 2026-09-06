@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "timescale": "1ns",
+  "events": [
+    {
+      "time": 0,
+      "inputs": {
+        "async_rst": 1,
+        "clk": 0,
+        "input_axis_tdata": 0,
+        "input_axis_tvalid": 0,
+        "input_axis_tlast": 0,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 0
+      }
+    },
+    {
+      "time": 1,
+      "inputs": {
+        "async_rst": 1,
+        "clk": 1,
+        "input_axis_tdata": 0,
+        "input_axis_tvalid": 0,
+        "input_axis_tlast": 0,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 0
+      }
+    },
+    {
+      "time": 2,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 0,
+        "input_axis_tdata": 1,
+        "input_axis_tvalid": 0,
+        "input_axis_tlast": 0,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 3,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 1,
+        "input_axis_tdata": 1,
+        "input_axis_tvalid": 0,
+        "input_axis_tlast": 0,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 4,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 0,
+        "input_axis_tdata": 1,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 5,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 1,
+        "input_axis_tdata": 1,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 6,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 0,
+        "input_axis_tdata": 2,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 7,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 1,
+        "input_axis_tdata": 2,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 8,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 0,
+        "input_axis_tdata": 3,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 9,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 1,
+        "input_axis_tdata": 3,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 10,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 0,
+        "input_axis_tdata": 3,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 11,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 1,
+        "input_axis_tdata": 3,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 12,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 0,
+        "input_axis_tdata": 4,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 13,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 1,
+        "input_axis_tdata": 4,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 14,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 0,
+        "input_axis_tdata": 5,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 15,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 1,
+        "input_axis_tdata": 5,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 16,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 0,
+        "input_axis_tdata": 6,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 17,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 1,
+        "input_axis_tdata": 6,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    },
+    {
+      "time": 18,
+      "inputs": {
+        "async_rst": 0,
+        "clk": 0,
+        "input_axis_tdata": 7,
+        "input_axis_tvalid": 1,
+        "input_axis_tlast": 1,
+        "input_axis_tuser": 0,
+        "output_axis_tready": 1
+      }
+    }
+  ]
+}

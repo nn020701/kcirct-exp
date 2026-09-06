@@ -1,0 +1,56 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.5, pytest-8.3.5, pluggy-1.5.0 -- /Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/python
+cachedir: .pytest_cache
+hypothesis profile 'default' -> database=DirectoryBasedExampleDatabase(PosixPath('/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.hypothesis/examples'))
+rootdir: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics
+configfile: pyproject.toml
+plugins: hypothesis-6.131.14, kframework-7.1.323, mock-3.14.0, cov-6.1.1, xdist-3.6.1
+created: 4/4 workers
+4 workers [13 items]
+
+scheduling tests via WorkStealingScheduling
+
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/concat/concat.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/icmp/icmp.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_preset/firreg_preset.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/instance/instance.generic.mlir] 
+[gw3] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_preset/firreg_preset.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_mask/firmem_mask.generic.mlir] 
+[gw2] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/concat/concat.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux/mux.generic.mlir] 
+[gw1] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/icmp/icmp.generic.mlir] 
+[gw0] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/instance/instance.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/constant/constant.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_rx/firmem_rx.generic.mlir] 
+[gw1] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/constant/constant.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/array_inject/array_inject.generic.mlir] 
+[gw2] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux/mux.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux_array/mux_array.generic.mlir] 
+[gw0] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_rx/firmem_rx.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/to_clock/to_clock.generic.mlir] 
+[gw3] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_mask/firmem_mask.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg2/firreg2.generic.mlir] 
+[gw2] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux_array/mux_array.generic.mlir] 
+[gw0] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/to_clock/to_clock.generic.mlir] 
+[gw1] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/array_inject/array_inject.generic.mlir] 
+src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_array/firreg_array.generic.mlir] 
+[gw3] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg2/firreg2.generic.mlir] 
+[gw1] PASSED src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_array/firreg_array.generic.mlir] 
+
+============================= slowest 15 durations =============================
+0.13s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_mask/firmem_mask.generic.mlir]
+0.13s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/instance/instance.generic.mlir]
+0.13s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/icmp/icmp.generic.mlir]
+0.12s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/concat/concat.generic.mlir]
+0.10s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/array_inject/array_inject.generic.mlir]
+0.10s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_preset/firreg_preset.generic.mlir]
+0.09s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux_array/mux_array.generic.mlir]
+0.08s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_rx/firmem_rx.generic.mlir]
+0.08s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_array/firreg_array.generic.mlir]
+0.08s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg2/firreg2.generic.mlir]
+0.08s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux/mux.generic.mlir]
+0.08s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/to_clock/to_clock.generic.mlir]
+0.07s call     src/tests/integration/test_operation.py::test_diffvcd_operatrion[/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/constant/constant.generic.mlir]
+
+(2 durations < 0.005s hidden.  Use -vv to show these durations.)
+============================== 13 passed in 2.23s ==============================

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "command": [
+    "make",
+    "run",
+    "PYTHON=.venv/bin/python",
+    "KIMULATOR=../circt-semantics/.venv/bin/kcirct",
+    "CASES=all-short",
+    "ARGS=--k-bin /Users/bytedance/.nix-profile/bin --run-id vcd-complete-02"
+  ],
+  "host_exit_code": 0,
+  "runner_exit_code": 0,
+  "evidence": "exec session 76647 final exit_code=0；10 个案例 result.status 全部 pass。",
+  "status": "pass"
+}

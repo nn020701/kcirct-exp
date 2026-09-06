@@ -1,0 +1,89 @@
+{
+  "passed": true,
+  "ports": [
+    {
+      "name": "clk",
+      "width": 1
+    },
+    {
+      "name": "rst",
+      "width": 1
+    },
+    {
+      "name": "input_axis_tdata",
+      "width": 64
+    },
+    {
+      "name": "input_axis_tkeep",
+      "width": 8
+    },
+    {
+      "name": "input_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "input_axis_tlast",
+      "width": 1
+    },
+    {
+      "name": "input_axis_tuser",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tready",
+      "width": 1
+    },
+    {
+      "name": "input_axis_tready",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tdata",
+      "width": 8
+    },
+    {
+      "name": "output_axis_tkeep",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tlast",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tuser",
+      "width": 1
+    }
+  ],
+  "times": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "errors": []
+}

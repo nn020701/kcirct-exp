@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "description": "S2 在 AutoConnect 改动前后，保持相同输入、IR、API、CLI、parser和setup的状态比较；源码差异仅circt.md。改前178state无变化，改后9state变化，确认本轮修改引入的元数据回归。",
+  "artifacts": {
+    "evidence/vcd/metadata-integrity/vcd-complete-02/audit/s2-before-autoconnect-audit.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/s2-before-autoconnect-audit.json",
+      "source": ".work/complete-exp/s2-before-autoconnect-audit.json",
+      "sha256": "fbe599da025fd4330f5910e4d28462129d58f114603732269b1fe56ab86740e8",
+      "bytes": 102405
+    }
+  }
+}

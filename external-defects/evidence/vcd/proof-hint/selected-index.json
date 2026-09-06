@@ -1,0 +1,772 @@
+{
+  "schema_version": 1,
+  "artifacts": [
+    {
+      "path": "current/build.json",
+      "source": ".work/complete-exp/proof-hint/current/build.json",
+      "sha256": "f8a4aae66b3d22294a9005c7b5c833486cebebb5ed217124de497ef03da1f023",
+      "bytes": 1499,
+      "method": "原字节复制"
+    },
+    {
+      "path": "current/build-lite.json",
+      "source": ".work/complete-exp/proof-hint/current/build-lite.json",
+      "sha256": "0e198dcdb5aa7f7594b05c7dcb053dad2d304d17dc298d3bec3e4f75a6804dbf",
+      "bytes": 1284,
+      "method": "原字节复制"
+    },
+    {
+      "path": "current/source-identity.json",
+      "source": ".work/complete-exp/proof-hint/current/source-identity.json",
+      "sha256": "982d385818ca54e946705e29c82d4547ad145039656aecc36cc69bc68fe81c5b",
+      "bytes": 5199,
+      "method": "原字节复制"
+    },
+    {
+      "path": "current/runs.json",
+      "source": ".work/complete-exp/proof-hint/current/runs.json",
+      "sha256": "348bf433dfec8396772ce0315b3244c7aa7ee7c023f29dba9d535059726ab470",
+      "bytes": 9256,
+      "method": "原字节复制"
+    },
+    {
+      "path": "current/runs-lite.json",
+      "source": ".work/complete-exp/proof-hint/current/runs-lite.json",
+      "sha256": "c16ddee02767c996a76704ac460a71931c055fc04a9eb53a818c488e57ca37f3",
+      "bytes": 9285,
+      "method": "原字节复制"
+    },
+    {
+      "path": "current/run_boundary.py",
+      "source": ".work/complete-exp/proof-hint/current/run_boundary.py",
+      "sha256": "2edfb4ee0c507e82f0d049ca9bd2661eabd24362ff531f32d0b73d095b2072d6",
+      "bytes": 3946,
+      "method": "原字节复制"
+    },
+    {
+      "path": "current/run_boundary_lite.py",
+      "source": ".work/complete-exp/proof-hint/current/run_boundary_lite.py",
+      "sha256": "384d9972b3c05a7051cd983f8d71a81ad321b7404d653953c6e1988c63e49d39",
+      "bytes": 3971,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/source-identity.json",
+      "source": ".work/complete-exp/proof-hint/old/source-identity.json",
+      "sha256": "7870037cd8f566ab5946c2829082bdc74e0e65f5c2a611fb1a9323018fd6c505",
+      "bytes": 5492,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/summary.json",
+      "source": ".work/complete-exp/proof-hint/old/summary.json",
+      "sha256": "a663d05084963cfe78db176e263f0781d911498dc031ec1f33c337805a251cf3",
+      "bytes": 25897,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/build.command.json",
+      "source": ".work/complete-exp/proof-hint/old/build.command.json",
+      "sha256": "d5476adcbcc2d615a4bdc2e0aef26832f5ef1890aaaed600dd81245e5e8ac73e",
+      "bytes": 2727,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/build.result.json",
+      "source": ".work/complete-exp/proof-hint/old/build.result.json",
+      "sha256": "4fb8f9cfebd2ea7094c91b93873ded06dd438bf92d12e095bd0d93d0c8f7eb71",
+      "bytes": 2780,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/build-lite.command.json",
+      "source": ".work/complete-exp/proof-hint/old/build-lite.command.json",
+      "sha256": "c2c904d1c18131512a2bbafb30905f384a6995a701dd459f95cb2e880dade727",
+      "bytes": 2659,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/build-lite.result.json",
+      "source": ".work/complete-exp/proof-hint/old/build-lite.result.json",
+      "sha256": "0ac6c25b80e371c9a2462f5b5721bfd6be4aa00e70b663644a4344f164908e70",
+      "bytes": 2712,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3/summary.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3/summary.json",
+      "sha256": "8744d20dc540f8bfd49e05244fea86989af1ceee27b0897ea6e3ccfbbae85418",
+      "bytes": 17276,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3/terminal-comparison.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3/terminal-comparison.json",
+      "sha256": "147fa14aebdf0710cd042e24507eaafa6ec4e4df60fdb51607584b32733fb39b",
+      "bytes": 102204,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3/compute-loc.stdout",
+      "source": ".work/complete-exp/proof-hint/decoder/s3/compute-loc.stdout",
+      "sha256": "47f4f05a673325c438b23dc1fe38731b7bf43ee1758ffca931c85c3c48914fe6",
+      "bytes": 162,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3/compute-loc.stderr",
+      "source": ".work/complete-exp/proof-hint/decoder/s3/compute-loc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3/commands.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3/commands.json",
+      "sha256": "3af5f8eb0989041effb8b5ba1b5854e423f7d658777f5f6c6bd88805b6893703",
+      "bytes": 3952,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3/rule-1304.kore",
+      "source": ".work/complete-exp/proof-hint/decoder/s3/axioms/1304.kore",
+      "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+      "bytes": 3140,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3/final.kore.gz",
+      "source": ".work/complete-exp/proof-hint/decoder/s3/final.kore",
+      "sha256": "c6009c05f62919c8125378cbf66de6e76085b1ed8621ea823e7909b90360af53",
+      "uncompressed_sha256": "dc24f87413ac1ef130c75cb8015fa8f73dffc579aca785cc9500802f90f2a4ba",
+      "bytes": 15885,
+      "method": "gzip无损压缩"
+    },
+    {
+      "path": "decoded/s3-lite/summary.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3-lite/summary.json",
+      "sha256": "28ab707b5598addcf5d88dbc02e0cc556ea2bf0af34c3619282f28ed8ad78221",
+      "bytes": 17398,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3-lite/terminal-comparison.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3-lite/terminal-comparison.json",
+      "sha256": "5dd7cecb737d8f8c2c2918824508353f1c31e34d167ff76fc5a0c8060f2ac5a0",
+      "bytes": 102281,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3-lite/compute-loc.stdout",
+      "source": ".work/complete-exp/proof-hint/decoder/s3-lite/compute-loc.stdout",
+      "sha256": "47f4f05a673325c438b23dc1fe38731b7bf43ee1758ffca931c85c3c48914fe6",
+      "bytes": 162,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3-lite/compute-loc.stderr",
+      "source": ".work/complete-exp/proof-hint/decoder/s3-lite/compute-loc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3-lite/commands.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3-lite/commands.json",
+      "sha256": "b334205b25d429e551b985f2e9de76fe5bf3fc3b0e2048261a63ae6e4abbdfc4",
+      "bytes": 4012,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3-lite/rule-1304.kore",
+      "source": ".work/complete-exp/proof-hint/decoder/s3-lite/axioms/1304.kore",
+      "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+      "bytes": 3140,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3-lite/final.kore.gz",
+      "source": ".work/complete-exp/proof-hint/decoder/s3-lite/final.kore",
+      "sha256": "c6009c05f62919c8125378cbf66de6e76085b1ed8621ea823e7909b90360af53",
+      "uncompressed_sha256": "dc24f87413ac1ef130c75cb8015fa8f73dffc579aca785cc9500802f90f2a4ba",
+      "bytes": 15885,
+      "method": "gzip无损压缩"
+    },
+    {
+      "path": "decoded/d12/summary.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12/summary.json",
+      "sha256": "6d3beba7eabb35c5229961d186d42edb0efc291ac6546120959abbfe268164e6",
+      "bytes": 17263,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12/terminal-comparison.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12/terminal-comparison.json",
+      "sha256": "40cc455c9d59ea794ea4382732ce5fcedaa5e3aff461283bf1840ab369b8c1cf",
+      "bytes": 57841,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12/compute-loc.stdout",
+      "source": ".work/complete-exp/proof-hint/decoder/d12/compute-loc.stdout",
+      "sha256": "47f4f05a673325c438b23dc1fe38731b7bf43ee1758ffca931c85c3c48914fe6",
+      "bytes": 162,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12/compute-loc.stderr",
+      "source": ".work/complete-exp/proof-hint/decoder/d12/compute-loc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12/commands.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12/commands.json",
+      "sha256": "6e95b6354bab45d96795ff94db2694b7973b09ac1c8ce95ccb2c9c3d7c84c06c",
+      "bytes": 3963,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12/rule-1304.kore",
+      "source": ".work/complete-exp/proof-hint/decoder/d12/axioms/1304.kore",
+      "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+      "bytes": 3140,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12/final.kore.gz",
+      "source": ".work/complete-exp/proof-hint/decoder/d12/final.kore",
+      "sha256": "0da2bcf933d6fb157face07106afa1ee32a349886c5d32bba0d9c554d983b143",
+      "uncompressed_sha256": "365096e360d2255db70ba929ea90f57b372c1ace1023a18d6269f51146e38a50",
+      "bytes": 8449,
+      "method": "gzip无损压缩"
+    },
+    {
+      "path": "decoded/d12-lite/summary.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12-lite/summary.json",
+      "sha256": "c821510a3c8c2ee827ce29f832ce280c6478aff3309dc32daf55ba4cc57d07c8",
+      "bytes": 17386,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12-lite/terminal-comparison.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12-lite/terminal-comparison.json",
+      "sha256": "b8a551b01229d27e3be62deca41e4b19bdae4fa871a84c8bb6356471c57f3ffe",
+      "bytes": 57927,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12-lite/compute-loc.stdout",
+      "source": ".work/complete-exp/proof-hint/decoder/d12-lite/compute-loc.stdout",
+      "sha256": "47f4f05a673325c438b23dc1fe38731b7bf43ee1758ffca931c85c3c48914fe6",
+      "bytes": 162,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12-lite/compute-loc.stderr",
+      "source": ".work/complete-exp/proof-hint/decoder/d12-lite/compute-loc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12-lite/commands.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12-lite/commands.json",
+      "sha256": "08f54ad7623ab40a43c44dad652a30acc6af3297dcf4b5ff3dbd80424f06c723",
+      "bytes": 4023,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12-lite/rule-1304.kore",
+      "source": ".work/complete-exp/proof-hint/decoder/d12-lite/axioms/1304.kore",
+      "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+      "bytes": 3140,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12-lite/final.kore.gz",
+      "source": ".work/complete-exp/proof-hint/decoder/d12-lite/final.kore",
+      "sha256": "0da2bcf933d6fb157face07106afa1ee32a349886c5d32bba0d9c554d983b143",
+      "uncompressed_sha256": "365096e360d2255db70ba929ea90f57b372c1ace1023a18d6269f51146e38a50",
+      "bytes": 8449,
+      "method": "gzip无损压缩"
+    },
+    {
+      "path": "decoded/s2/summary.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2/summary.json",
+      "sha256": "d053ae3992d5221943a0d3564fb195c7e57d5ec37acf14c3f734416edd0c89e8",
+      "bytes": 16793,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2/terminal-comparison.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2/terminal-comparison.json",
+      "sha256": "87079bb24f958a37190f62814d5efdaeb3fb153182f3ffe9f1784ac54703ec71",
+      "bytes": 32139,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2/compute-loc.stdout",
+      "source": ".work/complete-exp/proof-hint/decoder/s2/compute-loc.stdout",
+      "sha256": "c625c9711d521854804f722742ef771cecb9623ed973e651a2f1caa9c5b5767a",
+      "bytes": 155,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2/compute-loc.stderr",
+      "source": ".work/complete-exp/proof-hint/decoder/s2/compute-loc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2/commands.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2/commands.json",
+      "sha256": "a4b20c92a112e4cad17877c191e73530777065baf3eacf99efb7fa3ae531bc51",
+      "bytes": 3956,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2/rule-1277.kore",
+      "source": ".work/complete-exp/proof-hint/decoder/s2/axioms/1277.kore",
+      "sha256": "3eddd1870fd8bedf998803ccf2a647479bbf6168b755887549fb6e90fa81cd7e",
+      "bytes": 3329,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2/final.kore.gz",
+      "source": ".work/complete-exp/proof-hint/decoder/s2/final.kore",
+      "sha256": "c99e3d89ed03510940e311bbd456949b942989250f2ce347e44fa4031f63b080",
+      "uncompressed_sha256": "c80664a3ec93e00baa380d6937c42f0f613882046c5144baafd07f059f83b07a",
+      "bytes": 7119,
+      "method": "gzip无损压缩"
+    },
+    {
+      "path": "decoded/s2-lite/summary.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2-lite/summary.json",
+      "sha256": "2e5d8d5db5d700eb54f902b4696a8f0be2b5b0477469a38277e766eff50fc489",
+      "bytes": 16915,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2-lite/terminal-comparison.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2-lite/terminal-comparison.json",
+      "sha256": "41832673f59381ce372897a8cecf7e220528166deeb06b78987ced27d0fbefcb",
+      "bytes": 32231,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2-lite/compute-loc.stdout",
+      "source": ".work/complete-exp/proof-hint/decoder/s2-lite/compute-loc.stdout",
+      "sha256": "c625c9711d521854804f722742ef771cecb9623ed973e651a2f1caa9c5b5767a",
+      "bytes": 155,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2-lite/compute-loc.stderr",
+      "source": ".work/complete-exp/proof-hint/decoder/s2-lite/compute-loc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2-lite/commands.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2-lite/commands.json",
+      "sha256": "d7bc99148d67f6bb11aaf2ffb3dcc68a321b8298110147b98ff75b6cceae8c0b",
+      "bytes": 4016,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2-lite/rule-1277.kore",
+      "source": ".work/complete-exp/proof-hint/decoder/s2-lite/axioms/1277.kore",
+      "sha256": "3eddd1870fd8bedf998803ccf2a647479bbf6168b755887549fb6e90fa81cd7e",
+      "bytes": 3329,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2-lite/final.kore.gz",
+      "source": ".work/complete-exp/proof-hint/decoder/s2-lite/final.kore",
+      "sha256": "c99e3d89ed03510940e311bbd456949b942989250f2ce347e44fa4031f63b080",
+      "uncompressed_sha256": "c80664a3ec93e00baa380d6937c42f0f613882046c5144baafd07f059f83b07a",
+      "bytes": 7119,
+      "method": "gzip无损压缩"
+    },
+    {
+      "path": "old/d12/hint-depth-943/command.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/hint-depth-943/command.json",
+      "sha256": "3b7df2c31f47dd839a7439b495f540722deedf8bac907ea939bd65cc514afe09",
+      "bytes": 2647,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/d12/lite-hint-depth-943/command.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/lite-hint-depth-943/command.json",
+      "sha256": "4180411d327017f4a9b564534770f8bd607c1643463134431c9ac44a537c43d0",
+      "bytes": 2709,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/d12/lite-normal-depth-943/command.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/lite-normal-depth-943/command.json",
+      "sha256": "f45f4a7629df52ccecf0d7a831bae349656b82f9ec7454ec848b649f6b2a8c63",
+      "bytes": 2693,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/d12/normal-depth-942/command.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/normal-depth-942/command.json",
+      "sha256": "c43e0920cb9df5c030e44fa9509a5d3b36da715ba6d8565b494f2f38e3099193",
+      "bytes": 2630,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/d12/normal-depth-943/command.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/normal-depth-943/command.json",
+      "sha256": "c23b9494aac82d44955392b522095315c0591ba325874d30cb3fbe57a082765a",
+      "bytes": 2631,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/hint-depth-1957/command.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/hint-depth-1957/command.json",
+      "sha256": "4225923614ac51e3a3046f84e26ef76dbf16c5f91d583541d860987146924114",
+      "bytes": 2648,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/lite-hint-depth-1957/command.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/lite-hint-depth-1957/command.json",
+      "sha256": "f1862ca6306a2b29b98b57359d676856bfebcc43e65084e24b6b12be0dc4abf2",
+      "bytes": 2709,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/lite-normal-depth-1957/command.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/lite-normal-depth-1957/command.json",
+      "sha256": "7404016a28d16db42f2dc1e779f410899a11a84676aaffaa36e56c54d19b5d98",
+      "bytes": 2693,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/normal-depth-1956/command.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/normal-depth-1956/command.json",
+      "sha256": "4d0627ae804770a23f30cd2eaa81de898aaa2be0c85ae928f09e3df580c7748c",
+      "bytes": 2630,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/normal-depth-1957/command.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/normal-depth-1957/command.json",
+      "sha256": "6b66846b09bc5cbeb5ad8889d3d3d9aac9b3f4b9e91901254cfe1d53ac2d46d7",
+      "bytes": 2630,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/d12/hint-depth-943/result.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/hint-depth-943/result.json",
+      "sha256": "137696af667c82b4dcfd8b28cd3247d04040cf06a4c0fa7b5cedf83afacbe4a4",
+      "bytes": 2968,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/d12/lite-hint-depth-943/result.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/lite-hint-depth-943/result.json",
+      "sha256": "980b1f16306beec21d214c297b5427bcef0efa54be3b89edfa0edd56dce1eb8e",
+      "bytes": 3202,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/d12/lite-normal-depth-943/result.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/lite-normal-depth-943/result.json",
+      "sha256": "66e06a42084e0da08c367bac444b5fc9482d3afd7dfcb5f6df0c26b4c3f2c590",
+      "bytes": 3319,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/d12/normal-depth-942/result.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/normal-depth-942/result.json",
+      "sha256": "d4dc909260bfbf8b4612b116b891e98e30aaf8aff4353c0d72242f0d0ce9555a",
+      "bytes": 3200,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/d12/normal-depth-943/result.json",
+      "source": ".work/complete-exp/proof-hint/old/d12/normal-depth-943/result.json",
+      "sha256": "d615fdc856fe5ef955e6f41a1063f4e7b6f6453831c3d6b98e069dbe000f99e8",
+      "bytes": 3202,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/hint-depth-1957/result.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/hint-depth-1957/result.json",
+      "sha256": "ed12918cf3339907e661435174ef417216419b368d16b29b79acab495892774c",
+      "bytes": 2968,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/lite-hint-depth-1957/result.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/lite-hint-depth-1957/result.json",
+      "sha256": "74b94506493563d30f40806fd734436daa27f6f7d02f96629792abdca6ec06b0",
+      "bytes": 3201,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/lite-normal-depth-1957/result.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/lite-normal-depth-1957/result.json",
+      "sha256": "f70644ba0be151c804b318b701b2ba37da1a1d312cd266c35e663a7a8eabde43",
+      "bytes": 3329,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/normal-depth-1956/result.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/normal-depth-1956/result.json",
+      "sha256": "db979209de3491c6afe00605ba4a2651f0894a50647cc3afa37374d1c5bac397",
+      "bytes": 3191,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/s3/normal-depth-1957/result.json",
+      "source": ".work/complete-exp/proof-hint/old/s3/normal-depth-1957/result.json",
+      "sha256": "4c70fe1da0c7c31e3ffbcc282a0e68ea4e1983fc07030dc983e6ca5138b544f9",
+      "bytes": 3192,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/boundary-review.md",
+      "source": ".work/complete-exp/proof-hint/decoder/boundary-review.md",
+      "sha256": "5bea3a71ff21b3e0e1cf2a617d669c6a37fee2cfa9cc55b06d160134a4b2de29",
+      "bytes": 4233,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/boundary-summary.json",
+      "source": ".work/complete-exp/proof-hint/decoder/boundary-summary.json",
+      "sha256": "a4a6d3ad2420a86381c7041c23a34a20329523d73a32073eafb4c558ee59c332",
+      "bytes": 29040,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/decode_hint.py",
+      "source": ".work/complete-exp/proof-hint/decoder/decode_hint.py",
+      "sha256": "d2a79ca89558b2960caf46345f7514a2351f448093593be636267bc03b242fc2",
+      "bytes": 8667,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/compare_terminals.py",
+      "source": ".work/complete-exp/proof-hint/decoder/compare_terminals.py",
+      "sha256": "e472720137125181f82878d6fa7cf25d92d2df660073783c8054111b1132a32e",
+      "bytes": 6471,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/verification.json",
+      "source": ".work/complete-exp/proof-hint/decoder/verification.json",
+      "sha256": "57d9a60ad68b81c5807e2f9fc15ffacfb571b5e4ffb6ae503ebab1e937792530",
+      "bytes": 317,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3/boundary-events.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3/boundary-events.json",
+      "sha256": "b8b30cf2f21d5510670171df2b7235a145a42263c205f6d49c2fc2ccdc0c9b48",
+      "bytes": 4046,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3/environment.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3/environment.json",
+      "sha256": "072660317685db0770d80d20bb498a195f3c7f7235c397849810de43f18a8ef4",
+      "bytes": 1415,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12/boundary-events.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12/boundary-events.json",
+      "sha256": "59670b2f74cca060743c179bc8e096bfd54e3f4fe308c439ce3d6bc46d198199",
+      "bytes": 3994,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12/environment.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12/environment.json",
+      "sha256": "e2bc97c7144d7bd8f18d2586f511e822d55e6745063b6edea196df751ebe53b1",
+      "bytes": 1416,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2/boundary-events.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2/boundary-events.json",
+      "sha256": "5bebcc8fab4855453c40d5da987e53d8c250d48ffdf8a915765cd3fb2a855185",
+      "bytes": 4348,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2/environment.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2/environment.json",
+      "sha256": "ae971094a7c9c6adf374ebe52efc6fd4a788476d0015be14703e5f036873d338",
+      "bytes": 1397,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3-lite/boundary-events.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3-lite/boundary-events.json",
+      "sha256": "5e5d4219b535f6595d9aa68a8bd40bcd1051f3320183de28154ee66f137bc072",
+      "bytes": 4221,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s3-lite/environment.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s3-lite/environment.json",
+      "sha256": "6910067d37ac8a388f53b233cb06a0d8dd9d027acd51e270e38f1a42b3d09791",
+      "bytes": 1435,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12-lite/boundary-events.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12-lite/boundary-events.json",
+      "sha256": "b5fb6dc807a9c761e5a911d875731f5ce29a1cd839be16a462222f0788d00866",
+      "bytes": 4242,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/d12-lite/environment.json",
+      "source": ".work/complete-exp/proof-hint/decoder/d12-lite/environment.json",
+      "sha256": "1b28b2b4d0eafe9e1b1a3dbfdd0eac4c98fd3a6f6c112c97b407775c4ae80ba4",
+      "bytes": 1436,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2-lite/boundary-events.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2-lite/boundary-events.json",
+      "sha256": "421eaaf596ce5b0720dcfa596917b43a5b30e42a174c4b582ca186f863fabc9b",
+      "bytes": 4457,
+      "method": "原字节复制"
+    },
+    {
+      "path": "decoded/s2-lite/environment.json",
+      "source": ".work/complete-exp/proof-hint/decoder/s2-lite/environment.json",
+      "sha256": "fbcafb4d1298e042dafdc75e37dff90f6237c346dd69015a2dfc546402b93db0",
+      "bytes": 1417,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/lite-replays.json",
+      "source": ".work/complete-exp/proof-hint/old/lite-replays.json",
+      "sha256": "cf02dfaad3f97fd3ab59d0c86073a25160214e1ab54bf1585d53f4f3c9b5e6e3",
+      "bytes": 13358,
+      "method": "原字节复制"
+    },
+    {
+      "path": "old/definition-lite-identity.json",
+      "source": ".work/complete-exp/proof-hint/old/definition-lite-identity.json",
+      "sha256": "079998e271ba449d9e3f36fdd1782e28d4f2364643c97a1db18382b39fb569ff",
+      "bytes": 348,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/source-identity.json",
+      "source": ".work/complete-exp/proof-hint/runtime/source-identity.json",
+      "sha256": "5f98124033e3e08432498eaf0758d9cfd863c69e51dd43381888a354e21bd27f",
+      "bytes": 9649,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/findings.json",
+      "source": ".work/complete-exp/proof-hint/runtime/findings.json",
+      "sha256": "e5c3728c304ebb06f2c0d00e79a3aee59723f21fb4db151301dc9a4562c027ce",
+      "bytes": 25083,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/proof-output-findings.json",
+      "source": ".work/complete-exp/proof-hint/runtime/proof-output-findings.json",
+      "sha256": "7a6f41418ad12658bdf356fbc10eff24cdb389d10b5d8fd4117311beb62252ed",
+      "bytes": 12253,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/source-excerpts.txt",
+      "source": ".work/complete-exp/proof-hint/runtime/source-excerpts.txt",
+      "sha256": "692002e787d0ec0def67dfb312d52b11b235b80c52c216eef7d86a84dbed47ba",
+      "bytes": 11973,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/proof-source-excerpts.txt",
+      "source": ".work/complete-exp/proof-hint/runtime/proof-source-excerpts.txt",
+      "sha256": "c1dff2ebab74930cd4412fecee5a6e1ee5a602644aad4683933a7f018f413b11",
+      "bytes": 18656,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/hook-relocation-excerpts.txt",
+      "source": ".work/complete-exp/proof-hint/runtime/hook-relocation-excerpts.txt",
+      "sha256": "04be9f58e0dd4d0e592e44ebf634bd4839c6ca3819d52b7cd099c36d9d369003",
+      "bytes": 1551,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/sources/llvm/runtime/collections/lists.cpp",
+      "source": ".work/complete-exp/proof-hint/runtime/sources/llvm/runtime/collections/lists.cpp",
+      "sha256": "cb382ebb74cacfe8f8534cbe84eb1bec7ffbbea58bb1dd7e20b35603ec9bd98a",
+      "bytes": 7796,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/sources/llvm/runtime/collect/migrate_collection.cpp",
+      "source": ".work/complete-exp/proof-hint/runtime/sources/llvm/runtime/collect/migrate_collection.cpp",
+      "sha256": "c98095db3860f68dad3f876b87af1ca6109c824c86ba56f2155ad81f5162eecd",
+      "bytes": 4136,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/sources/llvm/runtime/util/ConfigurationSerializer.cpp",
+      "source": ".work/complete-exp/proof-hint/runtime/sources/llvm/runtime/util/ConfigurationSerializer.cpp",
+      "sha256": "d5f9b8fe0f4f32c5765f6f1103d5bdf4cdd6471362d074513249b55b39eb198d",
+      "bytes": 25477,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/sources/llvm/include/runtime/header.h",
+      "source": ".work/complete-exp/proof-hint/runtime/sources/llvm/include/runtime/header.h",
+      "sha256": "7b47fc3c6b2e2e5fb354e8fea8d252ba59ef5e1f7c77651ff21016bbbb5ff771",
+      "bytes": 12953,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/sources/llvm/include/runtime/proof_trace_writer.h",
+      "source": ".work/complete-exp/proof-hint/runtime/sources/llvm/include/runtime/proof_trace_writer.h",
+      "sha256": "5af1e2f7eaa094e770dba39018fc8af105e218ad076464b6965168766abf2de6",
+      "bytes": 12691,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/sources/immer/immer/transience/gc_transience_policy.hpp",
+      "source": ".work/complete-exp/proof-hint/runtime/sources/immer/immer/transience/gc_transience_policy.hpp",
+      "sha256": "04eeadd6b3c9a4e5a1e98e3f2ba3378139d67687270ba784c3da29a95ea6254b",
+      "bytes": 3062,
+      "method": "原字节复制"
+    },
+    {
+      "path": "runtime/sources/immer/immer/detail/rbts/operations.hpp",
+      "source": ".work/complete-exp/proof-hint/runtime/sources/immer/immer/detail/rbts/operations.hpp",
+      "sha256": "cacf1cbe9f9466242cb170d0ad449ccb22455961a47d1b41a224aed12a3d09d8",
+      "bytes": 87136,
+      "method": "原字节复制"
+    },
+    {
+      "path": "README.md",
+      "sha256": "59c209218639ca49ad5267e1470d2d9a09e028ab0cbcf6f0394c773a7fea93bb",
+      "bytes": 5366,
+      "method": "根据已保存记录生成"
+    },
+    {
+      "path": "raw-hints.json",
+      "sha256": "f3520f767df6103a2b29fd71754058c459d1d4cad6e17eed545d105656f45322",
+      "bytes": 5896,
+      "method": "根据已保存记录生成"
+    }
+  ]
+}

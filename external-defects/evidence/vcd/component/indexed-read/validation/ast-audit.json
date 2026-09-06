@@ -1,0 +1,31 @@
+{
+  "method": "原始state离线复核；不重跑，递归Map排序，List严格有序",
+  "replay_script_sha256": "69acd598a1fb37b88c694541aca5acf1f19d20a91f13c0e41fe8cd2a63fe12a7",
+  "all_pass": true,
+  "states": [
+    {
+      "case": "s3",
+      "input_sha256": "a5388d3758a00d24192fa1c545de618d787327e8d1ddda90d46202f0eda89b2b",
+      "output_sha256": "2971f11de33fbbc476a18f9441bbe924d7ae8f7490854f066d150b78e49e6ec3",
+      "connection_unchanged": true,
+      "current_cells": 0,
+      "pass": true
+    },
+    {
+      "case": "d12",
+      "input_sha256": "a497e04d235733fd92536b6e7707de3438be6c436c30227e326b4cf116b7158c",
+      "output_sha256": "fd7305c42266d1a89b21bd6612e2af47ef9585cc240ff3ab082195ac5a900cc6",
+      "connection_unchanged": true,
+      "current_cells": 0,
+      "pass": true
+    },
+    {
+      "case": "s2",
+      "input_sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1",
+      "output_sha256": "da35e4f75e5cb83f6a804da2afdb82fd13b4aa7999692eb6e51debbad1fe8277",
+      "connection_unchanged": true,
+      "current_cells": 0,
+      "pass": true
+    }
+  ]
+}

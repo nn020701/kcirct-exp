@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "description": "当前事实文档与S2 manifest/IR索引全部更新后的针对性核验。",
+  "artifacts": {
+    "evidence/vcd/validation/final-manifest-index/result.json": {
+      "path": "evidence/vcd/validation/final-manifest-index/result.json",
+      "source": ".work/complete-exp/final-document-validation/result.json",
+      "sha256": "0692d78686e0d88514f4ee9c07584111753922483d94b20ff3bf1ab28fc55eed",
+      "bytes": 378
+    },
+    "evidence/vcd/validation/final-manifest-index/stdout.log": {
+      "path": "evidence/vcd/validation/final-manifest-index/stdout.log",
+      "source": ".work/complete-exp/final-document-validation/stdout.log",
+      "sha256": "93c97c10af4fc8b54296201243c032c5e8295479ca6b4adc06019033d6f9e282",
+      "bytes": 98
+    },
+    "evidence/vcd/validation/final-manifest-index/stderr.log": {
+      "path": "evidence/vcd/validation/final-manifest-index/stderr.log",
+      "source": ".work/complete-exp/final-document-validation/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

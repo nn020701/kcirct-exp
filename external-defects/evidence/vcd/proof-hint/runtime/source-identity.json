@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "installed_k": "/nix/store/jv1s6amn3hx8i7241v1j4hx5js4274d6-k-7.1.323-6ee29000016c6addb83b39ac865860f9542b3ebf",
+  "installed_llvm": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139",
+  "derivation": {
+    "path": "/nix/store/0zg9bljlg54db69vxj8jh4afwl6pflhq-llvm-backend-0.1.139.drv",
+    "src_assembled": "/nix/store/rlb0k7figm4kxaadqkgqva5hyr4v22cm-llvm-backend-src",
+    "assembled_exists": false,
+    "patches": "",
+    "source_derivation": "/nix/store/n3kxyn9w54b00kwk5a2ng6gb1yag5wdp-llvm-backend-src.drv",
+    "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source",
+    "source_exists": true,
+    "installPhase": "mkdir $out\ncp -rv $src/* $out\nchmod -R u+w $out\nmkdir -p $out/deps/fmt\nmkdir -p $out/deps/immer\nmkdir -p $out/deps/rapidjson\nmkdir -p $out/deps/pybind11\ncp -rv /nix/store/gwnwsiya5wv9k3440kb15bh45z8vblij-source/* $out/deps/fmt\ncp -rv /nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/* $out/deps/immer\ncp -rv /nix/store/6hz4r4ic177n5448sbydbrlajvba9b2m-source/* $out/deps/rapidjson\ncp -rv /nix/store/h47ywvcib0zl21a43xz4icslrjdfzm4x-source/* $out/deps/pybind11\n",
+    "cmakeFlags": "-DCMAKE_C_COMPILER=/nix/store/jbzrdw3k9vf33whys0b9n52m992jz89l-clang-wrapper-17.0.6/bin/cc -DCMAKE_CXX_COMPILER=/nix/store/jbzrdw3k9vf33whys0b9n52m992jz89l-clang-wrapper-17.0.6/bin/c++ -DLLVM_CLANG_PATH=/nix/store/3fjy1ncihx8by7jbmcx7jm2vfd9q7wc1-clang-wrapper-17.0.6/bin/clang -DLLVM_CONFIG_PATH=/nix/store/if3f5z5p2rd3nr3w4m79iccs0fc0hl6q-llvm-17.0.6-dev/bin/llvm-config -DUSE_NIX=TRUE -DCMAKE_SKIP_BUILD_RPATH=FALSE -DBUILD_TESTS=True -DK_LLVM_BACKEND_LTO=OFF"
+  },
+  "derivation_records": {
+    "llvm-backend.drv": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/derivations/llvm-backend.drv",
+      "sha256": "732e308ce5283d3fad1b71c325aad0520e31e4d7f1bc47ef106d15977df4c681",
+      "bytes": 7295
+    },
+    "llvm-backend-src.drv": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/derivations/llvm-backend-src.drv",
+      "sha256": "483509b35cbd8b3ad0bd2e8cda25840a373bf11adda6d8320a60102ef5e0d515",
+      "bytes": 2328
+    }
+  },
+  "libraries": {
+    "libcollections.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollections.a",
+      "sha256": "cac99c213c8548f913916f55fb35fb4949b031fc4c2e84883dec15cd944d8051",
+      "bytes": 11139304
+    },
+    "libcollect.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollect.a",
+      "source": null,
+      "sha256": "b9ee033076b02feef8852e4aa4a311716fc10b6e02fb3cd9f4e355b428983007",
+      "bytes": 626344
+    },
+    "liballoc.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/liballoc.a",
+      "sha256": "e1cd571e993f3b21bebb36b41a6222123468d57c8bd3ee88ae1cda5360c4da19",
+      "bytes": 165768
+    },
+    "libutil.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libutil.a",
+      "sha256": "77a1a49a369254a495b528bdc392cf5a3fa83ff90b8cacc55140100a55c0a0f1",
+      "bytes": 10658464
+    },
+    "libarithmetic.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libarithmetic.a",
+      "sha256": "c48ef3a954771d5b981a7dd8b39f1fb2736b54825353fbcab963842028b39189",
+      "bytes": 2706960
+    }
+  },
+  "source_origin": "由已安装包 deriver 精确追踪到仍存在的 LLVM 与 Immer 原始 Nix 输入；没有下载，也没有用其他版本源码替代。拼装输出已不存在。",
+  "header_byte_matches": [
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/flex_vector.hpp",
+        "source": null,
+        "sha256": "e20a85ff7cce1cb8aacc59a18ba4d98f58d78437e039f4e9137161376b36dda3",
+        "bytes": 18800
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/flex_vector.hpp",
+        "source": null,
+        "sha256": "e20a85ff7cce1cb8aacc59a18ba4d98f58d78437e039f4e9137161376b36dda3",
+        "bytes": 18800
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/flex_vector_transient.hpp",
+        "source": null,
+        "sha256": "c1703719485d74628af99715d8eb469b8b003039454c540347ab0e2cea95a92f",
+        "bytes": 7622
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/flex_vector_transient.hpp",
+        "source": null,
+        "sha256": "c1703719485d74628af99715d8eb469b8b003039454c540347ab0e2cea95a92f",
+        "bytes": 7622
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/memory_policy.hpp",
+        "source": null,
+        "sha256": "1627029ede29e5ca6b6ee9e92c3ed3e6218d8ac4ccc3f3d4507f8b5aebe0ed94",
+        "bytes": 4865
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/memory_policy.hpp",
+        "source": null,
+        "sha256": "1627029ede29e5ca6b6ee9e92c3ed3e6218d8ac4ccc3f3d4507f8b5aebe0ed94",
+        "bytes": 4865
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/transience/gc_transience_policy.hpp",
+        "source": null,
+        "sha256": "04eeadd6b3c9a4e5a1e98e3f2ba3378139d67687270ba784c3da29a95ea6254b",
+        "bytes": 3062
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/transience/gc_transience_policy.hpp",
+        "source": null,
+        "sha256": "04eeadd6b3c9a4e5a1e98e3f2ba3378139d67687270ba784c3da29a95ea6254b",
+        "bytes": 3062
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/refcount/no_refcount_policy.hpp",
+        "source": null,
+        "sha256": "7bdd344dbde6307b82bb5902a3c3c3c531128ef6e5146c45d526fa2e5170c8e9",
+        "bytes": 649
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/refcount/no_refcount_policy.hpp",
+        "source": null,
+        "sha256": "7bdd344dbde6307b82bb5902a3c3c3c531128ef6e5146c45d526fa2e5170c8e9",
+        "bytes": 649
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/node.hpp",
+        "source": null,
+        "sha256": "559e7dfb6a3a935f0fb25ea3ab800a4c4005f8ba25cb12e32fb6ac3644bcfbe9",
+        "bytes": 31821
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/detail/rbts/node.hpp",
+        "source": null,
+        "sha256": "559e7dfb6a3a935f0fb25ea3ab800a4c4005f8ba25cb12e32fb6ac3644bcfbe9",
+        "bytes": 31821
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/rrbtree.hpp",
+        "source": null,
+        "sha256": "7bc45d3c1b9aa2157b69a21f45d13a7f09bb4e89a94db1f2444dfc8a9d14bb34",
+        "bytes": 55702
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/detail/rbts/rrbtree.hpp",
+        "source": null,
+        "sha256": "7bc45d3c1b9aa2157b69a21f45d13a7f09bb4e89a94db1f2444dfc8a9d14bb34",
+        "bytes": 55702
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/operations.hpp",
+        "source": null,
+        "sha256": "cacf1cbe9f9466242cb170d0ad449ccb22455961a47d1b41a224aed12a3d09d8",
+        "bytes": 87136
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/detail/rbts/operations.hpp",
+        "source": null,
+        "sha256": "cacf1cbe9f9466242cb170d0ad449ccb22455961a47d1b41a224aed12a3d09d8",
+        "bytes": 87136
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/heap/heap_policy.hpp",
+        "source": null,
+        "sha256": "b6461577792797c585b4159d43e1654938edb087d215ddec4a4992bec702d166",
+        "bytes": 4259
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/heap/heap_policy.hpp",
+        "source": null,
+        "sha256": "b6461577792797c585b4159d43e1654938edb087d215ddec4a4992bec702d166",
+        "bytes": 4259
+      },
+      "bytes_equal": true
+    }
+  ],
+  "findings": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/findings.json",
+    "sha256": "e5c3728c304ebb06f2c0d00e79a3aee59723f21fb4db151301dc9a4562c027ce",
+    "bytes": 25083
+  },
+  "proof_output_findings": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-output-findings.json",
+    "sha256": "7a6f41418ad12658bdf356fbc10eff24cdb389d10b5d8fd4117311beb62252ed",
+    "bytes": 12253
+  }
+}

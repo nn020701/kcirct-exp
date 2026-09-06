@@ -1,0 +1,16 @@
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/original/xlnxstream_2018_3.v:141:14: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'count' generates 5 bits.
+                                                                                                                                                                     : ... note: In instance 'xlnxstream_2018_3'
+  141 |   if ( count == C_M_START_COUNT - 1 )
+      |              ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.048
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/original/xlnxstream_2018_3.v:216:35: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'read_pointer' generates 4 bits.
+                                                                                                                                                                     : ... note: In instance 'xlnxstream_2018_3'
+  216 |   stream_data_out <= read_pointer + 32'b1;
+      |                                   ^
+%Warning-CASEINCOMPLETE: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/original/xlnxstream_2018_3.v:123:11: Case values incompletely covered (example pattern 0x3)
+  123 |  end else case (mst_exec_state)
+      |           ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.048
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@17/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@17/17.0.6/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly

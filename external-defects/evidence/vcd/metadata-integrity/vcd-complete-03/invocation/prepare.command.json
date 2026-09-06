@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "make",
+    "prepare",
+    "PYTHON=.venv/bin/python",
+    "KIMULATOR=../circt-semantics/.venv/bin/kcirct",
+    "ARGS=--k-bin /Users/bytedance/.nix-profile/bin"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp",
+  "K_BIN": null,
+  "PATH_prefix": "/Users/bytedance/.nix-profile/bin"
+}

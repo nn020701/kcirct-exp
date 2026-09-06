@@ -1,0 +1,57 @@
+[
+  {
+    "stage": "version",
+    "argv": [
+      "/opt/homebrew/bin/verilator",
+      "--version"
+    ],
+    "command": "/opt/homebrew/bin/verilator --version",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/golden/native",
+    "exit_code": 0,
+    "seconds": 0.07585820800022702
+  },
+  {
+    "stage": "build",
+    "argv": [
+      "/opt/homebrew/bin/verilator",
+      "--cc",
+      "--exe",
+      "--build",
+      "--timing",
+      "--trace",
+      "-Wno-fatal",
+      "--x-initial",
+      "0",
+      "--x-assign",
+      "0",
+      "--top-module",
+      "xlnxstream_2018_3",
+      "--prefix",
+      "Vcsvdut",
+      "--Mdir",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/golden/native/obj",
+      "-o",
+      "sim",
+      "--timescale-override",
+      "1ns/1ns",
+      "-GC_M_AXIS_TDATA_WIDTH=32",
+      "-GC_M_START_COUNT=32",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/original/xlnxstream_2018_3.v",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/golden/native/driver.cpp"
+    ],
+    "command": "/opt/homebrew/bin/verilator --cc --exe --build --timing --trace -Wno-fatal --x-initial 0 --x-assign 0 --top-module xlnxstream_2018_3 --prefix Vcsvdut --Mdir /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/golden/native/obj -o sim --timescale-override 1ns/1ns -GC_M_AXIS_TDATA_WIDTH=32 -GC_M_START_COUNT=32 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/original/xlnxstream_2018_3.v /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/golden/native/driver.cpp",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/golden/native",
+    "exit_code": 0,
+    "seconds": 3.6080528340003184
+  },
+  {
+    "stage": "run",
+    "argv": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/golden/native/obj/sim"
+    ],
+    "command": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/golden/native/obj/sim",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s2/golden/native",
+    "exit_code": 0,
+    "seconds": 0.5016049590003604
+  }
+]

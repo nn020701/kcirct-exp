@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "run_id": "vcd-standard-01",
+  "exit_code": 0,
+  "observation": "宿主命令执行器在整个批次进程结束后返回的实际退出码",
+  "cases_argument": [
+    "all-short"
+  ],
+  "cases_completed": 10,
+  "case_statuses": {
+    "d13": "pass",
+    "s3": "vcd_mismatch",
+    "s1b": "pass",
+    "s1r": "pass",
+    "d8": "vcd_mismatch",
+    "d12": "vcd_mismatch",
+    "d11": "timeout",
+    "d4": "vcd_mismatch",
+    "s2": "execution_error",
+    "c4": "timeout"
+  },
+  "results_sha256": "33e850d351ba429e2e024034b47c0c57f94b082f25e181d74983e759e53998bb",
+  "interpretation": "原批次尚未将案例失败传播为非零退出码；以原始逐案例状态为准"
+}

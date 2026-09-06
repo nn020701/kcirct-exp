@@ -1,0 +1,27 @@
+{
+  "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+  "executable": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/python",
+  "pyk_version": "7.1.323",
+  "prooftrace_module": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/lib/python3.14/site-packages/pyk/kllvm/hints/prooftrace.py",
+    "sha256": "d8bfe602ee0b2570da418f7e457251423ef0ebdef9fcb1f32b5742ba6aaffdde",
+    "bytes": 21032
+  },
+  "static_binding_import": true,
+  "decoder": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/decode_hint.py",
+    "sha256": "d2a79ca89558b2960caf46345f7514a2351f448093593be636267bc03b242fc2",
+    "bytes": 8667
+  },
+  "argv": [
+    "services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/decode_hint.py",
+    "--trace",
+    "services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/lite-hint-depth-943/trace.hint",
+    "--definition",
+    "services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition-lite/definition.kore",
+    "--out",
+    "services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12-lite",
+    "--compare-final",
+    "services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/lite-normal-depth-943/state.kore"
+  ]
+}

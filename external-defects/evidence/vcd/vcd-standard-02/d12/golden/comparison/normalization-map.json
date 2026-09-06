@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "policy": "scalar-equals-i1-zero-range-v1",
+  "applied": true,
+  "mappings": [
+    {
+      "backend": "native",
+      "port": "s_axis_tkeep",
+      "width": 1,
+      "from": "TOP.s_axis_tkeep[0:0]",
+      "to": "TOP.s_axis_tkeep"
+    },
+    {
+      "backend": "native",
+      "port": "s_axis_tuser",
+      "width": 1,
+      "from": "TOP.s_axis_tuser[0:0]",
+      "to": "TOP.s_axis_tuser"
+    },
+    {
+      "backend": "native",
+      "port": "m_axis_tkeep",
+      "width": 1,
+      "from": "TOP.m_axis_tkeep[0:0]",
+      "to": "TOP.m_axis_tkeep"
+    },
+    {
+      "backend": "native",
+      "port": "m_axis_tuser",
+      "width": 1,
+      "from": "TOP.m_axis_tuser[0:0]",
+      "to": "TOP.m_axis_tuser"
+    }
+  ],
+  "files": {
+    "native": {
+      "source": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-02/d12/golden/native/trace.vcd",
+        "sha256": "caacf5904aacba4d14d9b9e179d02bda14bef9528d3e3b04fb9a12911ca6b4d8",
+        "bytes": 6280
+      },
+      "comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-02/d12/golden/comparison/native.comparison.vcd",
+        "sha256": "2c56c5357c7eda7e9cbb30a62b67732e16730078404d26d72fd6e405b8bf069b",
+        "bytes": 6256
+      },
+      "body_sha256": "df970405dcbd684a19b99e26e2cd045a83f40da82b6ab5734d56d30c7a27237c",
+      "body_bytes": 2356,
+      "body_unchanged": true,
+      "mappings": [
+        {
+          "backend": "native",
+          "port": "s_axis_tkeep",
+          "width": 1,
+          "from": "TOP.s_axis_tkeep[0:0]",
+          "to": "TOP.s_axis_tkeep"
+        },
+        {
+          "backend": "native",
+          "port": "s_axis_tuser",
+          "width": 1,
+          "from": "TOP.s_axis_tuser[0:0]",
+          "to": "TOP.s_axis_tuser"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tkeep",
+          "width": 1,
+          "from": "TOP.m_axis_tkeep[0:0]",
+          "to": "TOP.m_axis_tkeep"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tuser",
+          "width": 1,
+          "from": "TOP.m_axis_tuser[0:0]",
+          "to": "TOP.m_axis_tuser"
+        }
+      ]
+    }
+  }
+}

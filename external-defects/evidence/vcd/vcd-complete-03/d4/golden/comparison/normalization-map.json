@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "policy": "scalar-equals-i1-zero-range-v1",
+  "applied": true,
+  "mappings": [
+    {
+      "backend": "native",
+      "port": "s_axis_tuser",
+      "width": 1,
+      "from": "TOP.s_axis_tuser[0:0]",
+      "to": "TOP.s_axis_tuser"
+    },
+    {
+      "backend": "native",
+      "port": "m_axis_tuser",
+      "width": 1,
+      "from": "TOP.m_axis_tuser[0:0]",
+      "to": "TOP.m_axis_tuser"
+    }
+  ],
+  "files": {
+    "native": {
+      "source": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d4/golden/native/trace.vcd",
+        "sha256": "1b24ac9fe2132e320ded042ea3c449f14ca94e1da4e58fcd6ff41b35f84f2ea7",
+        "bytes": 14063
+      },
+      "comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d4/golden/comparison/native.comparison.vcd",
+        "sha256": "fb5ec141c72e20b305807ac6c0fb630315a0c33e2de888fd158309c9071d33f0",
+        "bytes": 14051
+      },
+      "body_sha256": "99aef084a65e98531f0d742da971b0f9f68629843fe0d0dff58f6ee76e3799ce",
+      "body_bytes": 8562,
+      "body_unchanged": true,
+      "mappings": [
+        {
+          "backend": "native",
+          "port": "s_axis_tuser",
+          "width": 1,
+          "from": "TOP.s_axis_tuser[0:0]",
+          "to": "TOP.s_axis_tuser"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tuser",
+          "width": 1,
+          "from": "TOP.m_axis_tuser[0:0]",
+          "to": "TOP.m_axis_tuser"
+        }
+      ]
+    }
+  }
+}

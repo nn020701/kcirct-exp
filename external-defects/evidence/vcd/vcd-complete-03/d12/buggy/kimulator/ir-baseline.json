@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "path_base": "external-defects/",
+  "project_id": "axis-fifo-d12",
+  "source_case_id": "D12",
+  "variant_id": "d12",
+  "design_variant": "buggy",
+  "source_run": {
+    "run_id": "batch-final-01",
+    "directory": ".runs/batch-final-01/d12/buggy/kimulator",
+    "case_status": "pass",
+    "backend_status": "oracle_mismatch",
+    "backend_stage": null,
+    "formal_result": {
+      "path": "results/cases/d12.json",
+      "sha256": "d2f23f9312024365b2d39200c3451e7ab07f0bbef3da138228af7deb91a47584",
+      "bytes": 4146
+    },
+    "archive_records_policy": "records 指向本地历史运行归档，位于被 Git 忽略的 .runs；新 checkout 不自带这些原始记录。其 SHA256 用于校对已有归档。本文件已单独保存生成参数、命令、版本和 RTL 哈希。",
+    "records": {
+      "case_manifest": {
+        "path": ".runs/batch-final-01/d12/manifest.json",
+        "sha256": "96195ea71c0b497f034ca45dfc06b71a69c4b73fa4e315d9796f3e31b78d4c0b",
+        "bytes": 5806
+      },
+      "case_result": {
+        "path": ".runs/batch-final-01/d12/result.json",
+        "sha256": "f0d54ffca6728beed1e6ab972467ac37b4253ddb50bd759a79b9fad6b070e829",
+        "bytes": 47411
+      },
+      "run_results": {
+        "path": ".runs/batch-final-01/results.json",
+        "sha256": "5e11e8e2665942a033a025763240203c834cf96d2386fd7b110b78faf6a5a525",
+        "bytes": 582513
+      },
+      "run_versions": {
+        "path": ".runs/batch-final-01/versions.json",
+        "sha256": "e7a3b31a78be2d70880ad01347a22ade77153e1842cb647afeeef962ea2452b7",
+        "bytes": 8522
+      },
+      "backend_result": {
+        "path": ".runs/batch-final-01/d12/buggy/kimulator/result.json",
+        "sha256": "53d175f249de083a060d8b954567a0cb57d5ba974c1b0875bae570eb6081c61d",
+        "bytes": 6693
+      },
+      "commands": {
+        "path": ".runs/batch-final-01/d12/buggy/kimulator/commands.jsonl",
+        "sha256": "b3cacb0b6264b0b41b3534496e9895669a67adfe451ff90d00b189fda73a7a49",
+        "bytes": 26361
+      },
+      "runner": {
+        "path": ".runs/batch-final-01/runner.py",
+        "sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+        "bytes": 30409
+      },
+      "service_patch": {
+        "path": ".runs/batch-final-01/service.patch",
+        "sha256": "54a7053789eebda3e68c824b4f3c8515f5f517602ca09de19a69458bccbb57a9",
+        "bytes": 5833
+      }
+    }
+  },
+  "active_manifest": "manifests/d12.json",
+  "layout": {
+    "path": "designs/axis-fifo-d12/provenance/layout.json",
+    "sha256": "afed5fedd48f848997093e87d9b96297b063eaca61f69bbdebdd5edddbfc7c44",
+    "bytes": 491
+  },
+  "configuration": {
+    "top": "axis_fifo",
+    "parameters": {
+      "ADDR_WIDTH": 2,
+      "DATA_WIDTH": 8,
+      "KEEP_ENABLE": 0,
+      "KEEP_WIDTH": 1,
+      "LAST_ENABLE": 1,
+      "ID_ENABLE": 1,
+      "ID_WIDTH": 8,
+      "DEST_ENABLE": 1,
+      "DEST_WIDTH": 8,
+      "USER_ENABLE": 1,
+      "USER_WIDTH": 1,
+      "FRAME_FIFO": 1,
+      "USER_BAD_FRAME_VALUE": 1,
+      "USER_BAD_FRAME_MASK": 1,
+      "DROP_BAD_FRAME": 0,
+      "DROP_WHEN_FULL": 1
+    },
+    "effective_parameters": {
+      "ADDR_WIDTH": 2,
+      "DATA_WIDTH": 8,
+      "KEEP_ENABLE": 0,
+      "KEEP_WIDTH": 1,
+      "LAST_ENABLE": 1,
+      "ID_ENABLE": 1,
+      "ID_WIDTH": 8,
+      "DEST_ENABLE": 1,
+      "DEST_WIDTH": 8,
+      "USER_ENABLE": 1,
+      "USER_WIDTH": 1,
+      "FRAME_FIFO": 1,
+      "USER_BAD_FRAME_VALUE": 1,
+      "USER_BAD_FRAME_MASK": 1,
+      "DROP_BAD_FRAME": 0,
+      "DROP_WHEN_FULL": 1
+    },
+    "frontend_args": [],
+    "sample_phase": "low_before_posedge_pre_NBA"
+  },
+  "rtl_sources": [
+    {
+      "historical_manifest_path": "sources/axis-fifo-d12/axis_fifo_bug_d12.v",
+      "path": "designs/axis-fifo-d12/variants/d12/axis_fifo_bug_d12.v",
+      "sha256": "06b56f304a376856f1c9505e30d15b2c77f73c69db1ec2d07628c15f06851665",
+      "bytes": 10782
+    }
+  ],
+  "artifacts": {
+    "design.mlir": {
+      "path": "designs/axis-fifo-d12/mlir/d12/buggy/design.mlir",
+      "sha256": "517c762cff6e7f80c9a79581885bd993d1e96d05deb4c7e052c26b699a215b94",
+      "bytes": 12063
+    },
+    "design.generic.mlir": {
+      "path": "designs/axis-fifo-d12/mlir/d12/buggy/design.generic.mlir",
+      "sha256": "a09193dfb0180569a80869a7890f396510118bf8e02821defbab2d2ef1431f32",
+      "bytes": 8117
+    },
+    "design.debug.generic.mlir": {
+      "path": "designs/axis-fifo-d12/mlir/d12/buggy/design.debug.generic.mlir",
+      "sha256": "7e9ce7645cc263c9d4306809ad5d91874250b7611df97bd4ad50886fa3c1dc5c",
+      "bytes": 16461
+    },
+    "source-map.json": {
+      "path": "designs/axis-fifo-d12/mlir/d12/buggy/source-map.json",
+      "sha256": "85e0b562796d6f4e71ea06844306fd2409c2ad942b0ea726e3d4cbff29e631c7",
+      "bytes": 29169
+    }
+  },
+  "tool_versions": {
+    "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "pyk": "7.1.323",
+    "circt-verilog": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\nslang version 10.0.0+0",
+    "circt-opt": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0",
+    "kompile": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "krun": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "kast": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026"
+  },
+  "generation": {
+    "working_directory": "external-defects/",
+    "commands_policy": "以下 argv 从历史 commands.jsonl 的前三条实际成功命令提取，保持参数及输入文件顺序，仅将工具名、RTL 和输出路径重定位为可移植表示；并非声称这些新路径已经重新执行。工具通过 PATH 解析。",
+    "commands": [
+      {
+        "stage": "frontend",
+        "historical_command_line": 1,
+        "argv": [
+          "circt-verilog",
+          "--ir-hw",
+          "--top=axis_fifo",
+          "--mlir-print-debuginfo",
+          "-GADDR_WIDTH=2",
+          "-GDATA_WIDTH=8",
+          "-GKEEP_ENABLE=0",
+          "-GKEEP_WIDTH=1",
+          "-GLAST_ENABLE=1",
+          "-GID_ENABLE=1",
+          "-GID_WIDTH=8",
+          "-GDEST_ENABLE=1",
+          "-GDEST_WIDTH=8",
+          "-GUSER_ENABLE=1",
+          "-GUSER_WIDTH=1",
+          "-GFRAME_FIFO=1",
+          "-GUSER_BAD_FRAME_VALUE=1",
+          "-GUSER_BAD_FRAME_MASK=1",
+          "-GDROP_BAD_FRAME=0",
+          "-GDROP_WHEN_FULL=1",
+          "designs/axis-fifo-d12/variants/d12/axis_fifo_bug_d12.v",
+          "-o",
+          "designs/axis-fifo-d12/mlir/d12/buggy/design.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "debug.generic",
+        "historical_command_line": 2,
+        "argv": [
+          "circt-opt",
+          "designs/axis-fifo-d12/mlir/d12/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "--mlir-print-debuginfo",
+          "-o",
+          "designs/axis-fifo-d12/mlir/d12/buggy/design.debug.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "generic",
+        "historical_command_line": 3,
+        "argv": [
+          "circt-opt",
+          "designs/axis-fifo-d12/mlir/d12/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "-o",
+          "designs/axis-fifo-d12/mlir/d12/buggy/design.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      }
+    ],
+    "source_map": {
+      "generator": "runner.py:source_map",
+      "historical_runner_sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+      "mapping_kind": "same_ir_printed_with_and_without_locations"
+    }
+  },
+  "location_policy": "MLIR 和 source-map.json 按历史运行字节原样保存，保留旧 loc（包含旧目录或绝对路径）。通过 rtl_sources 的历史路径、当前路径、SHA256 及 layout.json 对应源文件。迁移路径后重新生成时 loc 和文件哈希可能变化；不要为美化路径修改本基线或旧 source-map。"
+}

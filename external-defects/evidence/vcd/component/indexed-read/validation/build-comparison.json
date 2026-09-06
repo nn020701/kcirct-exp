@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "method": "只读比较52个语义源文件SHA；KoreParser解析两份definition，仅把各自绝对源码根目录替换为同一标记；按Source+Location+其余attributes匹配所有源axiom，逐项比较pattern。未重编译、未运行仿真。",
+  "identities": {
+    "local": {
+      "source_root": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/kdist/circt-semantics/source/circt_semantics",
+      "source_hashes": {
+        "circt/backup/bits.k": "e06a9d4b30c3696c58759a3f1511ce71b31330a47fe56238118d24ffca6f0a99",
+        "circt/backup/circt.k": "f53f2b689d14316eadb147c68535616f920e98d3cf399e57b4f78f995b157d07",
+        "circt/backup/common.k": "f113f974a0942f961a346e5551d415b7d2dd1c89d0fc302d17f6abad08aa40ca",
+        "circt/backup/conf.k": "7d1f8a281d84d45194f8c3e1e81c88744b7897ee0cc6606c58c21c178557972d",
+        "circt/backup/stdvalue.k": "689a8002e79000f226186d9607c8ad1a59de958755a50fdfcb549dae39a82b60",
+        "circt/circt-config.md": "cefa31dd07769605d8cf38e5648a20d85ad3c42475573f16a4cce80d3fa4adc9",
+        "circt/circt.md": "f141f84539d93c18bf2346d811e23de5a28352e96e9d32cd20ca6b2f1f3e5201",
+        "circt-core.k": "bde73f7b57ed13f67c33c3c375a1509cd489bc929234dda6e9f47461c392cb2b",
+        "dialects/comb/backup/comb.k": "a1543d59341932c8bcdc6cb6aa6b5beddf99656dfca2f38a05a1d7510e24eed6",
+        "dialects/comb/comb-syntax.md": "9c60319d4a38dc97435bf16cfd91f3f0d3343eacf05c79a669df0beb8e333e67",
+        "dialects/comb/comb.md": "a3b5e08ce2e953ba863ee3e32cce69c1d39271e5f471ff9e2f417310fab78448",
+        "dialects/hw/backup/hw-array.k": "54f436ffd87a7239198b2b19eb8a3074f1e566ad50a928f82920b3b99ce258fe",
+        "dialects/hw/backup/hw-enum.k": "1bc61ac4ece558e31340c0aa914be0c1557de75d810e8fc4ed4fca10114ee869",
+        "dialects/hw/backup/hw-modty.k": "c84a7b8c6d353e5d8be21614e71dff5596d71fc686d027f47a4c8f26804f4473",
+        "dialects/hw/backup/hw-struct.k": "055e0eb3e51ad8f926881558489742abb60efe11a0d25d46b8a19c01dfb756da",
+        "dialects/hw/backup/hw-union.k": "cb188f818068ad41873c4c26beac9bb3d89fdfc06cbf75b257b04c55bc9a6b5d",
+        "dialects/hw/backup/hw.k": "5f2aee84c9576d6735170df93e424b53629940c89141dfd9fa385f04d85d31aa",
+        "dialects/hw/hw-config.md": "4e83f1553bb6648820d50e72fa5c75fc2047a44bd5d1e71687020f5eb92c53b2",
+        "dialects/hw/hw-helper.md": "418ee75bae58de717ea7e0e010cc8feb94ef17cbcaab20a0bb557e5fdbda833a",
+        "dialects/hw/hw-layout.md": "2454d2cda2532d1061d3a2df8ac74c7851a9c04bfd0291b18159c635ca516cba",
+        "dialects/hw/hw-syntax.md": "89dedabdc41a55da9632dc3d189c37dfa6495aa86f14cf57bce435e17d7ee78d",
+        "dialects/hw/hw.md": "1283676243405ada83303ad68f1b52ef16c8d47350bda55eb7235b47ef1db908",
+        "dialects/seq/backup/seq-firmem.k": "85b0cbcf88303365792abcb59ad4eb5d7ddb78f5234f00fd2c030b54597c5617",
+        "dialects/seq/backup/seq-firreg.k": "7dd29063194377e3a3b7c428fbffe07f0d804090d6cf885e90c6a095e505c794",
+        "dialects/seq/backup/seq.k": "eb93af941caf0dc88ea841e45083b215557c447ec2a85a039c87564fbd96a36f",
+        "dialects/seq/seq-helper.md": "7a359fbed27c0de9b8345c8bc2f8482d077a61e21592f9c6e157526331810819",
+        "dialects/seq/seq-syntax.md": "1027f36ac9e8067000c11f3f41379a9ab8712047a3cca9091d9f00fefacf4f00",
+        "dialects/seq/seq.md": "fc243e229557240b55125c621c1de61dd74455505509df963c2c5fe9bd7b195f",
+        "dialects/sv/backup/sv-always.k": "d7426ee16d3f62e64e169d7b984176c27e31217bf690f10d4b1469300ca042be",
+        "dialects/sv/backup/sv-for.k": "c3b16e3310913d00ebfdfb6d9dff747223f995823acac7646266e8afb45a4e2b",
+        "dialects/sv/backup/sv-macro.k": "00e1475f372e1af33fc2a70cff8c0c2a9e582c09b8d471d35e1775b6cbb897a0",
+        "dialects/sv/backup/sv-reg.k": "79ad3d9fee2ea512dfd2f048fac0e44635ccd5d71c39f5524b1eaa6900565f20",
+        "dialects/sv/backup/sv.k": "1d685e0c9f876bae3309e4f3de6f9def168895fe284d072dc13d859a3be45dac",
+        "dialects/sv/sv-syntax.md": "7257413165c62ad2b52f51c105c79fbe2a4ef8b8c232381359b990e7a1c52ac5",
+        "dialects/sv/sv.md": "65b2e5260fa95f4f011a1eabe8f2c0599ac3139e8c992bb0caaf57eaccb834b7",
+        "hardware/bits.md": "15229deef0d0bfcaafc4f5c5e144a2dfa4f84f2e16fd78490102c6273bd50233",
+        "hardware/hardware-config.md": "0fe9ee3284e007296fa5a34ad81e65a723f68d5cdbf028c782f8764bd3d76590",
+        "hardware/hardware.md": "0acb587e5af1d219e6e27b3c81fc934ff61a1bd553cce6cd4ee88d9f87b506ef",
+        "hardware/int-normalization.md": "76ac3f9f37735fd6bada4ec2787516c87b6d7b21dba301b7509d0ec83d1f6d39",
+        "hardware/verification.md": "218cf57610f3000fe559f44d975e860aa3bcfe269c866ed0d5604cde5a2c5206",
+        "main.k": "2144d33aa721c00288cf4075804ec9b6fe27965f3cbc87c775525c34190b1bf0",
+        "mlir/backup/builtin.k": "f2bb1ddfbc98042b3a162bfd4c9e8ab1032eb5ba83ee673f70148293f86a94a7",
+        "mlir/backup/mlir-helper.k": "ecbc33eb57944765d3ae9fde76aa3ada05df9ac223d006521e236ad511bb0d50",
+        "mlir/backup/mlir-syntax.k": "4b924bfb9fb7bf7006a72e0b488a817dc08262d28f2b571951408628ea40ab05",
+        "mlir/backup/mlir.k": "a3b66af3fe31667994daa9453b71dbc508dc9adb366b3404d4ae41abac8aa7ea",
+        "mlir/builtin.md": "e21067f6425e7c6ab8ccf9959008e643a6fa115d781a91b2a1760a51dbf85ba7",
+        "mlir/mlir-config.md": "04559707cd46d3506d319ff3da0b5f7665c691bf1adda6fa1f3a659f0957ba48",
+        "mlir/mlir-helper.md": "212b0abde9481ab0cb3b96c2e579b3af969c01a8e97b802649b114bb5a727618",
+        "mlir/mlir-syntax.md": "d68ab8f1a0a0f1604b8d22a37c815cc030768d4b1b6c60911d02355f81a0cc25",
+        "mlir/mlir.md": "658593b37790d9bf86a7234f45a002ccbac4964ec4f1d31a3b62d5bf59f03781",
+        "test-preprocess.k": "d87b208dfade6fc26c0da04e2e75aecbf703a6066ed438625917a833521565ba",
+        "test-syntax.k": "f90a9609029418de9fb5d78fc5de3592ef26f40d65c4c125afda8dcce2915e07"
+      },
+      "source_count": 52,
+      "definition_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/kdist/circt-semantics/llvm/definition.kore",
+      "definition_sha256": "f198336d59b414b088c960a6a15af4b3f48bf275dc16f15e1457afb598064c16",
+      "definition_bytes": 2606414,
+      "source_prefix_replacements": 1114,
+      "source_prefix_normalized_sha256": "dadb3e555374aabe1c2494b3c70c482709b199766e0d6461da1e6a63c0d6f569",
+      "sentence_counts": {
+        "SortDecl": 170,
+        "Import": 4,
+        "SymbolDecl": 801,
+        "Axiom": 2241,
+        "AliasDecl": 3
+      }
+    },
+    "formal": {
+      "source_root": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/source/circt_semantics",
+      "source_hashes": {
+        "circt/backup/bits.k": "e06a9d4b30c3696c58759a3f1511ce71b31330a47fe56238118d24ffca6f0a99",
+        "circt/backup/circt.k": "f53f2b689d14316eadb147c68535616f920e98d3cf399e57b4f78f995b157d07",
+        "circt/backup/common.k": "f113f974a0942f961a346e5551d415b7d2dd1c89d0fc302d17f6abad08aa40ca",
+        "circt/backup/conf.k": "7d1f8a281d84d45194f8c3e1e81c88744b7897ee0cc6606c58c21c178557972d",
+        "circt/backup/stdvalue.k": "689a8002e79000f226186d9607c8ad1a59de958755a50fdfcb549dae39a82b60",
+        "circt/circt-config.md": "cefa31dd07769605d8cf38e5648a20d85ad3c42475573f16a4cce80d3fa4adc9",
+        "circt/circt.md": "f141f84539d93c18bf2346d811e23de5a28352e96e9d32cd20ca6b2f1f3e5201",
+        "circt-core.k": "bde73f7b57ed13f67c33c3c375a1509cd489bc929234dda6e9f47461c392cb2b",
+        "dialects/comb/backup/comb.k": "a1543d59341932c8bcdc6cb6aa6b5beddf99656dfca2f38a05a1d7510e24eed6",
+        "dialects/comb/comb-syntax.md": "9c60319d4a38dc97435bf16cfd91f3f0d3343eacf05c79a669df0beb8e333e67",
+        "dialects/comb/comb.md": "a3b5e08ce2e953ba863ee3e32cce69c1d39271e5f471ff9e2f417310fab78448",
+        "dialects/hw/backup/hw-array.k": "54f436ffd87a7239198b2b19eb8a3074f1e566ad50a928f82920b3b99ce258fe",
+        "dialects/hw/backup/hw-enum.k": "1bc61ac4ece558e31340c0aa914be0c1557de75d810e8fc4ed4fca10114ee869",
+        "dialects/hw/backup/hw-modty.k": "c84a7b8c6d353e5d8be21614e71dff5596d71fc686d027f47a4c8f26804f4473",
+        "dialects/hw/backup/hw-struct.k": "055e0eb3e51ad8f926881558489742abb60efe11a0d25d46b8a19c01dfb756da",
+        "dialects/hw/backup/hw-union.k": "cb188f818068ad41873c4c26beac9bb3d89fdfc06cbf75b257b04c55bc9a6b5d",
+        "dialects/hw/backup/hw.k": "5f2aee84c9576d6735170df93e424b53629940c89141dfd9fa385f04d85d31aa",
+        "dialects/hw/hw-config.md": "4e83f1553bb6648820d50e72fa5c75fc2047a44bd5d1e71687020f5eb92c53b2",
+        "dialects/hw/hw-helper.md": "418ee75bae58de717ea7e0e010cc8feb94ef17cbcaab20a0bb557e5fdbda833a",
+        "dialects/hw/hw-layout.md": "2454d2cda2532d1061d3a2df8ac74c7851a9c04bfd0291b18159c635ca516cba",
+        "dialects/hw/hw-syntax.md": "89dedabdc41a55da9632dc3d189c37dfa6495aa86f14cf57bce435e17d7ee78d",
+        "dialects/hw/hw.md": "1283676243405ada83303ad68f1b52ef16c8d47350bda55eb7235b47ef1db908",
+        "dialects/seq/backup/seq-firmem.k": "85b0cbcf88303365792abcb59ad4eb5d7ddb78f5234f00fd2c030b54597c5617",
+        "dialects/seq/backup/seq-firreg.k": "7dd29063194377e3a3b7c428fbffe07f0d804090d6cf885e90c6a095e505c794",
+        "dialects/seq/backup/seq.k": "eb93af941caf0dc88ea841e45083b215557c447ec2a85a039c87564fbd96a36f",
+        "dialects/seq/seq-helper.md": "7a359fbed27c0de9b8345c8bc2f8482d077a61e21592f9c6e157526331810819",
+        "dialects/seq/seq-syntax.md": "1027f36ac9e8067000c11f3f41379a9ab8712047a3cca9091d9f00fefacf4f00",
+        "dialects/seq/seq.md": "fc243e229557240b55125c621c1de61dd74455505509df963c2c5fe9bd7b195f",
+        "dialects/sv/backup/sv-always.k": "d7426ee16d3f62e64e169d7b984176c27e31217bf690f10d4b1469300ca042be",
+        "dialects/sv/backup/sv-for.k": "c3b16e3310913d00ebfdfb6d9dff747223f995823acac7646266e8afb45a4e2b",
+        "dialects/sv/backup/sv-macro.k": "00e1475f372e1af33fc2a70cff8c0c2a9e582c09b8d471d35e1775b6cbb897a0",
+        "dialects/sv/backup/sv-reg.k": "79ad3d9fee2ea512dfd2f048fac0e44635ccd5d71c39f5524b1eaa6900565f20",
+        "dialects/sv/backup/sv.k": "1d685e0c9f876bae3309e4f3de6f9def168895fe284d072dc13d859a3be45dac",
+        "dialects/sv/sv-syntax.md": "7257413165c62ad2b52f51c105c79fbe2a4ef8b8c232381359b990e7a1c52ac5",
+        "dialects/sv/sv.md": "65b2e5260fa95f4f011a1eabe8f2c0599ac3139e8c992bb0caaf57eaccb834b7",
+        "hardware/bits.md": "15229deef0d0bfcaafc4f5c5e144a2dfa4f84f2e16fd78490102c6273bd50233",
+        "hardware/hardware-config.md": "0fe9ee3284e007296fa5a34ad81e65a723f68d5cdbf028c782f8764bd3d76590",
+        "hardware/hardware.md": "0acb587e5af1d219e6e27b3c81fc934ff61a1bd553cce6cd4ee88d9f87b506ef",
+        "hardware/int-normalization.md": "76ac3f9f37735fd6bada4ec2787516c87b6d7b21dba301b7509d0ec83d1f6d39",
+        "hardware/verification.md": "218cf57610f3000fe559f44d975e860aa3bcfe269c866ed0d5604cde5a2c5206",
+        "main.k": "2144d33aa721c00288cf4075804ec9b6fe27965f3cbc87c775525c34190b1bf0",
+        "mlir/backup/builtin.k": "f2bb1ddfbc98042b3a162bfd4c9e8ab1032eb5ba83ee673f70148293f86a94a7",
+        "mlir/backup/mlir-helper.k": "ecbc33eb57944765d3ae9fde76aa3ada05df9ac223d006521e236ad511bb0d50",
+        "mlir/backup/mlir-syntax.k": "4b924bfb9fb7bf7006a72e0b488a817dc08262d28f2b571951408628ea40ab05",
+        "mlir/backup/mlir.k": "a3b66af3fe31667994daa9453b71dbc508dc9adb366b3404d4ae41abac8aa7ea",
+        "mlir/builtin.md": "e21067f6425e7c6ab8ccf9959008e643a6fa115d781a91b2a1760a51dbf85ba7",
+        "mlir/mlir-config.md": "04559707cd46d3506d319ff3da0b5f7665c691bf1adda6fa1f3a659f0957ba48",
+        "mlir/mlir-helper.md": "212b0abde9481ab0cb3b96c2e579b3af969c01a8e97b802649b114bb5a727618",
+        "mlir/mlir-syntax.md": "d68ab8f1a0a0f1604b8d22a37c815cc030768d4b1b6c60911d02355f81a0cc25",
+        "mlir/mlir.md": "658593b37790d9bf86a7234f45a002ccbac4964ec4f1d31a3b62d5bf59f03781",
+        "test-preprocess.k": "d87b208dfade6fc26c0da04e2e75aecbf703a6066ed438625917a833521565ba",
+        "test-syntax.k": "f90a9609029418de9fb5d78fc5de3592ef26f40d65c4c125afda8dcce2915e07"
+      },
+      "source_count": 52,
+      "definition_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm/definition.kore",
+      "definition_sha256": "08ac54e383967aa9aa7ba218cd0148e2b4d3f19dea67ddab33f120d661854e2b",
+      "definition_bytes": 2604234,
+      "source_prefix_replacements": 1114,
+      "source_prefix_normalized_sha256": "19524d78bdf76b0cf5928ac2f7d674d5674fdf1eccdfcb4a5bdd0747c5a34da5",
+      "sentence_counts": {
+        "SortDecl": 170,
+        "Import": 4,
+        "SymbolDecl": 801,
+        "Axiom": 2241,
+        "AliasDecl": 3
+      }
+    }
+  },
+  "source_files_equal": true,
+  "source_file_changes": [],
+  "source_axioms": {
+    "local_count": 492,
+    "formal_count": 492,
+    "all_attribute_keys_equal_after_source_prefix_normalization": true,
+    "exact_pattern_and_attribute_matches": 476,
+    "different_generated_owise_patterns": 16,
+    "differences": [
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"fc53ffaedb54e6e7bc07356ec1da76d5d2cfd02e2f10776875ca1f049bcfaa39\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(148,10,148,112)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "71d192c55b54c2fe413a6521e1d2e4cda83af16d819db85917beaef052c1680f",
+        "formal_subtree_sha256": "50863e0304309cd724b8656c3e217539388a7288a6caf0db9fea093632c6ae1e"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"27676439bd8d315be90292c54b57fe14f283ca67798c9f9b5664904691f15d6a\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(248,10,248,78)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "244c622b3fc44950be6403c79bdc7308f14037d6a8c618aea3685537bc85949c",
+        "formal_subtree_sha256": "1d3f087e2920cacc9199c56fb41f487016dfb4d95663a23d672d9d393374017b"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"cfee9136f3a5bd5530fac9b487a4e35e63c3129e7a173e916576897daccdfc2f\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(105,10,105,68)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "4698bc2fe7b27662fe8464d7b166add6c4448c9dcc0e89704edfdfaf3218d3f3",
+        "formal_subtree_sha256": "e134d75c772c9710a767d1250ec92437a539640b7beaac0646df542d1b5dde5a"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"25e66f433cb51aa5f1fc1b13913ade79ccf674aecfe4992fe8fbfba620d885fb\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(93,10,93,75)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "04f0a828f69152355d8242fdd1c7ef2c4ef1fd006978f5994c76baf6de01597c",
+        "formal_subtree_sha256": "1d034231bd7edfa5ea7b5743e6eef3c8b055c30be572cdcdca4d1ee5fb26d6ad"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"b375db93fbb2d04a03064ce1fe966a393166e4f6327cb69c384fefb044f3943f\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(218,10,218,72)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "446bd1b841a9a0ba11f1e08c71d1ac0ab43b73d7417e0d67ca4537915bc7abed",
+        "formal_subtree_sha256": "bcc617046ca3c6bbb055ec25574c8fb66d21c1894ef9711dabbb13d858dc88c3"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"497928dcb05f9b7cb400dc66934b1511e1e740b5e7b246a79953b14533521c49\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(181,10,181,73)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "11ca3037c7151f63a3c5ad29a4ecd5d7c6167f73fb1adf22eb338010954bff27",
+        "formal_subtree_sha256": "dcbee531e8a01f048c58d699e7aa83d3be13035a94f58924fd2a37aacf7423a7"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"0fe690f2bca069e96a39048ab409ac4bb70f8389debbb6f6fec76044f8e434fd\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(189,10,189,73)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "4ba11e15d23de6c1584ad8b5e93f348ec65eeae0b79a336335b316c78dc33c00",
+        "formal_subtree_sha256": "52856aab489dc6c3726b29d2360875f3ee2147aa2e58b138995a67869be0db84"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"f19f5ab26e6bf56713b781f4337c2c8f00b27eb8ad5935e46e0f523dbd3115b2\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(210,10,210,73)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "fcfcb4c36e8f4a181e1ece851a850ad1eb26aa4e3d7e95028c1f8ca25183a8a6",
+        "formal_subtree_sha256": "cb7cc195cbe1d85bf6d485faf1baf90a376b0b78c83bac9a7bc8eac0909a6543"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"916af30b83af246ced8f946765406d390b22668fa4f11ad282ffaf75d605656a\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(203,10,203,74)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "d3213071659d6c41072a3cf192daf09d62b3fc0bb109f89f67fb553e311a1914",
+        "formal_subtree_sha256": "afd2628d744a980af60939e0d410751041995e26bb1a1565e70abfa5407de699"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"f984ff05788c867e957b74e3d24e0708f09abc08004b90028cd5c5a054002155\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(197,10,197,73)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "653595a947a2a7f2f95d0857bec29c9e61fd9cdea415a24faea22eb722d08f70",
+        "formal_subtree_sha256": "bda771630ee1c26eac91c2c820089b4cec5206cdbb03619979de08e057f18490"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"04fd34ba0b58fe0d5a0c82441799b2e8d3472c965f708b19550c2539d5cafbda\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(136,10,136,66)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "ba5883e81577943b4162b986ff1bc6e1c61959c28ec2f65d3adf4b0a5fa2dbc0",
+        "formal_subtree_sha256": "009611207de3e99301f556f709f03a630b82ec4f111d085b51ad0e117cd468a0"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"e6feac3bdde16cea00a7727eb4417b8c06eac4026e4907c79b4e397e7df8dc07\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(263,10,263,75)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "3855001691bdfe6f365a91d1d6d6d49ffc3b33800065ddff1873954bad0fcc7f",
+        "formal_subtree_sha256": "8e3dc0839631e99105d0f70c7340d03d27e395c518f3774c3c7af215cebf2ece"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"9d65358127f18999be400305e5363a73cf1a5b7978e6539a5d689c97fedc32ba\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(272,10,272,75)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "c7d45db2f32561fa35fc1315ef39ea1a3e70c3b5983f8a5e1dbaf8aede749669",
+        "formal_subtree_sha256": "4b51a9e3ceff741ed69a272ca5cd16e14c606d689d960d16f64712d98499c5b7"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"159be96b06d37973f2bf373a93b5d17be0b76936dc70b38df0f2f06bb04e14b5\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(121,10,121,68)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "be21554d196fe5495c45ee9a9f1605b4c6aa1b98e41ab805eb3a358aa046a290",
+        "formal_subtree_sha256": "6b717eb51297f9d721b91038c2b09529f1250b1e22400b94d2f0549b40b7926c"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"ca080d5520e9c22f2615bd0762d7b353a368af8b03f41f6ceea1607e15974657\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(297,10,297,50)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/hardware/bits.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "fb02caab94de5ac8b2b813bc6fd74769e6fe57ae920846ed0e4c91dfc5e86354",
+        "formal_subtree_sha256": "8def159069c823256e09f7d3762d6117fc110c387e9601ff3b0133f96415a987"
+      },
+      {
+        "attributes": [
+          "UNIQUE'Unds'ID{}(\"fd65f5619d0b65aa0897eb2ab88d11a6454485c62e1d9631a322f184afa95119\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Location{}(\"Location(22,8,22,37)\")",
+          "org'Stop'kframework'Stop'attributes'Stop'Source{}(\"Source(<SEMANTICS_SOURCE>/dialects/hw/hw-layout.md)\")",
+          "owise{}()"
+        ],
+        "owise": true,
+        "consequent_exact_match": true,
+        "original_antecedent_part_exact_match": true,
+        "difference_subtree": "Implies.patterns[0] (And).patterns[0] (Not)：编译器为 owise 生成的其他规则不匹配条件",
+        "local_subtree_sha256": "c97d9f4f8864f31795956758b7e750c8f9c4297514c874e2695385aca6399905",
+        "formal_subtree_sha256": "17f78db9f3965ef2970c123423cd46d4eff757522749b5843bed1a4b0620fad3"
+      }
+    ]
+  },
+  "other_sentences": {
+    "non_axioms": {
+      "local_count": 978,
+      "formal_count": 978,
+      "normalized_sentence_multisets_equal": true
+    },
+    "axioms_without_source": {
+      "local_count": 1749,
+      "formal_count": 1749,
+      "normalized_sentence_multisets_equal": true
+    }
+  },
+  "observed_rule_body_difference_outside_generated_owise_conditions": false,
+  "conclusion": "52个语义源文件完全一致；definition并非仅绝对路径差异。另有16个owise自动生成的排除条件在or分支排列和生成变量命名/量词排列上不同，原规则前提部分、结果及attributes均一致。未发现此范围外的规则内容变化。",
+  "limits": "这是有界身份与差异定位，不是两份完整Kore定义或LLVM二进制的等价证明。三例原prestate重放使用local definition，正式批次使用独立重新构建的formal definition；两者不能作为同一binary引用。"
+}

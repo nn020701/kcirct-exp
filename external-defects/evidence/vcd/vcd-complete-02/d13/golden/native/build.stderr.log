@@ -1,0 +1,19 @@
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-frame-len-d13/original/axis_frame_len.v:103:45: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'frame_len_next' generates 16 bits.
+                                                                                                                                                                       : ... note: In instance 'axis_frame_len'
+  103 |             frame_len_next = frame_len_next + bit_cnt;
+      |                                             ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.048
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-frame-len-d13/original/axis_frame_len.v:103:28: Operator ASSIGN expects 16 bits on the Assign RHS, but Assign RHS's ADD generates 32 bits.
+                                                                                                                                                                      : ... note: In instance 'axis_frame_len'
+  103 |             frame_len_next = frame_len_next + bit_cnt;
+      |                            ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.048
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-LATCH: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-frame-len-d13/original/axis_frame_len.v:75:1: Latch inferred for signal 'axis_frame_len.bit_cnt' (not all control paths of combinational always assign a value)
+                                                                                                                                                               : ... Suggest use of always_latch for intentional latches
+   75 | always @* begin
+      | ^~~~~~
+                ... For warning description see https://verilator.org/warn/LATCH?v=5.048
+                ... Use "/* verilator lint_off LATCH */" and lint_on around source to disable this message.
+ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@17/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@17/17.0.6/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly

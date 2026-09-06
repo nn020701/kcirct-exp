@@ -1,0 +1,103 @@
+[
+  {
+    "argv": [
+      "/Users/bytedance/.nix-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/replay-0.kore.prestate",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/definition",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros",
+      "--depth",
+      "1023",
+      "--output",
+      "kore"
+    ],
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current",
+    "source_sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1",
+    "definition_sha256": "579d22a9cec276a5f309c9ab75509bc3ee755aee439caa2fa84b4791f41d70df",
+    "output": "depth-1023.kore",
+    "started_at": 1788685948.719681,
+    "proof_hint": false,
+    "returncode": 0,
+    "elapsed_seconds": 0.718285083770752,
+    "output_bytes": 320069,
+    "output_sha256": "c15434ae43addebd952450d97e079a69acdad90641b7d5e4f028b8e2c9f163da",
+    "state": {
+      "connection_sha256": "ed98b8283f5dc0d8999507846e1d19894f7a94fe41c8327617301f230b39c916",
+      "mux_and_args": [
+        "comb.mux",
+        "xlnxstream_2018_3/%51",
+        "xlnxstream_2018_3/%50",
+        "xlnxstream_2018_3/%54"
+      ],
+      "current_14214": "Lbl'-LT-'current'-GT-'{}(kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Stop'List{}()), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#READ_DIRECT\")), kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))))), kseq{}(inj{SortStdOp{}, SortKItem{}}(Lbl'UndsLParUndsRParLBraUndsRBraColnUndsUnds'MLIR-HELPER-SYNTAX'Unds'StdOp'Unds'String'Unds'List'Unds'Map'Unds'StdFT{}(\\dv{SortString{}}(\"comb.mux\"), \\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))), \\left-assoc{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"twoState\")), inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"\"))))), Lbl'LParUndsRPar'-'-GT-LParUndsRParUnds'MLIR-SYNTAX'Unds'StdFT'Unds'Types'Unds'Types{}(Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}())))), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#WRITE\")), kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%53\")))))), kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Stop'List{}()), dotk{}()))))))))"
+    },
+    "connection_unchanged": true,
+    "matches_original_boundary_bytes": true
+  },
+  {
+    "argv": [
+      "/Users/bytedance/.nix-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/replay-0.kore.prestate",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/definition",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros",
+      "--depth",
+      "1024",
+      "--output",
+      "kore"
+    ],
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current",
+    "source_sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1",
+    "definition_sha256": "579d22a9cec276a5f309c9ab75509bc3ee755aee439caa2fa84b4791f41d70df",
+    "output": "depth-1024.kore",
+    "started_at": 1788685949.483177,
+    "proof_hint": false,
+    "returncode": 0,
+    "elapsed_seconds": 0.1742560863494873,
+    "output_bytes": 320199,
+    "output_sha256": "27f8ddf095bf454ea09cf498b8ff12478bdedd6fef170347c304c959f4c50400",
+    "state": {
+      "connection_sha256": "48553acc486d75b4068fb1f033b3cc9e990a970c789e144347e5f731b9e05356",
+      "mux_and_args": [
+        "comb.mux",
+        "xlnxstream_2018_3/%50",
+        "xlnxstream_2018_3/%54",
+        "xlnxstream_2018_3/%54"
+      ],
+      "current_14214": "Lbl'-LT-'current'-GT-'{}(kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortBits{}, SortKItem{}}(Lblbits'LParUndsCommUndsRParUnds'BITS-SYNTAX'Unds'Bits'Unds'BitsValue'Unds'Int{}(inj{SortInt{}, SortBitsValue{}}(\\dv{SortInt{}}(\"0\")), \\dv{SortInt{}}(\"1\"))))))), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#READ_DIRECT\")), kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))))), kseq{}(inj{SortStdOp{}, SortKItem{}}(Lbl'UndsLParUndsRParLBraUndsRBraColnUndsUnds'MLIR-HELPER-SYNTAX'Unds'StdOp'Unds'String'Unds'List'Unds'Map'Unds'StdFT{}(\\dv{SortString{}}(\"comb.mux\"), \\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))), \\left-assoc{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"twoState\")), inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"\"))))), Lbl'LParUndsRPar'-'-GT-LParUndsRParUnds'MLIR-SYNTAX'Unds'StdFT'Unds'Types'Unds'Types{}(Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}())))), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#WRITE\")), kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%53\")))))), kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Stop'List{}()), dotk{}()))))))))"
+    },
+    "connection_unchanged": false,
+    "matches_original_boundary_bytes": true
+  },
+  {
+    "argv": [
+      "/Users/bytedance/.nix-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/replay-0.kore.prestate",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/definition",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros",
+      "--depth",
+      "1024",
+      "--proof-hint"
+    ],
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current",
+    "source_sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1",
+    "definition_sha256": "579d22a9cec276a5f309c9ab75509bc3ee755aee439caa2fa84b4791f41d70df",
+    "output": "depth-1024.hint",
+    "started_at": 1788685949.7088058,
+    "proof_hint": true,
+    "returncode": 0,
+    "elapsed_seconds": 1.4501433372497559,
+    "output_bytes": 184395855,
+    "output_sha256": "79e1bfef73ba3f27948eaa499eb091dc32a2d355b532664d750c3cb125396fd0"
+  }
+]

@@ -1,0 +1,11 @@
+source_case_id,variant_id,samples,vcd_events,status,simulator_agrees_with_native,bug_detected_by_oracle,run_id
+D13,d13,6,11,pass,True,True,vcd-complete-03
+S3,s3,13,25,pass,True,True,vcd-complete-03
+S1,s1b,10,19,pass,True,True,vcd-complete-03
+S1,s1r,10,19,pass,True,True,vcd-complete-03
+D8,d8,14,27,pass,True,True,vcd-complete-03
+D12,d12,16,31,pass,True,True,vcd-complete-03
+D11,d11,17,33,pass,True,True,vcd-complete-03
+D4,d4,185,369,pass,True,True,vcd-complete-03
+S2,s2,45,89,pass,True,True,vcd-complete-03
+C4,c4,10,19,pass,True,True,vcd-complete-03

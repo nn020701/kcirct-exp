@@ -1,0 +1,77 @@
+[
+  {
+    "variant": "golden",
+    "stage": "lower",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/design.generic.mlir",
+      "--lower-seq-to-sv",
+      "--canonicalize",
+      "-o",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/golden/design.sv.mlir"
+    ],
+    "returncode": 0
+  },
+  {
+    "variant": "golden",
+    "stage": "export",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-translate",
+      "--export-verilog",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/golden/design.sv.mlir",
+      "-o",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/golden/design.sv"
+    ],
+    "returncode": 1
+  },
+  {
+    "variant": "golden",
+    "stage": "lower-official",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/design.generic.mlir",
+      "--lower-seq-to-sv",
+      "--canonicalize",
+      "-o",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/golden/design.sv.mlir"
+    ],
+    "returncode": 0
+  },
+  {
+    "variant": "golden",
+    "stage": "export-official",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/golden/design.sv.mlir",
+      "--export-verilog",
+      "-o",
+      "/dev/null"
+    ],
+    "returncode": 0
+  },
+  {
+    "variant": "buggy",
+    "stage": "lower-official",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.generic.mlir",
+      "--lower-seq-to-sv",
+      "--canonicalize",
+      "-o",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/design.sv.mlir"
+    ],
+    "returncode": 0
+  },
+  {
+    "variant": "buggy",
+    "stage": "export-official",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/initial-roundtrip/buggy/design.sv.mlir",
+      "--export-verilog",
+      "-o",
+      "/dev/null"
+    ],
+    "returncode": 0
+  }
+]

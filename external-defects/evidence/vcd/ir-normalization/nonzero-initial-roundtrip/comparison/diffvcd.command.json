@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/exported/trace.vcd",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/original/trace.vcd",
+    "--top1",
+    "TOP.",
+    "--top2",
+    "TOP.",
+    "--filter",
+    "^(?:clk|d\\[3:0\\]|q\\[3:0\\])$",
+    "--verbose"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/comparison",
+  "timeout_s": 30,
+  "exit_code": 0
+}

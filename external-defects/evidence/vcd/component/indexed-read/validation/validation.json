@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "scope": "HARDWARE#READ 分为按索引求值全部依赖、再按索引读取全部值；原参数表不做头尾解构。",
+  "source_sha256": "0acb587e5af1d219e6e27b3c81fc934ff61a1bd553cce6cd4ee88d9f87b506ef",
+  "circt_sha256": "f141f84539d93c18bf2346d811e23de5a28352e96e9d32cd20ca6b2f1f3e5201",
+  "definition_identity": {
+    "definition.kore": "f198336d59b414b088c960a6a15af4b3f48bf275dc16f15e1457afb598064c16",
+    "compiled.bin": "713d9bbbae0eeda3b9cec9acba8e29fa6611d4616d97a801cd8fa18c82a059e2",
+    "backend.txt": "ef5a927f5a4ae8bdfa7d187079fa7b2aabc8d72ce219c564f78c9498ff59d2f9",
+    "interpreter": "95193d8e291fe79a91d2b0d266aa5640053e2434e31e2bc7b2f198a8e1c495c9"
+  },
+  "build_result": "build.result.json",
+  "replays": "replays.json",
+  "ast_audit": "ast-audit.json",
+  "comparison_positive_controls": {
+    "s3": {
+      "changed_keys": [
+        "inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_adapter/%131\"))"
+      ],
+      "detected_original_corruption": true
+    },
+    "d12": {
+      "changed_keys": [
+        "inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_fifo/%69\"))"
+      ],
+      "detected_original_corruption": true
+    }
+  },
+  "limits": "仅验证三例原始事件完整重放；完整operation和10例实验由根任务执行。"
+}

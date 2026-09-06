@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/python",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/validation/public-cli-d13-f68e9e54f5/test.vcd",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d13/golden/native/trace.vcd",
+    "--top1",
+    "axis_frame_len.",
+    "--top2",
+    "TOP.",
+    "--filter",
+    "^(?:clk|rst|monitor_axis_tkeep\\[7:0\\]|monitor_axis_tvalid|monitor_axis_tready|monitor_axis_tlast|frame_len\\[15:0\\]|frame_len_valid)$",
+    "--verbose"
+  ],
+  "exit_code": 0,
+  "source_validation_sha256": "565d69af75dad64817a7be6fa680115f26a03b1646ad0ed478a28b62034683cf",
+  "note": "从原 validation.json 提取；命令本身未重新执行。"
+}

@@ -1,0 +1,8 @@
+{
+  "argv": [
+    "make",
+    "test",
+    "PYTHON=.venv/bin/python"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp"
+}

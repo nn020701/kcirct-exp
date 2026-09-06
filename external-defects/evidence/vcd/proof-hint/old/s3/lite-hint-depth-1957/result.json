@@ -1,0 +1,35 @@
+{
+  "case": "s3",
+  "mode": "hint",
+  "depth": 1957,
+  "argv": [
+    "/Users/bytedance/.nix-profile/bin/krun",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/original-prestate.kore",
+    "--definition",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition-lite",
+    "--output",
+    "kore",
+    "--parser",
+    "cat",
+    "--term",
+    "--no-expand-macros",
+    "--depth",
+    "1957",
+    "--proof-hint"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/lite-hint-depth-1957",
+  "environment": {
+    "K_BIN": null,
+    "PATH": "/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/opt/homebrew/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/pkg/env/active/bin:/opt/pmk/env/global/bin:/opt/homebrew/bin:/opt/puppetlabs/bin:/Users/bytedance/.codex/tmp/arg0/codex-arg0NHAs9D:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/Users/bytedance/.local/bin:/Users/bytedance/.cabal/bin:/Users/bytedance/.ghcup/bin:/Users/bytedance/cym/cymProject/k/k/k-distribution/target/release/k/bin:/opt/homebrew/opt/llvm@17/bin:/opt/homebrew/opt/flex/bin:/opt/homebrew/opt/bison/bin:/opt/homebrew/opt/openjdk@17/bin:/Users/bytedance/.nix-profile/bin:/Users/bytedance/cym/tool/firtool-1.147.0/bin:/nix/var/nix/profiles/default/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/bytedance/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources:/Users/bytedance/.local/bin:/Users/bytedance/.local/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  },
+  "input_sha256": "a5388d3758a00d24192fa1c545de618d787327e8d1ddda90d46202f0eda89b2b",
+  "start_epoch": 1788686493.503256,
+  "status": "completed",
+  "returncode": 0,
+  "elapsed_s": 3.981553792953491,
+  "stdout": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/lite-hint-depth-1957/trace.hint",
+  "stdout_sha256": "b582ea65f9a2a537952808aa28f8f9da5feea4b7611c4fafe6c83b9ea58b74c3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 518026607,
+  "hint_header_hex": "48494e540d000000"
+}

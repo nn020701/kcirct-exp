@@ -1,0 +1,1603 @@
+{
+  "schema_version": 1,
+  "source_run": "vcd-complete-02",
+  "vcd_observation": {
+    "case_statuses": {
+      "pass": 10
+    },
+    "full_waveform_pairs": 20,
+    "events_per_design_version": 642,
+    "k_calls_both_versions": 2568,
+    "host_exit_code": 0,
+    "runner_exit_code": 0
+  },
+  "metadata_observation": {
+    "groups": 20,
+    "expected_groups": 20,
+    "states": 2568,
+    "connection_changes": 9,
+    "text_order_only_differences": 0,
+    "unbound_states": 0,
+    "passed": false,
+    "affected_group": "s2/golden",
+    "first_event_index": 84,
+    "first_evaluation": 2,
+    "changed_result": "%53",
+    "original_operands": [
+      "%51",
+      "%50",
+      "%54"
+    ],
+    "changed_operands": [
+      "%50",
+      "%54",
+      "%54"
+    ]
+  },
+  "interpretation": "真实VCD通过与只读connection内容变化同时成立。最终状态检查或顶层波形通过不能证明全部内部元数据保持不变；本目录记录额外审计发现，不改写批次pass为失败，也不宣称任务已完整收尾。",
+  "preservation_scope": "保存完整批次结果/身份与两份全批审计，以及S2正常版全部命令/输入/最后状态、变化前一份与后续九份压缩快照、两版原始VCD和比较记录。其余快照仍在完整.runs归档，原始路径与哈希由审计固定。",
+  "artifacts": {
+    "evidence/vcd/metadata-integrity/vcd-complete-02/batch/prepared.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/batch/prepared.json",
+      "source": ".runs/vcd-complete-02/prepared.json",
+      "sha256": "737db575eb196250c20c7ebae8dbde119159b38c0ed6f45b09ceaf5fa458590d",
+      "bytes": 7971
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/batch/versions.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/batch/versions.json",
+      "source": ".runs/vcd-complete-02/versions.json",
+      "sha256": "1417f7d3934c0968065ef01260c9ace6bc69004e5c507dd51e82ab2d930d1446",
+      "bytes": 7404
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/batch/protocol.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/batch/protocol.json",
+      "source": ".runs/vcd-complete-02/protocol.json",
+      "sha256": "d8c1727156be8889c08909437ecaa69e8ac27825b3613698aa5bf57b8683fd64",
+      "bytes": 345
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/batch/results.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/batch/results.json",
+      "source": ".runs/vcd-complete-02/results.json",
+      "sha256": "6c800ca260708ff0b72f17fa20ad27fa8635eeb974d43f2fdef359204f7c5b3d",
+      "bytes": 930520
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/batch/summary.csv": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/batch/summary.csv",
+      "source": ".runs/vcd-complete-02/summary.csv",
+      "sha256": "2434a5b7bc04b81a2cba4ad809ce18dadd1f6288a560d29d694bd6bfb16411dc",
+      "bytes": 723
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/batch/batch-exit.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/batch/batch-exit.json",
+      "source": ".runs/vcd-complete-02/batch-exit.json",
+      "sha256": "ca56301929cf7a5539d96d338b2af3bbdfaa521164beee51acea6eb494f9fd72",
+      "bytes": 420
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/batch/runner.py": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/batch/runner.py",
+      "source": ".runs/vcd-complete-02/runner.py",
+      "sha256": "6721c241969415f263986f1723aaa8eac8ceb517babbef430305f20cfc905228",
+      "bytes": 32878
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/batch/native.py": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/batch/native.py",
+      "source": ".runs/vcd-complete-02/native.py",
+      "sha256": "51c6aefbb8889369665d1c91942580ce8f5b367e08ef79f20f020f163a9d0a87",
+      "bytes": 14488
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/batch/waveform.py": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/batch/waveform.py",
+      "source": ".runs/vcd-complete-02/waveform.py",
+      "sha256": "f3f6c9ab2b99fea61a204100c59867043aebee23b7ca7414b404614cdd0b2957",
+      "bytes": 12089
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/audit/audit_complete_02.py": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/audit_complete_02.py",
+      "source": ".work/complete-exp/audit_complete_02.py",
+      "sha256": "4752df666736f3e8b569963fe0073a6c1492ad56565955910ba2305059c85487",
+      "bytes": 12604
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-audit.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-audit.json",
+      "source": ".work/complete-exp/vcd-complete-02-audit.json",
+      "sha256": "7542e87dc3d3f5bb68c23de4be7456b207a820679c0a300cc4762e64d902599c",
+      "bytes": 1300350
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+      "source": ".work/complete-exp/vcd-complete-02-connection-audit.json",
+      "sha256": "f51fa7b90ab01a74419cdf963ae7be6892f9e7c2e730cf2b9f5d3e97b5e373b7",
+      "bytes": 1864453
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/audit/s2-complete02-connection-change.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/s2-complete02-connection-change.json",
+      "source": ".work/complete-exp/s2-complete02-connection-change.json",
+      "sha256": "de7f551fd49f9a285bc2f5a6ceaf5bf376f0702c6acef887a896b70e51f2aa13",
+      "bytes": 5449
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/manifest.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/manifest.json",
+      "source": ".runs/vcd-complete-02/s2/manifest.json",
+      "sha256": "2dfa896964898040114bc90d039abc85cc786b9d717bfb239a51f51c5d326853",
+      "bytes": 4333
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/result.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/result.json",
+      "source": ".runs/vcd-complete-02/s2/result.json",
+      "sha256": "afac1a8fcef4bd1baa97d0e0901fa0c3d9a8f0eb3b9da59bf63552201e6f616a",
+      "bytes": 65792
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/test_data.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/test_data.json",
+      "source": ".runs/vcd-complete-02/s2/test_data.json",
+      "sha256": "8bab0c208d18b0feb0d899809369581de2b00e351290b8b80a4ab8ba18283ab8",
+      "bytes": 12427
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/csv-normalizations.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/csv-normalizations.json",
+      "source": ".runs/vcd-complete-02/s2/csv-normalizations.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/comparison/diffvcd.command.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/comparison/diffvcd.command.json",
+      "source": ".runs/vcd-complete-02/s2/golden/comparison/diffvcd.command.json",
+      "sha256": "be4c6e446407c38342e00687e09dd83cc13ec370189955b5b042f18209941f69",
+      "bytes": 901
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/comparison/diffvcd.stderr.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/comparison/diffvcd.stderr.log",
+      "source": ".runs/vcd-complete-02/s2/golden/comparison/diffvcd.stderr.log",
+      "sha256": "374f74c07fa770c35477e92405dbe6f81778cae38b21dbe0de23cb41fcfc29dc",
+      "bytes": 404
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/comparison/diffvcd.stdout.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/comparison/diffvcd.stdout.log",
+      "source": ".runs/vcd-complete-02/s2/golden/comparison/diffvcd.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/comparison/preflight.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/comparison/preflight.json",
+      "source": ".runs/vcd-complete-02/s2/golden/comparison/preflight.json",
+      "sha256": "feb60e7a90607d20c271993eace85f04c7a96457b28773b29cbc9249e8ac9a6d",
+      "bytes": 1197
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/commands.jsonl": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/commands.jsonl",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/commands.jsonl",
+      "sha256": "e275ef88ffdb6ddf9f89a73a224be9bc3e2f717fcb6fc9913820c032cf89fb08",
+      "bytes": 1381
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/ir-baseline.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/ir-baseline.json",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/ir-baseline.json",
+      "sha256": "86c49767237199d88ad69d92c0be5b4230ee1c0dd7836835d5db53e513e9b1ed",
+      "bytes": 7028
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/kimulator.stderr.txt": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/kimulator.stderr.txt",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/kimulator.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/kimulator.stdout.txt": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/kimulator.stdout.txt",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/kimulator.stdout.txt",
+      "sha256": "ba732093bc42a1181d81c07adbea523311eb13862b8ec8d113c571bba3bf076d",
+      "bytes": 2998
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/output.csv": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/output.csv",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/output.csv",
+      "sha256": "de6a83ddda6a3bd4b2ac4989933ed1de3515d4d6e830d78db3237aefaba3bdea",
+      "bytes": 504
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/result.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/result.json",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/result.json",
+      "sha256": "d713dc42aeaa1902da200a3b3bf52fb2d94f2997e25b9bd571353c89db3f6716",
+      "bytes": 11583
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0000.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0000.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0000.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0001.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0001.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0001.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0002.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0002.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0002.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0003.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0003.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0003.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0004.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0004.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0004.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0005.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0005.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0005.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0006.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0006.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0006.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0007.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0007.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0007.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0008.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0008.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0008.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0009.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0009.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0009.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0010.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0010.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0010.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0011.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0011.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0011.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0012.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0012.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0012.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0013.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0013.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0013.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0014.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0014.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0014.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0015.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0015.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0015.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0016.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0016.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0016.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0017.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0017.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0017.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0018.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0018.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0018.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0019.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0019.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0019.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0020.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0020.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0020.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0021.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0021.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0021.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0022.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0022.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0022.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0023.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0023.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0023.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0024.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0024.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0024.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0025.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0025.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0025.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0026.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0026.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0026.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0027.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0027.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0027.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0028.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0028.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0028.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0029.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0029.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0029.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0030.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0030.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0030.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0031.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0031.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0031.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0032.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0032.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0032.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0033.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0033.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0033.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0034.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0034.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0034.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0035.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0035.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0035.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0036.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0036.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0036.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0037.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0037.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0037.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0038.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0038.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0038.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0039.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0039.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0039.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0040.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0040.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0040.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0041.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0041.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0041.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0042.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0042.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0042.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0043.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0043.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0043.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0044.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0044.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0044.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0045.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0045.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0045.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0046.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0046.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0046.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0047.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0047.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0047.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0048.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0048.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0048.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0049.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0049.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0049.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0050.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0050.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0050.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0051.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0051.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0051.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0052.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0052.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0052.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0053.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0053.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0053.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0054.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0054.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0054.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0055.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0055.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0055.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0056.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0056.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0056.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0057.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0057.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0057.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0058.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0058.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0058.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0059.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0059.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0059.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0060.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0060.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0060.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0061.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0061.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0061.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0062.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0062.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0062.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0063.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0063.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0063.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0064.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0064.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0064.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0065.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0065.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0065.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0066.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0066.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0066.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0067.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0067.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0067.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0068.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0068.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0068.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0069.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0069.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0069.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0070.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0070.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0070.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0071.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0071.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0071.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0072.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0072.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0072.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0073.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0073.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0073.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0074.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0074.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0074.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0075.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0075.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0075.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0076.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0076.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0076.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0077.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0077.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0077.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0078.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0078.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0078.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0079.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0079.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0079.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0080.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0080.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0080.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0081.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0081.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0081.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0082.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0082.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0082.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0083.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0083.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0083.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0084.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0084.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0084.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0085.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0085.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0085.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0086.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0086.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0086.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0087.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0087.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0087.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0088.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0088.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0088.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0089.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0089.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0089.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0090.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0090.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0090.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0091.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0091.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0091.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0092.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0092.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0092.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0093.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0093.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0093.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0094.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0094.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0094.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0095.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0095.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0095.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0096.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0096.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0096.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0097.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0097.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0097.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0098.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0098.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0098.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0099.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0099.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0099.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0100.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0100.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0100.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0101.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0101.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0101.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0102.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0102.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0102.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0103.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0103.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0103.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0104.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0104.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0104.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0105.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0105.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0105.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0106.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0106.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0106.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0107.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0107.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0107.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0108.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0108.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0108.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0109.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0109.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0109.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0110.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0110.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0110.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0111.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0111.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0111.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0112.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0112.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0112.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0113.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0113.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0113.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0114.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0114.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0114.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0115.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0115.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0115.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0116.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0116.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0116.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0117.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0117.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0117.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0118.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0118.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0118.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0119.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0119.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0119.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0120.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0120.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0120.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0121.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0121.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0121.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0122.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0122.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0122.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0123.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0123.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0123.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0124.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0124.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0124.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0125.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0125.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0125.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0126.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0126.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0126.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0127.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0127.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0127.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0128.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0128.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0128.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0129.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0129.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0129.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0130.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0130.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0130.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0131.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0131.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0131.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0132.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0132.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0132.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0133.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0133.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0133.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0134.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0134.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0134.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0135.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0135.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0135.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0136.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0136.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0136.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0137.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0137.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0137.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0138.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0138.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0138.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0139.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0139.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0139.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0140.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0140.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0140.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0141.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0141.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0141.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0142.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0142.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0142.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0143.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0143.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0143.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0144.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0144.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0144.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0145.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0145.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0145.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0146.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0146.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0146.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0147.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0147.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0147.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0148.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0148.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0148.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0149.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0149.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0149.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0150.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0150.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0150.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0151.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0151.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0151.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0152.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0152.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0152.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0153.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0153.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0153.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0154.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0154.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0154.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0155.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0155.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0155.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0156.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0156.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0156.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0157.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0157.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0157.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0158.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0158.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0158.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0159.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0159.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0159.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0160.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0160.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0160.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0161.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0161.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0161.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0162.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0162.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0162.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0163.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0163.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0163.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0164.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0164.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0164.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0165.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0165.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0165.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0166.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0166.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0166.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0167.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0167.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0167.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0168.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0168.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0168.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0169.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0169.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0169.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0170.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0170.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0170.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0171.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0171.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0171.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0172.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0172.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0172.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0173.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0173.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0173.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0174.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0174.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0174.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0175.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0175.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0175.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0176.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0176.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0176.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0177.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0177.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0177.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0178.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0178.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0178.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0179.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0179.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0179.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0180.stderr": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/command-0180.stderr",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/command-0180.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/commands.jsonl": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/commands.jsonl",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/commands.jsonl",
+      "sha256": "25859f875080660f6498619cb0808e28c9167346d8801b0ca2174f4dd8d33cf9",
+      "bytes": 220282
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/design.generic.mlir": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/design.generic.mlir",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/design.generic.mlir",
+      "sha256": "3c57ffec2e851b9bee594b6e0bcb683ef20bd20fbfedce1ccc0f5c98bb359485",
+      "bytes": 5700
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/inputs.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/inputs.json",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/inputs.json",
+      "sha256": "8bab0c208d18b0feb0d899809369581de2b00e351290b8b80a4ab8ba18283ab8",
+      "bytes": 12427
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/last-state.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/last-state.kore",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/last-state.kore",
+      "sha256": "a25a1e092505cf9de5ff0d214c400bdfb3624039a524e4d3714e3755f28483ff",
+      "bytes": 307041
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/pgm.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/pgm.kore",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/pgm.kore",
+      "sha256": "88d27695f5b9f4916f87438e940b129f376634ffe6b63584e64ee16027689127",
+      "bytes": 167422
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/preprocessed.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/preprocessed.kore",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/preprocessed.kore",
+      "sha256": "b38f8d83f8c1434daf16c70946f72eefa550c817f4d373a9d031c88ffa96a2b1",
+      "bytes": 132410
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/preprocessed.kore.prestate": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/preprocessed.kore.prestate",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/preprocessed.kore.prestate",
+      "sha256": "e05b5b7dfdf9af24efd87a76ad6748b579eb8e76be27e263f68bd60a18fed026",
+      "bytes": 167615
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/result.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/result.json",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/result.json",
+      "sha256": "ba732093bc42a1181d81c07adbea523311eb13862b8ec8d113c571bba3bf076d",
+      "bytes": 2998
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/setup.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/setup.kore",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/setup.kore",
+      "sha256": "a35c110092135ac6cd8aaacc8e3591eae681a1ba0dc5a5aec25cce8d31090e4e",
+      "bytes": 257449
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/setup.kore.prestate": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/setup.kore.prestate",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/setup.kore.prestate",
+      "sha256": "b42c67682213537f875e815106c721150bee539c95606e58f4abf1342e78f201",
+      "bytes": 132501
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/simulated.0.kore.prestate": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/simulated.0.kore.prestate",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/simulated.0.kore.prestate",
+      "sha256": "3a7eea73873aebd78734ebab897768678314c2964254d903fd3f7b9d7ca17fd1",
+      "bytes": 307793
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/simulated.1.kore.prestate": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/simulated.1.kore.prestate",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/simulated.1.kore.prestate",
+      "sha256": "0fa457395fe24e27898f71ed45f531dcf3a0b8362f5d45886eed2b43e82e9298",
+      "bytes": 307793
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/state.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/state.json",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/state.json",
+      "sha256": "f1ffbbab0865c935cee730c53ebcded9392b5ab1d0fc8f1761eb790f4df7692d",
+      "bytes": 739
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0084.eval-1.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0084.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0084.eval-1.kore.gz",
+      "sha256": "fe008da337ac7efd7338a870d5e495232df2136a275eab473f26da330b86df3c",
+      "bytes": 6481
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0084.eval-2.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0084.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0084.eval-2.kore.gz",
+      "sha256": "6532c8332638005fb75f0782b11a7d813b541d37d060c36d729d59fc294fa4b4",
+      "bytes": 6477
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0085.eval-1.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0085.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0085.eval-1.kore.gz",
+      "sha256": "c3fb72ef58420d2105c5f18a4f14f89c114d9a5a54651a87b584ffe141c9e7d6",
+      "bytes": 6478
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0085.eval-2.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0085.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0085.eval-2.kore.gz",
+      "sha256": "2e38aa8ebe6a9ca217a919a421caa967ef8f31bb6d86651c2496f967b2b32f67",
+      "bytes": 6476
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0086.eval-1.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0086.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0086.eval-1.kore.gz",
+      "sha256": "b543560320603b9680a15a353628fa31d2813fa67968dab9a4c276eb473d386f",
+      "bytes": 6528
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0086.eval-2.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0086.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0086.eval-2.kore.gz",
+      "sha256": "92eb494b1338e80c50d14b3c3504f5216a5776b85a5cc6442243d77843a611a1",
+      "bytes": 6475
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0087.eval-1.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0087.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0087.eval-1.kore.gz",
+      "sha256": "4236f1cb48cfdcd789ca1f030410865fa27888062b9e966b1478e0fb24765a79",
+      "bytes": 6487
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0087.eval-2.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0087.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0087.eval-2.kore.gz",
+      "sha256": "8a6e1aff361f4bc2e665305d614a04f706ef4afe9b7d3effebd3698d9512d72a",
+      "bytes": 6497
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0088.eval-1.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0088.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0088.eval-1.kore.gz",
+      "sha256": "ad8eedc0aa6f7c4f087ce6c9d653a633ab0b2d5fb0b3e2402f43d1379df62044",
+      "bytes": 6472
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0088.eval-2.kore.gz": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0088.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states/event-0088.eval-2.kore.gz",
+      "sha256": "2ea21be105f8de80d0d3261febf6c4d7e91c7ca1991795b2930d1fff56c90a8f",
+      "bytes": 6470
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/simulation/states.json",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/simulation/states.json",
+      "sha256": "7373be3bc0d721386e4ddd49bb7ea3a8fb52f3759a0ff8c18e70b07d7be90e2c",
+      "bytes": 69205
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/test.vcd": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/kimulator/test.vcd",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/test.vcd",
+      "sha256": "10d296ed237602e0c30732c89b7dc69cc699271c7947a482c3e9166c663656a1",
+      "bytes": 6124
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/build.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/build.log",
+      "source": ".runs/vcd-complete-02/s2/golden/native/build.log",
+      "sha256": "d2f368b92c52f32d12b0f6f58ee71f61fe86a55f60faf9df201e5220dd42190c",
+      "bytes": 7630
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/build.stderr.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/build.stderr.log",
+      "source": ".runs/vcd-complete-02/s2/golden/native/build.stderr.log",
+      "sha256": "85fd3d722296bd72ba4d9b4451e1889d0215eecc25fcaa5d0d52fe067388f7cf",
+      "bytes": 2076
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/build.stdout.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/build.stdout.log",
+      "source": ".runs/vcd-complete-02/s2/golden/native/build.stdout.log",
+      "sha256": "b5e9f4a648f8cb45d16a2f201c065bd6ece5bb4428a7aa29d95e2bb7f0bee8ec",
+      "bytes": 5554
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/commands.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/commands.json",
+      "source": ".runs/vcd-complete-02/s2/golden/native/commands.json",
+      "sha256": "f809a15db57839986b213061e85869cc649027d74b0406e96e9de63e299ecdee",
+      "bytes": 2666
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/driver.cpp": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/driver.cpp",
+      "source": ".runs/vcd-complete-02/s2/golden/native/driver.cpp",
+      "sha256": "e8ae158985c11fbb6b3799c8a99bf8b62e899750d92f6525df72dae74c4c2514",
+      "bytes": 2344
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/inputs.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/inputs.json",
+      "source": ".runs/vcd-complete-02/s2/golden/native/inputs.json",
+      "sha256": "a8df19d55cdbe7ba365f52520d3bae28c3a35fd5a3c9eb1b2ec6540329e03f78",
+      "bytes": 6798
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/output.csv": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/output.csv",
+      "source": ".runs/vcd-complete-02/s2/golden/native/output.csv",
+      "sha256": "de6a83ddda6a3bd4b2ac4989933ed1de3515d4d6e830d78db3237aefaba3bdea",
+      "bytes": 504
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/result.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/result.json",
+      "source": ".runs/vcd-complete-02/s2/golden/native/result.json",
+      "sha256": "2178cdac530cc17db21a95f0d91f5d7b208e1900c8464d6dc998a5d44489f28c",
+      "bytes": 13212
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/run.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/run.log",
+      "source": ".runs/vcd-complete-02/s2/golden/native/run.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/run.stderr.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/run.stderr.log",
+      "source": ".runs/vcd-complete-02/s2/golden/native/run.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/run.stdout.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/run.stdout.log",
+      "source": ".runs/vcd-complete-02/s2/golden/native/run.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/sampling-contract.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/sampling-contract.json",
+      "source": ".runs/vcd-complete-02/s2/golden/native/sampling-contract.json",
+      "sha256": "bb4c43a5de6b4c62bb3ceec77b7746f795f116003cfca657d9a3e69a6345bd03",
+      "bytes": 1667
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/stimulus.hex": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/stimulus.hex",
+      "source": ".runs/vcd-complete-02/s2/golden/native/stimulus.hex",
+      "sha256": "bf1949e827bfe041b889b7f0066e0aa11752295ed0ae8244ef991c6ec2aedfe4",
+      "bytes": 180
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/stimulus.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/stimulus.json",
+      "source": ".runs/vcd-complete-02/s2/golden/native/stimulus.json",
+      "sha256": "8bab0c208d18b0feb0d899809369581de2b00e351290b8b80a4ab8ba18283ab8",
+      "bytes": 12427
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/trace.vcd": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/trace.vcd",
+      "source": ".runs/vcd-complete-02/s2/golden/native/trace.vcd",
+      "sha256": "ad2d9f0edefe2b38895c15845f8cd9f94b8fa9ce38745509444ff210deba53be",
+      "bytes": 3000
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/version.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/version.log",
+      "source": ".runs/vcd-complete-02/s2/golden/native/version.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/version.stderr.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/version.stderr.log",
+      "source": ".runs/vcd-complete-02/s2/golden/native/version.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/version.stdout.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/version.stdout.log",
+      "source": ".runs/vcd-complete-02/s2/golden/native/version.stdout.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/versions.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/golden/native/versions.json",
+      "source": ".runs/vcd-complete-02/s2/golden/native/versions.json",
+      "sha256": "ff9c0fe38d2b6c5225bfc6d5e126fddbcdcee587205a2e000b734cc8797c4c34",
+      "bytes": 126
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/kimulator/test.vcd": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/kimulator/test.vcd",
+      "source": ".runs/vcd-complete-02/s2/buggy/kimulator/test.vcd",
+      "sha256": "874815c6763b38d6da87b0d8b83ec47bb54285a2c8a913b33a85ebc43f3029f8",
+      "bytes": 6124
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/kimulator/simulation/result.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/kimulator/simulation/result.json",
+      "source": ".runs/vcd-complete-02/s2/buggy/kimulator/simulation/result.json",
+      "sha256": "77afe7f571880a8fc6255b871e09acd71bb829579720303e1b8aabf8b7d682db",
+      "bytes": 2995
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/native/trace.vcd": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/native/trace.vcd",
+      "source": ".runs/vcd-complete-02/s2/buggy/native/trace.vcd",
+      "sha256": "373f4a817a8484d0ec783e8fbb87695b2e980e507a559ab1827b539844ef41db",
+      "bytes": 3006
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/native/result.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/native/result.json",
+      "source": ".runs/vcd-complete-02/s2/buggy/native/result.json",
+      "sha256": "9b316658dc46c4b42f52d01a263a9b0ab11a71731583bb59388bd1b0086f3f3a",
+      "bytes": 13569
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/comparison/diffvcd.stdout.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/comparison/diffvcd.stdout.log",
+      "source": ".runs/vcd-complete-02/s2/buggy/comparison/diffvcd.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/comparison/diffvcd.command.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/comparison/diffvcd.command.json",
+      "source": ".runs/vcd-complete-02/s2/buggy/comparison/diffvcd.command.json",
+      "sha256": "ffe1cf33f0fa6deb98f62338ea27c3b2a6306a6aa8376d2461f973fe642bc72f",
+      "bytes": 898
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/comparison/diffvcd.stderr.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/comparison/diffvcd.stderr.log",
+      "source": ".runs/vcd-complete-02/s2/buggy/comparison/diffvcd.stderr.log",
+      "sha256": "374f74c07fa770c35477e92405dbe6f81778cae38b21dbe0de23cb41fcfc29dc",
+      "bytes": 404
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/comparison/preflight.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/s2/buggy/comparison/preflight.json",
+      "source": ".runs/vcd-complete-02/s2/buggy/comparison/preflight.json",
+      "sha256": "feb60e7a90607d20c271993eace85f04c7a96457b28773b29cbc9249e8ac9a6d",
+      "bytes": 1197
+    }
+  },
+  "artifact_count": 260,
+  "bytes": 6547070
+}

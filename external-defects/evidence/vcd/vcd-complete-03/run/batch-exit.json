@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "command": [
+    "make",
+    "run",
+    "PYTHON=.venv/bin/python",
+    "KIMULATOR=../circt-semantics/.venv/bin/kcirct",
+    "CASES=all-short",
+    "ARGS=--k-bin /Users/bytedance/.nix-profile/bin --run-id vcd-complete-03"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp",
+  "host_exit_code": 0,
+  "runner_exit_code": 0,
+  "runner_exit_code_observation": "由 make 的单条 run recipe 成功返回推得；没有单独 wait Python 子进程。原始 make argv、stdout、stderr、返回值已按哈希绑定。",
+  "evidence": "root exec session 67545 completed exit_code=0; subprocess.run(make) returncode=0; all 10 results pass",
+  "status": "pass",
+  "elapsed_seconds": 815.2624387741089,
+  "host_records": {
+    "run.command.json": {
+      "source": ".work/indexed-read/run.command.json",
+      "sha256": "950b9a6e8c1260f41f36c9a74c7a0ec8b00bc898928ece0394d88fc18349a6e6",
+      "bytes": 380
+    },
+    "run.result.json": {
+      "source": ".work/indexed-read/run.result.json",
+      "sha256": "bd32bbf2a54aeb4ae3369704fbfe105ec7305e3ec58219e395eabfe005c422ca",
+      "bytes": 62
+    },
+    "run.stdout": {
+      "source": ".work/indexed-read/run.stdout",
+      "sha256": "1e16ed71c714df113f9f28fd615fba7aa8a9fd8f7cf4b1e59d5d1842a5d6643b",
+      "bytes": 3559
+    },
+    "run.stderr": {
+      "source": ".work/indexed-read/run.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

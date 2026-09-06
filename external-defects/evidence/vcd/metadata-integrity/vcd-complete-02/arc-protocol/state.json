@@ -1,0 +1,42 @@
+[
+  {
+    "name": "xlnxstream_2018_3",
+    "states": [
+      {
+        "name": "M_AXIS_ACLK",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "M_AXIS_ARESETN",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "M_AXIS_TREADY",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "M_AXIS_TVALID",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "M_AXIS_TDATA",
+        "numBits": 32,
+        "type": "output"
+      },
+      {
+        "name": "M_AXIS_TSTRB",
+        "numBits": 4,
+        "type": "output"
+      },
+      {
+        "name": "M_AXIS_TLAST",
+        "numBits": 1,
+        "type": "output"
+      }
+    ]
+  }
+]

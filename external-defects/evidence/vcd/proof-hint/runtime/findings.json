@@ -1,0 +1,469 @@
+{
+  "schema_version": 1,
+  "scope": "实际已安装 K7.1.323 / LLVM backend0.1.139 的只读原始源码、headers、DWARF、asm与共享机制核验。未下载、未修改库或语义、未运行仿真。",
+  "installed_k": "/nix/store/jv1s6amn3hx8i7241v1j4hx5js4274d6-k-7.1.323-6ee29000016c6addb83b39ac865860f9542b3ebf",
+  "installed_llvm": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139",
+  "libraries": {
+    "libcollections.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollections.a",
+      "source": null,
+      "sha256": "cac99c213c8548f913916f55fb35fb4949b031fc4c2e84883dec15cd944d8051",
+      "bytes": 11139304
+    },
+    "libcollect.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollect.a",
+      "source": null,
+      "sha256": "b9ee033076b02feef8852e4aa4a311716fc10b6e02fb3cd9f4e355b428983007",
+      "bytes": 626344
+    },
+    "liballoc.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/liballoc.a",
+      "source": null,
+      "sha256": "e1cd571e993f3b21bebb36b41a6222123468d57c8bd3ee88ae1cda5360c4da19",
+      "bytes": 165768
+    }
+  },
+  "derivation": {
+    "path": "/nix/store/0zg9bljlg54db69vxj8jh4afwl6pflhq-llvm-backend-0.1.139.drv",
+    "src_assembled": "/nix/store/rlb0k7figm4kxaadqkgqva5hyr4v22cm-llvm-backend-src",
+    "assembled_exists": false,
+    "patches": "",
+    "source_derivation": "/nix/store/n3kxyn9w54b00kwk5a2ng6gb1yag5wdp-llvm-backend-src.drv",
+    "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source",
+    "source_exists": true,
+    "installPhase": "mkdir $out\ncp -rv $src/* $out\nchmod -R u+w $out\nmkdir -p $out/deps/fmt\nmkdir -p $out/deps/immer\nmkdir -p $out/deps/rapidjson\nmkdir -p $out/deps/pybind11\ncp -rv /nix/store/gwnwsiya5wv9k3440kb15bh45z8vblij-source/* $out/deps/fmt\ncp -rv /nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/* $out/deps/immer\ncp -rv /nix/store/6hz4r4ic177n5448sbydbrlajvba9b2m-source/* $out/deps/rapidjson\ncp -rv /nix/store/h47ywvcib0zl21a43xz4icslrjdfzm4x-source/* $out/deps/pybind11\n",
+    "cmakeFlags": "-DCMAKE_C_COMPILER=/nix/store/jbzrdw3k9vf33whys0b9n52m992jz89l-clang-wrapper-17.0.6/bin/cc -DCMAKE_CXX_COMPILER=/nix/store/jbzrdw3k9vf33whys0b9n52m992jz89l-clang-wrapper-17.0.6/bin/c++ -DLLVM_CLANG_PATH=/nix/store/3fjy1ncihx8by7jbmcx7jm2vfd9q7wc1-clang-wrapper-17.0.6/bin/clang -DLLVM_CONFIG_PATH=/nix/store/if3f5z5p2rd3nr3w4m79iccs0fc0hl6q-llvm-17.0.6-dev/bin/llvm-config -DUSE_NIX=TRUE -DCMAKE_SKIP_BUILD_RPATH=FALSE -DBUILD_TESTS=True -DK_LLVM_BACKEND_LTO=OFF"
+  },
+  "original_sources_found": true,
+  "source_discovery_note": "拼装llvm-backend-src输出已不存在，但由实际derivation精确定位的LLVM原始输入与Immer依赖仍在；因此本记录含真正原源码，不把反汇编推测冒充源码。",
+  "installed_header_byte_matches": [
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/flex_vector.hpp",
+        "source": null,
+        "sha256": "e20a85ff7cce1cb8aacc59a18ba4d98f58d78437e039f4e9137161376b36dda3",
+        "bytes": 18800
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/flex_vector.hpp",
+        "source": null,
+        "sha256": "e20a85ff7cce1cb8aacc59a18ba4d98f58d78437e039f4e9137161376b36dda3",
+        "bytes": 18800
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/flex_vector_transient.hpp",
+        "source": null,
+        "sha256": "c1703719485d74628af99715d8eb469b8b003039454c540347ab0e2cea95a92f",
+        "bytes": 7622
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/flex_vector_transient.hpp",
+        "source": null,
+        "sha256": "c1703719485d74628af99715d8eb469b8b003039454c540347ab0e2cea95a92f",
+        "bytes": 7622
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/memory_policy.hpp",
+        "source": null,
+        "sha256": "1627029ede29e5ca6b6ee9e92c3ed3e6218d8ac4ccc3f3d4507f8b5aebe0ed94",
+        "bytes": 4865
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/memory_policy.hpp",
+        "source": null,
+        "sha256": "1627029ede29e5ca6b6ee9e92c3ed3e6218d8ac4ccc3f3d4507f8b5aebe0ed94",
+        "bytes": 4865
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/transience/gc_transience_policy.hpp",
+        "source": null,
+        "sha256": "04eeadd6b3c9a4e5a1e98e3f2ba3378139d67687270ba784c3da29a95ea6254b",
+        "bytes": 3062
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/transience/gc_transience_policy.hpp",
+        "source": null,
+        "sha256": "04eeadd6b3c9a4e5a1e98e3f2ba3378139d67687270ba784c3da29a95ea6254b",
+        "bytes": 3062
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/refcount/no_refcount_policy.hpp",
+        "source": null,
+        "sha256": "7bdd344dbde6307b82bb5902a3c3c3c531128ef6e5146c45d526fa2e5170c8e9",
+        "bytes": 649
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/refcount/no_refcount_policy.hpp",
+        "source": null,
+        "sha256": "7bdd344dbde6307b82bb5902a3c3c3c531128ef6e5146c45d526fa2e5170c8e9",
+        "bytes": 649
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/node.hpp",
+        "source": null,
+        "sha256": "559e7dfb6a3a935f0fb25ea3ab800a4c4005f8ba25cb12e32fb6ac3644bcfbe9",
+        "bytes": 31821
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/detail/rbts/node.hpp",
+        "source": null,
+        "sha256": "559e7dfb6a3a935f0fb25ea3ab800a4c4005f8ba25cb12e32fb6ac3644bcfbe9",
+        "bytes": 31821
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/rrbtree.hpp",
+        "source": null,
+        "sha256": "7bc45d3c1b9aa2157b69a21f45d13a7f09bb4e89a94db1f2444dfc8a9d14bb34",
+        "bytes": 55702
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/detail/rbts/rrbtree.hpp",
+        "source": null,
+        "sha256": "7bc45d3c1b9aa2157b69a21f45d13a7f09bb4e89a94db1f2444dfc8a9d14bb34",
+        "bytes": 55702
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/operations.hpp",
+        "source": null,
+        "sha256": "cacf1cbe9f9466242cb170d0ad449ccb22455961a47d1b41a224aed12a3d09d8",
+        "bytes": 87136
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/detail/rbts/operations.hpp",
+        "source": null,
+        "sha256": "cacf1cbe9f9466242cb170d0ad449ccb22455961a47d1b41a224aed12a3d09d8",
+        "bytes": 87136
+      },
+      "bytes_equal": true
+    },
+    {
+      "source": {
+        "path": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/heap/heap_policy.hpp",
+        "source": null,
+        "sha256": "b6461577792797c585b4159d43e1654938edb087d215ddec4a4992bec702d166",
+        "bytes": 4259
+      },
+      "installed": {
+        "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/include/kllvm/immer/heap/heap_policy.hpp",
+        "source": null,
+        "sha256": "b6461577792797c585b4159d43e1654938edb087d215ddec4a4992bec702d166",
+        "bytes": 4259
+      },
+      "bytes_equal": true
+    }
+  ],
+  "hooks": {
+    "hook_LIST_concat": {
+      "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/collections/lists.cpp",
+      "line": 16,
+      "symbol_offset": "0x38",
+      "behavior": "右List长度<32时l1.transient后push_back再persistent；否则const拼接。"
+    },
+    "hook_LIST_get_long": {
+      "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/collections/lists.cpp",
+      "line": 49,
+      "symbol_offset": "0x6fc",
+      "behavior": "负索引归一后const at读取，不自行移动元素。"
+    },
+    "hook_LIST_range_long": {
+      "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/collections/lists.cpp",
+      "line": 91,
+      "symbol_offset": "0xd48",
+      "behavior": "100行创建transient，101行drop，102行take，103行persistent；重定位drop_mut@0xe00、take_mut@0xe10。"
+    }
+  },
+  "established_facts": [
+    "List配置no_refcount_policy，unique()恒false；不是普通引用计数判唯一路径。",
+    "持久flex_vector对象复制共享impl树节点；显式transient新建owner token，即使use_transient_rvalues=false仍会进入mut函数。",
+    "can_mutate判定是unique()或ownee token相等；此配置只剩后者。",
+    "slice_left_mut_visitor可将data[idx:count]直接移到data起始；若共享叶子错误获准修改，drop1与观察到[a,b,c]变[b,c,c]吻合。",
+    "owner token通过kore_alloc_heap分配到youngspace；GC迁移collection节点memcpy并遍历子节点/元素，所读实现没有迁移或清零ownee token。",
+    "persistent()左值版本重新分配owner token后返回impl，不清零每个节点原token。"
+  ],
+  "hypothesis": {
+    "status": "unproven",
+    "text": "若GC后存活共享节点保留已失效token地址，后续youngspace地址复用使新owner token碰巧相等，can_mutate可能错误放行并移动共享叶子。这能解释共享敏感、连续执行与序列化重启不同的形状，但尚无动态地址或GC事件证实。",
+    "needed_evidence": [
+      "失败range调用前后的list/leaf地址是否与connection共享。",
+      "新owner.token与输入leaf.ownee.token是否相等及各自分配/GC历史。",
+      "实际写入是否来自operations.hpp:1386，而非其他别名或生成代码存储。"
+    ]
+  },
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/ar",
+        "-t",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollections.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/archive-members.stdout.txt",
+        "source": null,
+        "sha256": "7a2be71f07565b1d2ee71cb8a1048c947ab57d56cd1873eb0ac0677389b1aed1",
+        "bytes": 85
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/archive-members.stderr.txt",
+        "source": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "llvm-nm",
+        "--demangle",
+        "--print-file-name",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollections.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/hook-symbols.stdout.txt",
+        "source": null,
+        "sha256": "505bb57e62818b9203f6fbf0cf0b37c9df15c6bfea7f4fa95d0d87b6da174524",
+        "bytes": 842177
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/hook-symbols.stderr.txt",
+        "source": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "llvm-dwarfdump",
+        "--name=hook_LIST_range_long",
+        "--name=hook_LIST_get_long",
+        "--name=hook_LIST_concat",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollections.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/hook-dwarf.stdout.txt",
+        "source": null,
+        "sha256": "5a974fd4489f89bacc9649cb624117b3dfde475c0807388cbcd847fb36fdd4ad",
+        "bytes": 2985
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/hook-dwarf.stderr.txt",
+        "source": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "llvm-dwarfdump",
+        "--name=hook_LIST_range_long",
+        "--show-children",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollections.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/range-dwarf-children.stdout.txt",
+        "source": null,
+        "sha256": "432210a4ed4a49b9681e159968d7a2205f9e699cf877fc232fc72df5ebd3948b",
+        "bytes": 193485
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/range-dwarf-children.stderr.txt",
+        "source": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "llvm-objdump",
+        "--disassemble",
+        "--no-show-raw-insn",
+        "--disassemble-symbols=_hook_LIST_range_long,_hook_LIST_get_long,_hook_LIST_concat",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollections.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/hook-assembly.stdout.txt",
+        "source": null,
+        "sha256": "99f8ff312132224fea979ebbbf2ed2f765782d0b5037ac96be5fb383de96ea02",
+        "bytes": 16106
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/hook-assembly.stderr.txt",
+        "source": null,
+        "sha256": "137d32c75ad7d9cef5722ac1848024309ef0b5808aed90bed18179e5c8a4c26c",
+        "bytes": 1434
+      }
+    },
+    {
+      "argv": [
+        "llvm-objdump",
+        "--reloc",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollections.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/collection-relocations.stdout.txt",
+        "source": null,
+        "sha256": "5fc17b84e606edf478869d9dfadb0ab750cb508377e19376c080e1588010764d",
+        "bytes": 6822926
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/collection-relocations.stderr.txt",
+        "source": null,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ],
+  "artifacts": {
+    "derivations/llvm-backend.drv": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/derivations/llvm-backend.drv",
+      "source": "/nix/store/0zg9bljlg54db69vxj8jh4afwl6pflhq-llvm-backend-0.1.139.drv",
+      "sha256": "732e308ce5283d3fad1b71c325aad0520e31e4d7f1bc47ef106d15977df4c681",
+      "bytes": 7295
+    },
+    "derivations/llvm-backend-src.drv": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/derivations/llvm-backend-src.drv",
+      "source": "/nix/store/n3kxyn9w54b00kwk5a2ng6gb1yag5wdp-llvm-backend-src.drv",
+      "sha256": "483509b35cbd8b3ad0bd2e8cda25840a373bf11adda6d8320a60102ef5e0d515",
+      "bytes": 2328
+    },
+    "sources/installed-krun-wrapper": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/installed-krun-wrapper",
+      "source": "/nix/store/jv1s6amn3hx8i7241v1j4hx5js4274d6-k-7.1.323-6ee29000016c6addb83b39ac865860f9542b3ebf/bin/krun",
+      "sha256": "9fac34d9702c4e5dac35f88dc3ff1cb93c1bb7cce60bee71d474b9247d9bdd3a",
+      "bytes": 3063
+    },
+    "sources/llvm/runtime/collections/lists.cpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/runtime/collections/lists.cpp",
+      "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/collections/lists.cpp",
+      "sha256": "cb382ebb74cacfe8f8534cbe84eb1bec7ffbbea58bb1dd7e20b35603ec9bd98a",
+      "bytes": 7796
+    },
+    "sources/llvm/include/runtime/header.h": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/include/runtime/header.h",
+      "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/include/runtime/header.h",
+      "sha256": "7b47fc3c6b2e2e5fb354e8fea8d252ba59ef5e1f7c77651ff21016bbbb5ff771",
+      "bytes": 12953
+    },
+    "sources/llvm/include/runtime/arena.h": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/include/runtime/arena.h",
+      "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/include/runtime/arena.h",
+      "sha256": "c9582f48487043101bab77111192cc27cbc14e5e345f545bbf2123f671ceb17e",
+      "bytes": 7449
+    },
+    "sources/llvm/runtime/collect/migrate_collection.cpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/runtime/collect/migrate_collection.cpp",
+      "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/collect/migrate_collection.cpp",
+      "sha256": "c98095db3860f68dad3f876b87af1ca6109c824c86ba56f2155ad81f5162eecd",
+      "bytes": 4136
+    },
+    "sources/llvm/runtime/collect/collect.cpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/runtime/collect/collect.cpp",
+      "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/collect/collect.cpp",
+      "sha256": "4bd63d084a0bbb4b5a5c556c04dc877730f014163c0929bbc66d619b8a82260a",
+      "bytes": 11251
+    },
+    "sources/llvm/runtime/lto/alloc.cpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/runtime/lto/alloc.cpp",
+      "source": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/lto/alloc.cpp",
+      "sha256": "b42826dc9270f45fa81aa4c180bdec1e6ad7bffff91f20c7e4f7b328998f09ed",
+      "bytes": 5258
+    },
+    "sources/immer/immer/flex_vector.hpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/immer/immer/flex_vector.hpp",
+      "source": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/flex_vector.hpp",
+      "sha256": "e20a85ff7cce1cb8aacc59a18ba4d98f58d78437e039f4e9137161376b36dda3",
+      "bytes": 18800
+    },
+    "sources/immer/immer/flex_vector_transient.hpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/immer/immer/flex_vector_transient.hpp",
+      "source": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/flex_vector_transient.hpp",
+      "sha256": "c1703719485d74628af99715d8eb469b8b003039454c540347ab0e2cea95a92f",
+      "bytes": 7622
+    },
+    "sources/immer/immer/memory_policy.hpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/immer/immer/memory_policy.hpp",
+      "source": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/memory_policy.hpp",
+      "sha256": "1627029ede29e5ca6b6ee9e92c3ed3e6218d8ac4ccc3f3d4507f8b5aebe0ed94",
+      "bytes": 4865
+    },
+    "sources/immer/immer/transience/gc_transience_policy.hpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/immer/immer/transience/gc_transience_policy.hpp",
+      "source": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/transience/gc_transience_policy.hpp",
+      "sha256": "04eeadd6b3c9a4e5a1e98e3f2ba3378139d67687270ba784c3da29a95ea6254b",
+      "bytes": 3062
+    },
+    "sources/immer/immer/refcount/no_refcount_policy.hpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/immer/immer/refcount/no_refcount_policy.hpp",
+      "source": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/refcount/no_refcount_policy.hpp",
+      "sha256": "7bdd344dbde6307b82bb5902a3c3c3c531128ef6e5146c45d526fa2e5170c8e9",
+      "bytes": 649
+    },
+    "sources/immer/immer/detail/rbts/node.hpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/immer/immer/detail/rbts/node.hpp",
+      "source": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/node.hpp",
+      "sha256": "559e7dfb6a3a935f0fb25ea3ab800a4c4005f8ba25cb12e32fb6ac3644bcfbe9",
+      "bytes": 31821
+    },
+    "sources/immer/immer/detail/rbts/rrbtree.hpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/immer/immer/detail/rbts/rrbtree.hpp",
+      "source": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/rrbtree.hpp",
+      "sha256": "7bc45d3c1b9aa2157b69a21f45d13a7f09bb4e89a94db1f2444dfc8a9d14bb34",
+      "bytes": 55702
+    },
+    "sources/immer/immer/detail/rbts/operations.hpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/immer/immer/detail/rbts/operations.hpp",
+      "source": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/operations.hpp",
+      "sha256": "cacf1cbe9f9466242cb170d0ad449ccb22455961a47d1b41a224aed12a3d09d8",
+      "bytes": 87136
+    },
+    "sources/immer/immer/heap/heap_policy.hpp": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/immer/immer/heap/heap_policy.hpp",
+      "source": "/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/heap/heap_policy.hpp",
+      "sha256": "b6461577792797c585b4159d43e1654938edb087d215ddec4a4992bec702d166",
+      "bytes": 4259
+    },
+    "hook-relocation-excerpts.txt": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/hook-relocation-excerpts.txt",
+      "source": null,
+      "sha256": "04be9f58e0dd4d0e592e44ebf634bd4839c6ca3819d52b7cd099c36d9d369003",
+      "bytes": 1551
+    },
+    "source-excerpts.txt": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/source-excerpts.txt",
+      "source": null,
+      "sha256": "692002e787d0ec0def67dfb312d52b11b235b80c52c216eef7d86a84dbed47ba",
+      "bytes": 11973
+    }
+  }
+}

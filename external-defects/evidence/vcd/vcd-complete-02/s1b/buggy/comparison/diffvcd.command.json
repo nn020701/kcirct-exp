@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/s1b/buggy/kimulator/test.vcd",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/s1b/buggy/native/trace.vcd",
+    "--top1",
+    "xlnxdemo.",
+    "--top2",
+    "TOP.",
+    "--filter",
+    "^(?:S_AXI_ACLK|S_AXI_ARESETN|S_AXI_AWADDR\\[6:0\\]|S_AXI_AWPROT\\[2:0\\]|S_AXI_AWVALID|S_AXI_WDATA\\[31:0\\]|S_AXI_WSTRB\\[3:0\\]|S_AXI_WVALID|S_AXI_BREADY|S_AXI_ARADDR\\[6:0\\]|S_AXI_ARPROT\\[2:0\\]|S_AXI_ARVALID|S_AXI_RREADY|S_AXI_AWREADY|S_AXI_WREADY|S_AXI_BRESP\\[1:0\\]|S_AXI_BVALID|S_AXI_ARREADY|S_AXI_RDATA\\[31:0\\]|S_AXI_RRESP\\[1:0\\]|S_AXI_RVALID)$",
+    "--verbose"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/s1b/buggy/comparison",
+  "timeout_s": 30,
+  "exit_code": 0
+}

@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s3/golden/kimulator/simulation/simulated.0.kore.prestate",
+    "--definition",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/kdist/circt-semantics/llvm",
+    "--output",
+    "kore",
+    "--parser",
+    "cat",
+    "--term",
+    "--no-expand-macros"
+  ],
+  "rc": 0,
+  "current_cells": 0,
+  "connection_unchanged": true,
+  "sha256": "2ee8e1c0a9cb42bf3bf59e86f4c032a8bf02210a588ec397e3e9688be04d2828"
+}

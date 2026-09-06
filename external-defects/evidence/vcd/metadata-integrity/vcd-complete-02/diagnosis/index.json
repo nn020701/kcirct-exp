@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "description": "S2 首次连接变更的后续独立诊断；只保存已观察到的普通 READ_DIRECT 规则附近邻接状态。语义修复暂缓，本记录不宣称隐患解决。",
+  "artifacts": {
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/findings.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/findings.json",
+      "source": ".work/complete-exp/s2-read-diagnosis/findings.json",
+      "sha256": "e75b7a84e66644cb5872edadf77a4865379c705814d4301c7f9e8d48a068c129",
+      "bytes": 4074
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/event84-eval1.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/event84-eval1.kore",
+      "source": ".work/complete-exp/s2-read-diagnosis/event84-eval1.kore",
+      "sha256": "d770e36648228bee526f0859a2afed1b193cad9768978b17c13d0c08a8d3bea7",
+      "bytes": 307049
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/event84-eval2.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/event84-eval2.kore",
+      "source": ".work/complete-exp/s2-read-diagnosis/event84-eval2.kore",
+      "sha256": "b85ebe0ea8737937760128c52ed4b86e3ac878a2986bf9ddb5939de9e4aa7643",
+      "bytes": 307049
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/replay-0.kore.prestate": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/replay-0.kore.prestate",
+      "source": ".work/complete-exp/s2-read-diagnosis/replay-0.kore.prestate",
+      "sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1",
+      "bytes": 307801
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/replay-0.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/replay-0.kore",
+      "source": ".work/complete-exp/s2-read-diagnosis/replay-0.kore",
+      "sha256": "b85ebe0ea8737937760128c52ed4b86e3ac878a2986bf9ddb5939de9e4aa7643",
+      "bytes": 307049
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/commands.jsonl": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/commands.jsonl",
+      "source": ".work/complete-exp/s2-read-diagnosis/commands.jsonl",
+      "sha256": "6333fe35190025e73c932313f35ea7a389f30f61c3cb88f653da76b7e02926a2",
+      "bytes": 3432
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/replays.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/replays.json",
+      "source": ".work/complete-exp/s2-read-diagnosis/replays.json",
+      "sha256": "dde1eba242cd02a8ca1535b0517eeef19bd4ddec246bdf70f6726a59123f9d36",
+      "bytes": 1164
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/depth-1023.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/depth-1023.kore",
+      "source": ".work/complete-exp/s2-read-diagnosis/depth-1023.kore",
+      "sha256": "c15434ae43addebd952450d97e079a69acdad90641b7d5e4f028b8e2c9f163da",
+      "bytes": 320069
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/depth-1024.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/depth-1024.kore",
+      "source": ".work/complete-exp/s2-read-diagnosis/depth-1024.kore",
+      "sha256": "27f8ddf095bf454ea09cf498b8ff12478bdedd6fef170347c304c959f4c50400",
+      "bytes": 320199
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/map-diff.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/map-diff.json",
+      "source": ".work/complete-exp/s2-read-diagnosis/map-diff.json",
+      "sha256": "9c816f2d074509cd676d3131d1be22b54cd92b98a2f91d955a4d05d62ab50f73",
+      "bytes": 3425
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/connection-bisect.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/connection-bisect.json",
+      "source": ".work/complete-exp/s2-read-diagnosis/connection-bisect.json",
+      "sha256": "969e625fc74c90a390fed26a4964111627ec4370ae9c632b26d943ad5c7fbc25",
+      "bytes": 173677
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/restarted-step.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/restarted-step.json",
+      "source": ".work/complete-exp/s2-read-diagnosis/restarted-step.json",
+      "sha256": "028033e96e2d67ba7038f130e8f715c70e63d984b0b33922cde4ea95e12fb68d",
+      "bytes": 2271
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/restarted-step-0.kore": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/restarted-step-0.kore",
+      "source": ".work/complete-exp/s2-read-diagnosis/restarted-step-0.kore",
+      "sha256": "60e6670dee3b737b09ec76ea27c0bcb7991ed9a727f60dd253851f37e8a5cfb2",
+      "bytes": 320199
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/diagnose_connection.py": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/diagnosis/diagnose_connection.py",
+      "source": ".work/complete-exp/s2-read-diagnosis/diagnose_connection.py",
+      "sha256": "b1b7bf98b6ff991a0d85949048a77d5e3aa880aaf2b020a7802f0069eab9f2d9",
+      "bytes": 1971
+    }
+  }
+}

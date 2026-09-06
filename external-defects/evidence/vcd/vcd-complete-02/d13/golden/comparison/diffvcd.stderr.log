@@ -1,0 +1,16 @@
+8 signals in first file
+29 signals in second file
+8 signals under `axis_frame_len.` in first file
+29 signals under `TOP.` in second file
+8 common signals
+8 filtered and unignored signals
+Reading first file
+Reading second file
+Comparing clk
+Comparing frame_len[15:0]
+Comparing frame_len_valid
+Comparing monitor_axis_tkeep[7:0]
+Comparing monitor_axis_tlast
+Comparing monitor_axis_tready
+Comparing monitor_axis_tvalid
+Comparing rst

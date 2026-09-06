@@ -1,0 +1,11 @@
+source_case_id,variant_id,protocol,status,samples,vcd_events,simulator_agrees_with_native,bug_detected_by_oracle
+D13,d13,external-cli-double-eval-vcd-v1,pass,6,11,True,True
+S3,s3,external-cli-double-eval-vcd-v1,pass,13,25,True,True
+S1,s1b,external-cli-double-eval-vcd-v1,pass,10,19,True,True
+S1,s1r,external-cli-double-eval-vcd-v1,pass,10,19,True,True
+D8,d8,external-cli-double-eval-vcd-v1,pass,14,27,True,True
+D12,d12,external-cli-double-eval-vcd-v1,pass,16,31,True,True
+D11,d11,external-cli-double-eval-vcd-v1,pass,17,33,True,True
+D4,d4,external-cli-double-eval-vcd-v1,pass,185,369,True,True
+S2,s2,external-cli-double-eval-vcd-v1,pass,45,89,True,True
+C4,c4,external-cli-double-eval-vcd-v1,pass,10,19,True,True

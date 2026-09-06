@@ -1,0 +1,1171 @@
+{
+  "source_case_id": "D11",
+  "variant_id": "d11",
+  "protocol": "external-cli-double-eval-vcd-v1",
+  "samples": 17,
+  "vcd_events": 33,
+  "status": "pass",
+  "error": null,
+  "golden_native_oracle": true,
+  "golden_k_oracle": true,
+  "buggy_k_native": true,
+  "simulator_agrees_with_native": true,
+  "bug_detected_by_oracle": true,
+  "first_bug_difference": {
+    "sample_index": 13,
+    "signal": "drop_frame",
+    "expected": 0,
+    "actual": 1
+  },
+  "run_id": "vcd-complete-03",
+  "backends": {
+    "golden_native": {
+      "status": "pass",
+      "stage": null,
+      "error": null,
+      "events_total": null,
+      "events_completed": null,
+      "simulation_calls": null,
+      "simulation_calls_attempted": null,
+      "evaluations_per_input": null,
+      "vcd_top": "TOP",
+      "vcd_sha256": "c53f05bc112d9fcfae3ed517f813aa18194f18bc072c7726c96a81c282bdd776",
+      "timings_s": {
+        "build": 4.701855249997607,
+        "execution": 0.39423633300248184,
+        "read_compare": 0.001994916998228291
+      },
+      "oracle": {
+        "agrees": true,
+        "compared_cells": 84,
+        "masked_cells": 1,
+        "first_mismatch": null,
+        "mismatch_count": 0
+      },
+      "evidence": [
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/build.log",
+          "source": ".runs/vcd-complete-03/d11/golden/native/build.log",
+          "sha256": "8f04ae7cd42b3e97e8b38b2dab65d13d0f4c6632b86ff779b24d85119f94a441",
+          "bytes": 8226
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/build.stderr.log",
+          "source": ".runs/vcd-complete-03/d11/golden/native/build.stderr.log",
+          "sha256": "0aef2851ba07f7194e46599eab53a31498edbe45a55545f25d2ec245592f3bf2",
+          "bytes": 2491
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/build.stdout.log",
+          "source": ".runs/vcd-complete-03/d11/golden/native/build.stdout.log",
+          "sha256": "631c9aa0f01ce8d27fe007388c65abc8529acba651b00a7d5da772378fd0798d",
+          "bytes": 5735
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/commands.json",
+          "source": ".runs/vcd-complete-03/d11/golden/native/commands.json",
+          "sha256": "e6d04d3105574401c49c2b683d6f0a9b20315e88eca14a7932d972eb722e2a8a",
+          "bytes": 2694
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/driver.cpp",
+          "source": ".runs/vcd-complete-03/d11/golden/native/driver.cpp",
+          "sha256": "43c70c91c361231bb667b3cfe696c51687b93b2e2f67a295dfc28aa2e31ac319",
+          "bytes": 2775
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/inputs.json",
+          "source": ".runs/vcd-complete-03/d11/golden/native/inputs.json",
+          "sha256": "5acb6985424bb35f5971709beb75a732c5e78d690af80516037668cda38cedcc",
+          "bytes": 5004
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/output.csv",
+          "source": ".runs/vcd-complete-03/d11/golden/native/output.csv",
+          "sha256": "2eabc53a7916dd13c56ee7ea4fbb0a0844d2c6d7991ca112b6ff66bf84a32d8b",
+          "bytes": 272
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/result.json",
+          "source": ".runs/vcd-complete-03/d11/golden/native/result.json",
+          "sha256": "81e72cb2f940c53e5a3f42e432d761e528d958411f5d4e2056f4956d9e47c9bb",
+          "bytes": 8726
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/run.log",
+          "source": ".runs/vcd-complete-03/d11/golden/native/run.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/run.stderr.log",
+          "source": ".runs/vcd-complete-03/d11/golden/native/run.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/run.stdout.log",
+          "source": ".runs/vcd-complete-03/d11/golden/native/run.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/sampling-contract.json",
+          "source": ".runs/vcd-complete-03/d11/golden/native/sampling-contract.json",
+          "sha256": "9c18a44bf8f4d5aa1690cdd69215fbcbe9b9003ed93e536c548d49867a83ea79",
+          "bytes": 2093
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/stimulus.hex",
+          "source": ".runs/vcd-complete-03/d11/golden/native/stimulus.hex",
+          "sha256": "07725f8a1260c6331ac7f15faa5a740e3482fd14b978a213107aca30792989a7",
+          "bytes": 204
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/stimulus.json",
+          "source": ".runs/vcd-complete-03/d11/golden/native/stimulus.json",
+          "sha256": "c2ee425e4710d836a4b90e38809e0b59559c98b0650b660d0fe01c8276648041",
+          "bytes": 8306
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/trace.vcd",
+          "source": ".runs/vcd-complete-03/d11/golden/native/trace.vcd",
+          "sha256": "c53f05bc112d9fcfae3ed517f813aa18194f18bc072c7726c96a81c282bdd776",
+          "bytes": 2833
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/version.log",
+          "source": ".runs/vcd-complete-03/d11/golden/native/version.log",
+          "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+          "bytes": 54
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/version.stderr.log",
+          "source": ".runs/vcd-complete-03/d11/golden/native/version.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/version.stdout.log",
+          "source": ".runs/vcd-complete-03/d11/golden/native/version.stdout.log",
+          "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+          "bytes": 54
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/versions.json",
+          "source": ".runs/vcd-complete-03/d11/golden/native/versions.json",
+          "sha256": "ff9c0fe38d2b6c5225bfc6d5e126fddbcdcee587205a2e000b734cc8797c4c34",
+          "bytes": 126
+        }
+      ]
+    },
+    "golden_k": {
+      "status": "pass",
+      "stage": "complete",
+      "error": null,
+      "events_total": 33,
+      "events_completed": 33,
+      "simulation_calls": 66,
+      "simulation_calls_attempted": 66,
+      "evaluations_per_input": 2,
+      "vcd_top": "axis_frame_fifo",
+      "vcd_sha256": "485e5bebb3adf808b753ea57d9fc803da8b062472fa87adec7f257b82ded7ef2",
+      "timings_s": {
+        "compile": 0.02090633300031186,
+        "preprocess": 0.19434829099918716,
+        "setup": 0.24990920799973537,
+        "execution": 16.674826709979243,
+        "read_ports": 0.039010375996440416,
+        "state_export": 0.2443026640030439,
+        "total": 17.474668499999098
+      },
+      "oracle": {
+        "agrees": true,
+        "compared_cells": 84,
+        "masked_cells": 1,
+        "first_mismatch": null,
+        "mismatch_count": 0
+      },
+      "evidence": [
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/commands.jsonl",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/commands.jsonl",
+          "sha256": "c75db0f23a138f3199f2453fda460efccbf476f825c46b61f4a2822120facb48",
+          "bytes": 1370
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/ir-baseline.json",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/ir-baseline.json",
+          "sha256": "d4cbf99e0bdecf97e4d96f0d2f6ae1e58cb72acdc7357036f0cb2ebdc44c29ad",
+          "bytes": 7108
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/kimulator.stderr.txt",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/kimulator.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/kimulator.stdout.txt",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/kimulator.stdout.txt",
+          "sha256": "ef28b1180f34da1ca10630464b62a675a440cc971bfda7195f5f061acf74b33a",
+          "bytes": 3349
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/output.csv",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/output.csv",
+          "sha256": "2eabc53a7916dd13c56ee7ea4fbb0a0844d2c6d7991ca112b6ff66bf84a32d8b",
+          "bytes": 272
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/result.json",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/result.json",
+          "sha256": "a9e3241552c85fb80282f11841eb3f03281243fd89400018a676d6546c2a9a2a",
+          "bytes": 9546
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/commands.jsonl",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/commands.jsonl",
+          "sha256": "7dfab5fac9a7165358c0b30018d2f786333371a2932bac8adf223d47277e83b0",
+          "bytes": 84088
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/inputs.json",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/inputs.json",
+          "sha256": "c2ee425e4710d836a4b90e38809e0b59559c98b0650b660d0fe01c8276648041",
+          "bytes": 8306
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/result.json",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/result.json",
+          "sha256": "ef28b1180f34da1ca10630464b62a675a440cc971bfda7195f5f061acf74b33a",
+          "bytes": 3349
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/state.json",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/state.json",
+          "sha256": "bef0db71a8ab9a9dc80daeb4d4a0ac55b2360abe50339cbcd9bb273642e5259b",
+          "bytes": 1233
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/states.json",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/states.json",
+          "sha256": "6eb866db527b1bacd98bb4134f6ea3802b2a32367d20d63fef96ee6c2bb7c740",
+          "bytes": 25703
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/test.vcd",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/test.vcd",
+          "sha256": "485e5bebb3adf808b753ea57d9fc803da8b062472fa87adec7f257b82ded7ef2",
+          "bytes": 2560
+        }
+      ],
+      "native_comparison": {
+        "agrees": true,
+        "exit_code": 0,
+        "compared_signals": 12,
+        "event_count": 33,
+        "first_mismatch": null,
+        "errors": [],
+        "normalization": {
+          "policy": "scalar-equals-i1-zero-range-v1",
+          "applied": false,
+          "mappings": []
+        },
+        "artifacts": {
+          "kimulator_vcd": {
+            "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/test.vcd",
+            "source": ".runs/vcd-complete-03/d11/golden/kimulator/test.vcd",
+            "sha256": "485e5bebb3adf808b753ea57d9fc803da8b062472fa87adec7f257b82ded7ef2",
+            "bytes": 2560
+          },
+          "native_vcd": {
+            "path": "evidence/vcd/vcd-complete-03/d11/golden/native/trace.vcd",
+            "source": ".runs/vcd-complete-03/d11/golden/native/trace.vcd",
+            "sha256": "c53f05bc112d9fcfae3ed517f813aa18194f18bc072c7726c96a81c282bdd776",
+            "bytes": 2833
+          },
+          "preflight": {
+            "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/preflight.json",
+            "source": ".runs/vcd-complete-03/d11/golden/comparison/preflight.json",
+            "sha256": "3fc8027b8f5029b2044238985a4d913d16698e7b3fd21f02c339d32eeb0b61d1",
+            "bytes": 1069
+          },
+          "diffvcd_script": {
+            "path": "evidence/vcd/vcd-complete-03/tools/diffvcd.py",
+            "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+            "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+            "bytes": 6040
+          },
+          "command": {
+            "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/diffvcd.command.json",
+            "source": ".runs/vcd-complete-03/d11/golden/comparison/diffvcd.command.json",
+            "sha256": "862949b8f020e8e7c394e764364a98be3d971b3121786686fe29f10117bfe2ca",
+            "bytes": 987
+          },
+          "stdout": {
+            "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/diffvcd.stdout.log",
+            "source": ".runs/vcd-complete-03/d11/golden/comparison/diffvcd.stdout.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          },
+          "stderr": {
+            "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/diffvcd.stderr.log",
+            "source": ".runs/vcd-complete-03/d11/golden/comparison/diffvcd.stderr.log",
+            "sha256": "fcae2c7ffdbf8d920fc0acc7fc32181aa1ade05fb49fe4690292a5c907c423f2",
+            "bytes": 541
+          }
+        }
+      }
+    },
+    "buggy_native": {
+      "status": "oracle_mismatch",
+      "stage": null,
+      "error": null,
+      "events_total": null,
+      "events_completed": null,
+      "simulation_calls": null,
+      "simulation_calls_attempted": null,
+      "evaluations_per_input": null,
+      "vcd_top": "TOP",
+      "vcd_sha256": "c8b0fb6fe081eefdee62fce3eead649fe7a10e78a4b580e83c5d267cae0c2802",
+      "timings_s": {
+        "build": 5.597181124998315,
+        "execution": 0.39487575000021025,
+        "read_compare": 0.0010129579968634062
+      },
+      "oracle": {
+        "agrees": false,
+        "compared_cells": 84,
+        "masked_cells": 1,
+        "first_mismatch": {
+          "sample_index": 13,
+          "signal": "drop_frame",
+          "expected": 0,
+          "actual": 1
+        },
+        "mismatch_count": 5
+      },
+      "evidence": [
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/build.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/build.log",
+          "sha256": "79e6a7c9200195f7233e75520bc748e3d8f3b31404733cb91301fb60925f248f",
+          "bytes": 8297
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/build.stderr.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/build.stderr.log",
+          "sha256": "cb1488ada0aa637b1eee9dc4e385b1df4c9dd331447bba6bfd435631df18a277",
+          "bytes": 2563
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/build.stdout.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/build.stdout.log",
+          "sha256": "e96cdf21f2d0bf1c018536cf1e2828eb6b17ce5f8b9d5d40dc33db394519e408",
+          "bytes": 5734
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/commands.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/commands.json",
+          "sha256": "ad317f9d99a9ee6eda30182bf00cec3ec134cb8a3f473de8a609a165328cf8ec",
+          "bytes": 2709
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/driver.cpp",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/driver.cpp",
+          "sha256": "43c70c91c361231bb667b3cfe696c51687b93b2e2f67a295dfc28aa2e31ac319",
+          "bytes": 2775
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/inputs.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/inputs.json",
+          "sha256": "5acb6985424bb35f5971709beb75a732c5e78d690af80516037668cda38cedcc",
+          "bytes": 5004
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/output.csv",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/output.csv",
+          "sha256": "1678a263003469f444cb2901f69cfe93d6dd00e6befba606b05abc7b822538de",
+          "bytes": 272
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/result.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/result.json",
+          "sha256": "c462cfca90637edbef0314f298425d75864ad99b7971ae317716ff5baa371688",
+          "bytes": 9460
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/run.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/run.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/run.stderr.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/run.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/run.stdout.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/run.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/sampling-contract.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/sampling-contract.json",
+          "sha256": "9c18a44bf8f4d5aa1690cdd69215fbcbe9b9003ed93e536c548d49867a83ea79",
+          "bytes": 2093
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/stimulus.hex",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/stimulus.hex",
+          "sha256": "07725f8a1260c6331ac7f15faa5a740e3482fd14b978a213107aca30792989a7",
+          "bytes": 204
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/stimulus.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/stimulus.json",
+          "sha256": "c2ee425e4710d836a4b90e38809e0b59559c98b0650b660d0fe01c8276648041",
+          "bytes": 8306
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/trace.vcd",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/trace.vcd",
+          "sha256": "c8b0fb6fe081eefdee62fce3eead649fe7a10e78a4b580e83c5d267cae0c2802",
+          "bytes": 2736
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/version.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/version.log",
+          "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+          "bytes": 54
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/version.stderr.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/version.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/version.stdout.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/version.stdout.log",
+          "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+          "bytes": 54
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/versions.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/versions.json",
+          "sha256": "ff9c0fe38d2b6c5225bfc6d5e126fddbcdcee587205a2e000b734cc8797c4c34",
+          "bytes": 126
+        }
+      ]
+    },
+    "buggy_k": {
+      "status": "oracle_mismatch",
+      "stage": "complete",
+      "error": null,
+      "events_total": 33,
+      "events_completed": 33,
+      "simulation_calls": 66,
+      "simulation_calls_attempted": 66,
+      "evaluations_per_input": 2,
+      "vcd_top": "axis_frame_fifo",
+      "vcd_sha256": "10c7019698922f88aae0d63520810c68c38b220b81c0e0fcc3b3b9334c17a2d6",
+      "timings_s": {
+        "compile": 0.01799704100267263,
+        "preprocess": 0.24045837499943445,
+        "setup": 0.18329862500104355,
+        "execution": 16.786168498012557,
+        "read_ports": 0.038065167998865945,
+        "state_export": 0.24573241801044787,
+        "total": 17.560655833000055
+      },
+      "oracle": {
+        "agrees": false,
+        "compared_cells": 84,
+        "masked_cells": 1,
+        "first_mismatch": {
+          "sample_index": 13,
+          "signal": "drop_frame",
+          "expected": 0,
+          "actual": 1
+        },
+        "mismatch_count": 5
+      },
+      "evidence": [
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/commands.jsonl",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/commands.jsonl",
+          "sha256": "9528d71ba70ca87bfd95aa65dccdaf7a05c96b6a76791ecb2760e2bfb029e81d",
+          "bytes": 1366
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/ir-baseline.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/ir-baseline.json",
+          "sha256": "421ee985b4e887ec0a0d67c457ee5883dbd5fb6a9291ca88ae8e75bf9da40f3e",
+          "bytes": 7127
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/kimulator.stderr.txt",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/kimulator.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/kimulator.stdout.txt",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/kimulator.stdout.txt",
+          "sha256": "3ec96aefbd6191ca4e83a5bade73a3c4faedb283fc4e0cec2b51187db8fc5e77",
+          "bytes": 3346
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/output.csv",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/output.csv",
+          "sha256": "1678a263003469f444cb2901f69cfe93d6dd00e6befba606b05abc7b822538de",
+          "bytes": 272
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/result.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/result.json",
+          "sha256": "d2c8adbd727430921f266919c854d126d6349f05609e72c5e29db159539a238d",
+          "bytes": 10270
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/commands.jsonl",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/commands.jsonl",
+          "sha256": "459b0ee80801272d089cea6fecd3cfa5b179fe8ad14d4fe5204664fa1f3c50d7",
+          "bytes": 83813
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/inputs.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/inputs.json",
+          "sha256": "c2ee425e4710d836a4b90e38809e0b59559c98b0650b660d0fe01c8276648041",
+          "bytes": 8306
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/result.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/result.json",
+          "sha256": "3ec96aefbd6191ca4e83a5bade73a3c4faedb283fc4e0cec2b51187db8fc5e77",
+          "bytes": 3346
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/state.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/state.json",
+          "sha256": "bef0db71a8ab9a9dc80daeb4d4a0ac55b2360abe50339cbcd9bb273642e5259b",
+          "bytes": 1233
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/states.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/states.json",
+          "sha256": "719f8886d645f16c6f1c78d2e242d3ed2a2bbb4691fedc8e9448aedfe865bab1",
+          "bytes": 25637
+        },
+        {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/test.vcd",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/test.vcd",
+          "sha256": "10c7019698922f88aae0d63520810c68c38b220b81c0e0fcc3b3b9334c17a2d6",
+          "bytes": 2560
+        }
+      ],
+      "native_comparison": {
+        "agrees": true,
+        "exit_code": 0,
+        "compared_signals": 12,
+        "event_count": 33,
+        "first_mismatch": null,
+        "errors": [],
+        "normalization": {
+          "policy": "scalar-equals-i1-zero-range-v1",
+          "applied": false,
+          "mappings": []
+        },
+        "artifacts": {
+          "kimulator_vcd": {
+            "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/test.vcd",
+            "source": ".runs/vcd-complete-03/d11/buggy/kimulator/test.vcd",
+            "sha256": "10c7019698922f88aae0d63520810c68c38b220b81c0e0fcc3b3b9334c17a2d6",
+            "bytes": 2560
+          },
+          "native_vcd": {
+            "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/trace.vcd",
+            "source": ".runs/vcd-complete-03/d11/buggy/native/trace.vcd",
+            "sha256": "c8b0fb6fe081eefdee62fce3eead649fe7a10e78a4b580e83c5d267cae0c2802",
+            "bytes": 2736
+          },
+          "preflight": {
+            "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/preflight.json",
+            "source": ".runs/vcd-complete-03/d11/buggy/comparison/preflight.json",
+            "sha256": "3fc8027b8f5029b2044238985a4d913d16698e7b3fd21f02c339d32eeb0b61d1",
+            "bytes": 1069
+          },
+          "diffvcd_script": {
+            "path": "evidence/vcd/vcd-complete-03/tools/diffvcd.py",
+            "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+            "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+            "bytes": 6040
+          },
+          "command": {
+            "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/diffvcd.command.json",
+            "source": ".runs/vcd-complete-03/d11/buggy/comparison/diffvcd.command.json",
+            "sha256": "47ef797a22124f93185649d7bc4ef30995ae6fcd8b222005295bddf1933fc38d",
+            "bytes": 984
+          },
+          "stdout": {
+            "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/diffvcd.stdout.log",
+            "source": ".runs/vcd-complete-03/d11/buggy/comparison/diffvcd.stdout.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          },
+          "stderr": {
+            "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/diffvcd.stderr.log",
+            "source": ".runs/vcd-complete-03/d11/buggy/comparison/diffvcd.stderr.log",
+            "sha256": "fcae2c7ffdbf8d920fc0acc7fc32181aa1ade05fb49fe4690292a5c907c423f2",
+            "bytes": 541
+          }
+        }
+      }
+    }
+  },
+  "waveform_comparisons": {
+    "golden": {
+      "agrees": true,
+      "exit_code": 0,
+      "compared_signals": 12,
+      "event_count": 33,
+      "first_mismatch": null,
+      "errors": [],
+      "normalization": {
+        "policy": "scalar-equals-i1-zero-range-v1",
+        "applied": false,
+        "mappings": []
+      },
+      "artifacts": {
+        "kimulator_vcd": {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/test.vcd",
+          "source": ".runs/vcd-complete-03/d11/golden/kimulator/test.vcd",
+          "sha256": "485e5bebb3adf808b753ea57d9fc803da8b062472fa87adec7f257b82ded7ef2",
+          "bytes": 2560
+        },
+        "native_vcd": {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/native/trace.vcd",
+          "source": ".runs/vcd-complete-03/d11/golden/native/trace.vcd",
+          "sha256": "c53f05bc112d9fcfae3ed517f813aa18194f18bc072c7726c96a81c282bdd776",
+          "bytes": 2833
+        },
+        "preflight": {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/preflight.json",
+          "source": ".runs/vcd-complete-03/d11/golden/comparison/preflight.json",
+          "sha256": "3fc8027b8f5029b2044238985a4d913d16698e7b3fd21f02c339d32eeb0b61d1",
+          "bytes": 1069
+        },
+        "diffvcd_script": {
+          "path": "evidence/vcd/vcd-complete-03/tools/diffvcd.py",
+          "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+          "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+          "bytes": 6040
+        },
+        "command": {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/diffvcd.command.json",
+          "source": ".runs/vcd-complete-03/d11/golden/comparison/diffvcd.command.json",
+          "sha256": "862949b8f020e8e7c394e764364a98be3d971b3121786686fe29f10117bfe2ca",
+          "bytes": 987
+        },
+        "stdout": {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/diffvcd.stdout.log",
+          "source": ".runs/vcd-complete-03/d11/golden/comparison/diffvcd.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/diffvcd.stderr.log",
+          "source": ".runs/vcd-complete-03/d11/golden/comparison/diffvcd.stderr.log",
+          "sha256": "fcae2c7ffdbf8d920fc0acc7fc32181aa1ade05fb49fe4690292a5c907c423f2",
+          "bytes": 541
+        }
+      }
+    },
+    "buggy": {
+      "agrees": true,
+      "exit_code": 0,
+      "compared_signals": 12,
+      "event_count": 33,
+      "first_mismatch": null,
+      "errors": [],
+      "normalization": {
+        "policy": "scalar-equals-i1-zero-range-v1",
+        "applied": false,
+        "mappings": []
+      },
+      "artifacts": {
+        "kimulator_vcd": {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/test.vcd",
+          "source": ".runs/vcd-complete-03/d11/buggy/kimulator/test.vcd",
+          "sha256": "10c7019698922f88aae0d63520810c68c38b220b81c0e0fcc3b3b9334c17a2d6",
+          "bytes": 2560
+        },
+        "native_vcd": {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/trace.vcd",
+          "source": ".runs/vcd-complete-03/d11/buggy/native/trace.vcd",
+          "sha256": "c8b0fb6fe081eefdee62fce3eead649fe7a10e78a4b580e83c5d267cae0c2802",
+          "bytes": 2736
+        },
+        "preflight": {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/preflight.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/comparison/preflight.json",
+          "sha256": "3fc8027b8f5029b2044238985a4d913d16698e7b3fd21f02c339d32eeb0b61d1",
+          "bytes": 1069
+        },
+        "diffvcd_script": {
+          "path": "evidence/vcd/vcd-complete-03/tools/diffvcd.py",
+          "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+          "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+          "bytes": 6040
+        },
+        "command": {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/diffvcd.command.json",
+          "source": ".runs/vcd-complete-03/d11/buggy/comparison/diffvcd.command.json",
+          "sha256": "47ef797a22124f93185649d7bc4ef30995ae6fcd8b222005295bddf1933fc38d",
+          "bytes": 984
+        },
+        "stdout": {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/diffvcd.stdout.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/comparison/diffvcd.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/diffvcd.stderr.log",
+          "source": ".runs/vcd-complete-03/d11/buggy/comparison/diffvcd.stderr.log",
+          "sha256": "fcae2c7ffdbf8d920fc0acc7fc32181aa1ade05fb49fe4690292a5c907c423f2",
+          "bytes": 541
+        }
+      }
+    }
+  },
+  "blockers": [],
+  "raw_result": ".runs/vcd-complete-03/d11/result.json",
+  "evidence": [
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/diffvcd.stderr.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/comparison/diffvcd.stderr.log",
+      "sha256": "fcae2c7ffdbf8d920fc0acc7fc32181aa1ade05fb49fe4690292a5c907c423f2",
+      "bytes": 541
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/comparison/diffvcd.stdout.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/comparison/diffvcd.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/commands.jsonl",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/commands.jsonl",
+      "sha256": "9528d71ba70ca87bfd95aa65dccdaf7a05c96b6a76791ecb2760e2bfb029e81d",
+      "bytes": 1366
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/ir-baseline.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/ir-baseline.json",
+      "sha256": "421ee985b4e887ec0a0d67c457ee5883dbd5fb6a9291ca88ae8e75bf9da40f3e",
+      "bytes": 7127
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/kimulator.stderr.txt",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/kimulator.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/kimulator.stdout.txt",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/kimulator.stdout.txt",
+      "sha256": "3ec96aefbd6191ca4e83a5bade73a3c4faedb283fc4e0cec2b51187db8fc5e77",
+      "bytes": 3346
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/output.csv",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/output.csv",
+      "sha256": "1678a263003469f444cb2901f69cfe93d6dd00e6befba606b05abc7b822538de",
+      "bytes": 272
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/result.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/result.json",
+      "sha256": "d2c8adbd727430921f266919c854d126d6349f05609e72c5e29db159539a238d",
+      "bytes": 10270
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/commands.jsonl",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/commands.jsonl",
+      "sha256": "459b0ee80801272d089cea6fecd3cfa5b179fe8ad14d4fe5204664fa1f3c50d7",
+      "bytes": 83813
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/inputs.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/inputs.json",
+      "sha256": "c2ee425e4710d836a4b90e38809e0b59559c98b0650b660d0fe01c8276648041",
+      "bytes": 8306
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/result.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/result.json",
+      "sha256": "3ec96aefbd6191ca4e83a5bade73a3c4faedb283fc4e0cec2b51187db8fc5e77",
+      "bytes": 3346
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/state.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/state.json",
+      "sha256": "bef0db71a8ab9a9dc80daeb4d4a0ac55b2360abe50339cbcd9bb273642e5259b",
+      "bytes": 1233
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/simulation/states.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/simulation/states.json",
+      "sha256": "719f8886d645f16c6f1c78d2e242d3ed2a2bbb4691fedc8e9448aedfe865bab1",
+      "bytes": 25637
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/kimulator/test.vcd",
+      "source": ".runs/vcd-complete-03/d11/buggy/kimulator/test.vcd",
+      "sha256": "10c7019698922f88aae0d63520810c68c38b220b81c0e0fcc3b3b9334c17a2d6",
+      "bytes": 2560
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/build.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/build.log",
+      "sha256": "79e6a7c9200195f7233e75520bc748e3d8f3b31404733cb91301fb60925f248f",
+      "bytes": 8297
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/build.stderr.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/build.stderr.log",
+      "sha256": "cb1488ada0aa637b1eee9dc4e385b1df4c9dd331447bba6bfd435631df18a277",
+      "bytes": 2563
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/build.stdout.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/build.stdout.log",
+      "sha256": "e96cdf21f2d0bf1c018536cf1e2828eb6b17ce5f8b9d5d40dc33db394519e408",
+      "bytes": 5734
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/commands.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/commands.json",
+      "sha256": "ad317f9d99a9ee6eda30182bf00cec3ec134cb8a3f473de8a609a165328cf8ec",
+      "bytes": 2709
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/driver.cpp",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/driver.cpp",
+      "sha256": "43c70c91c361231bb667b3cfe696c51687b93b2e2f67a295dfc28aa2e31ac319",
+      "bytes": 2775
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/inputs.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/inputs.json",
+      "sha256": "5acb6985424bb35f5971709beb75a732c5e78d690af80516037668cda38cedcc",
+      "bytes": 5004
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/output.csv",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/output.csv",
+      "sha256": "1678a263003469f444cb2901f69cfe93d6dd00e6befba606b05abc7b822538de",
+      "bytes": 272
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/result.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/result.json",
+      "sha256": "c462cfca90637edbef0314f298425d75864ad99b7971ae317716ff5baa371688",
+      "bytes": 9460
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/run.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/run.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/run.stderr.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/run.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/run.stdout.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/run.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/sampling-contract.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/sampling-contract.json",
+      "sha256": "9c18a44bf8f4d5aa1690cdd69215fbcbe9b9003ed93e536c548d49867a83ea79",
+      "bytes": 2093
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/stimulus.hex",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/stimulus.hex",
+      "sha256": "07725f8a1260c6331ac7f15faa5a740e3482fd14b978a213107aca30792989a7",
+      "bytes": 204
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/stimulus.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/stimulus.json",
+      "sha256": "c2ee425e4710d836a4b90e38809e0b59559c98b0650b660d0fe01c8276648041",
+      "bytes": 8306
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/trace.vcd",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/trace.vcd",
+      "sha256": "c8b0fb6fe081eefdee62fce3eead649fe7a10e78a4b580e83c5d267cae0c2802",
+      "bytes": 2736
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/version.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/version.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/version.stderr.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/version.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/version.stdout.log",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/version.stdout.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/buggy/native/versions.json",
+      "source": ".runs/vcd-complete-03/d11/buggy/native/versions.json",
+      "sha256": "ff9c0fe38d2b6c5225bfc6d5e126fddbcdcee587205a2e000b734cc8797c4c34",
+      "bytes": 126
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/csv-normalizations.json",
+      "source": ".runs/vcd-complete-03/d11/csv-normalizations.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/diffvcd.stderr.log",
+      "source": ".runs/vcd-complete-03/d11/golden/comparison/diffvcd.stderr.log",
+      "sha256": "fcae2c7ffdbf8d920fc0acc7fc32181aa1ade05fb49fe4690292a5c907c423f2",
+      "bytes": 541
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/comparison/diffvcd.stdout.log",
+      "source": ".runs/vcd-complete-03/d11/golden/comparison/diffvcd.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/commands.jsonl",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/commands.jsonl",
+      "sha256": "c75db0f23a138f3199f2453fda460efccbf476f825c46b61f4a2822120facb48",
+      "bytes": 1370
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/ir-baseline.json",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/ir-baseline.json",
+      "sha256": "d4cbf99e0bdecf97e4d96f0d2f6ae1e58cb72acdc7357036f0cb2ebdc44c29ad",
+      "bytes": 7108
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/kimulator.stderr.txt",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/kimulator.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/kimulator.stdout.txt",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/kimulator.stdout.txt",
+      "sha256": "ef28b1180f34da1ca10630464b62a675a440cc971bfda7195f5f061acf74b33a",
+      "bytes": 3349
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/output.csv",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/output.csv",
+      "sha256": "2eabc53a7916dd13c56ee7ea4fbb0a0844d2c6d7991ca112b6ff66bf84a32d8b",
+      "bytes": 272
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/result.json",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/result.json",
+      "sha256": "a9e3241552c85fb80282f11841eb3f03281243fd89400018a676d6546c2a9a2a",
+      "bytes": 9546
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/commands.jsonl",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/commands.jsonl",
+      "sha256": "7dfab5fac9a7165358c0b30018d2f786333371a2932bac8adf223d47277e83b0",
+      "bytes": 84088
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/inputs.json",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/inputs.json",
+      "sha256": "c2ee425e4710d836a4b90e38809e0b59559c98b0650b660d0fe01c8276648041",
+      "bytes": 8306
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/result.json",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/result.json",
+      "sha256": "ef28b1180f34da1ca10630464b62a675a440cc971bfda7195f5f061acf74b33a",
+      "bytes": 3349
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/state.json",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/state.json",
+      "sha256": "bef0db71a8ab9a9dc80daeb4d4a0ac55b2360abe50339cbcd9bb273642e5259b",
+      "bytes": 1233
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/simulation/states.json",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/simulation/states.json",
+      "sha256": "6eb866db527b1bacd98bb4134f6ea3802b2a32367d20d63fef96ee6c2bb7c740",
+      "bytes": 25703
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/kimulator/test.vcd",
+      "source": ".runs/vcd-complete-03/d11/golden/kimulator/test.vcd",
+      "sha256": "485e5bebb3adf808b753ea57d9fc803da8b062472fa87adec7f257b82ded7ef2",
+      "bytes": 2560
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/build.log",
+      "source": ".runs/vcd-complete-03/d11/golden/native/build.log",
+      "sha256": "8f04ae7cd42b3e97e8b38b2dab65d13d0f4c6632b86ff779b24d85119f94a441",
+      "bytes": 8226
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/build.stderr.log",
+      "source": ".runs/vcd-complete-03/d11/golden/native/build.stderr.log",
+      "sha256": "0aef2851ba07f7194e46599eab53a31498edbe45a55545f25d2ec245592f3bf2",
+      "bytes": 2491
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/build.stdout.log",
+      "source": ".runs/vcd-complete-03/d11/golden/native/build.stdout.log",
+      "sha256": "631c9aa0f01ce8d27fe007388c65abc8529acba651b00a7d5da772378fd0798d",
+      "bytes": 5735
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/commands.json",
+      "source": ".runs/vcd-complete-03/d11/golden/native/commands.json",
+      "sha256": "e6d04d3105574401c49c2b683d6f0a9b20315e88eca14a7932d972eb722e2a8a",
+      "bytes": 2694
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/driver.cpp",
+      "source": ".runs/vcd-complete-03/d11/golden/native/driver.cpp",
+      "sha256": "43c70c91c361231bb667b3cfe696c51687b93b2e2f67a295dfc28aa2e31ac319",
+      "bytes": 2775
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/inputs.json",
+      "source": ".runs/vcd-complete-03/d11/golden/native/inputs.json",
+      "sha256": "5acb6985424bb35f5971709beb75a732c5e78d690af80516037668cda38cedcc",
+      "bytes": 5004
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/output.csv",
+      "source": ".runs/vcd-complete-03/d11/golden/native/output.csv",
+      "sha256": "2eabc53a7916dd13c56ee7ea4fbb0a0844d2c6d7991ca112b6ff66bf84a32d8b",
+      "bytes": 272
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/result.json",
+      "source": ".runs/vcd-complete-03/d11/golden/native/result.json",
+      "sha256": "81e72cb2f940c53e5a3f42e432d761e528d958411f5d4e2056f4956d9e47c9bb",
+      "bytes": 8726
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/run.log",
+      "source": ".runs/vcd-complete-03/d11/golden/native/run.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/run.stderr.log",
+      "source": ".runs/vcd-complete-03/d11/golden/native/run.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/run.stdout.log",
+      "source": ".runs/vcd-complete-03/d11/golden/native/run.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/sampling-contract.json",
+      "source": ".runs/vcd-complete-03/d11/golden/native/sampling-contract.json",
+      "sha256": "9c18a44bf8f4d5aa1690cdd69215fbcbe9b9003ed93e536c548d49867a83ea79",
+      "bytes": 2093
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/stimulus.hex",
+      "source": ".runs/vcd-complete-03/d11/golden/native/stimulus.hex",
+      "sha256": "07725f8a1260c6331ac7f15faa5a740e3482fd14b978a213107aca30792989a7",
+      "bytes": 204
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/stimulus.json",
+      "source": ".runs/vcd-complete-03/d11/golden/native/stimulus.json",
+      "sha256": "c2ee425e4710d836a4b90e38809e0b59559c98b0650b660d0fe01c8276648041",
+      "bytes": 8306
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/trace.vcd",
+      "source": ".runs/vcd-complete-03/d11/golden/native/trace.vcd",
+      "sha256": "c53f05bc112d9fcfae3ed517f813aa18194f18bc072c7726c96a81c282bdd776",
+      "bytes": 2833
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/version.log",
+      "source": ".runs/vcd-complete-03/d11/golden/native/version.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/version.stderr.log",
+      "source": ".runs/vcd-complete-03/d11/golden/native/version.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/version.stdout.log",
+      "source": ".runs/vcd-complete-03/d11/golden/native/version.stdout.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/golden/native/versions.json",
+      "source": ".runs/vcd-complete-03/d11/golden/native/versions.json",
+      "sha256": "ff9c0fe38d2b6c5225bfc6d5e126fddbcdcee587205a2e000b734cc8797c4c34",
+      "bytes": 126
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/manifest.json",
+      "source": ".runs/vcd-complete-03/d11/manifest.json",
+      "sha256": "8fe552d8a01d114f5c2d22e26bcd9791bd180e599307bce4c9a9556469222d3c",
+      "bytes": 5447
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/result.json",
+      "source": ".runs/vcd-complete-03/d11/result.json",
+      "sha256": "c86d6de39409e4f7edbf103a85d5bba4e2b847abfaed47e920a650dd723be7d6",
+      "bytes": 50531
+    },
+    {
+      "path": "evidence/vcd/vcd-complete-03/d11/test_data.json",
+      "source": ".runs/vcd-complete-03/d11/test_data.json",
+      "sha256": "c2ee425e4710d836a4b90e38809e0b59559c98b0650b660d0fe01c8276648041",
+      "bytes": 8306
+    }
+  ]
+}

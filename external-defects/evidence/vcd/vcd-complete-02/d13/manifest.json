@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "source_case_id": "D13",
+  "project_id": "axis-frame-len-d13",
+  "variant_id": "d13",
+  "top": "axis_frame_len",
+  "golden_sources": [
+    "designs/axis-frame-len-d13/original/axis_frame_len.v"
+  ],
+  "bug_original": "designs/axis-frame-len-d13/original/axis_frame_len.v",
+  "bug_source": "designs/axis-frame-len-d13/variants/d13/axis_frame_len_bug_d13.v",
+  "csv": "designs/axis-frame-len-d13/testbench/tb.csv",
+  "inputs": [
+    {
+      "name": "clk",
+      "width": 1
+    },
+    {
+      "name": "rst",
+      "width": 1
+    },
+    {
+      "name": "monitor_axis_tkeep",
+      "width": 8
+    },
+    {
+      "name": "monitor_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "monitor_axis_tready",
+      "width": 1
+    },
+    {
+      "name": "monitor_axis_tlast",
+      "width": 1
+    }
+  ],
+  "outputs": [
+    {
+      "name": "frame_len",
+      "width": 16
+    },
+    {
+      "name": "frame_len_valid",
+      "width": 1
+    }
+  ],
+  "clock": "clk",
+  "reset": {
+    "signal": "rst",
+    "active": 1
+  },
+  "parameters": {
+    "DATA_WIDTH": 64,
+    "KEEP_ENABLE": 1,
+    "KEEP_WIDTH": 8,
+    "LEN_WIDTH": 16
+  },
+  "effective_parameters": {
+    "DATA_WIDTH": 64,
+    "KEEP_ENABLE": 1,
+    "KEEP_WIDTH": 8,
+    "LEN_WIDTH": 16
+  },
+  "initialization": {
+    "mode": "rtl_initial_plus_two_state_zero",
+    "uninitialized_register_value": 0,
+    "four_state_equivalence_claimed": false,
+    "evidence": [
+      "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。"
+    ]
+  },
+  "sample_phase": "low_before_posedge_pre_NBA",
+  "oracle_outputs": [
+    "frame_len",
+    "frame_len_valid"
+  ],
+  "masks": [],
+  "csv_normalization": {
+    "strip_whitespace": true,
+    "allow_one_trailing_empty_field": false,
+    "reason": "仅去除单元格周围空白，保留并检查完整列集合。"
+  },
+  "samples": 6,
+  "timeout_s": 120,
+  "frontend_args": [],
+  "source_hashes": {
+    "designs/axis-frame-len-d13/original/axis_frame_len.v": "b02dcd8cd2427ea8e933c6b80916e512d365df82461f4b4a786930930191283d",
+    "designs/axis-frame-len-d13/variants/d13/axis_frame_len_bug_d13.v": "911cabce109a87e23a1c3141ed273e29e9f74230ceeace8998f5436e084d1166",
+    "designs/axis-frame-len-d13/provenance/origin/README.md": "d78472a860f2e3a07dbc9ab80a44bd1b7f77e5d4995860516ea0af621d57db17",
+    "designs/axis-frame-len-d13/provenance/project.toml": "11689a99652803849b4d50f3f8b3c32d5ea1fc352bc62ce1d049a983cd64cf70",
+    "designs/axis-frame-len-d13/testbench/tb.csv": "e52f4eda7ec5610584c31e78ffae6c7210597edcc768130df705bf05389c64fa",
+    "designs/axis-frame-len-d13/testbench/tb.v": "66463eec35778dcbd3675da22353034b2ceab2c38b1659fb2bf15075b86bc30e",
+    "designs/axis-frame-len-d13/provenance/to_btor2.ys": "9712d6f0037869042d46d3cb0cd435fa5de0d7adddfa722dead94a2ec1906cc6",
+    "designs/axis-frame-len-d13/provenance/layout.json": "5af5684110710603d8d2b9da2002b03cc20db37375016d8ecd141d5ea6dc9e65"
+  },
+  "upstream": {
+    "repository": "https://github.com/ekiwi/rtl-repair",
+    "commit": "71e1afc0b9a2327d008b46acd415cf3f0343a938",
+    "project_path": "benchmarks/fpga-debugging/axis-frame-len-d13",
+    "archive": "rtl-repair-fpga-debugging-71e1afc.tar.gz",
+    "archive_sha256": "3aebd94c34aaf9cced849541635ebc66145c7ba44fc1227f3f4e8623073ddc0a",
+    "origin_repository": "https://github.com/efeslab/hardware-bugbase",
+    "origin_commit": "7702e478f4ffdca477273d5a395992ecf006d70f",
+    "origin_readme": "designs/axis-frame-len-d13/provenance/origin/README.md",
+    "origin_archive_sha256": "b5125ec4a3d93db138e5642285343d2d644e89a0b5bd156701b2c4f7bcb2ae5d"
+  },
+  "project_toml": "designs/axis-frame-len-d13/provenance/project.toml",
+  "selected_testbench": {
+    "name": "csv",
+    "table": "tb.csv"
+  },
+  "native_testbench": {
+    "adapted_exists": true,
+    "path": "designs/axis-frame-len-d13/testbench/tb.v",
+    "sha256": "66463eec35778dcbd3675da22353034b2ceab2c38b1659fb2bf15075b86bc30e"
+  },
+  "ports_without_oracle": [],
+  "unsupported_reasons": [],
+  "notes": [
+    "TB 虽声明 DATA_WIDTH=8，UUT 不传参数；采用 DUT 默认 DATA_WIDTH=64、KEEP_ENABLE=1、KEEP_WIDTH=8、LEN_WIDTH=16。",
+    "TB 在 posedge Active 阶段 fwrite，输入及寄存器通过 NBA 更新；低电平读取协议必须经完整正常/缺陷原生轨迹验证。",
+    "TB 最终 frame_len>1 的检查与逐 CSV 单元格精确检查为两个不同谓词。"
+  ],
+  "layout_file": "designs/axis-frame-len-d13/provenance/layout.json"
+}

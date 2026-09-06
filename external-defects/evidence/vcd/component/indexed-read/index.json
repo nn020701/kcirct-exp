@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "run_id": "vcd-complete-03",
+  "artifacts": {
+    "evidence/vcd/component/indexed-read/indexed-read.patch": {
+      "path": "evidence/vcd/component/indexed-read/indexed-read.patch",
+      "source": ".work/indexed-read/component-stage-ready/indexed-read.patch",
+      "sha256": "1535788f73bd21b7485f0fe86c7a72ed78d19ccdfddffcc4b736b9a286933867",
+      "bytes": 1500
+    },
+    "evidence/vcd/component/indexed-read/identity.json": {
+      "path": "evidence/vcd/component/indexed-read/identity.json",
+      "source": "evidence/vcd/component/indexed-read/identity.json",
+      "sha256": "883c8206d30256541202380ba18cce6d78c78fa3ccf684d08f2f3bb32e4b4166",
+      "bytes": 19674
+    },
+    "evidence/vcd/component/indexed-read/validation/identity-stage.json": {
+      "path": "evidence/vcd/component/indexed-read/validation/identity-stage.json",
+      "source": ".work/indexed-read/component-stage-ready/identity-stage.json",
+      "sha256": "8f5dea7fb25d33ad97d651b862ad6402ef0189053ab44a481219383adcfa6dbc",
+      "bytes": 12374
+    },
+    "evidence/vcd/component/indexed-read/validation/verification-commands.json": {
+      "path": "evidence/vcd/component/indexed-read/validation/verification-commands.json",
+      "source": ".work/indexed-read/component-stage-ready/verification-commands.json",
+      "sha256": "1a8856094411bc3322da0849662b787165cccbca66f43da63b6011d81250aebf",
+      "bytes": 3621
+    },
+    "evidence/vcd/component/indexed-read/validation/prepare_component.py": {
+      "path": "evidence/vcd/component/indexed-read/validation/prepare_component.py",
+      "source": ".work/indexed-read/prepare_component.py",
+      "sha256": "3e36a0e57489f440ceb7484d062b2ff65beb7bde556bbb24fdd36925e248b312",
+      "bytes": 6231
+    },
+    "evidence/vcd/component/indexed-read/validation/prepared-source-binding.json": {
+      "path": "evidence/vcd/component/indexed-read/validation/prepared-source-binding.json",
+      "source": ".work/indexed-read/prepared-source-binding.json",
+      "sha256": "1bc32562ffb227af965ae0587018fdb0f6296162f12b4168a779b699a80ca21b",
+      "bytes": 880
+    },
+    "evidence/vcd/component/indexed-read/sources/after/src/kcirct/kdist/circt_semantics/hardware/hardware.md": {
+      "path": "evidence/vcd/component/indexed-read/sources/after/src/kcirct/kdist/circt_semantics/hardware/hardware.md",
+      "source": ".work/indexed-read/component-stage-ready/sources/after/src/kcirct/kdist/circt_semantics/hardware/hardware.md",
+      "sha256": "0acb587e5af1d219e6e27b3c81fc934ff61a1bd553cce6cd4ee88d9f87b506ef",
+      "bytes": 4595
+    },
+    "evidence/vcd/component/indexed-read/sources/before/src/kcirct/kdist/circt_semantics/hardware/hardware.md": {
+      "path": "evidence/vcd/component/indexed-read/sources/before/src/kcirct/kdist/circt_semantics/hardware/hardware.md",
+      "source": ".work/indexed-read/component-stage-ready/sources/before/src/kcirct/kdist/circt_semantics/hardware/hardware.md",
+      "sha256": "343a8bd20575d51a81a40d8278816bbc2c87ca356cb85e79e8e4f55a9c671ff5",
+      "bytes": 3565
+    },
+    "evidence/vcd/component/indexed-read/validation/build-comparison.json": {
+      "path": "evidence/vcd/component/indexed-read/validation/build-comparison.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/build-comparison.json",
+      "sha256": "5e961985163785fe3644a0cf8f9391ffbc85d01994feae14e491fdc3fbb5fafa",
+      "bytes": 27232
+    },
+    "evidence/vcd/component/indexed-read/validation/coverage-review.md": {
+      "path": "evidence/vcd/component/indexed-read/validation/coverage-review.md",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/coverage-review.md",
+      "sha256": "86eea961638a6d274cb50a8b17f2a279cab1e3fd588550ac41f9f356d24c4479",
+      "bytes": 8254
+    },
+    "evidence/vcd/component/indexed-read/validation/ast-audit.json": {
+      "path": "evidence/vcd/component/indexed-read/validation/ast-audit.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/ast-audit.json",
+      "sha256": "af0300bfdb5cb061f8a03a7f151ac6adbe8f0ad2126b338f41b84908435dad40",
+      "bytes": 1109
+    },
+    "evidence/vcd/component/indexed-read/validation/replays.json": {
+      "path": "evidence/vcd/component/indexed-read/validation/replays.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/replays.json",
+      "sha256": "f2ba48722fb7007e367434c04d86fe6e648e4fff512291b4618bab8db55a7a2a",
+      "bytes": 11039
+    },
+    "evidence/vcd/component/indexed-read/validation/validation.json": {
+      "path": "evidence/vcd/component/indexed-read/validation/validation.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/validation.json",
+      "sha256": "043e373ea23c85a62993fd20fbcd7a9dff9fbfee0e8d7557f8ad58d1f8b64723",
+      "bytes": 1335
+    },
+    "evidence/vcd/component/indexed-read/validation/operation-README.md": {
+      "path": "evidence/vcd/component/indexed-read/validation/operation-README.md",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/README.md",
+      "sha256": "49912b3742f6075eef35e4a05ab8af4f388fab319c942edad0067005de1e31d4",
+      "bytes": 10502
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/source-index.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/source-index.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-index.json",
+      "sha256": "790387ed45ea7eec5e30ffa8d036e88413c8ea5fb30fc8b2169380855f130659",
+      "bytes": 15162
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/coverage-review.md": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/coverage-review.md",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/coverage-review.md",
+      "sha256": "86eea961638a6d274cb50a8b17f2a279cab1e3fd588550ac41f9f356d24c4479",
+      "bytes": 8254
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/audit-final.command.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/audit-final.command.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-final.command.json",
+      "sha256": "6c937b3a5284ab77ce31b578ef527cd8ee7edcf0d225ba963335f361064d3fa2",
+      "bytes": 947
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/audit-final.stderr": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/audit-final.stderr",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-final.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/audit-final.stdout": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/audit-final.stdout",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-final.stdout",
+      "sha256": "17433efaef04babeb5a0c5a9d92f620dea2328f31fbc955a3adae822bb6203f8",
+      "bytes": 78
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/audit-validation.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/audit-validation.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-validation.json",
+      "sha256": "5fecb45c07f62544b67d6c6dc7b1772bd8b5c4e22d5d35bfb97dbddc5c0133e2",
+      "bytes": 2213
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/audit_final.py": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/audit_final.py",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit_final.py",
+      "sha256": "b10ee5793aeeb22ce5c2ad460536e6ea384fcaad93d7dc266909e057a087e221",
+      "bytes": 5973
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/final-state-audit.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/final-state-audit.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/final-state-audit.json",
+      "sha256": "f590a09ca14cc88e5607d9c8df9599b3372b59bc8ecc80942d9e3b99a54ddc2c",
+      "bytes": 23544
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/inputs-after.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/inputs-after.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/inputs-after.json",
+      "sha256": "00e89e45e2761354b5225bfaa3b319b211f95e77a52f07fc23365fa569c25928",
+      "bytes": 11591
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/inputs-before.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/inputs-before.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/inputs-before.json",
+      "sha256": "00e89e45e2761354b5225bfaa3b319b211f95e77a52f07fc23365fa569c25928",
+      "bytes": 11591
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/test_diffvcd_operatrion.command.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/test_diffvcd_operatrion.command.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_diffvcd_operatrion.command.json",
+      "sha256": "c008b6dd56eaaf2e4b7b3cbf9dda37e0715bd23f64027df59f2bc7fe228dfda0",
+      "bytes": 1098
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/test_diffvcd_operatrion.result.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/test_diffvcd_operatrion.result.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_diffvcd_operatrion.result.json",
+      "sha256": "c1d82c4e5cad185478ff109f8b4a6f90e2237dbbf3c07820ab4e9661e7fe8df5",
+      "bytes": 62
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/test_diffvcd_operatrion.stderr": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/test_diffvcd_operatrion.stderr",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_diffvcd_operatrion.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/test_diffvcd_operatrion.stdout": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/test_diffvcd_operatrion.stdout",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_diffvcd_operatrion.stdout",
+      "sha256": "f2e0088f35937ad9bc9a2f19a4c30405b9d517ba1a47a1076e0df0b81d3cedef",
+      "bytes": 9377
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/test_evaluate_operation.command.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/test_evaluate_operation.command.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_evaluate_operation.command.json",
+      "sha256": "01d65c394b52892a4069b079879070b1d23b80e31627f742b475cd51a6aeec44",
+      "bytes": 1098
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/test_evaluate_operation.result.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/test_evaluate_operation.result.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_evaluate_operation.result.json",
+      "sha256": "e6bcbf7befd3c92a3bc825336c7cd552a52d92a5b2fc36382a142834f8df8cb7",
+      "bytes": 62
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/test_evaluate_operation.stderr": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/test_evaluate_operation.stderr",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_evaluate_operation.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/test_evaluate_operation.stdout": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/test_evaluate_operation.stdout",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_evaluate_operation.stdout",
+      "sha256": "eaaefdd48b219e33200a972cd25a778ad413020e06d1f124fca8001716bbacf8",
+      "bytes": 9397
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux/setup.kore",
+      "sha256": "fc31e1edd62c14db3209fc86d7ff3d4c36f17327c49910effa3bc354b60592e8",
+      "bytes": 11958
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux_array/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux_array/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux_array/setup.kore",
+      "sha256": "f7f860627d1f7542d9bf5d319a13cc06919b99f7c00b598ac571d4489da0d907",
+      "bytes": 319275
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/icmp/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/icmp/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/icmp/setup.kore",
+      "sha256": "864212aa6954d60e87f872ad45e86c2fd2b6f15d4b0c0f1a7e710b6ec78a45a9",
+      "bytes": 37008
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/concat/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/concat/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/concat/setup.kore",
+      "sha256": "1f49bcd4e72f01e0bb3e4b8ab838bf0eba9ab875cf25a069d11cd97085375e1f",
+      "bytes": 10791
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/hw/instance/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/hw/instance/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/instance/setup.kore",
+      "sha256": "8d08c3142df8ebdef837472826f0a0f4170d3402814c7a25d78ed640829d5e03",
+      "bytes": 47282
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/hw/constant/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/hw/constant/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/constant/setup.kore",
+      "sha256": "a1aeed829b5465dec8203a84edd257bcd33fec4422287d9af4c80a7e6c798171",
+      "bytes": 21117
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/hw/array_inject/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/hw/array_inject/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/array_inject/setup.kore",
+      "sha256": "f731e284797b8eb6cca4daa86b4d012e426bb44515699a0fc33a9d1df71055d9",
+      "bytes": 521448
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/to_clock/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/to_clock/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/to_clock/setup.kore",
+      "sha256": "5b447530412acc1ac6fc8c3a7661fb8d49328c272372b1f699a81c6d13a0537f",
+      "bytes": 8789
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg2/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg2/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg2/setup.kore",
+      "sha256": "6a5c83a57336cbd322c3ccbd02a9216d022026fd1aad5e5b6fe8f3e00bd7d517",
+      "bytes": 31303
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_array/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_array/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_array/setup.kore",
+      "sha256": "ad013951cfc1556603140f329c2a5f0731a140d337c5b087720c545fa6f68710",
+      "bytes": 418151
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_preset/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_preset/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_preset/setup.kore",
+      "sha256": "a4bede420ea4e13de90aeb92565d5dc160d98ed693630114ea2a92083fb6cd0f",
+      "bytes": 60402
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_rx/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_rx/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_rx/setup.kore",
+      "sha256": "56493bc28ffd446eb4908b3ede614f149a26b5b009867fb62ff33b43753e268c",
+      "bytes": 89791
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_mask/setup.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_mask/setup.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_mask/setup.kore",
+      "sha256": "3218eaba4818ac0203aa56ff4bc1662686a5845d8166e4e6f01d38351330caed",
+      "bytes": 35292
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux/simulated.0.kore",
+      "sha256": "2e0c050c28d4b7b3f017868c2c81d2337a40127a4400aceaa25919507a487435",
+      "bytes": 14211
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux/simulated.1.kore",
+      "sha256": "cc6bcf2fc80753f2e471304953af3cbbacc6f3816b202e70624a1a5cbae22fe5",
+      "bytes": 14212
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux_array/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux_array/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux_array/simulated.0.kore",
+      "sha256": "029038dcd39f4f2ee5e6d8dfd07395a1baa88de1ee174016c3bd55ec28f75e29",
+      "bytes": 381406
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux_array/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/mux_array/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/mux_array/simulated.1.kore",
+      "sha256": "f0de2bac056945e98cb19d7dd15278083503dbda4bad21b68a6361a5ce073eea",
+      "bytes": 381400
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/icmp/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/icmp/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/icmp/simulated.0.kore",
+      "sha256": "7e47f6702eea5868c4e8e886b46d23c67510e3251767d229356f08769f78611f",
+      "bytes": 41989
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/icmp/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/icmp/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/icmp/simulated.1.kore",
+      "sha256": "a546f099e1730aca64729ebcf6112c065caf1c10b42fb99b79d3f3a5df3b6ba4",
+      "bytes": 41989
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/concat/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/concat/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/concat/simulated.0.kore",
+      "sha256": "84b1ea38934544b62606764a111d58a8e0bf8094a790a068c5360d45f982b1c4",
+      "bytes": 12501
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/comb/concat/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/comb/concat/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/comb/concat/simulated.1.kore",
+      "sha256": "47c24137059e1b017f09904051e3ab44fae8614a1f9eafdd3d051fdf54b82955",
+      "bytes": 12500
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/hw/instance/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/hw/instance/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/instance/simulated.0.kore",
+      "sha256": "6907799006c956bc6d54c7797879de74aaf5de40ec014213f65ee4f0b454e861",
+      "bytes": 55702
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/hw/instance/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/hw/instance/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/instance/simulated.1.kore",
+      "sha256": "15490580940114f27b3e6d12249bd65f9e5d6564cbc59f0a1bf0453fd25997fc",
+      "bytes": 55690
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/hw/constant/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/hw/constant/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/constant/simulated.0.kore",
+      "sha256": "67fbe4282e93ea951a3153debd734b801617fe88a6c2179b85f9ec851f280f8a",
+      "bytes": 25005
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/hw/constant/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/hw/constant/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/constant/simulated.1.kore",
+      "sha256": "8b77461137bd5031c0eccccf3b9d53e6a977afda77f39625484731eb2bb4b3db",
+      "bytes": 25002
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/hw/array_inject/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/hw/array_inject/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/array_inject/simulated.0.kore",
+      "sha256": "cbdff28e1bd0969b8aec0458a2a2ef2d52ccf874918fbf70caa02f0c31a6c30e",
+      "bytes": 616064
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/hw/array_inject/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/hw/array_inject/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/hw/array_inject/simulated.1.kore",
+      "sha256": "4a60642174aaffea9f90b9339ff77cf85388ab1f32162067eb7397988aec9cdd",
+      "bytes": 616073
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/to_clock/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/to_clock/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/to_clock/simulated.0.kore",
+      "sha256": "4c4c8907f8bb21665e03738f81ed74f082b77898a55ca29aa71015c5d71a7547",
+      "bytes": 9936
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/to_clock/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/to_clock/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/to_clock/simulated.1.kore",
+      "sha256": "89c6afd34c228790e00f9f60457ad5b01c1c72fe589e05153aa8b0783c592f36",
+      "bytes": 9936
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg2/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg2/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg2/simulated.0.kore",
+      "sha256": "03847e75cd601b24075ecc888783711fe33c18bef7215b35beb252e0ad6855a7",
+      "bytes": 36296
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg2/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg2/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg2/simulated.1.kore",
+      "sha256": "e4e9a2d0526d1a147466da158585d7f3401d4103944eca4fd52da5120d0d08fb",
+      "bytes": 36297
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_array/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_array/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_array/simulated.0.kore",
+      "sha256": "2f17b3137a2967a50f4a9a7ce6085ce9b69fa55865f04081a9666c74f09620f7",
+      "bytes": 502008
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_array/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_array/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_array/simulated.1.kore",
+      "sha256": "a425fc5cf951967838d4aed0cfc358f3d9826d292de2bd36854cd66a59a7f8cf",
+      "bytes": 502008
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_preset/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_preset/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_preset/simulated.0.kore",
+      "sha256": "57a9bcafa8ec4ad07754c46e1e5382fa3968c0087ea1bda4f23f7ecda604a577",
+      "bytes": 69777
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_preset/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firreg_preset/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firreg_preset/simulated.1.kore",
+      "sha256": "5c0b6fd2b942714cfa8c3961d6ee79d4e5b5fc91aa3550a5684ffeaa7fac2693",
+      "bytes": 69775
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_rx/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_rx/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_rx/simulated.0.kore",
+      "sha256": "ea142339fc713750ff0e8e58f04ebd970fa012daec83c0473825ed5ae29b2a17",
+      "bytes": 102493
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_rx/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_rx/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_rx/simulated.1.kore",
+      "sha256": "dc61c7afd364e1ff3b3a352699be15efbe6024be70bd9b1f6f446d9319aefb73",
+      "bytes": 102491
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_mask/simulated.0.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_mask/simulated.0.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_mask/simulated.0.kore",
+      "sha256": "d39901fe7464a4fdbb3ff59b0d7da477913560b2e11c3ebad7f46fdedf7d6d07",
+      "bytes": 47470
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_mask/simulated.1.kore": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/states/seq/firmem_mask/simulated.1.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/resources/operation/seq/firmem_mask/simulated.1.kore",
+      "sha256": "bcae6972a51ecbdc11386c173e722afabcbf0f6e2589671df6ff7fabd751f7c5",
+      "bytes": 47476
+    },
+    "evidence/vcd/component/indexed-read/operation-validation/index.json": {
+      "path": "evidence/vcd/component/indexed-read/operation-validation/index.json",
+      "source": "evidence/vcd/component/indexed-read/operation-validation/index.json",
+      "sha256": "26e479b8195efbb9fe499142f35148544ad6f14315a17a58a4837c925786a674",
+      "bytes": 26952
+    },
+    "evidence/vcd/component/indexed-read/README.md": {
+      "path": "evidence/vcd/component/indexed-read/README.md",
+      "source": ".work/indexed-read/component-README.md",
+      "sha256": "1e45cc9d7aa9eaff0a6fae8a8e84fdb4d567f4f5b287449ef5c4aa758e5b4ce8",
+      "bytes": 3301
+    },
+    "evidence/vcd/component/indexed-read/validation/mr-draft.md": {
+      "path": "evidence/vcd/component/indexed-read/validation/mr-draft.md",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/mr-draft.md",
+      "sha256": "94e26a7e1d5c2866605147ec5b38e7c1b15dc7036777d579e0d36886176ab19e",
+      "bytes": 2292
+    },
+    "evidence/vcd/component/indexed-read/final-validation/checks.json": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/checks.json",
+      "source": ".work/indexed-read/final-validation/checks.json",
+      "sha256": "ed0ecccdb6927224ef0833e3f2a499173656d9e4791021aa5a58017a19715b9f",
+      "bytes": 1875
+    },
+    "evidence/vcd/component/indexed-read/final-validation/tests.command.json": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/tests.command.json",
+      "source": ".work/indexed-read/final-validation/tests.command.json",
+      "sha256": "7cb500fb5143e36048cb044b1f6579295bc74791840f6246b640f14fce1722e0",
+      "bytes": 155
+    },
+    "evidence/vcd/component/indexed-read/final-validation/tests.result.json": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/tests.result.json",
+      "source": ".work/indexed-read/final-validation/tests.result.json",
+      "sha256": "e454416620fd6c6dc25e6c2de74cabe03fd87d9c36435d8066972635113c7390",
+      "bytes": 62
+    },
+    "evidence/vcd/component/indexed-read/final-validation/tests.stdout": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/tests.stdout",
+      "source": ".work/indexed-read/final-validation/tests.stdout",
+      "sha256": "5fbd74aff540518aa047a46d2c1c0ea3d46146ac8aa6971db3aa04319da78024",
+      "bytes": 314
+    },
+    "evidence/vcd/component/indexed-read/final-validation/tests.stderr": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/tests.stderr",
+      "source": ".work/indexed-read/final-validation/tests.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/component/indexed-read/final-validation/index.json": {
+      "path": "evidence/vcd/component/indexed-read/final-validation/index.json",
+      "source": "evidence/vcd/component/indexed-read/final-validation/index.json",
+      "sha256": "f01e0fbf20274855040842eb63755f8a573ef6b8afacebe8e2f611a124f376c1",
+      "bytes": 1858
+    }
+  },
+  "identity_sha256": "883c8206d30256541202380ba18cce6d78c78fa3ccf684d08f2f3bb32e4b4166",
+  "interpretation": "五补丁可应用性、正式源码身份及独立构建/反例检查分别记录。52源码相同不等于两份definition或binary相同；16条owise生成条件仍有排列差异。"
+}

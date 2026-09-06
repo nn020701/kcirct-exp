@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "timescale": "1ns",
+  "events": [
+    {
+      "time": 0,
+      "inputs": {
+        "clk": 0,
+        "rst": 1,
+        "monitor_axis_tkeep": 0,
+        "monitor_axis_tvalid": 0,
+        "monitor_axis_tready": 0,
+        "monitor_axis_tlast": 0
+      }
+    },
+    {
+      "time": 1,
+      "inputs": {
+        "clk": 1,
+        "rst": 1,
+        "monitor_axis_tkeep": 0,
+        "monitor_axis_tvalid": 0,
+        "monitor_axis_tready": 0,
+        "monitor_axis_tlast": 0
+      }
+    },
+    {
+      "time": 2,
+      "inputs": {
+        "clk": 0,
+        "rst": 0,
+        "monitor_axis_tkeep": 0,
+        "monitor_axis_tvalid": 1,
+        "monitor_axis_tready": 0,
+        "monitor_axis_tlast": 0
+      }
+    },
+    {
+      "time": 3,
+      "inputs": {
+        "clk": 1,
+        "rst": 0,
+        "monitor_axis_tkeep": 0,
+        "monitor_axis_tvalid": 1,
+        "monitor_axis_tready": 0,
+        "monitor_axis_tlast": 0
+      }
+    },
+    {
+      "time": 4,
+      "inputs": {
+        "clk": 0,
+        "rst": 0,
+        "monitor_axis_tkeep": 1,
+        "monitor_axis_tvalid": 1,
+        "monitor_axis_tready": 1,
+        "monitor_axis_tlast": 0
+      }
+    },
+    {
+      "time": 5,
+      "inputs": {
+        "clk": 1,
+        "rst": 0,
+        "monitor_axis_tkeep": 1,
+        "monitor_axis_tvalid": 1,
+        "monitor_axis_tready": 1,
+        "monitor_axis_tlast": 0
+      }
+    },
+    {
+      "time": 6,
+      "inputs": {
+        "clk": 0,
+        "rst": 0,
+        "monitor_axis_tkeep": 1,
+        "monitor_axis_tvalid": 1,
+        "monitor_axis_tready": 1,
+        "monitor_axis_tlast": 1
+      }
+    },
+    {
+      "time": 7,
+      "inputs": {
+        "clk": 1,
+        "rst": 0,
+        "monitor_axis_tkeep": 1,
+        "monitor_axis_tvalid": 1,
+        "monitor_axis_tready": 1,
+        "monitor_axis_tlast": 1
+      }
+    },
+    {
+      "time": 8,
+      "inputs": {
+        "clk": 0,
+        "rst": 0,
+        "monitor_axis_tkeep": 1,
+        "monitor_axis_tvalid": 1,
+        "monitor_axis_tready": 1,
+        "monitor_axis_tlast": 1
+      }
+    },
+    {
+      "time": 9,
+      "inputs": {
+        "clk": 1,
+        "rst": 0,
+        "monitor_axis_tkeep": 1,
+        "monitor_axis_tvalid": 1,
+        "monitor_axis_tready": 1,
+        "monitor_axis_tlast": 1
+      }
+    },
+    {
+      "time": 10,
+      "inputs": {
+        "clk": 0,
+        "rst": 0,
+        "monitor_axis_tkeep": 0,
+        "monitor_axis_tvalid": 0,
+        "monitor_axis_tready": 1,
+        "monitor_axis_tlast": 0
+      }
+    }
+  ]
+}

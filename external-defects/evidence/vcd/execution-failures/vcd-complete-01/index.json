@@ -1,0 +1,1191 @@
+{
+  "schema_version": 1,
+  "description": "complete-01 的真实执行失败、完整批次只读审计及之后的独立诊断/修复验证。保留原字节，不把不完整波形计为通过。",
+  "source_run": "vcd-complete-01",
+  "historical_outcome": {
+    "pass": 8,
+    "execution_error": 2
+  },
+  "audit_passed": true,
+  "failures": [
+    {
+      "variant_id": "s3",
+      "design_variant": "golden",
+      "status": "execution_error",
+      "stage": "execution",
+      "event_index": 0,
+      "event_time": 0,
+      "evaluation": 2,
+      "events_total": 25,
+      "events_completed": 0,
+      "simulation_calls": 2,
+      "outer_cli_exit_code": 1,
+      "last_krun_exit_code": 0,
+      "raw_error": "RuntimeError: 状态尚有待执行内容：simulated.1.kore，未清空 []",
+      "runner_error": "kimulator 退出码 1：",
+      "full_waveform_compared": false,
+      "partial_completed_events_checked": 0,
+      "result": {
+        "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/result.json",
+        "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/result.json",
+        "sha256": "eded356c03396d107643e3c83c3668e44a8e124a6f9a9f24357ca139b84399b8",
+        "bytes": 3554
+      },
+      "last_state": {
+        "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/last-state.kore",
+        "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/last-state.kore",
+        "sha256": "eb776c980a69e90eac4f51d79cc6efc2f64c49326c6c1c29d6230bf51e052837",
+        "bytes": 991169
+      },
+      "last_snapshot": {
+        "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/states/event-0000.eval-2.kore.gz",
+        "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/states/event-0000.eval-2.kore.gz",
+        "sha256": "ec77ab83994df98e8f4fcf0f7397d5fec893b3243588c485224354533687c8b7",
+        "bytes": 17475
+      },
+      "failed_prestate": {
+        "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/simulated.1.kore.prestate",
+        "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/simulated.1.kore.prestate",
+        "sha256": "749a7647cfeac99e01ea580d8efd9163222e842289d54743e1eb43436044a0d5",
+        "bytes": 820214
+      }
+    },
+    {
+      "variant_id": "d12",
+      "design_variant": "golden",
+      "status": "execution_error",
+      "stage": "execution",
+      "event_index": 9,
+      "event_time": 9,
+      "evaluation": 1,
+      "events_total": 31,
+      "events_completed": 9,
+      "simulation_calls": 19,
+      "outer_cli_exit_code": 1,
+      "last_krun_exit_code": 0,
+      "raw_error": "RuntimeError: 状态尚有待执行内容：simulated.0.kore，未清空 []",
+      "runner_error": "kimulator 退出码 1：",
+      "full_waveform_compared": false,
+      "partial_completed_events_checked": 9,
+      "result": {
+        "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/result.json",
+        "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/result.json",
+        "sha256": "aeb9a1fe8429626db533998e5ba68cd23474092ee76d5db77b3b1afb19d78d77",
+        "bytes": 4001
+      },
+      "last_state": {
+        "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/last-state.kore",
+        "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/last-state.kore",
+        "sha256": "159440decc670e38a76d269e1b9baf817b296607a3a966ff45dd4643e8dd72b9",
+        "bytes": 344427
+      },
+      "last_snapshot": {
+        "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0009.eval-1.kore.gz",
+        "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0009.eval-1.kore.gz",
+        "sha256": "dead9c99d84b2c5bcdfd8d66843bf6950a0936718573065015d257bbcc445b9c",
+        "bytes": 7989
+      },
+      "failed_prestate": {
+        "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/simulated.0.kore.prestate",
+        "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/simulated.0.kore.prestate",
+        "sha256": "b5e9e6703bf805b06496dc74b54876cf85aefead27079d9a2aaed71c6d33d9ad",
+        "bytes": 333376
+      }
+    }
+  ],
+  "diagnosis": {
+    "s3": {
+      "first_corruption": "event 0 evaluation 1，depth 1956 -> 1957",
+      "original_operands": [
+        "%124",
+        "%28",
+        "%112"
+      ],
+      "corrupted_operands": [
+        "%28",
+        "%112",
+        "%112"
+      ],
+      "connection_result": "%131",
+      "symptom": "current 保持正确，connection 的共享参数列表改变；下一次执行在终态检查失败。"
+    },
+    "d12": {
+      "first_corruption": "失败前一次 evaluation，depth 942 -> 943",
+      "source": "diagnosis/d12/findings.json",
+      "discarded_search": "只比较首个 current 的早期非单调二分已弃用；不纳入边界结论。"
+    },
+    "interpretation": "旧 standard 批次的 VCD 通过仍是真实观测；complete-01 的严格 mux 检查暴露参数列表损坏。修复只改变 AutoConnect 的等价 List 模式表达，未修改 K/LLVM backend；新定义单次验证不替代最终正式批次。"
+  },
+  "artifacts": {
+    "evidence/vcd/execution-failures/vcd-complete-01/batch/prepared.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/batch/prepared.json",
+      "source": ".runs/vcd-complete-01/prepared.json",
+      "sha256": "fb1a4da0c697697f28716e936b1a3c7a5d637dc9a2e3a138369f4386448d39de",
+      "bytes": 7971
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/batch/versions.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/batch/versions.json",
+      "source": ".runs/vcd-complete-01/versions.json",
+      "sha256": "dbc21363e16316d1aaf5887b055e4028ada15ff69f45c00cb3f8ed9691bd7fcb",
+      "bytes": 7404
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/batch/protocol.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/batch/protocol.json",
+      "source": ".runs/vcd-complete-01/protocol.json",
+      "sha256": "d8c1727156be8889c08909437ecaa69e8ac27825b3613698aa5bf57b8683fd64",
+      "bytes": 345
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/batch/results.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/batch/results.json",
+      "source": ".runs/vcd-complete-01/results.json",
+      "sha256": "ec1ccdd90ff1544ae6074f27556f7d0e13da3091f2dd08d04e4880b7d966d77f",
+      "bytes": 901115
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/batch/summary.csv": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/batch/summary.csv",
+      "source": ".runs/vcd-complete-01/summary.csv",
+      "sha256": "3bcaefaf7c2b4fb4e4ece7cf022cd8ac83d6afbe038a87072717f0d5fb54ce8b",
+      "bytes": 747
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/batch/batch-exit.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/batch/batch-exit.json",
+      "source": ".runs/vcd-complete-01/batch-exit.json",
+      "sha256": "bbe0a292c9eee5bbae2ecc578472b62df749f1650ab8f93a611f8a908e028800",
+      "bytes": 460
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/batch/runner.py": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/batch/runner.py",
+      "source": ".runs/vcd-complete-01/runner.py",
+      "sha256": "6520fcc8db5764d6c6ce6cb751dc1a48e4d0be741cf06e4165406304612772a8",
+      "bytes": 32424
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/batch/native.py": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/batch/native.py",
+      "source": ".runs/vcd-complete-01/native.py",
+      "sha256": "51c6aefbb8889369665d1c91942580ce8f5b367e08ef79f20f020f163a9d0a87",
+      "bytes": 14488
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/batch/waveform.py": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/batch/waveform.py",
+      "source": ".runs/vcd-complete-01/waveform.py",
+      "sha256": "f3f6c9ab2b99fea61a204100c59867043aebee23b7ca7414b404614cdd0b2957",
+      "bytes": 12089
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/audit/audit_complete_01.py": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/audit/audit_complete_01.py",
+      "source": ".work/complete-exp/audit_complete_01.py",
+      "sha256": "08a80de04a122eb04a5e901a8ad003b088298c1bf32c146847782f95885d3850",
+      "bytes": 12576
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/audit/vcd-complete-01-audit.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/audit/vcd-complete-01-audit.json",
+      "source": ".work/complete-exp/vcd-complete-01-audit.json",
+      "sha256": "a613ef23f98e74ac72f6bec87a684d1b70106951c1e1750fbea91fd451101a44",
+      "bytes": 1262737
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/manifest.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/manifest.json",
+      "source": ".runs/vcd-complete-01/s3/manifest.json",
+      "sha256": "8104d9bc7e0e7d47777454e60c89354a3beedcd2d545fd6edebbd7b3a3aa19d1",
+      "bytes": 4997
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/result.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/result.json",
+      "source": ".runs/vcd-complete-01/s3/result.json",
+      "sha256": "3e4a17c937438dee4690a12b47a891048a503a10bc1728d435669c786e635c5a",
+      "bytes": 41716
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/test_data.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/test_data.json",
+      "source": ".runs/vcd-complete-01/s3/test_data.json",
+      "sha256": "abd7322c6c66abb4234d5b3d90f9a40c959a4294a7984cd93c860967eeaa81e4",
+      "bytes": 7541
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/csv-normalizations.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/csv-normalizations.json",
+      "source": ".runs/vcd-complete-01/s3/csv-normalizations.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/commands.jsonl": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/commands.jsonl",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/commands.jsonl",
+      "sha256": "68a9139ee51b4b0221259fcf8815294d65fa8faa417d8de6efcd013f7c99471e",
+      "bytes": 1357
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/error.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/error.txt",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/error.txt",
+      "sha256": "34232ea65c477c042ed58aceae3582ebf96fe43a5d562fa445ca769aa40162d8",
+      "bytes": 522
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/ir-baseline.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/ir-baseline.json",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/ir-baseline.json",
+      "sha256": "15fe22d1955889074dc6126017bb0ae14cb7a2c0ba2dcbe802c460f5ea047685",
+      "bytes": 7144
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/kimulator.stderr.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/kimulator.stderr.txt",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/kimulator.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/kimulator.stdout.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/kimulator.stdout.txt",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/kimulator.stdout.txt",
+      "sha256": "eded356c03396d107643e3c83c3668e44a8e124a6f9a9f24357ca139b84399b8",
+      "bytes": 3554
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/result.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/result.json",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/result.json",
+      "sha256": "fd96c648f9e89fa402a34cb4467e2a5988a89c9196acec91c5a08627ad92b026",
+      "bytes": 3503
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0000.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0000.stderr",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/command-0000.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0001.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0001.stderr",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/command-0001.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0002.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0002.stderr",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/command-0002.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0003.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0003.stderr",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/command-0003.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0004.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/command-0004.stderr",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/command-0004.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/commands.jsonl": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/commands.jsonl",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/commands.jsonl",
+      "sha256": "6cbe722506f45ec7026e2fd1c062b9ffa1ffeefa645cf5bb01cf7879fd074db4",
+      "bytes": 5889
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/design.generic.mlir": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/design.generic.mlir",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/design.generic.mlir",
+      "sha256": "64284ceadd31abb70660d75bea92c4506435921e2dccc210274fdc80883c8bd0",
+      "bytes": 16534
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/error.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/error.txt",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/error.txt",
+      "sha256": "c9ea80ae9f241ca5a4f37e4ea40f43d701c2f01389f2ab665018d73f70ee9fb3",
+      "bytes": 76
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/inputs.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/inputs.json",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/inputs.json",
+      "sha256": "abd7322c6c66abb4234d5b3d90f9a40c959a4294a7984cd93c860967eeaa81e4",
+      "bytes": 7541
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/last-state.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/last-state.kore",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/last-state.kore",
+      "sha256": "eb776c980a69e90eac4f51d79cc6efc2f64c49326c6c1c29d6230bf51e052837",
+      "bytes": 991169
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/pgm.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/pgm.kore",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/pgm.kore",
+      "sha256": "d271ffc19652dca2bf3667afcc3ff5c23bbff4d96a32e6ca20f18fb1da658819",
+      "bytes": 465352
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/preprocessed.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/preprocessed.kore",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/preprocessed.kore",
+      "sha256": "64e21a4e4b5315a4f2ccfb3456060441020682342714b37d5014225cab34077b",
+      "bytes": 380508
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/preprocessed.kore.prestate": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/preprocessed.kore.prestate",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/preprocessed.kore.prestate",
+      "sha256": "d7b567ace7f69a3e96f745366a413ce5ca8cd224d1734c118befa407f27ed5fe",
+      "bytes": 465545
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/result.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/result.json",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/result.json",
+      "sha256": "eded356c03396d107643e3c83c3668e44a8e124a6f9a9f24357ca139b84399b8",
+      "bytes": 3554
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/setup.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/setup.kore",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/setup.kore",
+      "sha256": "d512bc64aae2cdff3cb7be3438e1921f3d637870452f551aa3c48ddccb531c5b",
+      "bytes": 745196
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/setup.kore.prestate": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/setup.kore.prestate",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/setup.kore.prestate",
+      "sha256": "28ddf8a761f4bdd08b219ab484be09e483549a06084347bef51825f2fea35e34",
+      "bytes": 380594
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/simulated.0.kore.prestate": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/simulated.0.kore.prestate",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/simulated.0.kore.prestate",
+      "sha256": "a5388d3758a00d24192fa1c545de618d787327e8d1ddda90d46202f0eda89b2b",
+      "bytes": 746949
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/simulated.1.kore.prestate": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/simulated.1.kore.prestate",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/simulated.1.kore.prestate",
+      "sha256": "749a7647cfeac99e01ea580d8efd9163222e842289d54743e1eb43436044a0d5",
+      "bytes": 820214
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/state.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/state.json",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/state.json",
+      "sha256": "b56cb707309663980304d797052970b748b7547a04fa607d7de05236a3994310",
+      "bytes": 1438
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/states/event-0000.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/states/event-0000.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/states/event-0000.eval-1.kore.gz",
+      "sha256": "4b7c57bea104b35b781531418ac9993156d80bd90be9657435cdbd998b388313",
+      "bytes": 14552
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/states/event-0000.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/states/event-0000.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/states/event-0000.eval-2.kore.gz",
+      "sha256": "ec77ab83994df98e8f4fcf0f7397d5fec893b3243588c485224354533687c8b7",
+      "bytes": 17475
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/states.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/simulation/states.json",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/simulation/states.json",
+      "sha256": "6ea32b7e705bf57d9a2a4b626e50f7b05471d6a92169899cbb305f1f5356157f",
+      "bytes": 777
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/test.vcd": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/kimulator/test.vcd",
+      "source": ".runs/vcd-complete-01/s3/golden/kimulator/test.vcd",
+      "sha256": "0b069c52b95846fad8ccc2db9143ad7140cf0410a3dc519e86d5cfa9593816ce",
+      "bytes": 709
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/build.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/build.log",
+      "source": ".runs/vcd-complete-01/s3/golden/native/build.log",
+      "sha256": "15fce3c47dd536aff6c04398d70b4c32ee24a8b9b3c73f1222d37b4ff158309e",
+      "bytes": 12981
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/build.stderr.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/build.stderr.log",
+      "source": ".runs/vcd-complete-01/s3/golden/native/build.stderr.log",
+      "sha256": "84a2d9541d1b8c00374013101a834852dd51e0f3bf280b829a016c68188d8463",
+      "bytes": 7459
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/build.stdout.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/build.stdout.log",
+      "source": ".runs/vcd-complete-01/s3/golden/native/build.stdout.log",
+      "sha256": "1c2db656c0aa3aa6697b01753da6f957da240f265dda268660764923cbc93467",
+      "bytes": 5522
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/commands.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/commands.json",
+      "source": ".runs/vcd-complete-01/s3/golden/native/commands.json",
+      "sha256": "75aac6a1b1ddb932373eb5c56b115031c631723d4ea7a3bc1bc5417291d66e29",
+      "bytes": 2750
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/driver.cpp": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/driver.cpp",
+      "source": ".runs/vcd-complete-01/s3/golden/native/driver.cpp",
+      "sha256": "d569fb6e309d44d9f417060d84de537d71c3814f6450db59d0be270c2066810b",
+      "bytes": 2969
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/inputs.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/inputs.json",
+      "source": ".runs/vcd-complete-01/s3/golden/native/inputs.json",
+      "sha256": "260b4b6a2ea117e1ac52241baaac0cab4e9e6923d52a1ef928b0c87c3d58b670",
+      "bytes": 4881
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/output.csv": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/output.csv",
+      "source": ".runs/vcd-complete-01/s3/golden/native/output.csv",
+      "sha256": "1a7606d8136f2c495c5a7a1c8bff52ea48ec2103a1051fdbd356c152218406c0",
+      "bytes": 289
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/result.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/result.json",
+      "source": ".runs/vcd-complete-01/s3/golden/native/result.json",
+      "sha256": "d89050c9b8f67743d1f3723448e4646cf213108a5a3b2bff642ecc193706cbea",
+      "bytes": 8495
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/run.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/run.log",
+      "source": ".runs/vcd-complete-01/s3/golden/native/run.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/run.stderr.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/run.stderr.log",
+      "source": ".runs/vcd-complete-01/s3/golden/native/run.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/run.stdout.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/run.stdout.log",
+      "source": ".runs/vcd-complete-01/s3/golden/native/run.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/sampling-contract.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/sampling-contract.json",
+      "source": ".runs/vcd-complete-01/s3/golden/native/sampling-contract.json",
+      "sha256": "09074b8e85cb6a2ccfec9b2c93fe58e57b25b2af98a7937d5b22e7ca9038cc67",
+      "bytes": 2116
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/stimulus.hex": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/stimulus.hex",
+      "source": ".runs/vcd-complete-01/s3/golden/native/stimulus.hex",
+      "sha256": "b3a159a183b18509cc894beb4a7eda09a76a3f3892b3309cb19653b7c7440db1",
+      "bytes": 374
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/stimulus.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/stimulus.json",
+      "source": ".runs/vcd-complete-01/s3/golden/native/stimulus.json",
+      "sha256": "abd7322c6c66abb4234d5b3d90f9a40c959a4294a7984cd93c860967eeaa81e4",
+      "bytes": 7541
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/trace.vcd": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/trace.vcd",
+      "source": ".runs/vcd-complete-01/s3/golden/native/trace.vcd",
+      "sha256": "0af400cd2080e7ddb8b8a05a6d2bb6ddb86242231f429934d12b2aedf71075d8",
+      "bytes": 4657
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/version.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/version.log",
+      "source": ".runs/vcd-complete-01/s3/golden/native/version.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/version.stderr.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/version.stderr.log",
+      "source": ".runs/vcd-complete-01/s3/golden/native/version.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/version.stdout.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/version.stdout.log",
+      "source": ".runs/vcd-complete-01/s3/golden/native/version.stdout.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/versions.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/s3/golden/native/versions.json",
+      "source": ".runs/vcd-complete-01/s3/golden/native/versions.json",
+      "sha256": "ff9c0fe38d2b6c5225bfc6d5e126fddbcdcee587205a2e000b734cc8797c4c34",
+      "bytes": 126
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/manifest.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/manifest.json",
+      "source": ".runs/vcd-complete-01/d12/manifest.json",
+      "sha256": "e0fd2485c2a9f04c7617d03b6be4d6d0fca16502c6c233be9f8e57681c15b7a5",
+      "bytes": 6012
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/result.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/result.json",
+      "source": ".runs/vcd-complete-01/d12/result.json",
+      "sha256": "9633039789f360211cce9e6795369cd1c382385606a8c196c2e4aff3c2a7c4d4",
+      "bytes": 59782
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/test_data.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/test_data.json",
+      "source": ".runs/vcd-complete-01/d12/test_data.json",
+      "sha256": "1acdd2c7a5c669ec48554f60a7fa5dae9aca9b2b03d993055a98fbe2ecda6547",
+      "bytes": 9604
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/csv-normalizations.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/csv-normalizations.json",
+      "source": ".runs/vcd-complete-01/d12/csv-normalizations.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/commands.jsonl": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/commands.jsonl",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/commands.jsonl",
+      "sha256": "1e5dfb83a463bd387f77a91e395f4af54ee25cfd0ee09e379b9d1ec615e59838",
+      "bytes": 1357
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/error.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/error.txt",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/error.txt",
+      "sha256": "c7744a8dd5fa19df678914600c5cb8d98b6fb9fb82411580345ab8e8504b9be9",
+      "bytes": 427
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/ir-baseline.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/ir-baseline.json",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/ir-baseline.json",
+      "sha256": "4ad8831492120c7f4e2d8c45032d9c0c115b505c660a34f465075b671b97f8b3",
+      "bytes": 8009
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/kimulator.stderr.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/kimulator.stderr.txt",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/kimulator.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/kimulator.stdout.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/kimulator.stdout.txt",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/kimulator.stdout.txt",
+      "sha256": "aeb9a1fe8429626db533998e5ba68cd23474092ee76d5db77b3b1afb19d78d77",
+      "bytes": 4001
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/result.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/result.json",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/result.json",
+      "sha256": "da6fdaaa51406243de70f4f952f7c53d9a6b9c6352bd0966db78bea42355afee",
+      "bytes": 3950
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0000.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0000.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0000.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0001.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0001.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0001.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0002.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0002.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0002.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0003.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0003.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0003.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0004.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0004.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0004.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0005.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0005.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0005.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0006.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0006.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0006.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0007.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0007.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0007.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0008.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0008.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0008.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0009.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0009.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0009.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0010.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0010.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0010.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0011.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0011.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0011.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0012.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0012.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0012.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0013.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0013.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0013.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0014.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0014.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0014.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0015.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0015.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0015.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0016.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0016.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0016.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0017.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0017.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0017.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0018.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0018.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0018.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0019.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0019.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0019.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0020.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0020.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0020.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0021.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/command-0021.stderr",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/command-0021.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/commands.jsonl": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/commands.jsonl",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/commands.jsonl",
+      "sha256": "504c1ef1578ca6e4240316520845cbfe0848e62ee384a9e0abdb63ea9d5ecc66",
+      "bytes": 26676
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/design.generic.mlir": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/design.generic.mlir",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/design.generic.mlir",
+      "sha256": "9fe4c36da8c44291305a7732651591d42d7a212849f70b8c8a4010044e1396d2",
+      "bytes": 8176
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/error.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/error.txt",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/error.txt",
+      "sha256": "5400b033bd2007408f85422b72310fff691edd3a1f2b80c20aed07747519f5c2",
+      "bytes": 76
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/inputs.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/inputs.json",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/inputs.json",
+      "sha256": "1acdd2c7a5c669ec48554f60a7fa5dae9aca9b2b03d993055a98fbe2ecda6547",
+      "bytes": 9604
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/last-state.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/last-state.kore",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/last-state.kore",
+      "sha256": "159440decc670e38a76d269e1b9baf817b296607a3a966ff45dd4643e8dd72b9",
+      "bytes": 344427
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/pgm.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/pgm.kore",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/pgm.kore",
+      "sha256": "7a2a9dfbc895da3b2a07d1ba56f9293e11986d52af5aaca9631e3c0be6e14e6b",
+      "bytes": 183639
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/preprocessed.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/preprocessed.kore",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/preprocessed.kore",
+      "sha256": "690bb15f2d879a17b79704fb2c23eaebefd2eb50a28c3af9aa09c263e72a12c5",
+      "bytes": 144094
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/preprocessed.kore.prestate": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/preprocessed.kore.prestate",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/preprocessed.kore.prestate",
+      "sha256": "65f5bf8240166f49123571170c44194351e1199b2ebe299c43e6187a0b3feba6",
+      "bytes": 183832
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/result.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/result.json",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/result.json",
+      "sha256": "aeb9a1fe8429626db533998e5ba68cd23474092ee76d5db77b3b1afb19d78d77",
+      "bytes": 4001
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/setup.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/setup.kore",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/setup.kore",
+      "sha256": "cea5c593010f660752d457043568d5981e5cb3929ed4e4c552b8b4da5ff363c8",
+      "bytes": 279673
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/setup.kore.prestate": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/setup.kore.prestate",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/setup.kore.prestate",
+      "sha256": "801b2d16ea3bae5b2fdb09eb4f4b3eac573f867d29a7ba88bfd5ec509efe3de4",
+      "bytes": 144177
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/simulated.0.kore.prestate": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/simulated.0.kore.prestate",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/simulated.0.kore.prestate",
+      "sha256": "b5e9e6703bf805b06496dc74b54876cf85aefead27079d9a2aaed71c6d33d9ad",
+      "bytes": 333376
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/simulated.1.kore.prestate": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/simulated.1.kore.prestate",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/simulated.1.kore.prestate",
+      "sha256": "a497e04d235733fd92536b6e7707de3438be6c436c30227e326b4cf116b7158c",
+      "bytes": 333376
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/state.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/state.json",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/state.json",
+      "sha256": "97503a3862f15c1e951f75935dc80be8d38263ed5c6731df9a6380cbd4b1c907",
+      "bytes": 2058
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0000.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0000.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0000.eval-1.kore.gz",
+      "sha256": "8e741a727591db0b3a693a7092fc8f72d938736d9b23dfe064899318a39eb74f",
+      "bytes": 7077
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0000.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0000.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0000.eval-2.kore.gz",
+      "sha256": "4e73d7a37cce98542e5fb58fbd6831e9f001cb7701ede17331457e7ad2487b8a",
+      "bytes": 7321
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0001.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0001.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0001.eval-1.kore.gz",
+      "sha256": "2fed5861aa5fda8027596a1cef2316ff06cd295a70968288bbcc335ed6be448b",
+      "bytes": 7347
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0001.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0001.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0001.eval-2.kore.gz",
+      "sha256": "4b6ff944c3a554671b0480307e922d5795b05850dbb579ac72f62899501f1b29",
+      "bytes": 7338
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0002.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0002.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0002.eval-1.kore.gz",
+      "sha256": "d438492a279708c7c25d5df8ff58e93d4d84dd7ec74c2cc1bb321cee59dc2e27",
+      "bytes": 7361
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0002.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0002.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0002.eval-2.kore.gz",
+      "sha256": "7efbfbeff6fe2799839a9c6f2239f7ba683ea952a988530eb898281691bddea4",
+      "bytes": 7337
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0003.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0003.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0003.eval-1.kore.gz",
+      "sha256": "967bc09c4b7902a52e7ae967358ada6d295dc38c8412351c7de2d487747199f6",
+      "bytes": 7358
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0003.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0003.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0003.eval-2.kore.gz",
+      "sha256": "426c659fc8fbea7d8287f50d1bc1a069b70618e52d34c30f0cec49ab13da1fcc",
+      "bytes": 7387
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0004.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0004.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0004.eval-1.kore.gz",
+      "sha256": "36fcb50f25ddf9218fdd52ddfd1c5c4ccf76b642a0e670114f9b54e9a8093d1e",
+      "bytes": 7361
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0004.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0004.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0004.eval-2.kore.gz",
+      "sha256": "034bef5d35480a26619ae2c12f4334b6b5e18f96a4e13e683e9e9ffa22b800f3",
+      "bytes": 7358
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0005.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0005.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0005.eval-1.kore.gz",
+      "sha256": "7be34d0f73fe3a56e2dc7ac12f7042457be50830bde008aea733befa58dc0141",
+      "bytes": 7374
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0005.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0005.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0005.eval-2.kore.gz",
+      "sha256": "958231f0841dd1319baa613400e1ea6791b35cb718e44eb0de8cf4cf81490b51",
+      "bytes": 7408
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0006.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0006.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0006.eval-1.kore.gz",
+      "sha256": "dec9beabf22839b811ec9debeaee2e595c0cbd9ab2f244ac9d03a8a2a1ab3671",
+      "bytes": 7381
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0006.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0006.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0006.eval-2.kore.gz",
+      "sha256": "32163f53f65a2920ebee580fcda40c26be8e6f4c8159787486460114100f7f8f",
+      "bytes": 7370
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0007.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0007.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0007.eval-1.kore.gz",
+      "sha256": "53e888758baa399cc07b395d026bff858c3831fd165ccfa28dd1e3014fcbf87a",
+      "bytes": 7395
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0007.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0007.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0007.eval-2.kore.gz",
+      "sha256": "29f3bc7f8c27f18b9f3a1ad3bfe5324864d0f45329ce0935a90a21df699b9ef9",
+      "bytes": 7426
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0008.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0008.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0008.eval-1.kore.gz",
+      "sha256": "cd353e35c3a670abde17b8c4ab7b68284a2bc03270e67ef2dca6c2ab3c9fd670",
+      "bytes": 7396
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0008.eval-2.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0008.eval-2.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0008.eval-2.kore.gz",
+      "sha256": "0e91481ba1e93ac4bc2c6002ce92bf35d01b1aa2291d8ad4b33fb0563d7b6ae2",
+      "bytes": 7386
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0009.eval-1.kore.gz": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0009.eval-1.kore.gz",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states/event-0009.eval-1.kore.gz",
+      "sha256": "dead9c99d84b2c5bcdfd8d66843bf6950a0936718573065015d257bbcc445b9c",
+      "bytes": 7989
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/simulation/states.json",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/simulation/states.json",
+      "sha256": "c0c47a2ff2b65c576ff49e646f5fb9bc7216285fd9f4c49486a4aac79c949752",
+      "bytes": 7375
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/test.vcd": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/kimulator/test.vcd",
+      "source": ".runs/vcd-complete-01/d12/golden/kimulator/test.vcd",
+      "sha256": "8ee090d46c5bbbb155b5fe1d96efef2b9819de79053af9ef3fcfbf6dc58063a9",
+      "bytes": 2000
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/build.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/build.log",
+      "source": ".runs/vcd-complete-01/d12/golden/native/build.log",
+      "sha256": "ddacf0431df98a028301bde3769a5726669a5eb929d8a0d7584fc1605723e0a3",
+      "bytes": 5766
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/build.stderr.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/build.stderr.log",
+      "source": ".runs/vcd-complete-01/d12/golden/native/build.stderr.log",
+      "sha256": "540ecea2890cef8801e38d77cbba2c8e66ee30bd79f47306a63b1cdbe2e13ca4",
+      "bytes": 243
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/build.stdout.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/build.stdout.log",
+      "source": ".runs/vcd-complete-01/d12/golden/native/build.stdout.log",
+      "sha256": "370415d99cb818704bb94e3bfb42e5ddfe704d65a6c82f57c68fee860543be1d",
+      "bytes": 5523
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/commands.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/commands.json",
+      "source": ".runs/vcd-complete-01/d12/golden/native/commands.json",
+      "sha256": "0ce9d54375d712670a09231882d7b419e1c4a6f189902bca2b2916b2fdf18198",
+      "bytes": 3213
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/driver.cpp": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/driver.cpp",
+      "source": ".runs/vcd-complete-01/d12/golden/native/driver.cpp",
+      "sha256": "aafcda136c2fd6567cd50cffea7cb3b1ff8916e4ad8e33f996063fe8363711ca",
+      "bytes": 3500
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/inputs.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/inputs.json",
+      "source": ".runs/vcd-complete-01/d12/golden/native/inputs.json",
+      "sha256": "d0fe0865f7c1f58e5d685aafb141cda62f4995e18388f38bca00b83ad6148834",
+      "bytes": 6243
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/output.csv": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/output.csv",
+      "source": ".runs/vcd-complete-01/d12/golden/native/output.csv",
+      "sha256": "fb9c8672861eda37eae20e3dbf297b9c74e0ec5aba60bf2f6bb753241fd6ea7c",
+      "bytes": 524
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/result.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/result.json",
+      "source": ".runs/vcd-complete-01/d12/golden/native/result.json",
+      "sha256": "1d344dc60511ca481fbcde2db981b1b719a6669e867b18060d45f9376508a377",
+      "bytes": 13457
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/run.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/run.log",
+      "source": ".runs/vcd-complete-01/d12/golden/native/run.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/run.stderr.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/run.stderr.log",
+      "source": ".runs/vcd-complete-01/d12/golden/native/run.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/run.stdout.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/run.stdout.log",
+      "source": ".runs/vcd-complete-01/d12/golden/native/run.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/sampling-contract.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/sampling-contract.json",
+      "source": ".runs/vcd-complete-01/d12/golden/native/sampling-contract.json",
+      "sha256": "981c525783d9bd559f891a895df477b18b449a84f04b29dfe1cb3b1ee12c9616",
+      "bytes": 2489
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/stimulus.hex": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/stimulus.hex",
+      "source": ".runs/vcd-complete-01/d12/golden/native/stimulus.hex",
+      "sha256": "93795277c3c0e6aa7601662c26725431ddbc9d963686e0672e56eed53446c0a0",
+      "bytes": 288
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/stimulus.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/stimulus.json",
+      "source": ".runs/vcd-complete-01/d12/golden/native/stimulus.json",
+      "sha256": "1acdd2c7a5c669ec48554f60a7fa5dae9aca9b2b03d993055a98fbe2ecda6547",
+      "bytes": 9604
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/trace.vcd": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/trace.vcd",
+      "source": ".runs/vcd-complete-01/d12/golden/native/trace.vcd",
+      "sha256": "caacf5904aacba4d14d9b9e179d02bda14bef9528d3e3b04fb9a12911ca6b4d8",
+      "bytes": 6280
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/version.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/version.log",
+      "source": ".runs/vcd-complete-01/d12/golden/native/version.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/version.stderr.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/version.stderr.log",
+      "source": ".runs/vcd-complete-01/d12/golden/native/version.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/version.stdout.log": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/version.stdout.log",
+      "source": ".runs/vcd-complete-01/d12/golden/native/version.stdout.log",
+      "sha256": "9d8d19bf7d16f490e1b9d701dc1438bf9ec2d7f4a41ca4f0ec8ee3d1a3df8253",
+      "bytes": 54
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/versions.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/d12/golden/native/versions.json",
+      "source": ".runs/vcd-complete-01/d12/golden/native/versions.json",
+      "sha256": "ff9c0fe38d2b6c5225bfc6d5e126fddbcdcee587205a2e000b734cc8797c4c34",
+      "bytes": 126
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/replay.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/replay.json",
+      "source": ".runs/validation/s3-read-corruption-20260906/replay.json",
+      "sha256": "d51e305fc1e6d8469c084f92992f085411fcb3267b3a18598d5de10c0fbb9c25",
+      "bytes": 2768
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/first-bad-connection.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/first-bad-connection.json",
+      "source": ".runs/validation/s3-read-corruption-20260906/eval1/first-bad-connection.json",
+      "sha256": "18587dbff5ae6bbebe4d53f55584b89378664c01d19896e4b0e31b0ad1e2442c",
+      "bytes": 32
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1956.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1956.kore",
+      "source": ".runs/validation/s3-read-corruption-20260906/eval1/depth-1956.kore",
+      "sha256": "a0b4939e3071986493c4de580db13a825a0b0ba04d3d83f26ab0af35bb11b5e7",
+      "bytes": 854526
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1957.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1957.kore",
+      "source": ".runs/validation/s3-read-corruption-20260906/eval1/depth-1957.kore",
+      "sha256": "2b795340503a03a51512b15d08669a607082be4893347dd497a20b3e3ef0485c",
+      "bytes": 854934
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1956.current-3.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1956.current-3.txt",
+      "source": ".runs/validation/s3-read-corruption-20260906/eval1/depth-1956.current-3.txt",
+      "sha256": "93e66dc24b4f7b48980868caa15db85464479435c6bf653e4f0002241b941ad6",
+      "bytes": 2152
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1957.current-3.txt": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-1957.current-3.txt",
+      "source": ".runs/validation/s3-read-corruption-20260906/eval1/depth-1957.current-3.txt",
+      "sha256": "e167e7f6f04238ecd955153df1191f9e7a52310b99a92d3b071bcd8389c5ef0f",
+      "bytes": 2233
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-commands.jsonl": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/eval1/depth-commands.jsonl",
+      "source": ".runs/validation/s3-read-corruption-20260906/eval1/depth-commands.jsonl",
+      "sha256": "441b829960540ee49a3fd982c7bc41e7bf9353f523989a91cdd08fbd8cb850b7",
+      "bytes": 11169
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-eval1-replay.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-eval1-replay.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-eval1-replay.json",
+      "sha256": "84866ea4781660fb1783222df342797287ebe6b0b1a4b9e9eb6f1df3c7191cb8",
+      "bytes": 648
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-eval1-replay.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-eval1-replay.kore",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-eval1-replay.kore",
+      "sha256": "2ee8e1c0a9cb42bf3bf59e86f4c032a8bf02210a588ec397e3e9688be04d2828",
+      "bytes": 818461
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-eval1-replay.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-eval1-replay.stderr",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-eval1-replay.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-golden/result.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-golden/result.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-golden/result.json",
+      "sha256": "d54ceac96ebc499dead11dc478d33e293493574854e521978a65e0c52167ebee",
+      "bytes": 3428
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-golden/commands.jsonl": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-golden/commands.jsonl",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-golden/commands.jsonl",
+      "sha256": "dc36ec1d68e5d4b483a3cfc74fa35dcde7bd35e821b42e48c03f732132c3682b",
+      "bytes": 57043
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-golden.command.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-golden.command.json",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-golden.command.json",
+      "sha256": "4f945c6352a8922e869adb5b7fc824da6e18d0c3dfbc6354cd5ca4124a59d28d",
+      "bytes": 886
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-golden.vcd": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/s3/new-definition/s3-golden.vcd",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-golden.vcd",
+      "sha256": "062a2dd4b8fefefa8009ffb06fdd2db792e2778747f4b4113c1f41f367f80a10",
+      "bytes": 3949
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/findings.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/findings.json",
+      "source": ".work/complete-exp/d12-read-diagnosis/findings.json",
+      "sha256": "607c919e4d60679020800498ee053e7d037f007ad85acfde9791cf77134d3fd5",
+      "bytes": 6434
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/phase-scan.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/phase-scan.json",
+      "source": ".work/complete-exp/d12-read-diagnosis/phase-scan.json",
+      "sha256": "b8ce4f9d0e0fa1f4ddc3f72f1cef76ebbdc5c0d48cad4465471e6a58913eeecc",
+      "bytes": 1744
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/replays.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/replays.json",
+      "source": ".work/complete-exp/d12-read-diagnosis/replays.json",
+      "sha256": "a60da4fdd0c330a4359d5fc859f99f92bd5fd7df3f1f09382bd002c3aa2c5338",
+      "bytes": 2009
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-input.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-input.kore",
+      "source": ".work/complete-exp/d12-read-diagnosis/previous-input.kore",
+      "sha256": "a497e04d235733fd92536b6e7707de3438be6c436c30227e326b4cf116b7158c",
+      "bytes": 333376
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-full.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-full.kore",
+      "source": ".work/complete-exp/d12-read-diagnosis/previous-full.kore",
+      "sha256": "0d0bac60f1f7d7f448c20b01d99be62a37a05d8a03a13c6dcada3ced88118de9",
+      "bytes": 331224
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-depth-942.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-depth-942.kore",
+      "source": ".work/complete-exp/d12-read-diagnosis/previous-depth-942.kore",
+      "sha256": "819ffb680dbbf77b9d6f4834a9374c0d5a66574c2862a9fd97bf81c76b1613f6",
+      "bytes": 348309
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-depth-943.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/previous-depth-943.kore",
+      "source": ".work/complete-exp/d12-read-diagnosis/previous-depth-943.kore",
+      "sha256": "153eda44b06528b1925acdabc73e35c049219305ce52d8c22543d3a80902305f",
+      "bytes": 348706
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/map-diff.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/map-diff.json",
+      "source": ".work/complete-exp/d12-read-diagnosis/map-diff.json",
+      "sha256": "46583eb1922c2d773e0d671778aeb25f3e49c2e97eaf1eaa7d90912c619bd45c",
+      "bytes": 4967
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/restarted-step.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/restarted-step.json",
+      "source": ".work/complete-exp/d12-read-diagnosis/restarted-step.json",
+      "sha256": "0eb6f30dbf6f1828887435547832b989480d40be491c0757f37ba2948d04a05f",
+      "bytes": 2421
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/restarted-step-0.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/restarted-step-0.kore",
+      "source": ".work/complete-exp/d12-read-diagnosis/restarted-step-0.kore",
+      "sha256": "9b08a7564a07c63c2aa7f8d998ee6a0bf924cea0cb6b5f90cf6b2c9459c62787",
+      "bytes": 348706
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/connection-bisect.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/connection-bisect.json",
+      "source": ".work/complete-exp/d12-read-diagnosis/connection-bisect.json",
+      "sha256": "b6b18db5023f201154725c09345dbc1bc1455f9ebf4ab67a0414490e5a1d2f64",
+      "bytes": 216527
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/new-definition-validation.json": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/new-definition-validation.json",
+      "source": ".work/complete-exp/d12-read-diagnosis/new-definition-validation.json",
+      "sha256": "d2dd9c612444beb0ec8e907cc941fcb596cf86b826a457e3f424cea2f9729830",
+      "bytes": 1362
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/new-definition-full.kore": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/new-definition-full.kore",
+      "source": ".work/complete-exp/d12-read-diagnosis/new-definition-full.kore",
+      "sha256": "8f1c7f7649e9766718bfe41ec7b5dac1eb6477fd9af4a2100fa2d0bf923ac5d5",
+      "bytes": 331224
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/new-definition-full.stderr": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/new-definition-full.stderr",
+      "source": ".work/complete-exp/d12-read-diagnosis/new-definition-full.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/diagnose_connection.py": {
+      "path": "evidence/vcd/execution-failures/vcd-complete-01/diagnosis/d12/diagnose_connection.py",
+      "source": ".work/complete-exp/d12-read-diagnosis/diagnose_connection.py",
+      "sha256": "6c874b4f7aec261d043075e2c69401ce7259389e746b7c9ff23fbd1695599ec3",
+      "bytes": 2353
+    }
+  },
+  "artifact_count": 178,
+  "bytes": 14636063
+}

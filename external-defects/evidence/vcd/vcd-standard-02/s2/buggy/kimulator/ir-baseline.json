@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "path_base": "external-defects/",
+  "project_id": "axi-stream-s2",
+  "source_case_id": "S2",
+  "variant_id": "s2",
+  "design_variant": "buggy",
+  "source_run": {
+    "run_id": "batch-memory-01",
+    "directory": ".runs/batch-memory-01/s2/buggy/kimulator",
+    "case_status": "execution_error",
+    "backend_status": "execution_error",
+    "backend_stage": "compile",
+    "formal_result": {
+      "path": "results/cases/s2.json",
+      "sha256": "b39a962c2ab095d7a1c367ce47ef547a453c0673ea09f83592c3de2a91a946da",
+      "bytes": 2902
+    },
+    "archive_records_policy": "records 指向本地历史运行归档，位于被 Git 忽略的 .runs；新 checkout 不自带这些原始记录。其 SHA256 用于校对已有归档。本文件已单独保存生成参数、命令、版本和 RTL 哈希。",
+    "records": {
+      "case_manifest": {
+        "path": ".runs/batch-memory-01/s2/manifest.json",
+        "sha256": "0c7fa0127c17ba3f76459d42624e686306d09748415fa67be1320850ce9e85be",
+        "bytes": 4031
+      },
+      "case_result": {
+        "path": ".runs/batch-memory-01/s2/result.json",
+        "sha256": "b73faf782fbeb45586c0ffe0db714e4a472a55e0c6324ce72937d6e380b19cb9",
+        "bytes": 32189
+      },
+      "run_results": {
+        "path": ".runs/batch-memory-01/results.json",
+        "sha256": "2c9170139adf9791b2f879b67fba784b738acb5223081cf7cb61cab6ff814f5b",
+        "bytes": 477456
+      },
+      "run_versions": {
+        "path": ".runs/batch-memory-01/versions.json",
+        "sha256": "ef13d7ea7fe43b55a62f7039083d553755dbfcfc077b5303b8c4bcc76c25bd45",
+        "bytes": 8438
+      },
+      "backend_result": {
+        "path": ".runs/batch-memory-01/s2/buggy/kimulator/result.json",
+        "sha256": "4adea4dae283550a90ec383502d303c77c7877f2087540cfb9899cda8ffdd86c",
+        "bytes": 519
+      },
+      "commands": {
+        "path": ".runs/batch-memory-01/s2/buggy/kimulator/commands.jsonl",
+        "sha256": "f899b25fa44019421f98df80da8c38df2d4d5e8937e9d2bf3f26fde6a4ffc794",
+        "bytes": 2852
+      },
+      "runner": {
+        "path": ".runs/batch-memory-01/runner.py",
+        "sha256": "8f8cc331a02fb340772a8f0abd7de22494f5cbc1aad10f2323c3aa7e19d2cef8",
+        "bytes": 27884
+      },
+      "service_patch": {
+        "path": ".runs/batch-memory-01/service.patch",
+        "sha256": "d1af341c20d065c1ff6706345021d9cd8bd9e66f79bbcefb819851ad58480f25",
+        "bytes": 679
+      }
+    }
+  },
+  "active_manifest": "manifests/s2.json",
+  "layout": {
+    "path": "designs/axi-stream-s2/provenance/layout.json",
+    "sha256": "5b498894b7a11b897cf69975f69b24e68e8412ddeb32087c6ba5a1ccb62623f1",
+    "bytes": 468
+  },
+  "configuration": {
+    "top": "xlnxstream_2018_3",
+    "parameters": {
+      "C_M_AXIS_TDATA_WIDTH": 32,
+      "C_M_START_COUNT": 32
+    },
+    "effective_parameters": {
+      "C_M_AXIS_TDATA_WIDTH": 32,
+      "C_M_START_COUNT": 32
+    },
+    "frontend_args": [],
+    "sample_phase": "low_before_posedge_pre_NBA"
+  },
+  "rtl_sources": [
+    {
+      "historical_manifest_path": "sources/axi-stream-s2/xlnxstream_2018_3_bug_s2.v",
+      "path": "designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v",
+      "sha256": "152d3ac4fc8f179efd16fbde4f72a7cda8c25a487ce04dc22211b238fa16a715",
+      "bytes": 7181
+    }
+  ],
+  "artifacts": {
+    "design.mlir": {
+      "path": "designs/axi-stream-s2/mlir/s2/buggy/design.mlir",
+      "sha256": "9288c5dc9ff4f1ed5190509cc36da4e9923d553056c7bc817a6ae2688c3541bf",
+      "bytes": 8572
+    },
+    "design.generic.mlir": {
+      "path": "designs/axi-stream-s2/mlir/s2/buggy/design.generic.mlir",
+      "sha256": "ee3abe54ea1c6065566e22df69e9f1b0f0f53baae2e015d04b60ad3f87a936ac",
+      "bytes": 6603
+    },
+    "design.debug.generic.mlir": {
+      "path": "designs/axi-stream-s2/mlir/s2/buggy/design.debug.generic.mlir",
+      "sha256": "2e15ab53d5c7c287191828321577adb89755c8d8980eb3265517b79e8b82ecdb",
+      "bytes": 11418
+    },
+    "source-map.json": {
+      "path": "designs/axi-stream-s2/mlir/s2/buggy/source-map.json",
+      "sha256": "5148fd0f92579658771c1d0582ff216809180a11b061d514b63d7f02f7be7a3e",
+      "bytes": 26171
+    }
+  },
+  "tool_versions": {
+    "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "pyk": "7.1.323",
+    "circt-verilog": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\nslang version 10.0.0+0",
+    "circt-opt": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0",
+    "kompile": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "krun": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "kast": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026"
+  },
+  "generation": {
+    "working_directory": "external-defects/",
+    "commands_policy": "以下 argv 从历史 commands.jsonl 的前三条实际成功命令提取，保持参数及输入文件顺序，仅将工具名、RTL 和输出路径重定位为可移植表示；并非声称这些新路径已经重新执行。工具通过 PATH 解析。",
+    "commands": [
+      {
+        "stage": "frontend",
+        "historical_command_line": 1,
+        "argv": [
+          "circt-verilog",
+          "--ir-hw",
+          "--top=xlnxstream_2018_3",
+          "--mlir-print-debuginfo",
+          "-GC_M_AXIS_TDATA_WIDTH=32",
+          "-GC_M_START_COUNT=32",
+          "designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v",
+          "-o",
+          "designs/axi-stream-s2/mlir/s2/buggy/design.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "debug.generic",
+        "historical_command_line": 2,
+        "argv": [
+          "circt-opt",
+          "designs/axi-stream-s2/mlir/s2/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "--mlir-print-debuginfo",
+          "-o",
+          "designs/axi-stream-s2/mlir/s2/buggy/design.debug.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "generic",
+        "historical_command_line": 3,
+        "argv": [
+          "circt-opt",
+          "designs/axi-stream-s2/mlir/s2/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "-o",
+          "designs/axi-stream-s2/mlir/s2/buggy/design.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      }
+    ],
+    "source_map": {
+      "generator": "runner.py:source_map",
+      "historical_runner_sha256": "8f8cc331a02fb340772a8f0abd7de22494f5cbc1aad10f2323c3aa7e19d2cef8",
+      "mapping_kind": "same_ir_printed_with_and_without_locations"
+    }
+  },
+  "location_policy": "MLIR 和 source-map.json 按历史运行字节原样保存，保留旧 loc（包含旧目录或绝对路径）。通过 rtl_sources 的历史路径、当前路径、SHA256 及 layout.json 对应源文件。迁移路径后重新生成时 loc 和文件哈希可能变化；不要为美化路径修改本基线或旧 source-map。"
+}

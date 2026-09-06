@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "case_count": 13,
+  "final_state_count": 26,
+  "all_connection_unchanged": true,
+  "all_terminal": true,
+  "duplicate_map_keys_detected": false,
+  "input_reference_artifact_count": 67,
+  "inputs_before_after_equal": true,
+  "all_current_input_reference_hashes_match": true,
+  "source_input_manifests": {
+    "inputs-before.json": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/inputs-before.json",
+      "bytes": 11591,
+      "sha256": "00e89e45e2761354b5225bfaa3b319b211f95e77a52f07fc23365fa569c25928"
+    },
+    "inputs-after.json": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/inputs-after.json",
+      "bytes": 11591,
+      "sha256": "00e89e45e2761354b5225bfaa3b319b211f95e77a52f07fc23365fa569c25928"
+    }
+  },
+  "audit": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/final-state-audit.json",
+    "bytes": 23544,
+    "sha256": "f590a09ca14cc88e5607d9c8df9599b3372b59bc8ecc80942d9e3b99a54ddc2c"
+  },
+  "execution_command": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/audit-final.command.json",
+    "bytes": 947,
+    "sha256": "6c937b3a5284ab77ce31b578ef527cd8ee7edcf0d225ba963335f361064d3fa2"
+  },
+  "evaluation_result": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_evaluate_operation.result.json",
+    "bytes": 62,
+    "sha256": "e6bcbf7befd3c92a3bc825336c7cd552a52d92a5b2fc36382a142834f8df8cb7"
+  },
+  "vcd_diff_result": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/indexed-read/operation/test_diffvcd_operatrion.result.json",
+    "bytes": 62,
+    "sha256": "c1d82c4e5cad185478ff109f8b4a6f90e2237dbbf3c07820ab4e9661e7fe8df5"
+  },
+  "limit": "仅每组最后两个轮换状态共26份；没有逐次状态记录，不能据此声称所有中间评估均保持connection。完整正式实验快照由另一份审计记录。"
+}

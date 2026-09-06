@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.0",
+  "kframework_version": "7.1.323",
+  "api_sha256": "40e6b398d06f6dff1ecdba85819330b54006a0d46aedaa0474613ac451a211cd",
+  "simulator_sha256": "7ad752d4c2137fc6fdf113bbbc6b2d73841929fdd10fa7694ffe1d01434cecc3",
+  "status": "pass",
+  "stage": "complete",
+  "top_module": "xlnxdemo",
+  "input_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-lite-s1/mlir/s1r/buggy/design.generic.mlir",
+  "inputs_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s1r/test_data.json",
+  "vcd_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s1r/buggy/kimulator/test.vcd",
+  "work_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s1r/buggy/kimulator/simulation",
+  "evaluations_per_input": 2,
+  "events_completed": 19,
+  "simulation_calls": 38,
+  "simulation_calls_attempted": 38,
+  "timings": {
+    "compile": 0.04979833300012615,
+    "preprocess": 0.2705491249998886,
+    "setup": 0.2522670839998682,
+    "execution": 14.115740917999574,
+    "read_ports": 0.6163551260015083,
+    "state_export": 1.2589667909987838,
+    "total": 16.818837750000057
+  },
+  "error": null,
+  "input_sha256": "958a0204f4e2839733acd18dbcbada43ed7fcf1caff816f2a4426d60c147507a",
+  "inputs_sha256": "6fab5864e9eda70da101537b31bca4cd9033cb083edbb28e8c5cf312b65604f7",
+  "ports": {
+    "inputs": [
+      {
+        "name": "S_AXI_ACLK",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_ARESETN",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_AWADDR",
+        "width": 7
+      },
+      {
+        "name": "S_AXI_AWPROT",
+        "width": 3
+      },
+      {
+        "name": "S_AXI_AWVALID",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_WDATA",
+        "width": 32
+      },
+      {
+        "name": "S_AXI_WSTRB",
+        "width": 4
+      },
+      {
+        "name": "S_AXI_WVALID",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_BREADY",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_ARADDR",
+        "width": 7
+      },
+      {
+        "name": "S_AXI_ARPROT",
+        "width": 3
+      },
+      {
+        "name": "S_AXI_ARVALID",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_RREADY",
+        "width": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "S_AXI_AWREADY",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_WREADY",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_BRESP",
+        "width": 2
+      },
+      {
+        "name": "S_AXI_BVALID",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_ARREADY",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_RDATA",
+        "width": 32
+      },
+      {
+        "name": "S_AXI_RRESP",
+        "width": 2
+      },
+      {
+        "name": "S_AXI_RVALID",
+        "width": 1
+      }
+    ]
+  },
+  "timescale": "1ns",
+  "events_total": 19,
+  "definition_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+  "definition_sha256": "39aa528a47f2e9e972c62e2c0be9770a9e6963b45e5b86ce09e9d44c2f434a31",
+  "parser": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/parser",
+  "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+  "event_index": 18,
+  "event_time": 18,
+  "evaluation": 2,
+  "vcd_sha256": "05938b96fed26ea13bee93157cdd7cc990e401c4dd7d5d498127292868eb5a12",
+  "last_state": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/s1r/buggy/kimulator/simulation/last-state.kore",
+  "last_state_sha256": "65f631032281449c33cc868e8bd25306b3a98b692bc6e9d4a9523dc9950110d1"
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/previous-depth-942.kore",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros",
+      "--depth",
+      "1"
+    ],
+    "returncode": 0,
+    "output_sha256": "9b08a7564a07c63c2aa7f8d998ee6a0bf924cea0cb6b5f90cf6b2c9459c62787",
+    "connection": [
+      "comb.mux",
+      "axis_fifo/%57",
+      "axis_fifo/%65",
+      "axis_fifo/%70"
+    ],
+    "matches_contiguous_depth943": false
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/previous-depth-942.kore",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros",
+      "--depth",
+      "1"
+    ],
+    "returncode": 0,
+    "output_sha256": "9b08a7564a07c63c2aa7f8d998ee6a0bf924cea0cb6b5f90cf6b2c9459c62787",
+    "connection": [
+      "comb.mux",
+      "axis_fifo/%57",
+      "axis_fifo/%65",
+      "axis_fifo/%70"
+    ],
+    "matches_contiguous_depth943": false
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/previous-depth-942.kore",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros",
+      "--depth",
+      "1"
+    ],
+    "returncode": 0,
+    "output_sha256": "9b08a7564a07c63c2aa7f8d998ee6a0bf924cea0cb6b5f90cf6b2c9459c62787",
+    "connection": [
+      "comb.mux",
+      "axis_fifo/%57",
+      "axis_fifo/%65",
+      "axis_fifo/%70"
+    ],
+    "matches_contiguous_depth943": false
+  }
+]

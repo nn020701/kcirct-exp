@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "command": [
+    "make",
+    "run",
+    "PYTHON=.venv/bin/python",
+    "KIMULATOR=../circt-semantics/.venv/bin/kcirct",
+    "CASES=s2 d13 s3 s1b s1r d8 d12 d11 d4 c4",
+    "ARGS=--k-bin /Users/bytedance/.nix-profile/bin --run-id vcd-complete-01"
+  ],
+  "host_exit_code": 2,
+  "runner_exit_code": 1,
+  "evidence": "exec session 12899 final exit_code=2；make输出 make: *** [run] Error 1。",
+  "status": "completed_with_failures"
+}

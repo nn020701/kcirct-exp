@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "scope": "只读检查实际安装 LLVM backend 的 proof-output 写入、K 堆分配与现成最终输出选项。未新增仿真、动态探针、源码或运行库修改。",
+  "source_identity_reference": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/findings.json",
+    "sha256": "e5c3728c304ebb06f2c0d00e79a3aee59723f21fb4db151301dc9a4562c027ce",
+    "bytes": 25083
+  },
+  "libraries": {
+    "libutil.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libutil.a",
+      "sha256": "77a1a49a369254a495b528bdc392cf5a3fa83ff90b8cacc55140100a55c0a0f1",
+      "bytes": 10658464
+    },
+    "libarithmetic.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libarithmetic.a",
+      "sha256": "c48ef3a954771d5b981a7dd8b39f1fb2736b54825353fbcab963842028b39189",
+      "bytes": 2706960
+    },
+    "liballoc.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/liballoc.a",
+      "sha256": "e1cd571e993f3b21bebb36b41a6222123468d57c8bd3ee88ae1cda5360c4da19",
+      "bytes": 165768
+    },
+    "libcollections.a": {
+      "path": "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libcollections.a",
+      "sha256": "cac99c213c8548f913916f55fb35fb4949b031fc4c2e84883dec15cd944d8051",
+      "bytes": 11139304
+    }
+  },
+  "sources": {
+    "runtime/util/ConfigurationSerializer.cpp": {
+      "original": {
+        "path": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/util/ConfigurationSerializer.cpp",
+        "sha256": "d5f9b8fe0f4f32c5765f6f1103d5bdf4cdd6471362d074513249b55b39eb198d",
+        "bytes": 25477
+      },
+      "copy": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/runtime/util/ConfigurationSerializer.cpp",
+        "sha256": "d5f9b8fe0f4f32c5765f6f1103d5bdf4cdd6471362d074513249b55b39eb198d",
+        "bytes": 25477
+      }
+    },
+    "runtime/util/finish_rewriting.cpp": {
+      "original": {
+        "path": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/util/finish_rewriting.cpp",
+        "sha256": "d71ac5dbdd717b3c88b4db7c03807a9633d54a3e84bc4b07500e63dd0f60445d",
+        "bytes": 2203
+      },
+      "copy": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/runtime/util/finish_rewriting.cpp",
+        "sha256": "d71ac5dbdd717b3c88b4db7c03807a9633d54a3e84bc4b07500e63dd0f60445d",
+        "bytes": 2203
+      }
+    },
+    "include/runtime/proof_trace_writer.h": {
+      "original": {
+        "path": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/include/runtime/proof_trace_writer.h",
+        "sha256": "5af1e2f7eaa094e770dba39018fc8af105e218ad076464b6965168766abf2de6",
+        "bytes": 12691
+      },
+      "copy": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/include/runtime/proof_trace_writer.h",
+        "sha256": "5af1e2f7eaa094e770dba39018fc8af105e218ad076464b6965168766abf2de6",
+        "bytes": 12691
+      }
+    },
+    "runtime/main/main.ll": {
+      "original": {
+        "path": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/main/main.ll",
+        "sha256": "454d9c3771d9912b20ea4e8c9296c0fdea0e51e4700bacae54465edc59910178",
+        "bytes": 3870
+      },
+      "copy": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/runtime/main/main.ll",
+        "sha256": "454d9c3771d9912b20ea4e8c9296c0fdea0e51e4700bacae54465edc59910178",
+        "bytes": 3870
+      }
+    },
+    "runtime/arithmetic/int.cpp": {
+      "original": {
+        "path": "/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/arithmetic/int.cpp",
+        "sha256": "f8fa3d80780d67647fb204051e925d6f3c4312ae3a7ca6af71abf82a865dab14",
+        "bytes": 11200
+      },
+      "copy": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/sources/llvm/runtime/arithmetic/int.cpp",
+        "sha256": "f8fa3d80780d67647fb204051e925d6f3c4312ae3a7ca6af71abf82a865dab14",
+        "bytes": 11200
+      }
+    }
+  },
+  "commands": [
+    {
+      "argv": [
+        "llvm-nm",
+        "--demangle",
+        "--print-file-name",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libutil.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-symbols.stdout.txt",
+        "sha256": "730458c1db4cc076f66cb88d03de61eca30ec1ab4741a7ffed17cc8afdc6645e",
+        "bytes": 441458
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-symbols.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "llvm-dwarfdump",
+        "--name=serialize_term_to_proof_trace",
+        "--name=serialize_configuration_to_proof_trace_internal",
+        "--name=finish_rewriting",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libutil.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-dwarf.stdout.txt",
+        "sha256": "6c49ebe463628efc2588309ac25efc99ac8d279d962068c60a2c2acbcd8aede2",
+        "bytes": 3132
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-dwarf.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "llvm-objdump",
+        "--disassemble",
+        "--no-show-raw-insn",
+        "--disassemble-symbols=_serialize_term_to_proof_trace",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libutil.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-term-assembly.stdout.txt",
+        "sha256": "0f8889d768852c12cd98ee6ade3c9c0e62c6fa7729b19771e9e5a0922502600a",
+        "bytes": 2777
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-term-assembly.stderr.txt",
+        "sha256": "65e363bca5822e27cbe8b3646b59471ec484e483704c3a4844e7d2fd87637a8a",
+        "bytes": 786
+      }
+    },
+    {
+      "argv": [
+        "llvm-objdump",
+        "--reloc",
+        "/nix/store/0wdri3977ahffnn0372yb2vkd67si5nk-llvm-backend-0.1.139/lib/kllvm/libutil.a"
+      ],
+      "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp",
+      "exit_code": 0,
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-util-relocations.stdout.txt",
+        "sha256": "1c5bc514ffdf64a3d7df3417b88bebd288d3199c1bfcbce6d2c6acfba0e44895",
+        "bytes": 3662758
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-util-relocations.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ],
+  "binary_confirmation": {
+    "archive_member": "libutil.a(ConfigurationSerializer.cpp.o)",
+    "symbol": "_serialize_term_to_proof_trace",
+    "symbol_address": "0x3a50",
+    "dwarf_source_line": 752,
+    "relocations": {
+      "0x3a88": "_kore_alloc",
+      "0x3a98": "_store_symbol_children",
+      "0x3adc": "_visit_children_for_serialize_to_proof_trace"
+    },
+    "note": "以上地址来自该 archive member 的反汇编及重定位；源码 kore_alloc 并未被当前已安装静态库优化消除。"
+  },
+  "established_facts": [
+    {
+      "claim": "proof event 的 term 序列化每次显式 kore_alloc 一个临时 block，再 store_symbol_children 并遍历；额外分配是源码确认事实。",
+      "source": "runtime/util/ConfigurationSerializer.cpp",
+      "lines": [
+        751,
+        783
+      ]
+    },
+    {
+      "claim": "hook result、argument、rule variable、rewrite post 都调用该 term 序列化路径。",
+      "source": "include/runtime/proof_trace_writer.h",
+      "lines": [
+        109,
+        135
+      ]
+    },
+    {
+      "claim": "kore_alloc 与 kore_alloc_token 都从 youngspace 分配，因而额外 wrapper 会改变与 token 共用的 arena 分配序列。不能仅凭此断言发生了某次 GC。",
+      "source": "runtime/lto/alloc.cpp",
+      "lines": [
+        59,
+        66
+      ]
+    },
+    {
+      "claim": "非空 MInt 的 proof 序列化还调用 hook_MINT_import；这是额外转换路径，其 GMP 临时值和 move_int 行为不能当成零分配。",
+      "source": "runtime/util/ConfigurationSerializer.cpp",
+      "lines": [
+        402,
+        409
+      ]
+    },
+    {
+      "claim": "检查到的 proof Map/List 序列化遍历当前容器，term/config 递归沿当前子节点写入；这一调用链未发现按 block 指针缓存过去内容。此有限审查不能排除所有其他缓存或解码器问题。",
+      "source": "runtime/util/ConfigurationSerializer.cpp",
+      "lines": [
+        160,
+        182,
+        275,
+        296,
+        534,
+        574
+      ]
+    },
+    {
+      "claim": "普通 binary serializer 的 variable name 表与 symbol sort 表存在，但前者是变量命名状态，后者是 symbol->sort 缓存；它们不是上述 proof 容器内容缓存。",
+      "source": "runtime/util/ConfigurationSerializer.cpp",
+      "lines": [
+        32,
+        52,
+        415,
+        433
+      ]
+    },
+    {
+      "claim": "标准 runtime main 接受单个输出文件，并识别 statistics/binary-output/proof-output/proof-chunk-size。finish_rewriting 在 proof_output 为真时不走普通 pretty/binary 输出分支；同时加 binary-output 不会再产生第二份最终 Kore。未发现现成的同进程双输出 CLI 开关。",
+      "source": "runtime/main/main.ll + runtime/util/finish_rewriting.cpp",
+      "lines": [
+        19,
+        28,
+        99,
+        124,
+        61,
+        69
+      ]
+    }
+  ],
+  "limits": [
+    "额外 kore_alloc 确定改变分配序列；它是否通过 token 地址复用导致本次 can_mutate 误判，尚无动态地址和 GC 证据。",
+    "本次只检查所列实际源码和静态库，不把“所查调用链未发现 pointer 内容缓存”扩大为排除整个系统所有缓存。",
+    "没有执行调试器或同进程额外输出方案；没有新增运行库探针。",
+    "proof-hint 终态与普通模式不同，应保留为观测差异；不能因 hint 连接正确就抹除普通模式已保存的真实坏状态。"
+  ],
+  "hypothesis_reference": "findings.json#/hypothesis",
+  "excerpts": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/runtime/proof-source-excerpts.txt",
+    "sha256": "c1dff2ebab74930cd4412fecee5a6e1ee5a602644aad4683933a7f018f413b11",
+    "bytes": 18656
+  }
+}

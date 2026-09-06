@@ -1,0 +1,47 @@
+[
+  {
+    "name": "axis_frame_len",
+    "states": [
+      {
+        "name": "clk",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "rst",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "monitor_axis_tkeep",
+        "numBits": 8,
+        "type": "input"
+      },
+      {
+        "name": "monitor_axis_tvalid",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "monitor_axis_tready",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "monitor_axis_tlast",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "frame_len",
+        "numBits": 16,
+        "type": "output"
+      },
+      {
+        "name": "frame_len_valid",
+        "numBits": 1,
+        "type": "output"
+      }
+    ]
+  }
+]

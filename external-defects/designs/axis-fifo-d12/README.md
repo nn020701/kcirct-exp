@@ -18,4 +18,21 @@ ADDR_WIDTH=2、DATA_WIDTH=8、FRAME_FIFO=1、DROP_WHEN_FULL=1。CSV 只含 8 个
 
 [来源目录](../../catalog/upstream.json) 固定仓库 commit 和归档 SHA256。上游文件保留原许可头；此目录调整不增加或替换许可。manifest 同时校验源文件和 layout 的 SHA256。
 
+## MLIR 测试基线
+
+以下文件纳入版本管理，对应本设计的正常组与缺陷组。三种形式的用途及刷新方式见[通用约定](../../README.md#mlir-测试基线)。
+
+| 变体 / 对照组 | 可读 MLIR | K 输入 | 调试 MLIR | 源码映射 | 生成来源 |
+|---|---|---|---|---|---|
+| `d12` / 正常 | [design.mlir](mlir/d12/golden/design.mlir) | [generic](mlir/d12/golden/design.generic.mlir) | [debug generic](mlir/d12/golden/design.debug.generic.mlir) | [source-map](mlir/d12/golden/source-map.json) | [provenance](mlir/d12/golden/provenance.json) |
+| `d12` / 缺陷 | [design.mlir](mlir/d12/buggy/design.mlir) | [generic](mlir/d12/buggy/design.generic.mlir) | [debug generic](mlir/d12/buggy/design.debug.generic.mlir) | [source-map](mlir/d12/buggy/source-map.json) | [provenance](mlir/d12/buggy/provenance.json) |
+
+生成来源记录该组实际使用的 RTL、参数、工具版本和来源运行状态。历史 location 原样保留，按来源记录与 [layout.json](provenance/layout.json) 回查当前源码。
+
 本页说明设计与输入契约，执行结果见实验根目录的 `results/`，历史完整运行留存在 `.runs/`。
+
+## 外部组件输入事件
+
+- [d12.events.json](testbench/d12.events.json)：对应原 CSV 的完整输入事件，只含时间与输入，不包含 oracle。
+
+这些事件可直接传给 `kcirct simulate --inputs`，与上面的持久化 generic MLIR 配套使用。每个事件固定同一输入执行两次后 dump；全部 low/high VCD 对照流程见 [用户流程](../../USER_WORKFLOW.md)。

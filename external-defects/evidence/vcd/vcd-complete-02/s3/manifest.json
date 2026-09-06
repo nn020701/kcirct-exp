@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "source_case_id": "S3",
+  "project_id": "axis-adapter-s3",
+  "variant_id": "s3",
+  "top": "axis_adapter",
+  "golden_sources": [
+    "designs/axis-adapter-s3/original/axis_adapter.v"
+  ],
+  "bug_original": "designs/axis-adapter-s3/original/axis_adapter.v",
+  "bug_source": "designs/axis-adapter-s3/variants/s3/axis_adapter_bug_s3.v",
+  "csv": "designs/axis-adapter-s3/testbench/tb.csv",
+  "inputs": [
+    {
+      "name": "clk",
+      "width": 1
+    },
+    {
+      "name": "rst",
+      "width": 1
+    },
+    {
+      "name": "input_axis_tdata",
+      "width": 64
+    },
+    {
+      "name": "input_axis_tkeep",
+      "width": 8
+    },
+    {
+      "name": "input_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "input_axis_tlast",
+      "width": 1
+    },
+    {
+      "name": "input_axis_tuser",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tready",
+      "width": 1
+    }
+  ],
+  "outputs": [
+    {
+      "name": "input_axis_tready",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tdata",
+      "width": 8
+    },
+    {
+      "name": "output_axis_tkeep",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tlast",
+      "width": 1
+    },
+    {
+      "name": "output_axis_tuser",
+      "width": 1
+    }
+  ],
+  "clock": "clk",
+  "reset": {
+    "signal": "rst",
+    "active": 1
+  },
+  "parameters": {
+    "INPUT_DATA_WIDTH": 64,
+    "INPUT_KEEP_WIDTH": 8,
+    "OUTPUT_DATA_WIDTH": 8,
+    "OUTPUT_KEEP_WIDTH": 1
+  },
+  "effective_parameters": {
+    "INPUT_DATA_WIDTH": 64,
+    "INPUT_KEEP_WIDTH": 8,
+    "OUTPUT_DATA_WIDTH": 8,
+    "OUTPUT_KEEP_WIDTH": 1
+  },
+  "initialization": {
+    "mode": "rtl_initial_plus_two_state_zero",
+    "uninitialized_register_value": 0,
+    "four_state_equivalence_claimed": false,
+    "evidence": [
+      "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。"
+    ]
+  },
+  "sample_phase": "low_before_posedge_pre_NBA",
+  "oracle_outputs": [
+    "input_axis_tready",
+    "output_axis_tdata",
+    "output_axis_tkeep",
+    "output_axis_tvalid",
+    "output_axis_tlast",
+    "output_axis_tuser"
+  ],
+  "masks": [],
+  "csv_normalization": {
+    "strip_whitespace": true,
+    "allow_one_trailing_empty_field": false,
+    "reason": "仅去除单元格周围空白，保留并检查完整列集合。"
+  },
+  "samples": 13,
+  "timeout_s": 120,
+  "frontend_args": [],
+  "source_hashes": {
+    "designs/axis-adapter-s3/original/axis_adapter.v": "db84e94006678799c0cc4a7e8b51fe57e2ff94351fa3243e021efb8457c523dc",
+    "designs/axis-adapter-s3/variants/s3/axis_adapter_bug_s3.v": "8651350d4db3ec2c29589d0ba6a1b2ef1cab1034efbdc6a5ea4f3ca867dff775",
+    "designs/axis-adapter-s3/provenance/origin/README.md": "74688fa492514bec229708a53688f8ab047f54d0716570412806a0ad712d08a4",
+    "designs/axis-adapter-s3/provenance/project.toml": "bd0ec3d94246bcbf2af21ded1126731c57b07eea69bb65a6227e2fd290686390",
+    "designs/axis-adapter-s3/testbench/tb.csv": "dfa54134e3c784597e6aa3160fe6034e67020e7050050b1f5b8df91f8d74c270",
+    "designs/axis-adapter-s3/testbench/tb.v": "29736d2a017a0fe181274747379e993246aab12e9347e33dd89cdecd9aa87d75",
+    "designs/axis-adapter-s3/provenance/to_btor2.ys": "a155eab9627c3997f38ac62e2250071ffb6691c7e46b6e5832ffb34ac7fc6e6d",
+    "designs/axis-adapter-s3/provenance/layout.json": "aacdd44cecc4d93dde7ca4dd0c2a1f1087b985913ad271aff2a2c65403fc739f"
+  },
+  "upstream": {
+    "repository": "https://github.com/ekiwi/rtl-repair",
+    "commit": "71e1afc0b9a2327d008b46acd415cf3f0343a938",
+    "project_path": "benchmarks/fpga-debugging/axis-adapter-s3",
+    "archive": "rtl-repair-fpga-debugging-71e1afc.tar.gz",
+    "archive_sha256": "3aebd94c34aaf9cced849541635ebc66145c7ba44fc1227f3f4e8623073ddc0a",
+    "origin_repository": "https://github.com/efeslab/hardware-bugbase",
+    "origin_commit": "7702e478f4ffdca477273d5a395992ecf006d70f",
+    "origin_readme": "designs/axis-adapter-s3/provenance/origin/README.md",
+    "origin_archive_sha256": "b5125ec4a3d93db138e5642285343d2d644e89a0b5bd156701b2c4f7bcb2ae5d"
+  },
+  "project_toml": "designs/axis-adapter-s3/provenance/project.toml",
+  "selected_testbench": {
+    "name": "csv",
+    "table": "tb.csv"
+  },
+  "native_testbench": {
+    "adapted_exists": true,
+    "path": "designs/axis-adapter-s3/testbench/tb.v",
+    "sha256": "29736d2a017a0fe181274747379e993246aab12e9347e33dd89cdecd9aa87d75"
+  },
+  "ports_without_oracle": [],
+  "unsupported_reasons": [],
+  "notes": [
+    "TB 显式传入 INPUT_DATA_WIDTH=64、INPUT_KEEP_WIDTH=8、OUTPUT_DATA_WIDTH=8、OUTPUT_KEEP_WIDTH=1，与 DUT 默认一致。",
+    "原 TB test_axis_adapter_64_8 内部 #1 时钟，posedge Active 输出 output.txt，13 条采样；输入经 NBA 更新。",
+    "原 TB 在 last/ready/valid 且 data!=0xcd 时打印错误；进程退出码不能单独判断 oracle。"
+  ],
+  "layout_file": "designs/axis-adapter-s3/provenance/layout.json"
+}

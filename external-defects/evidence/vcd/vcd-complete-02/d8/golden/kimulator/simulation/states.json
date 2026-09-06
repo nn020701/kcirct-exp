@@ -1,0 +1,434 @@
+[
+  {
+    "event_index": 0,
+    "evaluation": 1,
+    "time": 0,
+    "path": "states/event-0000.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "e93bfd2dcb70831029952262c664be441b8ac447173102fb690e02a4644cebae"
+  },
+  {
+    "event_index": 0,
+    "evaluation": 2,
+    "time": 0,
+    "path": "states/event-0000.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "502f9241fa60ef8a8cfa4990a9d57a1e9f4edff662c3db6045d62b19a9602539"
+  },
+  {
+    "event_index": 1,
+    "evaluation": 1,
+    "time": 1,
+    "path": "states/event-0001.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "1db09307046cf157c4d548731eddeed02fa3f5e43238dca12b3a90f08695439f"
+  },
+  {
+    "event_index": 1,
+    "evaluation": 2,
+    "time": 1,
+    "path": "states/event-0001.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "fdf5dba638dd7f7fbe7ad734559170d1d29271bd532cf3e051864f18849a0a85"
+  },
+  {
+    "event_index": 2,
+    "evaluation": 1,
+    "time": 2,
+    "path": "states/event-0002.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "ed290914566c70032b865731ac139a0eb74dba3e618c34dcd096b80f4e79cc12"
+  },
+  {
+    "event_index": 2,
+    "evaluation": 2,
+    "time": 2,
+    "path": "states/event-0002.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "3935395e851a5a112f83e0f3ea7d2fcc9a38ab3c24623a175090280037364376"
+  },
+  {
+    "event_index": 3,
+    "evaluation": 1,
+    "time": 3,
+    "path": "states/event-0003.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "451620fcccd578413e61b9c060e51dbf1e82fb87541b2bde7cd17e0afd9bbfc5"
+  },
+  {
+    "event_index": 3,
+    "evaluation": 2,
+    "time": 3,
+    "path": "states/event-0003.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "887256a6aa5117259bd4c4082aa6024c8677cf58728fdde0bfd311c0966fe7cd"
+  },
+  {
+    "event_index": 4,
+    "evaluation": 1,
+    "time": 4,
+    "path": "states/event-0004.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "481ec130d5da129f39e8e40402984972be37649123df777778ce27174c7e2ed6"
+  },
+  {
+    "event_index": 4,
+    "evaluation": 2,
+    "time": 4,
+    "path": "states/event-0004.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "71aef33476345d2ac17d6a28b3e4c11f8170719c7d6de17145d6d87abfc65c68"
+  },
+  {
+    "event_index": 5,
+    "evaluation": 1,
+    "time": 5,
+    "path": "states/event-0005.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "40d4cba4faba01ca349ce0c666b6e1c63c7384cd3bf1fd822e9889edaf39fbb6"
+  },
+  {
+    "event_index": 5,
+    "evaluation": 2,
+    "time": 5,
+    "path": "states/event-0005.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "52de28de56096d58ae7cbdebfe478a5b172a3d3532952a1648519266f6541b40"
+  },
+  {
+    "event_index": 6,
+    "evaluation": 1,
+    "time": 6,
+    "path": "states/event-0006.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "c7361cf2acffcb78c5678a11a712a9e5960af1d05303759aef9690c0dbbb7d67"
+  },
+  {
+    "event_index": 6,
+    "evaluation": 2,
+    "time": 6,
+    "path": "states/event-0006.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "a98155c477957210f4605851398f35e3f814584a7a8062274e3028392d68c7ba"
+  },
+  {
+    "event_index": 7,
+    "evaluation": 1,
+    "time": 7,
+    "path": "states/event-0007.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "bcf51a531b7fe998d6d923c8ed67bcf5e148ec061e48d58946d7cbcd4e9c54a3"
+  },
+  {
+    "event_index": 7,
+    "evaluation": 2,
+    "time": 7,
+    "path": "states/event-0007.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "6329070f8933ae6f2b877a629658605a96d1e9ec28233059e13790fd187a27de"
+  },
+  {
+    "event_index": 8,
+    "evaluation": 1,
+    "time": 8,
+    "path": "states/event-0008.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "18430ed9fb949edf82907c8990fcf1032d6b1578d56b4bd3e61670e170b8c7cb"
+  },
+  {
+    "event_index": 8,
+    "evaluation": 2,
+    "time": 8,
+    "path": "states/event-0008.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "e68177f4f4687b4d10618442cb54be705c14a7bae323709739d50c6cc9b2c184"
+  },
+  {
+    "event_index": 9,
+    "evaluation": 1,
+    "time": 9,
+    "path": "states/event-0009.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "702e9489abca53a9b13e437d09515a2ea0cce96f6fdad50c6feb22f24743d2e9"
+  },
+  {
+    "event_index": 9,
+    "evaluation": 2,
+    "time": 9,
+    "path": "states/event-0009.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "070a2b2a03a02727ba8ce96cc14339d22bdb741fb9d97b0be27f5d474dd1d425"
+  },
+  {
+    "event_index": 10,
+    "evaluation": 1,
+    "time": 10,
+    "path": "states/event-0010.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "7952b82ca15f6b70cfd18868ea74b52714a1e9da2afe0426b2a2b66690537f7d"
+  },
+  {
+    "event_index": 10,
+    "evaluation": 2,
+    "time": 10,
+    "path": "states/event-0010.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "25bfdfb9d593916789d642cec53bf84e82ede701365977636b01ec0360c4be2a"
+  },
+  {
+    "event_index": 11,
+    "evaluation": 1,
+    "time": 11,
+    "path": "states/event-0011.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "1cd23de072a5577af6fc879cdad699a0b66946c365aa2e5e7f2729e0787214d0"
+  },
+  {
+    "event_index": 11,
+    "evaluation": 2,
+    "time": 11,
+    "path": "states/event-0011.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "c258690bb866acd9c26ea1e78645156a73c83ff11d42ce8ced6e085b7c8e90f6"
+  },
+  {
+    "event_index": 12,
+    "evaluation": 1,
+    "time": 12,
+    "path": "states/event-0012.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "93c7739e367ca8df0e4e9bb556846aa4b091c4226b6f54ce5407f613dce3c43e"
+  },
+  {
+    "event_index": 12,
+    "evaluation": 2,
+    "time": 12,
+    "path": "states/event-0012.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "a1a17893181172689bc77cb42c014a16f81a6df0d98b8e6d15d519c3912e6a1f"
+  },
+  {
+    "event_index": 13,
+    "evaluation": 1,
+    "time": 13,
+    "path": "states/event-0013.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "f6bb0e24573a9f485903d44a699611ef83468fae19520a6399a47c8bef9d7ee3"
+  },
+  {
+    "event_index": 13,
+    "evaluation": 2,
+    "time": 13,
+    "path": "states/event-0013.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "0d1547ca5ec6a2994d8ab44ac5d1c841d6a34a2e19fc817128754d51a1e2700a"
+  },
+  {
+    "event_index": 14,
+    "evaluation": 1,
+    "time": 14,
+    "path": "states/event-0014.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "b0e7afb1bf1e213cc33de0d1bd1006db77c1cf250c9f159af14af3eea8b61090"
+  },
+  {
+    "event_index": 14,
+    "evaluation": 2,
+    "time": 14,
+    "path": "states/event-0014.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "7d494498515d5055114f5c119d910f4e8b413b4a1ea05fbf40a7adea5d7fa630"
+  },
+  {
+    "event_index": 15,
+    "evaluation": 1,
+    "time": 15,
+    "path": "states/event-0015.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "0957f144f59128dc2ac7766d0ee1cc039b3e9cde999960be06f581d2de90b820"
+  },
+  {
+    "event_index": 15,
+    "evaluation": 2,
+    "time": 15,
+    "path": "states/event-0015.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "3dd8ad0332d376f63fd6902dbe3b2666ef241491d738108f1c4c83208294f445"
+  },
+  {
+    "event_index": 16,
+    "evaluation": 1,
+    "time": 16,
+    "path": "states/event-0016.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "00c29f4d712935c80f81e27896583b3bd79bb8cf53f3a1ae07f64462647edf41"
+  },
+  {
+    "event_index": 16,
+    "evaluation": 2,
+    "time": 16,
+    "path": "states/event-0016.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "5d0de25595daa95bd1f4b6ea2c619ba2dcddf10851aca29a30c924a6c8a3a2eb"
+  },
+  {
+    "event_index": 17,
+    "evaluation": 1,
+    "time": 17,
+    "path": "states/event-0017.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "16fe685a6d90b605ad113367ed9fd9234734cdf4905c74a18cbb37b1be8d4661"
+  },
+  {
+    "event_index": 17,
+    "evaluation": 2,
+    "time": 17,
+    "path": "states/event-0017.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "c43dae26da0b3961a3e73280d80a7d30d4033e8b563efdd9459ae320cb822d51"
+  },
+  {
+    "event_index": 18,
+    "evaluation": 1,
+    "time": 18,
+    "path": "states/event-0018.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "533a201f68412dcd4b225936b1376732452fbce792584c25c6416dc0cb9f147b"
+  },
+  {
+    "event_index": 18,
+    "evaluation": 2,
+    "time": 18,
+    "path": "states/event-0018.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "7c282931e27d34ed3f743dd24fb0d327ad8e6a8e0d428fdd584e832dcd214c1a"
+  },
+  {
+    "event_index": 19,
+    "evaluation": 1,
+    "time": 19,
+    "path": "states/event-0019.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "f86e2978eadc08862944f8afba26b162a6c25c293287fcdae22ee5e678862944"
+  },
+  {
+    "event_index": 19,
+    "evaluation": 2,
+    "time": 19,
+    "path": "states/event-0019.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "6789dd76d783ade2cd0c505c7f4b46e0add54df56c96b8798f830f90f506e7f2"
+  },
+  {
+    "event_index": 20,
+    "evaluation": 1,
+    "time": 20,
+    "path": "states/event-0020.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "13013e0d19ca9f73a2b6311bf5854976278f307fa47999e8f2ca3f265930f7a8"
+  },
+  {
+    "event_index": 20,
+    "evaluation": 2,
+    "time": 20,
+    "path": "states/event-0020.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "388eb848513bdc02a706d91bbaac07d411ccd086b08ab09c743f11ce1ebc5cb5"
+  },
+  {
+    "event_index": 21,
+    "evaluation": 1,
+    "time": 21,
+    "path": "states/event-0021.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "8309b75bf3f6b1f34ebe5ad540b0c37d193f8587951ec1b5c5e10e64f8f90eb3"
+  },
+  {
+    "event_index": 21,
+    "evaluation": 2,
+    "time": 21,
+    "path": "states/event-0021.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "2c70d2cc8356e62aa9f1fcf6e39d9838303f9dccd3bdbe7c3ec3839a4e55a29f"
+  },
+  {
+    "event_index": 22,
+    "evaluation": 1,
+    "time": 22,
+    "path": "states/event-0022.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "bbcb2c75c9a6cf5d0fbce5bed5720894fa6307e1ca8edc19134ac6266dfb1843"
+  },
+  {
+    "event_index": 22,
+    "evaluation": 2,
+    "time": 22,
+    "path": "states/event-0022.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "fe4f0b61d4372a56af650d5d5c2ef61e0832846185b9f2d6417d408a3d3d01ba"
+  },
+  {
+    "event_index": 23,
+    "evaluation": 1,
+    "time": 23,
+    "path": "states/event-0023.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "45daa22254eab2df6974eda0e398ccceacf5fe5bc4a8489c49dffeb3833ef4b3"
+  },
+  {
+    "event_index": 23,
+    "evaluation": 2,
+    "time": 23,
+    "path": "states/event-0023.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "61447ffcd951a083b287e7be1c24be33cc3f7906668a8f086d62fab509a034fb"
+  },
+  {
+    "event_index": 24,
+    "evaluation": 1,
+    "time": 24,
+    "path": "states/event-0024.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "8cc9c6f55fd94a086a8d861f874967d8c3f9d2246fe84601412378c00af85ada"
+  },
+  {
+    "event_index": 24,
+    "evaluation": 2,
+    "time": 24,
+    "path": "states/event-0024.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "7b68dc92e40f4a093f60c44819867ff134db4a473bc755125c506457009f87e0"
+  },
+  {
+    "event_index": 25,
+    "evaluation": 1,
+    "time": 25,
+    "path": "states/event-0025.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "d444e2b1e73c4b2a7a19f9da7ad87380dc056487dc992f6f826804a27f86d2cd"
+  },
+  {
+    "event_index": 25,
+    "evaluation": 2,
+    "time": 25,
+    "path": "states/event-0025.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "f135d8430dfcb2dc906498a0a1647ff511555dac199024e431cdae9c089ca945"
+  },
+  {
+    "event_index": 26,
+    "evaluation": 1,
+    "time": 26,
+    "path": "states/event-0026.eval-1.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.0.kore",
+    "sha256_uncompressed": "504fcf7bc1f9327af1670f513db0b42df23ff6aada06e02731d3527d1fb0e2f5"
+  },
+  {
+    "event_index": 26,
+    "evaluation": 2,
+    "time": 26,
+    "path": "states/event-0026.eval-2.kore.gz",
+    "source_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d8/golden/kimulator/simulation/simulated.1.kore",
+    "sha256_uncompressed": "8113ba46bd488ab79d0b7b20425c1e9233364f22688ebd5d7ef568b38b2f2f07"
+  }
+]

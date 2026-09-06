@@ -1,0 +1,23 @@
+{
+  "audit_passed": true,
+  "counts": {
+    "cases": 10,
+    "case_statuses": {
+      "pass": 10
+    },
+    "planned_events": 642,
+    "backends": 40,
+    "completed_k_events": 1284,
+    "k_simulation_calls": 2568,
+    "k_command_records": 2628,
+    "decompressed_snapshots_verified": 2568,
+    "full_waveform_pairs_checked": 20,
+    "partial_waveform_pairs_checked": 0,
+    "compared_port_event_values": 18310,
+    "files_hashed_excluding_native_build_cache": 6181,
+    "bytes_hashed": 337104127
+  },
+  "errors": [],
+  "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/indexed-read/vcd-complete-03-audit.json",
+  "sha256": "2ee78408dd3eb595708a3b35fbf5c619a28c3ba9e6bf723998e19723558b422c"
+}

@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "path_base": "external-defects/",
+  "project_id": "axis-switch-d8",
+  "source_case_id": "D8",
+  "variant_id": "d8",
+  "design_variant": "buggy",
+  "source_run": {
+    "run_id": "batch-final-01",
+    "directory": ".runs/batch-final-01/d8/buggy/kimulator",
+    "case_status": "pass",
+    "backend_status": "oracle_mismatch",
+    "backend_stage": null,
+    "formal_result": {
+      "path": "results/cases/d8.json",
+      "sha256": "5e738e532e359ff17aff0b7e672eac0f65cc56ce385d50ea2dd9f75b81af65f5",
+      "bytes": 4122
+    },
+    "archive_records_policy": "records 指向本地历史运行归档，位于被 Git 忽略的 .runs；新 checkout 不自带这些原始记录。其 SHA256 用于校对已有归档。本文件已单独保存生成参数、命令、版本和 RTL 哈希。",
+    "records": {
+      "case_manifest": {
+        "path": ".runs/batch-final-01/d8/manifest.json",
+        "sha256": "17a830297449f8b84a2843e33c969cea3ce7c0237b16ae91f71b75df6b0580bf",
+        "bytes": 5724
+      },
+      "case_result": {
+        "path": ".runs/batch-final-01/d8/result.json",
+        "sha256": "ee2d3403c10758c81178e4374efe80277806d3442aa0d605aa60b2cbe2ce1bf9",
+        "bytes": 32612
+      },
+      "run_results": {
+        "path": ".runs/batch-final-01/results.json",
+        "sha256": "5e11e8e2665942a033a025763240203c834cf96d2386fd7b110b78faf6a5a525",
+        "bytes": 582513
+      },
+      "run_versions": {
+        "path": ".runs/batch-final-01/versions.json",
+        "sha256": "e7a3b31a78be2d70880ad01347a22ade77153e1842cb647afeeef962ea2452b7",
+        "bytes": 8522
+      },
+      "backend_result": {
+        "path": ".runs/batch-final-01/d8/buggy/kimulator/result.json",
+        "sha256": "3e64ca5098078fe4f62033eff041d304c670a012ccb989134994ebfc2220fd66",
+        "bytes": 4036
+      },
+      "commands": {
+        "path": ".runs/batch-final-01/d8/buggy/kimulator/commands.jsonl",
+        "sha256": "2552b657e6ab9fa73882abfa37f7ca2fabaa766903d65cc40d4906070b91802e",
+        "bytes": 23653
+      },
+      "runner": {
+        "path": ".runs/batch-final-01/runner.py",
+        "sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+        "bytes": 30409
+      },
+      "service_patch": {
+        "path": ".runs/batch-final-01/service.patch",
+        "sha256": "54a7053789eebda3e68c824b4f3c8515f5f517602ca09de19a69458bccbb57a9",
+        "bytes": 5833
+      }
+    }
+  },
+  "active_manifest": "manifests/d8.json",
+  "layout": {
+    "path": "designs/axis-switch-d8/provenance/layout.json",
+    "sha256": "51e32a09fb99e8f4ef8ba48c84175f9d5868e028bcf58e122893901f75c58ae9",
+    "bytes": 719
+  },
+  "configuration": {
+    "top": "axis_switch",
+    "parameters": {},
+    "effective_parameters": {
+      "S_COUNT": 4,
+      "M_COUNT": 1,
+      "DATA_WIDTH": 8,
+      "KEEP_ENABLE": 0,
+      "KEEP_WIDTH": 1,
+      "ID_ENABLE": 1,
+      "ID_WIDTH": 8,
+      "DEST_WIDTH": 1,
+      "USER_ENABLE": 1,
+      "USER_WIDTH": 1,
+      "M_BASE": 0,
+      "M_TOP": 1672,
+      "M_CONNECT": 15,
+      "S_REG_TYPE": 0,
+      "M_REG_TYPE": 2,
+      "ARB_TYPE": "ROUND_ROBIN",
+      "LSB_PRIORITY": "HIGH"
+    },
+    "frontend_args": [],
+    "sample_phase": "low_before_posedge_pre_NBA"
+  },
+  "rtl_sources": [
+    {
+      "historical_manifest_path": "sources/axis-switch-d8/arbiter.v",
+      "path": "designs/axis-switch-d8/original/arbiter.v",
+      "sha256": "34c788a483304020477a6f0f26de35a161746a5287bf67266b8ce3bfbb9c1163",
+      "bytes": 4892
+    },
+    {
+      "historical_manifest_path": "sources/axis-switch-d8/axis_register.v",
+      "path": "designs/axis-switch-d8/original/axis_register.v",
+      "sha256": "11a20ad46d841011b21a4222555e8ce0e98d7c6cfdd1d6e35c98f41220aa3ae4",
+      "bytes": 10315
+    },
+    {
+      "historical_manifest_path": "sources/axis-switch-d8/axis_switch_bug_d8.v",
+      "path": "designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v",
+      "sha256": "786685768d9ad85a52bb5ac8c5f857bb2a0070753ba1ed62af0056f20fd7d493",
+      "bytes": 14004
+    },
+    {
+      "historical_manifest_path": "sources/axis-switch-d8/priority_encoder.v",
+      "path": "designs/axis-switch-d8/original/priority_encoder.v",
+      "sha256": "9eee1cc4d6bf910aeffe6c3fa5407763c0529bf2a07996ae67549953286ab2f7",
+      "bytes": 3205
+    }
+  ],
+  "artifacts": {
+    "design.mlir": {
+      "path": "designs/axis-switch-d8/mlir/d8/buggy/design.mlir",
+      "sha256": "2a7b3d259e7806ec345b71eddcf656989a4b5edd1b9308e10b4d73ce4ad7cbb8",
+      "bytes": 39727
+    },
+    "design.generic.mlir": {
+      "path": "designs/axis-switch-d8/mlir/d8/buggy/design.generic.mlir",
+      "sha256": "225ca04ae016f315f6e3c71f6a32e82af731efc1a55da98bdf6287ac13142dd5",
+      "bytes": 31893
+    },
+    "design.debug.generic.mlir": {
+      "path": "designs/axis-switch-d8/mlir/d8/buggy/design.debug.generic.mlir",
+      "sha256": "03639af3369a5e9801966eaac5e07350215f9589b35cff22bad2548be1d109b0",
+      "bytes": 50355
+    },
+    "source-map.json": {
+      "path": "designs/axis-switch-d8/mlir/d8/buggy/source-map.json",
+      "sha256": "26316c9eaddf7451e3b51ca437d85dee95b4858403f2bb678b0d67941dc543f1",
+      "bytes": 97098
+    }
+  },
+  "tool_versions": {
+    "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "pyk": "7.1.323",
+    "circt-verilog": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\nslang version 10.0.0+0",
+    "circt-opt": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0",
+    "kompile": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "krun": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "kast": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026"
+  },
+  "generation": {
+    "working_directory": "external-defects/",
+    "commands_policy": "以下 argv 从历史 commands.jsonl 的前三条实际成功命令提取，保持参数及输入文件顺序，仅将工具名、RTL 和输出路径重定位为可移植表示；并非声称这些新路径已经重新执行。工具通过 PATH 解析。",
+    "commands": [
+      {
+        "stage": "frontend",
+        "historical_command_line": 1,
+        "argv": [
+          "circt-verilog",
+          "--ir-hw",
+          "--top=axis_switch",
+          "--mlir-print-debuginfo",
+          "designs/axis-switch-d8/original/arbiter.v",
+          "designs/axis-switch-d8/original/axis_register.v",
+          "designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v",
+          "designs/axis-switch-d8/original/priority_encoder.v",
+          "-o",
+          "designs/axis-switch-d8/mlir/d8/buggy/design.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "debug.generic",
+        "historical_command_line": 2,
+        "argv": [
+          "circt-opt",
+          "designs/axis-switch-d8/mlir/d8/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "--mlir-print-debuginfo",
+          "-o",
+          "designs/axis-switch-d8/mlir/d8/buggy/design.debug.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "generic",
+        "historical_command_line": 3,
+        "argv": [
+          "circt-opt",
+          "designs/axis-switch-d8/mlir/d8/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "-o",
+          "designs/axis-switch-d8/mlir/d8/buggy/design.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      }
+    ],
+    "source_map": {
+      "generator": "runner.py:source_map",
+      "historical_runner_sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+      "mapping_kind": "same_ir_printed_with_and_without_locations"
+    }
+  },
+  "location_policy": "MLIR 和 source-map.json 按历史运行字节原样保存，保留旧 loc（包含旧目录或绝对路径）。通过 rtl_sources 的历史路径、当前路径、SHA256 及 layout.json 对应源文件。迁移路径后重新生成时 loc 和文件哈希可能变化；不要为美化路径修改本基线或旧 source-map。"
+}

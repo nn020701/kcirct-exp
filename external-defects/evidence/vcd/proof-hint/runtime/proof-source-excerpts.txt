@@ -1,0 +1,498 @@
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/util/ConfigurationSerializer.cpp
+SHA256：d5f9b8fe0f4f32c5765f6f1103d5bdf4cdd6471362d074513249b55b39eb198d
+32: struct serialization_state {
+33:   serialization_state() = default;
+34:   serialization_state(serializer::flags flags)
+35:       : instance(flags) { }
+36: 
+37:   // We never want to copy the state; it should only ever get passed around by
+38:   // reference.
+39:   serialization_state(serialization_state const &) = delete;
+40:   serialization_state &operator=(serialization_state const &) = delete;
+41: 
+42:   serialization_state(serialization_state &&) = default;
+43:   serialization_state &operator=(serialization_state &&) = default;
+44: 
+45:   ~serialization_state() = default;
+46: 
+47:   serializer instance;
+48:   std::vector<block *> bound_variables;
+49:   std::unordered_map<string *, std::string, string_hash, string_eq> var_names;
+50:   std::set<std::string> used_var_names;
+51:   uint64_t var_counter{0};
+52: };
+160: void serialize_map_to_proof_trace(
+161:     writer *file, map *map, uint32_t unit, uint32_t element, uint32_t concat) {
+162:   size_t size = map->size();
+163:   if (size == 0) {
+164:     emit_symbol_to_proof_trace(file, unit);
+165:     return;
+166:   }
+167: 
+168:   auto *arg_sorts
+169:       = get_argument_sorts_for_tag_with_proof_trace_serialization(element);
+170: 
+171:   for (size_t i = 0; i < size - 1; ++i) {
+172:     emit_symbol_to_proof_trace(file, concat);
+173:   }
+174: 
+175:   for (auto iter = map->begin(); iter != map->end(); ++iter) {
+176:     emit_symbol_to_proof_trace(file, element);
+177:     serialize_configuration_to_proof_trace_internal(
+178:         file, iter->first, arg_sorts[0], false);
+179:     serialize_configuration_to_proof_trace_internal(
+180:         file, iter->second, arg_sorts[1], false);
+181:   }
+182: }
+275: void serialize_list_to_proof_trace(
+276:     writer *file, list *list, uint32_t unit, uint32_t element,
+277:     uint32_t concat) {
+278:   size_t size = list->size();
+279:   if (size == 0) {
+280:     emit_symbol_to_proof_trace(file, unit);
+281:     return;
+282:   }
+283: 
+284:   auto *arg_sorts
+285:       = get_argument_sorts_for_tag_with_proof_trace_serialization(element);
+286: 
+287:   for (size_t i = 0; i < size - 1; ++i) {
+288:     emit_symbol_to_proof_trace(file, concat);
+289:   }
+290: 
+291:   for (auto iter = list->begin(); iter != list->end(); ++iter) {
+292:     emit_symbol_to_proof_trace(file, element);
+293:     serialize_configuration_to_proof_trace_internal(
+294:         file, *iter, arg_sorts[0], false);
+295:   }
+296: }
+401: }
+402: 
+403: void serialize_m_int_to_proof_trace(
+404:     writer *file, size_t *i, size_t bits, uint32_t sort) {
+405:   auto str = (i == nullptr) ? std::string("0")
+406:                             : int_to_string(hook_MINT_import(i, bits, false));
+407: 
+408:   auto buffer = fmt::format("{}p{}", str, bits);
+409:   emit_token_to_proof_trace(file, sort, buffer.data(), buffer.length());
+410: }
+415: cached_symbol_sort_list(std::string const &symbol) {
+416:   static auto cache = std::unordered_map<
+417:       std::string, std::pair<std::string, std::vector<sptr<kore_sort>>>>{};
+418: 
+419:   if (cache.find(symbol) == cache.end()) {
+420:     auto [id, sorts] = kore_parser::from_string(symbol)->symbol_sort_list();
+421: 
+422:     // The parser returns the actual name of the symbol separately to its formal
+423:     // sort parameters. However, the interface of emitSymbol is compatible with
+424:     // the values stored in the interpreter's table of symbol names, which
+425:     // include the fully-instantiated symbol. For constant symbols, we know to
+426:     // drop the last two characters when emitting them. We therefore tack on an
+427:     // extra "{}" at the end of what comes back from the parser to keep it
+428:     // compatible with the same interface.
+429:     cache[symbol] = {fmt::format("{}{{}}", id), sorts};
+430:   }
+431: 
+432:   return cache.at(symbol);
+433: }
+534: void serialize_configuration_to_proof_trace_internal(
+535:     writer *file, block *subject, uint32_t sort, bool is_var) {
+536:   if (is_var) {
+537:     throw std::invalid_argument("does not support bound variables yet");
+538:   }
+539:   uint8_t is_constant = ((uintptr_t)subject) & 3;
+540: 
+541:   if (is_constant) {
+542:     uint32_t tag = ((uintptr_t)subject) >> 32;
+543:     if (is_constant == 3) {
+544:       throw std::invalid_argument("does not support bound variables yet");
+545:     }
+546: 
+547:     emit_symbol_to_proof_trace(file, tag);
+548:     return;
+549:   }
+550: 
+551:   uint16_t layout = get_layout(subject);
+552:   if (!layout) {
+553:     auto *str = (string *)subject;
+554:     emit_token_to_proof_trace(file, sort, str->data, len(subject));
+555:     return;
+556:   }
+557: 
+558:   uint32_t tag = tag_hdr(subject->h.hdr);
+559:   emit_symbol_to_proof_trace(file, tag);
+560: 
+561:   serialize_to_proof_trace_visitor callbacks
+562:       = {serialize_configuration_to_proof_trace_internal,
+563:          serialize_map_to_proof_trace,
+564:          serialize_list_to_proof_trace,
+565:          serialize_set_to_proof_trace,
+566:          serialize_int_to_proof_trace,
+567:          serialize_float_to_proof_trace,
+568:          serialize_bool_to_proof_trace,
+569:          serialize_string_buffer_to_proof_trace,
+570:          serialize_m_int_to_proof_trace,
+571:          serialize_range_map_to_proof_trace};
+572: 
+573:   visit_children_for_serialize_to_proof_trace(subject, file, &callbacks);
+574: }
+638: void serialize_configuration_to_proof_trace(
+639:     FILE *file, block *subject, uint32_t sort) {
+640:   fputs("\x7FKR2", file);
+641:   writer w{};
+642:   w.file = file;
+643:   serialize_configuration_to_proof_trace_internal(&w, subject, sort, false);
+644: }
+645: 
+646: string *serialize_term_to_string_v2(block *subject, uint32_t sort) {
+647:   writer w{};
+648:   w.buffer = hook_BUFFER_empty();
+649:   serialize_configuration_to_proof_trace_internal(&w, subject, sort, false);
+650:   return hook_BUFFER_toString(w.buffer);
+751: 
+752: void serialize_term_to_proof_trace(
+753:     FILE *file, void *subject, uint64_t block_header, uint64_t bits) {
+754:   void *arg = nullptr;
+755:   if (bits == 0 || bits > 64) {
+756:     arg = subject;
+757:   } else {
+758:     arg = (void *)&subject;
+759:   }
+760:   struct blockheader header_val {
+761:     block_header
+762:   };
+763:   auto *term = (block *)kore_alloc(size_hdr(block_header));
+764:   term->h = header_val;
+765:   store_symbol_children(term, &arg);
+766:   fputs("\x7FKR2", file);
+767:   writer w{};
+768:   w.file = file;
+769: 
+770:   serialize_to_proof_trace_visitor callbacks
+771:       = {serialize_configuration_to_proof_trace_internal,
+772:          serialize_map_to_proof_trace,
+773:          serialize_list_to_proof_trace,
+774:          serialize_set_to_proof_trace,
+775:          serialize_int_to_proof_trace,
+776:          serialize_float_to_proof_trace,
+777:          serialize_bool_to_proof_trace,
+778:          serialize_string_buffer_to_proof_trace,
+779:          serialize_m_int_to_proof_trace,
+780:          serialize_range_map_to_proof_trace};
+781: 
+782:   visit_children_for_serialize_to_proof_trace(term, &w, &callbacks);
+783: }
+784: 
+
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/include/runtime/proof_trace_writer.h
+SHA256：5af1e2f7eaa094e770dba39018fc8af105e218ad076464b6965168766abf2de6
+44: }
+45: 
+46: class proof_trace_file_writer : public proof_trace_writer {
+47: private:
+48:   char const *filename_base_;
+49:   size_t chunk_size_;
+50:   size_t file_number_;
+51:   uint32_t version_;
+52:   FILE *file_;
+53: 
+54:   void write_bytes(void const *ptr, size_t len) { fwrite(ptr, len, 1, file_); }
+55: 
+56:   void write_string(char const *str, size_t len) { fwrite(str, 1, len, file_); }
+57: 
+58:   // Note: This method will not write a 0 at the end of string.
+59:   // The passed string should be 0 terminated.
+60:   void write_string(char const *str) { fputs(str, file_); }
+61: 
+62:   // Note: this method will write a 0 at the end of the string.
+63:   // The passed string should be 0 terminated.
+64:   void write_null_terminated_string(char const *str) {
+65:     write_string(str);
+66:     char n = '\0';
+67:     write_bytes(&n, 1);
+68:   }
+69: 
+70:   void write_bool(bool b) { write_bytes(&b, sizeof(bool)); }
+71:   void write_uint32(uint32_t i) { write_bytes(&i, sizeof(uint32_t)); }
+72:   void write_uint64(uint64_t i) { write_bytes(&i, sizeof(uint64_t)); }
+73: 
+74: public:
+75:   proof_trace_file_writer(char const *filename_base, size_t chunk_size)
+76:       : filename_base_(filename_base)
+77:       , chunk_size_(chunk_size)
+78:       , file_number_(0)
+79:       , version_(0) {
+80:     if (chunk_size_ > 0) {
+81:       std::string filename = std::string(filename_base_) + ".pre_trace";
+82:       file_ = std::fopen(filename.c_str(), "w");
+83:     } else {
+84:       file_ = std::fopen(filename_base_, "w");
+85:     }
+86:     output_file = file_;
+87:   }
+88: 
+109:   void hook_event_post(
+110:       void *hook_result, uint64_t block_header, uint64_t bits) override {
+111:     write_uint64(kllvm::hook_result_sentinel);
+112:     serialize_term_to_proof_trace(file_, hook_result, block_header, bits);
+113:   }
+114: 
+115:   void argument(void *arg, uint64_t block_header, uint64_t bits) override {
+116:     serialize_term_to_proof_trace(file_, arg, block_header, bits);
+117:   }
+118: 
+119:   void rewrite_event_pre(uint64_t ordinal, uint64_t arity) override {
+120:     write_uint64(kllvm::rule_event_sentinel);
+121:     write_uint64(ordinal);
+122:     write_uint64(arity);
+123:   }
+124: 
+125:   void variable(
+126:       char const *name, void *var, uint64_t block_header,
+127:       uint64_t bits) override {
+128:     write_null_terminated_string(name);
+129:     serialize_term_to_proof_trace(file_, var, block_header, bits);
+130:   }
+131: 
+132:   void rewrite_event_post(
+133:       void *config, uint64_t block_header, uint64_t bits) override {
+134:     write_uint64(kllvm::config_sentinel);
+135:     serialize_term_to_proof_trace(file_, config, block_header, bits);
+173:   void configuration(block *config, bool is_initial) override {
+174:     write_uint64(kllvm::config_sentinel);
+175:     serialize_configuration_to_proof_trace(file_, config, 0);
+176: 
+177:     if (chunk_size_ > 0 && is_initial) {
+178:       start_new_chunk();
+179:     }
+180:   }
+181: 
+182:   void start_new_chunk() override {
+183:     std::fclose(file_);
+184:     std::string filename
+185:         = std::string(filename_base_) + "." + std::to_string(file_number_);
+186:     file_number_++;
+187:     file_ = std::fopen(filename.c_str(), "w");
+188:     output_file = file_;
+189:     write_string("CHNK");
+190:     write_uint32(version_);
+
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/util/finish_rewriting.cpp
+SHA256：d71ac5dbdd717b3c88b4db7c03807a9633d54a3e84bc4b07500e63dd0f60445d
+24: 
+25: void init_outputs(char const *output_filename) {
+26:   if (proof_output) {
+27:     proof_writer
+28:         = new proof_trace_file_writer(output_filename, proof_chunk_size);
+29:     return;
+30:   }
+31:   output_file = fopen(output_filename, "a");
+32: }
+33: 
+35:   // This function is responsible for closing output_file when rewriting
+36:   // finishes; because it can exit in a few different ways (exceptions,
+37:   // std::exit etc.) it's cleaner to set up a smart pointer to do this safely
+38:   // for us.
+39:   [[maybe_unused]] auto closer
+40:       = std::unique_ptr<FILE, decltype(&fclose)>(output_file, fclose);
+41: 
+42:   // Similar for deletinging the proof_output_buffer data structure
+43:   auto *w = static_cast<proof_trace_writer *>(proof_writer);
+44:   [[maybe_unused]] auto deleter = std::unique_ptr<proof_trace_writer>(w);
+45: 
+46:   if (error && safe_partial) {
+47:     throw std::runtime_error(
+48:         "Attempted to evaluate partial function at an undefined input");
+49:   }
+50: 
+51:   if (!output_file) {
+52:     throw std::runtime_error(
+53:         "Called finish_rewriting with no output file specified");
+54:   }
+55: 
+56:   if (statistics) {
+57:     uint64_t steps = get_steps();
+58:     print_statistics(output_file, steps);
+59:   }
+60: 
+61:   if (!proof_output) {
+62:     if (binary_output) {
+63:       serialize_configuration_to_file(output_file, subject, true, true);
+64:     } else {
+65:       print_configuration(output_file, subject);
+66:     }
+67:   } else if (!error && !proof_hint_instrumentation_slow) {
+68:     write_configuration_to_proof_trace(proof_writer, subject, false);
+69:   }
+70: 
+71:   bool was_proof_output = proof_output;
+72:   proof_output = false;
+73: 
+74:   auto exit_code = error ? 113 : get_exit_code(subject);
+75: 
+76:   if (was_proof_output) {
+77:     w->end_of_trace();
+78:   }
+79: 
+80:   std::exit(exit_code);
+81: }
+82: }
+
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/main/main.ll
+SHA256：454d9c3771d9912b20ea4e8c9296c0fdea0e51e4700bacae54465edc59910178
+19: @statistics.flag = private constant [13 x i8] c"--statistics\00"
+20: @binary_out.flag = private constant [16 x i8] c"--binary-output\00"
+21: @proof_out.flag = private constant [15 x i8] c"--proof-output\00"
+22: @proof_chunk.flag = private constant [19 x i8] c"--proof-chunk-size\00"
+23: 
+24: @proof_writer = external global ptr
+25: @statistics = external global i1
+26: @binary_output = external global i1
+27: @proof_output = external global i1
+28: @proof_chunk_size = external global i64
+32: define void @parse_flags(i32 %argc, ptr %argv) {
+33: entry:
+34:   store i1 0, ptr @statistics
+35:   br label %header
+36: 
+37: header:
+38:   %idx = phi i32 [ 4, %entry ], [ %idx.inc, %inc ]
+39:   %continue = icmp slt i32 %idx, %argc
+40:   br i1 %continue, label %body, label %exit
+41: 
+42: body:
+43:   %argv.idx = getelementptr inbounds ptr, ptr %argv, i32 %idx
+44:   %arg = load ptr, ptr %argv.idx
+45:   br label %body.stats
+46: 
+47: body.stats:
+48:   %stats.cmp = call i32 @strcmp(ptr %arg, ptr getelementptr inbounds ([13 x i8], ptr @statistics.flag, i64 0, i64 0))
+49:   %stats.eq = icmp eq i32 %stats.cmp, 0
+50:   br i1 %stats.eq, label %set.stats, label %binary.body
+51: 
+52: set.stats:
+53:   store i1 1, ptr @statistics
+54:   br label %binary.body
+55: 
+56: binary.body:
+57:   %binary.cmp = call i32 @strcmp(ptr %arg, ptr getelementptr inbounds ([16 x i8], ptr @binary_out.flag, i64 0, i64 0))
+58:   %binary.eq = icmp eq i32 %binary.cmp, 0
+59:   br i1 %binary.eq, label %binary.set, label %proof.body
+60: 
+61: binary.set:
+62:   store i1 1, ptr @binary_output
+63:   br label %proof.body
+64: 
+65: proof.body:
+66:   %proof.cmp = call i32 @strcmp(ptr %arg, ptr getelementptr inbounds ([15 x i8], ptr @proof_out.flag, i64 0, i64 0))
+67:   %proof.eq = icmp eq i32 %proof.cmp, 0
+68:   br i1 %proof.eq, label %proof.set, label %chunk.body
+69: 
+70: proof.set:
+71:   store i1 1, ptr @proof_output
+72:   br label %chunk.body
+73: 
+74: chunk.body:
+75:   %chunk.cmp = call i32 @strcmp(ptr %arg, ptr getelementptr inbounds ([19 x i8], ptr @proof_chunk.flag, i64 0, i64 0))
+76:   %chunk.eq = icmp eq i32 %chunk.cmp, 0
+77:   br i1 %chunk.eq, label %chunk.set, label %body.tail
+78: 
+79: chunk.set:
+80:   %idx.next = add i32 %idx, 1
+81:   %chunk_size_ptr = getelementptr inbounds ptr, ptr %argv, i32 %idx.next
+82:   %chunk_size_str = load ptr, ptr %chunk_size_ptr
+83:   %chunk_size = call i64 @atol(ptr %chunk_size_str)
+84:   store i64 %chunk_size, ptr @proof_chunk_size
+85:   br label %body.tail
+86: 
+87: body.tail:
+88:   %idx.updated = phi i32 [ %idx, %chunk.body ], [ %idx.next, %chunk.set ]
+89:   br label %inc
+90: 
+91: inc:
+92:   %idx.inc = add i32 %idx.updated, 1
+93:   br label %header
+94: 
+95: exit:
+96:   ret void
+99: define i32 @main(i32 %argc, ptr %argv) {
+100: entry:
+101:   %filename_ptr = getelementptr inbounds ptr, ptr %argv, i64 1
+102:   %filename = load ptr, ptr %filename_ptr
+103:   %depth_ptr = getelementptr inbounds ptr, ptr %argv, i64 2
+104:   %depth_str = load ptr, ptr %depth_ptr
+105:   %depth = call i64 @atol(ptr %depth_str)
+106:   %output_ptr = getelementptr inbounds ptr, ptr %argv, i64 3
+107:   %output_str = load ptr, ptr %output_ptr
+108:   
+109:   call void @parse_flags(i32 %argc, ptr %argv)
+110: 
+111:   call void @init_static_objects()
+112: 
+113:   call void @init_outputs(ptr %output_str)
+114: 
+115:   %proof_output = load i1, ptr @proof_output
+116:   br i1 %proof_output, label %if, label %else
+117: if:
+118:   %proof_writer = load ptr, ptr @proof_writer
+119:   call void @print_proof_hint_header(ptr %proof_writer)
+120:   br label %else
+121: else:
+122:   %ret = call ptr @parse_configuration(ptr %filename)
+123:   %result = call ptr @take_steps(i64 %depth, ptr %ret)
+124:   call void @finish_rewriting(ptr %result, i1 0)
+125:   unreachable
+126: }
+
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/arithmetic/int.cpp
+SHA256：f8fa3d80780d67647fb204051e925d6f3c4312ae3a7ca6af71abf82a865dab14
+449: mpz_ptr hook_MINT_import(size_t *i, uint64_t bits, bool is_signed) {
+450:   mpz_t result;
+451:   mpz_t twos;
+452:   mpz_init(twos);
+453:   mpz_init(result);
+454: 
+455:   uint64_t nwords = (bits + 63) / 64;
+456:   mpz_import(twos, nwords, -1, sizeof(size_t), 0, 0, i);
+457: 
+458:   if (is_signed) {
+459:     signed_extract(result, twos, 0, bits);
+460:     return move_int(result);
+461:   }
+462: 
+463:   return move_int(twos);
+464: }
+465: }
+
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/lto/alloc.cpp
+SHA256：b42826dc9270f45fa81aa4c180bdec1e6ad7bffff91f20c7e4f7b328998f09ed
+55: void set_kore_memory_functions_for_gmp() {
+56:   mp_set_memory_functions(kore_alloc_mp, kore_realloc_mp, kore_free);
+57: }
+58: 
+59: __attribute__((always_inline)) void *kore_alloc(size_t requested) {
+60:   return youngspace.kore_arena_alloc(requested);
+61: }
+62: 
+63: __attribute__((always_inline)) void *kore_alloc_token(size_t requested) {
+64:   size_t size = (requested + 7) & ~7;
+65:   return youngspace.kore_arena_alloc(size < 16 ? 16 : size);
+66: }
+103: void *kore_alloc_mp(size_t requested) {
+104:   bool enabled = gc_enabled;
+105:   gc_enabled = false;
+106:   auto *new_token = (string *)kore_alloc_token(sizeof(string) + requested);
+107:   gc_enabled = enabled;
+108:   init_with_len(new_token, requested);
+109:   return new_token->data;
+110: }
+111: 
+112: void *kore_realloc_mp(void *ptr, size_t old_size, size_t new_size) {
+113:   bool enabled = gc_enabled;
+114:   gc_enabled = false;
+115:   auto *new_token = (string *)kore_alloc_token(sizeof(string) + new_size);
+116:   gc_enabled = enabled;
+117:   size_t min = old_size > new_size ? new_size : old_size;
+118:   memcpy(new_token->data, ptr, min);
+119:   init_with_len(new_token, new_size);
+120:   return new_token->data;

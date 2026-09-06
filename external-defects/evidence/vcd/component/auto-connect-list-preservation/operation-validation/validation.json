@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "scope": "Auto Connect 完整 Args 绑定；未放宽 mux 类型或二态条件",
+  "source_file": "src/kcirct/kdist/circt_semantics/circt/circt.md",
+  "source_sha256": "f141f84539d93c18bf2346d811e23de5a28352e96e9d32cd20ca6b2f1f3e5201",
+  "definition_sha256": "b152cef8335c6fee1b930e5b9fae8e3bd48217441bde73cef38e495cae88f08f",
+  "build": {
+    "command": ".kcirct/auto-connect/build.command.json",
+    "log": ".kcirct/auto-connect/build.log",
+    "returncode": 0,
+    "targets": [
+      "haskell",
+      "llvm-library",
+      "llvm"
+    ]
+  },
+  "standard_operation": {
+    "pytest_result": "8 passed, 75 deselected in 181.59s",
+    "command": ".kcirct/auto-connect/operation.command.json",
+    "stdout": ".kcirct/auto-connect/operation.stdout",
+    "stderr": ".kcirct/auto-connect/operation.stderr",
+    "cases": [
+      {
+        "case": "comb/mux",
+        "events": 1000,
+        "evaluations_per_input": 1,
+        "simulation_calls": 1000,
+        "vcd_equal": true,
+        "full_connection_unchanged": true,
+        "remaining_current_cells": 0,
+        "sha256": {
+          "src/tests/resources/operation/comb/mux/mux.generic.mlir": "70df805782460bc15de3bd29703bfe0f4152edab281919fe3aa5c1dfdebd3bc6",
+          "src/tests/resources/operation/comb/mux/test_data.json": "42145940e4412b5fe0d3223ebd2291763ec205657a8f83b26741f9091701f131",
+          "src/tests/resources/operation/comb/mux/trace_vtor.vcd": "441d74190f46bcb8b79026e85f5866286bd41412c419e117819c4284102c291e",
+          "src/tests/resources/operation/comb/mux/test.vcd": "c4ad90044c81ee2a3c466118095fcd7636554b9bc71227d0e5f928ad4aa80bfa",
+          "src/tests/resources/operation/comb/mux/setup.kore": "0d0d2dbdcad2d0e6f8e03a18c5ee6daa62538c865e6dcf754faa4c3bf83ef680",
+          "src/tests/resources/operation/comb/mux/simulated.1.kore": "c815489cf1a10e4a6a39aa6a300d5538054f3d9b54655b224d15cdd3dcafa5dc"
+        }
+      },
+      {
+        "case": "comb/mux_array",
+        "events": 24,
+        "evaluations_per_input": 1,
+        "simulation_calls": 24,
+        "vcd_equal": true,
+        "full_connection_unchanged": true,
+        "remaining_current_cells": 0,
+        "sha256": {
+          "src/tests/resources/operation/comb/mux_array/mux_array.generic.mlir": "85660307ccc335b10e7ebe30b0b8a049139fa1bd6122876a3c97cf6b50edfd49",
+          "src/tests/resources/operation/comb/mux_array/test_data.json": "316377e0397b4e9488fbdef70c7a4dbe583ebf6d553c5ad59d285eaada72ec0e",
+          "src/tests/resources/operation/comb/mux_array/trace_vtor.vcd": "1e9563f75d14b7cbf06b0c3c87c9d10f82e67aa1abaa7f80e8f5093e0a84da4f",
+          "src/tests/resources/operation/comb/mux_array/test.vcd": "a8ad6d9cc6f448e37dde834ab33b3186efd934460ee463eb185d23317ce409c8",
+          "src/tests/resources/operation/comb/mux_array/setup.kore": "086041dba9b90f2fff74f88765aa6d702df9f4e51f3df4d224be1d0321701fe7",
+          "src/tests/resources/operation/comb/mux_array/simulated.1.kore": "79cd1ff415fe53e982f5fa5ad60178687729ba03db878223026846d8cba1d05a"
+        }
+      },
+      {
+        "case": "seq/firreg_array",
+        "events": 32,
+        "evaluations_per_input": 2,
+        "simulation_calls": 64,
+        "vcd_equal": true,
+        "full_connection_unchanged": true,
+        "remaining_current_cells": 0,
+        "sha256": {
+          "src/tests/resources/operation/seq/firreg_array/firreg_array.generic.mlir": "a6839d5f4f14c4d52e02d18232a3dd71ccbdc31fd0982c6396a39fb7631a3459",
+          "src/tests/resources/operation/seq/firreg_array/test_data.json": "56f1b1de5651020bb1737f1dc227dcd6eab2eecb9d379a82c4ecfdf8d731df19",
+          "src/tests/resources/operation/seq/firreg_array/trace_vtor.vcd": "843ab58db30d6b0b2f0c5c8cf004569f5afc810e1e094b2ab3f589c7d23a1401",
+          "src/tests/resources/operation/seq/firreg_array/test.vcd": "3646de011fbcf6c99d55b558c206c6a7a2460232747f987ad07017c541daa1ff",
+          "src/tests/resources/operation/seq/firreg_array/setup.kore": "bd99a114184c2184c93d8dd3deb22c238eeeec4f9da54c73767d434d447f00f5",
+          "src/tests/resources/operation/seq/firreg_array/simulated.1.kore": "50fb42375c2bd001a23b21fc419df788da7c537d0c13592af1177a335fb7cede"
+        }
+      },
+      {
+        "case": "seq/firreg_preset",
+        "events": 48,
+        "evaluations_per_input": 2,
+        "simulation_calls": 96,
+        "vcd_equal": true,
+        "full_connection_unchanged": true,
+        "remaining_current_cells": 0,
+        "sha256": {
+          "src/tests/resources/operation/seq/firreg_preset/firreg_preset.generic.mlir": "0d6cfc3d9f230f15db496688b18dd308b571ff494233da0b869f97a1b45b6a64",
+          "src/tests/resources/operation/seq/firreg_preset/test_data.json": "4db6d116978f150f848e69454bb84564ed20e9d0c052a061bd8a66cb5a453e11",
+          "src/tests/resources/operation/seq/firreg_preset/trace_vtor.vcd": "73c5e6d1de417267e92324d8257c232edf26ce97bf7f403bb3413dcdcdaa9451",
+          "src/tests/resources/operation/seq/firreg_preset/test.vcd": "e4eb4ba3c77d59c52507c85564cb263f9fa4155b362d67066893daf01a7f0b51",
+          "src/tests/resources/operation/seq/firreg_preset/setup.kore": "cde85b7968b82de8016c6f53d331e3444daf45179f2631d27ee2a5e898f76385",
+          "src/tests/resources/operation/seq/firreg_preset/simulated.1.kore": "9574a8835fddaf249de6f9b221d45ac7a7e17179a375a1a5dfa063ee71e137d3"
+        }
+      }
+    ]
+  },
+  "s3_original_prestate_replay": {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s3/golden/kimulator/simulation/simulated.0.kore.prestate",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros"
+    ],
+    "rc": 0,
+    "current_cells": 0,
+    "connection_unchanged": true,
+    "sha256": "2ee8e1c0a9cb42bf3bf59e86f4c032a8bf02210a588ec397e3e9688be04d2828"
+  },
+  "s3_public_cli_result": ".kcirct/auto-connect/s3-golden/result.json",
+  "minimal_case_limit": "纯 mux 链1到256节点、带xor计算selector和数据的小图4到64层在旧定义8事件中均未复现；未新增不能区分修复前后的operation测试。针对性反例保留S3/D12真实IR和精确Kore步骤。",
+  "read_only_connection_check": "对4组标准case额外只读核查setup与末态完整connection文本相同，无待执行current。"
+}

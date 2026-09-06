@@ -1,0 +1,35 @@
+{
+  "argv": [
+    "/Users/bytedance/.nix-profile/bin/kompile",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/source/circt-core.k",
+    "--backend",
+    "llvm",
+    "--main-module",
+    "CIRCT-CORE",
+    "--syntax-module",
+    "CIRCT-CORE-SYNTAX",
+    "--llvm-proof-hint-instrumentation",
+    "--gen-glr-bison-parser",
+    "--output-definition",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/definition-lite",
+    "--temp-dir",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/tmp-lite"
+  ],
+  "source_identity": "source-identity.json",
+  "started_at": 1788686397.724586,
+  "K_BIN": "unset",
+  "returncode": 0,
+  "elapsed_seconds": 47.58370304107666,
+  "definition.kore": {
+    "sha256": "663900948fb8c20be30580531b4184075f18afb3510158538a6639d9da17e10c",
+    "bytes": 2576148
+  },
+  "compiled.bin": {
+    "sha256": "6e1f9f6262d09c28ce6dac66117fcf54b7bcd051df9f54eec0b38072da6ced15",
+    "bytes": 6521674
+  },
+  "interpreter": {
+    "sha256": "40323af693002cd69bc8179736fbaf7b3f3fa55ddfd58ffbcf27e5ef1ed86b97",
+    "bytes": 12316048
+  }
+}

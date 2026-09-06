@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "path_base": "external-defects/",
+  "project_id": "axi-stream-s2",
+  "source_case_id": "S2",
+  "variant_id": "s2",
+  "design_variant": "buggy",
+  "configuration": {
+    "top": "xlnxstream_2018_3",
+    "parameters": {
+      "C_M_AXIS_TDATA_WIDTH": 32,
+      "C_M_START_COUNT": 32
+    },
+    "effective_parameters": {
+      "C_M_AXIS_TDATA_WIDTH": 32,
+      "C_M_START_COUNT": 32
+    },
+    "frontend_args": [],
+    "sample_phase": "low_before_posedge_pre_NBA",
+    "ir_profile": "constant-initial-register-v1"
+  },
+  "initialization": {
+    "mode": "rtl_initial_plus_two_state_zero",
+    "uninitialized_register_value": 0,
+    "four_state_equivalence_claimed": false,
+    "evidence": [
+      "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。"
+    ]
+  },
+  "rtl_sources": [
+    {
+      "path": "designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v",
+      "sha256": "152d3ac4fc8f179efd16fbde4f72a7cda8c25a487ce04dc22211b238fa16a715",
+      "bytes": 7181
+    }
+  ],
+  "artifacts": {
+    "initialized.hw.generic.mlir": {
+      "path": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/initialized.hw.generic.mlir",
+      "sha256": "b59e30a2823cf3a5fa02276cc56fb95bddfb80233902b24ee43c178abf29921c",
+      "bytes": 9962
+    },
+    "frontend.pre-llhd.generic.mlir": {
+      "path": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/frontend.pre-llhd.generic.mlir",
+      "sha256": "2f30b2878a1b26a2c1a007064de8768b7cc49554355ec8588d7dfa19ca28d403",
+      "bytes": 23992
+    },
+    "design.generic.mlir": {
+      "path": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.generic.mlir",
+      "sha256": "ca2e032153e52973d912f9c49d8e8f2db097c0e03cd46bbb31fecfe28c70f281",
+      "bytes": 5474
+    },
+    "frontend.hw.generic.mlir": {
+      "path": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/frontend.hw.generic.mlir",
+      "sha256": "065346d8998a8d4840a9f161ef22d483a78ff9488d3b01454b387e73abca5a07",
+      "bytes": 10152
+    },
+    "design.debug.generic.mlir": {
+      "path": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.debug.generic.mlir",
+      "sha256": "b75caa7571b79b4b14e83353d1bb50645d94a80f7c30f2738c16782fc2425434",
+      "bytes": 9311
+    },
+    "initial-lowering.json": {
+      "path": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/initial-lowering.json",
+      "sha256": "51ff3f30d4fa75873b5413ea3761308b9f7a8aea298127d71eb74f00e0dfa616",
+      "bytes": 2930
+    },
+    "source-map.json": {
+      "path": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/source-map.json",
+      "sha256": "e628fed2f112a992976f33c4a6b99f61b6cb68ebf1f443330c6222b49b38f7b2",
+      "bytes": 22378
+    },
+    "design.mlir": {
+      "path": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.mlir",
+      "sha256": "28d7000f5281f26609cfe3488265e049bff117e6f7e67641af8bc890959d9a3f",
+      "bytes": 7182
+    }
+  },
+  "tool_versions": {
+    "circt-verilog": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\nslang version 10.0.0+0\n",
+    "circt-opt": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\n"
+  },
+  "generation": {
+    "id": "initial-register-v1",
+    "status": "generated_not_simulated",
+    "working_directory": "external-defects/",
+    "commands": [
+      {
+        "stage": "frontend-llhd",
+        "argv": [
+          "circt-verilog",
+          "--ir-llhd",
+          "--top=xlnxstream_2018_3",
+          "--mlir-print-debuginfo",
+          "--mlir-print-op-generic",
+          "-GC_M_AXIS_TDATA_WIDTH=32",
+          "-GC_M_START_COUNT=32",
+          "designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v",
+          "-o",
+          "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/frontend.pre-llhd.generic.mlir"
+        ],
+        "cwd": "external-defects/",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.021185042000070098
+      },
+      {
+        "stage": "frontend-hw",
+        "argv": [
+          "circt-verilog",
+          "--ir-hw",
+          "--top=xlnxstream_2018_3",
+          "--mlir-print-debuginfo",
+          "--mlir-print-op-generic",
+          "-GC_M_AXIS_TDATA_WIDTH=32",
+          "-GC_M_START_COUNT=32",
+          "designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v",
+          "-o",
+          "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/frontend.hw.generic.mlir"
+        ],
+        "cwd": "external-defects/",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.01880133299891895
+      },
+      {
+        "stage": "sig2reg",
+        "argv": [
+          "circt-opt",
+          "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/initialized.hw.generic.mlir",
+          "--llhd-sig2reg",
+          "--canonicalize",
+          "--mlir-print-debuginfo",
+          "-o",
+          "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.mlir"
+        ],
+        "cwd": "external-defects/",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.0212532919995283
+      },
+      {
+        "stage": "design.debug.generic.mlir",
+        "argv": [
+          "circt-opt",
+          "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "--mlir-print-debuginfo",
+          "-o",
+          "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.debug.generic.mlir"
+        ],
+        "cwd": "external-defects/",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.02118916600011289
+      },
+      {
+        "stage": "design.generic.mlir",
+        "argv": [
+          "circt-opt",
+          "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "-o",
+          "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.generic.mlir"
+        ],
+        "cwd": "external-defects/",
+        "exit_code": 0,
+        "timeout": false,
+        "seconds": 0.011508792000313406
+      }
+    ],
+    "commands_policy": "已执行命令仅将暂存输出目录重定位为持久化目录；工具通过 PATH 或 CLI 参数解析。",
+    "normalization": {
+      "policy": "constant-initial-register-v1",
+      "script": {
+        "path": "initial_lowering.py",
+        "sha256": "6328a3298c6f2475679dd0c713da8e3f296a59dcd5c88860cd5169988f7ee189",
+        "bytes": 19167
+      },
+      "input": [
+        "frontend.hw.generic.mlir",
+        "frontend.pre-llhd.generic.mlir"
+      ],
+      "output": "initialized.hw.generic.mlir",
+      "audit": "initial-lowering.json"
+    },
+    "generator": {
+      "path": "prepare_ir.py",
+      "sha256": "0f89e2184c672dbd4901f31a2e66e3ea66c80d87c4526dbe653ac00b5d5484e4",
+      "bytes": 10325
+    }
+  },
+  "location_policy": "从同一原始 RTL、相同参数与工具生成前后端 IR；相对 loc 保留原样。旧基线不覆盖。"
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "name": "xlnxdemo",
+    "states": [
+      {
+        "name": "S_AXI_ACLK",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_ARESETN",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_AWADDR",
+        "numBits": 7,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_AWPROT",
+        "numBits": 3,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_AWVALID",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_WDATA",
+        "numBits": 32,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_WSTRB",
+        "numBits": 4,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_WVALID",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_BREADY",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_ARADDR",
+        "numBits": 7,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_ARPROT",
+        "numBits": 3,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_ARVALID",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_RREADY",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "S_AXI_AWREADY",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "S_AXI_WREADY",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "S_AXI_BRESP",
+        "numBits": 2,
+        "type": "output"
+      },
+      {
+        "name": "S_AXI_BVALID",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "S_AXI_ARREADY",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "S_AXI_RDATA",
+        "numBits": 32,
+        "type": "output"
+      },
+      {
+        "name": "S_AXI_RRESP",
+        "numBits": 2,
+        "type": "output"
+      },
+      {
+        "name": "S_AXI_RVALID",
+        "numBits": 1,
+        "type": "output"
+      }
+    ]
+  }
+]

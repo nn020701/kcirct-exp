@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "source_case_id": "D12",
+  "project_id": "axis-fifo-d12",
+  "variant_id": "d12",
+  "top": "axis_fifo",
+  "golden_sources": [
+    "designs/axis-fifo-d12/original/axis_fifo.v"
+  ],
+  "bug_original": "designs/axis-fifo-d12/original/axis_fifo.v",
+  "bug_source": "designs/axis-fifo-d12/variants/d12/axis_fifo_bug_d12.v",
+  "csv": "designs/axis-fifo-d12/testbench/tb.csv",
+  "inputs": [
+    {
+      "name": "clk",
+      "width": 1
+    },
+    {
+      "name": "rst",
+      "width": 1
+    },
+    {
+      "name": "s_axis_tdata",
+      "width": 8
+    },
+    {
+      "name": "s_axis_tkeep",
+      "width": 1
+    },
+    {
+      "name": "s_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "s_axis_tlast",
+      "width": 1
+    },
+    {
+      "name": "s_axis_tid",
+      "width": 8
+    },
+    {
+      "name": "s_axis_tdest",
+      "width": 8
+    },
+    {
+      "name": "s_axis_tuser",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tready",
+      "width": 1
+    }
+  ],
+  "outputs": [
+    {
+      "name": "s_axis_tready",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tdata",
+      "width": 8
+    },
+    {
+      "name": "m_axis_tkeep",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tlast",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tid",
+      "width": 8
+    },
+    {
+      "name": "m_axis_tdest",
+      "width": 8
+    },
+    {
+      "name": "m_axis_tuser",
+      "width": 1
+    },
+    {
+      "name": "status_overflow",
+      "width": 1
+    },
+    {
+      "name": "status_bad_frame",
+      "width": 1
+    },
+    {
+      "name": "status_good_frame",
+      "width": 1
+    }
+  ],
+  "clock": "clk",
+  "reset": {
+    "signal": "rst",
+    "active": 1
+  },
+  "parameters": {
+    "ADDR_WIDTH": 2,
+    "DATA_WIDTH": 8,
+    "KEEP_ENABLE": 0,
+    "KEEP_WIDTH": 1,
+    "LAST_ENABLE": 1,
+    "ID_ENABLE": 1,
+    "ID_WIDTH": 8,
+    "DEST_ENABLE": 1,
+    "DEST_WIDTH": 8,
+    "USER_ENABLE": 1,
+    "USER_WIDTH": 1,
+    "FRAME_FIFO": 1,
+    "USER_BAD_FRAME_VALUE": 1,
+    "USER_BAD_FRAME_MASK": 1,
+    "DROP_BAD_FRAME": 0,
+    "DROP_WHEN_FULL": 1
+  },
+  "effective_parameters": {
+    "ADDR_WIDTH": 2,
+    "DATA_WIDTH": 8,
+    "KEEP_ENABLE": 0,
+    "KEEP_WIDTH": 1,
+    "LAST_ENABLE": 1,
+    "ID_ENABLE": 1,
+    "ID_WIDTH": 8,
+    "DEST_ENABLE": 1,
+    "DEST_WIDTH": 8,
+    "USER_ENABLE": 1,
+    "USER_WIDTH": 1,
+    "FRAME_FIFO": 1,
+    "USER_BAD_FRAME_VALUE": 1,
+    "USER_BAD_FRAME_MASK": 1,
+    "DROP_BAD_FRAME": 0,
+    "DROP_WHEN_FULL": 1
+  },
+  "initialization": {
+    "mode": "rtl_initial_plus_two_state_zero",
+    "uninitialized_register_value": 0,
+    "four_state_equivalence_claimed": false,
+    "evidence": [
+      "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。"
+    ]
+  },
+  "sample_phase": "low_before_posedge_pre_NBA",
+  "oracle_outputs": [
+    "s_axis_tready",
+    "m_axis_tdata",
+    "m_axis_tkeep",
+    "m_axis_tvalid",
+    "m_axis_tlast",
+    "m_axis_tid",
+    "m_axis_tdest",
+    "m_axis_tuser"
+  ],
+  "masks": [],
+  "csv_normalization": {
+    "strip_whitespace": true,
+    "allow_one_trailing_empty_field": false,
+    "reason": "仅去除单元格周围空白，保留并检查完整列集合。"
+  },
+  "samples": 16,
+  "timeout_s": 120,
+  "frontend_args": [],
+  "source_hashes": {
+    "designs/axis-fifo-d12/original/axis_fifo.v": "e6cf9061c8301b378bf2566c07ce6e02ffa47f904f8002b7a3b1012961852294",
+    "designs/axis-fifo-d12/variants/d12/axis_fifo_bug_d12.v": "06b56f304a376856f1c9505e30d15b2c77f73c69db1ec2d07628c15f06851665",
+    "designs/axis-fifo-d12/provenance/origin/README.md": "e6564f9b30b70e1e6a0f2e0c425ac759d0c3afb594daa6d5fe962e9760282efc",
+    "designs/axis-fifo-d12/provenance/project.toml": "70a7ae826f3309e3845bbe3dd9b39e8b0fafeea5be635e86bf248c73e955d6fd",
+    "designs/axis-fifo-d12/testbench/tb.csv": "69cd5fe9c3c26cd69e7156633a2ea39b17bb8601917118105ee85ff984ba9618",
+    "designs/axis-fifo-d12/testbench/tb.v": "e37a5d0035ad8a57a3c778fe993bc05c33e2aea723ea717cf7a498881fa1b7c0",
+    "designs/axis-fifo-d12/provenance/to_btor2.ys": "1dbf64d696b3739bec074599128b6ebddfca35d592743ef1d7798998f89bab8b",
+    "designs/axis-fifo-d12/provenance/layout.json": "afed5fedd48f848997093e87d9b96297b063eaca61f69bbdebdd5edddbfc7c44"
+  },
+  "upstream": {
+    "repository": "https://github.com/ekiwi/rtl-repair",
+    "commit": "71e1afc0b9a2327d008b46acd415cf3f0343a938",
+    "project_path": "benchmarks/fpga-debugging/axis-fifo-d12",
+    "archive": "rtl-repair-fpga-debugging-71e1afc.tar.gz",
+    "archive_sha256": "3aebd94c34aaf9cced849541635ebc66145c7ba44fc1227f3f4e8623073ddc0a",
+    "origin_repository": "https://github.com/efeslab/hardware-bugbase",
+    "origin_commit": "7702e478f4ffdca477273d5a395992ecf006d70f",
+    "origin_readme": "designs/axis-fifo-d12/provenance/origin/README.md",
+    "origin_archive_sha256": "b5125ec4a3d93db138e5642285343d2d644e89a0b5bd156701b2c4f7bcb2ae5d"
+  },
+  "project_toml": "designs/axis-fifo-d12/provenance/project.toml",
+  "selected_testbench": {
+    "name": "csv",
+    "table": "tb.csv"
+  },
+  "native_testbench": {
+    "adapted_exists": true,
+    "path": "designs/axis-fifo-d12/testbench/tb.v",
+    "sha256": "e37a5d0035ad8a57a3c778fe993bc05c33e2aea723ea717cf7a498881fa1b7c0"
+  },
+  "ports_without_oracle": [
+    "status_overflow",
+    "status_bad_frame",
+    "status_good_frame"
+  ],
+  "unsupported_reasons": [],
+  "notes": [
+    "TB 活跃参数覆盖与 DUT 默认一致，包括 ADDR_WIDTH=2、DATA_WIDTH=8、FRAME_FIFO=1、DROP_WHEN_FULL=1。",
+    "TB 需要外部时钟，没有 CSV fwrite；遇到 m_axis_tdata==6 会提前结束。",
+    "CSV 不含 status_overflow/status_bad_frame/status_good_frame，原 TB 也明确悬空这些输出；oracle 输出集合与全部端口集合必须区分。",
+    "内存生成 seq.firmem；初始化和读写端口若不支持，应保留明确状态。"
+  ],
+  "layout_file": "designs/axis-fifo-d12/provenance/layout.json"
+}

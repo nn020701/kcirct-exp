@@ -1,0 +1,308 @@
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/collections/lists.cpp
+SHA256：cb382ebb74cacfe8f8534cbe84eb1bec7ffbbea58bb1dd7e20b35603ec9bd98a
+16: list hook_LIST_concat(SortList l1, SortList l2) {
+17:   if (l2->size() < 32) {
+18:     auto tmp = l1->transient();
+19:     for (auto iter = l2->begin(); iter != l2->end(); ++iter) {
+20:       tmp.push_back(*iter);
+21:     }
+22:     return tmp.persistent();
+23:   }
+24:   return (*l1) + (*l2);
+25: }
+49: SortKItem hook_LIST_get_long(SortList list, ssize_t idx) {
+50:   size_t size = list->size();
+51:   size_t abs_idx = idx < 0 ? (long)size + idx : idx;
+52:   return list->at(abs_idx);
+53: }
+91: list hook_LIST_range_long(SortList list, size_t front, size_t back) {
+92:   size_t size = list->size();
+93: 
+94:   if (size < front + back) {
+95:     KLLVM_HOOK_INVALID_ARGUMENT(
+96:         "Index out of range range_long: size={}, front={}, back={}", size,
+97:         front, back);
+98:   }
+99: 
+100:   auto tmp = list->transient();
+101:   tmp.drop(front);
+102:   tmp.take(size - back - front);
+103:   return tmp.persistent();
+104: }
+
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/include/runtime/header.h
+SHA256：7b47fc3c6b2e2e5fb354e8fea8d252ba59ef5e1f7c77651ff21016bbbb5ff771
+89: struct kore_alloc_heap {
+90: 
+91:   template <typename... Tags>
+92:   static void *allocate(size_t size, Tags...) {
+93:     if (during_gc()) {
+94:       auto *result = (string *)::operator new(size + sizeof(blockheader));
+95:       init_with_len(result, size);
+96:       result->h.hdr |= NOT_YOUNG_OBJECT_BIT;
+97:       return result->data;
+98:     }
+99:     bool enabled = gc_enabled;
+100:     gc_enabled = false;
+101:     auto *result = (string *)kore_alloc_token(size + sizeof(blockheader));
+102:     gc_enabled = enabled;
+103:     init_with_len(result, size);
+104:     return result->data;
+105:   }
+106: 
+107:   static void deallocate(size_t size, void *data) {
+108:     if (during_gc()) {
+109:       ::operator delete((char *)data - sizeof(blockheader));
+110:     }
+111:   }
+126: using list = immer::flex_vector<
+127:     k_elem, immer::memory_policy<
+128:                 immer::heap_policy<kore_alloc_heap>, immer::no_refcount_policy,
+129:                 immer::no_lock_policy>>;
+130: using map = immer::map<
+131:     k_elem, k_elem, hash_block, std::equal_to<>, list::memory_policy>;
+132: using set
+133:     = immer::set<k_elem, hash_block, std::equal_to<>, list::memory_policy>;
+
+来源：/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/transience/gc_transience_policy.hpp
+SHA256：04eeadd6b3c9a4e5a1e98e3f2ba3378139d67687270ba784c3da29a95ea6254b
+40:             struct edit
+41:             {
+42:                 void* v;
+43:                 edit(void* v_)
+44:                     : v{v_}
+45:                 {}
+46:                 edit() = delete;
+47:                 bool operator==(edit x) const { return v == x.v; }
+48:                 bool operator!=(edit x) const { return v != x.v; }
+49:             };
+50: 
+51:             struct owner
+52:             {
+53:                 void* make_token_()
+54:                 {
+55:                     return heap_::allocate(1, norefs_tag{});
+56:                 };
+57: 
+58:                 mutable std::atomic<void*> token_;
+59: 
+60:                 operator edit() { return {token_}; }
+61: 
+62:                 owner()
+63:                     : token_{make_token_()}
+64:                 {}
+65:                 owner(const owner& o)
+66:                     : token_{make_token_()}
+67:                 {
+68:                     o.token_ = make_token_();
+69:                 }
+70:                 owner(owner&& o) noexcept
+71:                     : token_{o.token_.load()}
+72:                 {}
+73:                 owner& operator=(const owner& o)
+74:                 {
+75:                     o.token_ = make_token_();
+76:                     token_   = make_token_();
+77:                     return *this;
+78:                 }
+79:                 owner& operator=(owner&& o) noexcept
+80:                 {
+81:                     token_ = o.token_.load();
+82:                     return *this;
+83:                 }
+84:             };
+85: 
+86:             struct ownee
+87:             {
+88:                 edit token_{nullptr};
+89: 
+90:                 ownee& operator=(edit e)
+91:                 {
+92:                     assert(e != noone);
+93:                     // This would be a nice safety plug but it sadly
+94:                     // does not hold during transient concatenation.
+95:                     // assert(token_ == e || token_ == edit{nullptr});
+96:                     token_ = e;
+97:                     return *this;
+98:                 }
+99: 
+100:                 bool can_mutate(edit t) const { return token_ == t; }
+101:                 bool owned() const { return token_ != edit{nullptr}; }
+102:             };
+103: 
+
+来源：/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/flex_vector.hpp
+SHA256：e20a85ff7cce1cb8aacc59a18ba4d98f58d78437e039f4e9137161376b36dda3
+500:      * Returns an @a transient form of this container, an
+501:      * `immer::flex_vector_transient`.
+502:      */
+503:     IMMER_NODISCARD transient_type transient() const& { return impl_; }
+504:     IMMER_NODISCARD transient_type transient() && { return std::move(impl_); }
+
+来源：/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/flex_vector_transient.hpp
+SHA256：c1703719485d74628af99715d8eb469b8b003039454c540347ab0e2cea95a92f
+188:     void take(size_type elems) { impl_.take_mut(*this, elems); }
+189: 
+190:     /*!
+191:      * Removes the first the first `min(elems, size())`
+192:      * elements. It may allocate memory and its complexity is
+193:      * *effectively* @f$ O(1) @f$.
+194:      */
+195:     void drop(size_type elems) { impl_.drop_mut(*this, elems); }
+227:     /*!
+228:      * Returns an @a immutable form of this container, an
+229:      * `immer::flex_vector`.
+230:      */
+231:     IMMER_NODISCARD persistent_type persistent() &
+232:     {
+233:         this->owner_t::operator=(owner_t{});
+234:         return impl_;
+235:     }
+236:     IMMER_NODISCARD persistent_type persistent() && { return std::move(impl_); }
+237: 
+238: private:
+239:     friend persistent_type;
+240: 
+241:     flex_vector_transient(impl_t impl)
+242:         : impl_(std::move(impl))
+243:     {}
+
+来源：/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/node.hpp
+SHA256：559e7dfb6a3a935f0fb25ea3ab800a4c4005f8ba25cb12e32fb6ac3644bcfbe9
+859:     bool can_mutate(edit_t e) const
+860:     {
+861:         return refs(this).unique() || ownee(this).can_mutate(e);
+862:     }
+
+来源：/nix/store/lg6z0qmy9h1l0vrbcz05ddmhv9w5xs4g-source/immer/detail/rbts/operations.hpp
+SHA256：cacf1cbe9f9466242cb170d0ad449ccb22455961a47d1b41a224aed12a3d09d8
+1374:     template <typename PosT>
+1375:     static result_t visit_leaf(PosT&& pos, size_t first, edit_t e)
+1376:     {
+1377:         auto node   = pos.node();
+1378:         auto idx    = pos.index(first);
+1379:         auto count  = pos.count();
+1380:         auto mutate = Mutating &&
+1381:                       std::is_nothrow_move_constructible<value_t>::value &&
+1382:                       node->can_mutate(e);
+1383:         if (mutate) {
+1384:             auto data     = node->leaf();
+1385:             auto newcount = count - idx;
+1386:             std::move(data + idx, data + count, data);
+1387:             detail::destroy_n(data + newcount, idx);
+1388:             return std::make_tuple(0, node);
+1389:         } else {
+1390:             auto newn = node_t::copy_leaf_e(e, node, idx, count);
+1391:             if (Mutating)
+1392:                 pos.visit(dec_visitor{});
+1393:             return std::make_tuple(0, newn);
+1394:         }
+
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/runtime/collect/migrate_collection.cpp
+SHA256：c98095db3860f68dad3f876b87af1ca6109c824c86ba56f2155ad81f5162eecd
+7: void migrate_collection_node(void **node_ptr) {
+8:   string *curr_block = STRUCT_BASE(string, data, *node_ptr);
+9:   if (!is_heap_block(curr_block)) {
+10:     return;
+11:   }
+12:   if (youngspace_collection_id()
+13:           != arena::get_arena_semispace_id_of_object((void *)curr_block)
+14:       && oldspace_collection_id()
+15:              != arena::get_arena_semispace_id_of_object((void *)curr_block)) {
+16:     return;
+17:   }
+18:   uint64_t const hdr = curr_block->h.hdr;
+19:   INITIALIZE_MIGRATE();
+20:   size_t len_in_bytes = get_size(hdr, 0);
+21:   if (!hasForwardingAddress) {
+22:     string *new_block = nullptr;
+23:     if (shouldPromote || (isInOldGen && collect_old)) {
+24:       new_block = (string *)kore_alloc_old(len_in_bytes);
+25:     } else {
+26:       new_block = (string *)kore_alloc(len_in_bytes);
+27:     }
+28: #ifdef GC_DBG
+29:     numBytesLiveAtCollection[oldAge] += len_in_bytes;
+30: #endif
+31:     memcpy(new_block, curr_block, len_in_bytes);
+32:     MIGRATE_HEADER(new_block);
+33:     *(void **)(curr_block + 1) = new_block + 1;
+34:     curr_block->h.hdr |= FWD_PTR_BIT;
+35:   }
+36:   *node_ptr = *(void **)(curr_block + 1);
+37: }
+38: 
+39: struct migrate_visitor : immer::detail::rbts::visitor_base<migrate_visitor> {
+40:   using this_t = migrate_visitor;
+41: 
+42:   template <typename Pos>
+43:   static void visit_inner(Pos &&pos) {
+44:     for (size_t i = 0; i < pos.count(); i++) {
+45:       void **node = (void **)pos.node()->inner() + i;
+46:       migrate_collection_node(node);
+47:     }
+48:     if (auto &relaxed = pos.node()->impl.d.data.inner.relaxed) {
+49:       migrate_collection_node((void **)&relaxed);
+50:     }
+51:     pos.each(this_t{});
+52:   }
+53: 
+54:   template <typename Pos>
+55:   static void visit_leaf(Pos &&pos) {
+56:     for (size_t i = 0; i < pos.count(); i++) {
+57:       block **element = (block **)pos.node()->leaf() + i;
+58:       migrate_once(element);
+59:     }
+60:   }
+61: };
+62: 
+63: void migrate_list(void *l) {
+64:   auto const &impl = ((list *)l)->impl();
+65:   migrate_collection_node((void **)&impl.root);
+66:   migrate_collection_node((void **)&impl.tail);
+67:   if (auto &relaxed = impl.root->impl.d.data.inner.relaxed) {
+68:     migrate_collection_node((void **)&relaxed);
+69:   }
+70:   impl.traverse(migrate_visitor{});
+
+来源：/nix/store/i3sfsz92jp90nylrzzb1mqsif8gl6iiy-source/include/runtime/arena.h
+SHA256：c9582f48487043101bab77111192cc27cbc14e5e345f545bbf2123f671ceb17e
+49:   char *end_ptr() { return allocation_ptr; }
+50: 
+51:   // Clears the current allocation space by setting its start back to its first
+52:   // block. It is used during garbage collection to effectively collect all of the
+53:   // arena.
+54:   void arena_clear() { allocation_ptr = current_addr_ptr; }
+55: 
+56:   // Resizes the last allocation.
+57:   // Returns the address of the byte following the last newly allocated byte.
+58:   void *arena_resize_last_alloc(ssize_t increase) {
+59:     return (allocation_ptr += increase);
+60:   }
+61: 
+62:   // Returns the given arena's current collection semispace ID.
+63:   // Each arena has 2 semispace IDs one equal to the arena ID and the other equal
+64:   // to the 1's complement of the arena ID. At any time one of these semispaces
+65:   // is used for allocation and the other is used for collection.
+66:   char get_arena_collection_semispace_id() const {
+67:     return ~allocation_semispace_id;
+68:   }
+69: 
+70:   // Exchanges the current allocation and collection semispaces and clears the new
+71:   // current allocation semispace by setting its start back to its first block.
+72:   // It is used before garbage collection.
+73:   void arena_swap_and_clear();
+74: 
+190:   return result;
+191: }
+192: 
+193: inline void arena::arena_swap_and_clear() {
+194:   std::swap(current_addr_ptr, collection_addr_ptr);
+195:   allocation_semispace_id = ~allocation_semispace_id;
+196:   if (current_addr_ptr == nullptr)
+197:     initialize_semispace(); // not yet initialized
+198:   else
+199:     arena_clear();
+200: }
+201: }
+202: #endif // ARENA_H

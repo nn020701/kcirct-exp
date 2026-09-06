@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "policy": "scalar-equals-i1-zero-range-v1",
+  "applied": true,
+  "mappings": [
+    {
+      "backend": "native",
+      "port": "output_axis_tkeep",
+      "width": 1,
+      "from": "TOP.output_axis_tkeep[0:0]",
+      "to": "TOP.output_axis_tkeep"
+    }
+  ],
+  "files": {
+    "native": {
+      "source": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/s3/golden/native/trace.vcd",
+        "sha256": "0af400cd2080e7ddb8b8a05a6d2bb6ddb86242231f429934d12b2aedf71075d8",
+        "bytes": 4657
+      },
+      "comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/s3/golden/comparison/native.comparison.vcd",
+        "sha256": "53f09f11c9300162e1430e81c300de85fb4f2917dd3511eff5aaacb93f51de14",
+        "bytes": 4651
+      },
+      "body_sha256": "81d31b0949f7080173cd7b87c04a567ca34c54870bc71a2ee3d3bcfe19917a86",
+      "body_bytes": 1305,
+      "body_unchanged": true,
+      "mappings": [
+        {
+          "backend": "native",
+          "port": "output_axis_tkeep",
+          "width": 1,
+          "from": "TOP.output_axis_tkeep[0:0]",
+          "to": "TOP.output_axis_tkeep"
+        }
+      ]
+    }
+  }
+}

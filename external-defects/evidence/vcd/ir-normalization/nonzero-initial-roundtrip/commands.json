@@ -1,0 +1,61 @@
+[
+  {
+    "stage": "generic-llhd",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/alt-frontend/initial-block-llhd/design.mlir",
+      "--mlir-print-op-generic",
+      "--mlir-print-debuginfo",
+      "-o",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/llhd.generic.mlir"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "generic-hw",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/alt-frontend/initial-block-hw/design.mlir",
+      "--mlir-print-op-generic",
+      "--mlir-print-debuginfo",
+      "-o",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/hw.generic.mlir"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "sig2reg",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/normalized.generic.mlir",
+      "--llhd-sig2reg",
+      "--canonicalize",
+      "-o",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/normalized.mlir"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "lower-seq",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/normalized.mlir",
+      "--lower-seq-to-sv",
+      "--canonicalize",
+      "-o",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/sv.mlir"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "export-sv",
+    "argv": [
+      "/Users/bytedance/cym/tool/firtool-1.147.0/bin/circt-opt",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/sv.mlir",
+      "--export-verilog",
+      "-o",
+      "/dev/null"
+    ],
+    "returncode": 0
+  }
+]

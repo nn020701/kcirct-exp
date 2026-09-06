@@ -1,0 +1,62 @@
+[
+  {
+    "index": 0,
+    "input_values": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "output_sha256": "b85ebe0ea8737937760128c52ed4b86e3ac878a2986bf9ddb5939de9e4aa7643",
+    "matches_formal_event84eval2": true,
+    "prestate_sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1"
+  },
+  {
+    "index": 1,
+    "input_values": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "output_sha256": "b85ebe0ea8737937760128c52ed4b86e3ac878a2986bf9ddb5939de9e4aa7643",
+    "matches_formal_event84eval2": true,
+    "prestate_sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1"
+  },
+  {
+    "index": 2,
+    "input_values": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "output_sha256": "b85ebe0ea8737937760128c52ed4b86e3ac878a2986bf9ddb5939de9e4aa7643",
+    "matches_formal_event84eval2": true,
+    "prestate_sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "name": "axis_switch",
+    "states": [
+      {
+        "name": "clk",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "rst",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tdata",
+        "numBits": 32,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tkeep",
+        "numBits": 4,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tvalid",
+        "numBits": 4,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tlast",
+        "numBits": 4,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tid",
+        "numBits": 32,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tdest",
+        "numBits": 4,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tuser",
+        "numBits": 4,
+        "type": "input"
+      },
+      {
+        "name": "m_axis_tready",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tready",
+        "numBits": 4,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tdata",
+        "numBits": 8,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tkeep",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tvalid",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tlast",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tid",
+        "numBits": 8,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tdest",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tuser",
+        "numBits": 1,
+        "type": "output"
+      }
+    ]
+  }
+]

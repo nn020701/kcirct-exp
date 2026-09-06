@@ -1,0 +1,1503 @@
+{
+  "executable_sha256": "1e15c6d5cf4296b12383507f57988f38c3bd7e1d4c833e7e0b4e33b9c36a6018",
+  "debug_sha256": "cb3c94ba4d10fd834d15e328a853e7cd6d461e0854ae010ae44d4964dbfc3d88",
+  "mapping_kind": "same_ir_printed_with_and_without_locations",
+  "location_aliases": [
+    "#loc2 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":41:35)",
+    "#loc3 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":46:35)",
+    "#loc4 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":47:35)",
+    "#loc5 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":48:35)",
+    "#loc6 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":50:35)",
+    "#loc7 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":51:35)",
+    "#loc8 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":56:35)",
+    "#loc9 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":59:35)",
+    "#loc66 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":27:181)",
+    "#loc67 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":27:317)",
+    "#loc68 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":27:345)",
+    "#loc69 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":27:414)",
+    "#loc70 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":27:442)",
+    "#loc72 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":5:35)",
+    "#loc73 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":6:35)",
+    "#loc74 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":11:35)",
+    "#loc75 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":12:35)",
+    "#loc76 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":14:35)",
+    "#loc77 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":15:35)",
+    "#loc78 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":22:35)",
+    "#loc81 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":125:173)",
+    "#loc82 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":125:279)",
+    "#loc83 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":125:307)",
+    "#loc84 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":125:377)",
+    "#loc85 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":125:405)",
+    "#loc87 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":59:35)",
+    "#loc88 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":60:35)",
+    "#loc89 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":65:35)",
+    "#loc90 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":66:35)",
+    "#loc91 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":67:35)",
+    "#loc92 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":69:35)",
+    "#loc93 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":70:35)",
+    "#loc94 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":71:35)",
+    "#loc95 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":72:35)",
+    "#loc96 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":80:35)",
+    "#loc109 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":132:198)",
+    "#loc110 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":132:360)",
+    "#loc111 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":132:383)",
+    "#loc112 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":132:406)",
+    "#loc113 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":132:466)",
+    "#loc114 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":132:489)",
+    "#loc115 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":132:510)",
+    "#loc116 = loc(\"/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/benchmarks/external-defects/results/batch-memory-01/c4/buggy/kimulator/design.mlir\":132:533)",
+    "#loc = loc(unknown)",
+    "#loc1 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":32:8)",
+    "#loc10 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":83:24)",
+    "#loc11 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":64:20)",
+    "#loc12 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":109:1)",
+    "#loc13 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":90:35 to :89)",
+    "#loc14 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":94:15 to :38)",
+    "#loc15 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":94:42 to :71)",
+    "#loc16 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":94:15 to :71)",
+    "#loc17 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":95:15 to :40)",
+    "#loc18 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":95:44 to :75)",
+    "#loc19 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":95:15 to :75)",
+    "#loc20 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":96:15 to :42)",
+    "#loc21 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":96:46 to :79)",
+    "#loc22 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":96:15 to :79)",
+    "#loc23 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":94:14 to 96:80)",
+    "#loc24 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":94:14 to 95:76)",
+    "#loc25 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":100:34 to :39)",
+    "#loc26 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":100:14 to :39)",
+    "#loc27 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":101:35 to :58)",
+    "#loc28 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":101:14 to :58)",
+    "#loc29 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":98:14 to :46)",
+    "#loc30 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":101:13 to :68)",
+    "#loc31 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":103:8)",
+    "#loc32 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":116:28 to :62)",
+    "#loc33 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":77:5)",
+    "#loc34 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":76:5)",
+    "#loc35 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":78:5)",
+    "#loc36 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":122:5 to 130:8)",
+    "#loc37 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":79:5)",
+    "#loc38 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":80:5)",
+    "#loc39 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":81:5)",
+    "#loc40 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":134:22 to :32)",
+    "#loc41 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":140:13 to :35)",
+    "#loc42 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":140:9 to :36)",
+    "#loc43 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":142:39 to :55)",
+    "#loc44 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":142:24 to :56)",
+    "#loc45 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":100:6)",
+    "#loc46 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":65:20)",
+    "#loc47 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":66:20)",
+    "#loc48 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":86:24)",
+    "#loc49 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":148:5 to 154:8)",
+    "#loc50 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":73:20)",
+    "#loc51 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":74:20)",
+    "#loc52 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":158:22 to :32)",
+    "#loc53 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":164:29 to :51)",
+    "#loc54 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":164:25 to :52)",
+    "#loc55 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":166:39 to :55)",
+    "#loc56 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":166:24 to :56)",
+    "#loc57 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":101:6)",
+    "#loc58 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":68:20)",
+    "#loc59 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":67:20)",
+    "#loc60 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":69:20)",
+    "#loc61 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":172:5 to 178:8)",
+    "#loc62 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":71:20)",
+    "#loc63 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":72:20)",
+    "#loc64 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":101:62 to :68)",
+    "#loc65 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_async_fifo_bug_c4.v\":88:5)",
+    "#loc71 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":3:8)",
+    "#loc79 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":36:1)",
+    "#loc80 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_fifo_wrapper.v\":55:1)",
+    "#loc86 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":32:8)",
+    "#loc97 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":89:19)",
+    "#loc98 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":129:50 to :73)",
+    "#loc99 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":129:78 to :96)",
+    "#loc100 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":129:100 to :114)",
+    "#loc101 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":129:78 to :114)",
+    "#loc102 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":129:50 to :115)",
+    "#loc103 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":129:32 to :116)",
+    "#loc104 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":142:17 to :52)",
+    "#loc105 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":129:51 to :73)",
+    "#loc106 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":95:58 to :62)",
+    "#loc107 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":129:101 to :114)",
+    "#loc108 = loc(\"benchmarks/external-defects/sources/axis-async-fifo-c4/axis_register.v\":160:9 to 168:12)",
+    "#loc117 = loc(fused[#loc23, #loc24])"
+  ],
+  "operations": [
+    {
+      "ordinal": 0,
+      "op": "builtin.module",
+      "ssa": "",
+      "executable_line": 19,
+      "debug_line": 44,
+      "debug_text": "\"builtin.module\"() ({"
+    },
+    {
+      "ordinal": 1,
+      "op": "hw.module",
+      "ssa": "",
+      "executable_line": 20,
+      "debug_line": 45,
+      "debug_text": "  \"hw.module\"() <{module_type = !hw.modty<input async_rst : i1, input input_clk : i1, input input_axis_tdata : i8, input input_axis_tvalid : i1, output input_axis_tready : i1, input input_axis_tlast : i1, input input_axis_tuser : i1, input output_clk : i1, output output_axis_tdata : i8, output output_axis_tvalid : i1, input output_axis_tready : i1, output output_axis_tlast : i1, output output_axis_tuser : i1>, parameters = [], result_locs = [#loc66, #loc67, #loc68, #loc69, #loc70], sym_name = \"axis_async_fifo\"}> ({"
+    },
+    {
+      "ordinal": 2,
+      "op": "hw.constant",
+      "ssa": "%70",
+      "executable_line": 22,
+      "debug_line": 47,
+      "debug_text": "    %70 = \"hw.constant\"() <{value = true}> : () -> i1 loc(#loc)"
+    },
+    {
+      "ordinal": 3,
+      "op": "hw.constant",
+      "ssa": "%71",
+      "executable_line": 23,
+      "debug_line": 48,
+      "debug_text": "    %71 = \"hw.constant\"() <{value = 1 : i6}> : () -> i6 loc(#loc)"
+    },
+    {
+      "ordinal": 4,
+      "op": "hw.constant",
+      "ssa": "%72",
+      "executable_line": 24,
+      "debug_line": 49,
+      "debug_text": "    %72 = \"hw.constant\"() <{value = 0 : i10}> : () -> i10 loc(#loc10)"
+    },
+    {
+      "ordinal": 5,
+      "op": "hw.constant",
+      "ssa": "%73",
+      "executable_line": 25,
+      "debug_line": 50,
+      "debug_text": "    %73 = \"hw.constant\"() <{value = 0 : i6}> : () -> i6 loc(#loc11)"
+    },
+    {
+      "ordinal": 6,
+      "op": "hw.constant",
+      "ssa": "%74",
+      "executable_line": 26,
+      "debug_line": 51,
+      "debug_text": "    %74 = \"hw.constant\"() <{value = false}> : () -> i1 loc(#loc12)"
+    },
+    {
+      "ordinal": 7,
+      "op": "comb.concat",
+      "ssa": "%75",
+      "executable_line": 27,
+      "debug_line": 52,
+      "debug_text": "    %75 = \"comb.concat\"(%arg21, %arg22, %arg19) : (i1, i1, i8) -> i10 loc(#loc13)"
+    },
+    {
+      "ordinal": 8,
+      "op": "comb.extract",
+      "ssa": "%76",
+      "executable_line": 28,
+      "debug_line": 53,
+      "debug_text": "    %76 = \"comb.extract\"(%126) <{lowBit = 5 : i32}> : (i6) -> i1 loc(#loc14)"
+    },
+    {
+      "ordinal": 9,
+      "op": "comb.extract",
+      "ssa": "%77",
+      "executable_line": 29,
+      "debug_line": 54,
+      "debug_text": "    %77 = \"comb.extract\"(%134) <{lowBit = 5 : i32}> : (i6) -> i1 loc(#loc15)"
+    },
+    {
+      "ordinal": 10,
+      "op": "comb.icmp",
+      "ssa": "%78",
+      "executable_line": 30,
+      "debug_line": 55,
+      "debug_text": "    %78 = \"comb.icmp\"(%76, %77) <{predicate = 1 : i64}> : (i1, i1) -> i1 loc(#loc16)"
+    },
+    {
+      "ordinal": 11,
+      "op": "comb.extract",
+      "ssa": "%79",
+      "executable_line": 31,
+      "debug_line": 56,
+      "debug_text": "    %79 = \"comb.extract\"(%126) <{lowBit = 4 : i32}> : (i6) -> i1 loc(#loc17)"
+    },
+    {
+      "ordinal": 12,
+      "op": "comb.extract",
+      "ssa": "%80",
+      "executable_line": 32,
+      "debug_line": 57,
+      "debug_text": "    %80 = \"comb.extract\"(%134) <{lowBit = 4 : i32}> : (i6) -> i1 loc(#loc18)"
+    },
+    {
+      "ordinal": 13,
+      "op": "comb.icmp",
+      "ssa": "%81",
+      "executable_line": 33,
+      "debug_line": 58,
+      "debug_text": "    %81 = \"comb.icmp\"(%79, %80) <{predicate = 1 : i64}> : (i1, i1) -> i1 loc(#loc19)"
+    },
+    {
+      "ordinal": 14,
+      "op": "comb.extract",
+      "ssa": "%82",
+      "executable_line": 34,
+      "debug_line": 59,
+      "debug_text": "    %82 = \"comb.extract\"(%126) <{lowBit = 0 : i32}> : (i6) -> i4 loc(#loc20)"
+    },
+    {
+      "ordinal": 15,
+      "op": "comb.extract",
+      "ssa": "%83",
+      "executable_line": 35,
+      "debug_line": 60,
+      "debug_text": "    %83 = \"comb.extract\"(%134) <{lowBit = 0 : i32}> : (i6) -> i4 loc(#loc21)"
+    },
+    {
+      "ordinal": 16,
+      "op": "comb.icmp",
+      "ssa": "%84",
+      "executable_line": 36,
+      "debug_line": 61,
+      "debug_text": "    %84 = \"comb.icmp\"(%82, %83) <{predicate = 0 : i64}> : (i4, i4) -> i1 loc(#loc22)"
+    },
+    {
+      "ordinal": 17,
+      "op": "comb.and",
+      "ssa": "%85",
+      "executable_line": 37,
+      "debug_line": 62,
+      "debug_text": "    %85 = \"comb.and\"(%78, %81, %84) {sv.namehint = \"full\"} : (i1, i1, i1) -> i1 loc(#loc117)"
+    },
+    {
+      "ordinal": 18,
+      "op": "comb.xor",
+      "ssa": "%86",
+      "executable_line": 38,
+      "debug_line": 63,
+      "debug_text": "    %86 = \"comb.xor\"(%85, %70) : (i1, i1) -> i1 loc(#loc25)"
+    },
+    {
+      "ordinal": 19,
+      "op": "comb.and",
+      "ssa": "%87",
+      "executable_line": 39,
+      "debug_line": 64,
+      "debug_text": "    %87 = \"comb.and\"(%arg20, %86) : (i1, i1) -> i1 loc(#loc26)"
+    },
+    {
+      "ordinal": 20,
+      "op": "comb.xor",
+      "ssa": "%88",
+      "executable_line": 40,
+      "debug_line": 65,
+      "debug_text": "    %88 = \"comb.xor\"(%164, %70) : (i1, i1) -> i1 loc(#loc27)"
+    },
+    {
+      "ordinal": 21,
+      "op": "comb.or",
+      "ssa": "%89",
+      "executable_line": 41,
+      "debug_line": 66,
+      "debug_text": "    %89 = \"comb.or\"(%arg24, %88) : (i1, i1) -> i1 loc(#loc28)"
+    },
+    {
+      "ordinal": 22,
+      "op": "comb.icmp",
+      "ssa": "%90",
+      "executable_line": 42,
+      "debug_line": 67,
+      "debug_text": "    %90 = \"comb.icmp\"(%155, %161) <{predicate = 1 : i64}> : (i6, i6) -> i1 loc(#loc29)"
+    },
+    {
+      "ordinal": 23,
+      "op": "comb.and",
+      "ssa": "%91",
+      "executable_line": 43,
+      "debug_line": 68,
+      "debug_text": "    %91 = \"comb.and\"(%89, %90) : (i1, i1) -> i1 loc(#loc30)"
+    },
+    {
+      "ordinal": 24,
+      "op": "comb.extract",
+      "ssa": "%92",
+      "executable_line": 44,
+      "debug_line": 69,
+      "debug_text": "    %92 = \"comb.extract\"(%157) <{lowBit = 9 : i32}> : (i10) -> i1 loc(#loc31)"
+    },
+    {
+      "ordinal": 25,
+      "op": "comb.extract",
+      "ssa": "%93",
+      "executable_line": 45,
+      "debug_line": 70,
+      "debug_text": "    %93 = \"comb.extract\"(%157) <{lowBit = 8 : i32}> : (i10) -> i1 loc(#loc31)"
+    },
+    {
+      "ordinal": 26,
+      "op": "comb.extract",
+      "ssa": "%94",
+      "executable_line": 46,
+      "debug_line": 71,
+      "debug_text": "    %94 = \"comb.extract\"(%157) <{lowBit = 0 : i32}> : (i10) -> i8 loc(#loc31)"
+    },
+    {
+      "ordinal": 27,
+      "op": "comb.or",
+      "ssa": "%95",
+      "executable_line": 47,
+      "debug_line": 72,
+      "debug_text": "    %95 = \"comb.or\"(%arg17, %98, %104) : (i1, i1, i1) -> i1 loc(#loc32)"
+    },
+    {
+      "ordinal": 28,
+      "op": "comb.or",
+      "ssa": "%96",
+      "executable_line": 48,
+      "debug_line": 73,
+      "debug_text": "    %96 = \"comb.or\"(%arg17, %99) : (i1, i1) -> i1 loc(#loc33)"
+    },
+    {
+      "ordinal": 29,
+      "op": "seq.to_clock",
+      "ssa": "%97",
+      "executable_line": 49,
+      "debug_line": 74,
+      "debug_text": "    %97 = \"seq.to_clock\"(%arg18) : (i1) -> !seq.clock loc(#loc34)"
+    },
+    {
+      "ordinal": 30,
+      "op": "seq.firreg",
+      "ssa": "%98",
+      "executable_line": 50,
+      "debug_line": 75,
+      "debug_text": "    %98 = \"seq.firreg\"(%arg17, %97) <{name = \"input_rst_sync1\"}> : (i1, !seq.clock) -> i1 loc(#loc34)"
+    },
+    {
+      "ordinal": 31,
+      "op": "seq.firreg",
+      "ssa": "%99",
+      "executable_line": 51,
+      "debug_line": 76,
+      "debug_text": "    %99 = \"seq.firreg\"(%95, %97) <{name = \"input_rst_sync2\"}> : (i1, !seq.clock) -> i1 loc(#loc33)"
+    },
+    {
+      "ordinal": 32,
+      "op": "seq.firreg",
+      "ssa": "%100",
+      "executable_line": 52,
+      "debug_line": 77,
+      "debug_text": "    %100 = \"seq.firreg\"(%96, %97) <{name = \"input_rst_sync3\"}> : (i1, !seq.clock) -> i1 loc(#loc35)"
+    },
+    {
+      "ordinal": 33,
+      "op": "comb.or",
+      "ssa": "%101",
+      "executable_line": 53,
+      "debug_line": 78,
+      "debug_text": "    %101 = \"comb.or\"(%arg17, %104) : (i1, i1) -> i1 loc(#loc36)"
+    },
+    {
+      "ordinal": 34,
+      "op": "comb.or",
+      "ssa": "%102",
+      "executable_line": 54,
+      "debug_line": 79,
+      "debug_text": "    %102 = \"comb.or\"(%arg17, %105) : (i1, i1) -> i1 loc(#loc36)"
+    },
+    {
+      "ordinal": 35,
+      "op": "seq.to_clock",
+      "ssa": "%103",
+      "executable_line": 55,
+      "debug_line": 80,
+      "debug_text": "    %103 = \"seq.to_clock\"(%arg23) : (i1) -> !seq.clock loc(#loc37)"
+    },
+    {
+      "ordinal": 36,
+      "op": "seq.firreg",
+      "ssa": "%104",
+      "executable_line": 56,
+      "debug_line": 81,
+      "debug_text": "    %104 = \"seq.firreg\"(%arg17, %103) <{name = \"output_rst_sync1\"}> : (i1, !seq.clock) -> i1 loc(#loc37)"
+    },
+    {
+      "ordinal": 37,
+      "op": "seq.firreg",
+      "ssa": "%105",
+      "executable_line": 57,
+      "debug_line": 82,
+      "debug_text": "    %105 = \"seq.firreg\"(%101, %103) <{name = \"output_rst_sync2\"}> : (i1, !seq.clock) -> i1 loc(#loc38)"
+    },
+    {
+      "ordinal": 38,
+      "op": "seq.firreg",
+      "ssa": "%106",
+      "executable_line": 58,
+      "debug_line": 83,
+      "debug_text": "    %106 = \"seq.firreg\"(%102, %103) <{name = \"output_rst_sync3\"}> : (i1, !seq.clock) -> i1 loc(#loc39)"
+    },
+    {
+      "ordinal": 39,
+      "op": "comb.add",
+      "ssa": "%107",
+      "executable_line": 59,
+      "debug_line": 84,
+      "debug_text": "    %107 = \"comb.add\"(%124, %71) : (i6, i6) -> i6 loc(#loc40)"
+    },
+    {
+      "ordinal": 40,
+      "op": "comb.extract",
+      "ssa": "%108",
+      "executable_line": 60,
+      "debug_line": 85,
+      "debug_text": "    %108 = \"comb.extract\"(%124) <{lowBit = 0 : i32}> : (i6) -> i5 loc(#loc41)"
+    },
+    {
+      "ordinal": 41,
+      "op": "hw.array_inject",
+      "ssa": "%109",
+      "executable_line": 61,
+      "debug_line": 86,
+      "debug_text": "    %109 = \"hw.array_inject\"(%130, %108, %75) : (!hw.array<32xi10>, i5, i10) -> !hw.array<32xi10> loc(#loc42)"
+    },
+    {
+      "ordinal": 42,
+      "op": "comb.extract",
+      "ssa": "%110",
+      "executable_line": 62,
+      "debug_line": 87,
+      "debug_text": "    %110 = \"comb.extract\"(%107) <{lowBit = 1 : i32}> : (i6) -> i5 loc(#loc43)"
+    },
+    {
+      "ordinal": 43,
+      "op": "comb.concat",
+      "ssa": "%111",
+      "executable_line": 63,
+      "debug_line": 88,
+      "debug_text": "    %111 = \"comb.concat\"(%74, %110) : (i1, i5) -> i6 loc(#loc43)"
+    },
+    {
+      "ordinal": 44,
+      "op": "comb.xor",
+      "ssa": "%112",
+      "executable_line": 64,
+      "debug_line": 89,
+      "debug_text": "    %112 = \"comb.xor\"(%107, %111) : (i6, i6) -> i6 loc(#loc44)"
+    },
+    {
+      "ordinal": 45,
+      "op": "comb.xor",
+      "ssa": "%113",
+      "executable_line": 65,
+      "debug_line": 90,
+      "debug_text": "    %113 = \"comb.xor\"(%100, %70) : (i1, i1) -> i1 loc(#loc35)"
+    },
+    {
+      "ordinal": 46,
+      "op": "comb.and",
+      "ssa": "%114",
+      "executable_line": 66,
+      "debug_line": 91,
+      "debug_text": "    %114 = \"comb.and\"(%87, %113) : (i1, i1) -> i1 loc(#loc45)"
+    },
+    {
+      "ordinal": 47,
+      "op": "comb.mux",
+      "ssa": "%115",
+      "executable_line": 67,
+      "debug_line": 92,
+      "debug_text": "    %115 = \"comb.mux\"(%114, %107, %73) : (i1, i6, i6) -> i6 loc(#loc46)"
+    },
+    {
+      "ordinal": 48,
+      "op": "comb.xor",
+      "ssa": "%116",
+      "executable_line": 68,
+      "debug_line": 93,
+      "debug_text": "    %116 = \"comb.xor\"(%87, %70) : (i1, i1) -> i1 loc(#loc45)"
+    },
+    {
+      "ordinal": 49,
+      "op": "comb.and",
+      "ssa": "%117",
+      "executable_line": 69,
+      "debug_line": 94,
+      "debug_text": "    %117 = \"comb.and\"(%113, %116) : (i1, i1) -> i1 loc(#loc35)"
+    },
+    {
+      "ordinal": 50,
+      "op": "comb.xor",
+      "ssa": "%118",
+      "executable_line": 70,
+      "debug_line": 95,
+      "debug_text": "    %118 = \"comb.xor\"(%114, %70) : (i1, i1) -> i1 loc(#loc11)"
+    },
+    {
+      "ordinal": 51,
+      "op": "comb.or",
+      "ssa": "%119",
+      "executable_line": 71,
+      "debug_line": 96,
+      "debug_text": "    %119 = \"comb.or\"(%117, %118) : (i1, i1) -> i1 loc(#loc11)"
+    },
+    {
+      "ordinal": 52,
+      "op": "comb.mux",
+      "ssa": "%120",
+      "executable_line": 72,
+      "debug_line": 97,
+      "debug_text": "    %120 = \"comb.mux\"(%119, %73, %112) : (i1, i6, i6) -> i6 loc(#loc11)"
+    },
+    {
+      "ordinal": 53,
+      "op": "comb.xor",
+      "ssa": "%121",
+      "executable_line": 73,
+      "debug_line": 98,
+      "debug_text": "    %121 = \"comb.xor\"(%117, %70) : (i1, i1) -> i1 loc(#loc12)"
+    },
+    {
+      "ordinal": 54,
+      "op": "comb.and",
+      "ssa": "%122",
+      "executable_line": 74,
+      "debug_line": 99,
+      "debug_text": "    %122 = \"comb.and\"(%121, %114) : (i1, i1) -> i1 loc(#loc12)"
+    },
+    {
+      "ordinal": 55,
+      "op": "comb.mux",
+      "ssa": "%123",
+      "executable_line": 75,
+      "debug_line": 100,
+      "debug_text": "    %123 = \"comb.mux\"(%117, %124, %115) <{twoState}> : (i1, i6, i6) -> i6 loc(#loc11)"
+    },
+    {
+      "ordinal": 56,
+      "op": "seq.firreg",
+      "ssa": "%124",
+      "executable_line": 76,
+      "debug_line": 101,
+      "debug_text": "    %124 = \"seq.firreg\"(%123, %97) <{name = \"wr_ptr\"}> : (i6, !seq.clock) -> i6 loc(#loc11)"
+    },
+    {
+      "ordinal": 57,
+      "op": "comb.mux",
+      "ssa": "%125",
+      "executable_line": 77,
+      "debug_line": 102,
+      "debug_text": "    %125 = \"comb.mux\"(%117, %126, %120) <{twoState}> : (i1, i6, i6) -> i6 loc(#loc47)"
+    },
+    {
+      "ordinal": 58,
+      "op": "seq.firreg",
+      "ssa": "%126",
+      "executable_line": 78,
+      "debug_line": 103,
+      "debug_text": "    %126 = \"seq.firreg\"(%125, %97) <{name = \"wr_ptr_gray\"}> : (i6, !seq.clock) -> i6 loc(#loc47)"
+    },
+    {
+      "ordinal": 59,
+      "op": "comb.xor",
+      "ssa": "%127",
+      "executable_line": 79,
+      "debug_line": 104,
+      "debug_text": "    %127 = \"comb.xor\"(%122, %70) : (i1, i1) -> i1 loc(#loc48)"
+    },
+    {
+      "ordinal": 60,
+      "op": "comb.or",
+      "ssa": "%128",
+      "executable_line": 80,
+      "debug_line": 105,
+      "debug_text": "    %128 = \"comb.or\"(%127, %119) : (i1, i1) -> i1 loc(#loc48)"
+    },
+    {
+      "ordinal": 61,
+      "op": "comb.mux",
+      "ssa": "%129",
+      "executable_line": 81,
+      "debug_line": 106,
+      "debug_text": "    %129 = \"comb.mux\"(%128, %130, %109) <{twoState}> : (i1, !hw.array<32xi10>, !hw.array<32xi10>) -> !hw.array<32xi10> loc(#loc48)"
+    },
+    {
+      "ordinal": 62,
+      "op": "seq.firreg",
+      "ssa": "%130",
+      "executable_line": 82,
+      "debug_line": 107,
+      "debug_text": "    %130 = \"seq.firreg\"(%129, %97) <{name = \"mem\"}> : (!hw.array<32xi10>, !seq.clock) -> !hw.array<32xi10> loc(#loc48)"
+    },
+    {
+      "ordinal": 63,
+      "op": "comb.mux",
+      "ssa": "%131",
+      "executable_line": 83,
+      "debug_line": 108,
+      "debug_text": "    %131 = \"comb.mux\"(%100, %73, %155) : (i1, i6, i6) -> i6 loc(#loc49)"
+    },
+    {
+      "ordinal": 64,
+      "op": "comb.mux",
+      "ssa": "%132",
+      "executable_line": 84,
+      "debug_line": 109,
+      "debug_text": "    %132 = \"comb.mux\"(%100, %73, %133) : (i1, i6, i6) -> i6 loc(#loc49)"
+    },
+    {
+      "ordinal": 65,
+      "op": "seq.firreg",
+      "ssa": "%133",
+      "executable_line": 85,
+      "debug_line": 110,
+      "debug_text": "    %133 = \"seq.firreg\"(%131, %97) <{name = \"rd_ptr_gray_sync1\"}> : (i6, !seq.clock) -> i6 loc(#loc50)"
+    },
+    {
+      "ordinal": 66,
+      "op": "seq.firreg",
+      "ssa": "%134",
+      "executable_line": 86,
+      "debug_line": 111,
+      "debug_text": "    %134 = \"seq.firreg\"(%132, %97) <{name = \"rd_ptr_gray_sync2\"}> : (i6, !seq.clock) -> i6 loc(#loc51)"
+    },
+    {
+      "ordinal": 67,
+      "op": "comb.add",
+      "ssa": "%135",
+      "executable_line": 87,
+      "debug_line": 112,
+      "debug_text": "    %135 = \"comb.add\"(%153, %71) : (i6, i6) -> i6 loc(#loc52)"
+    },
+    {
+      "ordinal": 68,
+      "op": "comb.extract",
+      "ssa": "%136",
+      "executable_line": 88,
+      "debug_line": 113,
+      "debug_text": "    %136 = \"comb.extract\"(%153) <{lowBit = 0 : i32}> : (i6) -> i5 loc(#loc53)"
+    },
+    {
+      "ordinal": 69,
+      "op": "hw.array_get",
+      "ssa": "%137",
+      "executable_line": 89,
+      "debug_line": 114,
+      "debug_text": "    %137 = \"hw.array_get\"(%130, %136) : (!hw.array<32xi10>, i5) -> i10 loc(#loc54)"
+    },
+    {
+      "ordinal": 70,
+      "op": "comb.extract",
+      "ssa": "%138",
+      "executable_line": 90,
+      "debug_line": 115,
+      "debug_text": "    %138 = \"comb.extract\"(%135) <{lowBit = 1 : i32}> : (i6) -> i5 loc(#loc55)"
+    },
+    {
+      "ordinal": 71,
+      "op": "comb.concat",
+      "ssa": "%139",
+      "executable_line": 91,
+      "debug_line": 116,
+      "debug_text": "    %139 = \"comb.concat\"(%74, %138) : (i1, i5) -> i6 loc(#loc55)"
+    },
+    {
+      "ordinal": 72,
+      "op": "comb.xor",
+      "ssa": "%140",
+      "executable_line": 92,
+      "debug_line": 117,
+      "debug_text": "    %140 = \"comb.xor\"(%135, %139) : (i6, i6) -> i6 loc(#loc56)"
+    },
+    {
+      "ordinal": 73,
+      "op": "comb.xor",
+      "ssa": "%141",
+      "executable_line": 93,
+      "debug_line": 118,
+      "debug_text": "    %141 = \"comb.xor\"(%106, %70) : (i1, i1) -> i1 loc(#loc39)"
+    },
+    {
+      "ordinal": 74,
+      "op": "comb.and",
+      "ssa": "%142",
+      "executable_line": 94,
+      "debug_line": 119,
+      "debug_text": "    %142 = \"comb.and\"(%91, %141) : (i1, i1) -> i1 loc(#loc57)"
+    },
+    {
+      "ordinal": 75,
+      "op": "comb.mux",
+      "ssa": "%143",
+      "executable_line": 95,
+      "debug_line": 120,
+      "debug_text": "    %143 = \"comb.mux\"(%142, %135, %73) : (i1, i6, i6) -> i6 loc(#loc58)"
+    },
+    {
+      "ordinal": 76,
+      "op": "comb.xor",
+      "ssa": "%144",
+      "executable_line": 96,
+      "debug_line": 121,
+      "debug_text": "    %144 = \"comb.xor\"(%91, %70) : (i1, i1) -> i1 loc(#loc57)"
+    },
+    {
+      "ordinal": 77,
+      "op": "comb.and",
+      "ssa": "%145",
+      "executable_line": 97,
+      "debug_line": 122,
+      "debug_text": "    %145 = \"comb.and\"(%141, %144) : (i1, i1) -> i1 loc(#loc39)"
+    },
+    {
+      "ordinal": 78,
+      "op": "comb.xor",
+      "ssa": "%146",
+      "executable_line": 98,
+      "debug_line": 123,
+      "debug_text": "    %146 = \"comb.xor\"(%142, %70) : (i1, i1) -> i1 loc(#loc11)"
+    },
+    {
+      "ordinal": 79,
+      "op": "comb.or",
+      "ssa": "%147",
+      "executable_line": 99,
+      "debug_line": 124,
+      "debug_text": "    %147 = \"comb.or\"(%145, %146) : (i1, i1) -> i1 loc(#loc11)"
+    },
+    {
+      "ordinal": 80,
+      "op": "comb.mux",
+      "ssa": "%148",
+      "executable_line": 100,
+      "debug_line": 125,
+      "debug_text": "    %148 = \"comb.mux\"(%147, %73, %140) : (i1, i6, i6) -> i6 loc(#loc11)"
+    },
+    {
+      "ordinal": 81,
+      "op": "comb.mux",
+      "ssa": "%149",
+      "executable_line": 101,
+      "debug_line": 126,
+      "debug_text": "    %149 = \"comb.mux\"(%147, %72, %137) : (i1, i10, i10) -> i10 loc(#loc10)"
+    },
+    {
+      "ordinal": 82,
+      "op": "comb.xor",
+      "ssa": "%150",
+      "executable_line": 102,
+      "debug_line": 127,
+      "debug_text": "    %150 = \"comb.xor\"(%145, %70) : (i1, i1) -> i1 loc(#loc12)"
+    },
+    {
+      "ordinal": 83,
+      "op": "comb.and",
+      "ssa": "%151",
+      "executable_line": 103,
+      "debug_line": 128,
+      "debug_text": "    %151 = \"comb.and\"(%150, %142) : (i1, i1) -> i1 loc(#loc12)"
+    },
+    {
+      "ordinal": 84,
+      "op": "comb.mux",
+      "ssa": "%152",
+      "executable_line": 104,
+      "debug_line": 129,
+      "debug_text": "    %152 = \"comb.mux\"(%145, %153, %143) <{twoState}> : (i1, i6, i6) -> i6 loc(#loc59)"
+    },
+    {
+      "ordinal": 85,
+      "op": "seq.firreg",
+      "ssa": "%153",
+      "executable_line": 105,
+      "debug_line": 130,
+      "debug_text": "    %153 = \"seq.firreg\"(%152, %103) <{name = \"rd_ptr\"}> : (i6, !seq.clock) -> i6 loc(#loc59)"
+    },
+    {
+      "ordinal": 86,
+      "op": "comb.mux",
+      "ssa": "%154",
+      "executable_line": 106,
+      "debug_line": 131,
+      "debug_text": "    %154 = \"comb.mux\"(%145, %155, %148) <{twoState}> : (i1, i6, i6) -> i6 loc(#loc60)"
+    },
+    {
+      "ordinal": 87,
+      "op": "seq.firreg",
+      "ssa": "%155",
+      "executable_line": 107,
+      "debug_line": 132,
+      "debug_text": "    %155 = \"seq.firreg\"(%154, %103) <{name = \"rd_ptr_gray\"}> : (i6, !seq.clock) -> i6 loc(#loc60)"
+    },
+    {
+      "ordinal": 88,
+      "op": "comb.mux",
+      "ssa": "%156",
+      "executable_line": 108,
+      "debug_line": 133,
+      "debug_text": "    %156 = \"comb.mux\"(%151, %149, %157) <{twoState}> : (i1, i10, i10) -> i10 loc(#loc10)"
+    },
+    {
+      "ordinal": 89,
+      "op": "seq.firreg",
+      "ssa": "%157",
+      "executable_line": 109,
+      "debug_line": 134,
+      "debug_text": "    %157 = \"seq.firreg\"(%156, %103) <{name = \"data_out_reg\"}> : (i10, !seq.clock) -> i10 loc(#loc10)"
+    },
+    {
+      "ordinal": 90,
+      "op": "comb.mux",
+      "ssa": "%158",
+      "executable_line": 110,
+      "debug_line": 135,
+      "debug_text": "    %158 = \"comb.mux\"(%106, %73, %126) : (i1, i6, i6) -> i6 loc(#loc61)"
+    },
+    {
+      "ordinal": 91,
+      "op": "comb.mux",
+      "ssa": "%159",
+      "executable_line": 111,
+      "debug_line": 136,
+      "debug_text": "    %159 = \"comb.mux\"(%106, %73, %160) : (i1, i6, i6) -> i6 loc(#loc61)"
+    },
+    {
+      "ordinal": 92,
+      "op": "seq.firreg",
+      "ssa": "%160",
+      "executable_line": 112,
+      "debug_line": 137,
+      "debug_text": "    %160 = \"seq.firreg\"(%158, %103) <{name = \"wr_ptr_gray_sync1\"}> : (i6, !seq.clock) -> i6 loc(#loc62)"
+    },
+    {
+      "ordinal": 93,
+      "op": "seq.firreg",
+      "ssa": "%161",
+      "executable_line": 113,
+      "debug_line": 138,
+      "debug_text": "    %161 = \"seq.firreg\"(%159, %103) <{name = \"wr_ptr_gray_sync2\"}> : (i6, !seq.clock) -> i6 loc(#loc63)"
+    },
+    {
+      "ordinal": 94,
+      "op": "comb.mux",
+      "ssa": "%162",
+      "executable_line": 114,
+      "debug_line": 139,
+      "debug_text": "    %162 = \"comb.mux\"(%89, %90, %164) : (i1, i1, i1) -> i1 loc(#loc64)"
+    },
+    {
+      "ordinal": 95,
+      "op": "comb.and",
+      "ssa": "%163",
+      "executable_line": 115,
+      "debug_line": 140,
+      "debug_text": "    %163 = \"comb.and\"(%141, %162) : (i1, i1) -> i1 loc(#loc12)"
+    },
+    {
+      "ordinal": 96,
+      "op": "seq.firreg",
+      "ssa": "%164",
+      "executable_line": 116,
+      "debug_line": 141,
+      "debug_text": "    %164 = \"seq.firreg\"(%163, %103) <{name = \"output_axis_tvalid_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc65)"
+    },
+    {
+      "ordinal": 97,
+      "op": "hw.output",
+      "ssa": "",
+      "executable_line": 117,
+      "debug_line": 142,
+      "debug_text": "    \"hw.output\"(%86, %94, %164, %92, %93) : (i1, i8, i1, i1, i1) -> () loc(#loc1)"
+    },
+    {
+      "ordinal": 98,
+      "op": "hw.module",
+      "ssa": "",
+      "executable_line": 119,
+      "debug_line": 144,
+      "debug_text": "  \"hw.module\"() <{module_type = !hw.modty<input async_rst : i1, input clk : i1, input input_axis_tdata : i8, input input_axis_tvalid : i1, output input_axis_tready : i1, input input_axis_tlast : i1, input input_axis_tuser : i1, output output_axis_tdata : i8, output output_axis_tvalid : i1, input output_axis_tready : i1, output output_axis_tlast : i1, output output_axis_tuser : i1>, parameters = [], result_locs = [#loc81, #loc82, #loc83, #loc84, #loc85], sym_name = \"axis_fifo_wrapper\"}> ({"
+    },
+    {
+      "ordinal": 99,
+      "op": "hw.constant",
+      "ssa": "%66",
+      "executable_line": 121,
+      "debug_line": 146,
+      "debug_text": "    %66 = \"hw.constant\"() <{value = 0 : i8}> : () -> i8 loc(#loc79)"
+    },
+    {
+      "ordinal": 100,
+      "op": "hw.constant",
+      "ssa": "%67",
+      "executable_line": 122,
+      "debug_line": 147,
+      "debug_text": "    %67 = \"hw.constant\"() <{value = false}> : () -> i1 loc(#loc79)"
+    },
+    {
+      "ordinal": 101,
+      "op": "hw.instance",
+      "ssa": "%68:8",
+      "executable_line": 123,
+      "debug_line": 148,
+      "debug_text": "    %68:8 = \"hw.instance\"(%arg11, %arg10, %arg12, %67, %arg13, %arg14, %66, %66, %arg15, %69#0) <{argNames = [\"clk\", \"rst\", \"s_axis_tdata\", \"s_axis_tkeep\", \"s_axis_tvalid\", \"s_axis_tlast\", \"s_axis_tid\", \"s_axis_tdest\", \"s_axis_tuser\", \"m_axis_tready\"], instanceName = \"axis_reg_inst\", moduleName = @axis_register, parameters = [], resultNames = [\"s_axis_tready\", \"m_axis_tdata\", \"m_axis_tkeep\", \"m_axis_tvalid\", \"m_axis_tlast\", \"m_axis_tid\", \"m_axis_tdest\", \"m_axis_tuser\"]}> {sv.namehint = \"reg_axis_tuser\"} : (i1, i1, i8, i1, i1, i1, i8, i8, i1, i1) -> (i1, i8, i1, i1, i1, i8, i8, i1) loc(#loc79)"
+    },
+    {
+      "ordinal": 102,
+      "op": "hw.instance",
+      "ssa": "%69:5",
+      "executable_line": 124,
+      "debug_line": 149,
+      "debug_text": "    %69:5 = \"hw.instance\"(%arg10, %arg11, %68#1, %68#3, %68#4, %68#7, %arg11, %arg16) <{argNames = [\"async_rst\", \"input_clk\", \"input_axis_tdata\", \"input_axis_tvalid\", \"input_axis_tlast\", \"input_axis_tuser\", \"output_clk\", \"output_axis_tready\"], instanceName = \"UUT\", moduleName = @axis_async_fifo, parameters = [], resultNames = [\"input_axis_tready\", \"output_axis_tdata\", \"output_axis_tvalid\", \"output_axis_tlast\", \"output_axis_tuser\"]}> {sv.namehint = \"reg_axis_tready\"} : (i1, i1, i8, i1, i1, i1, i1, i1) -> (i1, i8, i1, i1, i1) loc(#loc80)"
+    },
+    {
+      "ordinal": 103,
+      "op": "hw.output",
+      "ssa": "",
+      "executable_line": 125,
+      "debug_line": 150,
+      "debug_text": "    \"hw.output\"(%68#0, %69#1, %69#2, %69#3, %69#4) : (i1, i8, i1, i1, i1) -> () loc(#loc71)"
+    },
+    {
+      "ordinal": 104,
+      "op": "hw.module",
+      "ssa": "",
+      "executable_line": 127,
+      "debug_line": 152,
+      "debug_text": "  \"hw.module\"() <{module_type = !hw.modty<input clk : i1, input rst : i1, input s_axis_tdata : i8, input s_axis_tkeep : i1, input s_axis_tvalid : i1, output s_axis_tready : i1, input s_axis_tlast : i1, input s_axis_tid : i8, input s_axis_tdest : i8, input s_axis_tuser : i1, output m_axis_tdata : i8, output m_axis_tkeep : i1, output m_axis_tvalid : i1, input m_axis_tready : i1, output m_axis_tlast : i1, output m_axis_tid : i8, output m_axis_tdest : i8, output m_axis_tuser : i1>, parameters = [], result_locs = [#loc109, #loc110, #loc111, #loc112, #loc113, #loc114, #loc115, #loc116], sym_name = \"axis_register\"}> ({"
+    },
+    {
+      "ordinal": 105,
+      "op": "hw.constant",
+      "ssa": "%0",
+      "executable_line": 129,
+      "debug_line": 154,
+      "debug_text": "    %0 = \"hw.constant\"() <{value = 0 : i8}> : () -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 106,
+      "op": "hw.constant",
+      "ssa": "%1",
+      "executable_line": 130,
+      "debug_line": 155,
+      "debug_text": "    %1 = \"hw.constant\"() <{value = true}> : () -> i1 loc(#loc)"
+    },
+    {
+      "ordinal": 107,
+      "op": "comb.xor",
+      "ssa": "%2",
+      "executable_line": 131,
+      "debug_line": 156,
+      "debug_text": "    %2 = \"comb.xor\"(%41, %1) : (i1, i1) -> i1 loc(#loc98)"
+    },
+    {
+      "ordinal": 108,
+      "op": "comb.xor",
+      "ssa": "%3",
+      "executable_line": 132,
+      "debug_line": 157,
+      "debug_text": "    %3 = \"comb.xor\"(%40, %1) : (i1, i1) -> i1 loc(#loc99)"
+    },
+    {
+      "ordinal": 109,
+      "op": "comb.xor",
+      "ssa": "%4",
+      "executable_line": 133,
+      "debug_line": 158,
+      "debug_text": "    %4 = \"comb.xor\"(%arg4, %1) : (i1, i1) -> i1 loc(#loc100)"
+    },
+    {
+      "ordinal": 110,
+      "op": "comb.or",
+      "ssa": "%5",
+      "executable_line": 134,
+      "debug_line": 159,
+      "debug_text": "    %5 = \"comb.or\"(%3, %4) : (i1, i1) -> i1 loc(#loc101)"
+    },
+    {
+      "ordinal": 111,
+      "op": "comb.and",
+      "ssa": "%6",
+      "executable_line": 135,
+      "debug_line": 160,
+      "debug_text": "    %6 = \"comb.and\"(%2, %5) : (i1, i1) -> i1 loc(#loc102)"
+    },
+    {
+      "ordinal": 112,
+      "op": "comb.or",
+      "ssa": "%7",
+      "executable_line": 136,
+      "debug_line": 161,
+      "debug_text": "    %7 = \"comb.or\"(%arg9, %6) : (i1, i1) -> i1 loc(#loc103)"
+    },
+    {
+      "ordinal": 113,
+      "op": "comb.or",
+      "ssa": "%8",
+      "executable_line": 137,
+      "debug_line": 162,
+      "debug_text": "    %8 = \"comb.or\"(%arg9, %3) : (i1, i1) -> i1 loc(#loc104)"
+    },
+    {
+      "ordinal": 114,
+      "op": "comb.mux",
+      "ssa": "%9",
+      "executable_line": 138,
+      "debug_line": 163,
+      "debug_text": "    %9 = \"comb.mux\"(%arg9, %41, %40) : (i1, i1, i1) -> i1 loc(#loc105)"
+    },
+    {
+      "ordinal": 115,
+      "op": "comb.xor",
+      "ssa": "%10",
+      "executable_line": 139,
+      "debug_line": 164,
+      "debug_text": "    %10 = \"comb.xor\"(%arg9, %1) : (i1, i1) -> i1 loc(#loc106)"
+    },
+    {
+      "ordinal": 116,
+      "op": "comb.and",
+      "ssa": "%11",
+      "executable_line": 140,
+      "debug_line": 165,
+      "debug_text": "    %11 = \"comb.and\"(%10, %41) : (i1, i1) -> i1 loc(#loc106)"
+    },
+    {
+      "ordinal": 117,
+      "op": "comb.mux",
+      "ssa": "%12",
+      "executable_line": 141,
+      "debug_line": 166,
+      "debug_text": "    %12 = \"comb.mux\"(%8, %arg4, %40) : (i1, i1, i1) -> i1 loc(#loc107)"
+    },
+    {
+      "ordinal": 118,
+      "op": "comb.mux",
+      "ssa": "%13",
+      "executable_line": 142,
+      "debug_line": 167,
+      "debug_text": "    %13 = \"comb.mux\"(%8, %41, %arg4) : (i1, i1, i1) -> i1 loc(#loc105)"
+    },
+    {
+      "ordinal": 119,
+      "op": "comb.xor",
+      "ssa": "%14",
+      "executable_line": 143,
+      "debug_line": 168,
+      "debug_text": "    %14 = \"comb.xor\"(%8, %1) : (i1, i1) -> i1 loc(#loc106)"
+    },
+    {
+      "ordinal": 120,
+      "op": "comb.mux",
+      "ssa": "%15",
+      "executable_line": 144,
+      "debug_line": 169,
+      "debug_text": "    %15 = \"comb.mux\"(%39, %12, %9) : (i1, i1, i1) -> i1 loc(#loc107)"
+    },
+    {
+      "ordinal": 121,
+      "op": "comb.mux",
+      "ssa": "%16",
+      "executable_line": 145,
+      "debug_line": 170,
+      "debug_text": "    %16 = \"comb.mux\"(%39, %13, %11) : (i1, i1, i1) -> i1 loc(#loc105)"
+    },
+    {
+      "ordinal": 122,
+      "op": "comb.and",
+      "ssa": "%17",
+      "executable_line": 146,
+      "debug_line": 171,
+      "debug_text": "    %17 = \"comb.and\"(%39, %8) : (i1, i1) -> i1 loc(#loc104)"
+    },
+    {
+      "ordinal": 123,
+      "op": "comb.and",
+      "ssa": "%18",
+      "executable_line": 147,
+      "debug_line": 172,
+      "debug_text": "    %18 = \"comb.and\"(%39, %14) : (i1, i1) -> i1 loc(#loc106)"
+    },
+    {
+      "ordinal": 124,
+      "op": "comb.xor",
+      "ssa": "%19",
+      "executable_line": 148,
+      "debug_line": 173,
+      "debug_text": "    %19 = \"comb.xor\"(%39, %1) : (i1, i1) -> i1 loc(#loc106)"
+    },
+    {
+      "ordinal": 125,
+      "op": "comb.and",
+      "ssa": "%20",
+      "executable_line": 149,
+      "debug_line": 174,
+      "debug_text": "    %20 = \"comb.and\"(%19, %arg9) : (i1, i1) -> i1 loc(#loc106)"
+    },
+    {
+      "ordinal": 126,
+      "op": "comb.xor",
+      "ssa": "%21",
+      "executable_line": 150,
+      "debug_line": 175,
+      "debug_text": "    %21 = \"comb.xor\"(%arg1, %1) : (i1, i1) -> i1 loc(#loc108)"
+    },
+    {
+      "ordinal": 127,
+      "op": "comb.and",
+      "ssa": "%22",
+      "executable_line": 151,
+      "debug_line": 176,
+      "debug_text": "    %22 = \"comb.and\"(%21, %7) : (i1, i1) -> i1 loc(#loc108)"
+    },
+    {
+      "ordinal": 128,
+      "op": "comb.and",
+      "ssa": "%23",
+      "executable_line": 152,
+      "debug_line": 177,
+      "debug_text": "    %23 = \"comb.and\"(%21, %15) : (i1, i1) -> i1 loc(#loc108)"
+    },
+    {
+      "ordinal": 129,
+      "op": "comb.and",
+      "ssa": "%24",
+      "executable_line": 153,
+      "debug_line": 178,
+      "debug_text": "    %24 = \"comb.and\"(%21, %16) : (i1, i1) -> i1 loc(#loc108)"
+    },
+    {
+      "ordinal": 130,
+      "op": "comb.mux",
+      "ssa": "%25",
+      "executable_line": 154,
+      "debug_line": 179,
+      "debug_text": "    %25 = \"comb.mux\"(%20, %55, %0) : (i1, i8, i8) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 131,
+      "op": "comb.and",
+      "ssa": "%26",
+      "executable_line": 155,
+      "debug_line": 180,
+      "debug_text": "    %26 = \"comb.and\"(%20, %57) : (i1, i1) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 132,
+      "op": "comb.and",
+      "ssa": "%27",
+      "executable_line": 156,
+      "debug_line": 181,
+      "debug_text": "    %27 = \"comb.and\"(%20, %59) : (i1, i1) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 133,
+      "op": "comb.mux",
+      "ssa": "%28",
+      "executable_line": 157,
+      "debug_line": 182,
+      "debug_text": "    %28 = \"comb.mux\"(%20, %61, %0) : (i1, i8, i8) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 134,
+      "op": "comb.mux",
+      "ssa": "%29",
+      "executable_line": 158,
+      "debug_line": 183,
+      "debug_text": "    %29 = \"comb.mux\"(%20, %63, %0) : (i1, i8, i8) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 135,
+      "op": "comb.and",
+      "ssa": "%30",
+      "executable_line": 159,
+      "debug_line": 184,
+      "debug_text": "    %30 = \"comb.and\"(%20, %65) : (i1, i1) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 136,
+      "op": "comb.mux",
+      "ssa": "%31",
+      "executable_line": 160,
+      "debug_line": 185,
+      "debug_text": "    %31 = \"comb.mux\"(%17, %arg2, %25) : (i1, i8, i8) -> i8 loc(#loc89)"
+    },
+    {
+      "ordinal": 137,
+      "op": "comb.or",
+      "ssa": "%32",
+      "executable_line": 161,
+      "debug_line": 186,
+      "debug_text": "    %32 = \"comb.or\"(%17, %20) : (i1, i1) -> i1 loc(#loc98)"
+    },
+    {
+      "ordinal": 138,
+      "op": "comb.mux",
+      "ssa": "%33",
+      "executable_line": 162,
+      "debug_line": 187,
+      "debug_text": "    %33 = \"comb.mux\"(%17, %arg3, %26) : (i1, i1, i1) -> i1 loc(#loc90)"
+    },
+    {
+      "ordinal": 139,
+      "op": "comb.mux",
+      "ssa": "%34",
+      "executable_line": 163,
+      "debug_line": 188,
+      "debug_text": "    %34 = \"comb.mux\"(%17, %arg5, %27) : (i1, i1, i1) -> i1 loc(#loc92)"
+    },
+    {
+      "ordinal": 140,
+      "op": "comb.mux",
+      "ssa": "%35",
+      "executable_line": 164,
+      "debug_line": 189,
+      "debug_text": "    %35 = \"comb.mux\"(%17, %arg6, %28) : (i1, i8, i8) -> i8 loc(#loc93)"
+    },
+    {
+      "ordinal": 141,
+      "op": "comb.mux",
+      "ssa": "%36",
+      "executable_line": 165,
+      "debug_line": 190,
+      "debug_text": "    %36 = \"comb.mux\"(%17, %arg7, %29) : (i1, i8, i8) -> i8 loc(#loc94)"
+    },
+    {
+      "ordinal": 142,
+      "op": "comb.mux",
+      "ssa": "%37",
+      "executable_line": 166,
+      "debug_line": 191,
+      "debug_text": "    %37 = \"comb.mux\"(%17, %arg8, %30) : (i1, i1, i1) -> i1 loc(#loc95)"
+    },
+    {
+      "ordinal": 143,
+      "op": "seq.to_clock",
+      "ssa": "%38",
+      "executable_line": 167,
+      "debug_line": 192,
+      "debug_text": "    %38 = \"seq.to_clock\"(%arg0) : (i1) -> !seq.clock loc(#loc97)"
+    },
+    {
+      "ordinal": 144,
+      "op": "seq.firreg",
+      "ssa": "%39",
+      "executable_line": 168,
+      "debug_line": 193,
+      "debug_text": "    %39 = \"seq.firreg\"(%22, %38) <{name = \"genblk1.s_axis_tready_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 145,
+      "op": "seq.firreg",
+      "ssa": "%40",
+      "executable_line": 169,
+      "debug_line": 194,
+      "debug_text": "    %40 = \"seq.firreg\"(%23, %38) <{name = \"genblk1.m_axis_tvalid_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 146,
+      "op": "seq.firreg",
+      "ssa": "%41",
+      "executable_line": 170,
+      "debug_line": 195,
+      "debug_text": "    %41 = \"seq.firreg\"(%24, %38) <{name = \"genblk1.temp_m_axis_tvalid_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 147,
+      "op": "comb.mux",
+      "ssa": "%42",
+      "executable_line": 171,
+      "debug_line": 196,
+      "debug_text": "    %42 = \"comb.mux\"(%32, %31, %43) <{twoState}> : (i1, i8, i8) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 148,
+      "op": "seq.firreg",
+      "ssa": "%43",
+      "executable_line": 172,
+      "debug_line": 197,
+      "debug_text": "    %43 = \"seq.firreg\"(%42, %38) <{name = \"genblk1.m_axis_tdata_reg\"}> : (i8, !seq.clock) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 149,
+      "op": "comb.mux",
+      "ssa": "%44",
+      "executable_line": 173,
+      "debug_line": 198,
+      "debug_text": "    %44 = \"comb.mux\"(%32, %33, %45) <{twoState}> : (i1, i1, i1) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 150,
+      "op": "seq.firreg",
+      "ssa": "%45",
+      "executable_line": 174,
+      "debug_line": 199,
+      "debug_text": "    %45 = \"seq.firreg\"(%44, %38) <{name = \"genblk1.m_axis_tkeep_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 151,
+      "op": "comb.mux",
+      "ssa": "%46",
+      "executable_line": 175,
+      "debug_line": 200,
+      "debug_text": "    %46 = \"comb.mux\"(%32, %34, %47) <{twoState}> : (i1, i1, i1) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 152,
+      "op": "seq.firreg",
+      "ssa": "%47",
+      "executable_line": 176,
+      "debug_line": 201,
+      "debug_text": "    %47 = \"seq.firreg\"(%46, %38) <{name = \"genblk1.m_axis_tlast_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 153,
+      "op": "comb.mux",
+      "ssa": "%48",
+      "executable_line": 177,
+      "debug_line": 202,
+      "debug_text": "    %48 = \"comb.mux\"(%32, %35, %49) <{twoState}> : (i1, i8, i8) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 154,
+      "op": "seq.firreg",
+      "ssa": "%49",
+      "executable_line": 178,
+      "debug_line": 203,
+      "debug_text": "    %49 = \"seq.firreg\"(%48, %38) <{name = \"genblk1.m_axis_tid_reg\"}> : (i8, !seq.clock) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 155,
+      "op": "comb.mux",
+      "ssa": "%50",
+      "executable_line": 179,
+      "debug_line": 204,
+      "debug_text": "    %50 = \"comb.mux\"(%32, %36, %51) <{twoState}> : (i1, i8, i8) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 156,
+      "op": "seq.firreg",
+      "ssa": "%51",
+      "executable_line": 180,
+      "debug_line": 205,
+      "debug_text": "    %51 = \"seq.firreg\"(%50, %38) <{name = \"genblk1.m_axis_tdest_reg\"}> : (i8, !seq.clock) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 157,
+      "op": "comb.mux",
+      "ssa": "%52",
+      "executable_line": 181,
+      "debug_line": 206,
+      "debug_text": "    %52 = \"comb.mux\"(%32, %37, %53) <{twoState}> : (i1, i1, i1) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 158,
+      "op": "seq.firreg",
+      "ssa": "%53",
+      "executable_line": 182,
+      "debug_line": 207,
+      "debug_text": "    %53 = \"seq.firreg\"(%52, %38) <{name = \"genblk1.m_axis_tuser_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 159,
+      "op": "comb.mux",
+      "ssa": "%54",
+      "executable_line": 183,
+      "debug_line": 208,
+      "debug_text": "    %54 = \"comb.mux\"(%18, %arg2, %55) <{twoState}> : (i1, i8, i8) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 160,
+      "op": "seq.firreg",
+      "ssa": "%55",
+      "executable_line": 184,
+      "debug_line": 209,
+      "debug_text": "    %55 = \"seq.firreg\"(%54, %38) <{name = \"genblk1.temp_m_axis_tdata_reg\"}> : (i8, !seq.clock) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 161,
+      "op": "comb.mux",
+      "ssa": "%56",
+      "executable_line": 185,
+      "debug_line": 210,
+      "debug_text": "    %56 = \"comb.mux\"(%18, %arg3, %57) <{twoState}> : (i1, i1, i1) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 162,
+      "op": "seq.firreg",
+      "ssa": "%57",
+      "executable_line": 186,
+      "debug_line": 211,
+      "debug_text": "    %57 = \"seq.firreg\"(%56, %38) <{name = \"genblk1.temp_m_axis_tkeep_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 163,
+      "op": "comb.mux",
+      "ssa": "%58",
+      "executable_line": 187,
+      "debug_line": 212,
+      "debug_text": "    %58 = \"comb.mux\"(%18, %arg5, %59) <{twoState}> : (i1, i1, i1) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 164,
+      "op": "seq.firreg",
+      "ssa": "%59",
+      "executable_line": 188,
+      "debug_line": 213,
+      "debug_text": "    %59 = \"seq.firreg\"(%58, %38) <{name = \"genblk1.temp_m_axis_tlast_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 165,
+      "op": "comb.mux",
+      "ssa": "%60",
+      "executable_line": 189,
+      "debug_line": 214,
+      "debug_text": "    %60 = \"comb.mux\"(%18, %arg6, %61) <{twoState}> : (i1, i8, i8) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 166,
+      "op": "seq.firreg",
+      "ssa": "%61",
+      "executable_line": 190,
+      "debug_line": 215,
+      "debug_text": "    %61 = \"seq.firreg\"(%60, %38) <{name = \"genblk1.temp_m_axis_tid_reg\"}> : (i8, !seq.clock) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 167,
+      "op": "comb.mux",
+      "ssa": "%62",
+      "executable_line": 191,
+      "debug_line": 216,
+      "debug_text": "    %62 = \"comb.mux\"(%18, %arg7, %63) <{twoState}> : (i1, i8, i8) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 168,
+      "op": "seq.firreg",
+      "ssa": "%63",
+      "executable_line": 192,
+      "debug_line": 217,
+      "debug_text": "    %63 = \"seq.firreg\"(%62, %38) <{name = \"genblk1.temp_m_axis_tdest_reg\"}> : (i8, !seq.clock) -> i8 loc(#loc97)"
+    },
+    {
+      "ordinal": 169,
+      "op": "comb.mux",
+      "ssa": "%64",
+      "executable_line": 193,
+      "debug_line": 218,
+      "debug_text": "    %64 = \"comb.mux\"(%18, %arg8, %65) <{twoState}> : (i1, i1, i1) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 170,
+      "op": "seq.firreg",
+      "ssa": "%65",
+      "executable_line": 194,
+      "debug_line": 219,
+      "debug_text": "    %65 = \"seq.firreg\"(%64, %38) <{name = \"genblk1.temp_m_axis_tuser_reg\"}> : (i1, !seq.clock) -> i1 loc(#loc97)"
+    },
+    {
+      "ordinal": 171,
+      "op": "hw.output",
+      "ssa": "",
+      "executable_line": 195,
+      "debug_line": 220,
+      "debug_text": "    \"hw.output\"(%39, %43, %1, %40, %47, %0, %0, %53) : (i1, i8, i1, i1, i1, i8, i8, i1) -> () loc(#loc86)"
+    }
+  ]
+}

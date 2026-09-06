@@ -1,0 +1,801 @@
+{
+  "source_case_id": "D13",
+  "variant_id": "d13",
+  "protocol": "external-cli-double-eval-vcd-v1",
+  "status": "pass",
+  "backends": {
+    "golden_native": {
+      "status": "pass",
+      "status_meaning": "原生构建和执行完成；尚未判定 oracle",
+      "samples": [
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 1,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 2,
+          "frame_len_valid": 1
+        },
+        {
+          "frame_len": 1,
+          "frame_len_valid": 1
+        }
+      ],
+      "rows": [
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 1,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 2,
+          "frame_len_valid": 1
+        },
+        {
+          "frame_len": 1,
+          "frame_len_valid": 1
+        }
+      ],
+      "sample_count": 6,
+      "event_count": 11,
+      "vcd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/native/trace.vcd",
+      "vcd_sha256": "81a3302fdc1113c0eb7c3ccc817aa0de0778454e3ae5436466b2093c61c1b5bd",
+      "vcd_top": "TOP",
+      "stimulus_json": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/native/stimulus.json",
+      "output_csv": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/native/output.csv",
+      "timings": {
+        "build": 5.734511292001116,
+        "execution": 0.4355464580003172,
+        "read_compare": 0.0011686249999911524
+      },
+      "versions": {
+        "verilator": "Verilator 5.048 2026-04-26 rev vUNKNOWN-built20260426",
+        "verilator_path": "/opt/homebrew/bin/verilator"
+      },
+      "sampling_contract": {
+        "sample_phase": "low_before_posedge_pre_NBA",
+        "vcd_sample_phase": "every_event_after_eval",
+        "clock": "clk",
+        "events": "每行 drive(clk=0, inputs) -> eval -> dump VCD 并读取 CSV；除最后一行外 drive(clk=1, 相同 inputs) -> eval -> dump VCD",
+        "event_count": 11,
+        "vcd_timescale": "1ns",
+        "vcd_top": "TOP",
+        "initialization": "Verilator 二态未初始化值为 0；保留 RTL 显式 initial/声明初始化，不额外插入 reset",
+        "unknown_values": "原生 --x-initial 0/--x-assign 0；CSV 输入禁止 None/X/Z；输出 mask 由独立 oracle 比较处理",
+        "time": "第 i 行 low 时间为 2*i ns，随后 high 为 (2*i+1) ns；最后一行只提交 low；无延迟 DUT 的精度统一为 1ns",
+        "limitation": "低电平先更新输入再观察；组合输出可能不同于原 TB 输入 NBA 更新前的观测，须逐例核对原生 oracle",
+        "inputs": [
+          {
+            "name": "clk",
+            "width": 1
+          },
+          {
+            "name": "rst",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tkeep",
+            "width": 8
+          },
+          {
+            "name": "monitor_axis_tvalid",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tready",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tlast",
+            "width": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "frame_len",
+            "width": 16
+          },
+          {
+            "name": "frame_len_valid",
+            "width": 1
+          }
+        ],
+        "manifest_initialization": {
+          "mode": "rtl_initial_plus_two_state_zero",
+          "uninitialized_register_value": 0,
+          "four_state_equivalence_claimed": false,
+          "evidence": [
+            "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。"
+          ]
+        }
+      },
+      "oracle": {
+        "agrees": true,
+        "compared_cells": 12,
+        "masked_cells": 0,
+        "first_mismatch": null,
+        "mismatches": []
+      }
+    },
+    "golden_k": {
+      "schema_version": 1,
+      "package_version": "0.1.0",
+      "kframework_version": "7.1.323",
+      "api_sha256": "40e6b398d06f6dff1ecdba85819330b54006a0d46aedaa0474613ac451a211cd",
+      "simulator_sha256": "7ad752d4c2137fc6fdf113bbbc6b2d73841929fdd10fa7694ffe1d01434cecc3",
+      "status": "pass",
+      "stage": "complete",
+      "top_module": "axis_frame_len",
+      "input_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-frame-len-d13/mlir/d13/golden/design.generic.mlir",
+      "inputs_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/test_data.json",
+      "vcd_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/kimulator/test.vcd",
+      "work_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/kimulator/simulation",
+      "evaluations_per_input": 2,
+      "events_completed": 11,
+      "simulation_calls": 22,
+      "simulation_calls_attempted": 22,
+      "timings": {
+        "compile": 0.3887839580020227,
+        "preprocess": 0.8852568330003123,
+        "setup": 0.24037358300120104,
+        "execution": 6.3100536259989894,
+        "read_ports": 0.007839083009457681,
+        "state_export": 0.06021058400438051,
+        "total": 7.91854154199973
+      },
+      "error": null,
+      "input_sha256": "b969b26ac96b8511e35af2bb47369172130ebef9f6e873c92404a9689dcff031",
+      "inputs_sha256": "f2d7ab20089870a6903e6d3997dc293239806a306e470a09f2e89fb9b11e8d68",
+      "ports": {
+        "inputs": [
+          {
+            "name": "clk",
+            "width": 1
+          },
+          {
+            "name": "rst",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tkeep",
+            "width": 8
+          },
+          {
+            "name": "monitor_axis_tvalid",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tready",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tlast",
+            "width": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "frame_len",
+            "width": 16
+          },
+          {
+            "name": "frame_len_valid",
+            "width": 1
+          }
+        ]
+      },
+      "timescale": "1ns",
+      "events_total": 11,
+      "definition_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "definition_sha256": "08ac54e383967aa9aa7ba218cd0148e2b4d3f19dea67ddab33f120d661854e2b",
+      "parser": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/parser",
+      "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+      "event_index": 10,
+      "event_time": 10,
+      "evaluation": 2,
+      "vcd_sha256": "e626fa9d489bade54926ab6b9bd10fe4b7d1544bf2f7a7e1699b767370d175c8",
+      "last_state": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/kimulator/simulation/last-state.kore",
+      "last_state_sha256": "182ca3baa9ad421d92b8339b144299b08e66c74d94a7e0c159f4a2f77a7321f8",
+      "vcd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/kimulator/test.vcd",
+      "vcd_top": "axis_frame_len",
+      "native_comparison": {
+        "agrees": true,
+        "exit_code": 0,
+        "compared_signals": 8,
+        "event_count": 11,
+        "first_mismatch": null,
+        "errors": [],
+        "artifacts": {
+          "kimulator_vcd": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/kimulator/test.vcd",
+            "sha256": "e626fa9d489bade54926ab6b9bd10fe4b7d1544bf2f7a7e1699b767370d175c8",
+            "bytes": 1066
+          },
+          "native_vcd": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/native/trace.vcd",
+            "sha256": "81a3302fdc1113c0eb7c3ccc817aa0de0778454e3ae5436466b2093c61c1b5bd",
+            "bytes": 1986
+          },
+          "preflight": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/comparison/preflight.json",
+            "sha256": "de65f0d3b911de4eef2cb42b23363dadd523240506b15395d631493cd8b0c7be",
+            "bytes": 638
+          },
+          "diffvcd_script": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+            "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+            "bytes": 6040
+          },
+          "command": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/comparison/diffvcd.command.json",
+            "sha256": "2a566cd968834fa1362b7de375a7d542e9f0c072072607eca1dc41ab71593347",
+            "bytes": 919
+          },
+          "stdout": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/comparison/diffvcd.stdout.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          },
+          "stderr": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/comparison/diffvcd.stderr.log",
+            "sha256": "57e063e9f714d51530532b12c2cad71b765ba6365f7a26bac488142e396e3325",
+            "bytes": 429
+          }
+        },
+        "normalization": {
+          "policy": "scalar-equals-i1-zero-range-v1",
+          "applied": false,
+          "mappings": []
+        },
+        "command": [
+          "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+          "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+          "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/kimulator/test.vcd",
+          "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/native/trace.vcd",
+          "--top1",
+          "axis_frame_len.",
+          "--top2",
+          "TOP.",
+          "--filter",
+          "^(?:clk|rst|monitor_axis_tkeep\\[7:0\\]|monitor_axis_tvalid|monitor_axis_tready|monitor_axis_tlast|frame_len\\[15:0\\]|frame_len_valid)$",
+          "--verbose"
+        ]
+      },
+      "samples": [
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 1,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 2,
+          "frame_len_valid": 1
+        },
+        {
+          "frame_len": 1,
+          "frame_len_valid": 1
+        }
+      ],
+      "oracle": {
+        "agrees": true,
+        "compared_cells": 12,
+        "masked_cells": 0,
+        "first_mismatch": null,
+        "mismatches": []
+      }
+    },
+    "buggy_native": {
+      "status": "oracle_mismatch",
+      "status_meaning": "原生构建和执行完成；尚未判定 oracle",
+      "samples": [
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 1,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 2,
+          "frame_len_valid": 1
+        },
+        {
+          "frame_len": 3,
+          "frame_len_valid": 1
+        }
+      ],
+      "rows": [
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 1,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 2,
+          "frame_len_valid": 1
+        },
+        {
+          "frame_len": 3,
+          "frame_len_valid": 1
+        }
+      ],
+      "sample_count": 6,
+      "event_count": 11,
+      "vcd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/native/trace.vcd",
+      "vcd_sha256": "0558b9c4a5e7a003ba15c4df33169aaa3d0087b15a777970374c467c7974eab2",
+      "vcd_top": "TOP",
+      "stimulus_json": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/native/stimulus.json",
+      "output_csv": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/native/output.csv",
+      "timings": {
+        "build": 5.024250499998743,
+        "execution": 0.43776654099929146,
+        "read_compare": 0.0012012500010314398
+      },
+      "versions": {
+        "verilator": "Verilator 5.048 2026-04-26 rev vUNKNOWN-built20260426",
+        "verilator_path": "/opt/homebrew/bin/verilator"
+      },
+      "sampling_contract": {
+        "sample_phase": "low_before_posedge_pre_NBA",
+        "vcd_sample_phase": "every_event_after_eval",
+        "clock": "clk",
+        "events": "每行 drive(clk=0, inputs) -> eval -> dump VCD 并读取 CSV；除最后一行外 drive(clk=1, 相同 inputs) -> eval -> dump VCD",
+        "event_count": 11,
+        "vcd_timescale": "1ns",
+        "vcd_top": "TOP",
+        "initialization": "Verilator 二态未初始化值为 0；保留 RTL 显式 initial/声明初始化，不额外插入 reset",
+        "unknown_values": "原生 --x-initial 0/--x-assign 0；CSV 输入禁止 None/X/Z；输出 mask 由独立 oracle 比较处理",
+        "time": "第 i 行 low 时间为 2*i ns，随后 high 为 (2*i+1) ns；最后一行只提交 low；无延迟 DUT 的精度统一为 1ns",
+        "limitation": "低电平先更新输入再观察；组合输出可能不同于原 TB 输入 NBA 更新前的观测，须逐例核对原生 oracle",
+        "inputs": [
+          {
+            "name": "clk",
+            "width": 1
+          },
+          {
+            "name": "rst",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tkeep",
+            "width": 8
+          },
+          {
+            "name": "monitor_axis_tvalid",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tready",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tlast",
+            "width": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "frame_len",
+            "width": 16
+          },
+          {
+            "name": "frame_len_valid",
+            "width": 1
+          }
+        ],
+        "manifest_initialization": {
+          "mode": "rtl_initial_plus_two_state_zero",
+          "uninitialized_register_value": 0,
+          "four_state_equivalence_claimed": false,
+          "evidence": [
+            "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。"
+          ]
+        }
+      },
+      "oracle": {
+        "agrees": false,
+        "compared_cells": 12,
+        "masked_cells": 0,
+        "first_mismatch": {
+          "sample_index": 5,
+          "signal": "frame_len",
+          "expected": 1,
+          "actual": 3
+        },
+        "mismatches": [
+          {
+            "sample_index": 5,
+            "signal": "frame_len",
+            "expected": 1,
+            "actual": 3
+          }
+        ]
+      }
+    },
+    "buggy_k": {
+      "schema_version": 1,
+      "package_version": "0.1.0",
+      "kframework_version": "7.1.323",
+      "api_sha256": "40e6b398d06f6dff1ecdba85819330b54006a0d46aedaa0474613ac451a211cd",
+      "simulator_sha256": "7ad752d4c2137fc6fdf113bbbc6b2d73841929fdd10fa7694ffe1d01434cecc3",
+      "status": "oracle_mismatch",
+      "stage": "complete",
+      "top_module": "axis_frame_len",
+      "input_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-frame-len-d13/mlir/d13/buggy/design.generic.mlir",
+      "inputs_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/test_data.json",
+      "vcd_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/kimulator/test.vcd",
+      "work_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/kimulator/simulation",
+      "evaluations_per_input": 2,
+      "events_completed": 11,
+      "simulation_calls": 22,
+      "simulation_calls_attempted": 22,
+      "timings": {
+        "compile": 0.020700417000625748,
+        "preprocess": 0.4039142500005255,
+        "setup": 0.342178041999432,
+        "execution": 7.4043496689992025,
+        "read_ports": 0.009740914996655192,
+        "state_export": 0.06235183100216091,
+        "total": 8.269841790999635
+      },
+      "error": null,
+      "input_sha256": "ca9074a35d5c416a874dc916fcd66ab7e68cdeb75ceab9f9a6a9822a7723c5aa",
+      "inputs_sha256": "f2d7ab20089870a6903e6d3997dc293239806a306e470a09f2e89fb9b11e8d68",
+      "ports": {
+        "inputs": [
+          {
+            "name": "clk",
+            "width": 1
+          },
+          {
+            "name": "rst",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tkeep",
+            "width": 8
+          },
+          {
+            "name": "monitor_axis_tvalid",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tready",
+            "width": 1
+          },
+          {
+            "name": "monitor_axis_tlast",
+            "width": 1
+          }
+        ],
+        "outputs": [
+          {
+            "name": "frame_len",
+            "width": 16
+          },
+          {
+            "name": "frame_len_valid",
+            "width": 1
+          }
+        ]
+      },
+      "timescale": "1ns",
+      "events_total": 11,
+      "definition_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "definition_sha256": "08ac54e383967aa9aa7ba218cd0148e2b4d3f19dea67ddab33f120d661854e2b",
+      "parser": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/parser",
+      "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+      "event_index": 10,
+      "event_time": 10,
+      "evaluation": 2,
+      "vcd_sha256": "d1bf3430fc0b51c4574a891e54a693c5f9dc5bd7439ea420e35692f059d8511f",
+      "last_state": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/kimulator/simulation/last-state.kore",
+      "last_state_sha256": "4a7de0c26dc7fc92dedd68af647487ed6c08b3e9ae21b95b1d53107818985c28",
+      "vcd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/kimulator/test.vcd",
+      "vcd_top": "axis_frame_len",
+      "native_comparison": {
+        "agrees": true,
+        "exit_code": 0,
+        "compared_signals": 8,
+        "event_count": 11,
+        "first_mismatch": null,
+        "errors": [],
+        "artifacts": {
+          "kimulator_vcd": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/kimulator/test.vcd",
+            "sha256": "d1bf3430fc0b51c4574a891e54a693c5f9dc5bd7439ea420e35692f059d8511f",
+            "bytes": 1066
+          },
+          "native_vcd": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/native/trace.vcd",
+            "sha256": "0558b9c4a5e7a003ba15c4df33169aaa3d0087b15a777970374c467c7974eab2",
+            "bytes": 2006
+          },
+          "preflight": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/comparison/preflight.json",
+            "sha256": "de65f0d3b911de4eef2cb42b23363dadd523240506b15395d631493cd8b0c7be",
+            "bytes": 638
+          },
+          "diffvcd_script": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+            "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+            "bytes": 6040
+          },
+          "command": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/comparison/diffvcd.command.json",
+            "sha256": "982ec12883f9dd4dae364aa8fd73a819f370756343da18de5705bb9859c9fc61",
+            "bytes": 916
+          },
+          "stdout": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/comparison/diffvcd.stdout.log",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "bytes": 0
+          },
+          "stderr": {
+            "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/comparison/diffvcd.stderr.log",
+            "sha256": "57e063e9f714d51530532b12c2cad71b765ba6365f7a26bac488142e396e3325",
+            "bytes": 429
+          }
+        },
+        "normalization": {
+          "policy": "scalar-equals-i1-zero-range-v1",
+          "applied": false,
+          "mappings": []
+        },
+        "command": [
+          "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+          "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+          "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/kimulator/test.vcd",
+          "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/native/trace.vcd",
+          "--top1",
+          "axis_frame_len.",
+          "--top2",
+          "TOP.",
+          "--filter",
+          "^(?:clk|rst|monitor_axis_tkeep\\[7:0\\]|monitor_axis_tvalid|monitor_axis_tready|monitor_axis_tlast|frame_len\\[15:0\\]|frame_len_valid)$",
+          "--verbose"
+        ]
+      },
+      "samples": [
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 0,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 1,
+          "frame_len_valid": 0
+        },
+        {
+          "frame_len": 2,
+          "frame_len_valid": 1
+        },
+        {
+          "frame_len": 3,
+          "frame_len_valid": 1
+        }
+      ],
+      "oracle": {
+        "agrees": false,
+        "compared_cells": 12,
+        "masked_cells": 0,
+        "first_mismatch": {
+          "sample_index": 5,
+          "signal": "frame_len",
+          "expected": 1,
+          "actual": 3
+        },
+        "mismatches": [
+          {
+            "sample_index": 5,
+            "signal": "frame_len",
+            "expected": 1,
+            "actual": 3
+          }
+        ]
+      }
+    }
+  },
+  "waveform_comparisons": {
+    "golden": {
+      "agrees": true,
+      "exit_code": 0,
+      "compared_signals": 8,
+      "event_count": 11,
+      "first_mismatch": null,
+      "errors": [],
+      "artifacts": {
+        "kimulator_vcd": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/kimulator/test.vcd",
+          "sha256": "e626fa9d489bade54926ab6b9bd10fe4b7d1544bf2f7a7e1699b767370d175c8",
+          "bytes": 1066
+        },
+        "native_vcd": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/native/trace.vcd",
+          "sha256": "81a3302fdc1113c0eb7c3ccc817aa0de0778454e3ae5436466b2093c61c1b5bd",
+          "bytes": 1986
+        },
+        "preflight": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/comparison/preflight.json",
+          "sha256": "de65f0d3b911de4eef2cb42b23363dadd523240506b15395d631493cd8b0c7be",
+          "bytes": 638
+        },
+        "diffvcd_script": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+          "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+          "bytes": 6040
+        },
+        "command": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/comparison/diffvcd.command.json",
+          "sha256": "2a566cd968834fa1362b7de375a7d542e9f0c072072607eca1dc41ab71593347",
+          "bytes": 919
+        },
+        "stdout": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/comparison/diffvcd.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/comparison/diffvcd.stderr.log",
+          "sha256": "57e063e9f714d51530532b12c2cad71b765ba6365f7a26bac488142e396e3325",
+          "bytes": 429
+        }
+      },
+      "normalization": {
+        "policy": "scalar-equals-i1-zero-range-v1",
+        "applied": false,
+        "mappings": []
+      },
+      "command": [
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/kimulator/test.vcd",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/golden/native/trace.vcd",
+        "--top1",
+        "axis_frame_len.",
+        "--top2",
+        "TOP.",
+        "--filter",
+        "^(?:clk|rst|monitor_axis_tkeep\\[7:0\\]|monitor_axis_tvalid|monitor_axis_tready|monitor_axis_tlast|frame_len\\[15:0\\]|frame_len_valid)$",
+        "--verbose"
+      ]
+    },
+    "buggy": {
+      "agrees": true,
+      "exit_code": 0,
+      "compared_signals": 8,
+      "event_count": 11,
+      "first_mismatch": null,
+      "errors": [],
+      "artifacts": {
+        "kimulator_vcd": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/kimulator/test.vcd",
+          "sha256": "d1bf3430fc0b51c4574a891e54a693c5f9dc5bd7439ea420e35692f059d8511f",
+          "bytes": 1066
+        },
+        "native_vcd": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/native/trace.vcd",
+          "sha256": "0558b9c4a5e7a003ba15c4df33169aaa3d0087b15a777970374c467c7974eab2",
+          "bytes": 2006
+        },
+        "preflight": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/comparison/preflight.json",
+          "sha256": "de65f0d3b911de4eef2cb42b23363dadd523240506b15395d631493cd8b0c7be",
+          "bytes": 638
+        },
+        "diffvcd_script": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+          "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+          "bytes": 6040
+        },
+        "command": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/comparison/diffvcd.command.json",
+          "sha256": "982ec12883f9dd4dae364aa8fd73a819f370756343da18de5705bb9859c9fc61",
+          "bytes": 916
+        },
+        "stdout": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/comparison/diffvcd.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/comparison/diffvcd.stderr.log",
+          "sha256": "57e063e9f714d51530532b12c2cad71b765ba6365f7a26bac488142e396e3325",
+          "bytes": 429
+        }
+      },
+      "normalization": {
+        "policy": "scalar-equals-i1-zero-range-v1",
+        "applied": false,
+        "mappings": []
+      },
+      "command": [
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/kimulator/test.vcd",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13/buggy/native/trace.vcd",
+        "--top1",
+        "axis_frame_len.",
+        "--top2",
+        "TOP.",
+        "--filter",
+        "^(?:clk|rst|monitor_axis_tkeep\\[7:0\\]|monitor_axis_tvalid|monitor_axis_tready|monitor_axis_tlast|frame_len\\[15:0\\]|frame_len_valid)$",
+        "--verbose"
+      ]
+    }
+  },
+  "samples": 6,
+  "vcd_events": 11,
+  "golden_native_oracle": true,
+  "golden_k_oracle": true,
+  "buggy_k_native": true,
+  "simulator_agrees_with_native": true,
+  "bug_detected_by_oracle": true,
+  "first_bug_difference": {
+    "sample_index": 5,
+    "signal": "frame_len",
+    "expected": 1,
+    "actual": 3
+  }
+}

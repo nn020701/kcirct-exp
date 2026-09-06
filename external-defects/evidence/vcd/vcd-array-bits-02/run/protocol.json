@@ -1,0 +1,8 @@
+{
+  "name": "external-cli-double-eval-vcd-v1",
+  "evaluations_per_input": 2,
+  "vcd_sampling": "每个低/高输入事件",
+  "main_comparison": "全部顶层输入输出的 VCD diff",
+  "auxiliary_oracle": "上游 CSV 的低电平采样",
+  "component_boundary": "公开 CLI 的文件、参数、退出码；实验进程不导入 kcirct/pyk"
+}

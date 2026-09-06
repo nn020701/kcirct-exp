@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "description": "采用 arc_test 的直接 KCIRCT 调度方式独立诊断；compile/preprocess/setup 各一次，每个输入双执行并逐次换槽后dump。178个状态与正式新CLI逐字节相同，首次连接变化仍在event84/eval2。此材料不属于正式runner进程边界，也未改变其VCD观察。",
+  "command_record_scope": "pipeline-calls 记录直接 API 调用参数；states.json 的 expected_command 保留原字段，表示由生产调用约定导出的命令，不改称独立捕获的子进程日志。",
+  "state_policy": "只保存178份状态的哈希索引和对照结果，不重复复制与正式CLI逐字节相同的所有状态。",
+  "artifacts": {
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/run_arc_protocol.py": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/run_arc_protocol.py",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/run_arc_protocol.py",
+      "sha256": "93e32234596a5751be7f6ba40dd5c91fdf74b32a50b1d1fa5fd395d775ed6d6d",
+      "bytes": 7388
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/results.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/results.json",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/results.json",
+      "sha256": "5976a3ff65209d86aef2be835804e6cc74ba9e9cfdb96f50e8ab6cbfa85def15",
+      "bytes": 8548
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/pipeline-calls.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/pipeline-calls.json",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/pipeline-calls.json",
+      "sha256": "7ded405ce000e29eddabf79a1e876e8955eb1df9bd0686875fdd52418db13278",
+      "bytes": 1479
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/states.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/states.json",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/states.json",
+      "sha256": "1a66c7e6c29f62f6d29c24d0ad9358a76e2245f347cd3361f8675f9f294fd6b0",
+      "bytes": 201685
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/arc-events.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/arc-events.json",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/arc-events.json",
+      "sha256": "e3c053c16f9b75462046673ca56d0af6e68e98b24ca792188de010f8ff85ecc1",
+      "bytes": 15212
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/state.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/state.json",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/state.json",
+      "sha256": "f1ffbbab0865c935cee730c53ebcded9392b5ab1d0fc8f1761eb790f4df7692d",
+      "bytes": 739
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/kcirct.vcd": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/kcirct.vcd",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/kcirct.vcd",
+      "sha256": "10d296ed237602e0c30732c89b7dc69cc699271c7947a482c3e9166c663656a1",
+      "bytes": 6124
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/reference/arc_test.py": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/reference/arc_test.py",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/tests/integration/arc_test.py",
+      "sha256": "c98ec7e980a1b1e9ce0079ecc1c3509b31994fce3b7fd139d99c97942bc026ad",
+      "bytes": 21329
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-cli/diffvcd.stdout.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-cli/diffvcd.stdout.log",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/comparison-cli/diffvcd.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-cli/diffvcd.command.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-cli/diffvcd.command.json",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/comparison-cli/diffvcd.command.json",
+      "sha256": "1dfa726c9cc54e687e878e44071e17a591093c7117fc543a3da86e4c2d11f908",
+      "bytes": 936
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-cli/diffvcd.stderr.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-cli/diffvcd.stderr.log",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/comparison-cli/diffvcd.stderr.log",
+      "sha256": "e90af06832db3db6171859e5ab274483116d388d4ba54a8f8b55ba370c0753e8",
+      "bytes": 416
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-cli/preflight.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-cli/preflight.json",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/comparison-cli/preflight.json",
+      "sha256": "feb60e7a90607d20c271993eace85f04c7a96457b28773b29cbc9249e8ac9a6d",
+      "bytes": 1197
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/references/cli/test.vcd": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/references/cli/test.vcd",
+      "source": ".runs/vcd-complete-02/s2/golden/kimulator/test.vcd",
+      "sha256": "10d296ed237602e0c30732c89b7dc69cc699271c7947a482c3e9166c663656a1",
+      "bytes": 6124
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/references/cli/diffvcd.py": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/references/cli/diffvcd.py",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+      "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+      "bytes": 6040
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-native/diffvcd.stdout.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-native/diffvcd.stdout.log",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/comparison-native/diffvcd.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-native/diffvcd.command.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-native/diffvcd.command.json",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/comparison-native/diffvcd.command.json",
+      "sha256": "eaaed0eeb63133c1abc9691cdfdcc56aa4dc164bf9aaf4dffe3268d91588d6c3",
+      "bytes": 923
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-native/diffvcd.stderr.log": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-native/diffvcd.stderr.log",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/comparison-native/diffvcd.stderr.log",
+      "sha256": "374f74c07fa770c35477e92405dbe6f81778cae38b21dbe0de23cb41fcfc29dc",
+      "bytes": 404
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-native/preflight.json": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/comparison-native/preflight.json",
+      "source": ".work/complete-exp/s2-arc-protocol-audit/comparison-native/preflight.json",
+      "sha256": "feb60e7a90607d20c271993eace85f04c7a96457b28773b29cbc9249e8ac9a6d",
+      "bytes": 1197
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/references/native/trace.vcd": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/references/native/trace.vcd",
+      "source": ".runs/vcd-complete-02/s2/golden/native/trace.vcd",
+      "sha256": "ad2d9f0edefe2b38895c15845f8cd9f94b8fa9ce38745509444ff210deba53be",
+      "bytes": 3000
+    },
+    "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/references/native/diffvcd.py": {
+      "path": "evidence/vcd/metadata-integrity/vcd-complete-02/arc-protocol/references/native/diffvcd.py",
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+      "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+      "bytes": 6040
+    }
+  }
+}

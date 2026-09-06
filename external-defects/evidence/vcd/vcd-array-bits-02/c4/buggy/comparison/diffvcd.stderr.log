@@ -1,0 +1,20 @@
+12 signals in first file
+149 signals in second file
+12 signals under `axis_fifo_wrapper.` in first file
+149 signals under `TOP.` in second file
+12 common signals
+12 filtered and unignored signals
+Reading first file
+Reading second file
+Comparing async_rst
+Comparing clk
+Comparing input_axis_tdata[7:0]
+Comparing input_axis_tlast
+Comparing input_axis_tready
+Comparing input_axis_tuser
+Comparing input_axis_tvalid
+Comparing output_axis_tdata[7:0]
+Comparing output_axis_tlast
+Comparing output_axis_tready
+Comparing output_axis_tuser
+Comparing output_axis_tvalid

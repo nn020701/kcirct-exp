@@ -1,0 +1,39 @@
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 's_axis_tkeep'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo.v:61:35: ... Location of port declaration
+   61 |     input  wire [KEEP_WIDTH-1:0]  s_axis_tkeep,
+      |                                   ^~~~~~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.048
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 's_axis_tid'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo.v:65:35: ... Location of port declaration
+   65 |     input  wire [ID_WIDTH-1:0]    s_axis_tid,
+      |                                   ^~~~~~~~~~
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 's_axis_tdest'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo.v:66:35: ... Location of port declaration
+   66 |     input  wire [DEST_WIDTH-1:0]  s_axis_tdest,
+      |                                   ^~~~~~~~~~~~
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 'm_axis_tkeep'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo.v:73:35: ... Location of port declaration
+   73 |     output wire [KEEP_WIDTH-1:0]  m_axis_tkeep,
+      |                                   ^~~~~~~~~~~~
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 'm_axis_tid'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo.v:77:35: ... Location of port declaration
+   77 |     output wire [ID_WIDTH-1:0]    m_axis_tid,
+      |                                   ^~~~~~~~~~
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 'm_axis_tdest'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo.v:78:35: ... Location of port declaration
+   78 |     output wire [DEST_WIDTH-1:0]  m_axis_tdest,
+      |                                   ^~~~~~~~~~~~
+ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@17/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@17/17.0.6/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly

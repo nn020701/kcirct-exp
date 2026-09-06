@@ -1,0 +1,474 @@
+{
+  "schema_version": 1,
+  "trace": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/hint-depth-943/trace.hint",
+    "sha256": "4e7dfea755cdbf8abcbd52d2c9021d9a9991b43e6882535ba8b72b1f490ff9e7",
+    "bytes": 194023008
+  },
+  "definition": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition/definition.kore",
+    "sha256": "2e764798f82f315074b07b81e4bb922661556d785ca5a9ff8f7bb7f6951ed119",
+    "bytes": 2589497
+  },
+  "header": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/header.bin",
+    "sha256": "6832ee06aa335054f3d081bf24247819c47589952905ded613d31a906a5833a8",
+    "bytes": 52472
+  },
+  "format_version": 13,
+  "streaming": true,
+  "event_count": 7339,
+  "counts": {
+    "LLVMHookEvent": 3272,
+    "configuration": 944,
+    "LLVMRuleEvent": 1513,
+    "LLVMFunctionEvent": 570,
+    "LLVMFunctionExitEvent": 570,
+    "LLVMSideConditionEventEnter": 235,
+    "LLVMSideConditionEventExit": 235
+  },
+  "last_rules": [
+    {
+      "event_index": 7239,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1304,
+      "rule": {
+        "ordinal": 1304,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+        "location": [
+          136,
+          1,
+          140,
+          11
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1304.kore",
+          "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+          "bytes": 3140
+        }
+      }
+    },
+    {
+      "event_index": 7244,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1312,
+      "rule": {
+        "ordinal": 1312,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          44,
+          1,
+          48,
+          11
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1312.kore",
+          "sha256": "10cb1f57f42dd74beefa0fba086e2f9b7d5d3747ebd584f65796179b9d8b72f6",
+          "bytes": 2616
+        }
+      }
+    },
+    {
+      "event_index": 7247,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1283,
+      "rule": {
+        "ordinal": 1283,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          175,
+          1,
+          181,
+          49
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1283.kore",
+          "sha256": "765a3ba0eb679bb70ad7be372abd983df071593b982d0ef8c46c5ad7bbe89a3f",
+          "bytes": 2887
+        }
+      }
+    },
+    {
+      "event_index": 7254,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1221,
+      "rule": {
+        "ordinal": 1221,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/dialects/seq/seq.md",
+        "location": [
+          78,
+          1,
+          86,
+          41
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1221.kore",
+          "sha256": "986029db4683fadf4bd2558b5b685154a179cd19b2b3008106f57da6904e71d8",
+          "bytes": 4002
+        }
+      }
+    },
+    {
+      "event_index": 7258,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1287,
+      "rule": {
+        "ordinal": 1287,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          93,
+          1,
+          98,
+          46
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1287.kore",
+          "sha256": "fcbf50dbd5891b3c6092b6b82641002a48eb2a90567adba2d94ca4ce237922e5",
+          "bytes": 2947
+        }
+      }
+    },
+    {
+      "event_index": 7262,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1299,
+      "rule": {
+        "ordinal": 1299,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          108,
+          1,
+          108,
+          66
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1299.kore",
+          "sha256": "6c93560a5a33e57eed626632c0e47b5535607f5924ccad3e17fb03afccaad9c5",
+          "bytes": 2425
+        }
+      }
+    },
+    {
+      "event_index": 7274,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1304,
+      "rule": {
+        "ordinal": 1304,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+        "location": [
+          136,
+          1,
+          140,
+          11
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1304.kore",
+          "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+          "bytes": 3140
+        }
+      }
+    },
+    {
+      "event_index": 7279,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1312,
+      "rule": {
+        "ordinal": 1312,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          44,
+          1,
+          48,
+          11
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1312.kore",
+          "sha256": "10cb1f57f42dd74beefa0fba086e2f9b7d5d3747ebd584f65796179b9d8b72f6",
+          "bytes": 2616
+        }
+      }
+    },
+    {
+      "event_index": 7282,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1283,
+      "rule": {
+        "ordinal": 1283,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          175,
+          1,
+          181,
+          49
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1283.kore",
+          "sha256": "765a3ba0eb679bb70ad7be372abd983df071593b982d0ef8c46c5ad7bbe89a3f",
+          "bytes": 2887
+        }
+      }
+    },
+    {
+      "event_index": 7285,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1304,
+      "rule": {
+        "ordinal": 1304,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+        "location": [
+          136,
+          1,
+          140,
+          11
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1304.kore",
+          "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+          "bytes": 3140
+        }
+      }
+    },
+    {
+      "event_index": 7290,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1312,
+      "rule": {
+        "ordinal": 1312,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          44,
+          1,
+          48,
+          11
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1312.kore",
+          "sha256": "10cb1f57f42dd74beefa0fba086e2f9b7d5d3747ebd584f65796179b9d8b72f6",
+          "bytes": 2616
+        }
+      }
+    },
+    {
+      "event_index": 7293,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1315,
+      "rule": {
+        "ordinal": 1315,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          166,
+          1,
+          171,
+          45
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1315.kore",
+          "sha256": "f5c69a910f7ba27b95fec52cfd403d6e0fcf0c8d09d57615c445aced4a37c47f",
+          "bytes": 2704
+        }
+      }
+    },
+    {
+      "event_index": 7296,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1283,
+      "rule": {
+        "ordinal": 1283,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          175,
+          1,
+          181,
+          49
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1283.kore",
+          "sha256": "765a3ba0eb679bb70ad7be372abd983df071593b982d0ef8c46c5ad7bbe89a3f",
+          "bytes": 2887
+        }
+      }
+    },
+    {
+      "event_index": 7303,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1221,
+      "rule": {
+        "ordinal": 1221,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/dialects/seq/seq.md",
+        "location": [
+          78,
+          1,
+          86,
+          41
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1221.kore",
+          "sha256": "986029db4683fadf4bd2558b5b685154a179cd19b2b3008106f57da6904e71d8",
+          "bytes": 4002
+        }
+      }
+    },
+    {
+      "event_index": 7307,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1287,
+      "rule": {
+        "ordinal": 1287,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          93,
+          1,
+          98,
+          46
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1287.kore",
+          "sha256": "fcbf50dbd5891b3c6092b6b82641002a48eb2a90567adba2d94ca4ce237922e5",
+          "bytes": 2947
+        }
+      }
+    },
+    {
+      "event_index": 7311,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1299,
+      "rule": {
+        "ordinal": 1299,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          108,
+          1,
+          108,
+          66
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1299.kore",
+          "sha256": "6c93560a5a33e57eed626632c0e47b5535607f5924ccad3e17fb03afccaad9c5",
+          "bytes": 2425
+        }
+      }
+    },
+    {
+      "event_index": 7323,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1304,
+      "rule": {
+        "ordinal": 1304,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+        "location": [
+          136,
+          1,
+          140,
+          11
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1304.kore",
+          "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+          "bytes": 3140
+        }
+      }
+    },
+    {
+      "event_index": 7328,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1312,
+      "rule": {
+        "ordinal": 1312,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          44,
+          1,
+          48,
+          11
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1312.kore",
+          "sha256": "10cb1f57f42dd74beefa0fba086e2f9b7d5d3747ebd584f65796179b9d8b72f6",
+          "bytes": 2616
+        }
+      }
+    },
+    {
+      "event_index": 7331,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1283,
+      "rule": {
+        "ordinal": 1283,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/hardware/hardware.md",
+        "location": [
+          175,
+          1,
+          181,
+          49
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1283.kore",
+          "sha256": "765a3ba0eb679bb70ad7be372abd983df071593b982d0ef8c46c5ad7bbe89a3f",
+          "bytes": 2887
+        }
+      }
+    },
+    {
+      "event_index": 7334,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1304,
+      "rule": {
+        "ordinal": 1304,
+        "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+        "location": [
+          136,
+          1,
+          140,
+          11
+        ],
+        "axiom": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/axioms/1304.kore",
+          "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+          "bytes": 3140
+        }
+      }
+    }
+  ],
+  "tail_event_count": 100,
+  "final_config": {
+    "event_index": 7338,
+    "phase": "trace",
+    "artifact": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/d12/final.kore",
+      "sha256": "365096e360d2255db70ba929ea90f57b372c1ace1023a18d6269f51146e38a50",
+      "bytes": 346525
+    },
+    "comparison": {
+      "ordinary": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/d12/normal-depth-943/state.kore",
+        "sha256": "153eda44b06528b1925acdabc73e35c049219305ce52d8c22543d3a80902305f",
+        "bytes": 348706
+      },
+      "native_parsed_repr_equal": false,
+      "connection_repr_equal": false,
+      "hint_connection_sha256": "f19c25ca6615c87f17bfb9eb631e266dc04170d5b82a339111f7b0f085157136",
+      "ordinary_connection_sha256": "bd4675148a4c24276a7da6a22c1facfc14e4d8bc350087398470f78c5b0f0594"
+    }
+  },
+  "interpretation": "event_index 是 hint 事件序号，不能当作 K rewrite depth；规则/函数/side condition/hook 分别保留。"
+}

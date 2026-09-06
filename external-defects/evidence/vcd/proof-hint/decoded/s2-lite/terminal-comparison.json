@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "kind": "lite",
+  "before": {
+    "artifact": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/lite-depth-1023.kore",
+      "sha256": "c15434ae43addebd952450d97e079a69acdad90641b7d5e4f028b8e2c9f163da",
+      "bytes": 320069
+    },
+    "connection_key": "xlnxstream_2018_3/%53",
+    "connection_entry_kore": "inj{SortStdOp{}, SortKItem{}}(Lbl'UndsLParUndsRParLBraUndsRBraColnUndsUnds'MLIR-HELPER-SYNTAX'Unds'StdOp'Unds'String'Unds'List'Unds'Map'Unds'StdFT{}(\\dv{SortString{}}(\"comb.mux\"), \\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))), \\left-assoc{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"twoState\")), inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"\"))))), Lbl'LParUndsRPar'-'-GT-LParUndsRParUnds'MLIR-SYNTAX'Unds'StdFT'Unds'Types'Unds'Types{}(Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))))",
+    "connection_mux": [
+      {
+        "operation": "comb.mux",
+        "operands": [
+          "xlnxstream_2018_3/%51",
+          "xlnxstream_2018_3/%50",
+          "xlnxstream_2018_3/%54"
+        ],
+        "operand_kore": "\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))))"
+      }
+    ],
+    "current_muxes": [
+      {
+        "id": "14214",
+        "muxes": [
+          {
+            "operation": "comb.mux",
+            "operands": [
+              "xlnxstream_2018_3/%51",
+              "xlnxstream_2018_3/%50",
+              "xlnxstream_2018_3/%54"
+            ],
+            "operand_kore": "\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))))"
+          }
+        ],
+        "body_kore": "Lbl'-LT-'current'-GT-'{}(kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Stop'List{}()), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#READ_DIRECT\")), kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))))), kseq{}(inj{SortStdOp{}, SortKItem{}}(Lbl'UndsLParUndsRParLBraUndsRBraColnUndsUnds'MLIR-HELPER-SYNTAX'Unds'StdOp'Unds'String'Unds'List'Unds'Map'Unds'StdFT{}(\\dv{SortString{}}(\"comb.mux\"), \\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))), \\left-assoc{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"twoState\")), inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"\"))))), Lbl'LParUndsRPar'-'-GT-LParUndsRParUnds'MLIR-SYNTAX'Unds'StdFT'Unds'Types'Unds'Types{}(Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}())))), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#WRITE\")), kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%53\")))))), kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Stop'List{}()), dotk{}()))))))))"
+      }
+    ]
+  },
+  "ordinary_after": {
+    "artifact": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/lite-depth-1024.kore",
+      "sha256": "27f8ddf095bf454ea09cf498b8ff12478bdedd6fef170347c304c959f4c50400",
+      "bytes": 320199
+    },
+    "connection_key": "xlnxstream_2018_3/%53",
+    "connection_entry_kore": "inj{SortStdOp{}, SortKItem{}}(Lbl'UndsLParUndsRParLBraUndsRBraColnUndsUnds'MLIR-HELPER-SYNTAX'Unds'StdOp'Unds'String'Unds'List'Unds'Map'Unds'StdFT{}(\\dv{SortString{}}(\"comb.mux\"), \\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))), \\left-assoc{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"twoState\")), inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"\"))))), Lbl'LParUndsRPar'-'-GT-LParUndsRParUnds'MLIR-SYNTAX'Unds'StdFT'Unds'Types'Unds'Types{}(Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))))",
+    "connection_mux": [
+      {
+        "operation": "comb.mux",
+        "operands": [
+          "xlnxstream_2018_3/%50",
+          "xlnxstream_2018_3/%54",
+          "xlnxstream_2018_3/%54"
+        ],
+        "operand_kore": "\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))))"
+      }
+    ],
+    "current_muxes": [
+      {
+        "id": "14214",
+        "muxes": [
+          {
+            "operation": "comb.mux",
+            "operands": [
+              "xlnxstream_2018_3/%50",
+              "xlnxstream_2018_3/%54",
+              "xlnxstream_2018_3/%54"
+            ],
+            "operand_kore": "\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))))"
+          }
+        ],
+        "body_kore": "Lbl'-LT-'current'-GT-'{}(kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortBits{}, SortKItem{}}(Lblbits'LParUndsCommUndsRParUnds'BITS-SYNTAX'Unds'Bits'Unds'BitsValue'Unds'Int{}(inj{SortInt{}, SortBitsValue{}}(\\dv{SortInt{}}(\"0\")), \\dv{SortInt{}}(\"1\"))))))), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#READ_DIRECT\")), kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))))), kseq{}(inj{SortStdOp{}, SortKItem{}}(Lbl'UndsLParUndsRParLBraUndsRBraColnUndsUnds'MLIR-HELPER-SYNTAX'Unds'StdOp'Unds'String'Unds'List'Unds'Map'Unds'StdFT{}(\\dv{SortString{}}(\"comb.mux\"), \\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))), \\left-assoc{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"twoState\")), inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"\"))))), Lbl'LParUndsRPar'-'-GT-LParUndsRParUnds'MLIR-SYNTAX'Unds'StdFT'Unds'Types'Unds'Types{}(Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortType{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}())))), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#WRITE\")), kseq{}(inj{SortList{}, SortKItem{}}(\\left-assoc{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%53\")))))), kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Stop'List{}()), dotk{}()))))))))"
+      }
+    ]
+  },
+  "hint_after": {
+    "artifact": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/final.kore",
+      "sha256": "c80664a3ec93e00baa380d6937c42f0f613882046c5144baafd07f059f83b07a",
+      "bytes": 317887
+    },
+    "connection_key": "xlnxstream_2018_3/%53",
+    "connection_entry_kore": "inj{SortStdOp{}, SortStdOpL{}}(Lbl'UndsLParUndsRParLBraUndsRBraColnUndsUnds'MLIR-HELPER-SYNTAX'Unds'StdOp'Unds'String'Unds'List'Unds'Map'Unds'StdFT{}(\\dv{SortString{}}(\"comb.mux\"), Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\")))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))), Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"twoState\")), inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"\"))), Lbl'LParUndsRPar'-'-GT-LParUndsRParUnds'MLIR-SYNTAX'Unds'StdFT'Unds'Types'Unds'Types{}(Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))))",
+    "connection_mux": [
+      {
+        "operation": "comb.mux",
+        "operands": [
+          "xlnxstream_2018_3/%51",
+          "xlnxstream_2018_3/%50",
+          "xlnxstream_2018_3/%54"
+        ],
+        "operand_kore": "Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\")))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))"
+      }
+    ],
+    "current_muxes": [
+      {
+        "id": "14214",
+        "muxes": [
+          {
+            "operation": "comb.mux",
+            "operands": [
+              "xlnxstream_2018_3/%51",
+              "xlnxstream_2018_3/%50",
+              "xlnxstream_2018_3/%54"
+            ],
+            "operand_kore": "Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\")))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))"
+          }
+        ],
+        "body_kore": "Lbl'-LT-'current'-GT-'{}(kseq{}(inj{SortList{}, SortKItem{}}(LblListItem{}(inj{SortBits{}, SortKItem{}}(Lblbits'LParUndsCommUndsRParUnds'BITS-SYNTAX'Unds'Bits'Unds'BitsValue'Unds'Int{}(inj{SortInt{}, SortBitsValue{}}(\\dv{SortInt{}}(\"0\")), \\dv{SortInt{}}(\"1\"))))), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#READ_DIRECT\")), kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))), kseq{}(inj{SortStdOp{}, SortStdOpL{}}(Lbl'UndsLParUndsRParLBraUndsRBraColnUndsUnds'MLIR-HELPER-SYNTAX'Unds'StdOp'Unds'String'Unds'List'Unds'Map'Unds'StdFT{}(\\dv{SortString{}}(\"comb.mux\"), Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\")))), LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))), Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"twoState\")), inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"\"))), Lbl'LParUndsRPar'-'-GT-LParUndsRParUnds'MLIR-SYNTAX'Unds'StdFT'Unds'Types'Unds'Types{}(Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))), Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")), Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}())))), kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#WRITE\")), kseq{}(inj{SortList{}, SortKItem{}}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%53\")))), kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Stop'List{}()), dotk{}()))))))))"
+      }
+    ]
+  },
+  "connection_entry_count": 83,
+  "ordinary_changed_keys": [
+    "xlnxstream_2018_3/%53"
+  ],
+  "hint_vs_before_changed_keys": [],
+  "hint_vs_ordinary_after_changed_keys": [
+    "xlnxstream_2018_3/%53"
+  ],
+  "value_comparison_policy": "Map项按key比较；展开List/Map左右结合及单项表示；忽略inj目标sort但保留源sort、构造器、叶值及List次序。原始KORE和严格repr比较另存，不声称类型相等。",
+  "last_applied_rule": {
+    "event_index": 8361,
+    "phase": "trace",
+    "kind": "LLVMRuleEvent",
+    "ordinal": 1277,
+    "rule": {
+      "ordinal": 1277,
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/source/hardware/hardware.md",
+      "location": [
+        56,
+        1,
+        63,
+        42
+      ],
+      "axiom": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/axioms/1277.kore",
+        "sha256": "3eddd1870fd8bedf998803ccf2a647479bbf6168b755887549fb6e90fa81cd7e",
+        "bytes": 3329
+      }
+    },
+    "substitution": {
+      "Var'Unds'DotVar0": {
+        "kore": "Lbl'-LT-'generatedCounter'-GT-'{}(\\dv{SortInt{}}(\"14215\"))"
+      },
+      "Var'Unds'DotVar3": {
+        "artifact": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terms/36347b68d5480999ecc3b2cb4bbb5defdb315eb310464c60378df5c7885f56c2.kore",
+          "sha256": "36347b68d5480999ecc3b2cb4bbb5defdb315eb310464c60378df5c7885f56c2",
+          "bytes": 25097
+        },
+        "preview": "Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds",
+        "preview_truncated": true
+      },
+      "Var'Unds'DotVar4": {
+        "artifact": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terms/eed8beafbfc8c48eb2dc454497f40b0fe0b51b3fc885ea60e497902cd20d9531.kore",
+          "sha256": "eed8beafbfc8c48eb2dc454497f40b0fe0b51b3fc885ea60e497902cd20d9531",
+          "bytes": 10558
+        },
+        "preview": "LblCurrentInfoCellMapItem{}(Lbl'-LT-'current-id'-GT-'{}(\\dv{SortInt{}}(\"14196\")),Lbl'-LT-'current-info'-GT-'{}(Lbl'-LT-'current-id'-GT-'{}(\\dv{SortInt{}}(\"14196\")),Lbl'-LT-'current'-GT-'{}(kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#NEW_CURRENT\")),kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds",
+        "preview_truncated": true
+      },
+      "Var'Unds'DotVar5": {
+        "kore": "Lbl'-LT-'current-id'-GT-'{}(\\dv{SortInt{}}(\"14214\"))"
+      },
+      "Var'Unds'DotVar6": {
+        "kore": "kseq{}(inj{SortStdOp{}, SortStdOpL{}}(Lbl'UndsLParUndsRParLBraUndsRBraColnUndsUnds'MLIR-HELPER-SYNTAX'Unds'StdOp'Unds'String'Unds'List'Unds'Map'Unds'StdFT{}(\\dv{SortString{}}(\"comb.mux\"),Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%51\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\")))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\")))),Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"twoState\")),inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"\"))),Lbl'LParUndsRPar'-'-GT-LParUndsRParUnds'MLIR-SYNTAX'Unds'StdFT'Unds'Types'Unds'Types{}(Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")),Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")),Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")),Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}()))),Lbl'UndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types{}(inj{SortSignlessIntegerType{}, SortKItem{}}(\\dv{SortSignlessIntegerType{}}(\"i1\")),Lbl'Stop'List'LBraQuotUndsCommUndsUnds'MLIR-SYNTAX'Unds'Types'Unds'Type'Unds'Types'QuotRBraUnds'Types{}())))),kseq{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"HARDWARE#WRITE\")),kseq{}(inj{SortList{}, SortKItem{}}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%53\")))),kseq{}(inj{SortList{}, SortKItem{}}(Lbl'Stop'List{}()),dotk{}()))))"
+      },
+      "Var'Unds'Gen0": {
+        "kore": "Lbl'-LT-'setup'-GT-'{}(dotk{}())"
+      },
+      "Var'Unds'Gen1": {
+        "artifact": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terms/dc3472dcbd72489694904746249ea792e34d05193cf33434cd59880d6df4ab6a.kore",
+          "sha256": "dc3472dcbd72489694904746249ea792e34d05193cf33434cd59880d6df4ab6a",
+          "bytes": 114297
+        },
+        "preview": "Lbl'-LT-'connection'-GT-'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'M",
+        "preview_truncated": true
+      },
+      "Var'Unds'Gen12": {
+        "artifact": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terms/559d3bc2e49bc9e986a99c3648d52594cb9b86dcba6aacd2c8e2b160084b1ca1.kore",
+          "sha256": "559d3bc2e49bc9e986a99c3648d52594cb9b86dcba6aacd2c8e2b160084b1ca1",
+          "bytes": 7987
+        },
+        "preview": "Lbl'-LT-'register'-GT-'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%73\")),inj{SortAttributeValueList{}, SortKItem{}}(Lbl'UndsCommUndsUnds'BUILTIN-SYNTAX'Unds'AttributeValueList'Unds'AttributeValue'Unds'AttributeValueList{}(inj{SortInt{}, SortBitsValue{}}(\\dv{SortInt{}}(\"0\")),Lbl'UndsCommUndsUnds'BUILTIN-SYNTAX'Unds'Att",
+        "preview_truncated": true
+      },
+      "Var'Unds'Gen13": {
+        "artifact": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terms/5a9eb7bf11bd23856f39df41159fc799345a400249c80298b9aa975807047bf7.kore",
+          "sha256": "5a9eb7bf11bd23856f39df41159fc799345a400249c80298b9aa975807047bf7",
+          "bytes": 25433
+        },
+        "preview": "Lbl'-LT-'signals'-GT-'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'",
+        "preview_truncated": true
+      },
+      "Var'Unds'Gen2": {
+        "kore": "Lbl'-LT-'procedures'-GT-'{}(Lbl'Stop'List{}())"
+      },
+      "Var'Unds'Gen3": {
+        "kore": "Lbl'-LT-'register-proc'-GT-'{}(Lbl'Stop'Map{}())"
+      },
+      "Var'Unds'Gen4": {
+        "kore": "Lbl'-LT-'sv-logs'-GT-'{}(Lbl'Stop'List{}())"
+      },
+      "Var'Unds'Gen5": {
+        "artifact": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terms/233e52e0d55c94ddbfe965e2d5273e1ab45f90feb434c0a9ec9dcc47bcd453e7.kore",
+          "sha256": "233e52e0d55c94ddbfe965e2d5273e1ab45f90feb434c0a9ec9dcc47bcd453e7",
+          "bytes": 26673
+        },
+        "preview": "Lbl'-LT-'history'-GT-'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'",
+        "preview_truncated": true
+      },
+      "Var'Unds'Gen6": {
+        "kore": "Lbl'-LT-'clock'-GT-'{}(\\dv{SortInt{}}(\"0\"))"
+      },
+      "Var'Unds'Gen7": {
+        "artifact": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terms/dcc50d46baf87889b396df86ae2cbea1ab2c9a378f794f213637d59c97506bd5.kore",
+          "sha256": "dcc50d46baf87889b396df86ae2cbea1ab2c9a378f794f213637d59c97506bd5",
+          "bytes": 126710
+        },
+        "preview": "Lbl'-LT-'mlir'-GT-'{}(Lbl'-LT-'prog'-GT-'{}(dotk{}()),Lbl'-LT-'types'-GT-'{}(Lbl'Stop'Map{}()),Lbl'-LT-'attrs'-GT-'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortAttributeAlias{}, SortKItem{}}(\\dv{SortAttributeAlias{}}(\"#loc2\")),inj{SortAttributeValue{}, SortKItem{}}(Lblloc'LParUndsColnUndsColnUndsRParUnds'BUILTIN-SYNTAX'Unds'AttributeValue'Unds'String'Unds'Int'Unds'Int{}(\\dv{SortString{}}(\".work/ir-preparation/initial-register-v1/s2/golden/d",
+        "preview_truncated": true
+      },
+      "Var'Unds'Gen8": {
+        "kore": "Lbl'-LT-'circt'-GT-'{}(Lbl'-LT-'cmd'-GT-'{}(dotk{}()),Lbl'-LT-'top-module'-GT-'{}(\\dv{SortString{}}(\"xlnxstream_2018_3\")),Lbl'-LT-'top-ins'-GT-'{}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%arg0\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%arg1\")))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%arg2\"))))))"
+      },
+      "Var'Unds'Gen9": {
+        "artifact": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terms/ab5d19393d1110146d9f8df18ee7692f29b24dc718cdd21079f015b430fc701a.kore",
+          "sha256": "ab5d19393d1110146d9f8df18ee7692f29b24dc718cdd21079f015b430fc701a",
+          "bytes": 2759
+        },
+        "preview": "Lbl'-LT-'hw'-GT-'{}(Lbl'-LT-'hw-instances'-GT-'{}(LblHwInstanceCellMapItem{}(Lbl'-LT-'hw-id'-GT-'{}(\\dv{SortString{}}(\"xlnxstream_2018_3\")),Lbl'-LT-'hw-instance'-GT-'{}(Lbl'-LT-'hw-id'-GT-'{}(\\dv{SortString{}}(\"xlnxstream_2018_3\")),Lbl'-LT-'hw-module'-GT-'{}(\\dv{SortString{}}(\"xlnxstream_2018_3\")),Lbl'-LT-'hw-inputs'-GT-'{}(Lbl'Unds'List'Unds'{}(Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortBareId{}, SortKItem{}}(\\dv{SortBareId{}}(\"M_AXIS_ACLK\"))),LblListItem{}(inj{SortBareId{}, SortKItem{}}(\\dv{S",
+        "preview_truncated": true
+      },
+      "VarL": {
+        "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%50\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%54\"))))"
+      },
+      "VarPort": {
+        "kore": "\\dv{SortString{}}(\"xlnxstream_2018_3/%51\")"
+      },
+      "VarREAD": {
+        "kore": "Lbl'Stop'List{}()"
+      },
+      "VarRegister": {
+        "artifact": {
+          "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/terms/abd7b04b05f69d5690634d882d3f263d4cb7dbdf95a18b7fd2972736a0264097.kore",
+          "sha256": "abd7b04b05f69d5690634d882d3f263d4cb7dbdf95a18b7fd2972736a0264097",
+          "bytes": 7960
+        },
+        "preview": "Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'Unds'Map'Unds'{}(Lbl'UndsPipe'-'-GT-Unds'{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"xlnxstream_2018_3/%73\")),inj{SortAttributeValueList{}, SortKItem{}}(Lbl'UndsCommUndsUnds'BUILTIN-SYNTAX'Unds'AttributeValueList'Unds'AttributeValue'Unds'AttributeValueList{}(inj{SortInt{}, SortBitsValue{}}(\\dv{SortInt{}}(\"0\")),Lbl'UndsCommUndsUnds'BUILTIN-SYNTAX'Unds'AttributeValueList'Unds'Attri",
+        "preview_truncated": true
+      },
+      "VarSignal": {
+        "kore": "Lblbits'LParUndsCommUndsRParUnds'BITS-SYNTAX'Unds'Bits'Unds'BitsValue'Unds'Int{}(inj{SortInt{}, SortBitsValue{}}(\\dv{SortInt{}}(\"0\")),\\dv{SortInt{}}(\"1\"))"
+      }
+    }
+  },
+  "all_trace_list_hook_counts": {
+    "LIST.concat": 554,
+    "LIST.size": 151,
+    "LIST.get": 137
+  },
+  "limitation": "不存在LIST.range事件不能证明编译器lowering未调用hook_LIST_range_long。hint终态不等于普通输出时，不能据hint否认普通运行异常。",
+  "official_location_command": {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/llvm-kompile-compute-loc",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/current/definition-lite",
+      "1277"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/compute-loc.stdout",
+      "sha256": "c625c9711d521854804f722742ef771cecb9623ed973e651a2f1caa9c5b5767a",
+      "bytes": 155
+    },
+    "stderr": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s2-lite/compute-loc.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

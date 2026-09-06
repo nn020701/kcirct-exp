@@ -1,0 +1,67 @@
+[
+  {
+    "name": "axis_frame_fifo",
+    "states": [
+      {
+        "name": "clk",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "rst",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "input_axis_tdata",
+        "numBits": 8,
+        "type": "input"
+      },
+      {
+        "name": "input_axis_tvalid",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "input_axis_tlast",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "input_axis_tuser",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "output_axis_tready",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "input_axis_tready",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "output_axis_tdata",
+        "numBits": 8,
+        "type": "output"
+      },
+      {
+        "name": "output_axis_tvalid",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "output_axis_tlast",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "drop_frame",
+        "numBits": 1,
+        "type": "output"
+      }
+    ]
+  }
+]

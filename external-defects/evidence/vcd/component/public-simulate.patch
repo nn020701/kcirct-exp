@@ -1,0 +1,960 @@
+diff --git a/README.md b/README.md
+index e3b6870df6897fe915b4b7bde2b04c73de3c7b95..0fb9cb05ac21e4a0785f424cb2c786de49597c49 100644
+--- a/README.md
++++ b/README.md
+@@ -65,6 +65,72 @@ After building the project, you can access the `kcirct` CLI via `poetry`:
+ poetry run kcirct --help
+ ```
+ 
++### 从 MLIR 和输入事件运行 Kimulator
++
++`kcirct simulate` 是文件输入、文件输出的独立仿真命令。用户只需提供 Generic MLIR、
++顶层模块名和 JSON 激励，无需编写 Python 驱动或导入 `KCIRCT` 的内部函数。
++已安装的 `kcirct` 和匹配的 LLVM 语义定义负责解析、初始化、逐事件仿真及 VCD 输出。
++该命令本身不依赖 `arcilator`；从 RTL 生成 MLIR 的前端步骤由调用方独立完成。
++
++例如，顶层 `Demo` 有 `clk: i1`、`a: i8` 两个输入时，`events.json` 可写为：
++
++```json
++{
++  "schema_version": 1,
++  "timescale": "1ns",
++  "events": [
++    {"time": 0, "inputs": {"clk": 0, "a": 7}},
++    {"time": 5, "inputs": {"clk": 1, "a": 7}},
++    {"time": 10, "inputs": {"clk": 0, "a": 19}},
++    {"time": 15, "inputs": {"clk": 1, "a": 19}}
++  ]
++}
++```
++
++```bash
++kcirct simulate design.generic.mlir \
++  --top-module Demo \
++  --inputs events.json \
++  --output .runs/demo/kimulator.vcd \
++  --work-dir .runs/demo/work \
++  --evaluations-per-input 2 \
++  --timeout 120 \
++  --keep-states
++```
++
++每个事件必须给出全部输入，输入对象中的字段顺序不影响仿真：命令按顶层
++`hw.module` 的 `module_type` 顺序排列输入。当前接受普通标识符命名的 `iN`
++整数输入和输出；值必须是 `[0, 2^N)` 中的整数位模式，不接受 JSON 布尔值、隐式截断、
++缺失字段或未知字段。时钟也作为显式输入给出；需要 `!seq.clock` 的内部逻辑可通过
++`seq.to_clock` 转换 `i1` 输入。尚不接受顶层 `!seq.clock`、结构体、数组或 inout 端口。
++`events` 不可为空，`time` 必须是非负且严格递增的整数，`timescale` 支持 `1ns`、
++`10ps` 等 VCD 单位。
++
++默认协议与 `integration/arc_test.py` 的双执行方式一致：固定本事件的全部输入，
++从前次状态连续调用两次仿真，第二次保持同一时钟电平和同一组输入，然后才在事件的
++`time` 写入一次 VCD。两次调用之间不推进时间，也不自动翻转时钟。
++`--evaluations-per-input` 默认是 `2`，更改它会改变采样协议，实验报告需明确记录。
++VCD 包含全部顶层输入和输出；必需端口缺少值会使仿真失败，不会被静默跳过。
++对照仿真器应使用相同的事件和时间单位，随后使用 VCD 比较器检查波形。
++
++默认从 `kdist` 获取 `circt-semantics.llvm` 定义，并在工作目录生成 TopLevel parser。
++也可以通过 `--definition-dir DIR --parser PATH` 显式复用匹配版本的构建缓存。
++K 工具从 `PATH` 查找，或通过 `K_BIN` 指定工具目录；源码、K 工具链、定义和 parser
++必须使用匹配版本。`kcirct simulate --describe` 输出安装版本、Python 路径、API/仿真入口/
++K 语义源码哈希及工具路径与版本，便于外部 runner 核实实际调用的组件。
++
++`--work-dir` 必须是新目录，输出必须是尚不存在的 `.vcd` 文件。
++命令会复制输入文件，保留 `result.json`、`commands.jsonl`、各命令的 stderr、
++编译与初始化工件以及 `last-state.kore`。`result.json` 记录状态、失败阶段、完成事件数、
++仿真调用次数、各阶段耗时、端口声明及输出哈希。`--timeout` 限制每一次外部命令，
++超时会终止该命令的进程组；失败以非零退出码结束，同时保存 `error.txt` 和已经产生的
++部分 VCD。部分 VCD 不能算作完成的仿真结果，应先检查 `result.json` 的 `status`。
++
++使用 `--keep-states` 时，`states/` 保存每次求值后的真实 Kore gzip 文件，
++`states.json` 记录其事件编号、求值次数、VCD 时间与解压后哈希。默认仅保留滚动状态及
++最后成功状态，避免长时间仿真积累全部状态；命令日志中的 stdout 直接指向 Kore
++工件，不另存一份大型 stdout。以上状态用于普通仿真的失败复查，并未执行 Error-trace 分析。
++
+ ### Pretty-print KORE 状态
+ 
+ `kcirct pretty INPUT [-o OUTPUT]` 将 CIRCT semantics 生成的 KORE 状态转换为便于调试的 K pretty syntax。
+diff --git a/src/kcirct/__main__.py b/src/kcirct/__main__.py
+index 46a63ce4c1ffdf85bab5c8da72b8c441730e42a3..8d1d87898639d868f80fe24759fe1f60072ca472 100644
+--- a/src/kcirct/__main__.py
++++ b/src/kcirct/__main__.py
+@@ -28,6 +28,20 @@ def _add_shared_args(shared_args: ArgumentParser) -> None:
+     shared_args.add_argument('--debug', '-d', default=False, action='store_true', help='Enable debug output')
+ 
+ 
++def _add_simulate_args(parser: ArgumentParser) -> None:
++    parser.add_argument('input', nargs='?', type=Path, help='待仿真的 Generic MLIR 文件')
++    parser.add_argument('--describe', action='store_true', help='以 JSON 输出当前安装、源码和 K 工具链身份后退出')
++    parser.add_argument('--top-module', help='顶层 hw.module 名称')
++    parser.add_argument('--inputs', type=Path, help='按名称指定全部输入的 JSON 事件文件')
++    parser.add_argument('--output', type=Path, help='输出 VCD 文件，拒绝覆盖已有文件')
++    parser.add_argument('--work-dir', type=Path, help='新的工作目录，用于保存结果、命令和失败证据')
++    parser.add_argument('--evaluations-per-input', type=int, default=2, help='每个输入事件的连续求值次数，默认 2')
++    parser.add_argument('--definition-dir', type=Path, help='已编译的 LLVM 定义目录，默认使用 kdist target')
++    parser.add_argument('--parser', type=Path, help='可复用的 TopLevel parser，默认在工作目录生成')
++    parser.add_argument('--timeout', type=float, default=120, help='每次外部命令的超时秒数，默认 120')
++    parser.add_argument('--keep-states', action='store_true', help='用 gzip 保存每一次求值的 Kore 状态及索引')
++
++
+ def _add_verify_args(verify_parser: ArgumentParser) -> None:
+     verify_parser.add_argument(
+         'input',
+@@ -293,6 +307,9 @@ def create_arg_parser() -> ArgumentParser:
+         required=False,
+     )
+ 
++    simulate_parser = command_parser.add_parser('simulate', help='从 MLIR 和输入事件生成 VCD', parents=[shared_args])
++    _add_simulate_args(simulate_parser)
++
+     pretty_parser = command_parser.add_parser(
+         'pretty', help='Convert a Kore file to readable K syntax', parents=[shared_args]
+     )
+@@ -324,6 +341,38 @@ def create_arg_parser() -> ArgumentParser:
+ def exec_generate(input: str, output: str = 'none', **kwargs: Any) -> None: ...
+ 
+ 
++def exec_simulate(**kwargs: Any) -> None:
++    import json
++
++    from ._simulate import describe_simulator, simulate
++
++    if kwargs.get('describe'):
++        print(json.dumps(describe_simulator(), ensure_ascii=False, indent=2))
++        return
++    required = ('input', 'top_module', 'inputs', 'output', 'work_dir')
++    missing = [name.replace('_', '-') for name in required if kwargs.get(name) is None]
++    if missing:
++        raise SystemExit(f'simulate 缺少必需参数：{", ".join(missing)}；用 --help 查看用法')
++    try:
++        result = simulate(
++            Path(kwargs['input']),
++            top_module=kwargs['top_module'],
++            inputs_file=Path(kwargs['inputs']),
++            output=Path(kwargs['output']),
++            work_dir=Path(kwargs['work_dir']),
++            evaluations_per_input=kwargs.get('evaluations_per_input', 2),
++            definition_dir=kwargs.get('definition_dir'),
++            parser=kwargs.get('parser'),
++            timeout=kwargs.get('timeout', 120),
++            keep_states=kwargs.get('keep_states', False),
++        )
++    except OSError as error:
++        raise SystemExit(f'simulate 无法建立独立工作目录：{error}') from error
++    print(json.dumps(result, ensure_ascii=False, indent=2))
++    if result['status'] != 'pass':
++        raise SystemExit(1)
++
++
+ def exec_pretty(input: str | Path, output: str | Path | None = None, **kwargs: Any) -> None:
+     input_path = Path(input)
+     output_path = Path(output) if output is not None else input_path.with_name(f'{input_path.name}.pretty')
+diff --git a/src/kcirct/_simulate.py b/src/kcirct/_simulate.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..071a565d244e944f83b6b0aff7b00414b088878c
+--- /dev/null
++++ b/src/kcirct/_simulate.py
+@@ -0,0 +1,519 @@
++"""通过文件和命令行驱动 Kimulator，保存可复查的仿真工件。"""
++
++from __future__ import annotations
++
++import gzip
++import hashlib
++import json
++import os
++import re
++import shutil
++import signal
++import subprocess
++import sys
++import time
++from dataclasses import asdict, dataclass
++from functools import partial
++from importlib.metadata import version
++from pathlib import Path
++from typing import TYPE_CHECKING, Any
++
++from pyk.kdist import kdist
++
++from .api import KCIRCT
++from .vcd import KVCD
++
++if TYPE_CHECKING:
++    from collections.abc import Callable
++
++_IDENTIFIER = r'[A-Za-z_][A-Za-z0-9_.$-]*'
++
++
++def _sha256(path: Path) -> str:
++    digest = hashlib.sha256()
++    with path.open('rb') as stream:
++        for block in iter(lambda: stream.read(1024 * 1024), b''):
++            digest.update(block)
++    return digest.hexdigest()
++
++
++def _json(path: Path, value: Any) -> None:
++    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
++
++
++def _tool(name: str) -> str:
++    configured = os.environ.get('K_BIN') if name in {'krun', 'kast', 'kompile'} else None
++    sibling = Path(sys.executable).absolute().parent / name
++    executable: str | None
++    if configured:
++        executable = str(Path(configured).expanduser() / name)
++    elif name == 'kdist' and sibling.is_file() and os.access(sibling, os.X_OK):
++        executable = str(sibling)
++    else:
++        executable = shutil.which(name)
++    if executable is None or not Path(executable).is_file() or not os.access(executable, os.X_OK):
++        raise FileNotFoundError(f'找不到可执行工具 {name}，请通过 PATH 或 K_BIN 配置 K 工具链')
++    return str(Path(executable).absolute())
++
++
++def describe_simulator() -> dict[str, Any]:
++    """公开当前安装身份，外部调用方无需导入 Python 实现。"""
++    package = Path(__file__).resolve().parent
++    tools: dict[str, Any] = {}
++    for name in ('krun', 'kast', 'kompile', 'kdist'):
++        try:
++            executable = _tool(name)
++            item: dict[str, Any] = {'path': executable}
++            if name != 'kdist':
++                process = subprocess.run([executable, '--version'], capture_output=True, text=True, timeout=10)
++                item['version'] = (process.stdout + process.stderr).strip()
++                item['returncode'] = process.returncode
++            tools[name] = item
++        except (OSError, subprocess.TimeoutExpired) as error:
++            tools[name] = {'path': None, 'error': str(error)}
++    semantics = package / 'kdist' / 'circt_semantics'
++    return {
++        'schema_version': 1,
++        'package_version': version('kcirct'),
++        'kframework_version': version('kframework'),
++        'python_executable': sys.executable,
++        'source_root': str(package.parent.parent),
++        'package_dir': str(package),
++        'api_sha256': _sha256(package / 'api.py'),
++        'simulator_sha256': _sha256(Path(__file__)),
++        'kdist_plugin_sha256': _sha256(package / 'kdist' / 'plugin.py'),
++        'semantics_hashes': {
++            str(path.relative_to(semantics)): _sha256(path)
++            for path in sorted(semantics.rglob('*'))
++            if path.is_file() and path.suffix in {'.k', '.md'}
++        },
++        'tools': tools,
++    }
++
++
++@dataclass(frozen=True)
++class Port:
++    name: str
++    width: int
++
++
++def _balanced_end(text: str, start: int, opening: str, closing: str) -> int:
++    """找到分隔符末尾，跳过字符串及 MLIR 注释。"""
++    depth, index = 0, start
++    while index < len(text):
++        if text.startswith('//', index):
++            index = text.find('\n', index)
++            if index == -1:
++                break
++        elif text.startswith('/*', index):
++            end = text.find('*/', index + 2)
++            if end == -1:
++                break
++            index = end + 2
++            continue
++        elif text[index] == '"':
++            index += 1
++            while index < len(text) and text[index] != '"':
++                index += 2 if text[index] == '\\' else 1
++        elif text[index] == opening:
++            depth += 1
++        elif text[index] == closing:
++            depth -= 1
++            if depth == 0:
++                return index + 1
++        index += 1
++    raise ValueError(f'Generic MLIR 在位置 {start} 缺少匹配的 {closing}')
++
++
++def read_port_schema(mlir: Path, top_module: str) -> tuple[list[Port], list[Port]]:
++    """读取 generic hw.module 的 module_type，保留真实端口顺序。"""
++    if re.fullmatch(_IDENTIFIER, top_module) is None:
++        raise ValueError('顶层模块名必须是普通 MLIR 标识符')
++    text = mlir.read_text(encoding='utf-8')
++    matches: list[str] = []
++    for operation in re.finditer(r'"hw\.module"\s*\(', text):
++        cursor = _balanced_end(text, operation.end() - 1, '(', ')')
++        attributes: list[str] = []
++        cursor += len(text[cursor:]) - len(text[cursor:].lstrip())
++        if text.startswith('<{', cursor):
++            end = _balanced_end(text, cursor + 1, '{', '}')
++            attributes.append(text[cursor + 1 : end])
++            if text[end : end + 1] != '>':
++                raise ValueError('Generic hw.module 的 properties 缺少 >')
++            cursor = end + 1
++        cursor += len(text[cursor:]) - len(text[cursor:].lstrip())
++        if text[cursor : cursor + 1] == '(':
++            cursor = _balanced_end(text, cursor, '(', ')')
++        cursor += len(text[cursor:]) - len(text[cursor:].lstrip())
++        if text[cursor : cursor + 1] == '{':
++            end = _balanced_end(text, cursor, '{', '}')
++            attributes.append(text[cursor:end])
++        attribute_text = ' '.join(attributes)
++        symbol = re.search(r'\bsym_name\s*=\s*"([^"\\]+)"', attribute_text)
++        if symbol is not None and symbol.group(1) == top_module:
++            matches.append(attribute_text)
++    if len(matches) != 1:
++        raise ValueError(f'需要唯一的 generic hw.module {top_module}，实际找到 {len(matches)} 个')
++    module_type = re.search(r'\bmodule_type\s*=\s*!hw\.modty\s*<', matches[0])
++    if module_type is None:
++        raise ValueError(f'{top_module} 缺少 module_type = !hw.modty<...>')
++    start = module_type.end() - 1
++    end = _balanced_end(matches[0], start, '<', '>')
++    inputs: list[Port] = []
++    outputs: list[Port] = []
++    names: set[str] = set()
++    for item in matches[0][start + 1 : end - 1].split(','):
++        port = re.fullmatch(rf'\s*(input|output)\s+({_IDENTIFIER}|"{_IDENTIFIER}")\s*:\s*i([1-9]\d*)\s*', item)
++        if port is None:
++            raise ValueError(f'暂仅支持顶层 input/output iN 整数端口，不支持：{item.strip()}')
++        direction, name, width = port.groups()
++        name = name.strip('"')
++        if name in names:
++            raise ValueError(f'重复的顶层端口名：{name}')
++        names.add(name)
++        (inputs if direction == 'input' else outputs).append(Port(name, int(width)))
++    if not inputs:
++        raise ValueError('仿真至少需要一个顶层输入端口')
++    return inputs, outputs
++
++
++def read_events(path: Path, inputs: list[Port]) -> tuple[str, list[dict[str, Any]]]:
++    """校验完整、按名称给定的输入事件；拒绝隐式保持及截断。"""
++
++    def unique_keys(items: list[tuple[str, Any]]) -> dict[str, Any]:
++        result: dict[str, Any] = {}
++        for key, value in items:
++            if key in result:
++                raise ValueError(f'输入 JSON 含重复字段：{key}')
++            result[key] = value
++        return result
++
++    document = json.loads(path.read_text(encoding='utf-8'), object_pairs_hook=unique_keys)
++    if not isinstance(document, dict) or type(document.get('schema_version')) is not int:
++        raise ValueError('输入 JSON 必须包含整数 schema_version: 1')
++    if document['schema_version'] != 1 or set(document) != {'schema_version', 'timescale', 'events'}:
++        raise ValueError('输入 JSON 仅允许 schema_version: 1、timescale 和 events 三个字段')
++    timescale = document['timescale']
++    if not isinstance(timescale, str) or re.fullmatch(r'(1|10|100)(s|ms|us|ns|ps|fs)', timescale) is None:
++        raise ValueError('timescale 应为 1ns、10ps 等有效 VCD 时间单位')
++    events = document['events']
++    if not isinstance(events, list) or not events:
++        raise ValueError('events 必须是非空事件数组')
++    previous = -1
++    expected = {port.name for port in inputs}
++    for index, event in enumerate(events):
++        if not isinstance(event, dict) or set(event) != {'time', 'inputs'}:
++            raise ValueError(f'事件 {index} 仅允许 time 和 inputs 两个字段')
++        timestamp = event['time']
++        if type(timestamp) is not int or timestamp <= previous:
++            raise ValueError(f'事件 {index} 的 time 必须是非负、严格递增的整数')
++        previous = timestamp
++        values = event['inputs']
++        if not isinstance(values, dict) or set(values) != expected:
++            actual = set(values) if isinstance(values, dict) else set()
++            raise ValueError(
++                f'事件 {index} 输入不完整：缺少 {sorted(expected - actual)}，未知 {sorted(actual - expected)}'
++            )
++        for port in inputs:
++            value = values[port.name]
++            if type(value) is not int or not 0 <= value < 1 << port.width:
++                raise ValueError(f'事件 {index} 的 {port.name} 必须是 [0, 2^{port.width}) 内的整数位模式，不能是 bool')
++    return timescale, events
++
++
++class CommandExecutor:
++    """隔离子进程、限制单次命令时间并保留 stdout/stderr。"""
++
++    def __init__(self, work_dir: Path, timeout: float) -> None:
++        self.work_dir = work_dir
++        self.timeout = timeout
++        self.sequence = 0
++
++    def run(self, command: list[str], output: Path | None = None) -> None:
++        sequence = self.sequence
++        self.sequence += 1
++        output = output or self.work_dir / f'command-{sequence:04d}.stdout'
++        stderr = self.work_dir / f'command-{sequence:04d}.stderr'
++        record: dict[str, Any] = {
++            'sequence': sequence,
++            'argv': command,
++            'cwd': str(self.work_dir),
++            'stdout': str(output),
++            'stderr': str(stderr),
++            'timeout_s': self.timeout,
++        }
++        start = time.perf_counter()
++        try:
++            with output.open('wb') as stdout_stream, stderr.open('wb') as stderr_stream:
++                process = subprocess.Popen(
++                    command, cwd=self.work_dir, stdout=stdout_stream, stderr=stderr_stream, start_new_session=True
++                )
++                try:
++                    process.wait(timeout=self.timeout)
++                except (subprocess.TimeoutExpired, KeyboardInterrupt):
++                    os.killpg(process.pid, signal.SIGKILL)
++                    process.wait()
++                    raise
++            record['returncode'] = process.returncode
++            if process.returncode != 0:
++                raise RuntimeError(f'命令执行失败（{process.returncode}）：{command[0]}\n{stderr.read_text()[-8000:]}')
++            record['status'] = 'pass'
++        except BaseException as error:
++            record['status'] = 'timeout' if isinstance(error, subprocess.TimeoutExpired) else 'execution_error'
++            record['error'] = str(error)
++            raise
++        finally:
++            record['elapsed_s'] = time.perf_counter() - start
++            if output.is_file():
++                record['stdout_sha256'] = _sha256(output)
++            if stderr.is_file():
++                record['stderr_sha256'] = _sha256(stderr)
++            with (self.work_dir / 'commands.jsonl').open('a', encoding='utf-8') as stream:
++                stream.write(json.dumps(record, ensure_ascii=False) + '\n')
++
++
++class SimulatorKCIRCT(KCIRCT):
++    """复用 KCIRCT 状态转换，只将命令与工件生命周期绑定到本次运行。"""
++
++    def __init__(self, work_dir: Path, definition_dir: Path, parser: Path, executor: CommandExecutor) -> None:
++        self.working_dir = work_dir
++        self.data_dir = work_dir
++        self.parser_dir = parser.parent
++        self.definition_dir = definition_dir
++        self._kprint = None
++        self.parser = parser
++        self.executor = executor
++        self.krun_executable = _tool('krun')
++
++    def compile_fast(self, file: Path, output_file: Path) -> None:
++        self.executor.run([str(self.parser), str(file)], output_file)
++
++    def krun_fast(self, input_file: Path, output_file: Path, depth: int | None = None) -> None:
++        command = self.krun_cmd(input_file, depth)
++        command[0] = self.krun_executable
++        self.executor.run(command, output_file)
++
++
++def _check_finished(state: Path) -> None:
++    text = state.read_text(encoding='utf-8')
++    pending = [name for name in ('prog', 'setup', 'cmd') if f"Lbl'-LT-'{name}'-GT-'{{}}(dotk{{}}())" not in text]
++    if pending or "Lbl'-LT-'current-info'-GT-'" in text or "Lbl'-LT-'current'-GT-'" in text:
++        raise RuntimeError(f'状态尚有待执行内容：{state.name}，未清空 {pending}')
++
++
++def _read_top_ports(
++    kcirct: KCIRCT, state: Path, top: str, inputs: list[Port], outputs: list[Port]
++) -> dict[str, tuple[int, int]]:
++    # 内部未初始化寄存器可以不进入顶层 VCD；所有声明的顶层端口必须实际有值。
++    available = kcirct.read_ports_fast(state, skip_missing=True)
++    ports = {}
++    for port in inputs + outputs:
++        name = f'{top}/{port.name}'
++        if name not in available:
++            raise ValueError(f'必需的顶层端口缺少采样值：{name}')
++        value, width = available[name]
++        if width != port.width or type(value) is not int or not 0 <= value < 1 << width:
++            raise ValueError(f'顶层端口位宽或值不合法：{name}={value}:{width}，预期 i{port.width}')
++        ports[name] = value, width
++    return ports
++
++
++def simulate(
++    input_file: Path,
++    *,
++    top_module: str,
++    inputs_file: Path,
++    output: Path,
++    work_dir: Path,
++    evaluations_per_input: int = 2,
++    definition_dir: Path | None = None,
++    parser: Path | None = None,
++    timeout: float = 120,
++    keep_states: bool = False,
++) -> dict[str, Any]:
++    """按输入事件重复求值后写入 VCD；失败也返回并保存结构化结果。"""
++    input_file, inputs_file, output, work_dir = (
++        path.expanduser().absolute() for path in (input_file, inputs_file, output, work_dir)
++    )
++    # 不复用旧工作目录，避免一次失败覆盖上次证据。
++    work_dir.mkdir(parents=True, exist_ok=False)
++    start = time.perf_counter()
++    result: dict[str, Any] = {
++        'schema_version': 1,
++        'package_version': version('kcirct'),
++        'kframework_version': version('kframework'),
++        'api_sha256': _sha256(Path(__file__).parent / 'api.py'),
++        'simulator_sha256': _sha256(Path(__file__)),
++        'status': 'execution_error',
++        'stage': 'validation',
++        'top_module': top_module,
++        'input_file': str(input_file),
++        'inputs_file': str(inputs_file),
++        'vcd_path': str(output),
++        'work_dir': str(work_dir),
++        'evaluations_per_input': evaluations_per_input,
++        'events_completed': 0,
++        'simulation_calls': 0,
++        'simulation_calls_attempted': 0,
++        'timings': dict.fromkeys(('compile', 'preprocess', 'setup', 'execution', 'read_ports', 'state_export'), 0.0),
++        'error': None,
++    }
++    vcd: KVCD | None = None
++    current_state: Path | None = None
++    archive_index: list[dict[str, Any]] = []
++
++    def timed(name: str, operation: Callable[[], Any]) -> Any:
++        section_start = time.perf_counter()
++        try:
++            return operation()
++        finally:
++            result['timings'][name] += time.perf_counter() - section_start
++
++    try:
++        if type(evaluations_per_input) is not int or evaluations_per_input < 1:
++            raise ValueError('evaluations-per-input 必须是正整数；统一时序协议使用 2')
++        if not timeout > 0 or timeout == float('inf'):
++            raise ValueError('timeout 必须是有限正数（秒）')
++        if output.exists() or output.is_symlink():
++            raise FileExistsError(f'拒绝覆盖已有 VCD：{output}')
++        if output.suffix.lower() != '.vcd':
++            raise ValueError('输出文件必须使用 .vcd 后缀，以免与工作目录的 JSON/Kore 工件冲突')
++        design = work_dir / 'design.generic.mlir'
++        stimulus = work_dir / 'inputs.json'
++        shutil.copyfile(input_file, design)
++        shutil.copyfile(inputs_file, stimulus)
++        result['input_sha256'] = _sha256(design)
++        result['inputs_sha256'] = _sha256(stimulus)
++        input_ports, output_ports = read_port_schema(design, top_module)
++        result['ports'] = {
++            'inputs': [asdict(port) for port in input_ports],
++            'outputs': [asdict(port) for port in output_ports],
++        }
++        timescale, events = read_events(stimulus, input_ports)
++        result['timescale'] = timescale
++        result['events_total'] = len(events)
++        result['stage'] = 'environment'
++        definition_dir = (definition_dir or kdist.get('circt-semantics.llvm')).expanduser().resolve()
++        for filename in ('definition.kore', 'compiled.bin', 'backend.txt', 'interpreter'):
++            if not (definition_dir / filename).is_file():
++                raise FileNotFoundError(f'LLVM 语义定义缺少 {filename}：{definition_dir}')
++        if (definition_dir / 'backend.txt').read_text().strip() != 'llvm':
++            raise ValueError(f'需要 LLVM concrete 定义：{definition_dir}')
++        result['definition_dir'] = str(definition_dir)
++        result['definition_sha256'] = _sha256(definition_dir / 'definition.kore')
++        executor = CommandExecutor(work_dir, timeout)
++        if parser is None:
++            parser = work_dir / 'parser'
++            executor.run(
++                [
++                    _tool('kast'),
++                    str(parser),
++                    '--gen-parser',
++                    '--bison-stack-max-depth',
++                    '1000000000',
++                    '--sort',
++                    'TopLevel',
++                    '--definition',
++                    str(definition_dir),
++                ]
++            )
++        parser = parser.expanduser().resolve()
++        if not parser.is_file() or not os.access(parser, os.X_OK):
++            raise FileNotFoundError(f'parser 不存在或不可执行：{parser}')
++        result['parser'] = str(parser)
++        result['parser_sha256'] = _sha256(parser)
++        kcirct = SimulatorKCIRCT(work_dir, definition_dir, parser, executor)
++        compiled, preprocessed, setup = (
++            work_dir / filename for filename in ('pgm.kore', 'preprocessed.kore', 'setup.kore')
++        )
++        for name, action in (
++            ('compile', lambda: kcirct.compile_fast(design, compiled)),
++            ('preprocess', lambda: kcirct.run_preprocess_fast(compiled, preprocessed)),
++            ('setup', lambda: kcirct.run_setup_fast(preprocessed, setup, top_module)),
++        ):
++            result['stage'] = name
++            timed(name, action)
++        current_state = setup
++        _check_finished(current_state)
++        state_json = work_dir / 'state.json'
++        _json(
++            state_json,
++            [
++                {
++                    'name': top_module,
++                    'states': [
++                        {'name': port.name, 'numBits': port.width, 'type': direction}
++                        for direction, ports in (('input', input_ports), ('output', output_ports))
++                        for port in ports
++                    ],
++                }
++            ],
++        )
++        output.parent.mkdir(parents=True, exist_ok=True)
++        with output.open('x'):
++            pass
++        vcd = KVCD(output, design, state_json_path=state_json, time_scale=timescale)
++        result['stage'] = 'execution'
++        states = [work_dir / 'simulated.0.kore', work_dir / 'simulated.1.kore']
++        if keep_states:
++            (work_dir / 'states').mkdir()
++        for event_index, event in enumerate(events):
++            values = [(event['inputs'][port.name], port.width) for port in input_ports]
++            result['event_index'] = event_index
++            result['event_time'] = event['time']
++            for evaluation in range(1, evaluations_per_input + 1):
++                result['stage'] = 'execution'
++                result['evaluation'] = evaluation
++                result['simulation_calls_attempted'] += 1
++                target: Path = states[int(result['simulation_calls']) % 2]
++                assert current_state is not None
++                timed('execution', partial(kcirct.run_simulate_fast, current_state, target, values))
++                current_state = target
++                result['simulation_calls'] += 1
++                if keep_states:
++                    archive_start = time.perf_counter()
++                    archive = work_dir / 'states' / f'event-{event_index:04d}.eval-{evaluation}.kore.gz'
++                    with target.open('rb') as source, gzip.open(archive, 'wb') as destination:
++                        shutil.copyfileobj(source, destination)
++                    archive_index.append(
++                        {
++                            'event_index': event_index,
++                            'evaluation': evaluation,
++                            'time': event['time'],
++                            'path': str(archive.relative_to(work_dir)),
++                            'source_path': str(target),
++                            'sha256_uncompressed': _sha256(target),
++                        }
++                    )
++                    _json(work_dir / 'states.json', archive_index)
++                    result['timings']['state_export'] += time.perf_counter() - archive_start
++                _check_finished(target)
++            result['stage'] = 'read_ports'
++            assert current_state is not None
++            ports = timed(
++                'read_ports', partial(_read_top_ports, kcirct, current_state, top_module, input_ports, output_ports)
++            )
++            for port in input_ports:
++                if ports[f'{top_module}/{port.name}'][0] != event['inputs'][port.name]:
++                    raise ValueError(f'输入端口采样值与激励不一致：{port.name}')
++            vcd.time = event['time']
++            vcd.dump(ports)
++            result['events_completed'] += 1
++        result['status'] = 'pass'
++        result['stage'] = 'complete'
++    except (Exception, KeyboardInterrupt, SystemExit) as error:
++        result['status'] = 'timeout' if isinstance(error, subprocess.TimeoutExpired) else 'execution_error'
++        result['error'] = f'{type(error).__name__}: {error}'
++        (work_dir / 'error.txt').write_text(result['error'] + '\n', encoding='utf-8')
++    finally:
++        if vcd is not None:
++            vcd.close()
++            result['vcd_sha256'] = _sha256(output)
++        if current_state is not None and current_state.is_file():
++            last_state = work_dir / 'last-state.kore'
++            shutil.copyfile(current_state, last_state)
++            result['last_state'] = str(last_state)
++            result['last_state_sha256'] = _sha256(last_state)
++        result['timings']['total'] = time.perf_counter() - start
++        _json(work_dir / 'result.json', result)
++    return result
+diff --git a/src/tests/unit/test_simulate.py b/src/tests/unit/test_simulate.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..2983be850ebe3d4a95598ff1fc94c52690b48c28
+--- /dev/null
++++ b/src/tests/unit/test_simulate.py
+@@ -0,0 +1,278 @@
++"""外部仿真接口的输入协议、双执行采样和失败证据回归测试。"""
++
++from __future__ import annotations
++
++import gzip
++import hashlib
++import json
++import subprocess
++import sys
++from pathlib import Path
++from typing import Any
++
++import pytest
++from vcdvcd import VCDVCD
++
++import kcirct.__main__ as main_module
++import kcirct._simulate as simulator
++
++_PORTS = 'input clk : i1, input a : i8, output q : i8'
++_IDLE = ''.join(f"Lbl'-LT-'{name}'-GT-'{{}}(dotk{{}}())" for name in ('prog', 'setup', 'cmd'))
++
++
++def _design(tmp_path: Path, ports: str = _PORTS, *, old_syntax: bool = False) -> Path:
++    path = tmp_path / 'design.generic.mlir'
++    attributes = f'module_type = !hw.modty<{ports}>, sym_name = "Demo"'
++    text = (
++        f'"hw.module"() ({{ ^bb0: "hw.output"() : () -> () }}) {{{attributes}}} : () -> ()'
++        if old_syntax
++        else f'"hw.module"() <{{{attributes}}}> ({{ ^bb0: "hw.output"() : () -> () }}) : () -> ()'
++    )
++    path.write_text(f'"builtin.module"() ({{\n{text}\n}}) : () -> ()')
++    return path
++
++
++def _stimulus(tmp_path: Path, events: Any = None) -> Path:
++    path = tmp_path / 'events.json'
++    if events is None:
++        events = [{'time': 0, 'inputs': {'a': 7, 'clk': 0}}, {'time': 5, 'inputs': {'a': 19, 'clk': 1}}]
++    path.write_text(json.dumps({'schema_version': 1, 'timescale': '1ns', 'events': events}))
++    return path
++
++
++@pytest.mark.parametrize('old_syntax', [False, True])
++def test_port_order_comes_from_module_type(tmp_path: Path, old_syntax: bool) -> None:
++    inputs, outputs = simulator.read_port_schema(_design(tmp_path, old_syntax=old_syntax), 'Demo')
++    assert inputs == [simulator.Port('clk', 1), simulator.Port('a', 8)]
++    assert outputs == [simulator.Port('q', 8)]
++
++
++@pytest.mark.parametrize(
++    'ports',
++    ['input clk : !seq.clock, output q : i1', 'inout a : i1', 'input a : i1, output a : i1', 'output q : i1'],
++)
++def test_unsupported_or_ambiguous_ports_fail(tmp_path: Path, ports: str) -> None:
++    with pytest.raises(ValueError):
++        simulator.read_port_schema(_design(tmp_path, ports), 'Demo')
++
++
++@pytest.mark.parametrize(
++    'events',
++    [
++        [],
++        [{'time': 0, 'inputs': {'a': 0}}],
++        [{'time': 0, 'inputs': {'a': 0, 'clk': 0, 'unknown': 0}}],
++        [{'time': 0, 'inputs': {'a': 256, 'clk': 0}}],
++        [{'time': 0, 'inputs': {'a': -1, 'clk': 0}}],
++        [{'time': 0, 'inputs': {'a': True, 'clk': 0}}],
++        [{'time': 0, 'inputs': {'a': 1.0, 'clk': 0}}],
++        [{'time': True, 'inputs': {'a': 1, 'clk': 0}}],
++        [{'time': -1, 'inputs': {'a': 1, 'clk': 0}}],
++        [{'time': 0, 'inputs': {'a': 1, 'clk': 0}}, {'time': 0, 'inputs': {'a': 2, 'clk': 1}}],
++    ],
++)
++def test_invalid_events_fail_before_execution(tmp_path: Path, events: Any) -> None:
++    with pytest.raises(ValueError):
++        simulator.read_events(_stimulus(tmp_path, events), [simulator.Port('clk', 1), simulator.Port('a', 8)])
++
++
++def test_duplicate_json_names_fail(tmp_path: Path) -> None:
++    path = tmp_path / 'events.json'
++    path.write_text('{"schema_version":1,"timescale":"1ns","events":[],"events":[]}')
++    with pytest.raises(ValueError, match='重复字段'):
++        simulator.read_events(path, [simulator.Port('a', 1)])
++
++
++def _fake_backend(
++    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, *, missing_output: bool = False, timeout_at: int | None = None
++) -> tuple[Path, Path, list[tuple[int, list[tuple[int, int]]]]]:
++    definition = tmp_path / 'definition'
++    definition.mkdir()
++    for name in ('definition.kore', 'compiled.bin', 'interpreter'):
++        (definition / name).write_text('fake definition')
++    (definition / 'backend.txt').write_text('llvm')
++    parser = tmp_path / 'parser'
++    parser.write_text('#!/bin/sh\nexit 0\n')
++    parser.chmod(0o755)
++    calls: list[tuple[int, list[tuple[int, int]]]] = []
++
++    class FakeKCIRCT:
++        def __init__(self, *_args: Any) -> None:
++            pass
++
++        def compile_fast(self, _input: Path, output: Path) -> None:
++            output.write_text('compiled')
++
++        def run_preprocess_fast(self, _input: Path, output: Path) -> None:
++            output.write_text('preprocessed')
++
++        def run_setup_fast(self, _input: Path, output: Path, _top: str) -> None:
++            output.write_text(_IDLE + '\n' + json.dumps({'counter': 0}))
++
++        def run_simulate_fast(self, input_file: Path, output_file: Path, inputs: list[tuple[int, int]]) -> None:
++            state = json.loads(input_file.read_text().splitlines()[-1])
++            counter = state['counter'] + 1
++            calls.append((state['counter'], list(inputs)))
++            if timeout_at == counter:
++                raise subprocess.TimeoutExpired(['krun', str(input_file)], 0.01)
++            output_file.write_text(_IDLE + '\n' + json.dumps({'counter': counter, 'values': inputs}))
++
++        def read_ports_fast(self, state: Path, skip_missing: bool = False) -> dict[str, tuple[int, int]]:
++            assert skip_missing
++            data = json.loads(state.read_text().splitlines()[-1])
++            ports = {'Demo/clk': tuple(data['values'][0]), 'Demo/a': tuple(data['values'][1])}
++            if not missing_output:
++                ports['Demo/q'] = (data['values'][1][0] if data['counter'] % 2 == 0 else 255, 8)
++            return ports
++
++    monkeypatch.setattr(simulator, 'SimulatorKCIRCT', FakeKCIRCT)
++    return definition, parser, calls
++
++
++def test_each_event_is_evaluated_twice_then_dumped_once(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
++    definition, parser, calls = _fake_backend(tmp_path, monkeypatch)
++    work = tmp_path / 'run'
++    result = simulator.simulate(
++        _design(tmp_path),
++        top_module='Demo',
++        inputs_file=_stimulus(tmp_path),
++        output=tmp_path / 'wave.vcd',
++        work_dir=work,
++        definition_dir=definition,
++        parser=parser,
++        keep_states=True,
++    )
++    assert result['status'] == 'pass', result
++    assert calls == [(0, [(0, 1), (7, 8)]), (1, [(0, 1), (7, 8)]), (2, [(1, 1), (19, 8)]), (3, [(1, 1), (19, 8)])]
++    assert result['events_completed'] == 2
++    assert result['simulation_calls'] == 4
++    vcd = VCDVCD(str(tmp_path / 'wave.vcd'))
++    assert set(vcd.signals) == {'Demo.clk', 'Demo.a[7:0]', 'Demo.q[7:0]'}
++    assert vcd['Demo.q[7:0]'].tv == [(0, '00000111'), (5, '00010011')]
++    index = json.loads((work / 'states.json').read_text())
++    assert [(entry['event_index'], entry['evaluation'], entry['time']) for entry in index] == [
++        (0, 1, 0),
++        (0, 2, 0),
++        (1, 1, 5),
++        (1, 2, 5),
++    ]
++    for entry in index:
++        assert (
++            hashlib.sha256(gzip.decompress((work / entry['path']).read_bytes())).hexdigest()
++            == entry['sha256_uncompressed']
++        )
++
++
++def test_missing_required_output_fails_instead_of_silently_skipping(
++    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
++) -> None:
++    definition, parser, _ = _fake_backend(tmp_path, monkeypatch, missing_output=True)
++    result = simulator.simulate(
++        _design(tmp_path),
++        top_module='Demo',
++        inputs_file=_stimulus(tmp_path),
++        output=tmp_path / 'wave.vcd',
++        work_dir=tmp_path / 'run',
++        definition_dir=definition,
++        parser=parser,
++    )
++    assert result['status'] == 'execution_error'
++    assert result['stage'] == 'read_ports'
++    assert 'Demo/q' in result['error']
++    assert result['simulation_calls'] == 2
++    assert result['events_completed'] == 0
++
++
++def test_timeout_preserves_last_completed_evaluation_and_inputs(
++    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
++) -> None:
++    definition, parser, _ = _fake_backend(tmp_path, monkeypatch, timeout_at=2)
++    stimulus = _stimulus(tmp_path)
++    result = simulator.simulate(
++        _design(tmp_path),
++        top_module='Demo',
++        inputs_file=stimulus,
++        output=tmp_path / 'wave.vcd',
++        work_dir=tmp_path / 'run',
++        definition_dir=definition,
++        parser=parser,
++        keep_states=True,
++    )
++    assert result['status'] == 'timeout'
++    assert result['events_completed'] == 0
++    assert result['simulation_calls'] == 1
++    assert result['simulation_calls_attempted'] == 2
++    assert Path(result['last_state']).is_file()
++    assert json.loads(Path(result['last_state']).read_text().splitlines()[-1])['counter'] == 1
++    assert (tmp_path / 'run' / 'inputs.json').read_bytes() == stimulus.read_bytes()
++    assert json.loads((tmp_path / 'run' / 'result.json').read_text()) == result
++
++
++def test_command_timeout_keeps_stdout_stderr_and_record(tmp_path: Path) -> None:
++    executor = simulator.CommandExecutor(tmp_path, 1)
++    with pytest.raises(subprocess.TimeoutExpired):
++        executor.run(['/bin/sh', '-c', "printf 'started\\n'; sleep 10"])
++    record = json.loads((tmp_path / 'commands.jsonl').read_text())
++    assert record['status'] == 'timeout'
++    assert record['elapsed_s'] < 5
++    assert Path(record['stdout']).read_text() == 'started\n'
++    assert Path(record['stderr']).is_file()
++
++
++def test_invalid_input_leaves_result_and_existing_vcd_unchanged(tmp_path: Path) -> None:
++    output = tmp_path / 'wave.vcd'
++    output.write_text('existing evidence')
++    result = simulator.simulate(
++        _design(tmp_path), top_module='Demo', inputs_file=_stimulus(tmp_path), output=output, work_dir=tmp_path / 'run'
++    )
++    assert result['status'] == 'execution_error'
++    assert result['stage'] == 'validation'
++    assert output.read_text() == 'existing evidence'
++    assert (tmp_path / 'run' / 'result.json').exists()
++
++
++def test_existing_work_directory_is_not_reused(tmp_path: Path) -> None:
++    with pytest.raises(FileExistsError):
++        simulator.simulate(
++            _design(tmp_path),
++            top_module='Demo',
++            inputs_file=_stimulus(tmp_path),
++            output=tmp_path / 'wave.vcd',
++            work_dir=tmp_path,
++        )
++
++
++def test_describe_does_not_require_simulation_arguments(
++    monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture[str]
++) -> None:
++    args = main_module.create_arg_parser().parse_args(['simulate', '--describe'])
++    monkeypatch.setattr(simulator, 'describe_simulator', lambda: {'schema_version': 1, 'package_version': 'test'})
++    main_module.exec_simulate(**vars(args))
++    assert json.loads(capsys.readouterr().out) == {'schema_version': 1, 'package_version': 'test'}
++
++
++def test_cli_rejects_invalid_events_with_nonzero_exit_and_evidence(tmp_path: Path) -> None:
++    design, inputs = _design(tmp_path), _stimulus(tmp_path, [])
++    process = subprocess.run(
++        [
++            sys.executable,
++            '-m',
++            'kcirct',
++            'simulate',
++            str(design),
++            '--top-module',
++            'Demo',
++            '--inputs',
++            str(inputs),
++            '--output',
++            str(tmp_path / 'wave.vcd'),
++            '--work-dir',
++            str(tmp_path / 'run'),
++        ],
++        capture_output=True,
++        text=True,
++        timeout=10,
++    )
++    assert process.returncode == 1
++    assert json.loads(process.stdout)['stage'] == 'validation'
++    assert '非空事件数组' in (tmp_path / 'run' / 'error.txt').read_text()

@@ -1,0 +1,117 @@
+[
+  {
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/component/public-simulate.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "apply",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/component/public-simulate.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/component/packed-array-semantics/packed-array-semantics.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "apply",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/component/packed-array-semantics/packed-array-semantics.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/component/scalar-firreg-preset/scalar-firreg-preset.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "apply",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/component/scalar-firreg-preset/scalar-firreg-preset.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/component/auto-connect-list-preservation/auto-connect-list-preservation.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "apply",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/evidence/vcd/component/auto-connect-list-preservation/auto-connect-list-preservation.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "apply",
+      "--check",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/indexed-read/component-stage-ready/indexed-read.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "git",
+      "apply",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/indexed-read/component-stage-ready/indexed-read.patch"
+    ],
+    "cwd": "/private/tmp/kcirct-indexed-read-vki7uq_s",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/indexed-read/component-stage-ready/indexed-read.patch:23: trailing whitespace.\n... \nwarning: 1 line adds whitespace errors.\n"
+  }
+]

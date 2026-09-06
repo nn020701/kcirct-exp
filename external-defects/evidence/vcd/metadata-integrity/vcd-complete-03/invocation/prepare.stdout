@@ -1,0 +1,2 @@
+.venv/bin/python external-defects/runner.py prepare --kimulator ../circt-semantics/.venv/bin/kcirct --k-bin /Users/bytedance/.nix-profile/bin
+组件的定义与 parser 已准备：/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/validation/prepare-20260906T094637.814579Z

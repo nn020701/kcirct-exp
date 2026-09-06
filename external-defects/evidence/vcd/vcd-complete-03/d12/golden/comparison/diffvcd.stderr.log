@@ -1,0 +1,29 @@
+21 signals in first file
+98 signals in second file
+21 signals under `axis_fifo.` in first file
+98 signals under `TOP.` in second file
+21 common signals
+21 filtered and unignored signals
+Reading first file
+Reading second file
+Comparing clk
+Comparing m_axis_tdata[7:0]
+Comparing m_axis_tdest[7:0]
+Comparing m_axis_tid[7:0]
+Comparing m_axis_tkeep
+Comparing m_axis_tlast
+Comparing m_axis_tready
+Comparing m_axis_tuser
+Comparing m_axis_tvalid
+Comparing rst
+Comparing s_axis_tdata[7:0]
+Comparing s_axis_tdest[7:0]
+Comparing s_axis_tid[7:0]
+Comparing s_axis_tkeep
+Comparing s_axis_tlast
+Comparing s_axis_tready
+Comparing s_axis_tuser
+Comparing s_axis_tvalid
+Comparing status_bad_frame
+Comparing status_good_frame
+Comparing status_overflow

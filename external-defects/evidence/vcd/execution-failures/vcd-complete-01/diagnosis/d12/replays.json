@@ -1,0 +1,56 @@
+[
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/input.kore",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros"
+    ],
+    "returncode": 0,
+    "seconds": 0.15916919708251953,
+    "sha256": "159440decc670e38a76d269e1b9baf817b296607a3a966ff45dd4643e8dd72b9",
+    "matches_original": true
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/input.kore",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros"
+    ],
+    "returncode": 0,
+    "seconds": 0.15337491035461426,
+    "sha256": "159440decc670e38a76d269e1b9baf817b296607a3a966ff45dd4643e8dd72b9",
+    "matches_original": true
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/input.kore",
+      "--definition",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+      "--output",
+      "kore",
+      "--parser",
+      "cat",
+      "--term",
+      "--no-expand-macros"
+    ],
+    "returncode": 0,
+    "seconds": 0.1483469009399414,
+    "sha256": "159440decc670e38a76d269e1b9baf817b296607a3a966ff45dd4643e8dd72b9",
+    "matches_original": true
+  }
+]

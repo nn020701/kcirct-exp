@@ -1,0 +1,15 @@
+{
+  "semantics_file_count": 52,
+  "all_match": true,
+  "formal_definition_sha256": "08ac54e383967aa9aa7ba218cd0148e2b4d3f19dea67ddab33f120d661854e2b",
+  "formal_artifacts": {
+    "definition.kore": "08ac54e383967aa9aa7ba218cd0148e2b4d3f19dea67ddab33f120d661854e2b",
+    "compiled.bin": "f76d47de012d0af56524f3b81139bf3d4ab2ded457ca316dad0ccd9c7b1a43ce",
+    "backend.txt": "ef5a927f5a4ae8bdfa7d187079fa7b2aabc8d72ce219c564f78c9498ff59d2f9",
+    "interpreter": "7279547dd764154e304dd8b8dea05f4473a0beff8d9ed349e55a3b44bd4473af"
+  },
+  "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+  "prepared_path": "external-defects/.runs/vcd-complete-03/prepared.json",
+  "prepared_sha256": "99978e3edf4b26007de64a0a8fed592a56469ea8c03aa8d2f8ee7fc781bceea5",
+  "component_stage_sha256": "8f5dea7fb25d33ad97d651b862ad6402ef0189053ab44a481219383adcfa6dbc"
+}

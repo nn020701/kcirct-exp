@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "path_base": "external-defects/",
+  "project_id": "axi-lite-s1",
+  "source_case_id": "S1",
+  "variant_id": "s1b",
+  "design_variant": "buggy",
+  "source_run": {
+    "run_id": "batch-final-01",
+    "directory": ".runs/batch-final-01/s1b/buggy/kimulator",
+    "case_status": "pass",
+    "backend_status": "oracle_mismatch",
+    "backend_stage": null,
+    "formal_result": {
+      "path": "results/cases/s1b.json",
+      "sha256": "5fdafc20c45e5ab457de1780b3bbd8b1cb10d0ef522a2d8cf33b0dd0f99cd5c6",
+      "bytes": 4125
+    },
+    "archive_records_policy": "records 指向本地历史运行归档，位于被 Git 忽略的 .runs；新 checkout 不自带这些原始记录。其 SHA256 用于校对已有归档。本文件已单独保存生成参数、命令、版本和 RTL 哈希。",
+    "records": {
+      "case_manifest": {
+        "path": ".runs/batch-final-01/s1b/manifest.json",
+        "sha256": "e15cf5928f2809c5c46df86d85bd57bfa2a595770e9cb8a51e74ab2b03ce691e",
+        "bytes": 10450
+      },
+      "case_result": {
+        "path": ".runs/batch-final-01/s1b/result.json",
+        "sha256": "c349cd6ed337423570b2b8e73e46d56080b7fa16b07574cec894c7839c6429b5",
+        "bytes": 39126
+      },
+      "run_results": {
+        "path": ".runs/batch-final-01/results.json",
+        "sha256": "5e11e8e2665942a033a025763240203c834cf96d2386fd7b110b78faf6a5a525",
+        "bytes": 582513
+      },
+      "run_versions": {
+        "path": ".runs/batch-final-01/versions.json",
+        "sha256": "e7a3b31a78be2d70880ad01347a22ade77153e1842cb647afeeef962ea2452b7",
+        "bytes": 8522
+      },
+      "backend_result": {
+        "path": ".runs/batch-final-01/s1b/buggy/kimulator/result.json",
+        "sha256": "2826ac7b2c7e36cc3178ce915aaa82b54fd38e93361350180476c2c70e6bfbd3",
+        "bytes": 3154
+      },
+      "commands": {
+        "path": ".runs/batch-final-01/s1b/buggy/kimulator/commands.jsonl",
+        "sha256": "563aeb518d4d77de8f0e504a56cc2502c2942089d139e52d605e59962f1418f2",
+        "bytes": 17649
+      },
+      "runner": {
+        "path": ".runs/batch-final-01/runner.py",
+        "sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+        "bytes": 30409
+      },
+      "service_patch": {
+        "path": ".runs/batch-final-01/service.patch",
+        "sha256": "54a7053789eebda3e68c824b4f3c8515f5f517602ca09de19a69458bccbb57a9",
+        "bytes": 5833
+      }
+    }
+  },
+  "active_manifest": "manifests/s1b.json",
+  "layout": {
+    "path": "designs/axi-lite-s1/provenance/layout.json",
+    "sha256": "baa3d3499107842aa82e794a9ce624b2df66bad7c09b7147138c2487ffa8ebe5",
+    "bytes": 908
+  },
+  "configuration": {
+    "top": "xlnxdemo",
+    "parameters": {
+      "C_S_AXI_DATA_WIDTH": 32,
+      "C_S_AXI_ADDR_WIDTH": 7
+    },
+    "effective_parameters": {
+      "C_S_AXI_DATA_WIDTH": 32,
+      "C_S_AXI_ADDR_WIDTH": 7
+    },
+    "frontend_args": [],
+    "sample_phase": "low_before_posedge_pre_NBA"
+  },
+  "rtl_sources": [
+    {
+      "historical_manifest_path": "sources/axi-lite-s1/xlnxdemo_bug_s1b.v",
+      "path": "designs/axi-lite-s1/variants/s1b/xlnxdemo_bug_s1b.v",
+      "sha256": "d28938fae9a635fe4d6e33054ad372e66fde217c0c6e6a7430436d35902e4e26",
+      "bytes": 30414
+    }
+  ],
+  "artifacts": {
+    "design.mlir": {
+      "path": "designs/axi-lite-s1/mlir/s1b/buggy/design.mlir",
+      "sha256": "79cae3bace12c7636b915a4fa183b18bf6f2f794fb1b4c4de446ff08370691f7",
+      "bytes": 129328
+    },
+    "design.generic.mlir": {
+      "path": "designs/axi-lite-s1/mlir/s1b/buggy/design.generic.mlir",
+      "sha256": "1e445f547f322053e5d71fbcb665ce2f00c36edebfaaeb360449687c31bbac02",
+      "bytes": 128442
+    },
+    "design.debug.generic.mlir": {
+      "path": "designs/axi-lite-s1/mlir/s1b/buggy/design.debug.generic.mlir",
+      "sha256": "796e61a950f93934a7e51997b8ea51c4b8593a79ab4ef00ea736c136363e1706",
+      "bytes": 171145
+    },
+    "source-map.json": {
+      "path": "designs/axi-lite-s1/mlir/s1b/buggy/source-map.json",
+      "sha256": "c4040a533e36c6d60d004a1e1d609c783ae5c53f0f9ff277e1f19187e93ab899",
+      "bytes": 444000
+    }
+  },
+  "tool_versions": {
+    "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "pyk": "7.1.323",
+    "circt-verilog": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\nslang version 10.0.0+0",
+    "circt-opt": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0",
+    "kompile": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "krun": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "kast": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026"
+  },
+  "generation": {
+    "working_directory": "external-defects/",
+    "commands_policy": "以下 argv 从历史 commands.jsonl 的前三条实际成功命令提取，保持参数及输入文件顺序，仅将工具名、RTL 和输出路径重定位为可移植表示；并非声称这些新路径已经重新执行。工具通过 PATH 解析。",
+    "commands": [
+      {
+        "stage": "frontend",
+        "historical_command_line": 1,
+        "argv": [
+          "circt-verilog",
+          "--ir-hw",
+          "--top=xlnxdemo",
+          "--mlir-print-debuginfo",
+          "-GC_S_AXI_DATA_WIDTH=32",
+          "-GC_S_AXI_ADDR_WIDTH=7",
+          "designs/axi-lite-s1/variants/s1b/xlnxdemo_bug_s1b.v",
+          "-o",
+          "designs/axi-lite-s1/mlir/s1b/buggy/design.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "debug.generic",
+        "historical_command_line": 2,
+        "argv": [
+          "circt-opt",
+          "designs/axi-lite-s1/mlir/s1b/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "--mlir-print-debuginfo",
+          "-o",
+          "designs/axi-lite-s1/mlir/s1b/buggy/design.debug.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "generic",
+        "historical_command_line": 3,
+        "argv": [
+          "circt-opt",
+          "designs/axi-lite-s1/mlir/s1b/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "-o",
+          "designs/axi-lite-s1/mlir/s1b/buggy/design.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      }
+    ],
+    "source_map": {
+      "generator": "runner.py:source_map",
+      "historical_runner_sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+      "mapping_kind": "same_ir_printed_with_and_without_locations"
+    }
+  },
+  "location_policy": "MLIR 和 source-map.json 按历史运行字节原样保存，保留旧 loc（包含旧目录或绝对路径）。通过 rtl_sources 的历史路径、当前路径、SHA256 及 layout.json 对应源文件。迁移路径后重新生成时 loc 和文件哈希可能变化；不要为美化路径修改本基线或旧 source-map。"
+}

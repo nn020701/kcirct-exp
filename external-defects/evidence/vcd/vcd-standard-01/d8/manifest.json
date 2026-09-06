@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "source_case_id": "D8",
+  "project_id": "axis-switch-d8",
+  "variant_id": "d8",
+  "top": "axis_switch",
+  "golden_sources": [
+    "designs/axis-switch-d8/original/arbiter.v",
+    "designs/axis-switch-d8/original/axis_register.v",
+    "designs/axis-switch-d8/original/axis_switch.v",
+    "designs/axis-switch-d8/original/priority_encoder.v"
+  ],
+  "bug_original": "designs/axis-switch-d8/original/axis_switch.v",
+  "bug_source": "designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v",
+  "csv": "designs/axis-switch-d8/testbench/tb.csv",
+  "inputs": [
+    {
+      "name": "clk",
+      "width": 1
+    },
+    {
+      "name": "rst",
+      "width": 1
+    },
+    {
+      "name": "s_axis_tdata",
+      "width": 32
+    },
+    {
+      "name": "s_axis_tkeep",
+      "width": 4
+    },
+    {
+      "name": "s_axis_tvalid",
+      "width": 4
+    },
+    {
+      "name": "s_axis_tlast",
+      "width": 4
+    },
+    {
+      "name": "s_axis_tid",
+      "width": 32
+    },
+    {
+      "name": "s_axis_tdest",
+      "width": 4
+    },
+    {
+      "name": "s_axis_tuser",
+      "width": 4
+    },
+    {
+      "name": "m_axis_tready",
+      "width": 1
+    }
+  ],
+  "outputs": [
+    {
+      "name": "s_axis_tready",
+      "width": 4
+    },
+    {
+      "name": "m_axis_tdata",
+      "width": 8
+    },
+    {
+      "name": "m_axis_tkeep",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tvalid",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tlast",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tid",
+      "width": 8
+    },
+    {
+      "name": "m_axis_tdest",
+      "width": 1
+    },
+    {
+      "name": "m_axis_tuser",
+      "width": 1
+    }
+  ],
+  "clock": "clk",
+  "reset": {
+    "signal": "rst",
+    "active": 1
+  },
+  "parameters": {},
+  "effective_parameters": {
+    "S_COUNT": 4,
+    "M_COUNT": 1,
+    "DATA_WIDTH": 8,
+    "KEEP_ENABLE": 0,
+    "KEEP_WIDTH": 1,
+    "ID_ENABLE": 1,
+    "ID_WIDTH": 8,
+    "DEST_WIDTH": 1,
+    "USER_ENABLE": 1,
+    "USER_WIDTH": 1,
+    "M_BASE": 0,
+    "M_TOP": 1672,
+    "M_CONNECT": 15,
+    "S_REG_TYPE": 0,
+    "M_REG_TYPE": 2,
+    "ARB_TYPE": "ROUND_ROBIN",
+    "LSB_PRIORITY": "HIGH"
+  },
+  "initialization": {
+    "mode": "rtl_initial_plus_two_state_zero",
+    "uninitialized_register_value": 0,
+    "four_state_equivalence_claimed": false,
+    "evidence": [
+      "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。",
+      "designs/axis-switch-d8/provenance/project.toml 明确声明原 TB 只适用于二态仿真。"
+    ]
+  },
+  "sample_phase": "low_before_posedge_pre_NBA",
+  "oracle_outputs": [
+    "s_axis_tready",
+    "m_axis_tdata",
+    "m_axis_tkeep",
+    "m_axis_tvalid",
+    "m_axis_tlast",
+    "m_axis_tid",
+    "m_axis_tdest",
+    "m_axis_tuser"
+  ],
+  "masks": [],
+  "csv_normalization": {
+    "strip_whitespace": true,
+    "allow_one_trailing_empty_field": false,
+    "reason": "仅去除单元格周围空白，保留并检查完整列集合。"
+  },
+  "samples": 14,
+  "timeout_s": 120,
+  "frontend_args": [],
+  "source_hashes": {
+    "designs/axis-switch-d8/original/arbiter.v": "34c788a483304020477a6f0f26de35a161746a5287bf67266b8ce3bfbb9c1163",
+    "designs/axis-switch-d8/original/axis_register.v": "11a20ad46d841011b21a4222555e8ce0e98d7c6cfdd1d6e35c98f41220aa3ae4",
+    "designs/axis-switch-d8/original/axis_switch.v": "55dea558929c5f6f2f5172d398720e1b7c39d23878005eb5a4d0d459e892b240",
+    "designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v": "786685768d9ad85a52bb5ac8c5f857bb2a0070753ba1ed62af0056f20fd7d493",
+    "designs/axis-switch-d8/provenance/origin/README.md": "e71943a1316a745ecf42aabab2a127165a7664e5ef528acd4834c5327919aaae",
+    "designs/axis-switch-d8/original/priority_encoder.v": "9eee1cc4d6bf910aeffe6c3fa5407763c0529bf2a07996ae67549953286ab2f7",
+    "designs/axis-switch-d8/provenance/project.toml": "54c4b4009e6b385a30ff14547f3ccd1243ef35b9066055ea3f32f040d18be4e7",
+    "designs/axis-switch-d8/testbench/tb.csv": "132d48db37660b7e7731010c421eef459814029de17c20c0dd93bba74044d56f",
+    "designs/axis-switch-d8/testbench/tb.v": "a858f77c7428c37dfa173fa2e5b17c021478504fbb2fbc0202487608117e1961",
+    "designs/axis-switch-d8/provenance/to_btor2.ys": "85fa1150bfdcff929b3f54c29382125248d25b54ec9da665e6fe0c43f71f9a56",
+    "designs/axis-switch-d8/provenance/layout.json": "51e32a09fb99e8f4ef8ba48c84175f9d5868e028bcf58e122893901f75c58ae9"
+  },
+  "upstream": {
+    "repository": "https://github.com/ekiwi/rtl-repair",
+    "commit": "71e1afc0b9a2327d008b46acd415cf3f0343a938",
+    "project_path": "benchmarks/fpga-debugging/axis-switch-d8",
+    "archive": "rtl-repair-fpga-debugging-71e1afc.tar.gz",
+    "archive_sha256": "3aebd94c34aaf9cced849541635ebc66145c7ba44fc1227f3f4e8623073ddc0a",
+    "origin_repository": "https://github.com/efeslab/hardware-bugbase",
+    "origin_commit": "7702e478f4ffdca477273d5a395992ecf006d70f",
+    "origin_readme": "designs/axis-switch-d8/provenance/origin/README.md",
+    "origin_archive_sha256": "b5125ec4a3d93db138e5642285343d2d644e89a0b5bd156701b2c4f7bcb2ae5d"
+  },
+  "project_toml": "designs/axis-switch-d8/provenance/project.toml",
+  "selected_testbench": {
+    "name": "csv",
+    "table": "tb.csv"
+  },
+  "native_testbench": {
+    "adapted_exists": true,
+    "path": "designs/axis-switch-d8/testbench/tb.v",
+    "sha256": "a858f77c7428c37dfa173fa2e5b17c021478504fbb2fbc0202487608117e1961"
+  },
+  "ports_without_oracle": [],
+  "unsupported_reasons": [],
+  "notes": [
+    "TB 参数覆盖块全部被注释，DUT 默认生效。M_TOP 为 12 位拼接常量，数值为 1672，应保持原值。",
+    "project.toml 明确说明原 TB 只适用于二态仿真。",
+    "test_axis_switch_4x1 需要外部 clk/genclock，没有 fwrite；无条件打印的 @@@Bug 是说明文字，不能作为本轮错误检测。",
+    "TB 在 cycle==12 时停止，CSV 有 14 行；必须独立验证完整 CSV 回放。"
+  ],
+  "layout_file": "designs/axis-switch-d8/provenance/layout.json"
+}

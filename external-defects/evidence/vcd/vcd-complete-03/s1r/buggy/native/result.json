@@ -1,0 +1,613 @@
+{
+  "status": "oracle_mismatch",
+  "status_meaning": "原生构建和执行完成；尚未判定 oracle",
+  "samples": [
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 1,
+      "S_AXI_WREADY": 1,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 1,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 1,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 1
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 1,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 1
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    }
+  ],
+  "rows": [
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 1,
+      "S_AXI_WREADY": 1,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 1,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 1,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 1
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 1,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 1
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    },
+    {
+      "S_AXI_AWREADY": 0,
+      "S_AXI_WREADY": 0,
+      "S_AXI_BRESP": 0,
+      "S_AXI_BVALID": 0,
+      "S_AXI_ARREADY": 0,
+      "S_AXI_RDATA": 0,
+      "S_AXI_RRESP": 0,
+      "S_AXI_RVALID": 0
+    }
+  ],
+  "sample_count": 10,
+  "event_count": 19,
+  "vcd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/s1r/buggy/native/trace.vcd",
+  "vcd_sha256": "050befc95ca711d1e93da18a626efcbe4a6eabfe939db6a679d4461b3836617d",
+  "vcd_top": "TOP",
+  "stimulus_json": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/s1r/buggy/native/stimulus.json",
+  "output_csv": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/s1r/buggy/native/output.csv",
+  "timings": {
+    "build": 4.922675459001766,
+    "execution": 0.4440136249977513,
+    "read_compare": 0.0010811669999384321
+  },
+  "versions": {
+    "verilator": "Verilator 5.048 2026-04-26 rev vUNKNOWN-built20260426",
+    "verilator_path": "/opt/homebrew/bin/verilator"
+  },
+  "sampling_contract": {
+    "sample_phase": "low_before_posedge_pre_NBA",
+    "vcd_sample_phase": "every_event_after_eval",
+    "clock": "S_AXI_ACLK",
+    "events": "每行 drive(clk=0, inputs) -> eval -> dump VCD 并读取 CSV；除最后一行外 drive(clk=1, 相同 inputs) -> eval -> dump VCD",
+    "event_count": 19,
+    "vcd_timescale": "1ns",
+    "vcd_top": "TOP",
+    "initialization": "Verilator 二态未初始化值为 0；保留 RTL 显式 initial/声明初始化，不额外插入 reset",
+    "unknown_values": "原生 --x-initial 0/--x-assign 0；CSV 输入禁止 None/X/Z；输出 mask 由独立 oracle 比较处理",
+    "time": "第 i 行 low 时间为 2*i ns，随后 high 为 (2*i+1) ns；最后一行只提交 low；无延迟 DUT 的精度统一为 1ns",
+    "limitation": "低电平先更新输入再观察；组合输出可能不同于原 TB 输入 NBA 更新前的观测，须逐例核对原生 oracle",
+    "inputs": [
+      {
+        "name": "S_AXI_ACLK",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_ARESETN",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_AWADDR",
+        "width": 7
+      },
+      {
+        "name": "S_AXI_AWPROT",
+        "width": 3
+      },
+      {
+        "name": "S_AXI_AWVALID",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_WDATA",
+        "width": 32
+      },
+      {
+        "name": "S_AXI_WSTRB",
+        "width": 4
+      },
+      {
+        "name": "S_AXI_WVALID",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_BREADY",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_ARADDR",
+        "width": 7
+      },
+      {
+        "name": "S_AXI_ARPROT",
+        "width": 3
+      },
+      {
+        "name": "S_AXI_ARVALID",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_RREADY",
+        "width": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "S_AXI_AWREADY",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_WREADY",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_BRESP",
+        "width": 2
+      },
+      {
+        "name": "S_AXI_BVALID",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_ARREADY",
+        "width": 1
+      },
+      {
+        "name": "S_AXI_RDATA",
+        "width": 32
+      },
+      {
+        "name": "S_AXI_RRESP",
+        "width": 2
+      },
+      {
+        "name": "S_AXI_RVALID",
+        "width": 1
+      }
+    ],
+    "manifest_initialization": {
+      "mode": "rtl_initial_plus_two_state_zero",
+      "uninitialized_register_value": 0,
+      "four_state_equivalence_claimed": false,
+      "evidence": [
+        "designs/axi-lite-s1/provenance/origin/rtl/trace_tb1.v: 初始块显式将 10 个 axi_* 状态及 slv_reg0..31 共 42 个 DUT 状态清零。",
+        "适配后的 xlnxdemo 没有实际 initial；首样本在第一次同步复位更新之前，不能用多打一拍 reset 悄悄替代原初始状态。"
+      ],
+      "initial_registers": [
+        {
+          "name": "axi_araddr",
+          "width": 7,
+          "value": 0,
+          "line": 58
+        },
+        {
+          "name": "axi_arready",
+          "width": 1,
+          "value": 0,
+          "line": 59
+        },
+        {
+          "name": "axi_awaddr",
+          "width": 7,
+          "value": 0,
+          "line": 60
+        },
+        {
+          "name": "axi_awready",
+          "width": 1,
+          "value": 0,
+          "line": 61
+        },
+        {
+          "name": "axi_bresp",
+          "width": 2,
+          "value": 0,
+          "line": 62
+        },
+        {
+          "name": "axi_bvalid",
+          "width": 1,
+          "value": 0,
+          "line": 63
+        },
+        {
+          "name": "axi_rdata",
+          "width": 32,
+          "value": 0,
+          "line": 64
+        },
+        {
+          "name": "axi_rresp",
+          "width": 2,
+          "value": 0,
+          "line": 65
+        },
+        {
+          "name": "axi_rvalid",
+          "width": 1,
+          "value": 0,
+          "line": 66
+        },
+        {
+          "name": "axi_wready",
+          "width": 1,
+          "value": 0,
+          "line": 67
+        },
+        {
+          "name": "slv_reg0",
+          "width": 32,
+          "value": 0,
+          "line": 116
+        },
+        {
+          "name": "slv_reg1",
+          "width": 32,
+          "value": 0,
+          "line": 117
+        },
+        {
+          "name": "slv_reg10",
+          "width": 32,
+          "value": 0,
+          "line": 118
+        },
+        {
+          "name": "slv_reg11",
+          "width": 32,
+          "value": 0,
+          "line": 119
+        },
+        {
+          "name": "slv_reg12",
+          "width": 32,
+          "value": 0,
+          "line": 120
+        },
+        {
+          "name": "slv_reg13",
+          "width": 32,
+          "value": 0,
+          "line": 121
+        },
+        {
+          "name": "slv_reg14",
+          "width": 32,
+          "value": 0,
+          "line": 122
+        },
+        {
+          "name": "slv_reg15",
+          "width": 32,
+          "value": 0,
+          "line": 123
+        },
+        {
+          "name": "slv_reg16",
+          "width": 32,
+          "value": 0,
+          "line": 124
+        },
+        {
+          "name": "slv_reg17",
+          "width": 32,
+          "value": 0,
+          "line": 125
+        },
+        {
+          "name": "slv_reg18",
+          "width": 32,
+          "value": 0,
+          "line": 126
+        },
+        {
+          "name": "slv_reg19",
+          "width": 32,
+          "value": 0,
+          "line": 127
+        },
+        {
+          "name": "slv_reg2",
+          "width": 32,
+          "value": 0,
+          "line": 128
+        },
+        {
+          "name": "slv_reg20",
+          "width": 32,
+          "value": 0,
+          "line": 129
+        },
+        {
+          "name": "slv_reg21",
+          "width": 32,
+          "value": 0,
+          "line": 130
+        },
+        {
+          "name": "slv_reg22",
+          "width": 32,
+          "value": 0,
+          "line": 131
+        },
+        {
+          "name": "slv_reg23",
+          "width": 32,
+          "value": 0,
+          "line": 132
+        },
+        {
+          "name": "slv_reg24",
+          "width": 32,
+          "value": 0,
+          "line": 133
+        },
+        {
+          "name": "slv_reg25",
+          "width": 32,
+          "value": 0,
+          "line": 134
+        },
+        {
+          "name": "slv_reg26",
+          "width": 32,
+          "value": 0,
+          "line": 135
+        },
+        {
+          "name": "slv_reg27",
+          "width": 32,
+          "value": 0,
+          "line": 136
+        },
+        {
+          "name": "slv_reg28",
+          "width": 32,
+          "value": 0,
+          "line": 137
+        },
+        {
+          "name": "slv_reg29",
+          "width": 32,
+          "value": 0,
+          "line": 138
+        },
+        {
+          "name": "slv_reg3",
+          "width": 32,
+          "value": 0,
+          "line": 139
+        },
+        {
+          "name": "slv_reg30",
+          "width": 32,
+          "value": 0,
+          "line": 140
+        },
+        {
+          "name": "slv_reg31",
+          "width": 32,
+          "value": 0,
+          "line": 141
+        },
+        {
+          "name": "slv_reg4",
+          "width": 32,
+          "value": 0,
+          "line": 142
+        },
+        {
+          "name": "slv_reg5",
+          "width": 32,
+          "value": 0,
+          "line": 143
+        },
+        {
+          "name": "slv_reg6",
+          "width": 32,
+          "value": 0,
+          "line": 144
+        },
+        {
+          "name": "slv_reg7",
+          "width": 32,
+          "value": 0,
+          "line": 145
+        },
+        {
+          "name": "slv_reg8",
+          "width": 32,
+          "value": 0,
+          "line": 146
+        },
+        {
+          "name": "slv_reg9",
+          "width": 32,
+          "value": 0,
+          "line": 147
+        }
+      ]
+    }
+  },
+  "oracle": {
+    "agrees": false,
+    "compared_cells": 80,
+    "masked_cells": 0,
+    "first_mismatch": {
+      "sample_index": 5,
+      "signal": "S_AXI_ARREADY",
+      "expected": 0,
+      "actual": 1
+    },
+    "mismatches": [
+      {
+        "sample_index": 5,
+        "signal": "S_AXI_ARREADY",
+        "expected": 0,
+        "actual": 1
+      },
+      {
+        "sample_index": 6,
+        "signal": "S_AXI_ARREADY",
+        "expected": 1,
+        "actual": 0
+      }
+    ]
+  }
+}

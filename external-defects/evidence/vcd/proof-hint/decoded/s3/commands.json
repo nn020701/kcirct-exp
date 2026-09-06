@@ -1,0 +1,89 @@
+[
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/kore-rich-header",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/kore-rich-header-help.stdout",
+      "sha256": "a43a972e69f3979e35b5ac935c8d6df72b7eddcafa71837950e2ffabc4dbd6e1",
+      "bytes": 349
+    },
+    "stderr": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/kore-rich-header-help.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/kore-proof-trace",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/kore-proof-trace-help.stdout",
+      "sha256": "a2c69549cb6c6e421be002069b591f2f8d7e63e63afb3b762134f3170f661a56",
+      "bytes": 679
+    },
+    "stderr": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/kore-proof-trace-help.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/llvm-kompile-compute-loc",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/llvm-kompile-compute-loc-help.stdout",
+      "sha256": "bf4ab3fc22a89df7427da930a43d3e33e5f1ec32b9440131dc84dac55f72a7e9",
+      "bytes": 400
+    },
+    "stderr": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/llvm-kompile-compute-loc-help.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/llvm-kompile-compute-ordinal",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/llvm-kompile-compute-ordinal-help.stdout",
+      "sha256": "ad20fca602632a0a86041e75c9a37bc20605a83070886fe1fa094c4f470e2e2d",
+      "bytes": 532
+    },
+    "stderr": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/llvm-kompile-compute-ordinal-help.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  {
+    "argv": [
+      "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/kore-rich-header",
+      "services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition/definition.kore",
+      "-o",
+      "services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/header.bin"
+    ],
+    "exit_code": 0,
+    "stdout": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/rich-header.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "stderr": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/rich-header.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+]

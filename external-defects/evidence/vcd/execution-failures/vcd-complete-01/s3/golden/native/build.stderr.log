@@ -1,0 +1,52 @@
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:162:39: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's VARREF 'input_axis_tdata' generates 64 bits.
+                                                                                                                                                                 : ... note: In instance 'axis_adapter'
+  162 |                 output_axis_tdata_int = input_axis_tdata;
+      |                                       ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.048
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:163:39: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS's VARREF 'input_axis_tkeep' generates 8 bits.
+                                                                                                                                                                 : ... note: In instance 'axis_adapter'
+  163 |                 output_axis_tkeep_int = input_axis_tkeep;
+      |                                       ^
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:263:87: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's VARREF 'input_axis_tdata' generates 64 bits.
+                                                                                                                                                                 : ... note: In instance 'axis_adapter'
+  263 |                 temp_tdata_next[cycle_count_reg*CYCLE_DATA_WIDTH +: CYCLE_DATA_WIDTH] = input_axis_tdata;
+      |                                                                                       ^
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:264:87: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS's VARREF 'input_axis_tkeep' generates 8 bits.
+                                                                                                                                                                 : ... note: In instance 'axis_adapter'
+  264 |                 temp_tkeep_next[cycle_count_reg*CYCLE_KEEP_WIDTH +: CYCLE_KEEP_WIDTH] = input_axis_tkeep;
+      |                                                                                       ^
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:270:38: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'cycle_count_reg' generates 8 bits.
+                                                                                                                                                                  : ... note: In instance 'axis_adapter'
+  270 |                 if ((cycle_count_reg == CYCLE_COUNT-1) | input_axis_tlast) begin
+      |                                      ^~
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.048
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:294:39: Operator ASSIGN expects 8 bits on the Assign RHS, but Assign RHS's VARREF 'temp_tdata_reg' generates 64 bits.
+                                                                                                                                                                 : ... note: In instance 'axis_adapter'
+  294 |                 output_axis_tdata_int = temp_tdata_reg;
+      |                                       ^
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:295:39: Operator ASSIGN expects 1 bits on the Assign RHS, but Assign RHS's VARREF 'temp_tkeep_reg' generates 8 bits.
+                                                                                                                                                                 : ... note: In instance 'axis_adapter'
+  295 |                 output_axis_tkeep_int = temp_tkeep_reg;
+      |                                       ^
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:344:61: Operator ADD expects 32 bits on the LHS, but LHS's VARREF 'cycle_count_reg' generates 8 bits.
+                                                                                                                                                                  : ... note: In instance 'axis_adapter'
+  344 |                 end else if (temp_tkeep_reg[(cycle_count_reg+1)*CYCLE_KEEP_WIDTH +: CYCLE_KEEP_WIDTH] == {CYCLE_KEEP_WIDTH{1'b0}}) begin
+      |                                                             ^
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:338:37: Operator EQ expects 32 bits on the LHS, but LHS's VARREF 'cycle_count_reg' generates 8 bits.
+                                                                                                                                                                  : ... note: In instance 'axis_adapter'
+  338 |                 if (cycle_count_reg == CYCLE_COUNT-1) begin
+      |                                     ^~
+%Warning-CASEINCOMPLETE: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:152:5: Case values incompletely covered (example pattern 0x3)
+  152 |     case (state_reg)
+      |     ^~~~
+                         ... For warning description see https://verilator.org/warn/CASEINCOMPLETE?v=5.048
+                         ... Use "/* verilator lint_off CASEINCOMPLETE */" and lint_on around source to disable this message.
+%Warning-LATCH: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-adapter-s3/original/axis_adapter.v:134:1: Latch inferred for signal 'axis_adapter.last_cycle' (not all control paths of combinational always assign a value)
+                                                                                                                                                           : ... Suggest use of always_latch for intentional latches
+  134 | always @* begin
+      | ^~~~~~
+                ... For warning description see https://verilator.org/warn/LATCH?v=5.048
+                ... Use "/* verilator lint_off LATCH */" and lint_on around source to disable this message.
+ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@17/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@17/17.0.6/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly

@@ -1,0 +1,199 @@
+{
+  "python_executable": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+  "sys_prefix": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv",
+  "sys_base_prefix": "/opt/homebrew/opt/python@3.14/Frameworks/Python.framework/Versions/3.14",
+  "pyvenv_cfg": "home = /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/bin\ninclude-system-site-packages = false\nversion = 3.14.5\nexecutable = /opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/bin/python3.14\ncommand = /Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/python -m venv /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv\n",
+  "packages": [
+    {
+      "name": "iniconfig",
+      "version": "2.3.0"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    {
+      "name": "pip",
+      "version": "26.1.1"
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0"
+    },
+    {
+      "name": "pytest",
+      "version": "8.3.5"
+    },
+    {
+      "name": "vcdvcd",
+      "version": "2.3.6"
+    }
+  ],
+  "component_import_checks": {
+    "kcirct": {
+      "find_spec": null,
+      "import_error": "No module named 'kcirct'",
+      "import_missing": true
+    },
+    "pyk": {
+      "find_spec": null,
+      "import_error": "No module named 'pyk'",
+      "import_missing": true
+    }
+  },
+  "experiment_imports": {
+    "runner": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/runner.py",
+    "native": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/native.py",
+    "waveform": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/waveform.py"
+  },
+  "sys_path": [
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects",
+    "",
+    "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python314.zip",
+    "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14",
+    "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/lib-dynload",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/lib/python3.14/site-packages"
+  ],
+  "component_modules_loaded": [],
+  "schema_version": 1,
+  "checked_at_utc": "2026-09-06T05:27:00.228709+00:00",
+  "status": "pass",
+  "purpose": "验证实验 runner 在不安装 kcirct/pyk 的独立 Python 环境中执行，只通过另一个安装环境的 CLI 调用 Kimulator。",
+  "requirements": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/requirements-dev.txt",
+    "sha256": "ffb1cc28ac0a94c6a64b6e51ca1396bc913aecaaf2f583c351c5236f5002b48f"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/python",
+        "-m",
+        "venv",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv"
+      ],
+      "exit_code": 0,
+      "note": "未使用 --system-site-packages"
+    },
+    {
+      "argv": [
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--cache-dir",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/pip-cache",
+        "--find-links",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/isolated-runner-wheels",
+        "--retries",
+        "0",
+        "--timeout",
+        "15",
+        "-r",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/requirements-dev.txt"
+      ],
+      "exit_code": 1,
+      "note": "首次本地缓存查找缺少原 pin vcdvcd 2.3.4；无安装产生。"
+    },
+    {
+      "argv": [
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--index-url",
+        "https://pypi.org/simple",
+        "--cache-dir",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/pip-cache",
+        "--find-links",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/isolated-runner-wheels",
+        "--retries",
+        "0",
+        "--timeout",
+        "15",
+        "-r",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/requirements-dev.txt"
+      ],
+      "exit_code": 0,
+      "requirements_at_start": "pytest==8.3.5; vcdvcd==2.3.4",
+      "note": "显式 PyPI 安装成功；随后将运行依赖 pin 对齐服务实际已验证版本。"
+    },
+    {
+      "argv": [
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--index-url",
+        "https://pypi.org/simple",
+        "--cache-dir",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/pip-cache",
+        "--find-links",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/isolated-runner-wheels",
+        "--retries",
+        "0",
+        "--timeout",
+        "15",
+        "-r",
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/requirements-dev.txt"
+      ],
+      "exit_code": 0,
+      "requirements_at_start": "pytest==8.3.5; vcdvcd==2.3.6",
+      "note": "将 vcdvcd 由 2.3.4 升级到 2.3.6，未向实验环境安装 kcirct/pyk。"
+    },
+    {
+      "argv": [
+        "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "external-defects/tests"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "local_cache_inventory": [
+    {
+      "name": "packaging",
+      "version": "26.2",
+      "source_cache": "/Users/bytedance/Library/Caches/pip/http-v2/c/d/e/c/3/cdec3d0140a615c153130a37691576ea1707e32a1ab5e60ae5a540f4.body",
+      "wheel": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/isolated-runner-wheels/packaging-26.2-py3-none-any.whl",
+      "sha256": "5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e"
+    },
+    {
+      "name": "vcdvcd",
+      "version": "2.6.0",
+      "source_cache": "/Users/bytedance/Library/Caches/pip/http-v2/8/b/a/e/4/8bae42213c8ba3f94e77a504984d0433df118896337e0af1c1b7a6fa.body",
+      "wheel": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/isolated-runner-wheels/vcdvcd-2.6.0-py3-none-any.whl",
+      "sha256": "d78a81bb7015f7c2564553624fd059c876fa4aca26ff1646e752a1fa06b18000"
+    }
+  ],
+  "component_cli": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/kcirct",
+    "sha256": "398e7d57ec70309cb153784c861fc16b5a2aee011a82b6fd783ebf8c5f67ae32",
+    "shebang": "#!/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.venv/bin/python",
+    "separate_environment": true
+  },
+  "isolation_passed": true,
+  "pytest": {
+    "argv": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "external-defects/tests"
+    ],
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp",
+    "exit_code": 0,
+    "seconds": 14.177833250000276,
+    "stdout": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/validation/isolated-runner-pytest.stdout.txt",
+      "sha256": "accd32344dd1b5d3be73f8a7871d7e1063ff991fec449ab8e757d7eed8b7d7b9"
+    },
+    "stderr": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/validation/isolated-runner-pytest.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "summary": "81 passed in 13.54s"
+  },
+  "command_path_policy": "venv/pip 命令的路径转换为绝对路径以便复现；pytest argv 与 cwd 为实际执行记录。"
+}

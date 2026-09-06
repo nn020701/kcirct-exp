@@ -1,0 +1,11 @@
+{
+  "selected_artifacts_verified": 109,
+  "raw_hints_verified": 6,
+  "local_links_verified": 20,
+  "service_semantics_unchanged": 52,
+  "total_raw_hint_bytes": 1998987509,
+  "ordinary_states": 10,
+  "instrumented_builds": 4,
+  "full_hint_events": 33141,
+  "lite_hint_events": 29220
+}

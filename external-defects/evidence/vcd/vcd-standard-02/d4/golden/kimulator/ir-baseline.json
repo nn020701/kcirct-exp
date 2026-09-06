@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "path_base": "external-defects/",
+  "project_id": "axis-fifo-d4",
+  "source_case_id": "D4",
+  "variant_id": "d4",
+  "design_variant": "golden",
+  "source_run": {
+    "run_id": "batch-final-01",
+    "directory": ".runs/batch-final-01/d4/golden/kimulator",
+    "case_status": "pass",
+    "backend_status": "pass",
+    "backend_stage": null,
+    "formal_result": {
+      "path": "results/cases/d4.json",
+      "sha256": "0f8c9d960bef4afeb8a9b34c2ab088c902685082a5c63fa3918e604941cbb16c",
+      "bytes": 4138
+    },
+    "archive_records_policy": "records 指向本地历史运行归档，位于被 Git 忽略的 .runs；新 checkout 不自带这些原始记录。其 SHA256 用于校对已有归档。本文件已单独保存生成参数、命令、版本和 RTL 哈希。",
+    "records": {
+      "case_manifest": {
+        "path": ".runs/batch-final-01/d4/manifest.json",
+        "sha256": "3561ed70e17b47cdd2e428a0b362245d4498a6277f2fccf292b8c639d144c8e1",
+        "bytes": 4602
+      },
+      "case_result": {
+        "path": ".runs/batch-final-01/d4/result.json",
+        "sha256": "b714284503258cb90e1d6b1faeeacaac68d74837cb93ef7c92f9ba08688b5bc3",
+        "bytes": 342312
+      },
+      "run_results": {
+        "path": ".runs/batch-final-01/results.json",
+        "sha256": "5e11e8e2665942a033a025763240203c834cf96d2386fd7b110b78faf6a5a525",
+        "bytes": 582513
+      },
+      "run_versions": {
+        "path": ".runs/batch-final-01/versions.json",
+        "sha256": "e7a3b31a78be2d70880ad01347a22ade77153e1842cb647afeeef962ea2452b7",
+        "bytes": 8522
+      },
+      "backend_result": {
+        "path": ".runs/batch-final-01/d4/golden/kimulator/result.json",
+        "sha256": "c2222ed78216c0634e9947218dbe245d85c242bfc93c4ed4d8cba1eb5ff3ec2e",
+        "bytes": 42501
+      },
+      "commands": {
+        "path": ".runs/batch-final-01/d4/golden/kimulator/commands.jsonl",
+        "sha256": "d73966f2a78c0b05bfae50b497352927e418282b86ed4ccbc8b6e1351fda5e03",
+        "bytes": 264450
+      },
+      "runner": {
+        "path": ".runs/batch-final-01/runner.py",
+        "sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+        "bytes": 30409
+      },
+      "service_patch": {
+        "path": ".runs/batch-final-01/service.patch",
+        "sha256": "54a7053789eebda3e68c824b4f3c8515f5f517602ca09de19a69458bccbb57a9",
+        "bytes": 5833
+      }
+    }
+  },
+  "active_manifest": "manifests/d4.json",
+  "layout": {
+    "path": "designs/axis-fifo-d4/provenance/layout.json",
+    "sha256": "eda684ce24c6423ab7c3b4e5b8ac8eeb2b8521912fa0cc55b9286bd827a86cd7",
+    "bytes": 510
+  },
+  "configuration": {
+    "top": "axis_fifo_wrapper",
+    "parameters": {
+      "DATA_WIDTH": 8,
+      "USER_WIDTH": 1
+    },
+    "effective_parameters": {
+      "DATA_WIDTH": 8,
+      "USER_WIDTH": 1
+    },
+    "frontend_args": [
+      "--timescale=1ns/1ps"
+    ],
+    "sample_phase": "low_before_posedge_pre_NBA"
+  },
+  "rtl_sources": [
+    {
+      "historical_manifest_path": "sources/axis-fifo-d4/axis_fifo.v",
+      "path": "designs/axis-fifo-d4/original/axis_fifo.v",
+      "sha256": "8f148b6b29338b9b51814b50ecc230d5ede5d9eb66a7c088d71ec9581ac0311a",
+      "bytes": 10675
+    },
+    {
+      "historical_manifest_path": "sources/axis-fifo-d4/axis_fifo_wrapper.v",
+      "path": "designs/axis-fifo-d4/original/axis_fifo_wrapper.v",
+      "sha256": "7f3a874faf3f4388bdda3b56dd20c4fa10dbade27f175e3bc6cdd117f016d979",
+      "bytes": 1671
+    }
+  ],
+  "artifacts": {
+    "design.mlir": {
+      "path": "designs/axis-fifo-d4/mlir/d4/golden/design.mlir",
+      "sha256": "2f4df13c2468f3b50031f17274d0cf1e43fdc1c70781fddbc5cf9e32bd059421",
+      "bytes": 14116
+    },
+    "design.generic.mlir": {
+      "path": "designs/axis-fifo-d4/mlir/d4/golden/design.generic.mlir",
+      "sha256": "c63dda73d107057c7ebae8b6f02b7acc04ebbd2f61a58fb7b2b707f88996b857",
+      "bytes": 11144
+    },
+    "design.debug.generic.mlir": {
+      "path": "designs/axis-fifo-d4/mlir/d4/golden/design.debug.generic.mlir",
+      "sha256": "f6a27c8c1f7409955df80596f050e630dfeb4c555ff0ab6f642bb9d04d765615",
+      "bytes": 20357
+    },
+    "source-map.json": {
+      "path": "designs/axis-fifo-d4/mlir/d4/golden/source-map.json",
+      "sha256": "f1a4d2cbdb0231f305ef63c5b013965310579ac48d2b335066b9dad2a81d8e64",
+      "bytes": 33760
+    }
+  },
+  "tool_versions": {
+    "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "pyk": "7.1.323",
+    "circt-verilog": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\nslang version 10.0.0+0",
+    "circt-opt": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0",
+    "kompile": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "krun": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "kast": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026"
+  },
+  "generation": {
+    "working_directory": "external-defects/",
+    "commands_policy": "以下 argv 从历史 commands.jsonl 的前三条实际成功命令提取，保持参数及输入文件顺序，仅将工具名、RTL 和输出路径重定位为可移植表示；并非声称这些新路径已经重新执行。工具通过 PATH 解析。",
+    "commands": [
+      {
+        "stage": "frontend",
+        "historical_command_line": 1,
+        "argv": [
+          "circt-verilog",
+          "--ir-hw",
+          "--top=axis_fifo_wrapper",
+          "--mlir-print-debuginfo",
+          "--timescale=1ns/1ps",
+          "-GDATA_WIDTH=8",
+          "-GUSER_WIDTH=1",
+          "designs/axis-fifo-d4/original/axis_fifo.v",
+          "designs/axis-fifo-d4/original/axis_fifo_wrapper.v",
+          "-o",
+          "designs/axis-fifo-d4/mlir/d4/golden/design.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "debug.generic",
+        "historical_command_line": 2,
+        "argv": [
+          "circt-opt",
+          "designs/axis-fifo-d4/mlir/d4/golden/design.mlir",
+          "--mlir-print-op-generic",
+          "--mlir-print-debuginfo",
+          "-o",
+          "designs/axis-fifo-d4/mlir/d4/golden/design.debug.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "generic",
+        "historical_command_line": 3,
+        "argv": [
+          "circt-opt",
+          "designs/axis-fifo-d4/mlir/d4/golden/design.mlir",
+          "--mlir-print-op-generic",
+          "-o",
+          "designs/axis-fifo-d4/mlir/d4/golden/design.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      }
+    ],
+    "source_map": {
+      "generator": "runner.py:source_map",
+      "historical_runner_sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+      "mapping_kind": "same_ir_printed_with_and_without_locations"
+    }
+  },
+  "location_policy": "MLIR 和 source-map.json 按历史运行字节原样保存，保留旧 loc（包含旧目录或绝对路径）。通过 rtl_sources 的历史路径、当前路径、SHA256 及 layout.json 对应源文件。迁移路径后重新生成时 loc 和文件哈希可能变化；不要为美化路径修改本基线或旧 source-map。"
+}

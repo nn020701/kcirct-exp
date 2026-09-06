@@ -1,0 +1,241 @@
+diff --git a/src/kcirct/kdist/circt_semantics/dialects/comb/comb.md b/src/kcirct/kdist/circt_semantics/dialects/comb/comb.md
+--- a/src/kcirct/kdist/circt_semantics/dialects/comb/comb.md
++++ b/src/kcirct/kdist/circt_semantics/dialects/comb/comb.md
+@@ -6,12 +6,14 @@
+ requires "../../hardware/hardware-config.md"
+ requires "../../mlir/mlir-helper.md"
+ requires "../../mlir/builtin.md"
++requires "../hw/hw-layout.md"
+ module COMB
+ imports COMB-SYNTAX
+ imports BITS
+ imports HARDWARE-CONFIG
+ imports MLIR-HELPER
+ imports BUILTIN
++imports HW-LAYOUT
+ ```
+ 
+ ## comb.add
+@@ -138,12 +140,12 @@
+ 
+ ```k
+ rule
+-<current> "comb.mux" ( ListItem(bits(S:Int, 1)) ListItem(B2:Bits) ListItem(B3:Bits) ) {_:Map} :  (_) -> (T:IntegerType) =>  ListItem(BitsCast(B3, getWidth(T))) 
+-... </current> requires S ==Int 0
++<current> "comb.mux" ( ListItem(bits(S:Int, 1)) ListItem(bits(_:BitsValue, W:Int)) ListItem(bits(B3:BitsValue, W)) ) {_:Map} : (C:SignlessIntegerType, T:Type, T) -> (T) => ListItem(bits(B3, W))
++... </current> requires S ==Int 0 andBool getWidth(C) ==Int 1 andBool isPackedType(T) andBool W ==Int packedWidth(T)
+ 
+ rule
+-<current> "comb.mux" ( ListItem(bits(S:Int, 1)) ListItem(B2:Bits) ListItem(B3:Bits) ) {_:Map} :  (_) -> (T:IntegerType) =>  ListItem(BitsCast(B2, getWidth(T))) 
+-... </current> requires S =/=Int 0
++<current> "comb.mux" ( ListItem(bits(S:Int, 1)) ListItem(bits(B2:BitsValue, W:Int)) ListItem(bits(_:BitsValue, W)) ) {_:Map} : (C:SignlessIntegerType, T:Type, T) -> (T) => ListItem(bits(B2, W))
++... </current> requires S ==Int 1 andBool getWidth(C) ==Int 1 andBool isPackedType(T) andBool W ==Int packedWidth(T)
+ ```
+ 
+ ## comb.icmp
+diff --git a/src/kcirct/kdist/circt_semantics/dialects/hw/hw-layout.md b/src/kcirct/kdist/circt_semantics/dialects/hw/hw-layout.md
+new file mode 100644
+--- /dev/null
++++ b/src/kcirct/kdist/circt_semantics/dialects/hw/hw-layout.md
+@@ -0,0 +1,40 @@
++# 打包值的类型布局
++
++MLIR 类型保留元素边界和 operation 的类型约束；运行时整数及一维整数数组
++共用 Bits。此模块只计算静态布局，不依赖硬件状态或完整 HW 执行语义。
++新增可打包类型时，必须同时核对使用它的 operation 在 CIRCT 中的合法类型。
++
++当前仅支持正位宽整数和正长度的一维整数数组。未支持的类型没有默认位宽，
++不能用 0 掩盖类型缺口；嵌套数组、结构体和内存句柄需分别实现并验证。
++
++```k
++requires "hw-syntax.md"
++requires "../../mlir/builtin.md"
++
++module HW-LAYOUT
++  imports HW-SYNTAX
++  imports BUILTIN
++  imports BOOL
++
++  syntax Bool ::= isPackedType(Type) [function, total]
++  rule isPackedType(_:IntegerType) => true
++  rule isPackedType(!hw.array < _:SizeX _:IntegerType >) => true
++  rule isPackedType(_:Type) => false [owise]
++
++  syntax Int ::= packedWidth(Type) [function]
++  rule packedWidth(T:IntegerType) => getWidth(T)
++  rule packedWidth(!hw.array < N:SizeX T:IntegerType >)
++    => SizeX2Int(N) *Int getWidth(T)
++
++  // 通常要求 ceil(log2(元素数)) 位；CIRCT verifier 对长度 1 也允许 i1。
++  // 当前整数词法不支持 i0，长度 1 可以使用 i1 索引 0。
++  syntax Int ::= arrayIndexWidth(SizeX) [function]
++  rule arrayIndexWidth(N:SizeX) => 0 requires SizeX2Int(N) ==Int 1
++  rule arrayIndexWidth(N:SizeX) => log2Int(SizeX2Int(N) -Int 1) +Int 1
++    requires SizeX2Int(N) >Int 1
++
++  syntax Bool ::= validArrayIndexWidth(SizeX, Int) [function, total]
++  rule validArrayIndexWidth(N:SizeX, W:Int)
++    => W ==Int arrayIndexWidth(N) orBool (SizeX2Int(N) ==Int 1 andBool W ==Int 1)
++endmodule
++```
+diff --git a/src/kcirct/kdist/circt_semantics/dialects/hw/hw.md b/src/kcirct/kdist/circt_semantics/dialects/hw/hw.md
+--- a/src/kcirct/kdist/circt_semantics/dialects/hw/hw.md
++++ b/src/kcirct/kdist/circt_semantics/dialects/hw/hw.md
+@@ -11,6 +11,7 @@
+ requires "../../mlir/builtin.md"
+ requires "hw-config.md"
+ requires "hw-helper.md"
++requires "hw-layout.md"
+ module HW
+   imports HW-SYNTAX
+   imports MLIR-CONFIG
+@@ -20,6 +21,7 @@
+   imports MLIR-HELPER
+   imports MAP
+   imports HW-HELPER
++  imports HW-LAYOUT
+   imports BOOL
+   imports CIRCT
+   imports BITS
+@@ -203,6 +205,24 @@
+ 
+ ## HW Operations for Array
+ 
++### `hw.array_inject`
++
++数组元素 0 位于最低位。注入返回新的打包值，不修改作为输入的数组或寄存器；
++寄存器的状态更新仍由 seq.firreg 处理。当前只执行二态、索引有效的一维整数数组。
++索引宽度和元素类型必须匹配。索引按自身位宽解释为无符号数，随后检查数组边界；
++不对数组长度取模，也不为越界返回伪造的正常值。
++
++```k
++rule
++<current> "hw.array_inject" ( ListItem(bits(A:Int, AW:Int)) ListItem(bits(Idx:Int, IW:Int)) ListItem(bits(V:Int, EW:Int)) ) {_:Map}
++  : (!hw.array < N:SizeX T:IntegerType >, IT:SignlessIntegerType, T) -> (!hw.array < N T >)
++  => ListItem(BitsReplace(bits(A, AW), (Idx &Int (2 ^Int IW -Int 1)) *Int EW, bits(V, EW)))
++... </current>
++requires AW ==Int packedWidth(!hw.array < N T >) andBool EW ==Int getWidth(T)
++  andBool IW ==Int getWidth(IT) andBool validArrayIndexWidth(N, IW)
++  andBool (Idx &Int (2 ^Int IW -Int 1)) <Int SizeX2Int(N)
++```
++
+ ### `hw.array_get`
+ 
+ ```k
+diff --git a/src/kcirct/kdist/circt_semantics/dialects/seq/seq.md b/src/kcirct/kdist/circt_semantics/dialects/seq/seq.md
+--- a/src/kcirct/kdist/circt_semantics/dialects/seq/seq.md
++++ b/src/kcirct/kdist/circt_semantics/dialects/seq/seq.md
+@@ -7,6 +7,7 @@
+ requires "../../hardware/hardware.md"
+ requires "../../mlir/builtin.md"
+ requires "../../mlir/mlir-helper.md"
++requires "../hw/hw-layout.md"
+ module SEQ
+ imports SEQ-SYNTAX
+ imports SEQ-HELPER
+@@ -16,6 +17,7 @@
+ imports MAP
+ imports BUILTIN
+ imports MLIR-HELPER
++imports HW-LAYOUT
+ ```
+ 
+ ## `seq.to_clock`
+@@ -36,6 +38,24 @@
+ ```
+ 
+ ## `seq.firreg`
++
++数组寄存器复用现有二态零初始化和同步复位策略。显式 preset 与异步复位尚未
++实现，数组遇到这些属性时在 setup 保留明确标记，防止静默使用错误的初值或边沿。
++原有整数寄存器的属性处理保持不变。
++
++```k
++syntax KItem ::= "#unsupportedArrayFirreg" "(" Map ")"
++
++rule
++<setup>
++  "HARDWARE#CONNECT" ~> ListItem(_) _:List
++  ~> ListItem("seq.firreg" (_:List) { Config:Map } : (_:Types) -> (T:HwArrayType)) _:List
++  => #unsupportedArrayFirreg(Config)
++...
++</setup>
++requires isPackedType(T) andBool ("preset" in_keys(Config) orBool "isAsync" in_keys(Config))
++[priority(30)]
++```
+ 
+ ### Setup Current Signal Before Update
+ 
+@@ -54,24 +74,24 @@
+ 
+ rule
+ <current> 
+-(.K => ListItem(bits(0, getWidth(T))) ~> "HARDWARE#WRITE" ~> ListItem(Port)) 
+-~> "seq.firreg" ( ListItem(_:String) _:List ) { "firrtl.random_init_start" |-> V:Int : _:Type _:Map } : (_) -> (T:IntegerType) 
++(.K => ListItem(bits(0, packedWidth(T))) ~> "HARDWARE#WRITE" ~> ListItem(Port))
++~> "seq.firreg" ( ListItem(_:String) _:List ) { "firrtl.random_init_start" |-> V:Int : _:Type _:Map } : (_) -> (T:Type)
+ ~> "HARDWARE#WRITE" ~> ListItem(Port)
+ ...
+ </current>
+ <signals> Signals:Map </signals>
+-requires notBool (Port in_keys(Signals))
++requires notBool (Port in_keys(Signals)) andBool isPackedType(T)
+ [priority(34)]
+ 
+ rule
+ <current> 
+-(.K => ListItem(bits(0, getWidth(T))) ~> "HARDWARE#WRITE" ~> ListItem(Port)) 
+-~> "seq.firreg" ( ListItem(_:String) _:List ) { _:Map } : (_) -> (T:IntegerType) 
++(.K => ListItem(bits(0, packedWidth(T))) ~> "HARDWARE#WRITE" ~> ListItem(Port))
++~> "seq.firreg" ( ListItem(_:String) _:List ) { _:Map } : (_) -> (T:Type)
+ ~> "HARDWARE#WRITE" ~> ListItem(Port)
+ ...
+ </current>
+ <signals> Signals:Map </signals>
+-requires notBool (Port in_keys(Signals))
++requires notBool (Port in_keys(Signals)) andBool isPackedType(T)
+ [priority(35)]
+ ```
+ 
+@@ -120,12 +140,13 @@
+ ```k
+ rule
+ <setup> 
+-   "HARDWARE#CONNECT" ~> ListItem(Out) L0:List ~> ListItem( "seq.firreg" ( L:List ) { Config:Map } : (T1:Types) -> (T:IntegerType) ) L1:List
++   "HARDWARE#CONNECT" ~> ListItem(Out) L0:List ~> ListItem( "seq.firreg" ( L:List ) { Config:Map } : (T1:Types) -> (T:Type) ) L1:List
+ => "HARDWARE#CONNECT" ~> L0 ~> L1
+ ...
+ </setup>
+ <connection> M => M [Out <- "seq.firreg" ( L ) { Config } : (T1) -> (T)] </connection>
+-<register> REG => REG [Out <- (0, getWidth(T), 0, 0, {Config["name"] orDefault "default_firreg"}:>String)] </register>
++<register> REG => REG [Out <- (0, packedWidth(T), 0, 0, {Config["name"] orDefault "default_firreg"}:>String)] </register>
++requires isPackedType(T)
+ [priority(40)]
+ 
+ rule
+diff --git a/src/kcirct/kdist/circt_semantics/hardware/bits.md b/src/kcirct/kdist/circt_semantics/hardware/bits.md
+--- a/src/kcirct/kdist/circt_semantics/hardware/bits.md
++++ b/src/kcirct/kdist/circt_semantics/hardware/bits.md
+@@ -51,6 +51,7 @@
+                   | BitsModu(List)          [function]
+                   | Bits "moduBits" Bits    [function]
+                   | BitsSlice(Bits, Int, Int) [function]
++                  | BitsReplace(Bits, Int, Bits) [function]
+                   | BitsAbs(Bits)            [function]
+                   | "~Bits" Bits             [function]
+                   | "!Bits" Bits            [function]
+@@ -277,6 +278,14 @@
+     rule BitsSlice(bits(X:Int, W:Int), Begin:Int, End:Int) => bits((X >>Int Begin) &Int (2 ^Int (End -Int Begin) -Int 1), End -Int Begin)
+     rule BitsSlice(bits(V:XZValue, _:Int), Begin:Int, End:Int) => bits(V, End -Int Begin)
+ 
++    // 替换从低位偏移 Begin 开始的完整片段，保持总位宽及其余位不变。
++    // 仅定义二态且范围有效的情况，避免把未知值或越界静默变成零。
++    rule BitsReplace(bits(X:Int, W:Int), Begin:Int, bits(V:Int, EW:Int))
++      => BitsConcat(ListItem(BitsSlice(bits(X, W), Begin +Int EW, W))
++                    ListItem(BitsCast(bits(V, EW)))
++                    ListItem(BitsSlice(bits(X, W), 0, Begin)))
++      requires Begin >=Int 0 andBool EW >Int 0 andBool Begin +Int EW <=Int W
++
+     // 0: posedge, 1: negedge, 2: edge
+     // checkEdge(Event:Int, Current:Bits, History:Bits)
+     rule checkEdge(0, bits(1, _:Int), bits(0, _:Int)) => true

@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "policy": "proven-single-initial-to-preset-v1",
+  "module": "xlnxstream_2018_3",
+  "input_sha256": {
+    "raw_hw_generic": "065346d8998a8d4840a9f161ef22d483a78ff9488d3b01454b387e73abca5a07",
+    "pre_llhd_generic": "2f30b2878a1b26a2c1a007064de8768b7cc49554355ec8588d7dfa19ca28d403"
+  },
+  "output_sha256": "b59e30a2823cf3a5fa02276cc56fb95bddfb80233902b24ee43c178abf29921c",
+  "initial_processes": [
+    {
+      "name": "count",
+      "width": 5,
+      "signal_initial_value": 0,
+      "ssa": "%24",
+      "line": 32,
+      "initial_value": 0,
+      "process_line": 201,
+      "driver_line": 202
+    },
+    {
+      "name": "mst_exec_state",
+      "width": 2,
+      "signal_initial_value": 0,
+      "ssa": "%22",
+      "line": 30,
+      "initial_value": 0,
+      "process_line": 205,
+      "driver_line": 206
+    },
+    {
+      "name": "read_pointer",
+      "width": 4,
+      "signal_initial_value": 0,
+      "ssa": "%23",
+      "line": 31,
+      "initial_value": 0,
+      "process_line": 209,
+      "driver_line": 210
+    },
+    {
+      "name": "tx_done",
+      "width": 1,
+      "signal_initial_value": 0,
+      "ssa": "%31",
+      "line": 39,
+      "initial_value": 0,
+      "process_line": 213,
+      "driver_line": 214
+    }
+  ],
+  "replacements": [
+    {
+      "signal_name": "mst_exec_state",
+      "width": 2,
+      "initial_value": 0,
+      "signal_initial_value": 0,
+      "pre_process_line": 205,
+      "pre_signal": "%22",
+      "raw_signal": "%16",
+      "register": "%43",
+      "register_line": 51,
+      "removed_driver_line": 96,
+      "clock_input": "%arg0",
+      "existing_preset": null
+    },
+    {
+      "signal_name": "read_pointer",
+      "width": 4,
+      "initial_value": 0,
+      "signal_initial_value": 0,
+      "pre_process_line": 209,
+      "pre_signal": "%23",
+      "raw_signal": "%17",
+      "register": "%74",
+      "register_line": 84,
+      "removed_driver_line": 97,
+      "clock_input": "%arg0",
+      "existing_preset": null
+    },
+    {
+      "signal_name": "count",
+      "width": 5,
+      "initial_value": 0,
+      "signal_initial_value": 0,
+      "pre_process_line": 201,
+      "pre_signal": "%24",
+      "raw_signal": "%18",
+      "register": "%45",
+      "register_line": 54,
+      "removed_driver_line": 95,
+      "clock_input": "%arg0",
+      "existing_preset": null
+    }
+  ],
+  "unmatched_source_initials": [
+    {
+      "signal_name": "tx_done",
+      "width": 1,
+      "initial_value": 0,
+      "register": "%76",
+      "existing_preset": null,
+      "policy": "caller-declared-two-state-zero",
+      "pre_process_line": 213
+    }
+  ],
+  "requires_official_postprocessing": [
+    "llhd-sig2reg",
+    "canonicalize"
+  ],
+  "caller_obligations": [
+    "相同 RTL、参数及工具版本生成两个输入并保存哈希",
+    "显式声明二态默认零初始化策略",
+    "归一化后运行官方 verifier、sig2reg 和完整外部 VCD 对照"
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "axis_fifo_wrapper",
+    "states": [
+      {
+        "name": "clk",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "rst",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tdata",
+        "numBits": 8,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tvalid",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tlast",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tuser",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "m_axis_tready",
+        "numBits": 1,
+        "type": "input"
+      },
+      {
+        "name": "s_axis_tready",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tdata",
+        "numBits": 8,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tvalid",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tlast",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "m_axis_tuser",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "status_overflow",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "status_bad_frame",
+        "numBits": 1,
+        "type": "output"
+      },
+      {
+        "name": "status_good_frame",
+        "numBits": 1,
+        "type": "output"
+      }
+    ]
+  }
+]

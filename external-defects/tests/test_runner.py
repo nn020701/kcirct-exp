@@ -1,17 +1,13 @@
-"""验证批量入口对来源契约、CSV 错误、比较集合和证据丢失的拒绝行为。"""
+"""验证外部组件边界、输入协议、来源契约与辅助 oracle。"""
 
 from __future__ import annotations
 
 import argparse
-import gzip
-import hashlib
 import importlib.util
 import json
-import os
 import shutil
 import subprocess
 import sys
-import types
 from pathlib import Path
 
 import pytest
@@ -172,371 +168,274 @@ def test_first_difference_uses_real_sample_and_signal() -> None:
     assert len(result["mismatches"]) == 2
 
 
-def test_archive_preserves_complete_state_and_digest(tmp_path: Path) -> None:
-    source = tmp_path / "event-0001.kore"
-    content = ("状态证据\n" * 2000).encode()
-    source.write_bytes(content)
-    record = RUNNER.archive_state(source)
-    assert source.exists() is False
-    assert gzip.decompress((tmp_path / record["file"]).read_bytes()) == content
-    assert record["sha256_uncompressed"] == hashlib.sha256(content).hexdigest()
-
-
-def _run_fixture(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> tuple[dict, argparse.Namespace, list]:
-    """隔离运行调度，只记录后端是否被调用；不运行 K 或 Verilator。"""
-    monkeypatch.setattr(RUNNER, "ROOT", tmp_path)
-    for script in ["runner.py", "native.py"]:
-        shutil.copyfile(ROOT / script, tmp_path / script)
-    build = tmp_path / "build"
-    monkeypatch.setattr(RUNNER, "BUILD", build)
-    definition = build / "kdist/circt-semantics/llvm/definition.kore"
-    definition.parent.mkdir(parents=True)
-    definition.write_text("固定定义")
-    (build / "parser").write_text("固定 parser")
-    prepared = {
-        "semantics_hashes": {},
-        "pyk": "test",
-        "api_sha256": "test-api",
-        "kdist_plugin_sha256": "test-plugin",
-        **{name: {"version": "test"} for name in ("kompile", "krun", "kast")},
-        "parser_sha256": RUNNER.sha(build / "parser"),
-        "definition_sha256": RUNNER.sha(definition),
-    }
-    (build / "prepared.json").write_text(json.dumps(prepared))
-    monkeypatch.setattr(RUNNER, "environment", lambda args: dict(prepared))
-    manifest = json.loads((ROOT / "manifests/s1b.json").read_text())
-    shutil.copytree(ROOT / "designs/axi-lite-s1", tmp_path / "designs/axi-lite-s1")
-    (tmp_path / "manifests").mkdir()
-    (tmp_path / "manifests/s1b.json").write_text(json.dumps(manifest))
-    calls = []
-
-    def fake_native(m, sources, rows, work, **kwargs):
-        calls.append(("native", m["variant_id"]))
-        return {"status": "pass", "samples": [{p["name"]: row[p["name"]] for p in m["outputs"]} for row in rows]}
-
-    def fake_k(m, sources, rows, work, args):
-        calls.append(("k", m["variant_id"]))
-        return {"status": "pass", "samples": [{p["name"]: row[p["name"]] for p in m["outputs"]} for row in rows]}
-
-    module = types.ModuleType("native")
-    module.run_native = fake_native
-    monkeypatch.setitem(sys.modules, "native", module)
-    monkeypatch.setattr(RUNNER, "run_k", fake_k)
-    service = tmp_path / "selected-service"
-    (service / "src/kcirct").mkdir(parents=True)
-    (service / "src/kcirct/api.py").write_text("测试 API 快照")
-    monkeypatch.setattr(RUNNER.subprocess, "check_output", lambda *args, **kwargs: "测试 git diff")
-    args = argparse.Namespace(run_id="test-run", cases=["s1b"], kcirct_root=service, tools={"verilator": "verilator"})
-    return manifest, args, calls
-
-
-@pytest.mark.parametrize("invalid_change", ["wrong_testbench", "missing_source_hash"])
-def test_manifest_contract_failure_precedes_backend_dispatch(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch, invalid_change: str
-) -> None:
-    """S1 的两份 CSV 均有哈希，只有核查 bugs 关联才能识别误选测试。"""
-    manifest, args, calls = _run_fixture(tmp_path, monkeypatch)
-    if invalid_change == "wrong_testbench":
-        manifest["csv"] = "designs/axi-lite-s1/testbench/tb1.csv"
-    else:
-        del manifest["source_hashes"][manifest["golden_sources"][0]]
-    (tmp_path / "manifests/s1b.json").write_text(json.dumps(manifest))
-    RUNNER.run(args)
-    result = json.loads((tmp_path / ".runs/test-run/s1b/result.json").read_text())
-    assert calls == [], "来源契约无效时不应继续调用任何后端"
-    assert result["status"] == "execution_error"
-
-
-def test_prepared_definition_hash_is_verified(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
-    _, args, calls = _run_fixture(tmp_path, monkeypatch)
-    definition = tmp_path / "build/kdist/circt-semantics/llvm/definition.kore"
-    definition.write_text("定义已被替换，但 parser 和源语义哈希仍一致")
-    with pytest.raises(ValueError, match="定义|definition|prepare"):
-        RUNNER.run(args)
-    assert calls == []
-
-
-def test_pinned_s1_manifests_select_distinct_correct_traces() -> None:
-    cases = {name: json.loads((ROOT / f"manifests/{name}.json").read_text()) for name in ["s1b", "s1r"]}
-    assert cases["s1b"]["csv"].endswith("/tb0.csv")
-    assert cases["s1r"]["csv"].endswith("/tb1.csv")
-    for name, case in cases.items():
-        assert case["selected_testbench"]["bugs"] == [name]
-        rows, normalizations = RUNNER.load_rows(case)
-        assert len(rows) == 10 and len(normalizations) == 10
-    assert cases["s1b"]["csv"] != cases["s1r"]["csv"]
-
-
-def test_cli_uses_path_by_default_and_explicit_options_override_environment(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
-) -> None:
-    for name in ("KCIRCT_ROOT", "K_BIN", "CIRCT_BIN", "VERILATOR"):
-        monkeypatch.delenv(name, raising=False)
-    args = RUNNER.argument_parser().parse_args(["prepare"])
-    monkeypatch.chdir(tmp_path)
-    assert RUNNER.service_root(args) == RUNNER.SERVICE.resolve()
-    assert (args.k_bin, args.circt_bin, args.verilator) == (None, None, None)
-    monkeypatch.setenv("KCIRCT_ROOT", str(tmp_path / "environment-service"))
-    monkeypatch.setenv("K_BIN", str(tmp_path / "environment-k"))
-    monkeypatch.setenv("CIRCT_BIN", str(tmp_path / "environment-circt"))
-    monkeypatch.setenv("VERILATOR", "environment-verilator")
-    args = RUNNER.argument_parser().parse_args(
-        ["run", "--kcirct-root", "selected", "--verilator", "selected-verilator"]
-    )
-    assert RUNNER.service_root(args) == tmp_path / "selected"
-    assert args.k_bin == tmp_path / "environment-k"
-    assert args.circt_bin == tmp_path / "environment-circt"
-    assert args.verilator == "selected-verilator"
-
-
-def test_explicit_tool_directory_cannot_fall_back_to_path(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
-    tool_dir = tmp_path / "runtime-bin"
-    tool_dir.mkdir()
-    executable = tool_dir / "krun"
-    executable.write_text("#!/bin/sh\nexit 0\n")
-    executable.chmod(0o755)
-    monkeypatch.setenv("PATH", str(tool_dir))
-    assert RUNNER.tool("krun") == str(executable)
-    with pytest.raises(ValueError, match="缺少可执行工具"):
-        RUNNER.tool("krun", tmp_path / "wrong-installation")
-
-
-def test_command_uses_evidence_directory_not_callers_cwd(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
-    caller = tmp_path / "caller"
-    caller.mkdir()
-    monkeypatch.chdir(caller)
-    work = tmp_path / "evidence"
-    stdout, _ = RUNNER.command([sys.executable, "-c", "from pathlib import Path; print(Path.cwd())"], work, "cwd")
-    assert stdout.strip() == str(work)
-    record = json.loads((work / "commands.jsonl").read_text())
-    assert record["cwd"] == str(work)
-
-
-@pytest.mark.parametrize("run_id", ["../escape", "/tmp/escape", "nested/run", ".", "..", "validation", "bad name"])
-def test_run_id_is_rejected_before_environment_or_backend_dispatch(
-    run_id: str, monkeypatch: pytest.MonkeyPatch
-) -> None:
-    monkeypatch.setattr(RUNNER, "environment", lambda _: pytest.fail("无效 run-id 不应检查或执行环境"))
-    with pytest.raises(ValueError, match="run-id"):
-        RUNNER.run(argparse.Namespace(run_id=run_id))
-
-
-def test_run_id_cannot_follow_existing_symlink_outside_runs(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(RUNNER, "ROOT", tmp_path / "experiment")
-    runs = RUNNER.ROOT / ".runs"
-    runs.mkdir(parents=True)
-    (runs / "escape").symlink_to(tmp_path, target_is_directory=True)
-    with pytest.raises(ValueError, match="越界"):
-        RUNNER.run_directory("escape")
-
-
-def test_reproduce_script_replays_batch_once_with_shared_run_id_after_move(
-    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
-) -> None:
-    original = tmp_path / "original experiment"
-    monkeypatch.setattr(RUNNER, "ROOT", original)
-    out = original / ".runs/example"
-    out.mkdir(parents=True)
-    RUNNER.write_summary(out, [{"variant_id": "d13"}, {"variant_id": "s3"}])
-    script = (out / "reproduce.sh").read_text()
-    assert sys.executable not in script and str(original) not in script
-    moved = tmp_path / "moved experiment"
-    original.rename(moved)
-    executor = tmp_path / "selected-python"
-    executor.write_text('#!/bin/sh\nprintf "%s\\n" "$@"\n')
-    executor.chmod(0o755)
-    monkeypatch.setenv("PYTHON", str(executor))
-    result = subprocess.run(
-        [
-            "sh",
-            str(moved / ".runs/example/reproduce.sh"),
-            "--kcirct-root",
-            "current-service",
-            "--run-id",
-            "replayed-batch",
+def test_stimulus_keeps_inputs_at_both_edges_and_excludes_oracle(csv_case: tuple[dict, Path]) -> None:
+    manifest, _ = csv_case
+    rows = [{"d": 1, "q": 0}, {"d": 2, "q": 1}]
+    assert RUNNER.stimulus(manifest, rows) == {
+        "schema_version": 1,
+        "timescale": "1ns",
+        "events": [
+            {"time": 0, "inputs": {"clk": 0, "d": 1}},
+            {"time": 1, "inputs": {"clk": 1, "d": 1}},
+            {"time": 2, "inputs": {"clk": 0, "d": 2}},
         ],
-        cwd=tmp_path,
-        capture_output=True,
-        text=True,
-        check=True,
-    )
-    assert result.stdout.splitlines() == [
-        str(moved / "runner.py"),
-        "run",
-        "--cases",
-        "d13",
-        "s3",
-        "--kcirct-root",
-        "current-service",
-        "--run-id",
-        "replayed-batch",
-    ]
+    }
+
+
+def test_all_manifests_and_persisted_ir_match_sources() -> None:
+    for path in sorted((ROOT / "manifests").glob("*.json")):
+        m = json.loads(path.read_text())
+        RUNNER.validate_manifest(m)
+        for filename, digest in m["source_hashes"].items():
+            assert RUNNER.sha(RUNNER.resource_path(filename)) == digest
+        for variant in ("golden", "buggy"):
+            mlir, _ = RUNNER.baseline(m, variant)
+            assert mlir.is_file()
+
+
+def test_baseline_rejects_parameter_drift() -> None:
+    m = json.loads((ROOT / "manifests/d13.json").read_text())
+    m["parameters"]["LEN_WIDTH"] = 99
+    with pytest.raises(ValueError, match="parameters"):
+        RUNNER.baseline(m, "golden")
+
+
+def test_versioned_baseline_binds_profile_and_executable(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    """新版本可独立选择，但不能用旧产物的哈希替另一份执行文件背书。"""
+    monkeypatch.setattr(RUNNER, "ROOT", tmp_path)
+    folder = tmp_path / "designs/toy/mlir/version-2/golden"
+    folder.mkdir(parents=True)
+    rtl = tmp_path / "source.v"
+    rtl.write_text("module toy; endmodule\n")
+    mlir = folder / "design.generic.mlir"
+    mlir.write_text("module {}\n")
+    m = {"project_id": "toy", "variant_id": "toy", "top": "toy", "parameters": {},
+         "effective_parameters": {}, "frontend_args": [], "golden_sources": ["source.v"],
+         "ir_baseline": "designs/toy/mlir/version-2", "ir_profile": None}
+    provenance = {"configuration": {key: m[key] for key in
+                                    ("top", "parameters", "effective_parameters", "frontend_args", "ir_profile")},
+                  "rtl_sources": [{"path": "source.v", "sha256": RUNNER.sha(rtl)}],
+                  "artifacts": {"design.generic.mlir": {"path": str(mlir.relative_to(tmp_path)),
+                                                       "sha256": RUNNER.sha(mlir)}}}
+    RUNNER.save(folder / "provenance.json", provenance)
+    assert RUNNER.baseline(m, "golden")[0] == mlir
+    m["ir_profile"] = "other-profile"
+    with pytest.raises(ValueError, match="ir_profile"):
+        RUNNER.baseline(m, "golden")
+    m["ir_profile"] = None
+    provenance["artifacts"]["design.generic.mlir"]["path"] = "different.mlir"
+    RUNNER.save(folder / "provenance.json", provenance)
+    with pytest.raises(ValueError, match="可执行文件"):
+        RUNNER.baseline(m, "golden")
+
+
+@pytest.mark.parametrize("folder", ["../escape", "/absolute"])
+def test_versioned_baseline_rejects_path_escape(folder: str) -> None:
+    m = json.loads((ROOT / "manifests/d13.json").read_text())
+    m["ir_baseline"] = folder
+    with pytest.raises(ValueError, match="路径"):
+        RUNNER.baseline(m, "golden")
 
 
 @pytest.fixture
-def imported_service(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> tuple[Path, dict]:
-    """提供独立的安装元数据与真实模块路径，验证来源校验而不导入 K 依赖。"""
-    service = tmp_path / "selected-service"
-    api_path = service / "src/kcirct/api.py"
-    plugin_path = service / "src/kcirct/kdist/plugin.py"
-    plugin_path.parent.mkdir(parents=True)
-    api_path.write_text("测试 API")
-    plugin_path.write_text("测试 kdist 插件")
-    build = tmp_path / "experiment/.build/external-defects"
-    monkeypatch.setattr(RUNNER, "BUILD", build)
-    modules = {
-        "kcirct.api": types.SimpleNamespace(
-            __file__=str(api_path), kdist=types.SimpleNamespace(kdist_dir=build / "kdist")
-        ),
-        "kcirct.kdist.plugin": types.SimpleNamespace(
-            __file__=str(plugin_path),
-            __TARGETS__={"source": types.SimpleNamespace(SRC_DIR=plugin_path.parent)},
-        ),
+def initialized_baseline(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> tuple[dict, Path, dict]:
+    """在隔离副本中破坏证明链，避免修改持久化实验输入。"""
+    m = json.loads((ROOT / "manifests/s2.json").read_text())
+    folder = ROOT / m["ir_baseline"] / "golden"
+    provenance = json.loads((folder / "provenance.json").read_text())
+    for item in [*provenance["rtl_sources"], *provenance["artifacts"].values()]:
+        target = tmp_path / item["path"]
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(ROOT / item["path"], target)
+    copied = tmp_path / folder.relative_to(ROOT)
+    RUNNER.save(copied / "provenance.json", provenance)
+    monkeypatch.setattr(RUNNER, "ROOT", tmp_path)
+    assert RUNNER.baseline(m, "golden")[0].is_file()
+    return m, copied, provenance
+
+
+@pytest.mark.parametrize("artifact", ["frontend.pre-llhd.generic.mlir", "frontend.hw.generic.mlir", "initial-lowering.json"])
+def test_initial_profile_requires_proof_artifacts(initialized_baseline: tuple, artifact: str) -> None:
+    m, folder, provenance = initialized_baseline
+    del provenance["artifacts"][artifact]
+    RUNNER.save(folder / "provenance.json", provenance)
+    with pytest.raises(ValueError, match="证明工件"):
+        RUNNER.baseline(m, "golden")
+
+
+def test_initial_profile_rejects_changed_initialization_policy(initialized_baseline: tuple) -> None:
+    m, _, _ = initialized_baseline
+    m["initialization"]["uninitialized_register_value"] = 1
+    with pytest.raises(ValueError, match="初值策略"):
+        RUNNER.baseline(m, "golden")
+
+
+def test_initial_profile_cannot_authorize_nonzero_default(initialized_baseline: tuple) -> None:
+    m, folder, provenance = initialized_baseline
+    m["initialization"]["uninitialized_register_value"] = 1
+    provenance["initialization"] = dict(m["initialization"])
+    RUNNER.save(folder / "provenance.json", provenance)
+    with pytest.raises(ValueError, match="二态默认零"):
+        RUNNER.baseline(m, "golden")
+
+
+def test_initial_profile_rejects_disconnected_audit_even_with_updated_file_hash(initialized_baseline: tuple) -> None:
+    m, folder, provenance = initialized_baseline
+    audit_path = folder / "initial-lowering.json"
+    audit = json.loads(audit_path.read_text())
+    audit["output_sha256"] = "0" * 64
+    RUNNER.save(audit_path, audit)
+    provenance["artifacts"]["initial-lowering.json"]["sha256"] = RUNNER.sha(audit_path)
+    RUNNER.save(folder / "provenance.json", provenance)
+    with pytest.raises(ValueError, match="未绑定实际输入输出"):
+        RUNNER.baseline(m, "golden")
+
+
+def test_initial_profile_rejects_unknown_policy(initialized_baseline: tuple) -> None:
+    m, folder, provenance = initialized_baseline
+    m["ir_profile"] = provenance["configuration"]["ir_profile"] = "unverified"
+    RUNNER.save(folder / "provenance.json", provenance)
+    with pytest.raises(ValueError, match="未知 IR"):
+        RUNNER.baseline(m, "golden")
+
+
+@pytest.mark.parametrize("run_id", ["../escape", "/absolute", "a/b", "", ".hidden"])
+def test_run_id_rejected_before_any_work(run_id: str) -> None:
+    with pytest.raises(ValueError, match="run-id"):
+        RUNNER.run_directory(run_id)
+
+
+def test_existing_run_cannot_be_overwritten(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(RUNNER, "ROOT", tmp_path)
+    (tmp_path / ".runs/existing").mkdir(parents=True)
+    with pytest.raises(FileExistsError):
+        RUNNER.run_directory("existing")
+
+
+def test_k_backend_uses_only_public_command_files_and_reports(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    m = json.loads((ROOT / "manifests/d13.json").read_text())
+    trace = RUNNER.stimulus(m, RUNNER.load_rows(m)[0])
+    inputs = tmp_path / "test_data.json"
+    RUNNER.save(inputs, trace)
+    work = tmp_path / "kimulator"
+    args = argparse.Namespace(kimulator="/installed/bin/kcirct", env={})
+    calls = []
+
+    def external_command(argv, folder, label, timeout, env):
+        calls.append(argv)
+        (work / "test.vcd").write_text("由独立组件生成的输出")
+        RUNNER.save(
+            work / "simulation/result.json",
+            {"status": "pass", "events_completed": len(trace["events"]), "simulation_calls": 2 * len(trace["events"])},
+        )
+        return "", 0.1
+
+    monkeypatch.setattr(RUNNER, "command", external_command)
+    result = RUNNER.run_k(m, "golden", inputs, work, args)
+    assert result["status"] == "pass"
+    argv = calls[0]
+    assert argv[:2] == [args.kimulator, "simulate"]
+    assert argv[argv.index("--inputs") + 1] == str(inputs)
+    assert argv[argv.index("--evaluations-per-input") + 1] == "2"
+    assert argv[argv.index("--output") + 1] == str(work / "test.vcd")
+    assert "--keep-states" in argv
+
+
+def test_external_component_failure_is_preserved(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    m = json.loads((ROOT / "manifests/d13.json").read_text())
+    inputs = tmp_path / "events.json"
+    RUNNER.save(inputs, RUNNER.stimulus(m, RUNNER.load_rows(m)[0]))
+    work = tmp_path / "kimulator"
+
+    def fail(argv, folder, label, timeout, env):
+        RUNNER.save(
+            work / "simulation/result.json",
+            {
+                "status": "timeout",
+                "stage": "execution",
+                "events_completed": 0,
+                "simulation_calls": 0,
+                "error": "子进程达到限制",
+            },
+        )
+        raise RuntimeError("组件退出非零")
+
+    monkeypatch.setattr(RUNNER, "command", fail)
+    result = RUNNER.run_k(m, "golden", inputs, work, argparse.Namespace(kimulator="kcirct", env={}))
+    assert result["status"] == "timeout" and result["stage"] == "execution"
+    assert (work / "simulation/result.json").is_file() and (work / "error.txt").is_file()
+
+
+def test_runner_import_does_not_import_component() -> None:
+    code = (
+        "import importlib.util, sys; "
+        f"s=importlib.util.spec_from_file_location('runner', {str(ROOT / 'runner.py')!r}); "
+        "m=importlib.util.module_from_spec(s); s.loader.exec_module(m); "
+        "assert not any(n == 'kcirct' or n.startswith('kcirct.') or n == 'pyk' or n.startswith('pyk.') for n in sys.modules)"
+    )
+    subprocess.run([sys.executable, "-c", code], check=True)
+
+
+def test_late_artifact_failure_cannot_be_overridden_by_matching_values() -> None:
+    first = {"sample_index": 1, "signal": "q", "expected": 1, "actual": 3}
+    result = {
+        "backends": {
+            "golden_native": {"status": "pass", "oracle": {"agrees": True}},
+            "golden_k": {"status": "pass", "oracle": {"agrees": True}},
+            "buggy_native": {"status": "oracle_mismatch", "oracle": {"agrees": False, "first_mismatch": first}},
+            "buggy_k": {"status": "execution_error", "oracle": {"agrees": False, "first_mismatch": first}},
+        },
+        "waveform_comparisons": {"golden": {"agrees": True}, "buggy": {"agrees": True}},
     }
-    entry = types.SimpleNamespace(value="kcirct.kdist.plugin")
-    monkeypatch.setattr(RUNNER.importlib.metadata, "entry_points", lambda **kwargs: [entry])
-    original_import = RUNNER.importlib.import_module
-    monkeypatch.setattr(
-        RUNNER.importlib, "import_module", lambda name: modules[name] if name in modules else original_import(name)
-    )
-    return service, modules
+    RUNNER.finalize_case(result)
+    assert result["simulator_agrees_with_native"] is True
+    assert result["bug_detected_by_oracle"] is True
+    assert result["status"] == "execution_error"
+    result["backends"]["buggy_k"]["status"] = "oracle_mismatch"
+    RUNNER.finalize_case(result)
+    assert result["status"] == "pass"
 
 
-@pytest.mark.parametrize("module_name", ["kcirct.api", "kcirct.kdist.plugin"])
-def test_rejects_import_from_different_checkout(imported_service: tuple[Path, dict], module_name: str) -> None:
-    service, modules = imported_service
-    modules[module_name].__file__ = str(service.parent / "other-checkout/api.py")
-    with pytest.raises(ValueError, match="实际导入.*来源不符"):
-        RUNNER.validate_service_imports(service)
+@pytest.mark.parametrize("exit_code", [0, 1])
+def test_cli_propagates_batch_exit_code(monkeypatch: pytest.MonkeyPatch, exit_code: int) -> None:
+    monkeypatch.setattr(sys, "argv", ["runner.py", "run", "--cases", "all-short"])
+    monkeypatch.setattr(RUNNER, "run", lambda args: exit_code)
+    assert RUNNER.main() == exit_code
 
 
-def test_rejects_kdist_source_target_and_cached_build_directory_mismatch(imported_service: tuple[Path, dict]) -> None:
-    service, modules = imported_service
-    api, plugin = modules["kcirct.api"], modules["kcirct.kdist.plugin"]
-    expected_source = plugin.__TARGETS__["source"].SRC_DIR
-    plugin.__TARGETS__["source"].SRC_DIR = service / "wrong-target"
-    with pytest.raises(ValueError, match="source target"):
-        RUNNER.validate_service_imports(service)
-    plugin.__TARGETS__["source"].SRC_DIR = expected_source
-    api.kdist.kdist_dir = service / "cached-before-configuration"
-    with pytest.raises(ValueError, match="错误的 KDIST_DIR"):
-        RUNNER.validate_service_imports(service)
-
-
-def test_missing_or_ambiguous_plugin_registration_is_rejected(
-    imported_service: tuple[Path, dict], monkeypatch: pytest.MonkeyPatch
-) -> None:
-    service, _ = imported_service
-    for entries in ([], [types.SimpleNamespace(value="wrong.plugin")], [object(), object()]):
-        monkeypatch.setattr(RUNNER.importlib.metadata, "entry_points", lambda **kwargs: entries)
-        with pytest.raises(ValueError, match="唯一注册"):
-            RUNNER.validate_service_imports(service)
-
-
-@pytest.mark.parametrize("tool_version", ["1.2.3", "1.2.33"])
-def test_environment_configures_build_before_import_and_checks_tool_versions(
-    imported_service: tuple[Path, dict], tmp_path: Path, monkeypatch: pytest.MonkeyPatch, tool_version: str
-) -> None:
-    service, _ = imported_service
-    binaries = tmp_path / "runtime-tools"
-    binaries.mkdir()
-    for name in ("kompile", "krun", "kast", "circt-verilog", "circt-opt", "verilator"):
-        path = binaries / name
-        path.write_text(f'#!/bin/sh\nprintf "tool v{tool_version}\\n"\n')
-        path.chmod(0o755)
-    monkeypatch.setenv("PATH", str(binaries))
-    monkeypatch.setenv("KDIST_DIR", "ignored-previous-value")
-    for name in ("K_BIN", "CIRCT_BIN", "VERILATOR"):
-        monkeypatch.delenv(name, raising=False)
-    monkeypatch.setattr(RUNNER.importlib.metadata, "version", lambda _: "1.2.3")
-    monkeypatch.setattr(RUNNER.subprocess, "check_output", lambda *args, **kwargs: "test-head\n")
-    check_imports = RUNNER.validate_service_imports
-
-    def check_after_configuration(path):
-        assert os.environ["KDIST_DIR"] == str(RUNNER.BUILD / "kdist")
-        return check_imports(path)
-
-    monkeypatch.setattr(RUNNER, "validate_service_imports", check_after_configuration)
-    args = argparse.Namespace(kcirct_root=service, k_bin=None, circt_bin=None, verilator=None)
-    if tool_version != "1.2.3":
-        with pytest.raises(ValueError, match="版本不匹配") as error:
-            RUNNER.environment(args)
-        assert str(binaries / "kompile") in str(error.value)
-        assert "v1.2.33" in str(error.value)
-        return
-    versions = RUNNER.environment(args)
-    assert versions["imports"]["api"] == str(service / "src/kcirct/api.py")
-    assert versions["kdist_plugin_sha256"] == RUNNER.sha(service / "src/kcirct/kdist/plugin.py")
-    assert versions["verilator"]["path"] == str(binaries / "verilator")
-    assert args.tools["krun"] == str(binaries / "krun")
-
-
-@pytest.mark.parametrize("configured_k", [False, True])
-def test_child_processes_preserve_checked_k_and_relative_pythonpath(
-    imported_service: tuple[Path, dict], tmp_path: Path, monkeypatch: pytest.MonkeyPatch, configured_k: bool
-) -> None:
-    """CIRCT 目录混入另一套 K 时，API/kdist 子进程仍必须执行已核验的入口。"""
-    service, _ = imported_service
-    default_bin, circt_bin, k_bin = [tmp_path / name for name in ("default-tools", "circt-tools", "selected-k")]
-    for directory, prefix in ((default_bin, "default"), (circt_bin, "shadow"), (k_bin, "selected")):
-        directory.mkdir()
-        for name in ("kompile", "krun", "kast", "circt-verilog", "circt-opt", "verilator"):
-            path = directory / name
-            path.write_text(f'#!/bin/sh\nprintf "{prefix} v1.2.3\\n"\n')
-            path.chmod(0o755)
-    monkeypatch.chdir(tmp_path)
-    monkeypatch.setenv("PATH", "default-tools")
-    monkeypatch.setenv("PYTHONPATH", "relative-sources")
-    monkeypatch.setenv("KDIST_DIR", "previous-value")
-    for name in ("K_BIN", "CIRCT_BIN", "VERILATOR"):
-        monkeypatch.delenv(name, raising=False)
-    python_sources = tmp_path / "relative-sources"
-    python_sources.mkdir()
-    (python_sources / "portable_import_probe.py").write_text('ORIGIN = "chosen-parent-directory"\n')
-    monkeypatch.setattr(RUNNER.importlib.metadata, "version", lambda _: "1.2.3")
-    monkeypatch.setattr(RUNNER.subprocess, "check_output", lambda *args, **kwargs: "test-head\n")
-    args = argparse.Namespace(
-        kcirct_root=service, k_bin=k_bin if configured_k else None, circt_bin=circt_bin, verilator=None
-    )
-    versions = RUNNER.environment(args)
-    expected_bin = k_bin if configured_k else default_bin
-    child_work = tmp_path / "different-cwd"
-    child_work.mkdir()
-    assert str(circt_bin) not in os.environ["PATH"].split(os.pathsep)
-    for name in ("kompile", "krun", "kast"):
-        assert args.tools[name] == str(expected_bin / name) == shutil.which(name)
-        actual = subprocess.run([name, "--version"], cwd=child_work, capture_output=True, text=True, check=True)
-        assert actual.stdout == versions[name]["version"]
-    assert versions["circt-opt"]["path"] == str(circt_bin / "circt-opt")
-    imported = subprocess.run(
-        [sys.executable, "-c", "import portable_import_probe; print(portable_import_probe.ORIGIN)"],
-        cwd=child_work,
-        capture_output=True,
-        text=True,
-        check=True,
-    )
-    assert imported.stdout.strip() == "chosen-parent-directory"
-    # 即使后续代码改变 PATH，API 的 K 命令仍绑定到之前核验的绝对入口。
-    monkeypatch.setenv("PATH", str(circt_bin))
-    for executable in ("krun", str(circt_bin / "krun")):
-        argv = RUNNER.bind_k_command([executable, "--version"], args.tools)
-        result = subprocess.run(argv, cwd=child_work, capture_output=True, text=True, check=True)
-        assert result.stdout == versions["krun"]["version"]
-
-
-def test_all_manifests_follow_layout_and_source_hashes() -> None:
-    for path in sorted((ROOT / "manifests").glob("*.json")):
-        manifest = json.loads(path.read_text())
-        RUNNER.validate_manifest(manifest)
-        for filename, digest in manifest["source_hashes"].items():
-            assert RUNNER.sha(RUNNER.resource_path(filename)) == digest, filename
+def test_prepared_cache_rejects_replaced_executable(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(RUNNER, "BUILD", tmp_path)
+    definition = tmp_path / "kdist/circt-semantics/llvm"
+    definition.mkdir(parents=True)
+    for name in ("definition.kore", "compiled.bin", "backend.txt", "interpreter"):
+        (definition / name).write_text(name)
+    (tmp_path / "parser").write_text("parser")
+    identity = {
+        "semantics_hashes": {},
+        "kframework_version": "test",
+        "kdist_plugin_sha256": "test",
+        "tools": {name: {"version": "test"} for name in ("kompile", "krun", "kast")},
+    }
+    prepared = {
+        "kimulator": identity,
+        "definition_sha256": RUNNER.sha(definition / "definition.kore"),
+        "parser_sha256": RUNNER.sha(tmp_path / "parser"),
+        "compiled_artifact_sha256": RUNNER.compiled_artifact_hashes(),
+    }
+    RUNNER.save(tmp_path / "prepared.json", prepared)
+    assert RUNNER.verify_prepared({"kimulator": identity}) == prepared
+    (definition / "interpreter").write_text("另一份可执行文件")
+    with pytest.raises(ValueError, match="make prepare"):
+        RUNNER.verify_prepared({"kimulator": identity})
 
 
 def test_layout_missing_upstream_mapping_is_rejected(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
-    manifest, _, _ = _run_fixture(tmp_path, monkeypatch)
-    layout_path = tmp_path / manifest["layout_file"]
+    m = json.loads((ROOT / "manifests/s1b.json").read_text())
+    shutil.copytree(ROOT / "designs/axi-lite-s1", tmp_path / "designs/axi-lite-s1")
+    monkeypatch.setattr(RUNNER, "ROOT", tmp_path)
+    layout_path = tmp_path / m["layout_file"]
     layout = json.loads(layout_path.read_text())
     del layout["files"]["xlnxdemo.v"]
     layout_path.write_text(json.dumps(layout))
     with pytest.raises(ValueError, match="缺少上游文件映射"):
-        RUNNER.validate_manifest(manifest)
+        RUNNER.validate_manifest(m)

@@ -1,0 +1,30 @@
+{
+  "sample_phase": "low_before_posedge_pre_NBA",
+  "vcd_sample_phase": "every_event_after_eval",
+  "clock": "clk",
+  "events": "每行 drive(clk=0, inputs) -> eval -> dump VCD 并读取 CSV；除最后一行外 drive(clk=1, 相同 inputs) -> eval -> dump VCD",
+  "event_count": 7,
+  "vcd_timescale": "1ns",
+  "vcd_top": "TOP",
+  "initialization": "Verilator 二态未初始化值为 0；保留 RTL 显式 initial/声明初始化，不额外插入 reset",
+  "unknown_values": "原生 --x-initial 0/--x-assign 0；CSV 输入禁止 None/X/Z；输出 mask 由独立 oracle 比较处理",
+  "time": "第 i 行 low 时间为 2*i ns，随后 high 为 (2*i+1) ns；最后一行只提交 low；无延迟 DUT 的精度统一为 1ns",
+  "limitation": "低电平先更新输入再观察；组合输出可能不同于原 TB 输入 NBA 更新前的观测，须逐例核对原生 oracle",
+  "inputs": [
+    {
+      "name": "clk",
+      "width": 1
+    },
+    {
+      "name": "d",
+      "width": 4
+    }
+  ],
+  "outputs": [
+    {
+      "name": "q",
+      "width": 4
+    }
+  ],
+  "manifest_initialization": null
+}

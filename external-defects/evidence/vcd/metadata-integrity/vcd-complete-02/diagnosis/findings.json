@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "case": "s2/golden",
+  "run": "vcd-complete-02",
+  "status": "connection_corruption_reproduced",
+  "scope": "VCD 89 events 对照通过，但内部连接静态图在后期被修改；两项观察并存",
+  "first_event_index": 84,
+  "first_evaluation": 2,
+  "before_depth": 1023,
+  "after_depth": 1024,
+  "current_id": 14214,
+  "connection_key": "xlnxstream_2018_3/%53",
+  "expected_args": [
+    "xlnxstream_2018_3/%51",
+    "xlnxstream_2018_3/%50",
+    "xlnxstream_2018_3/%54"
+  ],
+  "corrupted_args": [
+    "xlnxstream_2018_3/%50",
+    "xlnxstream_2018_3/%54",
+    "xlnxstream_2018_3/%54"
+  ],
+  "rule": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/kcirct/kdist/circt_semantics/hardware/hardware.md",
+    "sha256": "343a8bd20575d51a81a40d8278816bbc2c87ca356cb85e79e8e4f55a9c671ff5",
+    "line": 55,
+    "operation": "普通 Bits HARDWARE#READ_DIRECT",
+    "selector_is_register": false,
+    "selector_bits": [
+      0,
+      1
+    ],
+    "lhs": "READ ~> HARDWARE#READ_DIRECT ~> ListItem(Port:String) L",
+    "rhs": "READ ListItem(Signal) ~> HARDWARE#READ_DIRECT ~> L",
+    "mentions_connection": false
+  },
+  "full_replay": {
+    "method": "使用生产 SimulatorKCIRCT.run_simulate_fast，event84/eval1 真实快照与同事件输入构造下一评估；不修改 API",
+    "repetitions": 3,
+    "all_bytes_equal_formal_event84eval2": true,
+    "prestate_sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1",
+    "full_output_sha256": "b85ebe0ea8737937760128c52ed4b86e3ac878a2986bf9ddb5939de9e4aa7643"
+  },
+  "changed_map_key_counts": {
+    "connection": 1,
+    "signals": 0,
+    "history": 0,
+    "register": 0
+  },
+  "serialized_restart_repetitions": 3,
+  "all_restarts_keep_connection": true,
+  "inference": "READ_DIRECT 消费与原连接 operation 共享的参数 List 时发生可见原地修改；相同逻辑状态序列化重启后不改连接。未推定具体 LLVM C++ hook 位置。",
+  "definition_identity": {
+    "definition.kore": "52a62a553fa6eda77309e207f62bac26f6d047222eb0eca06bb9db4f103a600f",
+    "compiled.bin": "946d3f1fc3b82c6358af410e35f31c9682e683e0f1341d2b82af6d07843a5c33",
+    "backend.txt": "ef5a927f5a4ae8bdfa7d187079fa7b2aabc8d72ce219c564f78c9498ff59d2f9",
+    "interpreter": "9298547262a8960e086e5384f9d5fd585484794d29d5e5a974b2153c6c5f9f7e"
+  },
+  "artifacts": {
+    "event84-eval1.kore": {
+      "sha256": "d770e36648228bee526f0859a2afed1b193cad9768978b17c13d0c08a8d3bea7",
+      "bytes": 307049
+    },
+    "event84-eval2.kore": {
+      "sha256": "b85ebe0ea8737937760128c52ed4b86e3ac878a2986bf9ddb5939de9e4aa7643",
+      "bytes": 307049
+    },
+    "replay-0.kore.prestate": {
+      "sha256": "2a291c7f2c7d20330c2128a95eeae0ad3ccf7d3fc8d371fe8bd46f54d585bdc1",
+      "bytes": 307801
+    },
+    "replay-0.kore": {
+      "sha256": "b85ebe0ea8737937760128c52ed4b86e3ac878a2986bf9ddb5939de9e4aa7643",
+      "bytes": 307049
+    },
+    "commands.jsonl": {
+      "sha256": "6333fe35190025e73c932313f35ea7a389f30f61c3cb88f653da76b7e02926a2",
+      "bytes": 3432
+    },
+    "replays.json": {
+      "sha256": "dde1eba242cd02a8ca1535b0517eeef19bd4ddec246bdf70f6726a59123f9d36",
+      "bytes": 1164
+    },
+    "depth-1023.kore": {
+      "sha256": "c15434ae43addebd952450d97e079a69acdad90641b7d5e4f028b8e2c9f163da",
+      "bytes": 320069
+    },
+    "depth-1024.kore": {
+      "sha256": "27f8ddf095bf454ea09cf498b8ff12478bdedd6fef170347c304c959f4c50400",
+      "bytes": 320199
+    },
+    "connection-bisect.json": {
+      "sha256": "969e625fc74c90a390fed26a4964111627ec4370ae9c632b26d943ad5c7fbc25",
+      "bytes": 173677
+    },
+    "map-diff.json": {
+      "sha256": "9c816f2d074509cd676d3131d1be22b54cd92b98a2f91d955a4d05d62ab50f73",
+      "bytes": 3425
+    },
+    "restarted-step.json": {
+      "sha256": "028033e96e2d67ba7038f130e8f715c70e63d984b0b33922cde4ea95e12fb68d",
+      "bytes": 2271
+    },
+    "restarted-step-0.kore": {
+      "sha256": "60e6670dee3b737b09ec76ea27c0bcb7991ed9a727f60dd253851f37e8a5cfb2",
+      "bytes": 320199
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "external-defects/tests/test_runner.py::test_all_manifests_and_persisted_ir_match_sources"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp",
+  "exit_code": 0,
+  "scope": "最终S2 manifest说明与IR索引更新后的活动配置来源核验；不重复仿真。"
+}

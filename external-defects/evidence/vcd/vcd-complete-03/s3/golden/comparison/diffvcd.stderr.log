@@ -1,0 +1,22 @@
+14 signals in first file
+75 signals in second file
+14 signals under `axis_adapter.` in first file
+75 signals under `TOP.` in second file
+14 common signals
+14 filtered and unignored signals
+Reading first file
+Reading second file
+Comparing clk
+Comparing input_axis_tdata[63:0]
+Comparing input_axis_tkeep[7:0]
+Comparing input_axis_tlast
+Comparing input_axis_tready
+Comparing input_axis_tuser
+Comparing input_axis_tvalid
+Comparing output_axis_tdata[7:0]
+Comparing output_axis_tkeep
+Comparing output_axis_tlast
+Comparing output_axis_tready
+Comparing output_axis_tuser
+Comparing output_axis_tvalid
+Comparing rst

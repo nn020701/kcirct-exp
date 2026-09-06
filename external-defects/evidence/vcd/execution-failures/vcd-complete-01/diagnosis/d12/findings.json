@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "case": "d12",
+  "variant": "golden",
+  "formal_run": "vcd-complete-01",
+  "observed_failure": {
+    "event_index": 9,
+    "evaluation": 1,
+    "mux": "axis_fifo/%69",
+    "expected_operands": [
+      "axis_fifo/%57",
+      "axis_fifo/%65",
+      "axis_fifo/%70"
+    ],
+    "corrupted_operands": [
+      "axis_fifo/%65",
+      "axis_fifo/%70",
+      "axis_fifo/%70"
+    ]
+  },
+  "first_corruption": {
+    "event_index": 8,
+    "evaluation": 2,
+    "source_prestate": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/previous-input.kore",
+      "sha256": "a497e04d235733fd92536b6e7707de3438be6c436c30227e326b4cf116b7158c",
+      "bytes": 333376
+    },
+    "before_depth": 942,
+    "after_depth": 943,
+    "current_id": 1379,
+    "rule": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/src/kcirct/kdist/circt_semantics/circt/circt.md",
+      "line": 135,
+      "priority": 40,
+      "text": "Op (ListItem(Arg) Args) => HARDWARE#READ ~> ListItem(Arg) Args ~> Op (ListItem(Arg) Args)",
+      "connection_in_lhs_or_rhs": false
+    },
+    "changed_connection_keys": [
+      "axis_fifo/%69"
+    ],
+    "signals_unchanged": true,
+    "history_unchanged": true
+  },
+  "replays": {
+    "failing_evaluation_repetitions": 3,
+    "all_match_formal_last_state_sha256": true,
+    "previous_evaluation_full_matches_formal": true,
+    "serialized_before_state_one_step_repetitions": 3,
+    "all_restarted_connection_unchanged": true
+  },
+  "inference": "Auto Connect 的列表 head/tail 匹配在连续执行时破坏了 connection 中共享的原列表；相同逻辑状态经序列化重启后不破坏 connection。证据定位到该规则触发及进程内共享结构，尚未单独定位 LLVM runtime 的具体 C++ hook。",
+  "definition_identity": {
+    "definition.kore": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm/definition.kore",
+      "sha256": "fbf9e1d4cfa401e0a691e9951222325a45a41620705a8198577a903d4ed4372c",
+      "bytes": 2584007
+    },
+    "compiled.bin": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm/compiled.bin",
+      "sha256": "4afb0c897bf3e3ae95e6a13a839596f33288280c215f67fadaadd5cfc29767a1",
+      "bytes": 6662800
+    },
+    "backend.txt": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm/backend.txt",
+      "sha256": "ef5a927f5a4ae8bdfa7d187079fa7b2aabc8d72ce219c564f78c9498ff59d2f9",
+      "bytes": 4
+    },
+    "interpreter": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm/interpreter",
+      "sha256": "bc05873f2aa8a4aa7bad45ef932c9127716b480c54dc214445450324ba2dafc5",
+      "bytes": 10911920
+    }
+  },
+  "artifacts": {
+    "previous-input.kore": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/previous-input.kore",
+      "sha256": "a497e04d235733fd92536b6e7707de3438be6c436c30227e326b4cf116b7158c",
+      "bytes": 333376
+    },
+    "previous-full.kore": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/previous-full.kore",
+      "sha256": "0d0bac60f1f7d7f448c20b01d99be62a37a05d8a03a13c6dcada3ced88118de9",
+      "bytes": 331224
+    },
+    "previous-depth-942.kore": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/previous-depth-942.kore",
+      "sha256": "819ffb680dbbf77b9d6f4834a9374c0d5a66574c2862a9fd97bf81c76b1613f6",
+      "bytes": 348309
+    },
+    "previous-depth-943.kore": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/previous-depth-943.kore",
+      "sha256": "153eda44b06528b1925acdabc73e35c049219305ce52d8c22543d3a80902305f",
+      "bytes": 348706
+    },
+    "restarted-step-0.kore": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/restarted-step-0.kore",
+      "sha256": "9b08a7564a07c63c2aa7f8d998ee6a0bf924cea0cb6b5f90cf6b2c9459c62787",
+      "bytes": 348706
+    },
+    "replays.json": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/replays.json",
+      "sha256": "a60da4fdd0c330a4359d5fc859f99f92bd5fd7df3f1f09382bd002c3aa2c5338",
+      "bytes": 2009
+    },
+    "phase-scan.json": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/phase-scan.json",
+      "sha256": "b8ce4f9d0e0fa1f4ddc3f72f1cef76ebbdc5c0d48cad4465471e6a58913eeecc",
+      "bytes": 1744
+    },
+    "connection-bisect.json": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/connection-bisect.json",
+      "sha256": "b6b18db5023f201154725c09345dbc1bc1455f9ebf4ab67a0414490e5a1d2f64",
+      "bytes": 216527
+    },
+    "restarted-step.json": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/restarted-step.json",
+      "sha256": "0eb6f30dbf6f1828887435547832b989480d40be491c0757f37ba2948d04a05f",
+      "bytes": 2421
+    },
+    "map-diff.json": {
+      "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/map-diff.json",
+      "sha256": "46583eb1922c2d773e0d671778aeb25f3e49c2e97eaf1eaa7d90912c619bd45c",
+      "bytes": 4967
+    }
+  },
+  "discarded_exploratory_probe": {
+    "file": "bisect.json",
+    "reason": "该早期探索只观察第一个 current；配置含多个 current-info，观察不单调。仅以 connection-bisect 的 exact Map key %69 作为首次损坏边界。"
+  },
+  "fix_validation": "等待新版 definition；当前没有改服务源码或正式运行工件。"
+}

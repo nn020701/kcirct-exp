@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "policy": "scalar-equals-i1-zero-range-v1",
+  "applied": true,
+  "mappings": [
+    {
+      "backend": "native",
+      "port": "m_axis_tready",
+      "width": 1,
+      "from": "TOP.m_axis_tready[0:0]",
+      "to": "TOP.m_axis_tready"
+    },
+    {
+      "backend": "native",
+      "port": "m_axis_tkeep",
+      "width": 1,
+      "from": "TOP.m_axis_tkeep[0:0]",
+      "to": "TOP.m_axis_tkeep"
+    },
+    {
+      "backend": "native",
+      "port": "m_axis_tvalid",
+      "width": 1,
+      "from": "TOP.m_axis_tvalid[0:0]",
+      "to": "TOP.m_axis_tvalid"
+    },
+    {
+      "backend": "native",
+      "port": "m_axis_tlast",
+      "width": 1,
+      "from": "TOP.m_axis_tlast[0:0]",
+      "to": "TOP.m_axis_tlast"
+    },
+    {
+      "backend": "native",
+      "port": "m_axis_tdest",
+      "width": 1,
+      "from": "TOP.m_axis_tdest[0:0]",
+      "to": "TOP.m_axis_tdest"
+    },
+    {
+      "backend": "native",
+      "port": "m_axis_tuser",
+      "width": 1,
+      "from": "TOP.m_axis_tuser[0:0]",
+      "to": "TOP.m_axis_tuser"
+    }
+  ],
+  "files": {
+    "native": {
+      "source": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/buggy/native/trace.vcd",
+        "sha256": "29ed6a4f3e220f60638be452f1227dc8297c156450fbd66983bcf5927b6bd25a",
+        "bytes": 18883
+      },
+      "comparison": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8/buggy/comparison/native.comparison.vcd",
+        "sha256": "91b9a412f5a75282399310544deacd6ff2e2e73f59d3a797254859124ca60e30",
+        "bytes": 18847
+      },
+      "body_sha256": "5093e35a4550911850ff47055458e8c06551f63d9d1ec5c235d616847b68c762",
+      "body_bytes": 2827,
+      "body_unchanged": true,
+      "mappings": [
+        {
+          "backend": "native",
+          "port": "m_axis_tready",
+          "width": 1,
+          "from": "TOP.m_axis_tready[0:0]",
+          "to": "TOP.m_axis_tready"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tkeep",
+          "width": 1,
+          "from": "TOP.m_axis_tkeep[0:0]",
+          "to": "TOP.m_axis_tkeep"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tvalid",
+          "width": 1,
+          "from": "TOP.m_axis_tvalid[0:0]",
+          "to": "TOP.m_axis_tvalid"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tlast",
+          "width": 1,
+          "from": "TOP.m_axis_tlast[0:0]",
+          "to": "TOP.m_axis_tlast"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tdest",
+          "width": 1,
+          "from": "TOP.m_axis_tdest[0:0]",
+          "to": "TOP.m_axis_tdest"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tuser",
+          "width": 1,
+          "from": "TOP.m_axis_tuser[0:0]",
+          "to": "TOP.m_axis_tuser"
+        }
+      ]
+    }
+  }
+}

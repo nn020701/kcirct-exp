@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.0",
+  "kframework_version": "7.1.323",
+  "api_sha256": "40e6b398d06f6dff1ecdba85819330b54006a0d46aedaa0474613ac451a211cd",
+  "simulator_sha256": "7ad752d4c2137fc6fdf113bbbc6b2d73841929fdd10fa7694ffe1d01434cecc3",
+  "status": "pass",
+  "stage": "complete",
+  "top_module": "axis_adapter",
+  "input_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s3/golden/kimulator/simulation/design.generic.mlir",
+  "inputs_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-01/s3/golden/kimulator/simulation/inputs.json",
+  "vcd_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-golden.vcd",
+  "work_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-golden",
+  "evaluations_per_input": 2,
+  "events_completed": 25,
+  "simulation_calls": 50,
+  "simulation_calls_attempted": 50,
+  "timings": {
+    "compile": 0.43911787499928323,
+    "preprocess": 0.255679791998773,
+    "setup": 0.2093518750007206,
+    "execution": 10.509908040992741,
+    "read_ports": 0.06830445600644452,
+    "state_export": 0.0,
+    "total": 13.118642958999772
+  },
+  "error": null,
+  "input_sha256": "64284ceadd31abb70660d75bea92c4506435921e2dccc210274fdc80883c8bd0",
+  "inputs_sha256": "abd7322c6c66abb4234d5b3d90f9a40c959a4294a7984cd93c860967eeaa81e4",
+  "ports": {
+    "inputs": [
+      {
+        "name": "clk",
+        "width": 1
+      },
+      {
+        "name": "rst",
+        "width": 1
+      },
+      {
+        "name": "input_axis_tdata",
+        "width": 64
+      },
+      {
+        "name": "input_axis_tkeep",
+        "width": 8
+      },
+      {
+        "name": "input_axis_tvalid",
+        "width": 1
+      },
+      {
+        "name": "input_axis_tlast",
+        "width": 1
+      },
+      {
+        "name": "input_axis_tuser",
+        "width": 1
+      },
+      {
+        "name": "output_axis_tready",
+        "width": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "input_axis_tready",
+        "width": 1
+      },
+      {
+        "name": "output_axis_tdata",
+        "width": 8
+      },
+      {
+        "name": "output_axis_tkeep",
+        "width": 1
+      },
+      {
+        "name": "output_axis_tvalid",
+        "width": 1
+      },
+      {
+        "name": "output_axis_tlast",
+        "width": 1
+      },
+      {
+        "name": "output_axis_tuser",
+        "width": 1
+      }
+    ]
+  },
+  "timescale": "1ns",
+  "events_total": 25,
+  "definition_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/kdist/circt-semantics/llvm",
+  "definition_sha256": "b152cef8335c6fee1b930e5b9fae8e3bd48217441bde73cef38e495cae88f08f",
+  "parser": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-golden/parser",
+  "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+  "event_index": 24,
+  "event_time": 24,
+  "evaluation": 2,
+  "vcd_sha256": "062a2dd4b8fefefa8009ffb06fdd2db792e2778747f4b4113c1f41f367f80a10",
+  "last_state": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/.kcirct/auto-connect/s3-golden/last-state.kore",
+  "last_state_sha256": "21efddec788a38edd487ba959e59e76318de547cab5c95b3e47df6023efccd98"
+}

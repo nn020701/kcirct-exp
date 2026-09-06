@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "policy": "proven-single-initial-to-preset-v1",
+  "module": "init_ff",
+  "input_sha256": {
+    "raw_hw_generic": "a234c1cf31d4dfadd57e03d4ebe66f86f2d3816042b9d2443a8b4422dd10a46c",
+    "pre_llhd_generic": "65452ea965a572db77ef6704fd6a7c79500c4b58f8c66e3e05fbf4d1e50ece84"
+  },
+  "output_sha256": "4f6e26040b08d88c7be39187019c933939feb134acedd411c6a425f7f6fd174a",
+  "initial_processes": [
+    {
+      "name": "q",
+      "width": 4,
+      "signal_initial_value": 0,
+      "ssa": "%9",
+      "line": 16,
+      "initial_value": 5,
+      "process_line": 17,
+      "driver_line": 18
+    }
+  ],
+  "replacements": [
+    {
+      "signal_name": "q",
+      "width": 4,
+      "initial_value": 5,
+      "signal_initial_value": 0,
+      "pre_process_line": 17,
+      "pre_signal": "%9",
+      "raw_signal": "%3",
+      "register": "%5",
+      "register_line": 13,
+      "removed_driver_line": 11,
+      "clock_input": "%arg0",
+      "existing_preset": null
+    }
+  ],
+  "unmatched_source_initials": [],
+  "requires_official_postprocessing": [
+    "llhd-sig2reg",
+    "canonicalize"
+  ],
+  "caller_obligations": [
+    "相同 RTL、参数及工具版本生成两个输入并保存哈希",
+    "显式声明二态默认零初始化策略",
+    "归一化后运行官方 verifier、sig2reg 和完整外部 VCD 对照"
+  ]
+}

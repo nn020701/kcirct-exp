@@ -1,0 +1,17 @@
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-frame-fifo-d11/original/axis_frame_fifo.v:67:39: Operator ASSIGN expects 10 bits on the Assign RHS, but Assign RHS's REPLICATE generates 9 bits.
+                                                                                                                                                                        : ... note: In instance 'axis_frame_fifo'
+   67 | reg [DATA_WIDTH+2-1:0] data_out_reg = {1'b0, {DATA_WIDTH{1'b0}}};
+      |                                       ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.048
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-frame-fifo-d11/original/axis_frame_fifo.v:76:33: Operator ASSIGNW expects 10 bits on the Assign RHS, but Assign RHS's REPLICATE generates 9 bits.
+                                                                                                                                                                        : ... note: In instance 'axis_frame_fifo'
+   76 | wire [DATA_WIDTH+2-1:0] data_in = {input_axis_tlast, input_axis_tdata};
+      |                                 ^
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-frame-fifo-d11/original/axis_frame_fifo.v:90:47: Operator ASSIGNW expects 9 bits on the Assign RHS, but Assign RHS's VARREF 'data_out_reg' generates 10 bits.
+                                                                                                                                                                       : ... note: In instance 'axis_frame_fifo'
+   90 | assign {output_axis_tlast, output_axis_tdata} = data_out_reg;
+      |                                               ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.048
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@17/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@17/17.0.6/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly

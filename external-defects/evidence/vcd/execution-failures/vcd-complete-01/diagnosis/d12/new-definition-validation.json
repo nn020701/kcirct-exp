@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "/nix/store/d48jsivhwi2bk1sbnjk3zyy5w8fwl1na-profile/bin/krun",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/d12-read-diagnosis/previous-input.kore",
+    "--definition",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+    "--output",
+    "kore",
+    "--parser",
+    "cat",
+    "--term",
+    "--no-expand-macros"
+  ],
+  "returncode": 0,
+  "input_sha256": "a497e04d235733fd92536b6e7707de3438be6c436c30227e326b4cf116b7158c",
+  "output_sha256": "8f1c7f7649e9766718bfe41ec7b5dac1eb6477fd9af4a2100fa2d0bf923ac5d5",
+  "whole_connection_map_equal_input": true,
+  "connection_entries": 78,
+  "whole_signals_map_equal_old_formal_previous_output": true,
+  "signals_entries": 88,
+  "whole_history_map_equal_old_formal_previous_output": true,
+  "currents": [],
+  "all_currents_completed": true,
+  "definition_identity": {
+    "definition.kore": "52a62a553fa6eda77309e207f62bac26f6d047222eb0eca06bb9db4f103a600f",
+    "compiled.bin": "946d3f1fc3b82c6358af410e35f31c9682e683e0f1341d2b82af6d07843a5c33",
+    "backend.txt": "ef5a927f5a4ae8bdfa7d187079fa7b2aabc8d72ce219c564f78c9498ff59d2f9",
+    "interpreter": "9298547262a8960e086e5384f9d5fd585484794d29d5e5a974b2153c6c5f9f7e"
+  },
+  "changed_connection_keys": []
+}

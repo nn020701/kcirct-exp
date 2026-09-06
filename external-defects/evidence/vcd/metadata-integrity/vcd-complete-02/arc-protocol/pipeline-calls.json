@@ -1,0 +1,30 @@
+[
+  {
+    "stage": "compile",
+    "args": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/design.generic.mlir",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/pgm.kore"
+    ],
+    "output_sha256": "88d27695f5b9f4916f87438e940b129f376634ffe6b63584e64ee16027689127",
+    "seconds": 0.023204290999274235
+  },
+  {
+    "stage": "preprocess",
+    "args": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/pgm.kore",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/preprocessed.kore"
+    ],
+    "output_sha256": "b38f8d83f8c1434daf16c70946f72eefa550c817f4d373a9d031c88ffa96a2b1",
+    "seconds": 0.2768396669998765
+  },
+  {
+    "stage": "setup",
+    "args": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/preprocessed.kore",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/s2-arc-protocol-audit/setup.kore",
+      "xlnxstream_2018_3"
+    ],
+    "output_sha256": "a35c110092135ac6cd8aaacc8e3591eae681a1ba0dc5a5aec25cce8d31090e4e",
+    "seconds": 0.14862991700101702
+  }
+]

@@ -1,0 +1,73 @@
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/priority_encoder.v:71:9: Instance has missing pin: 'output_unencoded'
+   71 |         priority_encoder_inst1 (
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/priority_encoder.v:42:37: ... Location of port declaration
+   42 |     output wire [WIDTH-1:0]         output_unencoded
+      |                                     ^~~~~~~~~~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.048
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/priority_encoder.v:80:9: Instance has missing pin: 'output_unencoded'
+   80 |         priority_encoder_inst2 (
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/priority_encoder.v:42:37: ... Location of port declaration
+   42 |     output wire [WIDTH-1:0]         output_unencoded
+      |                                     ^~~~~~~~~~~~~~~~
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/arbiter.v:105:59: Logical operator LOGNOT expects 1 bit on the LHS, but LHS's AND generates 4 bits.
+                                                                                                                                                           : ... note: In instance 'axis_switch.m_ifaces[0].arb_inst'
+  105 |     end else if (BLOCK == "ACKNOWLEDGE" && grant_valid && !(grant_reg & acknowledge)) begin
+      |                                                           ^
+                     ... For warning description see https://verilator.org/warn/WIDTHTRUNC?v=5.048
+                     ... Use "/* verilator lint_off WIDTHTRUNC */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/original/arbiter.v:100:28: Logical operator LOGAND expects 1 bit on the RHS, but RHS's AND generates 4 bits.
+                                                                                                                                                           : ... note: In instance 'axis_switch.m_ifaces[0].arb_inst'
+  100 |     if (BLOCK == "REQUEST" && grant_reg & request) begin
+      |                            ^~
+%Warning-ASCRANGE: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:176:13: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                                                                                                       : ... note: In instance 'axis_switch'
+  176 |         reg [CL_M_COUNT-1:0] select_reg = 0;
+      |             ^
+                   ... For warning description see https://verilator.org/warn/ASCRANGE?v=5.048
+                   ... Use "/* verilator lint_off ASCRANGE */" and lint_on around source to disable this message.
+%Warning-ASCRANGE: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:177:13: Ascending bit range vector: left < right of bit range: [-1:0]
+                                                                                                                                                                       : ... note: In instance 'axis_switch'
+  177 |         reg [CL_M_COUNT-1:0] select_next;
+      |             ^
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:191:29: Operator ASSIGN expects 2 bits on the Assign RHS, but Assign RHS's CONST '1'h0' generates 1 bits.
+                                                                                                                                                                          : ... note: In instance 'axis_switch'
+  191 |                 select_next = 1'b0;
+      |                             ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.048
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:198:41: Operator ASSIGN expects 2 bits on the Assign RHS, but Assign RHS's VARREF 'k' generates 32 bits.
+                                                                                                                                                                         : ... note: In instance 'axis_switch'
+  198 |                             select_next = k;
+      |                                         ^
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:197:74: Operator EQ expects 32 bits on the LHS, but LHS's SEL generates 1 bits.
+                                                                                                                                                                          : ... note: In instance 'axis_switch'
+  197 |                         if (int_s_axis_tdest[m*DEST_WIDTH +: DEST_WIDTH] == k && (M_CONNECT & (1 << (m+k*S_COUNT)))) begin
+      |                                                                          ^~
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:197:79: Logical operator LOGAND expects 1 bit on the RHS, but RHS's AND generates 32 or 4 bits.
+                                                                                                                                                                         : ... note: In instance 'axis_switch'
+  197 |                         if (int_s_axis_tdest[m*DEST_WIDTH +: DEST_WIDTH] == k && (M_CONNECT & (1 << (m+k*S_COUNT)))) begin
+      |                                                                               ^~
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:205:41: Operator ASSIGN expects 2 bits on the Assign RHS, but Assign RHS's VARREF 'k' generates 32 bits.
+                                                                                                                                                                         : ... note: In instance 'axis_switch'
+  205 |                             select_next = k;
+      |                                         ^
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:204:112: Logical operator LOGAND expects 1 bit on the RHS, but RHS's AND generates 32 or 4 bits.
+                                                                                                                                                                          : ... note: In instance 'axis_switch'
+  204 |                         if (int_s_axis_tdest[m*DEST_WIDTH +: DEST_WIDTH] == M_BASE[k*DEST_WIDTH +: DEST_WIDTH] && (M_CONNECT & (1 << (m+k*S_COUNT)))) begin
+      |                                                                                                                ^~
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:211:41: Operator ASSIGN expects 2 bits on the Assign RHS, but Assign RHS's VARREF 'k' generates 32 bits.
+                                                                                                                                                                         : ... note: In instance 'axis_switch'
+  211 |                             select_next = k;
+      |                                         ^
+%Warning-WIDTHTRUNC: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:210:197: Logical operator LOGAND expects 1 bit on the RHS, but RHS's AND generates 32 or 4 bits.
+                                                                                                                                                                          : ... note: In instance 'axis_switch'
+  210 |                         if (int_s_axis_tdest[m*DEST_WIDTH +: DEST_WIDTH] >= M_BASE[k*DEST_WIDTH +: DEST_WIDTH] && int_s_axis_tdest[m*DEST_WIDTH +: DEST_WIDTH] <= M_TOP[k*DEST_WIDTH +: DEST_WIDTH] && (M_CONNECT & (1 << (m+k*S_COUNT)))) begin
+      |                                                                                                                                                                                                     ^~
+%Warning-WIDTHEXPAND: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-switch-d8/variants/d8/axis_switch_bug_d8.v:308:91: Operator SHIFTL expects 4 bits on the LHS, but LHS's LOGAND generates 1 bits.
+                                                                                                                                                                          : ... note: In instance 'axis_switch'
+  308 |         assign int_axis_tready[n*S_COUNT +: S_COUNT] = (grant_valid && s_axis_tready_mux) << grant_encoded;
+      |                                                                                           ^~
+ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@17/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@17/17.0.6/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly

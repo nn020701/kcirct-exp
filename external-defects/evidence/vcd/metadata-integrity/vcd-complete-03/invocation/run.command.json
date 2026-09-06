@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "make",
+    "run",
+    "PYTHON=.venv/bin/python",
+    "KIMULATOR=../circt-semantics/.venv/bin/kcirct",
+    "CASES=all-short",
+    "ARGS=--k-bin /Users/bytedance/.nix-profile/bin --run-id vcd-complete-03"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp",
+  "K_BIN": null,
+  "PATH_prefix": "/Users/bytedance/.nix-profile/bin"
+}

@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "timescale": "1ns",
+  "events": [
+    {
+      "time": 0,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 0,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 0
+      }
+    },
+    {
+      "time": 1,
+      "inputs": {
+        "S_AXI_ACLK": 1,
+        "S_AXI_ARESETN": 0,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 0
+      }
+    },
+    {
+      "time": 2,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 0,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 0,
+        "S_AXI_WSTRB": 0,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 0,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 0
+      }
+    },
+    {
+      "time": 3,
+      "inputs": {
+        "S_AXI_ACLK": 1,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 0,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 0,
+        "S_AXI_WSTRB": 0,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 0,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 0
+      }
+    },
+    {
+      "time": 4,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 1,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 1,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 1,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 5,
+      "inputs": {
+        "S_AXI_ACLK": 1,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 1,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 1,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 1,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 6,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 1,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 1,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 1,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 7,
+      "inputs": {
+        "S_AXI_ACLK": 1,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 1,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 1,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 1,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 8,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 1,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 1,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 9,
+      "inputs": {
+        "S_AXI_ACLK": 1,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 1,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 1,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 10,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 1,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 1,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 11,
+      "inputs": {
+        "S_AXI_ACLK": 1,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 64,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 1,
+        "S_AXI_WDATA": 2147483648,
+        "S_AXI_WSTRB": 8,
+        "S_AXI_WVALID": 1,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 64,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 12,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 0,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 0,
+        "S_AXI_WSTRB": 0,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 0,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 13,
+      "inputs": {
+        "S_AXI_ACLK": 1,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 0,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 0,
+        "S_AXI_WSTRB": 0,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 0,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 14,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 0,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 0,
+        "S_AXI_WSTRB": 0,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 0,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 15,
+      "inputs": {
+        "S_AXI_ACLK": 1,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 0,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 0,
+        "S_AXI_WSTRB": 0,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 0,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 16,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 0,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 0,
+        "S_AXI_WSTRB": 0,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 0,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 17,
+      "inputs": {
+        "S_AXI_ACLK": 1,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 0,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 0,
+        "S_AXI_WSTRB": 0,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 0,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    },
+    {
+      "time": 18,
+      "inputs": {
+        "S_AXI_ACLK": 0,
+        "S_AXI_ARESETN": 1,
+        "S_AXI_AWADDR": 0,
+        "S_AXI_AWPROT": 0,
+        "S_AXI_AWVALID": 0,
+        "S_AXI_WDATA": 0,
+        "S_AXI_WSTRB": 0,
+        "S_AXI_WVALID": 0,
+        "S_AXI_BREADY": 0,
+        "S_AXI_ARADDR": 0,
+        "S_AXI_ARPROT": 0,
+        "S_AXI_ARVALID": 0,
+        "S_AXI_RREADY": 1
+      }
+    }
+  ]
+}

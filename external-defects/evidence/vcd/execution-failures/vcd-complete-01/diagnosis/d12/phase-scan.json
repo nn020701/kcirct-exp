@@ -1,0 +1,64 @@
+[
+  {
+    "path": "services/kcirct-exp/external-defects/.runs/vcd-complete-01/d12/golden/kimulator/simulation/last-state.kore",
+    "args": [
+      "comb.mux",
+      "axis_fifo/%65",
+      "axis_fifo/%70",
+      "axis_fifo/%70"
+    ]
+  },
+  {
+    "path": "services/kcirct-exp/external-defects/.runs/vcd-complete-01/d12/golden/kimulator/simulation/preprocessed.kore",
+    "args": null
+  },
+  {
+    "path": "services/kcirct-exp/external-defects/.runs/vcd-complete-01/d12/golden/kimulator/simulation/setup.kore",
+    "args": [
+      "comb.mux",
+      "axis_fifo/%57",
+      "axis_fifo/%65",
+      "axis_fifo/%70"
+    ]
+  },
+  {
+    "path": "services/kcirct-exp/external-defects/.runs/vcd-complete-01/d12/golden/kimulator/simulation/setup.kore.prestate",
+    "args": null
+  },
+  {
+    "path": "services/kcirct-exp/external-defects/.runs/vcd-complete-01/d12/golden/kimulator/simulation/simulated.0.kore",
+    "args": [
+      "comb.mux",
+      "axis_fifo/%65",
+      "axis_fifo/%70",
+      "axis_fifo/%70"
+    ]
+  },
+  {
+    "path": "services/kcirct-exp/external-defects/.runs/vcd-complete-01/d12/golden/kimulator/simulation/simulated.0.kore.prestate",
+    "args": [
+      "comb.mux",
+      "axis_fifo/%65",
+      "axis_fifo/%70",
+      "axis_fifo/%70"
+    ]
+  },
+  {
+    "path": "services/kcirct-exp/external-defects/.runs/vcd-complete-01/d12/golden/kimulator/simulation/simulated.1.kore",
+    "args": [
+      "comb.mux",
+      "axis_fifo/%65",
+      "axis_fifo/%70",
+      "axis_fifo/%70"
+    ]
+  },
+  {
+    "path": "services/kcirct-exp/external-defects/.runs/vcd-complete-01/d12/golden/kimulator/simulation/simulated.1.kore.prestate",
+    "args": [
+      "comb.mux",
+      "axis_fifo/%57",
+      "axis_fifo/%65",
+      "axis_fifo/%70"
+    ]
+  }
+]

@@ -1,0 +1,145 @@
+{
+  "case": "s3",
+  "mode": "full",
+  "ordinary_depth_boundary": [
+    1956,
+    1957
+  ],
+  "trace": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/s3/hint-depth-1957/trace.hint",
+    "sha256": "3bb92fa108daf2dbc1af259e006cf850a4813b8c593034ed570a4ad656e95eb9",
+    "bytes": 879048015
+  },
+  "definition": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/definition/definition.kore",
+    "sha256": "2e764798f82f315074b07b81e4bb922661556d785ca5a9ff8f7bb7f6951ed119",
+    "bytes": 2589497
+  },
+  "event_count": 16414,
+  "last_rule": {
+    "event_index": 16409,
+    "phase": "trace",
+    "kind": "LLVMRuleEvent",
+    "ordinal": 1304,
+    "rule": {
+      "ordinal": 1304,
+      "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/old/source/circt_semantics/circt/circt.md",
+      "location": [
+        136,
+        1,
+        140,
+        11
+      ],
+      "axiom": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/axioms/1304.kore",
+        "sha256": "ad21390df164f8dacffde58f48137e2a5498a27db67ff5fe00eea3417045786e",
+        "bytes": 3140
+      }
+    }
+  },
+  "selected_substitution": {
+    "VarArg": {
+      "kore": "\\dv{SortString{}}(\"axis_adapter/%124\")"
+    },
+    "VarArgs": {
+      "kore": "Lbl'Unds'List'Unds'{}(LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_adapter/%28\"))),LblListItem{}(inj{SortString{}, SortKItem{}}(\\dv{SortString{}}(\"axis_adapter/%112\"))))"
+    }
+  },
+  "last_events": [
+    {
+      "event_index": 16402,
+      "phase": "trace",
+      "kind": "configuration"
+    },
+    {
+      "event_index": 16403,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1315
+    },
+    {
+      "event_index": 16404,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 16405,
+      "phase": "trace",
+      "kind": "configuration"
+    },
+    {
+      "event_index": 16406,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1283
+    },
+    {
+      "event_index": 16407,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 16408,
+      "phase": "trace",
+      "kind": "configuration"
+    },
+    {
+      "event_index": 16409,
+      "phase": "trace",
+      "kind": "LLVMRuleEvent",
+      "ordinal": 1304
+    },
+    {
+      "event_index": 16410,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "LIST.concat",
+      "relative_position": "0:1:8:0:0:1:1:0:1:0"
+    },
+    {
+      "event_index": 16411,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "LIST.concat",
+      "relative_position": "0:1:8:0:0:1:1:0:1:1:0:1"
+    },
+    {
+      "event_index": 16412,
+      "phase": "trace",
+      "kind": "LLVMHookEvent",
+      "name": "MAP.concat",
+      "relative_position": "0:1:8:0"
+    },
+    {
+      "event_index": 16413,
+      "phase": "trace",
+      "kind": "configuration"
+    }
+  ],
+  "ordinary_connection_operands": [
+    "axis_adapter/%28",
+    "axis_adapter/%112",
+    "axis_adapter/%112"
+  ],
+  "decoded_hint_connection_operands": [
+    "axis_adapter/%124",
+    "axis_adapter/%28",
+    "axis_adapter/%112"
+  ],
+  "hint_vs_before_changed_keys": [],
+  "hint_vs_ordinary_after_changed_keys": [
+    "axis_adapter/%131"
+  ],
+  "list_hook_counts": {
+    "LIST.concat": 1803
+  },
+  "terminal_comparison": {
+    "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/proof-hint/decoder/s3/terminal-comparison.json",
+    "sha256": "147fa14aebdf0710cd042e24507eaafa6ec4e4df60fdb51607584b32733fb39b",
+    "bytes": 102204
+  }
+}

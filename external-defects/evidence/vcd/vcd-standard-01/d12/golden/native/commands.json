@@ -1,0 +1,71 @@
+[
+  {
+    "stage": "version",
+    "argv": [
+      "/opt/homebrew/bin/verilator",
+      "--version"
+    ],
+    "command": "/opt/homebrew/bin/verilator --version",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d12/golden/native",
+    "exit_code": 0,
+    "seconds": 0.08865404200014382
+  },
+  {
+    "stage": "build",
+    "argv": [
+      "/opt/homebrew/bin/verilator",
+      "--cc",
+      "--exe",
+      "--build",
+      "--timing",
+      "--trace",
+      "-Wno-fatal",
+      "--x-initial",
+      "0",
+      "--x-assign",
+      "0",
+      "--top-module",
+      "axis_fifo",
+      "--prefix",
+      "Vcsvdut",
+      "--Mdir",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d12/golden/native/obj",
+      "-o",
+      "sim",
+      "--timescale-override",
+      "1ns/1ns",
+      "-GADDR_WIDTH=2",
+      "-GDATA_WIDTH=8",
+      "-GKEEP_ENABLE=0",
+      "-GKEEP_WIDTH=1",
+      "-GLAST_ENABLE=1",
+      "-GID_ENABLE=1",
+      "-GID_WIDTH=8",
+      "-GDEST_ENABLE=1",
+      "-GDEST_WIDTH=8",
+      "-GUSER_ENABLE=1",
+      "-GUSER_WIDTH=1",
+      "-GFRAME_FIFO=1",
+      "-GUSER_BAD_FRAME_VALUE=1",
+      "-GUSER_BAD_FRAME_MASK=1",
+      "-GDROP_BAD_FRAME=0",
+      "-GDROP_WHEN_FULL=1",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d12/original/axis_fifo.v",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d12/golden/native/driver.cpp"
+    ],
+    "command": "/opt/homebrew/bin/verilator --cc --exe --build --timing --trace -Wno-fatal --x-initial 0 --x-assign 0 --top-module axis_fifo --prefix Vcsvdut --Mdir /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d12/golden/native/obj -o sim --timescale-override 1ns/1ns -GADDR_WIDTH=2 -GDATA_WIDTH=8 -GKEEP_ENABLE=0 -GKEEP_WIDTH=1 -GLAST_ENABLE=1 -GID_ENABLE=1 -GID_WIDTH=8 -GDEST_ENABLE=1 -GDEST_WIDTH=8 -GUSER_ENABLE=1 -GUSER_WIDTH=1 -GFRAME_FIFO=1 -GUSER_BAD_FRAME_VALUE=1 -GUSER_BAD_FRAME_MASK=1 -GDROP_BAD_FRAME=0 -GDROP_WHEN_FULL=1 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d12/original/axis_fifo.v /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d12/golden/native/driver.cpp",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d12/golden/native",
+    "exit_code": 0,
+    "seconds": 3.438440709000133
+  },
+  {
+    "stage": "run",
+    "argv": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d12/golden/native/obj/sim"
+    ],
+    "command": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d12/golden/native/obj/sim",
+    "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-standard-01/d12/golden/native",
+    "exit_code": 0,
+    "seconds": 0.4108151249997718
+  }
+]

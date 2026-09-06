@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "package_version": "0.1.0",
+  "kframework_version": "7.1.323",
+  "api_sha256": "40e6b398d06f6dff1ecdba85819330b54006a0d46aedaa0474613ac451a211cd",
+  "simulator_sha256": "7ad752d4c2137fc6fdf113bbbc6b2d73841929fdd10fa7694ffe1d01434cecc3",
+  "status": "pass",
+  "stage": "complete",
+  "top_module": "axis_fifo",
+  "input_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d12/mlir/d12/golden/design.generic.mlir",
+  "inputs_file": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/test_data.json",
+  "vcd_path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/kimulator/test.vcd",
+  "work_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/kimulator/simulation",
+  "evaluations_per_input": 2,
+  "events_completed": 31,
+  "simulation_calls": 62,
+  "simulation_calls_attempted": 62,
+  "timings": {
+    "compile": 0.02348912499655853,
+    "preprocess": 0.18149025000093388,
+    "setup": 0.18903679200229817,
+    "execution": 15.700676376996853,
+    "read_ports": 0.03472353999313782,
+    "state_export": 0.2240157070082205,
+    "total": 16.395493083000474
+  },
+  "error": null,
+  "input_sha256": "9fe4c36da8c44291305a7732651591d42d7a212849f70b8c8a4010044e1396d2",
+  "inputs_sha256": "1acdd2c7a5c669ec48554f60a7fa5dae9aca9b2b03d993055a98fbe2ecda6547",
+  "ports": {
+    "inputs": [
+      {
+        "name": "clk",
+        "width": 1
+      },
+      {
+        "name": "rst",
+        "width": 1
+      },
+      {
+        "name": "s_axis_tdata",
+        "width": 8
+      },
+      {
+        "name": "s_axis_tkeep",
+        "width": 1
+      },
+      {
+        "name": "s_axis_tvalid",
+        "width": 1
+      },
+      {
+        "name": "s_axis_tlast",
+        "width": 1
+      },
+      {
+        "name": "s_axis_tid",
+        "width": 8
+      },
+      {
+        "name": "s_axis_tdest",
+        "width": 8
+      },
+      {
+        "name": "s_axis_tuser",
+        "width": 1
+      },
+      {
+        "name": "m_axis_tready",
+        "width": 1
+      }
+    ],
+    "outputs": [
+      {
+        "name": "s_axis_tready",
+        "width": 1
+      },
+      {
+        "name": "m_axis_tdata",
+        "width": 8
+      },
+      {
+        "name": "m_axis_tkeep",
+        "width": 1
+      },
+      {
+        "name": "m_axis_tvalid",
+        "width": 1
+      },
+      {
+        "name": "m_axis_tlast",
+        "width": 1
+      },
+      {
+        "name": "m_axis_tid",
+        "width": 8
+      },
+      {
+        "name": "m_axis_tdest",
+        "width": 8
+      },
+      {
+        "name": "m_axis_tuser",
+        "width": 1
+      },
+      {
+        "name": "status_overflow",
+        "width": 1
+      },
+      {
+        "name": "status_bad_frame",
+        "width": 1
+      },
+      {
+        "name": "status_good_frame",
+        "width": 1
+      }
+    ]
+  },
+  "timescale": "1ns",
+  "events_total": 31,
+  "definition_dir": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/kdist/circt-semantics/llvm",
+  "definition_sha256": "08ac54e383967aa9aa7ba218cd0148e2b4d3f19dea67ddab33f120d661854e2b",
+  "parser": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.build/external-defects/parser",
+  "parser_sha256": "0f3be483b8016780c8d641cd0d5011d697a3786c29deefa4e16d60788d4a54cb",
+  "event_index": 30,
+  "event_time": 30,
+  "evaluation": 2,
+  "vcd_sha256": "509f8c1f8da27cf1cd27ab979e285e669867f42bed4aeb13b6bcf41dd785f934",
+  "last_state": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/kimulator/simulation/last-state.kore",
+  "last_state_sha256": "878ae8fbe746b765f7286bbd8bc80134f90ada26ab98d27ba5aae5fe036422fe",
+  "vcd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/kimulator/test.vcd",
+  "vcd_top": "axis_fifo",
+  "native_comparison": {
+    "agrees": true,
+    "exit_code": 0,
+    "compared_signals": 21,
+    "event_count": 31,
+    "first_mismatch": null,
+    "errors": [],
+    "artifacts": {
+      "kimulator_vcd": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/kimulator/test.vcd",
+        "sha256": "509f8c1f8da27cf1cd27ab979e285e669867f42bed4aeb13b6bcf41dd785f934",
+        "bytes": 4683
+      },
+      "native_vcd": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/native/trace.vcd",
+        "sha256": "caacf5904aacba4d14d9b9e179d02bda14bef9528d3e3b04fb9a12911ca6b4d8",
+        "bytes": 6280
+      },
+      "native_comparison_vcd": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/comparison/native.comparison.vcd",
+        "sha256": "2c56c5357c7eda7e9cbb30a62b67732e16730078404d26d72fd6e405b8bf069b",
+        "bytes": 6256
+      },
+      "normalization_map": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/comparison/normalization-map.json",
+        "sha256": "01aa20a86a26eb453f75c782eeec742efa54b64e231608b94c7f17d007d78358",
+        "bytes": 2299
+      },
+      "preflight": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/comparison/preflight.json",
+        "sha256": "60a05eee1b20a8a707a401644fbcf1a67415a4406a2aba301d95943e2f7d57af",
+        "bytes": 1563
+      },
+      "diffvcd_script": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+        "sha256": "cd606fcf1f0c2b4f2477108f2af25abb9fd0b10e5780f5d7bd34155d46000603",
+        "bytes": 6040
+      },
+      "command": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/comparison/diffvcd.command.json",
+        "sha256": "41bade094326b84437a907ba2c59d4896c84717ca07db11f7b26dee1951b31a0",
+        "bytes": 1120
+      },
+      "stdout": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/comparison/diffvcd.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/comparison/diffvcd.stderr.log",
+        "sha256": "23520dbbb6b0a380fa798e672774b782a0a24fa66c8ebf5c990919115a899b76",
+        "bytes": 732
+      }
+    },
+    "normalization": {
+      "policy": "scalar-equals-i1-zero-range-v1",
+      "applied": true,
+      "mappings": [
+        {
+          "backend": "native",
+          "port": "s_axis_tkeep",
+          "width": 1,
+          "from": "TOP.s_axis_tkeep[0:0]",
+          "to": "TOP.s_axis_tkeep"
+        },
+        {
+          "backend": "native",
+          "port": "s_axis_tuser",
+          "width": 1,
+          "from": "TOP.s_axis_tuser[0:0]",
+          "to": "TOP.s_axis_tuser"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tkeep",
+          "width": 1,
+          "from": "TOP.m_axis_tkeep[0:0]",
+          "to": "TOP.m_axis_tkeep"
+        },
+        {
+          "backend": "native",
+          "port": "m_axis_tuser",
+          "width": 1,
+          "from": "TOP.m_axis_tuser[0:0]",
+          "to": "TOP.m_axis_tuser"
+        }
+      ]
+    },
+    "command": [
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/kimulator/test.vcd",
+      "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12/golden/comparison/native.comparison.vcd",
+      "--top1",
+      "axis_fifo.",
+      "--top2",
+      "TOP.",
+      "--filter",
+      "^(?:clk|rst|s_axis_tdata\\[7:0\\]|s_axis_tkeep|s_axis_tvalid|s_axis_tlast|s_axis_tid\\[7:0\\]|s_axis_tdest\\[7:0\\]|s_axis_tuser|m_axis_tready|s_axis_tready|m_axis_tdata\\[7:0\\]|m_axis_tkeep|m_axis_tvalid|m_axis_tlast|m_axis_tid\\[7:0\\]|m_axis_tdest\\[7:0\\]|m_axis_tuser|status_overflow|status_bad_frame|status_good_frame)$",
+      "--verbose"
+    ]
+  },
+  "samples": [
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 0,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 0,
+      "m_axis_tlast": 0,
+      "m_axis_tid": 0,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 0,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 0,
+      "m_axis_tlast": 0,
+      "m_axis_tid": 0,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 0,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 0,
+      "m_axis_tlast": 0,
+      "m_axis_tid": 0,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 1
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 0,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 0,
+      "m_axis_tlast": 0,
+      "m_axis_tid": 0,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 1
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 1,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 1,
+      "m_axis_tlast": 0,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 1
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 1,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 1,
+      "m_axis_tlast": 0,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 1
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 1,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 1,
+      "m_axis_tlast": 0,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 1,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 1,
+      "m_axis_tlast": 0,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 1,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 1,
+      "m_axis_tlast": 0,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 1,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 1,
+      "m_axis_tlast": 1,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 2,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 1,
+      "m_axis_tlast": 1,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 3,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 1,
+      "m_axis_tlast": 1,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 1,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 3,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 0,
+      "m_axis_tlast": 1,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 3,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 0,
+      "m_axis_tlast": 1,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 3,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 0,
+      "m_axis_tlast": 1,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    },
+    {
+      "s_axis_tready": 1,
+      "m_axis_tdata": 3,
+      "m_axis_tkeep": 1,
+      "m_axis_tvalid": 0,
+      "m_axis_tlast": 1,
+      "m_axis_tid": 1,
+      "m_axis_tdest": 0,
+      "m_axis_tuser": 0,
+      "status_overflow": 0,
+      "status_bad_frame": 0,
+      "status_good_frame": 0
+    }
+  ],
+  "oracle": {
+    "agrees": true,
+    "compared_cells": 128,
+    "masked_cells": 0,
+    "first_mismatch": null,
+    "mismatches": []
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "source_case_id": "S2",
+  "project_id": "axi-stream-s2",
+  "variant_id": "s2",
+  "top": "xlnxstream_2018_3",
+  "golden_sources": [
+    "designs/axi-stream-s2/original/xlnxstream_2018_3.v"
+  ],
+  "bug_original": "designs/axi-stream-s2/original/xlnxstream_2018_3.v",
+  "bug_source": "designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v",
+  "csv": "designs/axi-stream-s2/testbench/tb.csv",
+  "inputs": [
+    {
+      "name": "M_AXIS_ACLK",
+      "width": 1
+    },
+    {
+      "name": "M_AXIS_ARESETN",
+      "width": 1
+    },
+    {
+      "name": "M_AXIS_TREADY",
+      "width": 1
+    }
+  ],
+  "outputs": [
+    {
+      "name": "M_AXIS_TVALID",
+      "width": 1
+    },
+    {
+      "name": "M_AXIS_TDATA",
+      "width": 32
+    },
+    {
+      "name": "M_AXIS_TSTRB",
+      "width": 4
+    },
+    {
+      "name": "M_AXIS_TLAST",
+      "width": 1
+    }
+  ],
+  "clock": "M_AXIS_ACLK",
+  "reset": {
+    "signal": "M_AXIS_ARESETN",
+    "active": 0
+  },
+  "parameters": {
+    "C_M_AXIS_TDATA_WIDTH": 32,
+    "C_M_START_COUNT": 32
+  },
+  "effective_parameters": {
+    "C_M_AXIS_TDATA_WIDTH": 32,
+    "C_M_START_COUNT": 32
+  },
+  "initialization": {
+    "mode": "rtl_initial_plus_two_state_zero",
+    "uninitialized_register_value": 0,
+    "four_state_equivalence_claimed": false,
+    "evidence": [
+      "保留 RTL 声明初值；原生使用二态零初始化，K 对未初始化值的处理需在逐端口比较中确认。"
+    ]
+  },
+  "sample_phase": "low_before_posedge_pre_NBA",
+  "oracle_outputs": [
+    "M_AXIS_TVALID",
+    "M_AXIS_TDATA",
+    "M_AXIS_TSTRB",
+    "M_AXIS_TLAST"
+  ],
+  "masks": [],
+  "csv_normalization": {
+    "strip_whitespace": true,
+    "allow_one_trailing_empty_field": false,
+    "reason": "仅去除单元格周围空白，保留并检查完整列集合。"
+  },
+  "samples": 45,
+  "timeout_s": 120,
+  "frontend_args": [],
+  "source_hashes": {
+    "designs/axi-stream-s2/provenance/origin/README.md": "36354a7150cc37dd1b1b21aee68764fe44382ce5174658fa1e57da5387e81547",
+    "designs/axi-stream-s2/provenance/project.toml": "d76548aeacb619c18746ac2db12642a50566eacf1158ded1625a62ce99ac20ed",
+    "designs/axi-stream-s2/testbench/tb.csv": "dc2abe39ef841b3e478d42af2f6592c5b9f75ef3fa1d6473ead2c6d40e1101a3",
+    "designs/axi-stream-s2/provenance/to_btor2.ys": "6a294e25200e6fe502c7e0a1855ddc5070bee8c204ce0fd1386c3b835ada608c",
+    "designs/axi-stream-s2/original/xlnxstream_2018_3.v": "77b5424a27115161ab3c898c4b8bc2ea3677f4dfa5eeca55f4ec3e25f6cba781",
+    "designs/axi-stream-s2/variants/s2/xlnxstream_2018_3_bug_s2.v": "152d3ac4fc8f179efd16fbde4f72a7cda8c25a487ce04dc22211b238fa16a715",
+    "designs/axi-stream-s2/provenance/layout.json": "5b498894b7a11b897cf69975f69b24e68e8412ddeb32087c6ba5a1ccb62623f1"
+  },
+  "upstream": {
+    "repository": "https://github.com/ekiwi/rtl-repair",
+    "commit": "71e1afc0b9a2327d008b46acd415cf3f0343a938",
+    "project_path": "benchmarks/fpga-debugging/axi-stream-s2",
+    "archive": "rtl-repair-fpga-debugging-71e1afc.tar.gz",
+    "archive_sha256": "3aebd94c34aaf9cced849541635ebc66145c7ba44fc1227f3f4e8623073ddc0a",
+    "origin_repository": "https://github.com/efeslab/hardware-bugbase",
+    "origin_commit": "7702e478f4ffdca477273d5a395992ecf006d70f",
+    "origin_readme": "designs/axi-stream-s2/provenance/origin/README.md",
+    "origin_archive_sha256": "b5125ec4a3d93db138e5642285343d2d644e89a0b5bd156701b2c4f7bcb2ae5d"
+  },
+  "project_toml": "designs/axi-stream-s2/provenance/project.toml",
+  "selected_testbench": {
+    "name": "csv",
+    "table": "tb.csv"
+  },
+  "native_testbench": {
+    "adapted_exists": false,
+    "path": null,
+    "sha256": null
+  },
+  "ports_without_oracle": [],
+  "unsupported_reasons": [
+    "交接保存的前端仍含 llhd.sig/prb/drv；需以本轮生成 IR 和 K 实际执行确认，不因前端退出码为 0 预判可执行。"
+  ],
+  "notes": [
+    "适配目录无 tb.v；原始 trace_tb 复用前仍需核查 FORMAL 引用。",
+    "默认 C_M_AXIS_TDATA_WIDTH=32、C_M_START_COUNT=32，同步低有效复位 M_AXIS_ARESETN。",
+    "已存前端仍有 llhd.sig/prb/drv；退出码 0 不代表 K 可执行。"
+  ],
+  "layout_file": "designs/axi-stream-s2/provenance/layout.json"
+}

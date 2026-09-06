@@ -1,0 +1,42 @@
+[
+  {
+    "sample_index": 0,
+    "kind": "documented_single_trailing_empty_field"
+  },
+  {
+    "sample_index": 1,
+    "kind": "documented_single_trailing_empty_field"
+  },
+  {
+    "sample_index": 2,
+    "kind": "documented_single_trailing_empty_field"
+  },
+  {
+    "sample_index": 3,
+    "kind": "documented_single_trailing_empty_field"
+  },
+  {
+    "sample_index": 4,
+    "kind": "documented_single_trailing_empty_field"
+  },
+  {
+    "sample_index": 5,
+    "kind": "documented_single_trailing_empty_field"
+  },
+  {
+    "sample_index": 6,
+    "kind": "documented_single_trailing_empty_field"
+  },
+  {
+    "sample_index": 7,
+    "kind": "documented_single_trailing_empty_field"
+  },
+  {
+    "sample_index": 8,
+    "kind": "documented_single_trailing_empty_field"
+  },
+  {
+    "sample_index": 9,
+    "kind": "documented_single_trailing_empty_field"
+  }
+]

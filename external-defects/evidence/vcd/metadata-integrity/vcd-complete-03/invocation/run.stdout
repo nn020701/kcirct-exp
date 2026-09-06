@@ -1,0 +1,42 @@
+.venv/bin/python external-defects/runner.py run --cases all-short --kimulator ../circt-semantics/.venv/bin/kcirct --k-bin /Users/bytedance/.nix-profile/bin --run-id vcd-complete-03
+开始 d13：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+d13/golden：native=pass，K=pass，VCD=True
+d13/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 d13：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d13
+开始 s3：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+s3/golden：native=pass，K=pass，VCD=True
+s3/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 s3：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/s3
+开始 s1b：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+s1b/golden：native=pass，K=pass，VCD=True
+s1b/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 s1b：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/s1b
+开始 s1r：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+s1r/golden：native=pass，K=pass，VCD=True
+s1r/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 s1r：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/s1r
+开始 d8：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+d8/golden：native=pass，K=pass，VCD=True
+d8/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 d8：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d8
+开始 d12：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+d12/golden：native=pass，K=pass，VCD=True
+d12/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 d12：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d12
+开始 d11：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+d11/golden：native=pass，K=pass，VCD=True
+d11/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 d11：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d11
+开始 d4：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+d4/golden：native=pass，K=pass，VCD=True
+d4/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 d4：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/d4
+开始 s2：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+s2/golden：native=pass，K=pass，VCD=True
+s2/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 s2：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/s2
+开始 c4：正常/缺陷 × Verilator/Kimulator，双执行后全事件 VCD
+c4/golden：native=pass，K=pass，VCD=True
+c4/buggy：native=oracle_mismatch，K=oracle_mismatch，VCD=True
+完成 c4：pass，证据 /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03/c4
+批次完成：/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-03

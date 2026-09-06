@@ -1,0 +1,626 @@
+{
+  "schema_version": 1,
+  "path_base": "external-defects/",
+  "description": "按 manifest 选择的持久化 MLIR 基线；正常/缺陷组、转换证明和历史输入分别保留。",
+  "selection": "优先采用 manifest 的 ir_baseline/ir_profile；未指定则使用原 mlir/<variant> 基线。历史版本保存在各变体 historical_baselines，不按磁盘修改时间自动选取。",
+  "status_meaning": "source_run_id/case_status/backend_status 记录当前正式 VCD 主协议；generation_source_run_id 与 generation_backend_* 保留索引更新前关联的生成/历史运行状态，provenance 始终保存实际生成来源。historical_baselines 保留旧输入版本。oracle_mismatch 是缺陷与正确答案不一致，不等于 K/native 不一致；additional_validation 独立报告内部不变量，不能由 VCD pass 推定内部完整性通过。",
+  "variants": [
+    {
+      "project_id": "axis-async-fifo-c4",
+      "source_case_id": "C4",
+      "variant_id": "c4",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/c4.json",
+      "manifest": "manifests/c4.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-async-fifo-c4/mlir/c4/golden/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-async-fifo-c4/mlir/c4/golden/design.mlir",
+            "design.generic.mlir": "designs/axis-async-fifo-c4/mlir/c4/golden/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-async-fifo-c4/mlir/c4/golden/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-async-fifo-c4/mlir/c4/golden/source-map.json"
+          },
+          "generation_backend_status": "timeout",
+          "generation_backend_stage": "execution",
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-async-fifo-c4/mlir/c4/buggy/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-async-fifo-c4/mlir/c4/buggy/design.mlir",
+            "design.generic.mlir": "designs/axis-async-fifo-c4/mlir/c4/buggy/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-async-fifo-c4/mlir/c4/buggy/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-async-fifo-c4/mlir/c4/buggy/source-map.json"
+          },
+          "generation_backend_status": "timeout",
+          "generation_backend_stage": "execution",
+          "connection_immutability": "pass"
+        }
+      },
+      "generation_source_run_id": "batch-memory-01",
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "pass",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。"
+        }
+      ]
+    },
+    {
+      "project_id": "axis-frame-fifo-d11",
+      "source_case_id": "D11",
+      "variant_id": "d11",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/d11.json",
+      "manifest": "manifests/d11.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-frame-fifo-d11/mlir/d11/golden/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-frame-fifo-d11/mlir/d11/golden/design.mlir",
+            "design.generic.mlir": "designs/axis-frame-fifo-d11/mlir/d11/golden/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-frame-fifo-d11/mlir/d11/golden/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-frame-fifo-d11/mlir/d11/golden/source-map.json"
+          },
+          "generation_backend_status": "timeout",
+          "generation_backend_stage": "execution",
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-frame-fifo-d11/mlir/d11/buggy/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-frame-fifo-d11/mlir/d11/buggy/design.mlir",
+            "design.generic.mlir": "designs/axis-frame-fifo-d11/mlir/d11/buggy/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-frame-fifo-d11/mlir/d11/buggy/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-frame-fifo-d11/mlir/d11/buggy/source-map.json"
+          },
+          "generation_backend_status": "timeout",
+          "generation_backend_stage": "execution",
+          "connection_immutability": "pass"
+        }
+      },
+      "generation_source_run_id": "batch-memory-01",
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "pass",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。"
+        }
+      ]
+    },
+    {
+      "project_id": "axis-fifo-d12",
+      "source_case_id": "D12",
+      "variant_id": "d12",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/d12.json",
+      "manifest": "manifests/d12.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-fifo-d12/mlir/d12/golden/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-fifo-d12/mlir/d12/golden/design.mlir",
+            "design.generic.mlir": "designs/axis-fifo-d12/mlir/d12/golden/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-fifo-d12/mlir/d12/golden/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-fifo-d12/mlir/d12/golden/source-map.json"
+          },
+          "generation_backend_status": "pass",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-fifo-d12/mlir/d12/buggy/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-fifo-d12/mlir/d12/buggy/design.mlir",
+            "design.generic.mlir": "designs/axis-fifo-d12/mlir/d12/buggy/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-fifo-d12/mlir/d12/buggy/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-fifo-d12/mlir/d12/buggy/source-map.json"
+          },
+          "generation_backend_status": "oracle_mismatch",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        }
+      },
+      "generation_source_run_id": "batch-final-01",
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "pass",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。"
+        }
+      ]
+    },
+    {
+      "project_id": "axis-frame-len-d13",
+      "source_case_id": "D13",
+      "variant_id": "d13",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/d13.json",
+      "manifest": "manifests/d13.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-frame-len-d13/mlir/d13/golden/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-frame-len-d13/mlir/d13/golden/design.mlir",
+            "design.generic.mlir": "designs/axis-frame-len-d13/mlir/d13/golden/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-frame-len-d13/mlir/d13/golden/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-frame-len-d13/mlir/d13/golden/source-map.json"
+          },
+          "generation_backend_status": "pass",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-frame-len-d13/mlir/d13/buggy/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-frame-len-d13/mlir/d13/buggy/design.mlir",
+            "design.generic.mlir": "designs/axis-frame-len-d13/mlir/d13/buggy/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-frame-len-d13/mlir/d13/buggy/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-frame-len-d13/mlir/d13/buggy/source-map.json"
+          },
+          "generation_backend_status": "oracle_mismatch",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        }
+      },
+      "generation_source_run_id": "batch-final-01",
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "pass",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。"
+        }
+      ]
+    },
+    {
+      "project_id": "axis-fifo-d4",
+      "source_case_id": "D4",
+      "variant_id": "d4",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/d4.json",
+      "manifest": "manifests/d4.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-fifo-d4/mlir/d4/golden/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-fifo-d4/mlir/d4/golden/design.mlir",
+            "design.generic.mlir": "designs/axis-fifo-d4/mlir/d4/golden/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-fifo-d4/mlir/d4/golden/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-fifo-d4/mlir/d4/golden/source-map.json"
+          },
+          "generation_backend_status": "pass",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-fifo-d4/mlir/d4/buggy/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-fifo-d4/mlir/d4/buggy/design.mlir",
+            "design.generic.mlir": "designs/axis-fifo-d4/mlir/d4/buggy/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-fifo-d4/mlir/d4/buggy/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-fifo-d4/mlir/d4/buggy/source-map.json"
+          },
+          "generation_backend_status": "oracle_mismatch",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        }
+      },
+      "generation_source_run_id": "batch-final-01",
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "pass",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。"
+        }
+      ]
+    },
+    {
+      "project_id": "axis-switch-d8",
+      "source_case_id": "D8",
+      "variant_id": "d8",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/d8.json",
+      "manifest": "manifests/d8.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-switch-d8/mlir/d8/golden/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-switch-d8/mlir/d8/golden/design.mlir",
+            "design.generic.mlir": "designs/axis-switch-d8/mlir/d8/golden/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-switch-d8/mlir/d8/golden/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-switch-d8/mlir/d8/golden/source-map.json"
+          },
+          "generation_backend_status": "pass",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-switch-d8/mlir/d8/buggy/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-switch-d8/mlir/d8/buggy/design.mlir",
+            "design.generic.mlir": "designs/axis-switch-d8/mlir/d8/buggy/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-switch-d8/mlir/d8/buggy/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-switch-d8/mlir/d8/buggy/source-map.json"
+          },
+          "generation_backend_status": "oracle_mismatch",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        }
+      },
+      "generation_source_run_id": "batch-final-01",
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "pass",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。"
+        }
+      ]
+    },
+    {
+      "project_id": "axi-lite-s1",
+      "source_case_id": "S1",
+      "variant_id": "s1b",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/s1b.json",
+      "manifest": "manifests/s1b.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axi-lite-s1/mlir/s1b/golden/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axi-lite-s1/mlir/s1b/golden/design.mlir",
+            "design.generic.mlir": "designs/axi-lite-s1/mlir/s1b/golden/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axi-lite-s1/mlir/s1b/golden/design.debug.generic.mlir",
+            "source-map.json": "designs/axi-lite-s1/mlir/s1b/golden/source-map.json"
+          },
+          "generation_backend_status": "pass",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axi-lite-s1/mlir/s1b/buggy/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axi-lite-s1/mlir/s1b/buggy/design.mlir",
+            "design.generic.mlir": "designs/axi-lite-s1/mlir/s1b/buggy/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axi-lite-s1/mlir/s1b/buggy/design.debug.generic.mlir",
+            "source-map.json": "designs/axi-lite-s1/mlir/s1b/buggy/source-map.json"
+          },
+          "generation_backend_status": "oracle_mismatch",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        }
+      },
+      "generation_source_run_id": "batch-final-01",
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "pass",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。"
+        }
+      ]
+    },
+    {
+      "project_id": "axi-lite-s1",
+      "source_case_id": "S1",
+      "variant_id": "s1r",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/s1r.json",
+      "manifest": "manifests/s1r.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axi-lite-s1/mlir/s1r/golden/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axi-lite-s1/mlir/s1r/golden/design.mlir",
+            "design.generic.mlir": "designs/axi-lite-s1/mlir/s1r/golden/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axi-lite-s1/mlir/s1r/golden/design.debug.generic.mlir",
+            "source-map.json": "designs/axi-lite-s1/mlir/s1r/golden/source-map.json"
+          },
+          "generation_backend_status": "pass",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axi-lite-s1/mlir/s1r/buggy/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axi-lite-s1/mlir/s1r/buggy/design.mlir",
+            "design.generic.mlir": "designs/axi-lite-s1/mlir/s1r/buggy/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axi-lite-s1/mlir/s1r/buggy/design.debug.generic.mlir",
+            "source-map.json": "designs/axi-lite-s1/mlir/s1r/buggy/source-map.json"
+          },
+          "generation_backend_status": "oracle_mismatch",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        }
+      },
+      "generation_source_run_id": "batch-final-01",
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "pass",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。"
+        }
+      ]
+    },
+    {
+      "project_id": "axi-stream-s2",
+      "source_case_id": "S2",
+      "variant_id": "s2",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/s2.json",
+      "manifest": "manifests/s2.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/provenance.json",
+          "artifacts": {
+            "initialized.hw.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/initialized.hw.generic.mlir",
+            "frontend.pre-llhd.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/frontend.pre-llhd.generic.mlir",
+            "design.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/design.generic.mlir",
+            "frontend.hw.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/frontend.hw.generic.mlir",
+            "design.debug.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/design.debug.generic.mlir",
+            "initial-lowering.json": "designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/initial-lowering.json",
+            "source-map.json": "designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/source-map.json",
+            "design.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/golden/design.mlir"
+          },
+          "generation_backend_status": "not_run",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/provenance.json",
+          "artifacts": {
+            "initialized.hw.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/initialized.hw.generic.mlir",
+            "frontend.pre-llhd.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/frontend.pre-llhd.generic.mlir",
+            "design.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.generic.mlir",
+            "frontend.hw.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/frontend.hw.generic.mlir",
+            "design.debug.generic.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.debug.generic.mlir",
+            "initial-lowering.json": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/initial-lowering.json",
+            "source-map.json": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/source-map.json",
+            "design.mlir": "designs/axi-stream-s2/mlir/s2/initial-register-v1/buggy/design.mlir"
+          },
+          "generation_backend_status": "not_run",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        }
+      },
+      "ir_baseline": "designs/axi-stream-s2/mlir/s2/initial-register-v1",
+      "ir_profile": "constant-initial-register-v1",
+      "generation_id": "initial-register-v1",
+      "historical_baselines": [
+        {
+          "project_id": "axi-stream-s2",
+          "source_case_id": "S2",
+          "variant_id": "s2",
+          "source_run_id": "batch-memory-01",
+          "case_status": "execution_error",
+          "formal_result": "results/cases/s2.json",
+          "manifest": "manifests/s2.json",
+          "design_variants": {
+            "golden": {
+              "backend_status": "execution_error",
+              "backend_stage": "compile",
+              "provenance": "designs/axi-stream-s2/mlir/s2/golden/provenance.json",
+              "artifacts": {
+                "design.mlir": "designs/axi-stream-s2/mlir/s2/golden/design.mlir",
+                "design.generic.mlir": "designs/axi-stream-s2/mlir/s2/golden/design.generic.mlir",
+                "design.debug.generic.mlir": "designs/axi-stream-s2/mlir/s2/golden/design.debug.generic.mlir",
+                "source-map.json": "designs/axi-stream-s2/mlir/s2/golden/source-map.json"
+              }
+            },
+            "buggy": {
+              "backend_status": "execution_error",
+              "backend_stage": "compile",
+              "provenance": "designs/axi-stream-s2/mlir/s2/buggy/provenance.json",
+              "artifacts": {
+                "design.mlir": "designs/axi-stream-s2/mlir/s2/buggy/design.mlir",
+                "design.generic.mlir": "designs/axi-stream-s2/mlir/s2/buggy/design.generic.mlir",
+                "design.debug.generic.mlir": "designs/axi-stream-s2/mlir/s2/buggy/design.debug.generic.mlir",
+                "source-map.json": "designs/axi-stream-s2/mlir/s2/buggy/source-map.json"
+              }
+            }
+          }
+        }
+      ],
+      "generation_source_run_id": null,
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "failed",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。",
+          "regression_source": "AutoConnect circt.md change between vcd-complete-01 and vcd-complete-02",
+          "before_after_evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/s2-before-autoconnect-audit.json"
+        }
+      ]
+    },
+    {
+      "project_id": "axis-adapter-s3",
+      "source_case_id": "S3",
+      "variant_id": "s3",
+      "source_run_id": "vcd-complete-03",
+      "case_status": "pass",
+      "formal_result": "results/vcd/cases/s3.json",
+      "manifest": "manifests/s3.json",
+      "design_variants": {
+        "golden": {
+          "backend_status": "pass",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-adapter-s3/mlir/s3/golden/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-adapter-s3/mlir/s3/golden/design.mlir",
+            "design.generic.mlir": "designs/axis-adapter-s3/mlir/s3/golden/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-adapter-s3/mlir/s3/golden/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-adapter-s3/mlir/s3/golden/source-map.json"
+          },
+          "generation_backend_status": "pass",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        },
+        "buggy": {
+          "backend_status": "oracle_mismatch",
+          "backend_stage": "complete",
+          "provenance": "designs/axis-adapter-s3/mlir/s3/buggy/provenance.json",
+          "artifacts": {
+            "design.mlir": "designs/axis-adapter-s3/mlir/s3/buggy/design.mlir",
+            "design.generic.mlir": "designs/axis-adapter-s3/mlir/s3/buggy/design.generic.mlir",
+            "design.debug.generic.mlir": "designs/axis-adapter-s3/mlir/s3/buggy/design.debug.generic.mlir",
+            "source-map.json": "designs/axis-adapter-s3/mlir/s3/buggy/source-map.json"
+          },
+          "generation_backend_status": "oracle_mismatch",
+          "generation_backend_stage": null,
+          "connection_immutability": "pass"
+        }
+      },
+      "generation_source_run_id": "batch-final-01",
+      "additional_validation": {
+        "kind": "connection_immutability",
+        "source_run_id": "vcd-complete-03",
+        "status": "pass",
+        "evidence": "evidence/vcd/metadata-integrity/vcd-complete-03/audit/vcd-complete-03-connection-audit.json",
+        "meaning": "完整双执行逐次状态whole connection保持setup；递归Map项按key比较，保留sort及List次序。此独立判据不改写历史VCD或metadata结果。"
+      },
+      "validation_history": [
+        {
+          "kind": "connection_immutability",
+          "source_run_id": "vcd-complete-02",
+          "status": "pass",
+          "evidence": "evidence/vcd/metadata-integrity/vcd-complete-02/audit/vcd-complete-02-connection-audit.json",
+          "meaning": "独立内部只读连接审计，不改写主协议VCD状态。"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "projects": 9,
+    "variants": 10,
+    "design_groups": 20,
+    "mlir_files": 66,
+    "source_maps": 20,
+    "initialization_audits": 2,
+    "historical_design_groups": 2
+  }
+}

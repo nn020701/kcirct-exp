@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "path_base": "external-defects/",
+  "project_id": "axis-frame-len-d13",
+  "source_case_id": "D13",
+  "variant_id": "d13",
+  "design_variant": "buggy",
+  "source_run": {
+    "run_id": "batch-final-01",
+    "directory": ".runs/batch-final-01/d13/buggy/kimulator",
+    "case_status": "pass",
+    "backend_status": "oracle_mismatch",
+    "backend_stage": null,
+    "formal_result": {
+      "path": "results/cases/d13.json",
+      "sha256": "112470fe22e20b794c14c99e4ac233649eaa8b54676d9a6e5c4eb7455587acb2",
+      "bytes": 4123
+    },
+    "archive_records_policy": "records 指向本地历史运行归档，位于被 Git 忽略的 .runs；新 checkout 不自带这些原始记录。其 SHA256 用于校对已有归档。本文件已单独保存生成参数、命令、版本和 RTL 哈希。",
+    "records": {
+      "case_manifest": {
+        "path": ".runs/batch-final-01/d13/manifest.json",
+        "sha256": "849289c402f915d956b861d8dc515c47975d03e63c022beabbe7d85806178439",
+        "bytes": 4307
+      },
+      "case_result": {
+        "path": ".runs/batch-final-01/d13/result.json",
+        "sha256": "a2994b89066286084ea0e98280007a0584610c131bbf09f006f95848ede715c6",
+        "bytes": 11990
+      },
+      "run_results": {
+        "path": ".runs/batch-final-01/results.json",
+        "sha256": "5e11e8e2665942a033a025763240203c834cf96d2386fd7b110b78faf6a5a525",
+        "bytes": 582513
+      },
+      "run_versions": {
+        "path": ".runs/batch-final-01/versions.json",
+        "sha256": "e7a3b31a78be2d70880ad01347a22ade77153e1842cb647afeeef962ea2452b7",
+        "bytes": 8522
+      },
+      "backend_result": {
+        "path": ".runs/batch-final-01/d13/buggy/kimulator/result.json",
+        "sha256": "a36d6779aef223db387cbdeac9d6c244499db9866f2872019bea5ac6a3fc2dab",
+        "bytes": 1293
+      },
+      "commands": {
+        "path": ".runs/batch-final-01/d13/buggy/kimulator/commands.jsonl",
+        "sha256": "d77ae2b78fc089993dd1064d52e5daa3519c0cb460f70cfbfe8ea82fb234ab37",
+        "bytes": 12034
+      },
+      "runner": {
+        "path": ".runs/batch-final-01/runner.py",
+        "sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+        "bytes": 30409
+      },
+      "service_patch": {
+        "path": ".runs/batch-final-01/service.patch",
+        "sha256": "54a7053789eebda3e68c824b4f3c8515f5f517602ca09de19a69458bccbb57a9",
+        "bytes": 5833
+      }
+    }
+  },
+  "active_manifest": "manifests/d13.json",
+  "layout": {
+    "path": "designs/axis-frame-len-d13/provenance/layout.json",
+    "sha256": "5af5684110710603d8d2b9da2002b03cc20db37375016d8ecd141d5ea6dc9e65",
+    "bytes": 546
+  },
+  "configuration": {
+    "top": "axis_frame_len",
+    "parameters": {
+      "DATA_WIDTH": 64,
+      "KEEP_ENABLE": 1,
+      "KEEP_WIDTH": 8,
+      "LEN_WIDTH": 16
+    },
+    "effective_parameters": {
+      "DATA_WIDTH": 64,
+      "KEEP_ENABLE": 1,
+      "KEEP_WIDTH": 8,
+      "LEN_WIDTH": 16
+    },
+    "frontend_args": [],
+    "sample_phase": "low_before_posedge_pre_NBA"
+  },
+  "rtl_sources": [
+    {
+      "historical_manifest_path": "sources/axis-frame-len-d13/axis_frame_len_bug_d13.v",
+      "path": "designs/axis-frame-len-d13/variants/d13/axis_frame_len_bug_d13.v",
+      "sha256": "911cabce109a87e23a1c3141ed273e29e9f74230ceeace8998f5436e084d1166",
+      "bytes": 3656
+    }
+  ],
+  "artifacts": {
+    "design.mlir": {
+      "path": "designs/axis-frame-len-d13/mlir/d13/buggy/design.mlir",
+      "sha256": "6b3f03b6de55dc9ce9d2fdee1b546dd05c4ca84f8d549aecf495b070d3430459",
+      "bytes": 5222
+    },
+    "design.generic.mlir": {
+      "path": "designs/axis-frame-len-d13/mlir/d13/buggy/design.generic.mlir",
+      "sha256": "ca9074a35d5c416a874dc916fcd66ab7e68cdeb75ceab9f9a6a9822a7723c5aa",
+      "bytes": 3900
+    },
+    "design.debug.generic.mlir": {
+      "path": "designs/axis-frame-len-d13/mlir/d13/buggy/design.debug.generic.mlir",
+      "sha256": "5e276149d85f8c6b827307d5e2561d12d2404ffdb202cf465a673fad59aa2c0c",
+      "bytes": 7197
+    },
+    "source-map.json": {
+      "path": "designs/axis-frame-len-d13/mlir/d13/buggy/source-map.json",
+      "sha256": "0982e19412054e021d034b616dd03da88db5544ba3f9d5bb8768363e3bf7ea87",
+      "bytes": 15288
+    }
+  },
+  "tool_versions": {
+    "python": "3.14.5 (main, May 10 2026, 10:21:34) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "pyk": "7.1.323",
+    "circt-verilog": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0\nslang version 10.0.0+0",
+    "circt-opt": "LLVM (http://llvm.org/):\n  LLVM version 23.0.0git\n  Optimized build.\nCIRCT firtool-1.147.0",
+    "kompile": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "krun": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026",
+    "kast": "K version:    v7.1.323\nBuild date:   Tue May 12 22:51:18 CST 2026"
+  },
+  "generation": {
+    "working_directory": "external-defects/",
+    "commands_policy": "以下 argv 从历史 commands.jsonl 的前三条实际成功命令提取，保持参数及输入文件顺序，仅将工具名、RTL 和输出路径重定位为可移植表示；并非声称这些新路径已经重新执行。工具通过 PATH 解析。",
+    "commands": [
+      {
+        "stage": "frontend",
+        "historical_command_line": 1,
+        "argv": [
+          "circt-verilog",
+          "--ir-hw",
+          "--top=axis_frame_len",
+          "--mlir-print-debuginfo",
+          "-GDATA_WIDTH=64",
+          "-GKEEP_ENABLE=1",
+          "-GKEEP_WIDTH=8",
+          "-GLEN_WIDTH=16",
+          "designs/axis-frame-len-d13/variants/d13/axis_frame_len_bug_d13.v",
+          "-o",
+          "designs/axis-frame-len-d13/mlir/d13/buggy/design.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "debug.generic",
+        "historical_command_line": 2,
+        "argv": [
+          "circt-opt",
+          "designs/axis-frame-len-d13/mlir/d13/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "--mlir-print-debuginfo",
+          "-o",
+          "designs/axis-frame-len-d13/mlir/d13/buggy/design.debug.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      },
+      {
+        "stage": "generic",
+        "historical_command_line": 3,
+        "argv": [
+          "circt-opt",
+          "designs/axis-frame-len-d13/mlir/d13/buggy/design.mlir",
+          "--mlir-print-op-generic",
+          "-o",
+          "designs/axis-frame-len-d13/mlir/d13/buggy/design.generic.mlir"
+        ],
+        "historical_exit_code": 0
+      }
+    ],
+    "source_map": {
+      "generator": "runner.py:source_map",
+      "historical_runner_sha256": "3a3522d9264d1655c3a7bf7cfd839b1641cbe935f95bdebbee86ca7511e5c5ca",
+      "mapping_kind": "same_ir_printed_with_and_without_locations"
+    }
+  },
+  "location_policy": "MLIR 和 source-map.json 按历史运行字节原样保存，保留旧 loc（包含旧目录或绝对路径）。通过 rtl_sources 的历史路径、当前路径、SHA256 及 layout.json 对应源文件。迁移路径后重新生成时 loc 和文件哈希可能变化；不要为美化路径修改本基线或旧 source-map。"
+}

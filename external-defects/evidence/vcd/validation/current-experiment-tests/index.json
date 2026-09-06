@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "description": "五批正式结果汇总时执行的实验工具测试。文档状态更新后还应针对活动manifest和IR索引核验；不增加正式实验事件数。",
+  "artifacts": {
+    "evidence/vcd/validation/current-experiment-tests/result.json": {
+      "path": "evidence/vcd/validation/current-experiment-tests/result.json",
+      "source": ".work/complete-exp/final-tests/result.json",
+      "sha256": "ae2eda26232367269644786df874acc565ab772490d767e01f03e54665aed83d",
+      "bytes": 449
+    },
+    "evidence/vcd/validation/current-experiment-tests/stdout.log": {
+      "path": "evidence/vcd/validation/current-experiment-tests/stdout.log",
+      "source": ".work/complete-exp/final-tests/stdout.log",
+      "sha256": "e4015943ae26e1ea925980317868315c011404e34339b5bbbc5c1f5258fc5a1b",
+      "bytes": 261
+    },
+    "evidence/vcd/validation/current-experiment-tests/stderr.log": {
+      "path": "evidence/vcd/validation/current-experiment-tests/stderr.log",
+      "source": ".work/complete-exp/final-tests/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

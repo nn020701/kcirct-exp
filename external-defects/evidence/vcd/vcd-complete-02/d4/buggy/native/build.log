@@ -1,0 +1,50 @@
+c++  -I/opt/homebrew/opt/llvm@17/include -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension      -Os  -c -o driver.o /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d4/buggy/native/driver.cpp
+c++ -Os  -I/opt/homebrew/opt/llvm@17/include -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension      -c -o verilated.o /opt/homebrew/Cellar/verilator/5.048/share/verilator/include/verilated.cpp
+c++ -Os  -I/opt/homebrew/opt/llvm@17/include -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension      -c -o verilated_vcd_c.o /opt/homebrew/Cellar/verilator/5.048/share/verilator/include/verilated_vcd_c.cpp
+c++ -Os  -I/opt/homebrew/opt/llvm@17/include -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension      -c -o verilated_threads.o /opt/homebrew/Cellar/verilator/5.048/share/verilator/include/verilated_threads.cpp
+python3 /opt/homebrew/Cellar/verilator/5.048/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vcsvdut.cpp Vcsvdut___024root__0.cpp Vcsvdut__Trace__0.cpp Vcsvdut___024root__Slow.cpp Vcsvdut___024root__0__Slow.cpp Vcsvdut__Syms__Slow.cpp Vcsvdut__Trace__0__Slow.cpp Vcsvdut__TraceDecls__0__Slow.cpp > Vcsvdut__ALL.cpp
+c++ -Os  -I/opt/homebrew/opt/llvm@17/include -I.  -MMD -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include -I/opt/homebrew/Cellar/verilator/5.048/share/verilator/include/vltstd -DVERILATOR=1 -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -DVM_TRACE_SAIF=0 -faligned-new -fbracket-depth=4096 -fcf-protection=none -Xclang -fno-pch-timestamp -Qunused-arguments -Wno-bool-operation -Wno-c++11-narrowing -Wno-constant-logical-operand -Wno-int-in-bool-context -Wno-non-pod-varargs -Wno-parentheses-equality -Wno-shadow -Wno-sign-compare -Wno-tautological-bitwise-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unnecessary-virtual-specifier -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-vla-cxx-extension      -c -o Vcsvdut__ALL.o Vcsvdut__ALL.cpp
+c++ -L/opt/homebrew/opt/llvm@17/lib  -Wl,-U,__Z15vl_time_stamp64v,-U,__Z13sc_time_stampv,-U,_vlog_startup_routines   driver.o verilated.o verilated_vcd_c.o verilated_threads.o Vcsvdut__ALL.a    -pthread -lpthread   -o sim
+rm Vcsvdut__ALL.verilator_deplist.tmp
+- V e r i l a t i o n   R e p o r t: Verilator 5.048 2026-04-26 rev vUNKNOWN-built20260426
+- Verilator: Built from 0.094 MB sources in 3 modules, into 0.094 MB in 8 C++ files needing 0.000 MB
+- Verilator: Walltime 3.325 s (elab=0.001, cvt=0.007, bld=3.267); cpu 0.013 s on 1 threads; allocated 11.547 MB
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 's_axis_tkeep'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/variants/d4/axis_fifo_bug_d4.v:61:35: ... Location of port declaration
+   61 |     input  wire [KEEP_WIDTH-1:0]  s_axis_tkeep,
+      |                                   ^~~~~~~~~~~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.048
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 's_axis_tid'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/variants/d4/axis_fifo_bug_d4.v:65:35: ... Location of port declaration
+   65 |     input  wire [ID_WIDTH-1:0]    s_axis_tid,
+      |                                   ^~~~~~~~~~
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 's_axis_tdest'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/variants/d4/axis_fifo_bug_d4.v:66:35: ... Location of port declaration
+   66 |     input  wire [DEST_WIDTH-1:0]  s_axis_tdest,
+      |                                   ^~~~~~~~~~~~
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 'm_axis_tkeep'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/variants/d4/axis_fifo_bug_d4.v:73:35: ... Location of port declaration
+   73 |     output wire [KEEP_WIDTH-1:0]  m_axis_tkeep,
+      |                                   ^~~~~~~~~~~~
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 'm_axis_tid'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/variants/d4/axis_fifo_bug_d4.v:77:35: ... Location of port declaration
+   77 |     output wire [ID_WIDTH-1:0]    m_axis_tid,
+      |                                   ^~~~~~~~~~
+%Warning-PINMISSING: /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/original/axis_fifo_wrapper.v:46:7: Instance has missing pin: 'm_axis_tdest'
+   46 |     ) axis_fifo_inst (
+      |       ^~~~~~~~~~~~~~
+                     /Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/designs/axis-fifo-d4/variants/d4/axis_fifo_bug_d4.v:78:35: ... Location of port declaration
+   78 |     output wire [DEST_WIDTH-1:0]  m_axis_tdest,
+      |                                   ^~~~~~~~~~~~
+ld: warning: reexported library with install name '/opt/homebrew/opt/llvm@17/lib/libunwind.1.dylib' found at '/opt/homebrew/Cellar/llvm@17/17.0.6/lib/libunwind.1.0.dylib' couldn't be matched with any parent library and will be linked directly

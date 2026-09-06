@@ -1,0 +1,78 @@
+{
+  "status": "pass",
+  "status_meaning": "原生构建和执行完成；尚未判定 oracle",
+  "samples": [
+    {
+      "q": 5
+    },
+    {
+      "q": 0
+    },
+    {
+      "q": 9
+    },
+    {
+      "q": 2
+    }
+  ],
+  "rows": [
+    {
+      "q": 5
+    },
+    {
+      "q": 0
+    },
+    {
+      "q": 9
+    },
+    {
+      "q": 2
+    }
+  ],
+  "sample_count": 4,
+  "event_count": 7,
+  "vcd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/exported/trace.vcd",
+  "vcd_sha256": "785e6a2dc4bb972ca4e71a9e6e1a73287757cc944656dd1af1f9c144dc25b05e",
+  "vcd_top": "TOP",
+  "stimulus_json": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/exported/stimulus.json",
+  "output_csv": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/complete-exp/nonzero-initial-roundtrip/exported/output.csv",
+  "timings": {
+    "build": 3.9282826249982463,
+    "execution": 0.39473037499919883,
+    "read_compare": 0.00835216700033925
+  },
+  "versions": {
+    "verilator": "Verilator 5.048 2026-04-26 rev vUNKNOWN-built20260426",
+    "verilator_path": "/opt/homebrew/bin/verilator"
+  },
+  "sampling_contract": {
+    "sample_phase": "low_before_posedge_pre_NBA",
+    "vcd_sample_phase": "every_event_after_eval",
+    "clock": "clk",
+    "events": "每行 drive(clk=0, inputs) -> eval -> dump VCD 并读取 CSV；除最后一行外 drive(clk=1, 相同 inputs) -> eval -> dump VCD",
+    "event_count": 7,
+    "vcd_timescale": "1ns",
+    "vcd_top": "TOP",
+    "initialization": "Verilator 二态未初始化值为 0；保留 RTL 显式 initial/声明初始化，不额外插入 reset",
+    "unknown_values": "原生 --x-initial 0/--x-assign 0；CSV 输入禁止 None/X/Z；输出 mask 由独立 oracle 比较处理",
+    "time": "第 i 行 low 时间为 2*i ns，随后 high 为 (2*i+1) ns；最后一行只提交 low；无延迟 DUT 的精度统一为 1ns",
+    "limitation": "低电平先更新输入再观察；组合输出可能不同于原 TB 输入 NBA 更新前的观测，须逐例核对原生 oracle",
+    "inputs": [
+      {
+        "name": "clk",
+        "width": 1
+      },
+      {
+        "name": "d",
+        "width": 4
+      }
+    ],
+    "outputs": [
+      {
+        "name": "q",
+        "width": 4
+      }
+    ],
+    "manifest_initialization": null
+  }
+}

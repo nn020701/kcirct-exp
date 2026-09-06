@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/.venv/bin/python",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/circt-semantics/scripts/diffvcd.py",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d4/golden/kimulator/test.vcd",
+    "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d4/golden/comparison/native.comparison.vcd",
+    "--top1",
+    "axis_fifo_wrapper.",
+    "--top2",
+    "TOP.",
+    "--filter",
+    "^(?:clk|rst|s_axis_tdata\\[7:0\\]|s_axis_tvalid|s_axis_tlast|s_axis_tuser|m_axis_tready|s_axis_tready|m_axis_tdata\\[7:0\\]|m_axis_tvalid|m_axis_tlast|m_axis_tuser|status_overflow|status_bad_frame|status_good_frame)$",
+    "--verbose"
+  ],
+  "cwd": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.runs/vcd-complete-02/d4/golden/comparison",
+  "timeout_s": 30,
+  "exit_code": 0
+}

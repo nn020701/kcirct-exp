@@ -1,4 +1,4 @@
-"""从完整运行归档生成可移植正式结果，不复制状态、波形或机器相关错误路径。"""
+"""分别汇总历史 CSV 与外部 CLI 双执行 VCD，保存可分享的原始波形证据。"""
 
 from __future__ import annotations
 
@@ -7,12 +7,14 @@ import csv
 import hashlib
 import json
 import re
+import shutil
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parent
 RESULTS = ROOT / "results"
 RUNS = ROOT / ".runs"
+VCD_PROTOCOL = "external-cli-double-eval-vcd-v1"
 
 
 def save(path: Path, value: Any) -> None:
@@ -106,11 +108,14 @@ def compact_result(original: dict, run: str) -> dict:
     return result
 
 
-def selected_runs(requested: list[str] | None) -> list[str]:
+def selected_runs(requested: list[str] | None, *, vcd: bool = False) -> list[str]:
+    selection = RESULTS / "vcd/selection.json" if vcd else RESULTS / "selection.json"
     if requested:
         runs = requested
-    elif (RESULTS / "selection.json").exists():
-        runs = json.loads((RESULTS / "selection.json").read_text())["formal_run_ids"]
+    elif selection.exists():
+        runs = json.loads(selection.read_text())["formal_run_ids"]
+    elif vcd:
+        raise ValueError("首次 VCD 汇总必须用 --runs 显式选择新协议批次；不能自动采用历史 CSV 批次")
     else:
         runs = [
             path.name
@@ -208,9 +213,266 @@ def markdown(summary: dict) -> str:
     return "\n".join(lines)
 
 
+def publish_artifact(source: Path, target: Path, artifacts: dict[str, dict], expected: str | None = None) -> dict:
+    """原字节导出；同名证据已存在时只接受相同哈希，避免改写已发布运行。"""
+    source = source.resolve(strict=True)
+    checksum = digest(source)
+    if expected is not None and checksum != expected:
+        raise ValueError(f"VCD 证据哈希不一致：{source}")
+    if target.exists() and digest(target) != checksum:
+        raise ValueError(f"拒绝覆盖不同内容的已发布证据：{target}")
+    target.parent.mkdir(parents=True, exist_ok=True)
+    if not target.exists():
+        shutil.copyfile(source, target)
+    try:
+        origin = str(source.relative_to(ROOT.resolve()))
+    except ValueError:
+        origin = str(source)
+    item = {
+        "path": str(target.relative_to(ROOT)),
+        "source": origin,
+        "sha256": checksum,
+        "bytes": source.stat().st_size,
+    }
+    artifacts[item["path"]] = item
+    return item
+
+
+def publish_case(original: dict, run: str, artifacts: dict[str, dict]) -> dict:
+    """导出完整波形与诊断入口；体积较大的 Kore 状态和本机构建仍保留在 .runs。"""
+    variant = original["variant_id"]
+    if not isinstance(variant, str) or not re.fullmatch(r"[A-Za-z0-9_-]+", variant):
+        raise ValueError(f"无效变体名称：{variant!r}")
+    source_root = (RUNS / run / variant).resolve()
+    destination = ROOT / "evidence/vcd" / run / variant
+    selected = {
+        "result.json", "manifest.json", "test_data.json", "csv-normalizations.json", "error.txt",
+        "commands.json", "commands.jsonl", "versions.json", "sampling-contract.json", "driver.cpp",
+        "stimulus.hex", "stimulus.json", "inputs.json", "ir-baseline.json", "output.csv",
+        "trace.vcd", "test.vcd", "state.json", "states.json",
+    }
+    case_artifacts = []
+    if source_root.exists():
+        for path in sorted(source_root.rglob("*")):
+            relative = path.relative_to(source_root)
+            if not path.is_file() or "obj" in relative.parts or "states" in relative.parts:
+                continue
+            # 成功 K 调用的空 stderr 已由 commands.jsonl 的哈希确认，避免导出数千个过程空文件。
+            if path.suffix == ".stderr" and path.stat().st_size == 0:
+                continue
+            if path.name in selected or path.suffix in (".log", ".stderr") or path.name.endswith((".stdout.txt", ".stderr.txt")):
+                case_artifacts.append(publish_artifact(path, destination / relative, artifacts))
+    comparisons = {}
+    for design_variant, value in original.get("waveform_comparisons", {}).items():
+        if design_variant not in ("golden", "buggy"):
+            raise ValueError(f"无效 VCD 对照组：{design_variant}")
+        detail = {key: value.get(key) for key in (
+            "agrees", "exit_code", "compared_signals", "event_count", "first_mismatch", "errors", "normalization"
+        )}
+        detail["artifacts"] = {}
+        for label, record in value.get("artifacts", {}).items():
+            source = Path(record["path"])
+            if not source.is_absolute():
+                source = ROOT / source
+            if label == "diffvcd_script":
+                target = ROOT / "evidence/vcd" / run / "tools/diffvcd.py"
+            else:
+                try:
+                    target = destination / source.resolve().relative_to(source_root)
+                except ValueError as error:
+                    raise ValueError(f"VCD 工件超出本案例目录：{record['path']}") from error
+            detail["artifacts"][label] = publish_artifact(source, target, artifacts, record["sha256"])
+        comparisons[design_variant] = detail
+    backends, blockers = {}, []
+    for name, value in original.get("backends", {}).items():
+        detail = {key: value.get(key) for key in (
+            "status", "stage", "error", "events_total", "events_completed", "simulation_calls",
+            "simulation_calls_attempted", "evaluations_per_input", "vcd_top", "vcd_sha256"
+        )}
+        detail["timings_s"] = value.get("timings", {})
+        detail["oracle"] = comparison(value.get("oracle"))
+        group, backend = name.split("_", 1)
+        backend = "kimulator" if backend == "k" else backend
+        detail["evidence"] = [entry for entry in case_artifacts if f"/{group}/{backend}/" in entry["path"]]
+        if name.endswith("_k"):
+            detail["native_comparison"] = comparisons.get(group)
+        if value["status"] not in ("pass", "oracle_mismatch", "not_run"):
+            blockers.append({"backend": name, "status": value["status"], "stage": value.get("stage"), "error": value.get("error")})
+        backends[name] = detail
+    fields = [
+        "source_case_id", "variant_id", "protocol", "samples", "vcd_events", "status", "error",
+        "golden_native_oracle", "golden_k_oracle", "buggy_k_native", "simulator_agrees_with_native",
+        "bug_detected_by_oracle", "first_bug_difference",
+    ]
+    result = {key: original.get(key) for key in fields}
+    result.update({
+        "run_id": run, "backends": backends, "waveform_comparisons": comparisons, "blockers": blockers,
+        "raw_result": f".runs/{run}/{variant}/result.json", "evidence": case_artifacts,
+    })
+    return result
+
+
+def validate_vcd_record(original: dict) -> None:
+    if original.get("protocol") != VCD_PROTOCOL:
+        raise ValueError(f"案例 {original.get('variant_id')} 不是 {VCD_PROTOCOL}，不能纳入 VCD 正式报告")
+    for value in original.get("waveform_comparisons", {}).values():
+        for record in value.get("artifacts", {}).values():
+            path = Path(record["path"])
+            if not path.is_absolute():
+                path = ROOT / path
+            if digest(path) != record["sha256"]:
+                raise ValueError(f"VCD 证据哈希不一致：{path}")
+    if original.get("status") != "pass":
+        return
+    count = original.get("vcd_events")
+    if type(count) is not int or count <= 0:
+        raise ValueError("VCD 成功记录缺少有效事件数")
+    for group in ("golden", "buggy"):
+        value = original.get("waveform_comparisons", {}).get(group, {})
+        required = {"kimulator_vcd", "native_vcd", "preflight", "diffvcd_script", "command", "stdout", "stderr"}
+        if (value.get("agrees") is not True or value.get("exit_code") != 0 or value.get("errors")
+                or value.get("event_count") != count or not value.get("compared_signals")
+                or not required.issubset(value.get("artifacts", {}))):
+            raise ValueError(f"VCD 成功记录缺少完整 {group} 波形对照证据")
+        backend = original.get("backends", {}).get(group + "_k", {})
+        if backend.get("events_completed") != count or backend.get("simulation_calls") != 2 * count:
+            raise ValueError(f"VCD 成功记录未完成 {group} 全事件同输入双执行")
+
+
+def waveform_cell(value: dict | None) -> str:
+    if value is None:
+        return "未完成"
+    artifacts = value.get("artifacts", {})
+    if not {"kimulator_vcd", "native_vcd"}.issubset(artifacts):
+        return "未完成"
+    return (
+        f'{flag(value.get("agrees"))} · [K]({artifacts["kimulator_vcd"]["path"]}) / '
+        f'[Verilator]({artifacts["native_vcd"]["path"]})'
+    )
+
+
+def vcd_markdown(summary: dict) -> str:
+    counts = summary["counts"]
+    lines = [
+        "# 外部组件双执行 VCD 正式结果", "",
+        f'协议：`{VCD_PROTOCOL}`。实际尝试 {counts["variants_attempted"]} 个变体 / '
+        f'{counts["source_cases_attempted"]} 个来源案例，完整通过 {counts["variants_passed"]} 个变体 / '
+        f'{counts["source_cases_passed"]} 个来源案例。', "",
+        f'输入共 {counts["csv_samples_attempted"]} 条 CSV 行，展开为 {counts["vcd_events_attempted"]} 个 low/high 事件；'
+        f'通过案例覆盖 {counts["vcd_events_passed"]} 个事件。每个事件的 Kimulator 调用在同一输入下执行两次后 dump，'
+        "Verilator eval 完成后 dump；两版各自比较全部顶层输入和输出。事件数不重复乘以设计版本或后端数量。", "",
+        "完整通过还要求正常两后端满足低电平 CSV oracle，缺陷两后端触发同一首次 oracle 差异。"
+        "缺陷版 oracle_mismatch 可以是预期结果；超时、解析失败、部分波形及 VCD 不一致均不能通过。", "",
+        "本页 pass 仅表示上述 VCD 与 oracle 协议通过。内部状态不变性等额外检查及未解决问题见 "
+        "[STATUS.md](STATUS.md)，不能由波形一致推定内部状态完整性通过。", "",
+        "| 案例 | 变体 | CSV / 事件 | 正常 VCD | 缺陷 VCD | 状态 | 首个波形差异或阻塞 |",
+        "|---|---|---:|---|---|---|---|",
+    ]
+    for row in summary["cases"]:
+        comparisons = row["waveform_comparisons"]
+        issues = []
+        for group, value in comparisons.items():
+            first = value.get("first_mismatch")
+            if first:
+                issues.append(f'{group}: t={first["time"]} {first["signal"]}, Verilator={first["expected"]}, K={first["actual"]}')
+            issues.extend(value.get("errors") or [])
+        issues.extend(f'{item["backend"]}: {item["status"]} / {item.get("stage") or "未知阶段"}' for item in row["blockers"])
+        issue = "; ".join(issues) or (row.get("error") or "无")
+        issue = issue.replace("|", "\\|").replace("\n", " ")
+        lines.append(
+            f'| {row["source_case_id"]} | [{row["variant_id"]}](results/vcd/cases/{row["variant_id"]}.json) | '
+            f'{row["samples"]} / {row["vcd_events"]} | {waveform_cell(comparisons.get("golden"))} | '
+            f'{waveform_cell(comparisons.get("buggy"))} | {row["status"]} | {issue} |'
+        )
+    lines += [
+        "", "## 证据与统计范围", "",
+        "[selection.json](results/vcd/selection.json) 固定正式批次；同一变体采用清单中最后一次尝试。"
+        "[summary.json](results/vcd/summary.json)、[summary.csv](results/vcd/summary.csv) 保存当前结果，"
+        "[attempts.json](results/vcd/attempts.json) 保留全部入选尝试。", "",
+        "| 批次 | 案例尝试 | 批量原始结果 SHA256 |", "|---|---:|---|",
+    ]
+    for run in summary["source_runs"]:
+        lines.append(f'| {run["run_id"]} | {run["case_count"]} | `{run["sha256"]}` |')
+    lines += [
+        "", "[evidence/vcd/index.json](evidence/vcd/index.json) 保存本报告原始 VCD、事件输入、CLI 结果、"
+        "实际命令、工具版本、比较日志与错误诊断的路径和 SHA256。文件按原字节导出；日志中的绝对路径表示"
+        "运行时来源，重新运行使用 [README](README.md) 的可配置命令。干净检出可直接打开波形并查看失败证据，"
+        "无需本地 .runs；重新生成报告仍需要完整原始归档。", "",
+        "历史单执行低电平 CSV 结果保留在 [RUNS.md](RUNS.md)，不计入本表的 VCD 通过数量。"
+        "当前结论与卡点见 [STATUS.md](STATUS.md)，单个用户的外部组件流程见 [USER_WORKFLOW.md](USER_WORKFLOW.md)。", "",
+        "这些结果验证固定输入、参数和二态初始化下的有限波形对照；不将接口可用性当作用户研究结论。"
+        "未开发 Error-trace，保存的普通仿真状态仍需独立分析。", "",
+    ]
+    return "\n".join(lines)
+
+
+def report_vcd(requested: list[str] | None) -> None:
+    runs = selected_runs(requested, vcd=True)
+    sources = []
+    # 在导出前检查整个选择，禁止混入历史单执行 CSV 的成功记录。
+    for run in runs:
+        records = json.loads((RUNS / run / "results.json").read_text())
+        if not isinstance(records, list):
+            raise ValueError("批量 results.json 必须是逐案例数组")
+        for original in records:
+            validate_vcd_record(original)
+        sources.append((run, records))
+    artifacts, attempts, latest, origins = {}, [], {}, []
+    for run, records in sources:
+        run_root = RUNS / run
+        run_evidence = []
+        for filename in ("results.json", "versions.json", "protocol.json", "prepared.json", "batch-exit.json", "runner.py", "native.py", "waveform.py"):
+            if (run_root / filename).is_file():
+                run_evidence.append(publish_artifact(run_root / filename, ROOT / "evidence/vcd" / run / "run" / filename, artifacts))
+        origins.append({"run_id": run, "path": f".runs/{run}/results.json", "sha256": digest(run_root / "results.json"),
+                        "case_count": len(records), "evidence": run_evidence})
+        for original in records:
+            result = publish_case(original, run, artifacts)
+            attempts.append(result)
+            latest[result["variant_id"]] = result
+    rows = list(latest.values())
+    passed = [row for row in rows if row["status"] == "pass"]
+    cases = {row["source_case_id"] for row in rows}
+    counts = {
+        "case_attempts": len(attempts), "variants_attempted": len(rows), "source_cases_attempted": len(cases),
+        "variants_passed": len(passed),
+        "source_cases_passed": sum(all(row["status"] == "pass" for row in rows if row["source_case_id"] == case) for case in cases),
+        "csv_samples_attempted": sum(row["samples"] or 0 for row in rows),
+        "csv_samples_passed": sum(row["samples"] or 0 for row in passed),
+        "vcd_events_attempted": sum(row["vcd_events"] or 0 for row in rows),
+        "vcd_events_passed": sum(row["vcd_events"] or 0 for row in passed),
+        "unknown_sample_count": sum(row["samples"] is None for row in rows),
+    }
+    summary = {"schema_version": 1, "protocol": VCD_PROTOCOL, "formal_run_ids": runs,
+               "source_runs": origins, "counts": counts, "cases": rows}
+    target = RESULTS / "vcd"
+    save(target / "selection.json", {"schema_version": 1, "protocol": VCD_PROTOCOL, "formal_run_ids": runs,
+                                    "policy": "显式选择双执行 VCD 批次；历史 CSV 结果不得计入"})
+    save(target / "summary.json", summary)
+    save(target / "attempts.json", attempts)
+    for row in rows:
+        save(target / "cases" / f'{row["variant_id"]}.json', row)
+    for path in (target / "cases").glob("*.json"):
+        if path.stem not in latest:
+            path.unlink()
+    fields = ["source_case_id", "variant_id", "samples", "vcd_events", "status", "simulator_agrees_with_native", "bug_detected_by_oracle", "run_id"]
+    with (target / "summary.csv").open("w", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows(rows)
+    save(ROOT / "evidence/vcd/index.json", {"schema_version": 1, "protocol": VCD_PROTOCOL,
+                                          "formal_run_ids": runs, "artifacts": list(artifacts.values())})
+    (ROOT / "VCD_RUNS.md").write_text(vcd_markdown(summary))
+    print(json.dumps(counts, ensure_ascii=False))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="读取 .runs，生成轻量正式结果和 RUNS.md；不修改运行归档"
+        description="读取 .runs，独立生成历史 CSV 或新协议 VCD 报告；不修改运行归档"
+    )
+    parser.add_argument(
+        "--protocol", choices=["csv", "vcd"], default="csv",
+        help="csv 保留历史低电平报告；vcd 单独导出外部组件双执行波形报告",
     )
     parser.add_argument(
         "--runs",
@@ -218,6 +480,9 @@ def main() -> None:
         help="按顺序指定正式批次；省略则使用 results/selection.json",
     )
     args = parser.parse_args()
+    if args.protocol == "vcd":
+        report_vcd(args.runs)
+        return
     runs = selected_runs(args.runs)
     attempts, latest, origins = [], {}, []
     for run in runs:

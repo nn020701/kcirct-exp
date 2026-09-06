@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "old_artifacts_unchanged": 3621,
+  "aggregate_index_allowed_to_change": "evidence/vcd/index.json",
+  "semantics_files_unchanged": 52,
+  "reference_assets_unchanged": 67,
+  "current_counts": {
+    "case_attempts": 47,
+    "variants_attempted": 10,
+    "source_cases_attempted": 9,
+    "variants_passed": 10,
+    "source_cases_passed": 9,
+    "csv_samples_attempted": 326,
+    "csv_samples_passed": 326,
+    "vcd_events_attempted": 642,
+    "vcd_events_passed": 642,
+    "unknown_sample_count": 0
+  },
+  "documents_checked": 11,
+  "local_links_checked": 230,
+  "documents": {
+    "README.md": "bc7db7a4e601bdc5234ecb9f45b74115620ecb8aed48a2d4113d672fd72cd421",
+    "external-defects/README.md": "2ea81a2fe588e9db6fd8778e384d4e1f86a75527f8b3baa52f01e48335ffeb8a",
+    "external-defects/STATUS.md": "811d387038ec2f13b0fe58628a398d848cb8e8350f779691f7d61fb96ef7a1f6",
+    "external-defects/USER_WORKFLOW.md": "69722f10cf4c9cfcb56a2a88e201824405e0ec1776e64aaef5b482dd53a71b8b",
+    "external-defects/VCD_RUNS.md": "45bb10a40eac4efec1b6a03cfede60c098ce1128c7c23ead1561a668054ec076",
+    "external-defects/error-trace-requirements.md": "421f2937d5f9cab8f68ffc950571d3a7c2ff5ca328a7fc921be50f7246dc4ff5",
+    "external-defects/catalog/README.md": "8defbb3c9820881eb91f97555c32d8c16b8ca27667b35c6520a2dbd53546f529",
+    "external-defects/designs/axi-stream-s2/README.md": "e0043ec2e1ee03a93309d461847880c5977b6a40414f6383630cb320bc0f04a3",
+    "external-defects/results/vcd/README.md": "63ded44d01a59a486ce515b2093f44be93a9219f0c4136c57aa52c069afea415",
+    "external-defects/evidence/vcd/component/indexed-read/README.md": "1e45cc9d7aa9eaff0a6fae8a8e84fdb4d567f4f5b287449ef5c4aa758e5b4ce8",
+    "external-defects/evidence/vcd/metadata-integrity/vcd-complete-03/README.md": "a43d2f844a685cbfd640b4ed789bfd8ba5abdb2515281ebfaa9a77ba92e3772d"
+  },
+  "errors": []
+}

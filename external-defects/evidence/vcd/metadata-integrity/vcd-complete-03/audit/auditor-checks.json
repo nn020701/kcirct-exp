@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": {
+    "map_order_ignored": true,
+    "duplicate_key_rejected": true,
+    "missing_map_entry_detected": true,
+    "dv_sort_change_detected": true,
+    "inj_target_sort_change_detected": true,
+    "list_order_change_detected": true
+  },
+  "source": "/Users/bytedance/cym/cymProject/k-circt-top-repo/services/kcirct-exp/external-defects/.work/indexed-read/audit_connections.py",
+  "source_sha256": "56e0d8cda513e15506d5b96855920e11b511f16046659cc118dbf211537a7a91",
+  "source_fixture_sha256": "a35c110092135ac6cd8aaacc8e3591eae681a1ba0dc5a5aec25cce8d31090e4e",
+  "scope": "只读解析真实 setup；构造内存中的 Map 顺序、重复/漏 key、sort 与 List 顺序反例；没有运行语义。"
+}
